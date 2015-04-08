@@ -1,18 +1,20 @@
-name: Long Haul
-description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+name: Kyle Niewiada
+description: My little corner of the Internet
 
-url: http://brianmaierjr.github.com/long-haul
+url: http://localhost:4000
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
 
 markdown: redcarpet
-pygments: true
+highlighter: true
 paginate: 5
 
 navigation:
  - title: Home
    url: /index.html
  - title: About
-   url: /about
+   url: /about.html
  - title: Contact
-   url: /contact
+   url: /contact.html
+ - title: Music
+   url: http://www.music.kyleniewiada.org/
