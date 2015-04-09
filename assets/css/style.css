@@ -4,7 +4,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
 html {
   font-size: 100%;
@@ -1067,7 +1067,7 @@ PAGE STYLES
 HEADER STYLING
 ***************/
 .header {
-  background-color: #3d256d;
+  background-color: #3a3a3c;
   background-image: url("../img/banner.png");
   background-size: cover;
   background-position: center center;
