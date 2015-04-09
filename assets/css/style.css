@@ -1538,13 +1538,21 @@ POST LIST STYLING
   ***************/
   .contactContent {
     width: 48.93617%;
-    float: left;
+    float: right;
     margin-right: 2.12766%;
   }
 
   #contact form {
     width: 48.93617%;
-    float: right;
+    float: left;
     margin-right: 0;
   }
+
+  #disqus_thread {
+    width:500px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:75px;
+  }
+
 }
