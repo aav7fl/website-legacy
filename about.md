@@ -5,16 +5,13 @@ title: About Me
 
 <center><h1>About Me</h1></center>
 <img src="/assets/img/me.gif" alt="Kyle Niewiada" style="float: right;padding: 10px;" />
-Hi, I'm Kyle Niewiada (/kaɪl niː-viː-ɑː-də/). Welcome to my small corner of the internet.
+Hi, I'm Kyle Niewiada (/kaɪl niː-viː-ɑː-də/). Welcome to my small corner of the internet. You can rearrange the letters in "Kyle Niewiada" to say "I like a new day".
 
-Maybe you've stumbled across this page by accident, perhaps you had full intentions of visiting this page. If you have, thank you! This website is meant to be a host and central hub to my music and other content. I write my music for you, the listener. My hopes are that people will enjoy what I do, and share it with their friends (maybe even purchase a song or two).
+Maybe you've stumbled across this page by accident; perhaps you had full intentions of visiting this page. If you have, thank you! This website is meant to be a host and central hub to my music and various projects. I write for people to enjoy what they read and hear. My hopes are that people will take away more than they came with (maybe even purchase a song or two).
 
-From time to time I will release new songs from here, post about new videos, and occasionally make a blog post. You are most welcome to subscribe your email to very occasional updates and news from me.
-
-I have been playing the instrument known as a piano for many years. Recently in my life, I have begun to work on writing and arranging my own music. My writing tastes usually revolve around the piano (and some synth) with room to change. I have other interests too (e.g. computers) and I may occasionally blog about those interests. If that does not deter you, I hope you enjoy will enjoy listening to my music.
+I write blog posts with no schedule and will write them as I carry out projects. I am passionate about music and computers. I enjoy programming and difficult projects do not deter me.
 
 If you'd like to tell me a story, ask questions about my music, or contact me about something else—[drop me a message here](/contact.html).
 
 Best Regards,  
 Kyle
-
