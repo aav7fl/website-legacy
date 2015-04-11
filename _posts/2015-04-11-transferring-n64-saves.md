@@ -13,6 +13,7 @@ published: true
 About a year ago, I discovered that my Ocarina of Time cartridge was on borrowed time. It turned out that this was one of a handful of cartridges in the Nintendo 64 library that used a battery to maintain its save file. According to the trustworthy Internet, these batteries have a lifespan between 15 and 20 years. So I did what any other dreamy eyed gamer would do. I got out my N64 and started tinkering with it.
 
 I created a project with one goal in mind. To transfer all game saves from my minuscule N64 library into a digital format that I could use on other devices. I had four games that I needed to get saves off of.
+
 - The Legend of Zelda: Ocarina of Time
 - Star Wars Episode One: Racer
 - Mario Party 3
