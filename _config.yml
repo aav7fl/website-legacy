@@ -8,6 +8,8 @@ permalink: blog/:title/
 markdown: redcarpet
 pygments: true
 paginate: 5
+#url: http://www.kyleniewiada.org
+url: http://localhost:4000
 
 navigation:
  - title: Home
@@ -20,3 +22,9 @@ navigation:
    url: /contact.html
  - title: Music
    url: http://www.music.kyleniewiada.org/
+
+# Serving
+detach:  false
+port:    4000
+host:    localhost
+baseurl: "" # does not include hostname

@@ -1536,7 +1536,7 @@ POST LIST STYLING
   /***************
   CONTACT PAGE STYLING
   ***************/
-  .contactContent {
+/*  .contactContent {
     width: 48.93617%;
     float: right;
     margin-right: 2.12766%;
@@ -1547,11 +1547,14 @@ POST LIST STYLING
     float: left;
     margin-right: 0;
   }
-
+*/
+  /***************
+  DISQUS STYLING
+  ***************/
   #disqus_thread {
-    width:500px;
-    margin-left:auto;
-    margin-right:auto;
+    /*width:500px;*/
+    margin-left:75px;
+    margin-right:75px;
     margin-top:75px;
   }
 
