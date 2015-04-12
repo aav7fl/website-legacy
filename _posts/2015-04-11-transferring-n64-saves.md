@@ -39,16 +39,16 @@ Here is how I did it.
 ![](/assets/img/2015/04/DSC09658.JPG)
 
 ###Dumping My ROM
-Star Wars, Mario Party, and Super Mario 64 use EEPROM to store their game save. This made my project easy. The first thing that I did was dump each game using the GameShark’s parallel port with the open source software [N64RD](https://github.com/parasyte/n64rd) using the command below. This program allowed me to back up each of my games for later use in my project.
+Star Wars, Mario Party, and Super Mario 64 use EEPROM to store their game save. This made my project easy. The first thing that I did was dump each game using the GameShark’s parallel port with the open source software [N64RD](https://github.com/parasyte/n64rd) using the command below. This program allowed me to back up each of my games for later use in my project. I used [this wiki](http://doc.kodewerx.org/hacking_n64.html) here to know what addresses and offsets for RAM and ROM space I needed.
 
 `$ ./n64rd -dgame.n64 -a 0xB0000000 -l 0x02000000`
 
 ###Transferring Saves
 To transfer the EEPROM games, I used a GameShark (I chose v3.2) to transfer the save from my cartridge to the memory pack. Once I transferred every game over to the memory pack, I used my Nintendo 64 DexDrive (Pictured below) to move the save files onto my computer. But each save file was wrapped inside a proprietary container. When examined with a hex editor, I noticed that each file was still there and all I had to do was cut out the bytes that made up the file container. Each one of the save files was structured in a different way.
 
-I took known game save copies from the internet for each of my EEPROM games and matched them up to my DexDrive save contents. I simply grafted over the matching bytes from the DexDrive save into the existing save files, loaded them up in my Project 64 emulator, and everything worked without a hitch. The only save that I had an issue with was Zelda Ocarina of Time. That is because I later found out that the SRAM save format was too large for the GameShark to transfer. So GameShark compressed it. Having no idea how it was compressed, I thought I was out of luck.
-
 ![DexDrive](/assets/img/2015/04/DSC09655.JPG)
+
+I took known game save copies from the internet for each of my EEPROM games and matched them up to my DexDrive save contents. I simply grafted over the matching bytes from the DexDrive save into the existing save files, loaded them up in my Project 64 emulator, and everything worked without a hitch. The only save that I had an issue with was Zelda Ocarina of Time. That is because I later found out that the SRAM save format was too large for the GameShark to transfer. So GameShark compressed it. Having no idea how it was compressed, I thought I was out of luck. I contacted Interact and they were unable to provide me with information on the algorithm the GameShark used.
 
 ###Hitting a Wall
 The first thing that I tried was dumping the SRAM by using the GameShark. However, I was unable to find any documentation on how to pull the SRAM data or if it was even accessible from the GameShark. But I did find [someone](https://www.assemblergames.com/forums/showthread.php?31850-Dumping-N64-Game-Saves-with-a-Gameshark-with-LPT-access&p=517929&viewfull=1#post517929) who was trying to dump the contents of their SRAM into the memory pack controller by uploading it with [gsuploader](https://github.com/ppcasm/gsuploader). According to their post, they had some luck with a few games but were unlucky with others.
@@ -84,7 +84,7 @@ After a lot of digging around to see how the checksum is calculated, I was able 
 
 ![](/assets/img/2015/04/Checksum.png)
 
-Lawrence and I were unable to find any information online about this algorithm and we wished to leave away that others could follow these instructions using open source software. Lawrence contacted SweetScape asking if they could make available for us more information on the algorithm used and [Graeme Sweet](http://www.sweetscape.com/companyinfo/) very generously provided us with information on how “UShort (16 bit) – Big Endian” was calculated. Lawrence and I created a software tool ([Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)) to calculate the checksum of an Ocarina of Time save file in native N64 format. We have posted the source code on GitHub. The instructions on how to run and calculate it can be found on the GitHub page.
+Lawrence and I were unable to find any information online about this algorithm and we wished to leave a way that others could follow these instructions using open source software. Lawrence contacted SweetScape (Company who created 010 Editor) asking if they could make available for us more information on the algorithm used and [Graeme Sweet](http://www.sweetscape.com/companyinfo/) very generously provided us with information on how “UShort (16 bit) – Big Endian” was calculated. Lawrence and I created a software tool ([Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)) to calculate the checksum of an Ocarina of Time save file in native N64 format. We will be posting the source code on GitHub. The instructions on how to run and calculate it can be found on the GitHub page.
 
 ###Putting it All Together
 
