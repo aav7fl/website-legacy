@@ -84,7 +84,7 @@ After a lot of digging around to see how the checksum is calculated, I was able 
 
 ![](/assets/img/2015/04/Checksum.png)
 
-Lawrence and I were unable to find any information online about this algorithm and we wished to leave a way that others could follow these instructions using open source software. Lawrence contacted SweetScape (Company who created 010 Editor) asking if they could make available for us more information on the algorithm used and [Graeme Sweet](http://www.sweetscape.com/companyinfo/) very generously provided us with information on how “UShort (16 bit) – Big Endian” was calculated. Lawrence and I created a software tool ([Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)) to calculate the checksum of an Ocarina of Time save file in native N64 format. The working source code has been posted. The instructions on how to run and calculate it can be found on the GitHub page.
+Lawrence and I were unable to find any information online about this algorithm and we wished to leave a way that others could follow these instructions using open source software. Lawrence contacted SweetScape (Company who created 010 Editor) asking if they could make available for us more information on the algorithm used and [Graeme Sweet](http://www.sweetscape.com/companyinfo/) very generously provided us with information on how “UShort (16 bit) – Big Endian” was calculated. Lawrence and I created a software tool ([Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)) to calculate the checksum of an Ocarina of Time save file in native N64 format. We will be posting the source code on GitHub. The instructions on how to run and calculate it can be found on the GitHub page.
 
 ###Putting it All Together
 
@@ -120,5 +120,11 @@ Software and resources I used:
 - [uCON64](http://ucon64.sourceforge.net/#ucon64)
 - [Project64](http://www.pj64-emu.com/downloads/project64/binaries/)
 - [Zelda high definition texture pack]( http://www.emutalk.net/threads/51481-Zelda-Ocarina-of-time-Community-Retexture-Project-V6-Development-Topic)
-- [Our Custom Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)
 
+Other Links:
+
+- https://github.com/parasyte/n64rd
+- https://github.com/mikeryan/n64dev
+- https://www.assemblergames.com/forums/showthread.php?31850-Dumping-N64-Game-Saves-with-a-Gameshark-with-LPT-access&p=517929&viewfull=1#post517929
+- http://wiki.spinout182.com/w/Ocarina_of_Time:_Save_Format
+- http://doc.kodewerx.org/hacking_n64.html
