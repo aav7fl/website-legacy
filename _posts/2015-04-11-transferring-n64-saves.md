@@ -63,7 +63,7 @@ This led me to conclude that sram2mpk.bin was unlikely to work for my game. I th
 
 The documentation on the wiki claimed that save files were built by copying over a certain block of memory. After reading through this, I went back to my GameShark and dumped the entire contents of its RAM (using N64RD) while in game using the command below with N64RD.
 
-`$ ./n64rd -dmemory.n64 -a 0xB0000000 -l 0x007FFFFF`
+`$ ./n64rd -dmemory.n64 -a 0xB0000000 -l 0x00800000`
 
 After opening up the RAM dump with my hex editor, I followed up to the address 0x0011A790 (or 0x8011A790 inside my GameShark memory) and copied 0x1450 bytes (the size of the game save file).
 
