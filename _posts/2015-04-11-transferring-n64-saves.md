@@ -46,9 +46,12 @@ Star Wars, Mario Party, and Super Mario 64 use EEPROM to store their game save. 
 To transfer the EEPROM games, I used a GameShark (I chose v3.2) to transfer the save from my cartridge to the memory pack. Once I transferred every game over to the memory pack, I used my Nintendo 64 DexDrive (Pictured below) to move the save files onto my computer. But each save file was wrapped inside a proprietary container. When examined with a hex editor, I noticed that each file was still there and all I had to do was cut out the bytes that made up the file container. Each one of the save files was structured in a different way.
 
 
-<figure>
-  <img src="/assets/img/2015/04/DSC09655.JPG" alt="DexDrive">
-  <figcaption>DexDrive</figcaption>
+![DexDrive](/assets/img/2015/04/DSC09655.JPG)
+
+<center>DexDrive</center>
+ <figure>
+   <img src="/assets/img/2015/04/DSC09655.JPG" alt="DexDrive">
+   <figcaption>DexDrive</figcaption>
 </figure>
 
 
