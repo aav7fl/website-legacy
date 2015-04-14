@@ -48,7 +48,7 @@ To transfer the EEPROM games, I used a GameShark (I chose v3.2) to transfer the 
 ![DexDrive](/assets/img/2015/04/DSC09655.JPG)
 
 <figure>
-    <img src='/assets/img/2015/04/DSC09655.JPG' alt='DexDrive' />
+    <img src='/assets/img/2015/04/DSC09655.JPG' alt='DexDrive' width=100%/>
     <figcaption>DexDrive</figcaption>
 </figure>
 
