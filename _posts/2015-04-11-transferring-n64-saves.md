@@ -53,7 +53,7 @@ I took known game save copies from the internet for each of my EEPROM games and 
 ###Hitting a Wall
 The first thing that I tried was dumping the SRAM by using the GameShark. However, I was unable to find any documentation on how to pull the SRAM data or if it was even accessible from the GameShark. But I did find [someone](https://www.assemblergames.com/forums/showthread.php?31850-Dumping-N64-Game-Saves-with-a-Gameshark-with-LPT-access&p=517929&viewfull=1#post517929) who was trying to dump the contents of their SRAM into the memory pack controller by uploading it with [gsuploader](https://github.com/ppcasm/gsuploader). According to their post, they had some luck with a few games but were unlucky with others.
 
-I was unable to get sram2mpk.bin working with my Ocarina of Time game. I spent a whole day attempting to load the program, but every time it locked up on me and dumped no information. I was able to verify (with the help of Lawrence) that gsuploader was working correctly by loading up an older project named [Neon64](https://github.com/mikeryan/n64dev), an SNES emulator for the N64.
+I was unable to get sram2mpk.bin working with my Ocarina of Time game. I spent a whole day attempting to load the program, but every time it locked up on me and dumped no information. I was able to verify (with the help of Lawrence) that gsuploader was working correctly by loading up an older project named [Neon64](https://github.com/mikeryan/n64dev), an NES emulator for the N64.
 
 ![](/assets/img/2015/04/2015-03-21_19.19.01.jpg)
 
@@ -63,7 +63,7 @@ This led me to conclude that sram2mpk.bin was unlikely to work for my game. I th
 
 The documentation on the wiki claimed that save files were built by copying over a certain block of memory. After reading through this, I went back to my GameShark and dumped the entire contents of its RAM (using N64RD) while in game using the command below with N64RD.
 
-`$ ./n64rd -dmemory.n64 -a 0xB0000000 -l 0x00800000`
+`$ ./n64rd -dmemory.n64 -a 0x80000000 -l 0x00800000`
 
 After opening up the RAM dump with my hex editor, I followed up to the address 0x0011A790 (or 0x8011A790 inside my GameShark memory) and copied 0x1450 bytes (the size of the game save file).
 
