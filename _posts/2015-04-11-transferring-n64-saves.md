@@ -47,11 +47,6 @@ To transfer the EEPROM games, I used a GameShark (I chose v3.2) to transfer the 
 
 ![DexDrive](/assets/img/2015/04/DSC09655.JPG)
 
-<figure>
-    <img src='/assets/img/2015/04/DSC09655.JPG' alt='DexDrive' width=100%/>
-    <figcaption>DexDrive</figcaption>
-</figure>
-
 I took known game save copies from the internet for each of my EEPROM games and matched them up to my DexDrive save contents. I simply grafted over the matching bytes from the DexDrive save into the existing save files in my hex editor, loaded them up in my Project 64 emulator, and everything worked without a hitch. The only save that I had an issue with was Zelda Ocarina of Time. That is because I later found out that the SRAM save format was too large for the GameShark to transfer. So GameShark compressed it before copying it to the memory pack. This was useless to me unless I want to use the GameShark to transfer it back to the cartridge. Having no idea how it was compressed, I thought I was out of luck. I contacted Interact and they were unable to provide me with information on the algorithm the GameShark used.
 
 ###Hitting a Wall
