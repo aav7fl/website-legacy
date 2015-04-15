@@ -15,7 +15,12 @@ Before I begin, I started this project to restore my own Marantz 2220b. I've had
 My story begins with my amp (what else!?).  
 Sorry for this poor photo. This was from a few months ago. I forgot to take 'before pictures'. As you can see in the photo, there are two-ish burnt lamps. Since I took this photo, nearly all of my lamps burned themselves out. That lead me to decide on a project to restore my amp.
 
-[![](/assets/img/2013/09/small/bHhSN6f.jpg "Original Lighting")](/assets/img/2013/09/full/bHhSN6f.jpg "Original Lighting")
+<figure>
+  <a href="/assets/img/2013/09/full/bHhSN6f.jpg" target="\_blank">
+    <img src='/assets/img/2013/09/small/bHhSN6f.jpg'>
+  </a>
+  <figcaption>Original Lighting</figcaption>
+</figure>
 
 Those pretty blue (or in this case-- greenish) lamps...er..normal lamps were in need of replacing. When I had first purchased this (from a smoker), it ended up being pretty filthy on this inside. But at the time, all of the lamps worked. So I spent my time cleaning it out and running DeoxIT through the pots and switches.
 
@@ -27,8 +32,12 @@ I did however discover that a user here on AK (Kudos to [bikemandan](http://www.
 
 After a bit of research, I concluded that his lamp housing had a very good chance of fitting perfectly with my model (it was about 90% perfect for me). I used his model to help re-create a version more suitable for both my 2220B, and a 3D printer. My result was this.
 
-(Link to file on [Thingiverse](http://www.thingiverse.com/thing:150349))  
-[![](/assets/img/2013/09/small/2220B_Lamp_housing_edit_preview_featured.jpg "Marantz Housing Model")](/assets/img/2013/09/full/2220B_Lamp_housing_edit_preview_featured.jpg "Marantz Housing Model")
+<figure>
+  <a href="/assets/img/2013/09/full/2220B_Lamp_housing_edit_preview_featured.jpg" target="\_blank">
+    <img src='/assets/img/2013/09/small/2220B_Lamp_housing_edit_preview_featured.jpg'>
+  </a>
+  <figcaption>Link to file on <a href=http://www.thingiverse.com/thing:150349>Thingiverse</a></figcaption>
+</figure>
 
 Now I was tasked with trying to find a place to print it. I discovered that 3D printing was expensive! Luckily, I had two friends who both had 3D printers. Unluckily, neither of them had theirs working with no ETA.  
 That is when I found out that my local university had just very recently purchased a Makerbot Replicator 2\.
@@ -37,20 +46,44 @@ I scheduled up a time to work with the 3D printer. That's when I discovered that
 
 It started out very nicely.
 
-[![Makerbot 2 printing](/assets/img/2013/09/small/IMG_0100.JPG "Makerbot 2 printing Marantz Housing")](/assets/img/2013/09/full/IMG_0100.JPG "Makerbot 2 printing Marantz Housing")
+<figure>
+  <a href="/assets/img/2013/09/full/IMG_0100.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0100.JPG'>
+  </a>
+  <figcaption>Makerbot 2 printing Marantz Housing</figcaption>
+</figure>
 
-[![](/assets/img/2013/09/small/IMG_0103.JPG)](/assets/img/2013/09/full/IMG_0103.JPG)
+<figure>
+  <a href="/assets/img/2013/09/full/IMG_0103.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0103.JPG'>
+  </a>
+</figure>
 
-[![](/assets/img/2013/09/small/IMG_0107.JPG "Makerbot 2 printing Marantz Housing")](/assets/img/2013/09/full/IMG_0107.JPG "Makerbot 2 printing Marantz Housing")
+<figure>
+  <a href="/assets/img/2013/09/full/IMG_0107.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0107.JPG'>
+  </a>
+</figure>
 
-[![](/assets/img/2013/09/small/IMG_0106.JPG "Makerbot 2 printing Marantz Housing")](/assets/img/2013/09/full/IMG_0106.JPG "Makerbot 2 printing Marantz Housing")
-
+<figure>
+  <a href="/assets/img/2013/09/full/IMG_0106.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0106.JPG'>
+  </a>
+</figure>
 But then, as the printer approached the top of the design, it could not figure out how to print the top layer without supports (I have a personal opinion on what the algorithm should have done, but that's another story). So near the end of the print, it turned into a stringy disaster.
 
-[![](/assets/img/2013/09/small/IMG_0110.JPG "Failed housing design")](/assets/img/2013/09/full/IMG_0110.JPG "Failed housing design")
+<figure>
+  <a href="/assets/img/2013/09/full/IMG_0110.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0110.JPG'>
+  </a>
+  <figcaption>Failed housing design</figcaption>
+</figure>
 
-[![](/assets/img/2013/09/small/IMG_0108.JPG "Failed housing design")](/assets/img/2013/09/full/IMG_0108.JPG "Failed housing design")
-
+<figure>
+  <a href="/assets/img/2013/09/full/IMG_0108.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0108.JPG'>
+  </a>
+</figure>
 I had also discovered that during the print job, the temperature of the room had changed by well over 10 degrees. This caused my model to warp in on itself on the build platform. Either way... this model was not going to work.
 
 After that print job, the girl running the printer suggested I could try it again overnight. I quickly agreed, added supports to the model, and awaited the final product.
@@ -61,11 +94,20 @@ Around an hour into the print job, I noticed that the printer was plugged into a
 
 This fan blew the rubber bands in front of the sensor causing it to reset its timer every few seconds.
 
-[![](/assets/img/2013/09/small/2013-09-10%2012.04.14.jpg)](/assets/img/2013/09/full/2013-09-10%2012.04.14.jpg)
+<figure>
+  <a href="/assets/img/2013/09/full/2013-09-10%2012.04.14.jpg.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/2013-09-10%2012.04.14.jpg.JPG'>
+  </a>
+</figure>
 
 Here is the final photo I took of it printing before leaving. You can see the breakaway supports that are being added at the bottom (or in this case the front of the model).
 
-[![](/assets/img/2013/09/small/2013-09-10%2011.48.39.jpg)](/assets/img/2013/09/full/2013-09-10%2011.48.39.jpg)
+<figure>
+  <a href="/assets/img/2013/09/full/2013-09-10%2011.48.39.jpg" target="\_blank">
+    <img src='/assets/img/2013/09/small/2013-09-10%2011.48.39.jpg'>
+  </a>
+  <figcaption></figcaption>
+</figure>
 
 This quick setup kept the printer from going off for the duration of the 5.5 hour print job.
 
@@ -75,51 +117,114 @@ Here are a few photos of the final results. You can see the original lamp housin
 
 The end cost to me was free (it probably won't happen again) because they have not figured out a way to charge students at my university on printed objects. But, I was also the first student they've ever had use their printer for a project. Every object printed up to this point were small items found built into the device or from the popular sections of thingiverse.
 
-[![](/assets/img/2013/09/small/DSC09132.JPG)](/assets/img/2013/09/full/DSC09132.JPG)
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09132.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09132.JPG'>
+  </a>
+</figure>
 
-[![](/assets/img/2013/09/small/DSC09131.JPG)](/assets/img/2013/09/full/DSC09131.JPG)
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09131.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09131.JPG'>
+  </a>
+</figure>
 
-[![](/assets/img/2013/09/small/DSC09130.JPG)](/assets/img/2013/09/full/DSC09130.JPG)
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09130.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09130.JPG'>
+  </a>
+</figure>
 
-[![](/assets/img/2013/09/small/DSC09129.JPG "Original, prototype, and final")](/assets/img/2013/09/full/DSC09129.JPG "Original, prototype, and final")
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09129.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09129.JPG'>
+  </a>
+  <figcaption>Original, prototype, and final</figcaption>
+</figure>
 
 Now I had a perfectly built lamp housing to go in as a replacement for my old one.
 
 I placed the model into my Marantz and you can see that it fits without any issues.
 
-[![](/assets/img/2013/09/small/DSC09138.JPG "Almost ready for the first test..")](/assets/img/2013/09/full/DSC09138.JPG "Almost ready for the first test..")
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09138.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09138.JPG'>
+  </a>
+  <figcaption>Almost ready for the first test..</figcaption>
+</figure>
 
-(with my new LED Lights/Lamps on)
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09137.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09137.JPG'>
+  </a>
+  <figcaption>An overview of my Marantz with the bright blue part placed inside.</figcaption>
+</figure>
 
-[![](/assets/img/2013/09/small/DSC09137.JPG "Pretty lights!")](/assets/img/2013/09/full/DSC09137.JPG "Pretty lights!")
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09139.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09139.JPG'>
+  </a>
+  <figcaption>An overview and comparison of the parts</figcaption>
+</figure>
 
-An overview of my Marantz with the bright blue part placed inside.
+A close up, and then with the faceplate on.
 
-[![](/assets/img/2013/09/small/DSC09139.JPG "An overview and comparison of the parts")](/assets/img/2013/09/full/DSC09139.JPG "An overview and comparison of the parts")
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09140.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09140.JPG'>
+  </a>
+  <figcaption></figcaption>
+</figure>
 
-Close up, and then with the faceplate on.
-
-[![](/assets/img/2013/09/small/DSC09140.JPG)](/assets/img/2013/09/full/DSC09140.JPG)
-
-[![](/assets/img/2013/09/small/DSC09141.JPG "Front glass finally on")](/assets/img/2013/09/full/DSC09141.JPG "Front glass finally on")
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09141.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09141.JPG'>
+  </a>
+  <figcaption>Front glass finally on</figcaption>
+</figure>
 
 Now I'm putting it all back together (with new vellum)
 
-[![](/assets/img/2013/09/small/DSC09144.JPG)](/assets/img/2013/09/full/DSC09144.JPG)
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09144.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09144.JPG'>
+  </a>
+  <figcaption></figcaption>
+</figure>
 
-[![](/assets/img/2013/09/small/DSC09145.JPG "Faceplate engaged!")](/assets/img/2013/09/full/DSC09145.JPG "Faceplate engaged!")
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09145.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09145.JPG'>
+  </a>
+  <figcaption>Faceplate engaged!</figcaption>
+</figure>
 
-Of course, also re-adjusted my amp's voltage and amplifier biases (All 4).
+Of course, I also re-adjusted my amp's voltage and amplifier biases (All 4).
 
 Here are the final results of it all in action. (For those of you wondering about the feet; Yes, I still have them. But I removed them because they hang over my speakers just on the edge causing damage to the wooden speaker cabinets.)  
 Overall, it is very red and blue. Maybe too blue.. but I think it will grow on me more than the green... maybe.  
 **Edit: It has. I like it.**
 
-[![](/assets/img/2013/09/small/DSC09158.JPG "Yellowcard poster hiding in the back...")](/assets/img/2013/09/full/DSC09158.JPG "Yellowcard poster hiding in the back...")
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09158.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09158.JPG'>
+  </a>
+  <figcaption>Yellowcard poster hiding in the back...</figcaption>
+</figure>
 
-[![](/assets/img/2013/09/small/DSC09157.JPG)](/assets/img/2013/09/full/DSC09157.JPG)
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09157.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09157.JPG'>
+  </a>
+</figure>
 
-[![](/assets/img/2013/09/small/DSC09152.JPG "Pairing up with my setup")](/assets/img/2013/09/full/DSC09152.JPG "Pairing up with my setup")  
+<figure>
+  <a href="/assets/img/2013/09/full/DSC09152.JPG" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09152.JPG'>
+  </a>
+  <figcaption>Pairing up with my setup</figcaption>
+</figure>
+
 Nice even lighting, adjusted bias, and a great looking amplifier. I hope you've enjoyed this post as much as I have!
 
 If you have any questions about the process or would like you know anything else, feel free to ask!
