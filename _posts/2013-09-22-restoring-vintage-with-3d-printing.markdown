@@ -95,8 +95,8 @@ Around an hour into the print job, I noticed that the printer was plugged into a
 This fan blew the rubber bands in front of the sensor causing it to reset its timer every few seconds.
 
 <figure>
-  <a href="/assets/img/2013/09/full/2013-09-10%2012.04.14.jpg.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/2013-09-10%2012.04.14.jpg.JPG'>
+  <a href="/assets/img/2013/09/full/2013-09-10%2012.04.14.jpg" target="\_blank">
+    <img src='/assets/img/2013/09/small/2013-09-10%2012.04.14.jpg'>
   </a>
 </figure>
 
