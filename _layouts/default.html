@@ -1,14 +1,31 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
 {% include head.html %}
-	{% if page.url == "/404.html" %}
-           <meta http-equiv="refresh" content="5; url=/">
-        {% endif %}
-	<div class="content">
-		<div class="container">
-			{{ content }}
-			{% include comments.html %}
-		</div>
-	</div><!-- end .content -->
+
+<body>
+
+   {% include header.html %}
 
 
-{% include footer.html %}
+   <div class="content">
+      <div class="container">
+         {{ content }}
+				{% include comments.html %}
+      </div>
+   </div><!-- end .content -->
 
+   {% include footer.html %}
+   {% include scripts.html %}
+
+</body>
+
+{% if page.url == "/404.html" %}
+				<meta http-equiv="refresh" content="5; url=/">
+{% endif %}
+
+
+</html>

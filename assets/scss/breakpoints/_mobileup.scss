@@ -11,8 +11,8 @@ html {
 }
 
 body {
-	font-family: $serif; 
-	line-height: 1.75;  
+	font-family: $serif;
+	line-height: 1.75;
 	font-size: 112.5%; // 18px base font size
 	color: $black;
 	overflow-x: hidden;
@@ -40,7 +40,7 @@ img,video,audio,iframe,object{
 
 // Layout
 .container {
-	@include container(610px); 
+	@include container(610px);
 	padding: 0 20px;
 }
 
@@ -67,16 +67,16 @@ MENU STYLING
 
 	ul {
 	  margin: 0;
-	  padding: 0; 
+	  padding: 0;
 	  width: 100%;
-	  display: block; 
+	  display: block;
 	  list-style: none;
 
 		li {
 		  width: 100%;
 		  display: block;
-		  background: $primary-color;
-		  border-bottom: 2px solid lighten($primary-color, 5%);
+		  background: seagreen;
+		  border-bottom: 2px solid lighten(seagreen, 5%);
 
 		  a {
 		  	color: white;
@@ -114,7 +114,7 @@ MENU STYLING
   float: right;
   line-height: 2em;
   margin-top: .5em;
-  background-color: $primary-color;
+  background-color: seagreen;
   border-radius: 4px;
   padding: 0 .5em;
   color: white;
@@ -124,8 +124,8 @@ MENU STYLING
   @include transition(all 0.2s ease-in-out);
 
   &:hover {
-  	color: white; 
-  	background-color: darken($primary-color, 10%);
+  	color: white;
+  	background-color: darken(seagreen, 10%);
   }
 }
 
@@ -155,7 +155,7 @@ PAGE STYLES
 
 .pageTitle {
 	margin: 2rem auto 1em;
-	text-align: center; 
+	text-align: center;
 }
 
 .content {
@@ -168,9 +168,9 @@ HEADER STYLING
 ***************/
 
 .header {
-	background-color: $primary-color;
+	background-color: seagreen;
 	background-image: url('../img/touring.jpg');
-	background-size: cover; 
+	background-size: cover;
 	background-position: center center;
 	color: white;
 	padding: 0;
@@ -193,7 +193,7 @@ HEADER STYLING
 
 		a {
 			color: white;
-			text-decoration: none; 
+			text-decoration: none;
 		}
 	}
 }
@@ -222,7 +222,7 @@ POST STYLING
 			content: "";
 			position: absolute;
 			top: -1.25em;
-			background: $primary-color;
+			background: seagreen;
 			display: block;
 			height: 2px;
 			width: 150px;
@@ -233,12 +233,12 @@ POST STYLING
 			content: "";
 			position: absolute;
 			bottom: -1.25em;
-			background: $primary-color;
+			background: seagreen;
 			display: block;
 			height: 2px;
 			width: 150px;
 			left: calc(50% - 75px);
-		}		
+		}
 	}
 
 	.meta {
@@ -255,11 +255,12 @@ POST STYLING
 			text-align: center;
 			font-size: .9em;
 			font-style: italic;
-			color: lighten($black, 30%); 
+			color: lighten($black, 30%);
 		}
 
 		img {
-			margin-bottom: .25em;
+			margin: 0 auto;
+			display: block;
 		}
 	}
 
@@ -380,7 +381,7 @@ FOOTER STYLING
 	}
 
 	.copy, .footer-links {
-		font-size: .8em; 
+		font-size: .8em;
 	}
 
 	.copy {
@@ -397,7 +398,7 @@ FOOTER STYLING
 				a {
 					display: inline-block;
 					width: 30px;
-					height: 30px; 
+					height: 30px;
 					@include transition(all 0.2s ease-in-out);
 
 					svg {
@@ -409,16 +410,16 @@ FOOTER STYLING
 							fill: $primary-color;
 						}
 
-						.inner-shape { 
+						.inner-shape {
 							fill: white;
 						}
 					}
 				}
 
 
-				&:hover { 
+				&:hover {
 					a {
-						svg { 
+						svg {
 							.outer-shape {
 								fill: darken($primary-color, 10%);
 							}
@@ -434,8 +435,8 @@ FOOTER STYLING
 /***************
 PAGINATION STYLING
 ***************/
- 
-.pagination { 
+
+.pagination {
 	.next {
 		float: left;
 	}
@@ -450,7 +451,7 @@ PAGINATION STYLING
 POST LIST STYLING
 ***************/
 
-.posts {		
+.posts {
 	li {
 		margin-bottom: 4rem;
 		position: relative;
@@ -485,4 +486,3 @@ POST LIST STYLING
 		}
 	}
 }
-

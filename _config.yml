@@ -28,3 +28,12 @@ detach:  false
 port:    4000
 host:    localhost
 baseurl: "" # does not include hostname
+
+social:
+   github: aav7fl
+   twitter: CrypticCitrus
+   facebook: Niewiada
+   youtube: KyleNiewiada
+   #bandcamp: Custom url used
+
+google_analytics: "UA-37567352-1"
