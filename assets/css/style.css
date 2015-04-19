@@ -1068,7 +1068,7 @@ HEADER STYLING
 ***************/
 .header {
   background-color: #3a3a3c;
-  background-image: url("/assets/img/banner.png");
+  background-image: url("/assets/img/banner.jpg");
   background-size: cover;
   background-position: center center;
   color: white;
