@@ -983,7 +983,7 @@ MENU STYLING
 .nav-collapse ul li {
   width: 100%;
   display: block;
-  background: $primary-color;
+  background: seagreen;
   border-bottom: 2px solid #349e63;
 }
 .nav-collapse ul li a {
@@ -1019,7 +1019,7 @@ MENU STYLING
   float: right;
   line-height: 2em;
   margin-top: .5em;
-  background-color: $primary-color;
+  background-color: seagreen;
   border-radius: 4px;
   padding: 0 .5em;
   color: white;
@@ -1120,7 +1120,7 @@ POST STYLING
   content: "";
   position: absolute;
   top: -1.25em;
-  background: $primary-color;
+  background: seagreen;
   display: block;
   height: 2px;
   width: 150px;
@@ -1130,7 +1130,7 @@ POST STYLING
   content: "";
   position: absolute;
   bottom: -1.25em;
-  background: $primary-color;
+  background: seagreen;
   display: block;
   height: 2px;
   width: 150px;
