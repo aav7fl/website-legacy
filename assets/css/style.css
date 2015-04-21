@@ -983,8 +983,8 @@ MENU STYLING
 .nav-collapse ul li {
   width: 100%;
   display: block;
-  background: seagreen;
-  border-bottom: 2px solid #349e63;
+  background: #3d256d;
+  border-bottom: 2px solid #482b80;
 }
 .nav-collapse ul li a {
   color: white;
@@ -1019,7 +1019,7 @@ MENU STYLING
   float: right;
   line-height: 2em;
   margin-top: .5em;
-  background-color: seagreen;
+  background-color: #3d256d;
   border-radius: 4px;
   padding: 0 .5em;
   color: white;
@@ -1031,7 +1031,7 @@ MENU STYLING
 }
 .nav-toggle:hover {
   color: white;
-  background-color: #21653f;
+  background-color: #281847;
 }
 
 /***************
@@ -1120,7 +1120,7 @@ POST STYLING
   content: "";
   position: absolute;
   top: -1.25em;
-  background: seagreen;
+  background: #3d256d;
   display: block;
   height: 2px;
   width: 150px;
@@ -1130,7 +1130,7 @@ POST STYLING
   content: "";
   position: absolute;
   bottom: -1.25em;
-  background: seagreen;
+  background: #3d256d;
   display: block;
   height: 2px;
   width: 150px;
