@@ -3,7 +3,7 @@ layout: post
 title: Discovering and Reverse Engineering My Steelcase Desk
 date: "2015-08-17 15:47"
 comments: true
-image: 2015/08/banner.png
+image: 2015/08/banner.jpg
 published: true
 ---
 
