@@ -273,6 +273,7 @@ In my case, I would have
 ------------------ + 1500 = 1968
    .0079059829
 ```
+
 <ol start="12">
 <li>After adjusting, back out and check your latest displayed height. If the height displayed is correct, move on. If not, re-adjust step 11 again.</li>
 <li>Lower desk height half-way.</li>
