@@ -4,7 +4,7 @@ title: Discovering and Reverse Engineering My Steelcase Desk
 date: "2015-08-17 15:47"
 comments: true
 image: 2015/08/banner.jpg
-published: false
+published: true
 ---
 
 <p class="intro"><span class="dropcap">I</span>n 2013 I made the plunge for a height-adjustable standing desk. I had wanted one for a while because I was becoming restless sitting down throughout the day in my computer chair. I wanted to be able to move around easily while I was using it and not be chained to sitting. I won't go into the health benefits or drawbacks of such a setup, but instead how I discovered and reprogrammed my desk.</p>
