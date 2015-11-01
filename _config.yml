@@ -8,7 +8,8 @@ permalink: blog/:title/
 markdown: redcarpet
 pygments: true
 paginate: 5
-#url: https://www.kyleniewiada.org
+url: https://www.kyleniewiada.org
+enforce_ssl: www.kyleniewiada.org
 #url: http://localhost:4000
 
 navigation:
