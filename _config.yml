@@ -22,7 +22,7 @@ navigation:
  - title: Contact
    url: /contact.html
  - title: Music
-   url: https://www.music.kyleniewiada.org/
+   url: http://www.music.kyleniewiada.org/
 
 gems:
   - jekyll-sitemap
