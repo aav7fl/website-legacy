@@ -14,7 +14,7 @@ enforce_ssl: www.kyleniewiada.org
 
 navigation:
  - title: Home
-   url: /
+   url: /#index.html
  - title: About
    url: /about.html
  - title: Archive
