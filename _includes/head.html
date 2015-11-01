@@ -14,7 +14,8 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
     <!--[if IE 8]><link rel="stylesheet" href="{{ "/assets/css/ie.css" | prepend: site.baseurl }}"><![endif]-->
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <!--<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
     <!-- Modernizr -->
     <script src="{{ "/assets/js/modernizr.custom.15390.js" | prepend: site.baseurl }}" type="text/javascript"></script>
