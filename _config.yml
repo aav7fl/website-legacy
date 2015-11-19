@@ -14,11 +14,11 @@ enforce_ssl: www.kyleniewiada.org
 
 navigation:
  - title: Home
-   url: /index.html
+   url: /
  - title: About
    url: /about.html
  - title: Blog
-   url: /blog/index.html
+   url: /blog/
  - title: Contact
    url: /contact.html
  - title: Music
