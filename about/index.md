@@ -11,7 +11,7 @@ Maybe you've stumbled across this page by accident; perhaps you had full intenti
 
 I write blog posts with no schedule and will write them as I carry out projects. I am passionate about music and computers. I enjoy programming and difficult projects do not deter me.
 
-If you'd like to tell me a story, ask questions about my music, or contact me about something else—[drop me a message here](/contact.html).
+If you'd like to tell me a story, ask questions about my music, or contact me about something else—[drop me a message here](/contact/).
 
 Best Regards,  
 Kyle
