@@ -17,8 +17,8 @@ navigation:
    url: /index.html
  - title: About
    url: /about.html
- - title: Archive
-   url: /archive.html
+ - title: Blog
+   url: /blog/index.html
  - title: Contact
    url: /contact.html
  - title: Music
