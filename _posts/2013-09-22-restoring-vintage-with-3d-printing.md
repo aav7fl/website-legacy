@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Restoring Vintage with 3D Printing
+author: Kyle Niewiada
 date:   2013-09-22
 comments: true
 image: 2013/09/small/DSC09139.JPG
