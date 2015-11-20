@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Discovering and Reverse Engineering My Steelcase Desk
+author: Kyle Niewiada
 date: "2015-08-17 15:47"
 comments: true
 image: 2015/08/banner.jpg
