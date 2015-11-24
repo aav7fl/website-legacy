@@ -3,7 +3,7 @@ description: My little corner of the Internet
 
 
 paginate_path: "blog/page:num/"
-permalink: blog/:title/
+permalink: blog/:year/:month/:day/:title/
 
 markdown: redcarpet
 pygments: true
