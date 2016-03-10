@@ -151,3 +151,9 @@ Software and resources I used:
 - [Project64](http://www.pj64-emu.com/downloads/project64/binaries/)
 - [Zelda high definition texture pack]( http://www.emutalk.net/threads/51481-Zelda-Ocarina-of-time-Community-Retexture-Project-V6-Development-Topic)
 - [Our Custom Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)
+
+EDIT (March 10, 2016):
+
+[Austin](/blog/transferring-n64-saves/#comment-2561328816) added these helpful notes in the comments on anyone attempting to replicate this project with the Ocarina of Time save.
+
+"After going through this process for Ocarina of Time, I'd like to add some things to help others who use this guide. Firstly, as of this posting, there is no easy way to communicate with the Gameshark using a parallel-to-usb adapter so you will need an older machine with a built in parallel port, like the one shown in this guide. Secondly, you must have the expansion pack that expands the N64's RAM from 4MB to 8MB. The only way I could get n64rd to dump the RAM while in-game was by turning on the code generator in the Gameshark's menu before starting Ocarina of Time. This code generator option does not show up unless you have the expansion installed. Finally, if you're using a downloaded ROM, make sure its version matches the version of your save. You can dump the ROM yourself as shown in the guide so that you don't have to worry about this."
