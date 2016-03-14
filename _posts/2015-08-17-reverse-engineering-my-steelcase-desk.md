@@ -22,7 +22,7 @@ Not being deterred, I began to browse the electric section of the height-adjusta
     <figcaption>My new desk</figcaption>
 </figure>
 
-###What _Exactly_ did I Buy?
+### What _Exactly_ did I Buy?
 
 It wasn't until I had the desk back at home that I realized I could find no listing of this unit in any Steelcase catalogs (maybe I wasn't looking hard enough?). I got in contact with Steelcase and Andrea from the Steelcase store was able to provide:
 
@@ -35,7 +35,7 @@ I also had discovered that what I had in my hands was a **test sample**. On the 
 
 This might have explained why I had such an odd remote to it. I'm not sure what the lineup was like back in 2003 for Steelcase height-adjustable electric desks. I was unable to find desks that used the same remote as mine, or even a similar configuration. Given that I had a test unit, I began to wonder if there were special testing properties to the remote.
 
-###Solving a Problem
+### Solving a Problem
 
 I was always annoyed with the remote on my desk because I had to hold down the programmed buttons to allow it to raise or lower. I understand that this is a safety feature to prevent children from being crushed or items being lifted off of the desk. But I was never a fan of being forced to hold down the buttons. As I'm always standing by (/badJoke) when I raise or lower it, I wanted to find a way to make this unit adjustable with a single momentary button press.
 
@@ -44,7 +44,7 @@ There was no documentation on my desk and I knew nearly nothing about the remote
 After a lot of trial and error, and mapping out possible and probable key combination sets, I discovered two different programming modes for my desk remote. One was temporary and the other was permanent until exited. Below are my findings (**including a way to change the adjustment mode from manual to automatic!!**).
 
 
-###Remote Modes:
+### Remote Modes:
 
 Passcode Mode (P-Mode): P---
 
@@ -248,7 +248,7 @@ PArA Mode: PArA
   </tr>
 </table></div>
 
-####To calibrate desk remote display:
+#### To calibrate desk remote display:
 
 <ol>
 <li>Turn on desk.</li>
@@ -285,7 +285,7 @@ In my case, I would have
 <li>Raise the desk to its maximum height.</li>
 <li>When you reach the top, the display will change to the correct height and the calibration of the desk will be complete.</li>
 </ol>
-###Conclusion
+### Conclusion
 
 I like switching between sitting and standing when I'm at my computer. Whenever I hook up my controller and play a game, I prefer standing because I get very involved and move around. My monitors easily change position so I can readjust my workstation on the fly. It's hassle-free. I'm glad I was able to discover the settings that could change the adjustment mode to automatic. Now that I've had experience with the setup, I don't think I'll ever be going back to full-time sitting.
 
