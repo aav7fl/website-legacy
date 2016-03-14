@@ -285,6 +285,7 @@ In my case, I would have
 <li>Raise the desk to its maximum height.</li>
 <li>When you reach the top, the display will change to the correct height and the calibration of the desk will be complete.</li>
 </ol>
+
 ### Conclusion
 
 I like switching between sitting and standing when I'm at my computer. Whenever I hook up my controller and play a game, I prefer standing because I get very involved and move around. My monitors easily change position so I can readjust my workstation on the fly. It's hassle-free. I'm glad I was able to discover the settings that could change the adjustment mode to automatic. Now that I've had experience with the setup, I don't think I'll ever be going back to full-time sitting.
