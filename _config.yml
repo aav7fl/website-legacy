@@ -6,7 +6,7 @@ paginate_path: "blog/page:num/"
 permalink: blog/:title/
 
 markdown: kramdown
-pygments: true
+rogue: true
 paginate: 5
 url: https://www.kyleniewiada.org
 enforce_ssl: www.kyleniewiada.org
@@ -26,6 +26,7 @@ navigation:
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Serving
 detach:  false
