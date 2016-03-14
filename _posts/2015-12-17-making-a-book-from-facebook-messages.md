@@ -8,21 +8,24 @@ image: 2015/12/banner.jpg
 published: true
 ---
 
-##The Gift of Hardcover
+## The Gift of Hardcover
+
 <p class="intro"><span class="dropcap">B</span>ack in October, I wanted to create a meaningful gift for someone very special to me for a special occasion. After brainstorming for a while, I came up with a crazy idea of creating a hardcover book from our earliest conversations on Facebook (I guess I can mark it off as a positive that the information giant held on to this).</p>
 
 The first issue that I needed to address was locating a shop to print a single hardcover book. I started researching self-publishing services and discovered quickly that many required a minimum quantity before they would accept orders. The businesses that did accept a small order had a steep cost for single book. I continued researching until I stumbled upon [lulu.com]( http://www.lulu.com/home). This is where I found the most appropriate pricing for my specific project. I will note however that people may be able to find more appropriate pricing and (especially) more control if they use a local print shop. With my printshop selected, I moved sites to tackle my next issue.
 
-##Fixing Facebook Messages
+## Fixing Facebook Messages
+
 After finding a service that would print my hardcover book, I had to figure out how I was going to get my archived messages "print ready". I recalled Facebook had a feature that [allows you to download your entire archive]( https://www.facebook.com/help/212802592074644). I jumped through the hoops to download my data and was presented a small zip file. This file contained a slimmed-down web-ready version of my Facebook data. Lucky for me, this included a single HTM file that had all undeleted Facebook messages. The structure of the file placed messages inside thread structures. Unlucky for me, these messages inside of each thread were in descending order with the newest messages on top. If I placed the messages in the book like this, it would feel as if the reader was traveling backwards through the story. Making matters worse, each thread was limited to 20,000 messages. After 20,000 messages were written, a new thread was created. The old filled-up threads were then buried by newer threads of conversations above it.
 
 With some help from a friend, we created a Python script that parsed through the original messages.htm file and reversed the order of all messages in each given thread. It would then output all of those messages reversed in a simpler HTML file that allowed for easy copy/pasting. I've uploaded this project script to GitHub and it can be found here:
 
-###[GitHub: Facebook-Archive-Message-Reverser](https://github.com/aav7fl/Facebook-Archive-Message-Reverser)
+### [GitHub: Facebook-Archive-Message-Reverser](https://github.com/aav7fl/Facebook-Archive-Message-Reverser)
 
 The documentation README is on the GitHub page above. The README will explain the file structure of the current Facebook archive messages at the time of this post. The instructions should allow you to repeat the steps that I have to create a transcript-like copy of your message archive.
 
-##Formatting the Book
+## Formatting the Book
+
 After my messages were in their correct order, I shifted focus on how I was going to format this plethora of text into something book-worthy. I downloaded a large hardcover book template from Lulu that matched my desired layout. Then I began my quest of transferring in my Facebook messages. I copied each conversation thread that I wanted from the messages_reversed.html and pasted them into a Word document. Without any formatting, the text was highly unreadable and confused which messages belonged to which user. I spent some time studying the features and following tutorials for Microsoft Word. I formatted the text to my liking seen below.
 
 <figure>
