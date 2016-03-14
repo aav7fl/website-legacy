@@ -5,6 +5,7 @@ description: My little corner of the Internet
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
 
+markdown: kramdown
 pygments: true
 paginate: 5
 url: https://www.kyleniewiada.org
