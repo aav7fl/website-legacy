@@ -8,13 +8,13 @@ image: 2016/03/banner.png
 published: true
 ---
 
-<p class="intro"><span class="dropcap">A</span> few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word. I also needed to keep a running total of time for my project.</p>
+<p class="intro"><span class="dropcap">A</span> few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.</p>
 
-As is the motivation for many projects/scripts of mine, I wanted to automate the process as much as possible such that I never had to think about it again [anytime soon]. It was shortly after I had [concluded work on a previous project](/blog/making-a-book-from-facebook-messages/) that involved using Microsoft Word with macro scripts. I was ready to learn more about its advanced features. I wanted an automatic running total because I would often forget to recalculate my grand total after each entry. There were probably other solutions that were better suited for this, but I really wanted to see how useful Microsoft Word macros (I know the evil stigma associated with macros) could be to me.
+As is the motivation for many projects/scripts of mine, I wanted to automate the process as much as possible such that I never had to think about it again [anytime soon]. This was shortly after I had [concluded work on a previous project](/blog/making-a-book-from-facebook-messages/) that involved using Microsoft Word with macro scripts. I was ready to learn more about its advanced features. I wanted an automatic running total because I would often forget to recalculate my grand total after each entry. There were probably other solutions that were better suited for this, but I really wanted to see how useful Microsoft Word macros (I know the evil stigma associated with macros) could be to me.
 
 #### Goals:
 
-1. Automatically insert a new blank entry for today with cursor ready to write description
+1. Automatically insert a new blank entry for today with the cursor ready to write a description
 2. The ability to total hours for all entries without the user remembering
 3. Automatically update total hours at top of document
 
@@ -40,8 +40,8 @@ When the document is closed, the macro will run and add up the total number of h
 
 ### Source code and example document
 
-[Here](/assets/files/2016/03/JournalExample.docm) is a link to the macro enabled Microsoft Word document. Below is the source code for the macro. Most of it is pieced together from other examples online accomplishing similar tasks. I spent most of my time looking at different resources for visual basic techniques and have mentioned those sources in nearby comments for pieces of code where available.
+[Microsoft Word Auto-Journal example document](/assets/files/2016/03/JournalExample.docm)
+
+Above is a link to the macro enabled Microsoft Word document example. Below is the source code for the macro. Most of it is pieced together from other examples online accomplishing similar tasks. I spent most of my time looking at different resources for visual basic techniques and have mentioned those sources in nearby comments for pieces of code where available.
 
 <script src="https://gist.github.com/aav7fl/7df0051c6fa9fd8a42bb.js"></script>
-
-In case you did not spot it above, here is the [Microsoft Word Auto-Journal example document](/assets/files/2016/03/JournalExample.docm).

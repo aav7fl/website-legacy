@@ -1207,8 +1207,10 @@ POST NAV STYLING
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -webkit-filter: brightness(65%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  filter: brightness(65%);
   left: 0;
   width: 100%;
   .
@@ -1229,7 +1231,7 @@ POST NAV STYLING
 .postNav .prev.image, .postNav .next.image {
   text-decoration: none;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
   padding: 0 .5rem;
   position: relative;
   -webkit-transition: all 0.2s ease-in-out;
