@@ -1101,7 +1101,7 @@ HEADER STYLING
   line-height: 3em;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 800;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 .header h1 a {
   color: white;
