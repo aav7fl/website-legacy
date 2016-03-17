@@ -4,7 +4,7 @@ title : Blogs
 ---
 
 <section id="archive">
-  <h2>Post Archive</h2>
+  <center><h1>Post Archive</h1></center>
 
 <h3>Large projects</h3>  
   {% for post in site.posts %}
@@ -26,7 +26,7 @@ title : Blogs
   {% endfor %}
 </ul>
 
-<h3>Small projects</h3>  
+<h3>Small projects/Updates</h3>  
   {% for post in site.posts %}
     {% if post.project_size == "small" %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
