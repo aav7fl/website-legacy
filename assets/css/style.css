@@ -4,8 +4,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|PT+Serif:400,700,400italic,700italic);
 html {
   font-size: 100%;
   line-height: 1.5em;
