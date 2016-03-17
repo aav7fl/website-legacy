@@ -5,6 +5,7 @@ author: Kyle Niewiada
 date:   2013-09-22
 comments: true
 image: 2013/09/small/DSC09139.JPG
+project_size: large
 ---
 
 <p class="intro"><span class="dropcap">N</span>ow, I understand that some people like to have posts that show progress they've made before and after a project. I'm sorry to say that I don't have that many posts of the "before". I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker.</p>

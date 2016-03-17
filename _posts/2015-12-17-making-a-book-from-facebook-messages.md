@@ -6,6 +6,7 @@ date: "2015-12-17 18:00"
 comments: true
 image: 2015/12/banner.jpg
 published: true
+project_size: large
 ---
 
 ## The Gift of Hardcover
