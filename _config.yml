@@ -1,15 +1,18 @@
 name: Kyle Niewiada
+author:
+  name: Kyle Niewiada
+  email: kyle@kyleniewiada.org
 description: My little corner of the Internet
 
 
-paginate_path: "blog/page:num/"
+paginate_path: blog/page:num/
 permalink: blog/:year/:month/:title/
 
 markdown: kramdown
 highlighter: rouge
 paginate: 5
 url: https://www.kyleniewiada.org
-enforce_ssl: www.kyleniewiada.org
+#enforce_ssl: www.kyleniewiada.org
 #url: http://localhost:4000
 #excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
 
