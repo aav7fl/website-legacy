@@ -27,12 +27,12 @@ The documentation README is on the GitHub page above. The README will explain th
 After my messages were in their correct order, I shifted focus on how I was going to format this plethora of text into something book-worthy. I downloaded a large hardcover book template from Lulu that matched my desired layout. Then I began my quest of transferring in my Facebook messages. I copied each conversation thread that I wanted from the messages_reversed.html and pasted them into a Word document. Without any formatting, the text was highly unreadable and confused which messages belonged to which user. I spent some time studying the features and following tutorials for Microsoft Word. I formatted the text to my liking seen below.
 
 <figure>
-    <img src='/assets/img/2015/12/layout_before.png' alt='missing' />
+    <img src='/assets/img/2015/12/layout_before.png' alt='Before formatting' />
     <figcaption>Before formatting</figcaption>
 </figure>
 
 <figure>
-    <img src='/assets/img/2015/12/layout_after.png' alt='missing' />
+    <img src='/assets/img/2015/12/layout_after.png' alt='After formatting' />
     <figcaption>After formatting</figcaption>
 </figure>
 

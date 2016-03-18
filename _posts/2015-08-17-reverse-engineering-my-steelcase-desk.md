@@ -19,7 +19,7 @@ In my head, my ideal desk would be one that would (1) raise and lower, (2) use n
 Not being deterred, I began to browse the electric section of the height-adjustable desks in the warehouse. I thought maybe I could replan my room again. That's when I stumbled upon a very peculiar looking desk. This desk did not show up in any standard Steelcase lineup. I pulled out my ruler and took some measurements to find that it would fit perfectly. I haggled a bit on the price, bundled in two monitor arms, and bought it.
 
 <figure>
-    <img src='/assets/img/2015/08/desk.jpg' alt='missing' />
+    <img src='/assets/img/2015/08/desk.jpg' alt='My new desk' />
     <figcaption>My new desk</figcaption>
 </figure>
 
@@ -58,15 +58,15 @@ PArA Mode: PArA
   - If in Passcode Mode, unplug desk, plug back in.
 
   <figure>
-      <img src='/assets/img/2015/08/normal.jpg' alt='missing' />
+      <img src='/assets/img/2015/08/normal.jpg' alt='Normal mode' />
       <figcaption>Normal mode</figcaption>
   </figure>
   <figure>
-      <img src='/assets/img/2015/08/PArA.jpg' alt='missing' />
+      <img src='/assets/img/2015/08/PArA.jpg' alt='PArA mode' />
       <figcaption>PArA mode</figcaption>
   </figure>
   <figure>
-      <img src='/assets/img/2015/08/passcode.jpg' alt='missing' />
+      <img src='/assets/img/2015/08/passcode.jpg' alt='Passcode mode' />
       <figcaption>Passcode mode</figcaption>
   </figure>
 

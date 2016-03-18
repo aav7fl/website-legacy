@@ -40,7 +40,7 @@ Here is how I did it.
 - Load in Project64 and play
 
 <figure>
-    <img src='/assets/img/2015/04/DSC09658.JPG' alt='missing' />
+    <img src='/assets/img/2015/04/DSC09658.JPG' alt='the N64 transfer setup' />
     <figcaption>The N64 transfer setup</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ Star Wars, Mario Party, and Super Mario 64 use EEPROM to store their game save. 
 To transfer the EEPROM games, I used a GameShark (I chose v3.2) to transfer the save from my cartridge to the memory pack. Once I transferred every game over to the memory pack, I used my Nintendo 64 DexDrive (Pictured below) to move the save files onto my computer. But each save file was wrapped inside a proprietary container. When examined with a hex editor, I noticed that each file was still there and all I had to do was cut out the bytes that made up the file container. Each one of the save files was structured in a different way.
 
 <figure>
-    <img src='/assets/img/2015/04/DSC09655.JPG' alt='missing' />
+    <img src='/assets/img/2015/04/DSC09655.JPG' alt='InterAct DexDrive' />
     <figcaption>InterAct DexDrive</figcaption>
 </figure>
 
@@ -68,7 +68,7 @@ The first thing that I tried was dumping the SRAM by using the GameShark. Howeve
 I was unable to get sram2mpk.bin working with my Ocarina of Time game. I spent a whole day attempting to load the program, but every time it locked up on me and dumped no information. I was able to verify (with the help of Lawrence) that gsuploader was working correctly by loading up an older project named [Neon64](https://github.com/mikeryan/n64dev), an NES emulator for the N64. Below is an image of my N64 running Super Mario Bros 3 with the help of Neon64.
 
 <figure>
-    <img src='/assets/img/2015/04/2015-03-21_19.19.01.jpg' alt='missing' />
+    <img src='/assets/img/2015/04/2015-03-21_19.19.01.jpg' alt='Super Mario Bros 3 on the N64' />
     <figcaption>Super Mario Bros 3 on the N64</figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ The documentation on the Zelda save file wiki claimed that save files were built
 After opening up the RAM dump with my hex editor, I followed up to the address 0x0011A790 (or 0x8011A790 inside my GameShark memory) and copied 0x1450 bytes (the size of the game save file).
 
 <figure>
-    <img src='/assets/img/2015/04/memoryDump.png' alt='missing' />
+    <img src='/assets/img/2015/04/memoryDump.png' alt='Untouched memory dump in native N64 (Big Endian)' />
     <figcaption>Untouched memory dump in native N64 (Big Endian)</figcaption>
 </figure>
 
@@ -101,7 +101,7 @@ I used [uCON64](http://ucon64.sourceforge.net/#ucon64) to do just that and conve
 ```
 
 <figure>
-    <img src='/assets/img/2015/04/memoryDumpSwap.png' alt='missing' />
+    <img src='/assets/img/2015/04/memoryDumpSwap.png' alt='Byte swapped memory dump (Little Endian)' />
     <figcaption>Byte swapped memory dump (Little Endian)</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ Lawrence and I were unable to find any information online about this algorithm a
 Now that I had the correct checksum algorithm, I recalculated my memory dump and discovered that my checksum from RAM was in fact wrong. I corrected it, converted it from native N64  to something more readable (big endian -> little endian), grafted its contents into a known working Ocarina of Time save file, and loaded it up in my emulator. It worked. I was able to load up my Ocarina of Time save file on the emulator on my computer with the ROM that I had dumped and the save file I made.
 
 <figure>
-    <img src='/assets/img/2015/04/DSC09668.JPG' alt='missing' />
+    <img src='/assets/img/2015/04/DSC09668.JPG' alt='N64 with gameshark and Zelda Ocarina of Time plugged in' />
 </figure>
 
 ### Final Thoughts
@@ -130,13 +130,13 @@ I managed to up-convert a younger piece of my childhood (with help) into the pre
 It didn’t take long before I learned that the community had made a [high definition texture pack]( http://www.emutalk.net/threads/51481-Zelda-Ocarina-of-time-Community-Retexture-Project-V6-Development-Topic) for specific graphic plug-ins. Of course I had to give it a try. It looks magnificent. This was the result.
 
 <figure>
-    <img src='/assets/img/2015/04/zelda01.jpg' alt='missing' />
+    <img src='/assets/img/2015/04/zelda01.jpg' alt='Zelda Ocarina of Time with high resolution texture pack' />
 </figure>
 <figure>
-    <img src='/assets/img/2015/04/zelda02.jpg' alt='missing' />
+    <img src='/assets/img/2015/04/zelda02.jpg' alt='Zelda Ocarina of Time with high resolution texture pack' />
 </figure>
 <figure>
-    <img src='/assets/img/2015/04/zelda03.jpg' alt='missing' />
+    <img src='/assets/img/2015/04/zelda03.jpg' alt='Zelda Ocarina of Time with high resolution texture pack' />
 </figure>
 
 I hope others found this post informational and that it may help those with old N64 saves repeat what I have done.

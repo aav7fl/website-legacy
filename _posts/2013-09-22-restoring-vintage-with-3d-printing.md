@@ -18,8 +18,8 @@ My story begins with my amp (what else!?).
 Sorry for this poor photo. This was from a few months ago. I forgot to take 'before pictures'. As you can see in the photo, there are two-ish burnt lamps. Since I took this photo, nearly all of my lamps burned themselves out. That lead me to decide on a project to restore my amp.
 
 <figure>
-  <a href="/assets/img/2013/09/full/bHhSN6f.jpg" target="\_blank">
-    <img src='/assets/img/2013/09/small/bHhSN6f.jpg'>
+  <a href="/assets/img/2013/09/full/bHhSN6f.jpg" alt="original lighting of amplifier" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/bHhSN6f.jpg' alt="original lighting of amplifier">
   </a>
   <figcaption>Original Lighting</figcaption>
 </figure>
@@ -35,10 +35,10 @@ I did however discover that a user here on AK (Kudos to [bikemandan](http://www.
 After a bit of research, I concluded that his lamp housing had a very good chance of fitting perfectly with my model (it was about 90% perfect for me). I used his model to help re-create a version more suitable for both my 2220B, and a 3D printer. My result was this.
 
 <figure>
-  <a href="/assets/img/2013/09/full/2220B_Lamp_housing_edit_preview_featured.jpg" target="\_blank">
-    <img src='/assets/img/2013/09/small/2220B_Lamp_housing_edit_preview_featured.jpg'>
+  <a href="/assets/img/2013/09/full/2220B_Lamp_housing_edit_preview_featured.jpg" alt="3D model of  Marantz 2220B light housing" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/2220B_Lamp_housing_edit_preview_featured.jpg' alt="3D model of  Marantz 2220B light housing">
   </a>
-  <figcaption>Link to file on <a href=http://www.thingiverse.com/thing:150349>Thingiverse</a></figcaption>
+  <figcaption>Link to file on <a href="http://www.thingiverse.com/thing:150349">Thingiverse</a></figcaption>
 </figure>
 
 Now I was tasked with trying to find a place to print it. I discovered that 3D printing was expensive! Luckily, I had two friends who both had 3D printers. Unluckily, neither of them had theirs working with no ETA.  
@@ -49,43 +49,45 @@ I scheduled up a time to work with the 3D printer. That's when I discovered that
 It started out very nicely.
 
 <figure>
-  <a href="/assets/img/2013/09/full/IMG_0100.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/IMG_0100.JPG'>
+  <a href="/assets/img/2013/09/full/IMG_0100.JPG" alt="Makerbot 2 printing Marantz Housing" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0100.JPG' alt="Makerbot 2 printing Marantz Housing">
   </a>
   <figcaption>Makerbot 2 printing Marantz Housing</figcaption>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/IMG_0103.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/IMG_0103.JPG'>
+  <a href="/assets/img/2013/09/full/IMG_0103.JPG" alt="Makerbot 2 printing Marantz Housing" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0103.JPG' alt="Makerbot 2 printing Marantz Housing">
   </a>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/IMG_0107.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/IMG_0107.JPG'>
+  <a href="/assets/img/2013/09/full/IMG_0107.JPG" alt="Makerbot 2 printing Marantz Housing" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0107.JPG' alt="Makerbot 2 printing Marantz Housing">
   </a>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/IMG_0106.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/IMG_0106.JPG'>
+  <a href="/assets/img/2013/09/full/IMG_0106.JPG" alt="Makerbot 2 printing Marantz Housing" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0106.JPG' alt="Makerbot 2 printing Marantz Housing">
   </a>
 </figure>
+
 But then, as the printer approached the top of the design, it could not figure out how to print the top layer without supports (I have a personal opinion on what the algorithm should have done, but that's another story). So near the end of the print, it turned into a stringy disaster.
 
 <figure>
-  <a href="/assets/img/2013/09/full/IMG_0110.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/IMG_0110.JPG'>
+  <a href="/assets/img/2013/09/full/IMG_0110.JPG" alt="Failed housing design" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0110.JPG' alt="Failed housing design">
   </a>
   <figcaption>Failed housing design</figcaption>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/IMG_0108.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/IMG_0108.JPG'>
+  <a href="/assets/img/2013/09/full/IMG_0108.JPG" alt="Failed housing design" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/IMG_0108.JPG' alt="Failed housing design">
   </a>
 </figure>
+
 I had also discovered that during the print job, the temperature of the room had changed by well over 10 degrees. This caused my model to warp in on itself on the build platform. Either way... this model was not going to work.
 
 After that print job, the girl running the printer suggested I could try it again overnight. I quickly agreed, added supports to the model, and awaited the final product.
@@ -97,18 +99,17 @@ Around an hour into the print job, I noticed that the printer was plugged into a
 This fan blew the rubber bands in front of the sensor causing it to reset its timer every few seconds.
 
 <figure>
-  <a href="/assets/img/2013/09/full/2013-09-10%2012.04.14.jpg" target="\_blank">
-    <img src='/assets/img/2013/09/small/2013-09-10%2012.04.14.jpg'>
+  <a href="/assets/img/2013/09/full/2013-09-10%2012.04.14.jpg" alt="fan blowing a rubber band in front of a sensor" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/2013-09-10%2012.04.14.jpg' alt="fan blowing a rubber band in front of a sensor">
   </a>
 </figure>
 
 Here is the final photo I took of it printing before leaving. You can see the breakaway supports that are being added at the bottom (or in this case the front of the model).
 
 <figure>
-  <a href="/assets/img/2013/09/full/2013-09-10%2011.48.39.jpg" target="\_blank">
-    <img src='/assets/img/2013/09/small/2013-09-10%2011.48.39.jpg'>
+  <a href="/assets/img/2013/09/full/2013-09-10%2011.48.39.jpg" alt="Makerbot 2  printing Marantz 2220B light housing again" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/2013-09-10%2011.48.39.jpg' alt="Makerbot 2  printing Marantz 2220B light housing again">
   </a>
-  <figcaption></figcaption>
 </figure>
 
 This quick setup kept the printer from going off for the duration of the 5.5 hour print job.
@@ -120,26 +121,26 @@ Here are a few photos of the final results. You can see the original lamp housin
 The end cost to me was free (it probably won't happen again) because they have not figured out a way to charge students at my university on printed objects. But, I was also the first student they've ever had use their printer for a project. Every object printed up to this point were small items found built into the device or from the popular sections of thingiverse.
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09132.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09132.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09132.JPG" alt="final print model" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09132.JPG' alt="final print model">
   </a>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09131.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09131.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09131.JPG" alt="final print model" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09131.JPG' alt="final print model">
   </a>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09130.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09130.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09130.JPG" alt="final print model" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09130.JPG' alt="final print model">
   </a>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09129.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09129.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09129.JPG" alt="original, prototype, and final print model" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09129.JPG' alt="original, prototype, and final print model">
   </a>
   <figcaption>Original, prototype, and final</figcaption>
 </figure>
@@ -149,22 +150,22 @@ Now I had a perfectly built lamp housing to go in as a replacement for my old on
 I placed the model into my Marantz and you can see that it fits without any issues.
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09138.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09138.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09138.JPG" alt="printed model inside Marantz 2220B" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09138.JPG' alt="printed model inside Marantz 2220B">
   </a>
   <figcaption>Almost ready for the first test..</figcaption>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09137.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09137.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09137.JPG" alt="printed model inside Marantz 2220B with lights on" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09137.JPG' alt="printed model inside Marantz 2220B with lights on">
   </a>
   <figcaption>An overview of my Marantz with the bright blue part placed inside.</figcaption>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09139.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09139.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09139.JPG" alt="overview and comparison of parts" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09139.JPG' alt="overview and comparison of parts">
   </a>
   <figcaption>An overview and comparison of the parts</figcaption>
 </figure>
@@ -172,15 +173,15 @@ I placed the model into my Marantz and you can see that it fits without any issu
 A close up, and then with the faceplate on.
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09140.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09140.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09140.JPG" alt="close up with faceplate on" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09140.JPG' alt="close up with faceplate on">
   </a>
   <figcaption></figcaption>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09141.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09141.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09141.JPG" alt="close-up with faceplate on" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09141.JPG' alt="close up with faceplate on">
   </a>
   <figcaption>Front glass finally on</figcaption>
 </figure>
@@ -188,15 +189,15 @@ A close up, and then with the faceplate on.
 Now I'm putting it all back together (with new vellum)
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09144.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09144.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09144.JPG" alt="" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09144.JPG' alt="">
   </a>
   <figcaption></figcaption>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09145.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09145.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09145.JPG" alt="Marantz 2220B put back together" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09145.JPG' alt="Marantz 2220B put back together">
   </a>
   <figcaption>Faceplate engaged!</figcaption>
 </figure>
@@ -208,21 +209,21 @@ Overall, it is very red and blue. Maybe too blue.. but I think it will grow on m
 **Edit: It has. I like it.**
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09158.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09158.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09158.JPG" alt="final shots of Marantz 2220B after restoration" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09158.JPG' alt="final shots of Marantz 2220B after restoration">
   </a>
   <figcaption>Yellowcard poster hiding in the back...</figcaption>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09157.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09157.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09157.JPG" alt="final shots of Marantz 2220B after restoration" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09157.JPG' alt="final shots of Marantz 2220B after restoration">
   </a>
 </figure>
 
 <figure>
-  <a href="/assets/img/2013/09/full/DSC09152.JPG" target="\_blank">
-    <img src='/assets/img/2013/09/small/DSC09152.JPG'>
+  <a href="/assets/img/2013/09/full/DSC09152.JPG" alt="final shots of Marantz 2220B after restoration" title="click to view larger image" target="\_blank">
+    <img src='/assets/img/2013/09/small/DSC09152.JPG' alt="final shots of Marantz 2220B after restoration">
   </a>
   <figcaption>Pairing up with my setup</figcaption>
 </figure>

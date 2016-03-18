@@ -18,14 +18,14 @@ I am almost positive (*electric joke*) that most people have done something simi
 The USB 2.0 specification layout gave me a definition to what each wire inside the cable should be (assuming I can’t guess). The red wire carried the power, and that was the wire I was going to use in my switch. The black wire was the ground, the green wire was for data in positive, and the white wire was for data in negative.
 
 <figure>
-  <img src='/assets/img/2016/03/layout.png'>
+  <img src='/assets/img/2016/03/layout.png' alt="USB 2.0 specification layout">
   <figcaption>http://www.usb.org/developers/docs/ecn1.pdf</figcaption>
 </figure>
 
 I used my X-Acto knife with \#2 blades and wire strippers to tear open the shielding on a cable and strip away the wire insulation. I soldered the red wires to the switch connectors, filled it with hot glue, surrounded the edges with electric tape to act like an overmold, and threw it all together.
 
 <figure>
-  <img src='/assets/img/2016/03/prototype.jpg'>
+  <img src='/assets/img/2016/03/prototype.jpg' alt="Prototype/Proof of concept">
   <figcaption>Prototype/Proof of concept</figcaption>
 </figure>
 
@@ -35,20 +35,20 @@ I was not satisfied. I wanted a clean professional look for this. I could do bet
 I stripped away the outer cable shielding being careful not to take too much away. I wanted to keep as much as the cable as possible so that I didn’t need any support outside of the switch casing.
 
 <figure>
-  <img src='/assets/img/2016/03/assembly.jpg'>
+  <img src='/assets/img/2016/03/assembly.jpg' alt="The assembly process of in-line USB power switch">
   <figcaption>The assembly process</figcaption>
 </figure>
 
 Instead of soldering the red wire, this time I decided to simply wrap it around the screws and tighten it down. Before closing the switch casing back up, I wrapped the data and ground wires with tinfoil to add any shielding that may had been removed earlier. I closed it back up and confirmed the cable as working.
 
 <figure>
-  <img src='/assets/img/2016/03/final.jpg'>
+  <img src='/assets/img/2016/03/final.jpg' alt="completion of the in-line USB power switch">
   <figcaption>All finished up</figcaption>
 </figure>
 
 Here is my final product; A USB cable (A->B) with an in-line power switch near the end. Whenever I feel the need to dim the blue light from the microphone, or turn off its features, it’s only a flip of a switch away. I made this approximately one year ago and it has held up without any problems. A smaller switch may have been a better idea, but I was looking to use pieces that I could easily find. Here is a picture of it set up with my microphone.
 
 <figure>
-  <img src='/assets/img/2016/03/banner2.jpg'>
+  <img src='/assets/img/2016/03/banner2.jpg' alt="final results of the in-line USB power switch">
   <figcaption>Final result</figcaption>
 </figure>
