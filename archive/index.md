@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Blogs
+title : Archive
 ---
 
 <section id="archive">
