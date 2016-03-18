@@ -6,7 +6,7 @@ title : Archive
 <section id="archive">
   <center><h1>Post Archive</h1></center>
 
-<h3>Large projects</h3>  
+<h3 class="archive">Large projects</h3>  
   {% for post in site.posts %}
     {% if post.project_size == "large" %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -16,7 +16,7 @@ title : Archive
   {% endfor %}
 </ul>
 
-<h3>Medium projects</h3>  
+<h3 class="archive">Medium projects</h3>  
   {% for post in site.posts %}
     {% if post.project_size == "medium" %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -26,7 +26,7 @@ title : Archive
   {% endfor %}
 </ul>
 
-<h3>Small projects/Updates</h3>  
+<h3 class="archive">Small projects/Updates</h3>  
   {% for post in site.posts %}
     {% if post.project_size == "small" %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
