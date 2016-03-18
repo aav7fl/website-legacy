@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Archive
+title : Post Archive
 ---
 
 <section id="archive">
