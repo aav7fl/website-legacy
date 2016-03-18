@@ -1154,7 +1154,8 @@ POST STYLING
   font-weight: 300;
 }
 .post figure {
-  margin: 3rem 0;
+  margin: 3rem auto;
+  display: table;
 }
 .post figure figcaption {
   text-align: center;
