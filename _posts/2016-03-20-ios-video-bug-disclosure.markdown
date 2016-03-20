@@ -37,7 +37,7 @@ There exists a bug with the iOS video playback and color reproduction. When spec
 - iPad Air 2 (iOS 9.0.2)
 - iPad Pro (iOS 9.2.1)
 
-## Proving through Testing
+## Proof through Testing
 
 When I first stumbled across this bug, I thought there was a problem with my iPad Air 2. It was not until I tested this scenario on multiple iOS devices before I was convinced that it was a bug with either iOS or all recent hardware iterations. However, I wanted to be able to prove that this bug existed and that my eyes were not playing tricks.
 
