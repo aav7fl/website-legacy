@@ -4,7 +4,7 @@ title:  "Somewhere to Start From"
 author: Kyle Niewiada
 date:   2013-04-13
 comments: false
-project_size: small
+tag: "update"
 ---
 
 Here I am. My own small little corner of the internet. A centralized location; a place to call home.

@@ -6,7 +6,7 @@ date: '2016-03-20 18:05'
 comments: true
 image: 2016/03/iPadTesting.jpg
 published: true
-project_size: large
+tag: "large project"
 ---
 
 There exists a bug with the iOS video playback and color reproduction. When specific combinations and proportions of colors are present on screen, if (and only if) all user interface elements are hidden, then a decrease in color temperature (mostly red) occurs. This seemingly subtle shift in color turns cartoon characters and online content creators into ghostly pale figures.

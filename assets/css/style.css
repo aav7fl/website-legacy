@@ -1343,6 +1343,13 @@ POST LIST STYLING
   font-weight: 300;
   font-size: .8em;
 }
+.posts li .tag {
+  color: gray;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: .8em;
+  float: right;
+}
 .posts li h3 {
   margin: 0 0 .5em;
 }
