@@ -1342,6 +1342,7 @@ POST LIST STYLING
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: .8em;
+  float: left;
 }
 .posts li .tag {
   color: gray;
