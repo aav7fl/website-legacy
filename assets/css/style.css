@@ -1337,7 +1337,7 @@ POST LIST STYLING
 .posts li a:hover {
   text-decoration: underline;
 }
-.posts li .date {
+.posts li .meta {
   color: gray;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 300;
