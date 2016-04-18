@@ -27,7 +27,8 @@ navigation:
    url: /contact/
  - title: Music
    url: http://music.kyleniewiada.org/
-
+ - title: Résumé
+   url: /resume/
 gems:
   - jekyll-sitemap
   - jekyll-paginate
