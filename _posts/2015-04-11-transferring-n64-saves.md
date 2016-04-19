@@ -9,8 +9,7 @@ published: true
 tag: "large project"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen I was younger, I would spend weekends after school playing through the Legend of Zelda: Ocarina of Time. After a while, I beat it. I remember the fun I had navigating through puzzles and chasing down heart containers. I loved every minute of it.
-</p>
+When I was younger, I would spend weekends after school playing through the Legend of Zelda: Ocarina of Time. After a while, I beat it. I remember the fun I had navigating through puzzles and chasing down heart containers. I loved every minute of it.
 
 About a year ago, I discovered that my Ocarina of Time cartridge was on borrowed time. It turned out that this was one of a handful of cartridges in the Nintendo 64 library that uses a battery to maintain its save file. According to the trustworthy Internet, these batteries have a lifespan between 15 and 20 years. So I did what any other dreamy eyed gamer would do. I got out my N64 and started tinkering with it.
 
