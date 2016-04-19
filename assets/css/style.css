@@ -565,6 +565,27 @@ blockquote {
     line-height: 1.45833333;
   }
 }
+.posts li .meta {
+  color: gray;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: .8em;
+  float: left;
+}
+
+.posts li .tag {
+  color: gray;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: .8em;
+  float: right;
+}
+
+h1, .archive, h2, .archive, h3, .archive, h4, .archive, h5, .archive, h6, .archive {
+  margin: 1.5rem 0 .5rem;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
 /***************
 TRANSITION
 ***************/
@@ -784,7 +805,6 @@ HEADER STYLING
   line-height: 3em;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 800;
-  text-transform: uppercase;
 }
 .header h1 a {
   color: white;
@@ -833,7 +853,8 @@ POST STYLING
   font-weight: 300;
 }
 .post figure {
-  margin: 3rem 0;
+  margin: 3rem auto;
+  display: table;
 }
 .post figure figcaption {
   text-align: center;
@@ -851,10 +872,6 @@ POST STYLING
 .post .highlight {
   clear: both;
   margin-bottom: 2rem;
-}
-.post .dropcap {
-  color: #3d256d;
-  margin-right: .45rem;
 }
 .post .featuredImage {
   position: relative;
@@ -881,7 +898,6 @@ POST NAV STYLING
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: .9em;
-  text-transform: uppercase;
   text-align: center;
 }
 .postNav .prev img, .postNav .next img {
@@ -890,8 +906,10 @@ POST NAV STYLING
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -webkit-filter: brightness(65%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  filter: brightness(65%);
   left: 0;
   width: 100%;
   height: auto;
@@ -911,7 +929,7 @@ POST NAV STYLING
 .postNav .prev.image, .postNav .next.image {
   text-decoration: none;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
   padding: 0 .5rem;
   position: relative;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1037,7 +1055,7 @@ POST LIST STYLING
     content: "";
     display: block;
     width: 100%;
-    height: 5em;
+    height: 25em;
     position: absolute;
     top: -2em;
     left: 0;
@@ -1226,30 +1244,30 @@ POST LIST STYLING
   /***************
   CONTACT PAGE STYLING
   ***************/
-  .contactContent {
+  #contact form {
     width: 48.93617%;
     float: left;
     margin-right: 2.12766%;
   }
 
-  #contact form {
-    width: 48.93617%;
-    float: right;
-    margin-right: 0;
+  /***************
+  RESUME STYLING
+  ***************/
+  .resume h1, .resume h2, .resume h3, .resume h4, .resume h5, .resume h6, .resume p, .resume ul, .resume ol, .resume dl, .resume .pageTitle {
+    width: 74.46809%;
+    float: left;
+    margin-right: 2.12766%;
+    float: none;
+    margin: 0 0 2rem;
+    text-align: center;
   }
-}
-.posts li .meta {
-  color: gray;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: .8em;
-  float: left;
-}
 
-.posts li .tag {
-  color: gray;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: .8em;
-  float: right;
+  .resume h1, .resume .h1, .resume h2, .resume .h2, .resume h3, .resume .h3, .resume h4, .resume .h4, .resume h5, .resume .h5, .resume h6, .resume .h6 {
+    margin: 0rem auto;
+    text-align: center;
+  }
+
+  .h3 {
+    color: #0b5394;
+  }
 }

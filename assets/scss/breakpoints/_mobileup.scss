@@ -195,7 +195,6 @@ HEADER STYLING
 		line-height: 3em;
 		font-family: $sans-serif;
 		font-weight: 800;
-		text-transform: uppercase;
 
 		a {
 			color: white;
@@ -255,7 +254,8 @@ POST STYLING
 	}
 
 	figure {
-		margin: 3rem 0;
+    margin: 3rem auto;
+    display: table;
 
 		figcaption {
 			text-align: center;
@@ -277,11 +277,6 @@ POST STYLING
 	.highlight {
 		clear: both;
 		margin-bottom: 2rem;
-	}
-
-	.dropcap {
-		color: $primary-color;
-		margin-right: .45rem;
 	}
 
 	.featuredImage {
@@ -313,7 +308,6 @@ POST NAV STYLING
 		font-family: $sans-serif;
 		font-weight: 800;
 		font-size: .9em;
-		text-transform: uppercase;
 		text-align: center;
 
 		img {
@@ -322,8 +316,10 @@ POST NAV STYLING
 			position: absolute;
 			top: 50%;
 			-webkit-transform: translateY(-50%);
+      -webkit-filter: brightness(65%);
 			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
+      filter: brightness(65%);
 			left: 0;
 			width: 100%;
 			height: auto;
@@ -345,7 +341,7 @@ POST NAV STYLING
 		&.image {
 			text-decoration: none;
 			color: white;
-			text-shadow: 1px 1px 3px rgba(0,0,0,.8);
+			text-shadow: 1px 1px 8px rgba(0,0,0,.8);
 			padding: 0 .5rem;
 			position: relative;
 			@include transition(all 0.2s ease-in-out);
