@@ -113,20 +113,18 @@ blockquote {
 
 .posts li .meta {
   color: gray;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: $sans-serif;
   font-size: .8em;
   float: left;
 }
 .posts li .tag {
   color: gray;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: $sans-serif;
   font-size: .8em;
   float: right;
 }
 
 h1, .archive, h2, .archive, h3, .archive, h4, .archive, h5, .archive, h6, .archive {
 margin: 1.5rem 0 .5rem;
-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+font-family: $sans-serif;
 }
