@@ -5,6 +5,7 @@ author: "Kyle M. Niewiada"
 updated: "April, 2016"
 ---
 <div class="resume">
+
 <h1>{{page.author}}</h1>
 <h3 class="meta">kyle@kyleniewiada.org</h3>
 </div>
