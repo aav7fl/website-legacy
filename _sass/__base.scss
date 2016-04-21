@@ -1,43 +1,7 @@
 /***************
-GLOBAL STYLES
-***************/
-	@media (min-width: 800px){
-	.content {
-		padding-top: 0;
-		position: relative;
-		z-index: 1;
-
-		&:after {
-			z-index: -1;
-			background: white;
-			content: "";
-			display: block;
-			width: 100%;
-			height: 25em;
-			position: absolute;
-			top: -2em;
-			left: 0;
-			-webkit-transform: skewY(-2deg);
-			-ms-transform: skewY(-2deg);
-			transform: skewY(-2deg);
-			-webkit-transform-origin: bottom left;
-			-ms-transform-origin: bottom left;
-			transform-origin: bottom left;
-		}
-	}
-
-	.container {
-		//@include container(800px);
-		width: 800px;
-		margin-right: auto;
-		margin-left: auto;
-		padding: 0;
-	}
-}
-
-/***************
 GLOBAL Extra
 ***************/
+
 .container {
 	max-width: 610px;
 	margin-right: auto;
@@ -89,6 +53,39 @@ img,video,audio,iframe,object{
 	max-width:100%;
 }
 
+@media (min-width: 800px){
+	.content {
+		padding-top: 0;
+		position: relative;
+		z-index: 1;
+
+		&:after {
+			z-index: -1;
+			background: white;
+			content: "";
+			display: block;
+			width: 100%;
+			height: 25em;
+			position: absolute;
+			top: -2em;
+			left: 0;
+			-webkit-transform: skewY(-2deg);
+			-ms-transform: skewY(-2deg);
+			transform: skewY(-2deg);
+			-webkit-transform-origin: bottom left;
+			-ms-transform-origin: bottom left;
+			transform-origin: bottom left;
+		}
+	}
+
+	.container {
+		//@include container(800px);
+		width: 800px;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 0;
+	}
+}
 
 /***************
 LINK STYLING
