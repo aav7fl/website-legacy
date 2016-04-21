@@ -14,10 +14,10 @@ BUTTON DEFAULTS
   font-weight: normal;
   padding: .5em 1.5em;
   border: 0;
-  border-radius: 4px; 
+  border-radius: 4px;
   cursor: pointer;
   margin-bottom: .5em;
-  @include transition(background-color 0.14s ease-in-out);
+  //@include transition(background-color 0.14s ease-in-out);
 
   // hovering on the btn
   &:hover, &:focus {
@@ -46,7 +46,7 @@ BUTTON DEFAULTS
       background-color: darken($secondary-color, 10%);
     }
   }
- 
+
   &-tertiary {
     @extend %btn;
     background-color: $tertiary-color;
@@ -54,12 +54,12 @@ BUTTON DEFAULTS
     &:hover {
       background-color: darken($tertiary-color, 10%);
     }
-  }  
+  }
 }
 
 
 // Outline Button
-.button__outline {  
+.button__outline {
   @extend %btn;
   background-color: transparent;
   border: 3px solid $primary-color;
@@ -70,4 +70,3 @@ BUTTON DEFAULTS
     color: $white;
   }
 }
-

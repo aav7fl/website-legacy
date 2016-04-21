@@ -1,0 +1,71 @@
+/*
+Error: File to import not found or unreadable: breakpoints/800up.
+       Load paths:
+         Compass::SpriteImporter
+         /home/kyle/website/aav7fl.github.io/_includes
+         /home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets
+         /home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-normalize-1.5/stylesheets
+         /home/kyle/.rvm/gems/ruby-2.2.1/gems/susy-2.2.12/sass
+         /home/kyle/.rvm/gems/ruby-2.2.1/gems/normalize-scss-4.0.3/sass
+         /home/kyle/.rvm/gems/ruby-2.2.1/gems/support-for-1.0.5/sass
+        on line 27 of /home/kyle/website/aav7fl.github.io/_includes/main.scss
+
+22: 
+23: // Mobile up base styles
+24: @import "breakpoints/mobileup";
+25: 
+26: // Import media queries add more as you desire
+27: @media only screen and (min-width: 800px) { @import "breakpoints/800up";}
+28: 
+29: // If IE support is needed you can add them here or create another stylesheet for specific IE fixes
+
+Backtrace:
+/home/kyle/website/aav7fl.github.io/_includes/main.scss:27
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/check_nesting.rb:108:in `rescue in invalid_import_parent?'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/check_nesting.rb:102:in `invalid_import_parent?'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/check_nesting.rb:171:in `try_send'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/check_nesting.rb:14:in `visit'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/check_nesting.rb:51:in `visit_children'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:38:in `visit'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/check_nesting.rb:17:in `visit'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/check_nesting.rb:51:in `visit_children'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/check_nesting.rb:59:in `visit_root'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/check_nesting.rb:17:in `visit'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:24:in `visit'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/root_node.rb:35:in `css_tree'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/bin/compass:44:in `call'
+/home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/home/kyle/.rvm/gems/ruby-2.2.1/bin/compass:22:in `load'
+/home/kyle/.rvm/gems/ruby-2.2.1/bin/compass:22:in `<main>'
+/home/kyle/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+/home/kyle/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: breakpoints/800up.\A        Load paths:\A          Compass::SpriteImporter\A          /home/kyle/website/aav7fl.github.io/_includes\A          /home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets\A          /home/kyle/.rvm/gems/ruby-2.2.1/gems/compass-normalize-1.5/stylesheets\A          /home/kyle/.rvm/gems/ruby-2.2.1/gems/susy-2.2.12/sass\A          /home/kyle/.rvm/gems/ruby-2.2.1/gems/normalize-scss-4.0.3/sass\A          /home/kyle/.rvm/gems/ruby-2.2.1/gems/support-for-1.0.5/sass\A         on line 27 of /home/kyle/website/aav7fl.github.io/_includes/main.scss\A \A 22: \A 23: // Mobile up base styles\A 24: @import \"breakpoints/mobileup\";\A 25: \A 26: // Import media queries add more as you desire\A 27: @media only screen and (min-width: 800px) { @import \"breakpoints/800up\";}\A 28: \A 29: // If IE support is needed you can add them here or create another stylesheet for specific IE fixes"; }

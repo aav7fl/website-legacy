@@ -40,7 +40,7 @@ img,video,audio,iframe,object{
 
 // Layout
 .container {
-	@include container(610px);
+	//@include container(610px);
 	padding: 0 20px;
 }
 
@@ -121,7 +121,7 @@ MENU STYLING
   text-decoration: none;
   position: relative;
   right: 2rem;
-  @include transition(all 0.2s ease-in-out);
+  //@include transition(all 0.2s ease-in-out);
 
   &:hover {
   	color: white;
@@ -184,7 +184,7 @@ HEADER STYLING
 
 	.container {
 		padding: 0;
-		@include container(100%);
+		//@include container(100%);
 	}
 
 	h1 {
@@ -344,7 +344,7 @@ POST NAV STYLING
 			text-shadow: 1px 1px 8px rgba(0,0,0,.8);
 			padding: 0 .5rem;
 			position: relative;
-			@include transition(all 0.2s ease-in-out);
+			//@include transition(all 0.2s ease-in-out);
 		}
 
 		&:hover {
@@ -379,7 +379,7 @@ FOOTER STYLING
 	.container {
 		border-top: 4px solid darken(white, 15%);
 		padding-top: .5em;
-		@include container(90%);
+		//@include container(90%);
 	}
 
 	.copy, .footer-links {
@@ -401,7 +401,7 @@ FOOTER STYLING
 					display: inline-block;
 					width: 30px;
 					height: 30px;
-					@include transition(all 0.2s ease-in-out);
+					//@include transition(all 0.2s ease-in-out);
 
 					svg {
 						display: block;

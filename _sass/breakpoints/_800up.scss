@@ -27,18 +27,26 @@ GLOBAL STYLES
 }
 
 .container {
-	@include container(800px);
+	//@include container(800px);
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
 	padding: 0;
 }
 
-
+.container:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
 /***************
 HOMEPAGE STYLING
 ***************/
 
 #home {
 	.posts, .pageTitle, .pagination {
-		@include span(9 of 12);
+		//@include span(9 of 12);
+		width: 75%;
 		float: none;
 		margin: 0 auto 1.5em;
 	}
@@ -64,7 +72,9 @@ HEADER STYLING
 		-webkit-transform: translateY(-50%);
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
-		@include container(800px);
+		//@include container(800px);
+		width: 800px;
+		margin: auto auto;
 	}
 
 	h1 {
@@ -139,7 +149,8 @@ POST STYLING
 
 .post {
 	h1, h2, h3, h4, h5, h6, p, ul, ol, dl, .pageTitle {
-		@include span(9 of 12);
+		//@include span(9 of 12);
+		width: 75%;
 		float: none;
 		margin: 0 auto 2rem;
 	}
@@ -213,8 +224,10 @@ FOOTER STYLES
 
 	.container {
 		padding: 1rem 0;
-		@include container(800px);
+		//@include container(800px);
+		width: 800px;
 	}
+
 }
 
 
@@ -224,7 +237,9 @@ CONTACT PAGE STYLING
 
 #contact {
 	form {
-		@include span(6 of 12);
+		//@include span(6 of 12);
+		width: 50%;
+		float: left;
 	}
 }
 

@@ -1,11 +1,12 @@
 # Require any additional compass plugins here.
 require "normalize-scss"
 require "susy"
+require "support-for"
 
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "assets/css"
-sass_dir = "assets/scss"
+sass_dir = "_includes"
 images_dir = "assets/img"
 javascripts_dir = "assets/js"
 

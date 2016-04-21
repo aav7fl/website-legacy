@@ -1,6 +1,5 @@
 // Use Compass
-@import "compass";
-
+//@import "compass";
 // Reset using Normalize
 @import "normalize";
 
@@ -18,8 +17,8 @@
 
 // Import Partials
 @import "partials/typography";
-@import "partials/mixins";
-@import "partials/grid";
+//@import "partials/mixins";
+//@import "partials/grid";
 
 // Mobile up base styles
 @import "breakpoints/mobileup";
