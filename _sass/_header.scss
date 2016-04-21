@@ -1,0 +1,119 @@
+/***************
+HEADER STYLING
+***************/
+.header {
+	background-color: #3a3a3c;
+	background-image: url('/assets/img/banner.jpg');
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	padding: 0;
+	height: 3em;
+
+	.container {
+		padding: 0;
+		//@include container(100%);
+	}
+
+	h1 {
+		margin: 0;
+		float: left;
+		padding-left: 2rem;
+		font-size: 1em;
+		line-height: 3em;
+		font-family: $sans-serif;
+		font-weight: 800;
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+}
+
+
+/***************
+HEADER STYLING
+***************/
+@media (min-width: 800px){
+	.header {
+		height: 15em;
+		position: relative;
+		padding-bottom: 2em;
+
+		.container {
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			//width: 800px;
+			margin: auto auto;
+		}
+
+		h1 {
+			font-size: 3em;
+			line-height: 1;
+			letter-spacing: -3px;
+			padding-left: 0;
+		}
+
+		nav {
+			float: left;
+			clear: left;
+
+			ul {
+				margin: 0;
+				li {
+					display: inline;
+					line-height: 3em;
+					background: none;
+					padding: 0 5px;
+					border: none;
+
+					a {
+						color: white;
+						font-size: .9em;
+						text-decoration: none;
+						padding: 0 .25em;
+
+						&:hover {
+							color: darken(white, 20%);
+						}
+					}
+
+					&.current {
+						padding-bottom: .25em;
+						border-bottom: 4px solid rgba(255,255,255,.4);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/***************
+MENU STYLING
+***************/
+@media (min-width: 800px){
+	.js {
+
+		.nav-collapse {
+		  position: relative;
+		  max-height: none;
+
+			&.closed {
+			  max-height: none;
+			}
+
+			ul li a {
+				display: inline-block;
+			}
+		}
+	}
+
+	.nav-toggle {
+	  display: none;
+	}
+}
