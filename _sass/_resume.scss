@@ -1,18 +1,13 @@
 /***************
 RESUME STYLING
 ***************/
-.resume h1, .resume h2, .resume h3, .resume h4, .resume h5, .resume h6, .resume p, .resume ul, .resume ol, .resume dl, .resume .pageTitle {
-width: 74.46809%;
-float: left;
-margin-right: 2.12766%;
-float: none;
-margin: 0 0 2rem;
-text-align: center;
+.resume h1, .resume h4{
+  margin: 0 0 2rem;
+  text-align: center;
 }
-.resume h1, .resume .h1, .resume h2, .resume .h2, .resume h3, .resume .h3, .resume h4, .resume .h4, .resume h5, .resume .h5, .resume h6, .resume .h6 {
-margin: 0rem auto;
-text-align: center;
-}
-.h3{
+.resume h3{
 color: #0b5394;
+}
+.resume p, .resume ul, .resume ol, .resume dl{
+  margin: 0 0 .5rem;
 }

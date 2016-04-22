@@ -7,6 +7,7 @@ GLOBAL Extra
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 20px;
+	//background-color: green;
 }
 .container:after {
     content: " ";
@@ -54,7 +55,7 @@ img,video,audio,iframe,object{
 }
 
 @media (min-width: 800px){
-	.content {
+	.content, .resume{
 		padding-top: 0;
 		position: relative;
 		z-index: 1;

@@ -1,7 +1,9 @@
 ---
 layout: default
-title : Post Archive
+title : "Post Archive"
 ---
+
+<h1 class="pageTitle">{{ page.title }}</h1>
 
 <section id="archive">
   {% assign headerTags = "large projects,medium projects,small projects,updates" | split: ',' %}
