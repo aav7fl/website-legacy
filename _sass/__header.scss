@@ -86,6 +86,7 @@ $nav-active: $primary-color;
 .navigation {
   height: $nav-height;
   background: $nav-background;
+	z-index: 3;
 }
 
 // Logo and branding
