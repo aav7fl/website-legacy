@@ -73,9 +73,8 @@ POST STYLING
 	}
 
 	.featuredImage {
-		position: relative;
+		//position: relative;
 		margin-top: 2rem;
-
 		img {
 			margin-bottom: 0;
 		}
@@ -143,7 +142,6 @@ POST NAV STYLING
 		text-align: center;
 
 		img {
-			z-index: 1;
 			display: block;
 			position: absolute;
 			top: 50%;
@@ -158,7 +156,6 @@ POST NAV STYLING
 		}
 
 		span {
-			z-index: 10;
 			position: relative;
 			padding: .5rem;
 			position: absolute;

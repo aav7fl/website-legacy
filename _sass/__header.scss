@@ -86,7 +86,6 @@ $nav-active: $primary-color;
 .navigation {
   height: $nav-height;
   background: $nav-background;
-	z-index: 3;
 }
 
 // Logo and branding
@@ -156,7 +155,6 @@ nav {
 .nav-dropdown {
   position: absolute;
   display: none;
-  z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
