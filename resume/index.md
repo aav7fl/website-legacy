@@ -15,6 +15,8 @@ updated: "April, 2016"
 
 To start my career as a software engineer
 
+---
+
 ### Education
 
 BS, Computer Science; Grand Valley State University (2012-2016)
