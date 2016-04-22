@@ -1,14 +1,24 @@
+
 <div class="header">
-  <div class="container">
-    <h1 class="logo"><a href="{{ site.baseurl }}">{{ site.name }}</a></h1>
-    <nav class="nav-collapse">
-      <ul class="noList">
-        {% for link in site.navigation %}{% assign current = nil %}{% if (page.url == link.url) or (page.url == "/index.html") %}{% assign current = 'current' %}{% endif %}
-        <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-          <a href="{{ link.url }}">{{ link.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </div>
-</div><!-- end .header -->
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="/">{{ site.name }}</a>
+      </div>
+      <nav>
+        <div class="nav-mobile">
+          <a id="nav-toggle" href="#!"><span></span></a>
+        </div>
+        <ul class="nav-list">
+          {% for menuitem in site.navigation %}
+              {% if menuitem.url == page.dir %}
+                  {% assign class = "active" %}
+              {% else %}
+                  {% assign class = "normal" %}
+              {% endif %}
+              <li class="{{ class }}"><a href="{{ menuitem.url }}">{{ menuitem.title }}</a></li>
+          {% endfor %}
+        </nav>
+      </div>
+  </section><!-- end .header -->
+</div>
