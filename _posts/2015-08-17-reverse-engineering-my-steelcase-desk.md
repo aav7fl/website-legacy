@@ -9,7 +9,7 @@ published: true
 tag: "medium project"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n 2013 I made the plunge for a height-adjustable standing desk. I had wanted one for a while because I was becoming restless sitting down throughout the day in my computer chair. I wanted to be able to move around easily while I was using it and not be chained to sitting. I won't go into the health benefits or drawbacks of such a setup, but instead how I discovered and reprogrammed my desk.</p>
+In 2013 I made the plunge for a height-adjustable standing desk. I had wanted one for a while because I was becoming restless sitting down throughout the day in my computer chair. I wanted to be able to move around easily while I was using it and not be chained to sitting. I won't go into the health benefits or drawbacks of such a setup, but instead how I discovered and reprogrammed my desk.
 
 Lucky for me, during my search for an adjustable standing desk, Steelcase was liquidating their old pyramid headquarters/test labs. You can get a pretty good look at how amazing the building and the labs were in a tour of the campus [here](https://www.youtube.com/watch?v=GTsdOLD-CyI).
 I contacted up the warehouse that was selling off Steelcase's office furniture and drove on over.

@@ -9,7 +9,7 @@ published: true
 tag: "small project"
 ---
 
-<p class="intro"><span class="dropcap">A</span> few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.</p>
+A few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.
 
 As is the motivation for many projects/scripts of mine, I wanted to automate the process as much as possible such that I never had to think about it again [anytime soon]. This was shortly after I had [concluded work on a previous project](/blog/2015/12/making-a-book-from-facebook-messages/) that involved using Microsoft Word with macro scripts. I was ready to learn more about its advanced features. I wanted an automatic running total because I would often forget to recalculate my grand total after each entry. There were probably other solutions that were better suited for this, but I really wanted to see how useful Microsoft Word macros (I know the evil stigma associated with macros) could be to me.
 

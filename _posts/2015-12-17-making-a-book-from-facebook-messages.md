@@ -8,7 +8,7 @@ image: 2015/12/banner.jpg
 published: true
 tag: "large project"
 ---
-<p class="intro"><span class="dropcap">B</span>ack in October, I wanted to create a meaningful gift for someone very special to me for a special occasion. After brainstorming for a while, I came up with a crazy idea of creating a hardcover book from our earliest conversations on Facebook (I guess I can mark it off as a positive that the information giant held on to this).</p>
+Back in October, I wanted to create a meaningful gift for someone very special to me for a special occasion. After brainstorming for a while, I came up with a crazy idea of creating a hardcover book from our earliest conversations on Facebook (I guess I can mark it off as a positive that the information giant held on to this).
 
 The first issue that I needed to address was locating a shop to print a single hardcover book. I started researching self-publishing services and discovered quickly that many required a minimum quantity before they would accept orders. The businesses that did accept a small order had a steep cost for single book. I continued researching until I stumbled upon [lulu.com]( http://www.lulu.com/home). This is where I found the most appropriate pricing for my specific project. I will note however that people may be able to find more appropriate pricing and (especially) more control if they use a local print shop. With my printshop selected, I moved sites to tackle my next issue.
 
