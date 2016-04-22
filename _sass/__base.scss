@@ -1,0 +1,262 @@
+/***************
+GLOBAL Extra
+***************/
+
+.container {
+	max-width: 610px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 20px;
+}
+.container:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+/***************
+GLOBAL STYLE
+***************/
+// A better box-sizing practice http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: $serif;
+	line-height: 1.75;
+	font-size: 112.5%; // 18px base font size
+	color: $black;
+	overflow-x: hidden;
+
+	p , ul {
+		margin: 0 0 2rem;
+	}
+}
+
+// Text Selection Styling
+::-moz-selection {
+	background: $primary-color;
+	color: white;
+}
+
+::selection {
+	background: $primary-color;
+	color: white;
+}
+
+// Media Styling
+img,video,audio,iframe,object{
+	max-width:100%;
+}
+
+@media (min-width: 800px){
+	.content {
+		padding-top: 0;
+		position: relative;
+		z-index: 1;
+
+		&:after {
+			z-index: -1;
+			background: white;
+			content: "";
+			display: block;
+			width: 100%;
+			height: 25em;
+			position: absolute;
+			top: -2em;
+			left: 0;
+			-webkit-transform: skewY(-2deg);
+			-ms-transform: skewY(-2deg);
+			transform: skewY(-2deg);
+			-webkit-transform-origin: bottom left;
+			-ms-transform-origin: bottom left;
+			transform-origin: bottom left;
+		}
+	}
+
+	.container {
+		//@include container(800px);
+		width: 800px;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 0;
+	}
+}
+
+/***************
+LINK STYLING
+***************/
+
+a {
+	color: $link-color;
+
+	&:hover {
+		color: darken($link-color, 15%);
+	}
+}
+
+
+
+/***************
+MENU STYLING
+***************/
+.nav-collapse {
+	z-index: 1;
+
+	ul {
+	  margin: 0;
+	  padding: 0;
+	  width: 100%;
+	  display: block;
+	  list-style: none;
+
+		li {
+		  width: 100%;
+		  display: block;
+		  background: $primary-color;
+		  border-bottom: 2px solid lighten($primary-color, 5%);
+
+		  a {
+		  	color: white;
+		  	text-decoration: none;
+		  	display: block;
+		  	padding: 5px 2rem;
+		  }
+		}
+	}
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+  clear: both;
+  width: 100%;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  float: right;
+  line-height: 2em;
+  margin-top: .5em;
+  background-color: $primary-color;
+  border-radius: 4px;
+  padding: 0 .5em;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  right: 2rem;
+  //@include transition(all 0.2s ease-in-out);
+
+  &:hover {
+  	color: white;
+  	background-color: darken($primary-color, 10%);
+  }
+}
+
+
+/***************
+LIST STYLING
+***************/
+
+.noList {
+	list-style:none;
+	padding-left:0;
+	margin-left:0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 1.5rem;
+}
+
+.post ul ul,
+.post ul ol,
+.post ol ul,
+.post ol ol {
+  margin: 0;
+}
+
+/***************
+PAGE STYLES
+***************/
+.pageTitle {
+	margin: 2rem auto 1em;
+	text-align: center;
+}
+
+.content {
+	padding-top: 1em;
+}
+
+/***************
+PAGINATION STYLING
+***************/
+.pagination {
+	.next {
+		float: left;
+	}
+
+	.previous {
+		float: right;
+	}
+}
+
+/***************
+POST LIST STYLING
+***************/
+.posts {
+	li {
+		margin-bottom: 4rem;
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: -2rem;
+			left: 0;
+			background: darken(white, 10%);
+			height: 2px;
+			width: 60px;
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.date {
+			color: lighten(black, 50%);
+			font-family: $sans-serif;
+			font-weight: 300;
+			font-size: .8em;
+		}
+
+		h3 {
+			margin: 0 0 .5em;
+		}
+	}
+}

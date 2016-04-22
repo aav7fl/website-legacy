@@ -12,7 +12,13 @@
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
+    <!--<link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">-->
+    <style type="text/css">
+      {% capture include_to_scssify %}
+        {% include main.scss %}
+      {% endcapture %}
+      {{ include_to_scssify | scssify }}
+    </style>
 
     <!--[if IE 8]><link rel="stylesheet" href="{{ "/assets/css/ie.css" | prepend: site.baseurl }}"><![endif]-->
     <!--<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->

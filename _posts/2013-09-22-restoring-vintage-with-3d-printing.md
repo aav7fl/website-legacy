@@ -8,7 +8,7 @@ image: 2013/09/small/DSC09139.JPG
 tag: "large project"
 ---
 
-<p class="intro"><span class="dropcap">N</span>ow, I understand that some people like to have posts that show progress they've made before and after a project. I'm sorry to say that I don't have that many posts of the "before". I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker.</p>
+Now, I understand that some people like to have posts that show progress they've made before and after a project. I'm sorry to say that I don't have that many posts of the "before". I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker.
 
 I originally made this thread on [AudioKarma](http://www.audiokarma.org/forums/showthread.php?p=7108861), but thought this would also be an appropriate place to write this post.
 
