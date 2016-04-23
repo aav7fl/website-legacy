@@ -10,27 +10,7 @@ HEADER STYLING
 	padding: 0;
 	height: 3em;
 }
-// 	.container {
-// 		padding: 0;
-// 		//@include container(100%);
-// 	}
-//
-// 	h1 {
-// 		margin: 0;
-// 		float: left;
-// 		padding-left: 2rem;
-// 		font-size: 1em;
-// 		line-height: 3em;
-// 		font-family: $sans-serif;
-// 		font-weight: 800;
-//
-// 		a {
-// 			color: white;
-// 			text-decoration: none;
-// 		}
-// 	}
-// }
-//
+
 @media (min-width: 800px){
 	.header {
 		height: 15em;
@@ -48,38 +28,14 @@ HEADER STYLING
 		}
   }
 }
-//
-// /***************
-// MENU STYLING
-// ***************/
-// @media (min-width: 800px){
-// 	.js {
-//
-// 		.nav-collapse {
-// 		  position: relative;
-// 		  max-height: none;
-//
-// 			&.closed {
-// 			  max-height: none;
-// 			}
-//
-// 			ul li a {
-// 				display: inline-block;
-// 			}
-// 		}
-// 	}
-//
-// 	.nav-toggle {
-// 	  display: none;
-// 	}
-// }
+
 // Navigation Variables
 $content-width: 1000px;
 $breakpoint: 800px;
 $nav-height: 70px;
 $nav-background: #262626;
 $nav-font-color: #ffffff;
-$link-hover-color: #2581DC;
+$link-hover-color: #00b2d9;
 $nav-active: $primary-color;
 
 // Outer navigation wrapper
