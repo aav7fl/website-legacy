@@ -5,19 +5,20 @@
       <div class="brand">
         <a href="/">{{ site.name }}</a>
       </div>
-      <nav>
-        <div class="nav-mobile">
-          <a id="nav-toggle" href="#!"><span></span></a>
-        </div>
-        <ul class="nav-list">
-          {% for menuitem in site.navigation %}
-              {% if menuitem.url == page.dir %}
-                  {% assign class = "active" %}
-              {% else %}
-                  {% assign class = "normal" %}
-              {% endif %}
-              <li class="{{ class }}"><a href="{{ menuitem.url }}">{{ menuitem.title }}</a></li>
-          {% endfor %}
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            {% for menuitem in site.navigation %}
+                {% if menuitem.url == page.dir %}
+                    {% assign class = "active" %}
+                {% else %}
+                    {% assign class = "normal" %}
+                {% endif %}
+                <li class="{{ class }}"><a href="{{ menuitem.url }}">{{ menuitem.title }}</a></li>
+            {% endfor %}
+          </ul>
         </nav>
       </div>
   </section><!-- end .header -->
