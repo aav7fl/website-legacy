@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About Me
-meta: "A little information about Kyle Niewiada"
+meta: "Information about Kyle Niewiada. Learn how to pronounce my name. I enjoy programming. Difficult projects are fun. I share what I learn through open source."
 ---
 
 <center><h1>About Me</h1></center>

@@ -7,7 +7,7 @@ comments: true
 image: 2015/12/banner.jpg
 published: true
 tag: "large project"
-meta: "Making a hardcover book out of my Facebook message archive in ascending order"
+meta: "How I made a hardcover book for someone by downloading my Facebook message archive reversing the order of each 20,000 message segment for readability"
 ---
 
 Back in October, I wanted to create a meaningful gift for someone very special to me for a special occasion. After brainstorming for a while, I came up with a crazy idea of creating a hardcover book from our earliest conversations on Facebook (I guess I can mark it off as a positive that the information giant held on to this).
