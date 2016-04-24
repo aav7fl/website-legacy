@@ -2,7 +2,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Kyle Niewiada's personal website and blog postings">
+    {% if page.meta %}
+    <meta name="description" content="{{ page.meta}}" />
+    {% endif %}
     <title>
       {% if paginator and paginator.page > 1 %}
         {% assign overwriteTitle = page.title | append: ' | Page ' | append: paginator.page %}

@@ -7,6 +7,7 @@ comments: true
 image: 2015/04/DSC09669.JPG
 published: true
 tag: "large project"
+meta: "transferring and dumping N64 Zelda ocarina of time sram and Mario save files to sra"
 ---
 
 When I was younger, I would spend weekends after school playing through the Legend of Zelda: Ocarina of Time. After a while, I beat it. I remember the fun I had navigating through puzzles and chasing down heart containers. I loved every minute of it.

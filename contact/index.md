@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Contact Kyle
+meta: "how to contact Kyle Niewiada"
 ---
 
 <div id="contact">

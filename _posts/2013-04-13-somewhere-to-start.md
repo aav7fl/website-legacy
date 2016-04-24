@@ -5,6 +5,7 @@ author: Kyle Niewiada
 date:   2013-04-13
 comments: false
 tag: "update"
+meta: "Kyle Niewiada's first post on his website offering his expectation"
 ---
 
 Here I am. My own small little corner of the internet. A centralized location; a place to call home.

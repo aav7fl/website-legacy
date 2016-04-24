@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About Me
+meta: "A little information about Kyle Niewiada"
 ---
 
 <center><h1>About Me</h1></center>

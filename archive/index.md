@@ -1,6 +1,7 @@
 ---
 layout: default
 title : "Post Archive"
+meta: "Kyle Niewiada's blog post archive"
 ---
 
 <h1 class="pageTitle">{{ page.title }}</h1>

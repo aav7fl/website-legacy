@@ -7,6 +7,7 @@ comments: true
 image: 2016/03/banner2.jpg
 published: true
 tag: "small project"
+meta: "how I added a rocker power switch into my USB cable"
 ---
 
 I had a USB microphone that was plugged into my computer; it was on at all times. If I was watching a movie, the blue glow from beneath the microphone mesh would illuminate my desk.
