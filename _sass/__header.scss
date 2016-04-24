@@ -10,7 +10,6 @@ HEADER STYLING
 	padding: 0;
 	height: 3em;
 }
-
 @media (min-width: 800px){
 	.header {
 		height: 15em;
@@ -41,7 +40,8 @@ $nav-active: $primary-color;
 // Outer navigation wrapper
 .navigation {
   height: $nav-height;
-  background: $nav-background;
+	background: $nav-background;
+	font-family: $sans-serif;
 }
 
 // Logo and branding
@@ -64,10 +64,6 @@ $nav-active: $primary-color;
   margin: 0 auto;
 }
 
-.navigation * {
-  font-family: $sans-serif;
-}
-
 // Navigation
 nav {
   float: right;
@@ -78,31 +74,17 @@ nav {
     li {
       float: left;
       position: relative;
-      a,
-      a:visited {
+      a, a:visited {
         display: block;
         padding: 0 20px;
         line-height: $nav-height;
-        background: $nav-background;
         color: $nav-font-color;
         text-decoration: none;
         &:hover {
           background: $link-hover-color;
           color: $nav-font-color;
         }
-        &:not(:only-child):after {
-          padding-left: 4px;
-          content: ' ▾';
-        }
-
-      } // Dropdown list
-      ul li {
-        min-width: 190px;
-        a {
-          padding: 15px;
-          line-height: 20px;
-        }
-      }
+			}
     }
   }
 }
@@ -122,8 +104,7 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  background: $nav-background;
-  height: $nav-height;
+	height: $nav-height;
   width: $nav-height;
 }
 @media only screen and (max-width: $breakpoint) {
@@ -152,11 +133,17 @@ nav {
     position: static;
   }
 }
+
 @media screen and (min-width: $breakpoint) {
   .nav-list {
     display: block !important;
   }
 }
+
+.nav-list {
+	background: $nav-background;
+}
+
 #nav-toggle {
   position: absolute;
   left: 18px;
@@ -200,5 +187,5 @@ nav {
 ul.nav-list li.active
 {
     background: $nav-active;
-    padding:4px 4px;
+    padding-bottom: 4px;
 }

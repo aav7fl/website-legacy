@@ -72,9 +72,13 @@ img,video,audio,iframe,object{
 			left: 0;
 			-webkit-transform: skewY(-2deg);
 			-ms-transform: skewY(-2deg);
+			-moz-transform: skewY(-2deg);
+			-o-transform: skewY(-2deg);
 			transform: skewY(-2deg);
 			-webkit-transform-origin: bottom left;
 			-ms-transform-origin: bottom left;
+			-moz-transform-origin: bottom left;
+			-o-transform-origin: bottom left;
 			transform-origin: bottom left;
 		}
 	}
