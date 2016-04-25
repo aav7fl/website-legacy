@@ -5,6 +5,10 @@
     {% if page.meta %}
     <meta name="description" content="{{ page.meta}}" />
     {% endif %}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
+
     <title>
       {% if paginator and paginator.page > 1 %}
         {% assign overwriteTitle = page.title | append: ' | Page ' | append: paginator.page %}
@@ -13,8 +17,6 @@
         {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
       {% endif %}
     </title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
 
     <!-- Come and get me RSS readers -->
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" />
