@@ -9,7 +9,7 @@ meta: "Kyle Niewiada's personal website where he documents and explains his proj
   <ul class="posts noList">
     {% for post in paginator.posts %}
       <li>
-        <div style="overflow: auto;"><span class="meta">{{ post.date | date: '%B %d, %Y' }} | {{ post.author }}</span><span class="tag">{{ post.tag | capitalize}}</span></div>
+        <div style="overflow: auto;"><span class="meta">{{ post.date | date: '%B %d, %Y' }} | {{ post.author }} </span><span class="tag">{{ post.tag | capitalize}}</span></div>
         <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         <p class="description">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 250 }}{% endif %}</p>
       </li>
