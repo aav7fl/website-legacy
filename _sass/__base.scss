@@ -7,7 +7,6 @@ GLOBAL Extra
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 20px;
-	//background-color: green;
 }
 .container:after {
     content: " ";
@@ -34,7 +33,7 @@ body {
 	overflow-x: hidden;
 
 	p , ul {
-		margin: 0 0 2rem;
+		margin: 0 0 1.5rem;
 	}
 }
 
@@ -55,33 +54,10 @@ img,video,audio,iframe,object{
 }
 
 @media (min-width: 800px){
-	.content, .resume{
-		padding-top: 1em;
-		position: relative;
-	// 	z-index: 1;
-	//
-	// 	// &:after {
-	// 	// 	z-index: -1;
-	// 	// 	background: white;
-	// 	// 	content: "";
-	// 	// 	display: block;
-	// 	// 	width: 100%;
-	// 	// 	height: 25em;
-	// 	// 	position: absolute;
-	// 	// 	top: -2em;
-	// 	// 	left: 0;
-	// 	// 	-webkit-transform: skewY(-2deg);
-	// 	// 	-ms-transform: skewY(-2deg);
-	// 	// 	-moz-transform: skewY(-2deg);
-	// 	// 	-o-transform: skewY(-2deg);
-	// 	// 	transform: skewY(-2deg);
-	// 	// 	-webkit-transform-origin: bottom left;
-	// 	// 	-ms-transform-origin: bottom left;
-	// 	// 	-moz-transform-origin: bottom left;
-	// 	// 	-o-transform-origin: bottom left;
-	// 	// 	transform-origin: bottom left;
-	// 	// }
-	}
+	// .content, .resume{
+	// 	padding-top: 1em;
+	// 	position: relative;
+	// }
 
 	.container {
 		//@include container(800px);
@@ -205,13 +181,13 @@ dd {
 PAGE STYLES
 ***************/
 .pageTitle {
-	margin: 2rem auto 1em;
+	margin: 1em auto 1em;
 	text-align: center;
 }
 
-.content {
-	padding-top: 1em;
-}
+// .content {
+// 	padding-top: 1em;
+// }
 
 /***************
 PAGINATION STYLING
