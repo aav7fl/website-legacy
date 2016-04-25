@@ -11,71 +11,25 @@ FOOTER STYLING
 		//@include container(90%);
 	}
 
-	.copy, .footer-links {
-		font-size: .8em;
-	}
-
-	.copy {
-		margin-bottom: 1rem;
-	}
-
-	&-links {
-		ul {
-			text-align: center;
-
-			li {
-				display: inline-block;
-
-				a {
-					display: inline-block;
-					width: 30px;
-					height: 30px;
-					//@include transition(all 0.2s ease-in-out);
-
-					svg {
-						display: block;
-						width: 100%;
-						height: 100%;
-
-						.outer-shape {
-							fill: $primary-color;
-						}
-
-						.inner-shape {
-							fill: white;
-						}
-					}
-				}
-
-
-				&:hover {
-					a {
-						svg {
-							.outer-shape {
-								fill: darken($primary-color, 10%);
-							}
-						}
-					}
-				}
-			}
-		}
+	ul {
+		text-align: center;
 	}
 }
 
-@media (min-width: 800px){
-	.footer {
-		&-links {
-			float: right;
-		}
-
-		.copy {
-			float: left;
-		}
-
-		.container {
-			padding: 1rem 0;
-			//@include container(800px);
-			//width: 800px;
-		}
-	}
-}
+// @media (min-width: 800px){
+// 	.footer {
+// 		&-links {
+// 			float: right;
+// 		}
+//
+// 		.copy {
+// 			float: left;
+// 		}
+//
+// 		.container {
+// 			padding: 1rem 0;
+// 			//@include container(800px);
+// 			//width: 800px;
+// 		}
+// 	}
+// }
