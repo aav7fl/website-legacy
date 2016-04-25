@@ -18,11 +18,6 @@ gulp.task('css', () => {
     .pipe(gulp.dest('assets'));
 });
 
-gulp.task('fa', function() {
-  return download('https://www.google-analytics.com/analytics.js')
-    .pipe(gulp.dest('assets'));
-});
-
 gulp.task('jekyll', () => {
   const jekyll = child.spawn('jekyll', ['build',
     '--watch',

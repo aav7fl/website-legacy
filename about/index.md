@@ -4,7 +4,6 @@ title: About Me
 meta: "Information about Kyle Niewiada. Learn how to pronounce my name. I enjoy programming. Difficult projects are fun. I share what I learn through open source."
 ---
 
-<center><h1>About Me</h1></center>
 <img src="/assets/img/me.gif" alt="Kyle Niewiada" style="float: right;padding: 10px;" />
 Hi, I'm Kyle Niewiada (/kaɪl niː-viː-ɑː-də/). Welcome to my small corner of the internet. You can rearrange the letters in "Kyle Niewiada" to say "I like a new day".
 
