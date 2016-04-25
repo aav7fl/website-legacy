@@ -8,12 +8,10 @@
 
 <body>
    {% include header.html %}
-
-   <!-- lazy way to hide page title on blog posts -->
-   {% if page.layout != 'post' %}<h1 class="pageTitle">{{ page.title }}</h1>{% endif %}
-
    <div class="content">
       <div class="container">
+        <!-- lazy way to hide page title on blog posts -->
+        {% if page.layout != 'post' %}<h1 class="pageTitle">{{ page.title }}</h1>{% endif %}
          {{ content }}
 				{% include comments.html %}
       </div>
