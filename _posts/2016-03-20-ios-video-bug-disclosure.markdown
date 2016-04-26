@@ -79,7 +79,7 @@ December 13, 2015 I submitted this to [Apple's bug reporter]( https://bugreport.
 
 ### Reproducibility
 
-Only under certain conditions with specific color palettes am I able to reproduce this bug. This happens very infrequently. The majority of the time this change in color temperature will not occur. But when it does, it becomes painfully obvious. I have been able to reproduce this with a higher success rate when viewing cartoons because of their stable color palette of the scene. The most notable example I have come across is the TV show, [Archer](https://en.wikipedia.org/wiki/Archer_\(TV_series\)) where it occurred many times throughout the first six seasons.
+Only under certain conditions with specific color palettes am I able to reproduce this bug. This happens very infrequently. The majority of the time this change in color temperature will not occur. But when it does, it becomes painfully obvious. I have been able to reproduce this with a higher success rate when viewing cartoons because of their stable color palette of the scene. The most notable example I have come across is the TV show, [Archer](https://en.wikipedia.org/wiki/Archer_(TV_series)) where it occurred many times throughout the first six seasons.
 
 #### Non-Cartoon Example
 
