@@ -57,6 +57,7 @@ Familiar with: C#, SQL, Python, Markdown, Liquid, TI-Basic
 Eagle Scout (2009)
 
 - Received silver, gold, and bronze palms
+  - Requires an additional five merit badges (beyond the required 21 for Eagle) for each palm, and a three-month observance between each palm. This must occur before a scout's 18th birthday to be eligible.
 
 Recipient of Grand Valley Music Department Scholarship (2012 - 2014)
 
