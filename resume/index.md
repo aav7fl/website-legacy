@@ -64,25 +64,26 @@ Recipient of Grand Valley Music Department Scholarship (2012 - 2014)
 
 ### Projects
 
-Partnered with Microsoft and GVSU to create an open source .NET web application connecting organizations and volunteers through gamification
+Sponsored by Microsoft under the study of Grand Valley State University to create an open source web API and ASP.NET web application connecting organizations and volunteers through gamification
 
 - [Source code](https://github.com/aav7fl/GVSU-capstone-project)
+- [Blog post](/blog/2016/04/charma-gamifying-volunteer-process/)
 
-Rebuilt a Zelda Ocarina of Time save file
+Rebuilt a Zelda Ocarina of Time save file after discovering checksum algorithm
 
 - Used a GameShark with a parallel port to interface with the N64 cartridge, dump the ram, and recalculate the checksum
 - [Open source checksum calculator](https://github.com/Vi1i/OcarinaChecksumChecker)
-- [Blog post](https://www.kyleniewiada.org/blog/2015/04/transferring-n64-saves/)
+- [Blog post](/blog/2015/04/transferring-n64-saves/)
 
 Restored a vintage amplifier using 3D printing
 
 - An old piece for my 1970s amplifier broke and I used 3-D printing to complement my restoration project
-- [Blog post](https://www.kyleniewiada.org/blog/2013/09/restoring-vintage-with-3d-printing/)
+- [Blog post](/blog/2013/09/restoring-vintage-with-3d-printing/)
 
 Reverse engineered remote codes to my Steelcase electric desk
 
 - Discovered and documented the remote codes I was able to find and their explanations to each setting
-- [Blog post](https://www.kyleniewiada.org/blog/2015/08/reverse-engineering-my-steelcase-desk/)
+- [Blog post](/blog/2015/08/reverse-engineering-my-steelcase-desk/)
 
 ---
 
