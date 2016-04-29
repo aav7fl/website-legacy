@@ -4,7 +4,7 @@ title: Discovering and Reverse Engineering My Steelcase Desk
 author: Kyle Niewiada
 date: "2015-08-17 15:47"
 comments: true
-image: 2015/08/banner.jpg
+image: /2015/08/banner.jpg
 published: true
 tag: "medium project"
 meta: "How I reverse engineered the remote codes on my prototype Steelcase sit/stand desk unlocking secret developer codes to enable One Touch adjustments"

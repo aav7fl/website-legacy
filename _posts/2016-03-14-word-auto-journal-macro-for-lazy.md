@@ -4,7 +4,7 @@ title: "Microsoft Word Auto-Journal Macro for the Lazy"
 author: Kyle Niewiada
 date: "2016-03-14 16:19"
 comments: true
-image: 2016/03/banner.png
+image: /2016/03/banner.png
 published: true
 tag: "small project"
 meta: "I created a Microsoft Word macro that automatically generated a skeleton entry for today and added up the total hours documented thus far"

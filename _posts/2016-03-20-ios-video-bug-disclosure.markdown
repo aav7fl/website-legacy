@@ -4,7 +4,7 @@ title: iOS Video Player Bug Disclosure
 author: Kyle Niewiada
 date: '2016-03-20 18:05'
 comments: true
-image: 2016/03/iPadTesting.jpg
+image: /2016/03/iPadTesting.jpg
 published: true
 tag: "large project"
 meta: "A public disclosure that I discovered of an iOS video playback bug that decreases red and becomes washed out when user interface elements are hidden"
@@ -64,7 +64,7 @@ I used the bug reproduction video above for my sample capture data on my iPad Ai
 </figure>
 
 <figure>
-  <a href="/assets/img/2016/03/capture_large.jpg" alt="HCFR Capture Window" title="click to view larger image" target="\_blank">
+  <a href="/assets/img/2016/03/capture_large.jpg" title="click to view larger image" target="\_blank">
     <img src='/assets/img/2016/03/capture_small.jpg' alt="HCFR Capture Window">
   </a>
   <figcaption>HCFR Capture Window</figcaption>

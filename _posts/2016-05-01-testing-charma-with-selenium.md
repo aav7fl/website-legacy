@@ -4,7 +4,7 @@ title: Testing Charma with Selenium
 author: Kyle Niewiada
 date: '2016-5-01 18:05'
 comments: true
-image: 2016/05/banner.jpg
+image: /2016/05/banner.jpg
 published: false
 tag: "large project"
 meta: "How I used Selenium WebDriver to test our ASP.net web application, Charma. We use the Google Chrome and Firefox web driver to test our website."
@@ -42,7 +42,7 @@ When testing in release mode, we will redirect all of our tests to our productio
 
 ## Running Our Selenium Tests
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/Y_hAWFAp140" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Y_hAWFAp140" allowfullscreen></iframe>
 
 Each web driver for each web browser is initialized and the testing begins. The very first test we have is browsing to Python.org, searching for pycon, and verifying that results exist. We do this to simply verify whether or not our web drivers are working properly. If we fail, we immediately know that there is something wrong with the initialization or setup of our Selenium WebDrivers.
 

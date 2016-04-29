@@ -4,7 +4,7 @@ title: Creating a Hardcover Book from a Plethora of Facebook Messages
 author: Kyle Niewiada
 date: "2015-12-17 18:00"
 comments: true
-image: 2015/12/banner.jpg
+image: /2015/12/banner.jpg
 published: true
 tag: "large project"
 meta: "How I made a hardcover book for someone by downloading my Facebook message archive reversing the order of each 20,000 message segment for readability"
