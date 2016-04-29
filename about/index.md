@@ -4,6 +4,27 @@ title: About Me
 meta: "Information about Kyle Niewiada. Learn how to pronounce my name. I enjoy programming. Difficult projects are fun. I share what I learn through open source."
 ---
 
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"Person",
+  "email": "mailto:kyle@kyleniewiada.org",
+  "image": "{{ '/assets/img/me.gif' | prepend: site.url }}",
+  "name": "Kyle Niewiada",
+  "url": "https://www.kyleniewiada.org/",
+  "sameAs" : [
+  "https://www.facebook.com/KyleNiewiada",
+  "https://twitter.com/CrypticCitrus",
+  "https://www.youtube.com/KyleNiewiada",
+  "https://plus.google.com/u/0/+KyleNiewiada",
+  "https://kyleniewiada.bandcamp.com",
+  "http://music.kyleniewiada.org",
+  "https://github.com/aav7fl/"
+  ]
+}
+</script>
+
+
 <img src="/assets/img/me.gif" alt="Kyle Niewiada" style="float: right;padding: 10px;" />
 Hi, I'm Kyle Niewiada (/kaɪl niː-viː-ɑː-də/). Welcome to my small corner of the internet. You can rearrange the letters in "Kyle Niewiada" to say "I like a new day".
 

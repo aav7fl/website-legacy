@@ -1,9 +1,18 @@
 ---
 layout: default
 title: Recent Posts
-meta: "Kyle Niewiada's personal website where he documents and explains his projects about programming and music. Related source code is open sourced."
-tabTitle: Kyle Niewiada
+meta: "Kyle Niewiada's personal website where he blogs and explains his projects about programming and music. Related source code is open sourced."
 ---
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "description":"{{ page.meta }}",
+  "@type":"Blog"
+}
+</script>
+
+
 <div class="home" id="home">
   <ul class="posts noList">
     {% for post in paginator.posts %}
