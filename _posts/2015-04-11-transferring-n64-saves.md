@@ -3,6 +3,7 @@ layout: post
 title: Transferring My N64 Saves
 author: Kyle Niewiada
 date: "2015-04-11 16:41"
+edit: "2016-04-29 01:41"
 comments: true
 image: /2015/04/DSC09669.JPG
 published: true
@@ -35,8 +36,9 @@ Here is how I did it.
 
 - Dump ROM
 - Dump contents of active RAM (with my glorious Pentium III)
-- Recalculate save checksum
-- Graft a new save file from dumped data with a hex editor
+- <s>Recalculate save checksum</s>
+- <s>Graft a new save file from dumped data with a hex editor</s>
+- Although this blog post follows the above, an **[easier method](https://bkacjios.github.io/OOT-Save-Converter/)** for converting the RAM dumps has been created by Bkacjios)
 - Load in Project64 and play
 
 <figure>
@@ -46,7 +48,7 @@ Here is how I did it.
 
 ### Dumping My ROM
 
-Star Wars, Mario Party, and Super Mario 64 use EEPROM to store their game save. This made my project easy. I followed a known method by using a DexDrive. The first thing that I did was dump each game using the GameShark’s parallel port with the open source software [N64RD](https://github.com/parasyte/n64rd) using the command below. This program allowed me to back up each of my games for later use in my project. It also allowed me to dump my ram, but that is coming later. I used [this wiki](http://doc.kodewerx.org/hacking_n64.html) to know what addresses and offsets for the RAM and ROM space I needed.
+Star Wars, Mario Party, and Super Mario 64 use EEPROM to store their game save. This made my project easy. I followed a known method by using a DexDrive. The first thing that I did was dump each game using the GameShark’s parallel port with the open source software [N64RD](https://github.com/parasyte/n64rd) using the command below. (Others have tried using GameShark's software, but it has been problematic. Using N64RD seems to be the way to go). This program allowed me to back up each of my games for later use in my project. It also allowed me to dump my ram, but that is coming later. I used [this wiki](http://doc.kodewerx.org/hacking_n64.html) to know what addresses and offsets for the RAM and ROM space I needed.
 
 `$ ./n64rd -dgame.z64 -a 0xB0000000 -l 0x02000000`
 
@@ -160,8 +162,16 @@ Software and resources I used:
 - [Zelda high definition texture pack]( http://www.emutalk.net/threads/51481-Zelda-Ocarina-of-time-Community-Retexture-Project-V6-Development-Topic)
 - [Our Custom Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)
 
-EDIT (March 10, 2016):
+**EDIT (March 10, 2016):**
 
-[Austin](/blog/2015/04/transferring-n64-saves/#comment-2561328816) added these helpful notes in the comments on anyone attempting to replicate this project with the Ocarina of Time save.
+Add contributions made by [Austin](/blog/2015/04/transferring-n64-saves/#comment-2561328816):
 
-"After going through this process for Ocarina of Time, I'd like to add some things to help others who use this guide. Firstly, as of this posting, there is no easy way to communicate with the Gameshark using a parallel-to-usb adapter so you will need an older machine with a built in parallel port, like the one shown in this guide. Secondly, you must have the expansion pack that expands the N64's RAM from 4MB to 8MB. The only way I could get n64rd to dump the RAM while in-game was by turning on the code generator in the Gameshark's menu before starting Ocarina of Time. This code generator option does not show up unless you have the expansion installed. Finally, if you're using a downloaded ROM, make sure its version matches the version of your save. You can dump the ROM yourself as shown in the guide so that you don't have to worry about this."
+- There is no easy way to communicate with the Gameshark using a parallel-to-usb adapter so you will need an older machine with a built in parallel port, like the one shown in this guide.
+- You must have the expansion pack that expands the N64's RAM from 4MB to 8MB. The only way I could get n64rd to dump the RAM while in-game was by turning on the code generator in the Gameshark's menu before starting Ocarina of Time. This code generator option does not show up unless you have the expansion installed.
+- If you're using a downloaded ROM, make sure its version matches the version of your save. You can dump the ROM yourself as shown in the guide so that you don't have to worry about this.
+
+**EDIT (April 29, 2016):**
+
+Add contributions made by [Bkacjios](/blog/2015/04/transferring-n64-saves/#comment-2640491210):
+
+- Bkacjios has implemented the checksum algorithm in an **[online tool](https://bkacjios.github.io/OOT-Save-Converter/)** where you can upload your RAM dump and download a proper .sra save file. It has many other features, but this simplifies the process completely after obtaining your ram dump through the GameShark cartridge and seems to be the way to go.

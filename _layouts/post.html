@@ -13,8 +13,8 @@ layout: default
 {% endif %}
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}" />
-{% if page.updated %}
-<meta property="article:modified_time" content="{{ page.updated | date: '%Y-%m-%d' }}" />
+{% if page.edit %}
+<meta property="article:modified_time" content="{{ page.edit | date: '%Y-%m-%d' }}" />
 {% endif %}
 <meta property="article:author" content="{{ page.author }}" />
 <meta property="article:section" content="{{ page.category }}" />
@@ -60,7 +60,7 @@ layout: default
 <div class="post">
   {% if page.image %}
     <div class="featuredImage">
-        <img src="{{ '/assets/img' | prepend: site.url | append: page.image }}" alt="" />
+        <img src="{{ '/assets/img' | append: page.image }}" alt="" />
       </div>
   {% endif %}
   <h1 class="post-title">{{ page.title }}</h1>
