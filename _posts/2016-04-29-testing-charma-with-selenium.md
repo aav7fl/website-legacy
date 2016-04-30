@@ -2,17 +2,19 @@
 layout: post
 title: Testing Charma with Selenium
 author: Kyle Niewiada
-date: '2016-5-01 18:05'
+date: '2016-04-29 21:26'
 comments: true
-image: /2016/05/banner.jpg
-published: false
-tag: "large project"
-meta: "How I used Selenium WebDriver to test our ASP.net web application, Charma. We use the Google Chrome and Firefox web driver to test our website."
+image: /2016/04/banner2.jpg
+published: true
+tag: "medium project"
+meta: "How I used Selenium WebDriver to test our ASP.net web application, Charma. We use the Google Chrome and Firefox webdriver to test our website."
 ---
+
+If you’re wondering what I’m talking about when I mention the word Charma, I’m referring to an open source web API and web application that I built with two other teammates as a sponsored project by Microsoft for my Grand Valley State University senior capstone. You can read about our project along with a video overview [here](/blog/2016/04/charma-gamifying-volunteer-process/). One of my largest contributions to that project was implementing web browser testing using Selenium.
 
 ## My Largest Contribution (Selenium)
 
-For testing, our group decided to use Selenium WebDriver to test the interactions between our website and other browsers. The Selenium WebDriver allows for automated tasks to be written and run with different web browsers as a user would. It also bypasses any cross-origin scripting policies by using a WebDriver to interact with each browser. Such examples for tests include selecting a field, inputting certain information into that field, submitting, and verifying results with what the website responds back with on the screen. Such a test is used on our registration page to verify that bad entries are not submitted and returned with proper error messages.
+For testing, our group decided to use Selenium WebDriver to test the interactions between our website and other browsers. The Selenium WebDriver allows for automated tasks to be written and run with different web browsers as a user would. It bypasses any cross-origin scripting policies by using a WebDriver to interact with each browser. Such examples for tests include selecting a field, inputting certain information into that field, submitting, and verifying results with what the website responds back with on the screen. Such a test is used on our registration page to verify that bad entries are not submitted and returned with proper error messages.
 
 Before this project, I had never heard of Selenium. I would barely consider myself competent after seeing all the test coverage necessary for a website. Our tests are nowhere near complete. However, it did offer a necessary glimpse and small coverage for web browser automation testing.
 
@@ -60,3 +62,9 @@ We had to watch out for our Visual Studio Team Foundation Server failing our tes
 Our web driver tests are set up to allows us to create repeated tests and test these interactions across multiple web browsers dynamically. Our project is set up to maintain a list of all implemented web drivers on the system, and then in parallel will run each test for the list of web browsers.
 
 An unusual note is that we found Firefox to be significantly slower than Google Chrome when it came to interactions with the Selenium WebDriver. I am not entirely sure the reason that this happens.
+
+## Final Thoughts
+
+I had a great last semester a Grand Valley State University. I was given the opportunity to work with two other outstanding students and briefly with Eric, our mentor at Microsoft. I learned quite a bit about the enormous scope of our enterprise level MVC ASP.net web application and how much more test coverage we actually needed for our project. Tomorrow I graduate and I begin my software developer career. Here’s to the future.
+
+![my graduation cap lined with LED strings](/assets/img/2016/04/cap.jpg)
