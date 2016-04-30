@@ -63,7 +63,7 @@ layout: default
         <img src="{{ '/assets/img' | append: page.image }}" alt="" />
       </div>
   {% endif %}
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="pageTitle">{{ page.title }}</h1>
   <h3 class="meta">{{ page.author }}</h3>
   <p class="meta">{{ page.date | date: '%B %d, %Y' }} |<span class="time">{{ page.content | number_of_words | divided_by:120 }}</span> Minute Read | {{ page.tag | capitalize }}</p>
 
