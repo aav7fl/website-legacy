@@ -28,8 +28,6 @@ navigation:
    url: /archive/
  - title: Contact
    url: /contact/
- - title: Music
-   url: http://music.kyleniewiada.org/
  - title: Résumé
    url: /resume/
 exclude:
