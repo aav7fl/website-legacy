@@ -21,7 +21,8 @@ meta: "Information about Kyle Niewiada. Learn how to pronounce my name. I enjoy 
   "https://plus.google.com/u/0/+KyleNiewiada",
   "https://kyleniewiada.bandcamp.com",
   "http://music.kyleniewiada.org",
-  "https://github.com/aav7fl/"
+  "https://github.com/aav7fl/",
+  "https://www.linkedin.com/in/kyleniewiada"
   ]
 }
 </script>
