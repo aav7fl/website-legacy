@@ -1,7 +1,7 @@
 {% assign footer_links = "" | split: "|" %}
 
-{% if site.social.facebook %}
-  {% capture link %}<a href="https://www.facebook.com/{{ site.social.facebook }}">Facebook</a>{% endcapture %}
+{% if site.social.linkedin %}
+  {% capture link %}<a href='https://www.linkedin.com/in/{{ site.social.linkedin }}'>LinkedIn</a>{% endcapture %}
   {% assign footer_links = footer_links | push:{{link}} %}
 {% endif %}
 
@@ -18,6 +18,11 @@
 {% if site.social.youtube %}
   {% capture link %}<a href="https://www.youtube.com/user/{{ site.social.youtube }}">YouTube</a>{% endcapture %}
   {% assign footer_links = footer_links | push: link %}
+{% endif %}
+
+{% if site.social.facebook %}
+  {% capture link %}<a href="https://www.facebook.com/{{ site.social.facebook }}">Facebook</a>{% endcapture %}
+  {% assign footer_links = footer_links | push:{{link}} %}
 {% endif %}
 
 {% if site.social.bandcamp %}

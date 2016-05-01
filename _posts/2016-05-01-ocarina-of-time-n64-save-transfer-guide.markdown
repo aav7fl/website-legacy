@@ -15,7 +15,7 @@ It was brought to my attention that my original blog post outlining the process 
 ## Required tools:
 
 -  Linux Mint (live CD will work too)
-   - You can choose whatever you’d like, but the tutorial steps may not match with other Linux distros.
+   - You can choose whatever Linux distro you would like, but the tutorial steps may not match with other Linux distros.
 - A Working Nintendo 64 (and controller)
    - It would be best if you could connect this to a TV so you can see the screen. Although I guess if someone makes a TASBot, you wouldn’t need a TV for it.
 - 8 MB Expansion Pak
@@ -39,11 +39,13 @@ It was brought to my attention that my original blog post outlining the process 
     sudo apt-get install -y scons
     ```
 
-5. After scons has finished installing, in the directory of the unzipped code to build N64RD, run:
+5. After scons has finished installing, in the directory of the unzipped code, to build N64RD run:
 
     ```
     scons
     ```
+
+    ![Terminal Output](/assets/img/2016/05/term.jpg)
 
 6. Your directory should now contain the ‘n64rd’ commandline executable file.
 7. Leave the terminal open and your machine on during the next few steps.
@@ -64,11 +66,13 @@ It was brought to my attention that my original blog post outlining the process 
 10. Go to the cheat menu and disable all cheats for Legend of Zelda: Ocarina of Time. This is to prevent any cheat conflicts from interfering with our RAM dump.
 11. Once the GameShark menu appears, press the start button to load the ‘Start Game Options’ menu.
 12. Turn on the code generator.
-13. Launch the game.
+13. Launch the game with cheats enabled.
 14. Load the save file from the main menu that you wish to dump. Only one save may be dumped from RAM at a time.
 15. After the game has loaded, press pause.
 
 ## Part Three: The Transfer
+
+![N64 Transfer Setup](/assets/img/2016/05/setup.jpg)
 
 1. If everything is still running normally, on your transfer computer, execute a RAM dump by running the following command with N64RD in the terminal.
 
@@ -82,6 +86,8 @@ It was brought to my attention that my original blog post outlining the process 
 ## Part Four: Extracting the Save
 
 On a previous blog [outlining the process](/blog/2015/04/transferring-n64-saves/) I used to dump my Ocarina of Time save file, the user Bkacjios took some of that information to create a online RAM dump to save file converter. It will extract your save file from the RAM dump and generate a save file with a good checksum (making it a valid non-corrupt save).
+
+![](/assets/img/2016/05/banner.jpg)
 
 1. Use [this wiki](http://www.jaytheham.com/zcw/Ocarina_of_Time_Version_Guide) to determine which Ocarina of Time cartridge version you have.
 2. Navigate to [https://bkacjios.github.io/OOT-Save-Converter/](https://bkacjios.github.io/OOT-Save-Converter/), import your RAM dump, and download your save file. Feel free to change any of the other options before downloading such as the file slot or other game settings.
