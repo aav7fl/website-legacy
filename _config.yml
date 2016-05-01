@@ -19,17 +19,6 @@ sass:
   sass_dir: _sass
   style: compressed
 
-navigation:
- - title: Home
-   url: /
- - title: About
-   url: /about/
- - title: Archive
-   url: /archive/
- - title: Contact
-   url: /contact/
- - title: Résumé
-   url: /resume/
 exclude:
   - package.json
   - node_modules
@@ -43,12 +32,3 @@ detach:  false
 port:    4000
 host:    localhost
 baseurl: "" # does not include hostname
-
-social:
-   github: aav7fl
-   twitter: CrypticCitrus
-   youtube: KyleNiewiada
-   bandcamp: http://music.kyleniewiada.org/
-   linkedin: kyleniewiada
-
-google_analytics: "UA-37567352-1"

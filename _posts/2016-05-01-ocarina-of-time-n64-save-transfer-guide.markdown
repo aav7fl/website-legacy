@@ -10,7 +10,7 @@ tag: "guide"
 meta: "An updated guide on how to dump the ram from The Legend of Zelda: Ocarina of Time on the Nintendo 64 and create an emulator friendly (.sra) save file."
 ---
 
-It was brought to my attention that my original blog post outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps you will want to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.
+It was brought to my attention that my original blog post outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.
 
 ## Required tools:
 
@@ -31,7 +31,7 @@ It was brought to my attention that my original blog post outlining the process 
 ## Part One: Preparing the Transfer Computer
 
 1. Have your machine (with the parallel port) turned on and booted into its Linux partition or a Live CD equivalent.
-2. Download the [latest release](https://github.com/parasyte/n64rd/releases) of N64RD. This tutorial uses version 0.2.0.
+2. On that machine download the [latest release](https://github.com/parasyte/n64rd/releases) of N64RD. This tutorial uses version 0.2.0.
 3. Unzip its contents and navigate to the directory using a terminal.
 4. To build N64RD, we need to install ‘scons’. From the command line, run:
 
@@ -54,8 +54,8 @@ It was brought to my attention that my original blog post outlining the process 
 
 **If your Nintendo 64 freezes at any point, you will need to power down your Nintendo 64 and begin again from Part Two: Step 3.**
 
-1. Make sure the Expansion Pak is installed in your Nintendo 64.
-2. Connect to Nintendo 64 to the television, and plug the power cable.
+1. Make sure the 8 MB Expansion Pak is installed in your Nintendo 64.
+2. Connect the Nintendo 64 to the television, and plug in the power cable.
 3. Insert Super Mario 64 into the GameShark, and insert the GameShark into the Nintendo 64.
 4. Turn on your TV and the Nintendo 64.
 5. Once the GameShark main menu has appeared, select ‘key codes’, scroll down to the keycode named “Zelda”, and activate it.
@@ -64,9 +64,9 @@ It was brought to my attention that my original blog post outlining the process 
 8. Connect your Nintendo 64 GameShark to your transfer computer with your parallel cable.
 9. Turn on your Nintendo 64.
 10. Go to the cheat menu and disable all cheats for Legend of Zelda: Ocarina of Time. This is to prevent any cheat conflicts from interfering with our RAM dump.
-11. Once the GameShark menu appears, press the start button to load the ‘Start Game Options’ menu.
+11. Next, press the start button to load the ‘Start Game Options’ menu.
 12. Turn on the code generator.
-13. Launch the game with cheats enabled.
+13. Launch the game with codes.
 14. Load the save file from the main menu that you wish to dump. Only one save may be dumped from RAM at a time.
 15. After the game has loaded, press pause.
 
@@ -74,21 +74,21 @@ It was brought to my attention that my original blog post outlining the process 
 
 ![N64 Transfer Setup](/assets/img/2016/05/setup.jpg)
 
-1. If everything is still running normally, on your transfer computer, execute a RAM dump by running the following command with N64RD in the terminal.
+1. If everything is still running normally, on your transfer computer execute a RAM dump by running the following command with N64RD in the terminal.
 
     ```
     $ ./n64rd -dmemory.z64 -a 0x80000000 -l 0x00800000
     ```
 
-2. This will take quite some time. I think I remember somewhere in the neighborhood of 10-20 minutes. After the execution begins, your game will probably freeze. This is fine.
+2. This will take quite some time. I think I recall somewhere in the neighborhood of 10-20 minutes. After the execution begins, your game will probably freeze. This is fine.
 3. When N64RD has finished executing, you should have an 8 MB RAM dump file in that folder named ‘memory.z64’. Congratulations! You have dumped the active memory of the Legend of Zelda: The Ocarina of Time. You may now power down your Nintendo 64.
 
 ## Part Four: Extracting the Save
 
 On a previous blog [outlining the process](/blog/2015/04/transferring-n64-saves/) I used to dump my Ocarina of Time save file, the user Bkacjios took some of that information to create a online RAM dump to save file converter. It will extract your save file from the RAM dump and generate a save file with a good checksum (making it a valid non-corrupt save).
 
-![](/assets/img/2016/05/banner.jpg)
+![Ocarina of Time save converter](/assets/img/2016/05/banner.jpg)
 
 1. Use [this wiki](http://www.jaytheham.com/zcw/Ocarina_of_Time_Version_Guide) to determine which Ocarina of Time cartridge version you have.
-2. Navigate to [https://bkacjios.github.io/OOT-Save-Converter/](https://bkacjios.github.io/OOT-Save-Converter/), import your RAM dump, and download your save file. Feel free to change any of the other options before downloading such as the file slot or other game settings.
+2. Navigate to [https://bkacjios.github.io/OOT-Save-Converter/](https://bkacjios.github.io/OOT-Save-Converter/), import your RAM dump, select the correct cartridge version, and download your save file. Feel free to change any of the other options before downloading such as the file slot or other game settings.
 3. Congratulations! You have successfully dumped your Ocarina of Time RAM and extracted your save file to be used with emulators and other tools.

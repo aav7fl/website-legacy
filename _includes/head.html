@@ -35,8 +35,8 @@
     {% if page.layout == 'post' %}
 
     <!--Begin head metadata info-->
-    
-    <meta property="fb:app_id" content="137961485759" /> 
+
+    <meta property="fb:app_id" content="137961485759" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:site_name" content="{{ site.name }}" />
@@ -58,5 +58,5 @@
 
     <!--End head metadata info-->
 
-    {% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
+    {% if site.data.google_analytics %} {% include google_analytics.html %} {% endif %}
 </head>

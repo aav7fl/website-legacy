@@ -1,0 +1,11 @@
+---
+- title: Home
+  url: /
+- title: About
+  url: /about/
+- title: Archive
+  url: /archive/
+- title: Contact
+  url: /contact/
+- title: Résumé
+  url: /resume/

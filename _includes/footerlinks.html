@@ -1,32 +1,32 @@
 {% assign footer_links = "" | split: "|" %}
 
-{% if site.social.linkedin %}
-  {% capture link %}<a href='https://www.linkedin.com/in/{{ site.social.linkedin }}'>LinkedIn</a>{% endcapture %}
+{% if site.data.social.linkedin %}
+  {% capture link %}<a href='https://www.linkedin.com/in/{{ site.data.social.linkedin }}'>LinkedIn</a>{% endcapture %}
   {% assign footer_links = footer_links | push:{{link}} %}
 {% endif %}
 
-{% if site.social.github %}
-  {% capture link %}<a href='https://github.com/{{ site.social.github }}'>GitHub</a>{% endcapture %}
+{% if site.data.social.github %}
+  {% capture link %}<a href='https://github.com/{{ site.data.social.github }}'>GitHub</a>{% endcapture %}
   {% assign footer_links = footer_links | push:{{link}} %}
 {% endif %}
 
-{% if site.social.twitter %}
-  {% capture link %}<a href="https://twitter.com/{{ site.social.twitter }}">Twitter</a>{% endcapture %}
+{% if site.data.social.twitter %}
+  {% capture link %}<a href="https://twitter.com/{{ site.data.social.twitter }}">Twitter</a>{% endcapture %}
   {% assign footer_links = footer_links | push:{{link}} %}
 {% endif %}
 
-{% if site.social.youtube %}
-  {% capture link %}<a href="https://www.youtube.com/user/{{ site.social.youtube }}">YouTube</a>{% endcapture %}
+{% if site.data.social.youtube %}
+  {% capture link %}<a href="https://www.youtube.com/user/{{ site.data.social.youtube }}">YouTube</a>{% endcapture %}
   {% assign footer_links = footer_links | push: link %}
 {% endif %}
 
-{% if site.social.facebook %}
-  {% capture link %}<a href="https://www.facebook.com/{{ site.social.facebook }}">Facebook</a>{% endcapture %}
+{% if site.data.social.facebook %}
+  {% capture link %}<a href="https://www.facebook.com/{{ site.data.social.facebook }}">Facebook</a>{% endcapture %}
   {% assign footer_links = footer_links | push:{{link}} %}
 {% endif %}
 
-{% if site.social.bandcamp %}
-  {% capture link %}<a href="{{ site.social.bandcamp }}">BandCamp</a>{% endcapture %}
+{% if site.data.social.bandcamp %}
+  {% capture link %}<a href="{{ site.data.social.bandcamp }}">BandCamp</a>{% endcapture %}
   {% assign footer_links = footer_links | push: link %}
 {% endif %}
 
