@@ -8,7 +8,18 @@
   </div>
 <!-- end footer -->
 <!-- start noncritical style -->
-  <link rel="stylesheet" href="{{ "/assets/css/noncritical.css" | prepend: site.baseurl }}" property="stylesheet">
+  <script>
+  var cb = function() {
+  var l = document.createElement('link'); l.rel = 'stylesheet';
+  l.href = '/assets/css/noncritical.css';
+  var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+  };
+  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+  webkitRequestAnimationFrame || msRequestAnimationFrame;
+  if (raf) raf(cb);
+  else window.addEventListener('load', cb);
+  </script>
+  <!-- <link rel="stylesheet" href="{{ "/assets/css/noncritical.css" | prepend: site.baseurl }}" property="stylesheet"> -->
 <!-- end noncritical style -->
 <!-- start scripts -->
   {% include scripts.html %}
