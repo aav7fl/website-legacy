@@ -10,7 +10,7 @@ tag: "guide"
 meta: "An updated guide on how to dump the ram from The Legend of Zelda: Ocarina of Time on the Nintendo 64 and create an emulator friendly (.sra) save file."
 ---
 
-It was brought to my attention that my original blog post outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.
+It was brought to my attention that my [original blog post](/blog/2015/04/transferring-n64-saves/) outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.
 
 ## Required tools:
 
