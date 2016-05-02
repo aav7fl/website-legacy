@@ -85,9 +85,7 @@ The end cost to me was free (it probably won't happen again) because they have n
 
 ![original, prototype, and final print model](/assets/img/2013/09/small/DSC09129.JPG)*Original, prototype, and final*
 
-Now I had a perfectly built lamp housing to go in as a replacement for my old one.
-
-I placed the model into my Marantz and you can see that it fits without any issues.
+Now I had a perfectly built lamp housing to go in as a replacement for my old one. I placed the model into my Marantz and you can see that it fits without any issues.
 
 ![printed model inside Marantz 2220B](/assets/img/2013/09/small/DSC09138.JPG)*Almost ready for the first test..*
 

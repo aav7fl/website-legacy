@@ -12,10 +12,7 @@ meta: "A public disclosure that I discovered of an iOS video playback bug that d
 
 There exists a bug with the iOS video playback and color reproduction. When specific combinations and proportions of colors are present on screen, if (and only if) all user interface elements are hidden, then a decrease in color temperature (mostly red) occurs. This seemingly subtle shift in color turns cartoon characters and online content creators into ghostly pale figures.
 
-<figure>
-  <img src='/assets/img/2016/03/comparison.jpg' alt="comparing video playback demonstrating bug with and without user interface">
-  <figcaption>Note the subtle differences in facial tones and woodgrain color</figcaption>
-</figure>
+![comparing video playback demonstrating bug with and without user interface](/assets/img/2016/03/comparison.jpg)*Note the subtle differences in facial tones and woodgrain color*
 
 <video width="800" controls loop>
   <source src="/assets/files/2016/03/bug_example.mp4" type="video/mp4" />
@@ -48,27 +45,16 @@ After searching for software solutions that would allow me to read color data po
 
 ## Capturing Results
 
-<figure>
-  <img src='/assets/img/2016/03/iPadTesting2.jpg' alt="Capturing iPad Air 2 results">
-  <figcaption>Capturing iPad Air 2 results</figcaption>
-</figure>
+![Capturing iPad Air 2 results](/assets/img/2016/03/iPadTesting2.jpg)*Capturing iPad Air 2 results*
 
 I used the bug reproduction video above for my sample capture data on my iPad Air 2. Below is a video demonstrating the live capture with my colorimeter as I replicate the bug behavior --hiding and restoring the user interface.
 
-<figure>
-  <video width="800" controls autoplay loop>
-    <source src="/assets/files/2016/03/graphs.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <figcaption>Watch in fullscreen for easier readability</figcaption>
-</figure>
+<video width="800" controls autoplay loop>
+  <source src="/assets/files/2016/03/graphs.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
-<figure>
-  <a href="/assets/img/2016/03/capture_large.jpg" title="click to view larger image" target="\_blank">
-    <img src='/assets/img/2016/03/capture_small.jpg' alt="HCFR Capture Window">
-  </a>
-  <figcaption>HCFR Capture Window</figcaption>
-</figure>
+![HCFR Capture Window](/assets/img/2016/03/capture_small.jpg)*[HCFR Capture Window (click to view larger image)](/assets/img/2016/03/capture_large.jpg)*
 
 \[[HCFR Capture Results File](/assets/files/2016/03/ColorMeasures1.chc)]
 

@@ -28,15 +28,9 @@ The documentation README is on the GitHub page above. The README will explain th
 
 After my messages were in their correct order, I shifted focus on how I was going to format this plethora of text into something book-worthy. I downloaded a large hardcover book template from Lulu that matched my desired layout. Then I began my quest of transferring in my Facebook messages. I copied each conversation thread that I wanted from the messages_reversed.html and pasted them into a Word document. Without any formatting, the text was highly unreadable and confused which messages belonged to which user. I spent some time studying the features and following tutorials for Microsoft Word. I formatted the text to my liking seen below.
 
-<figure>
-    <img src='/assets/img/2015/12/layout_before.png' alt='Before formatting' />
-    <figcaption>Before formatting</figcaption>
-</figure>
+![Before formatting](/assets/img/2015/12/layout_before.png)*Before formatting*
 
-<figure>
-    <img src='/assets/img/2015/12/layout_after.png' alt='After formatting' />
-    <figcaption>After formatting</figcaption>
-</figure>
+![After formatting](/assets/img/2015/12/layout_after.png)*After formatting*
 
 First, I created a reasonable even spacing between each conversation to make it easier on the eyes (0pt spacing before each paragraph and 6pt spacing after each paragraph). This also condensed the length of my book to something far more practical. I set the font to Times New Roman/Size 11.
 

@@ -26,6 +26,7 @@ exclude:
 gems:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-gist
 
 # Serving
 detach:  false

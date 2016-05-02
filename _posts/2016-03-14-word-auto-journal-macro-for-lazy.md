@@ -46,4 +46,4 @@ When the document is closed, the macro will run and add up the total number of h
 
 Above is a link to the macro enabled Microsoft Word document example. Below is the source code for the macro. Most of it is pieced together from other examples online accomplishing similar tasks. I spent most of my time looking at different resources for visual basic techniques and have mentioned those sources in nearby comments for pieces of code where available.
 
-<script src="https://gist.github.com/aav7fl/7df0051c6fa9fd8a42bb.js"></script>
+{% gist aav7fl/7df0051c6fa9fd8a42bb %}

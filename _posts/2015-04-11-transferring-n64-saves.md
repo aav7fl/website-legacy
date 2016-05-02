@@ -156,3 +156,7 @@ Add contributions made by [Austin](/blog/2015/04/transferring-n64-saves/#comment
 Add contributions made by [Bkacjios](/blog/2015/04/transferring-n64-saves/#comment-2640491210):
 
 - Bkacjios has implemented the checksum algorithm in an **[online tool](https://bkacjios.github.io/OOT-Save-Converter/)** where you can upload your RAM dump and download a proper .sra save file. It has many other features, but this simplifies the process completely after obtaining your ram dump through the GameShark cartridge and seems to be the way to go.
+
+**EDIT (May 01, 2016):**
+
+I've added an updated guide specifically for Ocarina of Time. Check out my [new guide](/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/) for it.
