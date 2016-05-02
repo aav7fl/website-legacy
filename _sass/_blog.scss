@@ -60,7 +60,15 @@ POST STYLING
 		}
 	}
 
-	img {
+	img + em {
+		text-align: center;
+		font-size: .9em;
+		font-style: italic;
+		color: lighten($black, 30%);
+		display: block;
+	}
+
+	img + p {
 		margin-bottom: 2rem;
 	}
 

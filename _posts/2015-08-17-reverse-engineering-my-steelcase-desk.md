@@ -58,6 +58,8 @@ PArA Mode: PArA
   - To reach PArA menu, press F until display reads PArA.
   - If in Passcode Mode, unplug desk, plug back in.
 
+![Normal Mode](/assets/img/2015/08/normal.jpg)*Normal Mode*
+
   <figure>
       <img src='/assets/img/2015/08/normal.jpg' alt='Normal mode' />
       <figcaption>Normal mode</figcaption>
@@ -71,222 +73,72 @@ PArA Mode: PArA
       <figcaption>Passcode mode</figcaption>
   </figure>
 
+  | Code: 	| P-Mode:                                                         	| PArA Mode:                                                      	| Default Value (As I found it) 	|
+  |---------|-------------------------------------------------------------------|-------------------------------------------------------------------|---------------------------------|
+  | 111   	| Set offset curve multiplier (from min)                          	| X                                                               	| 1970                          	|
+  | 112   	| X                                                               	| X                                                               	|                               	|
+  | 113   	| Hand/Auto toggle (Auto travel to programmed position)           	| X                                                               	| Hand (But I like Auto)        	|
+  | 121   	| Acc.# (0-9) Distance to start decelerating from below a number? 	| Acc.# (0-9) Distance to start decelerating from below a number? 	| 4                             	|
+  | 122   	| Acc.# (0-9) Distance to start decelerating from above a number? 	| Acc.# (0-9) Distance to start decelerating from above a number? 	| 4                             	|
+  | 123   	| X                                                               	| X                                                               	|                               	|
+  | 131   	| Upward Speed (1-39)                                             	| Upward Speed (1-39)                                             	| 39                            	|
+  | 132   	| Downward Speed (1-39)                                           	| Downward Speed (1-39)                                           	| 39                            	|
+  | 133   	| Height offset for minimum height                                	| Height offset for minimum height                                	| 23(.)3(")                     	|
+  | 211   	| LErN (Calibrates based on min (133) and max offset (111))       	| LErN (Calibrates based on min (133) and max offset (111))       	|                               	|
+  | 212   	| UrLA (Calibrates based on software defaults? 24¼" to 52")       	| UrLA (Calibrates based on software defaults? 24¼" to 52")       	|                               	|
+  | 213   	| X                                                               	| X                                                               	|                               	|
+  | 221   	| X                                                               	| X                                                               	|                               	|
+  | 222   	| X                                                               	| X                                                               	|                               	|
+  | 223   	| X                                                               	| X                                                               	|                               	|
+  | 231   	| X                                                               	| X                                                               	|                               	|
+  | 232   	| X                                                               	| X                                                               	|                               	|
+  | 233   	| X                                                               	| X                                                               	|                               	|
+  | 311   	| X                                                               	| X                                                               	|                               	|
+  | 312   	| X                                                               	| X                                                               	|                               	|
+  | 313   	| X                                                               	| X                                                               	|                               	|
+  | 321   	| Toggle USA/Eur units (for height)                               	| Toggle USA/Eur units (for height)                               	|                               	|
+  | 322   	| X                                                               	| X                                                               	|                               	|
+  | 323   	| X                                                               	| X                                                               	|                               	|
+  | 331   	| Max weight setting? Current weight setting? (0-140)             	| X                                                               	| 70                            	|
+  | 332   	| X                                                               	| X                                                               	|                               	|
+  | 333   	| SPP- (Set Program Position?) Manually set program # height      	| SPP- (Set Program Position?) Manually set program # height      	|                               	|
 
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:2px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:2px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
-.tg .tg-e3zv{font-weight:bold}
-@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
-<div class="tg-wrap"><table class="tg">
-  <tr>
-    <th class="tg-e3zv">Code:</th>
-    <th class="tg-e3zv">P-Mode:</th>
-    <th class="tg-e3zv">PArA Mode:</th>
-    <th class="tg-e3zv">Default Value (As I found it)</th>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">111</td>
-    <td class="tg-031e">Set offset curve multiplier (from min)</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">1970</td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">112</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">113</td>
-    <td class="tg-031e">Hand/Auto toggle (Auto travel to programmed position)</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">Hand (But I like Auto)</td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">121</td>
-    <td class="tg-031e">Acc.# (0-9) Distance to start decelerating from below a number?</td>
-    <td class="tg-031e">Acc.# (0-9) Distance to start decelerating from below a number?</td>
-    <td class="tg-031e">4</td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">122</td>
-    <td class="tg-031e">Acc.# (0-9) Distance to start decelerating from above a number?</td>
-    <td class="tg-031e">Acc.# (0-9) Distance to start decelerating from above a number?</td>
-    <td class="tg-031e">4</td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">123</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">131</td>
-    <td class="tg-031e">Upward Speed (1-39)</td>
-    <td class="tg-031e">Upward Speed (1-39)</td>
-    <td class="tg-031e">39</td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">132</td>
-    <td class="tg-031e">Downward Speed (1-39)</td>
-    <td class="tg-031e">Downward Speed (1-39)</td>
-    <td class="tg-031e">39</td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">133</td>
-    <td class="tg-031e">Height offset for minimum height</td>
-    <td class="tg-031e">Height offset for minimum height</td>
-    <td class="tg-031e">23(.)3(")</td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">211</td>
-    <td class="tg-031e">LErN (Calibrates based on min (133) and max offset (111))</td>
-    <td class="tg-031e">LErN (Calibrates based on min (133) and max offset (111))</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">212</td>
-    <td class="tg-031e">UrLA (Calibrates based on software defaults?  24¼" to 52")</td>
-    <td class="tg-031e">UrLA (Calibrates based on software defaults?  24¼" to 52")</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">213</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">221</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">222</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">223</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">231</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">232</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">233</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">311</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">312</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">313</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">321</td>
-    <td class="tg-031e">Toggle USA/Eur units (for height)</td>
-    <td class="tg-031e">Toggle USA/Eur units (for height)</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">322</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">323</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">331</td>
-    <td class="tg-031e">Max weight setting? Current weight setting? (0-140)</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">70</td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">332</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e">X</td>
-    <td class="tg-031e"></td>
-  </tr>
-  <tr>
-    <td class="tg-e3zv">333</td>
-    <td class="tg-031e">SPP- (Set Program Position?) Manually set program # height</td>
-    <td class="tg-031e">SPP- (Set Program Position?) Manually set program # height</td>
-    <td class="tg-031e"></td>
-  </tr>
-</table></div>
 
 #### To calibrate desk remote display:
 
-<ol>
-<li>Turn on desk.</li>
-<li>Lower desk to minimum height.</li>
-<li>Measure distance from the floor to the top of the desk.</li>
-<li>Enter code 133 in either P-Code or PArA mode.</li>
-<li>Change number to reflect the minimum desk height (Inches or cm pending the setup for units).</li>
-<li>Press F</li>
-<li>Raise desk to maximum height. The display will likely jump when the max height is reached.</li>
-<li>Measure distance from the floor to the top of the desk.</li>
-<li>Enter Passcode Mode (See top).</li>
-<li>Enter code 111.</li>
-<li>Raise or lower number the number to correct your max height. The number behaves like X, where X is the number you are adjusting. My calculations and formula were based on inches. Your results might vary.</li>
-</ol>
-```
-MaxHeight - MinHeight - 11.8
----------------------------- + 1500 = X
-		.0079059829
+1. Turn on desk.
+2. Lower desk to minimum height.
+3. Measure distance from the floor to the top of the desk.
+4. Enter code 133 in either P-Code or PArA mode.
+5. Change number to reflect the minimum desk height (Inches or cm pending the setup for units).
+6. Press F
+7. Raise desk to maximum height. The display will likely jump when the max height is reached.
+8. Measure distance from the floor to the top of the desk.
+9. Enter Passcode Mode (See top).
+10. Enter code 111.
+11. Raise or lower number the number to correct your max height. The number behaves like X, where X is the number you are adjusting. My calculations and formula were based on inches. Your results might vary.
 
-In my case, I would have
+    ```
+    MaxHeight - MinHeight - 11.8
+    ---------------------------- + 1500 = X
+        .0079059829
 
-38.8 - 23.3 - 11.8
------------------- + 1500 = 1968
-   .0079059829
-```
+    In my case, I would have
 
-<ol start="12">
-<li>After adjusting, back out and check your latest displayed height. If the height displayed is correct, move on. If not, re-adjust step 11 again.</li>
-<li>Lower desk height half-way.</li>
-<li>Enter code 211 in either P-Code or PArA mode.</li>
-<li>Press F until “Init” is displayed.</li>
-<li>The motor will now respond slowly until calibration is completed.</li>
-<li>Lower desk to its minimum height.</li>
-<li>Raise the desk to its maximum height.</li>
-<li>When you reach the top, the display will change to the correct height and the calibration of the desk will be complete.</li>
-</ol>
+    38.8 - 23.3 - 11.8
+    ------------------ + 1500 = 1968
+        .0079059829
+    ```
+
+12. After adjusting, back out and check your latest displayed height. If the height displayed is correct, move on. If not, re-adjust step 11 again.
+13. Lower desk height half-way.
+14. Enter code 211 in either P-Code or PArA mode.
+15. Press F until “Init” is displayed.
+16. The motor will now respond slowly until calibration is completed.
+17. Lower desk to its minimum height.
+18. Raise the desk to its maximum height.
+19. When you reach the top, the display will change to the correct height and the calibration of the desk will be complete.
+
 
 ### Conclusion
 

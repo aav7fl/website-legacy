@@ -3,9 +3,9 @@ TABLE STYLES
 ***************/
 
 table {
-	width: 100%;
-	border: 1px solid lighten($grey, 15%);
-	margin-bottom: 1.5em;
+	border-collapse:collapse;
+	border-spacing:0;
+	border-color:#ccc;
 
 	caption {
 		margin: 0 0 7px;
@@ -18,27 +18,48 @@ table {
 
 tr {
 	border-bottom: 1px solid lighten($grey, 15%);
-
-	&:nth-child(even) {
-		background-color: lighten($grey, 30%);
-	}
 }
 
 td {
-	padding: 7px;
-	border-right: 1px solid lighten($grey, 15%);
+	font-family:$sans-serif;
+	font-size:14px;
+	padding:2px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#ccc;
+	color:#333;
+	background-color:#fff;
 
-	&:last-child {
-		border-right: 0;
+	&:first-child
+	{
+		font-weight: bold;
 	}
 }
 
 th {
-	background-color: lighten($grey, 30%);
-	border-bottom: 1px solid lighten($grey, 15%);
-	border-right: 1px solid lighten($grey, 15%);
+	font-family:$sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	padding:2px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#ccc;
+	color:#333;
+	background-color:#f0f0f0
+}
 
-	&:last-child {
-		border-right: 0;
+@media screen and (max-width: 767px)
+{
+	tg
+	{
+		width: auto !important;
+	}
+	col
+	{
+		width: auto !important;
 	}
 }
