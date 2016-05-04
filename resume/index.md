@@ -22,7 +22,7 @@ To start my career as a software engineer
 
 BS, Computer Science; Grand Valley State University (2012-2016)
 
-- GPA: 3.46
+- GPA: 3.503
 
 ---
 
