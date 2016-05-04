@@ -237,6 +237,13 @@ POST LIST STYLING
 		}
 	}
 }
- .logo img {
-	 display:none;
- }
+.logo img {
+ display:none;
+}
+
+.post .featuredImage {
+		margin-top: 2rem;
+		img {
+			margin-bottom: 0;
+		}
+}
