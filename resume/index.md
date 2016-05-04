@@ -70,7 +70,7 @@ Sponsored by Microsoft under the study of Grand Valley State University to creat
 - [Source code](https://github.com/aav7fl/GVSU-capstone-project)
 - [Blog post](/blog/2016/04/charma-gamifying-volunteer-process/)
 
-Rebuilt a Zelda Ocarina of Time save file after discovering checksum algorithm
+Rebuilt a Zelda Ocarina of Time save file after discovering a checksum algorithm
 
 - Used a GameShark with a parallel port to interface with the N64 cartridge, dump the ram, and recalculate the checksum
 - [Open source checksum calculator](https://github.com/Vi1i/OcarinaChecksumChecker)
