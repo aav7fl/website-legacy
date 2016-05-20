@@ -2,17 +2,6 @@
 POST STYLING
 ***************/
 .post {
-	.postTitle {
-		text-align: center;
-	}
-
-	.meta {
-		text-align: center;
-		color: lighten(black, 50%);
-		font-family: $sans-serif;
-		font-weight: 300;
-	}
-
 	img + em, video + em {
 		text-align: center;
 		font-size: .9em;
