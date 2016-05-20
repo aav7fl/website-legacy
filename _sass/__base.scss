@@ -26,6 +26,15 @@ GLOBAL Extra
 		font-weight: 300;
 	}
 }
+
+/***************
+PAGE STYLES
+***************/
+.pageTitle {
+	margin: .5em auto .5em;
+	text-align: center;
+}
+
 /***************
 GLOBAL STYLE
 ***************/
@@ -187,14 +196,6 @@ dd {
 .post ol ul,
 .post ol ol {
   margin: 0;
-}
-
-/***************
-PAGE STYLES
-***************/
-.pageTitle {
-	margin: .5em auto .5em;
-	text-align: center;
 }
 
 // .content {
