@@ -28,13 +28,20 @@ BS, Computer Science; Grand Valley State University (2012-2016)
 
 ### Experience
 
+Grandville RoboDawgs Weather Balloon Coach (May-June, 2016)
+
+- Help underclassmen RoboDawg students transition to leadership positions in the program
+- Students learn how to program in Python on Raspberry Pi units to collect data from their weather balloon launches
+
+AP Computer Science Tutor (May, 2016)
+
 Internship at Blue Medora, LLC (Summer, 2013; Summer, 2014)
 
-- Developed Oracle Enterprise Manager plugins
+- Develop Oracle Enterprise Manager plugins
 
 Supervisor for RoboDawgs community camps (Summer, 2012)
 
-- Delegated jobs between nine employees
+- Delegate jobs between nine employees
 - Tasked with new building renovations/repairs
 - Up to 40 campers during the busiest week
 
