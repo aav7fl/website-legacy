@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2 (Work In Progress)"
+title: "Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2"
 author: "Kyle Niewiada"
 date: "2016-05-21 14:45"
 comments: true
@@ -10,22 +10,22 @@ tag: "medium project"
 meta: "How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR."
 ---
 
-I think virtual reality is a lot of fun. I had a friend in college demo an Oculus DK1 to me and I was pretty amazed; even though I was running it on a laptop, and the display drivers turned everything into wireframe models. I remember getting my hands on my first Google Cardboard, sliding my phone in, and exploring the world through Google Earth. When the HTC Vive went on sale, I bought it. My first real chance to become heavily immersed in a new world.
+I think virtual reality is a lot of fun. I had a friend in college demo an Oculus DK1 to me and I was pretty amazed; even though I was running it on a laptop, and the display drivers turned everything into wireframe models. I remember getting my hands on my first Google Cardboard, sliding my phone in, and exploring the world through Google Earth. When the HTC Vive went on sale with its advertised room-scale, I bought it. My first real chance to become heavily immersed in a virtual world.
 
 However, my HTC Vive setup did not fit in my room, so I ran some cables to put it in the room next door. But now, no one else in the VR room could see what I was doing. There was a problem; I wanted to let those around me see what I was seeing. I had to figure out a way to mirror or broadcast my desktop to the other room.
 
 My first thought was that I was going to use my Steam Link as a way to rebroadcast desktop. After all, it's another product by Valve and its primary function is for streaming games. I thought this was going to work because it had the feature to minimize the Steam Big Picture application and use the desktop instead. But as I began to find out, this did not work with all Steam VR applications and the usability of the HTC Vive suffered.
 
-If I launched games from my steam link, I could no longer use the VR menu. If I tried to launch the Steam Link after I was in the VR menu, it would refuse because I was already "in game". I tried using Splashtop (Remote software) to stream it to my device, but it was unable to draw the desktop unless I forced it --this interfered with my Vive yet again.
+If I launched games from my Steam Link, I could no longer use the VR menu. If I tried to launch the Steam Link after I was in the VR menu, it would refuse because I was already "in game". I tried using alternative software such as Splashtop (Remote software) to stream it to my device, but it was unable to draw the desktop unless I forced it; this interfered with my Vive yet again.
 
-After failing to use the Steam Link and Splashtop, I came across others mentioning Nvidia's GameStream as an alternative. Nvidia has a built-in feature with their new-ish graphics cards that allow one to stream their gaming setup to an Nvidia Shield tablet. Luckily there was an open source client alternative, [Moonlight Embedded](https://github.com/irtimmer/moonlight-embedded), that would allow streaming to a number of different clients. Sure, I could have probably set up a VNC server/VNC client but who knows how long it would have taken for me to get optimized for streaming games, and where was the fun in that?
+After failing to use the Steam Link and Splashtop, I came across others mentioning Nvidia's GameStream as an alternative to streaming gameplay. Nvidia has a built-in feature with their new-ish graphics cards that allow one to stream their gaming setup to an Nvidia Shield tablet. Luckily there was an open source client alternative, [Moonlight Embedded](https://github.com/irtimmer/moonlight-embedded), that would allow streaming to a number of different clients. Sure, I could have probably set up a VNC server/VNC client but who knows how long it would have taken for me to get optimized for streaming games, and where was the fun in that?
 
 It was settled. I was going to install Moonlight Embedded to my Raspberry Pi 2. Here is my setup so far.
 
 ## Hardware I used:
 
 - Raspberry Pi 2 running Raspbian Jessie (May 2016) using NOOBS
-  - Including peripherals such as micoSD card, HDMI cable, case, USB micro power adapter, method to connect to home network such as wireless adapter or ethernet.
+  - Including peripherals such as micoSD card, HDMI cable, case, mouse, keyboard, USB micro power adapter, a method to connect to home network such as wireless adapter or ethernet.
 - Computer with Windows 10
 - Nvidia GTX 970 graphics card
 - [Moonlight Embedded](https://github.com/irtimmer/moonlight-embedded)
@@ -56,7 +56,9 @@ Once everything was complete, Moonlight Embedded was installed and ready to use.
 
 ## Setting Up the Computer
 
-I switched over to my desktop, opening up Nvidia GeForce Experience, and added the information below as a custom Shield game. The application below is Windows' built-in remote desktop software. I was going to use it to access my machine in the other room remotely.
+I switched over to my desktop, opening up Nvidia GeForce Experience, and added the information below as a custom Shield game. Out of the box, Moonlight Embedded will take you to the Steam Big Picture mode and leave you with the same problem as the Steam Link; getting stuck with Steam's streaming mess. However, with Nvidia, we can add the ability to stream the desktop without interfering with SteamVR at all.
+
+The application below is Windows' built-in remote desktop software. It is what I use it to access my PC machine from the Pi in a separate room.
 
 ![Adding remote desktop as Nvidia GameStream custom game](/assets/img/2016/05/GFEWindow.png)*Adding remote desktop as a Nvidia GameStream custom game*
 
@@ -117,7 +119,7 @@ My installation wasn't very smooth. I had a lot of problems along the way that k
 
 It was not receiving enough power so I do use a different USB adapter to give it more. I didn't realize that's what the flashing logo on the top right corner meant. But once I did figure it out, my download speeds over my network soared past the 1 Mbit that I was getting before.
 
-### Audio would not stream
+### Audio would not stream.
 
 My audio wouldn't stream at first to my Raspberry Pi because I wasn't using the `-localaudio` flag. This meant that the primary sound device was changing, then SteamVR was also attempting to change the primary audio device to the HTC Vive, and they were both conflicting with each other. If I did manage to have it to stream to the special Nvidia audio driver, I found it to stutter quite a bit. So I resolved this issue by using the local audio flag to prevent my sound device from changing, and mirroring the SteamVR audio to my primary sound driver on my computer.
 
@@ -125,7 +127,7 @@ My audio wouldn't stream at first to my Raspberry Pi because I wasn't using the 
 
 My wireless adapter was the primary culprit to this. There was some issue with it either being powered or sharing band with on the USB bus with my Raspberry Pi. I switched to my handy [IOGear Ethernet/Wireless adapter](http://www.amazon.com/IOGEAR-Universal-Ethernet-Adapter-GWU627/dp/B004UAKCS6) and have had little problems streaming 20 Mbit streams. This adapter might not work for everybody. It uses the 2.4 GHz band which is commonly known to be quite crowded. My Raspberry Pi is near the wireless access point, so it has little interference.
 
-### My HDMI monitor would not turn off after screen blanking with the Pi
+### My HDMI monitor would not turn off after screen blanking with the Pi.
 
 I added the undocumented/unsupported `hdmi_blanking 1` to the bottom of my `/boot/config.txt` file and rebooted. This allowed my monitor to enter standby mode when the Raspberry Pi screen blanked.
 
@@ -134,6 +136,6 @@ I added the undocumented/unsupported `hdmi_blanking 1` to the bottom of my `/boo
 My solution to this was just a bit more of a lazy hack. I decided to create a script (listed above) that turns off the power saving features before I enter streaming modesave file and restore them after ending the stream. This ensures that I will not get stuck with a monitor in standby while streaming.
 
 
-### I'm having buffering issues
+### I had buffering issues.
 
 I solved this simply by playing with the bit rate level. I decided to stick with 10 Mbits for a 720p 60fps stream.
