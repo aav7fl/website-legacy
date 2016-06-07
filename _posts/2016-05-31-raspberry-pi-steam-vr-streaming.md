@@ -97,7 +97,8 @@ xset s off
 #Disable Energy Star features.
 xset -dpms
 
-#Start the Moonlight stream. Make sure to replace the remote address with your own computer's IP. This is probably the only necessary command unless you make other changes to Raspbian
+#Start the Moonlight stream. Make sure to replace the remote address with your own computer's IP.
+#This is probably the only necessary command unless you make other changes to Raspbian
 moonlight stream -720 -60fps -bitrate 10000 -localaudio -app RemoteDesktop 192.168.1.X
 
 #Enable screen saver blanking
