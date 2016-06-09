@@ -100,7 +100,7 @@ Reverse engineered remote codes to my Steelcase electric desk
 - University Arts Chorale & Cantate Chamber Ensemble (2012 - 2014)
 - Grand Valley Computing Club (2012 - 2013)
 - Piano (2002 - 2013)
-- Volunteered at Festival of the Arts Screen Printing (Summer, 2013 - 2015)
+- Volunteered at Festival of the Arts Screen Printing (Summer, 2013 - 2016)
 
 ---
 
