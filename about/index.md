@@ -11,7 +11,7 @@ meta: "Information about Kyle Niewiada. Learn how to pronounce my name. I enjoy 
   "@context":"http://schema.org",
   "@type":"Person",
   "email": "mailto:kyle@kyleniewiada.org",
-  "image": "{{ '/assets/img/me.gif' | prepend: site.url }}",
+  "image": "{{ '/assets/img/kyle.jpg' | prepend: site.url }}",
   "name": "Kyle Niewiada",
   "url": "https://www.kyleniewiada.org/",
   "sameAs" : [
