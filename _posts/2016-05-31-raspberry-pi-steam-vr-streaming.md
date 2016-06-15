@@ -3,7 +3,7 @@ layout: "post"
 title: "Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2"
 author: "Kyle Niewiada"
 date: "2016-05-31 16:44"
-edit: "2016-06-14 18:55"
+edit: "2016-06-15 12:43"
 comments: true
 image: /2016/05/banner2.jpg
 published: true
@@ -33,7 +33,7 @@ It was settled. I was going to install Moonlight Embedded to my Raspberry Pi 2. 
 
 ## Setting Up the Pi
 
-The first thing that I did was install the latest Raspbian Jessie release on my Raspberry Pi 2 [using NOOBS](https://www.raspberrypi.org/downloads/noobs/). <strike>I originally was using the TP-LINK TL-WDN3200 wireless adapter with my Raspberry Pi to connect on the 5 GHz network. But as I found out later, this was a problematic adapter.</strike>  I was able to get the TP-LINK TL-WDN3200 working perfectly. I needed to remove DHCPCD and use WICD to manage my wireless adapter as DHCPCD was making the aggressive roaming check every minute creating a severe lag on my wireless signal. Make sure the Raspberry Pi is connected to the Internet before continuing.
+The first thing that I did was install the latest Raspbian Jessie release on my Raspberry Pi 2 [using NOOBS](https://www.raspberrypi.org/downloads/noobs/). <strike>I originally was using the TP-LINK TL-WDN3200 wireless adapter with my Raspberry Pi to connect on the 5 GHz network. But as I found out later, this was a problematic adapter.</strike>  I was able to get the TP-LINK TL-WDN3200 working perfectly. I needed to remove DHCPCD (and the default network manager) and use WICD to manage my wireless adapter as DHCPCD appeared to make some kind of aggressive roaming check every minute creating a severe lag on my wireless signal. Make sure the Raspberry Pi is connected to the Internet before continuing.
 
 After my installation was finished, I followed the Moonlight Embedded directions found in the [documentation](https://github.com/irtimmer/moonlight-embedded/wiki/Packages)
 
