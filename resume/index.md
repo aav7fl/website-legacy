@@ -1,6 +1,7 @@
 ---
 layout: resume
 title: Résumé
+style: resume.scss
 author: "Kyle M. Niewiada"
 email: kyle@kyleniewiada.org
 updated: "May, 2016"

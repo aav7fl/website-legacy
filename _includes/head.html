@@ -27,6 +27,13 @@
         {% include critical.scss %}
       {% endcapture %}
       {{ include_to_scssify | scssify }}
+      /* additional critical stylesheet */
+      {% if page.style %}
+        {% capture include_to_scssify %}
+          {% include extra/{{page.style}} %}
+        {% endcapture %}
+        {{ include_to_scssify | scssify }}
+      {% endif %}
     </style>
 
     <!--<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->

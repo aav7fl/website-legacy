@@ -259,3 +259,16 @@ POST LIST STYLING
 			margin-bottom: 0;
 		}
 }
+
+/***************
+CONTACT PAGE STYLING
+***************/
+@media (min-width: 800px){
+	#contact {
+		form {
+			//@include span(6 of 12);
+			width: 100%;
+			float: left;
+		}
+	}
+}
