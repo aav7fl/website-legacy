@@ -4,7 +4,7 @@ title: Résumé
 style: resume.scss
 author: "Kyle M. Niewiada"
 email: kyle@kyleniewiada.org
-updated: "June, 2016"
+updated: "July, 2016"
 meta: "Kyle Niewiada's online résumé. It lists the educational background and highlights projects that are found to be interesting and worthy."
 ---
 
