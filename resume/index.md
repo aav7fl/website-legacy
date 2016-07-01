@@ -29,12 +29,12 @@ BS, Computer Science; Grand Valley State University (2012-2016)
 
 ### Experience
 
-Grandville RoboDawgs Weather Balloon Coach (May-June, 2016)
+Grandville RoboDawgs Weather Balloon Coach (May-July, 2016)
 
 - Help underclassmen RoboDawg students transition to leadership positions in the program
 - Students learn how to program in Python on Raspberry Pi units to collect data from their weather balloon launches
 
-AP Computer Science Tutor (May, 2016)
+AP Computer Science Tutor (May-June, 2016)
 
 Internship at Blue Medora, LLC (Summer, 2013; Summer, 2014)
 
