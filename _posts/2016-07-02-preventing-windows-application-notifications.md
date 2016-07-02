@@ -23,7 +23,7 @@ I wanted to keep the functionality of my uninterruptible power supply communicat
 
 # Removing the Notification
 
-This is a _very quick and dirty_ registry hack to prevent applications from relaying notifications in the system taskbar. It works by removing the control permissions for the registry key responsible in the taskbar for that notification such that the application cannot create a new notification entry. I have not noticed any problems yet, but your mileage may vary.
+This is a _very quick and dirty_ registry hack to prevent applications from relaying notifications in the system taskbar. Windows notifications are sent by writing to a parent registry key associated with an application. Each application will attempt to add notifications as a sub-key to the registered parent key. By removing my user's permission to write to the parent key, the application will be unable to add sub-keys, and silently fails when it attempts to send notifications. I have not noticed any problems yet, but your mileage may vary.
 
 In case it helps, my machine is using Windows 10 Pro 64-bit.
 
