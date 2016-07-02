@@ -15,7 +15,7 @@ A few weeks ago a Windows application on my computer was broadcasting notificati
 
 If you are familiar with Windows, then you know that there is a feature that allows you to hide notifications and icons to programs in the system tray. However, this application does not seem to respect those rules. Every time the application launches, it appears to reassociate itself and reset all settings made to keep it quiet. If I did manage to mute it, the changes would not survive a system reboot.
 
-The only times I receive my uninterruptible power supply notifications are when I am maxing out my system’s power draw (within the UPS specifications) playing games. I found this to happen quite frequently when I was playing in virtual reality and it was continually breaking my immersion by ringing out system notifications in the middle of [Vanishing Realms](http://store.steampowered.com/app/322770/).
+The notification is posted frequently, as my system's max power draw while gaming will trigger the UPS power draw warning. I found this to happen quite frequently when I was playing in virtual reality and it was continually breaking my immersion by ringing out system notifications in the middle of [Vanishing Realms](http://store.steampowered.com/app/322770/).
 
 I understand that this is to help prevent the user from unknowingly leaving their system vulnerable during an outage when the user is not there. But if I lose power while in my VR headset, I am going to know very quickly that my machine should be shut off (not to mention my entire VR world will go black).
 
