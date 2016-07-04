@@ -2,8 +2,9 @@ name: Kyle Niewiada
 author:
   name: Kyle Niewiada
   email: kyle@kyleniewiada.org
-description: My little corner of the Internet
-
+description: My little corner of the Internet where I write about projects I've figured out
+timezone: 'America/Detroit'
+locale: "en-US"
 
 paginate_path: blog/page:num/
 permalink: blog/:year/:month/:title/
