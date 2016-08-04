@@ -3,7 +3,7 @@ layout: "post"
 title: "Preventing Windows Applications from Broadcasting a Taskbar Notification"
 author: "Kyle Niewiada"
 date: "2016-07-02 12:33"
-edit: "2016-07-02 2:14"
+edit: "2016-08-04 13:47"
 comments: true
 image: /2016/07/banner.png
 published: true
@@ -12,6 +12,8 @@ meta: "Using the Windows 10 registry editor to remove or mute application notifi
 ---
 
 A few weeks ago a Windows application on my computer was broadcasting notifications that I did not care for. I have an application that communicates with my uninterruptible power supply to shut down my machine in the event of a power outage after a few minutes. If this program estimates less than five minutes of reserve power, the program will broadcast a notification in the system taskbar (with sound!) letting me know.
+
+### UPDATE: After the Windows 10 Anniversary Update, misbehaving applications no longer re-register an entry for notifications. This guide has now been made out of date as hiding Windows Notifications will now handle behavior correctly.
 
 If you are familiar with Windows, then you know that there is a feature that allows you to hide notifications and icons to programs in the system tray. However, this application does not seem to respect those rules. Every time the application launches, it appears to reassociate itself and reset all settings made to keep it quiet. If I did manage to mute it, the changes would not survive a system reboot.
 
