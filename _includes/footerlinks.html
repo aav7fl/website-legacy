@@ -26,7 +26,7 @@
 {% endif %}
 
 {% if site.data.social.bandcamp %}
-  {% capture link %}<a href="{{ site.data.social.bandcamp }}">BandCamp</a>{% endcapture %}
+  {% capture link %}<a href='{{ site.data.social.bandcamp }}' rel='nofollow'>BandCamp</a>{% endcapture %}
   {% assign footer_links = footer_links | push: link %}
 {% endif %}
 
