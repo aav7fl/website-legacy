@@ -17,7 +17,7 @@
 
 {% if site.data.social.youtube %}
   {% capture link %}<a href="https://www.youtube.com/user/{{ site.data.social.youtube }}">YouTube</a>{% endcapture %}
-  {% assign footer_links = footer_links | push: link %}
+  {% assign footer_links = footer_links | push:{{link}} %}
 {% endif %}
 
 {% if site.data.social.facebook %}
@@ -27,7 +27,7 @@
 
 {% if site.data.social.bandcamp %}
   {% capture link %}<a href='{{ site.data.social.bandcamp }}' rel='nofollow'>BandCamp</a>{% endcapture %}
-  {% assign footer_links = footer_links | push: link %}
+  {% assign footer_links = footer_links | push: {{link}} %}
 {% endif %}
 
 <span> | </span>
