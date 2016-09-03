@@ -28,7 +28,7 @@ meta: "Information about Kyle Niewiada. Learn how to pronounce my name. I enjoy 
 
 ![Kyle Niewiada](/assets/img/kyle.jpg)
 
-Hi, I'm Kyle Niewiada (/kaɪl niː-viː-ɑː-də/). Welcome to my small corner of the internet. You can rearrange the letters in "Kyle Niewiada" to say "I like a new day". In my free time, I used to write music. You can listen to it <a href ="http://music.kyleniewiada.org/" rel="nofollow">here</a>.
+Hi, I'm Kyle Niewiada (/kaɪl niː-viː-ɑː-də/). Welcome to my small corner of the internet. You can rearrange the letters in "Kyle Niewiada" to say "I like a new day". In my free time, I used to write music. You can listen to it [here](http://music.kyleniewiada.org/).
 
 Maybe you've stumbled across this page by accident; perhaps you had full intentions of visiting this page. If you have, thank you! This website is meant to be a host and central hub to my music and various projects. I write for people to enjoy what they read and hear. My hopes are that people will take away more than they came with (maybe even purchase a song or two).
 
