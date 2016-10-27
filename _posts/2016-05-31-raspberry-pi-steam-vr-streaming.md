@@ -13,6 +13,8 @@ meta: "How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedde
 
 I think virtual reality is a lot of fun. I had a friend in college demo an Oculus DK1 to me and I was pretty amazed; even though I was running it on a laptop and the display drivers turned everything into wireframe models. I remember getting my hands on my first Google Cardboard, sliding my phone in, and exploring the world through Google Earth. When the HTC Vive went on sale with its advertised room-scale, I bought it. My first real chance to become heavily immersed in a virtual world.
 
+### UPDATE (10/27/2016): After the most recent Raspbian update, I need to an external powered USB hub for my wireless adapter. This is necessary to use the 5 GHz band which requires more power. 
+
 However, my HTC Vive setup did not fit in my room. I ended up running some cables to put it in the room next door. But there was a problem. I wanted to let those around me in the VR room see what I was seeing. I had to figure out a way to mirror or broadcast my desktop to the other room.
 
 My first thought was that I was going to use my Steam Link as a way to rebroadcast desktop. After all, it's another product by Valve and its primary function is for streaming games. I thought this was going to work because it had the feature to minimize the Steam Big Picture application and use the desktop instead. But as I began to find out, this did not work with all Steam VR applications and the usability of the HTC Vive suffered.
