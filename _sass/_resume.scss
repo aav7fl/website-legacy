@@ -12,21 +12,14 @@ color: $resume-accent;
   margin-bottom: 0;
 }
 .resume p, .resume ul, .resume ol, .resume dl{
-  margin: 0 0 0rem;
   font-family: $sans-serif;
-  font-size: .9em;
+  font-size: 0.875em;
+  margin: 0 0 .5rem;
 }
 
-.location {
-  font-size: 1.1em;
-  font-weight: bold;
-  margin: 0 0 0rem;
-  padding-left: .5em;
-  font-style: $sans-serif;
-}
 .date {
-  color: gray;
-  font-size: .8em;
+  color: $subtle-color;
+  font-size: .7em;
   margin-bottom: 0;
   font-family: $sans-serif;
 }

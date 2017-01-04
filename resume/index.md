@@ -21,7 +21,7 @@ To start a career writing meaningful frontend or backend software
 
 ### Education
 
-BS, Computer Science; Grand Valley State University
+#### BS, Computer Science; Grand Valley State University
 
 <div class="date">2012 - 2016</div>
 
@@ -36,6 +36,7 @@ BS, Computer Science; Grand Valley State University
 <div class="date">Sep 2016 - Present</div>
 
 - Importing and investigating raw data from company databases
+- Searching for behavioral anomalies and trends
 - Understanding how to present data in a meaningful way
 
 #### Coach for Grandville RoboDawgs Weather Balloon Program
@@ -50,7 +51,7 @@ BS, Computer Science; Grand Valley State University
 
 <div class="date">May 2016 - Jun 2016</div>
 
-- 1 on 1 tutoring in preparation for the AP Computer Science test
+- 1 on 1 tutoring in preparation for the AP Computer Science Exam
 
 #### Intern at Blue Medora, LLC
 
@@ -70,24 +71,31 @@ BS, Computer Science; Grand Valley State University
 
 ### Technical skills
 
-Setup, created, and maintain this Jekyll website
+#### Jekyll
 
+- Setup, modify, and maintain this Jekyll website
 - [Source code](https://github.com/aav7fl/aav7fl.github.io)
 
-Experience with: SQL, Java, C, C++, HTML, CSS
+#### Experience with:
 
-Familiar with: C#, Python, Markdown, Liquid, TI-Basic
+- SQL, Java, C, C++, HTML, CSS
+
+#### Familiar with:
+
+- C#, Python, Markdown, Liquid, TI-Basic
 
 ---
 
 ### Honors
 
-#### Eagle Scout (2009)
+#### Eagle Scout
+
+<div class="date">2009</div>
 
 - Received silver, gold, and bronze palms
   - Requires an additional five merit badges (beyond the required 21 for Eagle) for each palm, and a three-month observance between each palm. This must occur before a scout's 18th birthday to be eligible.
 
-Recipient of Grand Valley Music Department Scholarship
+#### Recipient of Grand Valley Music Department Scholarship
 
 <div class="date">2012 - 2014</div>
 
@@ -95,35 +103,51 @@ Recipient of Grand Valley Music Department Scholarship
 
 ### Projects
 
-Sponsored by Microsoft under the study of Grand Valley State University to create an open source web API and ASP.NET web application connecting organizations and volunteers through gamification
+#### Created Web API and Web App
 
+- Created an open source web API and ASP.NET web application connecting organizations and volunteers through gamification
 - [Source code](https://github.com/aav7fl/GVSU-capstone-project)
 - [Blog post](/blog/2016/04/charma-gamifying-volunteer-process/)
 
-Rebuilt a Zelda Ocarina of Time save file after discovering a checksum algorithm
+#### Rebuilt Zelda Save File
 
+- Rebuilt a Zelda Ocarina of Time save file after discovering a checksum algorithm
 - Used a GameShark with a parallel port to interface with the N64 cartridge, dump the ram, and recalculate the checksum
 - [Open source checksum calculator](https://github.com/Vi1i/OcarinaChecksumChecker)
 - [Blog post](/blog/2015/04/transferring-n64-saves/)
 
-Restored a vintage amplifier using 3D printing
+#### Restoration with 3D Printing
 
-- An old piece for my 1970s amplifier broke and I used 3-D printing to complement my restoration project
+- Restored a vintage amplifier using 3D printing
+- An old piece for my 1970s amplifier broke and I used 3D printing to complement my restoration project
 - [Blog post](/blog/2013/09/restoring-vintage-with-3d-printing/)
 
-Reverse engineered remote codes to my Steelcase electric desk
 
-- Discovered and documented the remote codes I was able to find and their explanations to each setting
+#### Reverse Engineered my Desk Remote
+
+- Reverse engineered remote codes to my Steelcase electric desk
+- Discovered and documented the remote codes with explanations to each setting
 - [Blog post](/blog/2015/08/reverse-engineering-my-steelcase-desk/)
 
 ---
 
 ### Activities
 
-- University Arts Chorale & Cantate Chamber Ensemble (2012 - 2014)
-- Grand Valley Computing Club (2012 - 2013)
-- Piano (2002 - 2013)
-- Volunteered at Festival of the Arts Screen Printing (Summer, 2013 - 2016)
+#### University Arts Chorale & Cantate Chamber Ensemble
+
+<div class="date">2012 - 2014</div>
+
+#### Grand Valley Computing Club
+
+<div class="date">2012 - 2013</div>
+
+#### Piano
+
+<div class="date">2002 - 2013</div>
+
+#### Volunteer at Festival of the Arts Screen Printing
+
+<div class="date">Summer 2013 - Summer 2016</div>
 
 ---
 
