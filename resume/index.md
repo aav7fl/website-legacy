@@ -10,7 +10,7 @@ meta: "Kyle Niewiada's online résumé. It lists the educational background and 
 
 # {{page.author}}
 
-#### [{{ page.email }}](mailto:{{ page.email }})
+##### [{{ page.email }}](mailto:{{ page.email }})
 
 
 ### Objective
@@ -21,7 +21,9 @@ To start a career writing meaningful frontend or backend software
 
 ### Education
 
-BS, Computer Science; Grand Valley State University (2012-2016)
+BS, Computer Science; Grand Valley State University
+
+<div class="date">2012 - 2016</div>
 
 - GPA: 3.503
 
@@ -29,25 +31,36 @@ BS, Computer Science; Grand Valley State University (2012-2016)
 
 ### Experience
 
-<span class="meta-left">Consultant at Hepfer & Associates</span> <span class="meta-right">(September 2016-Present)</span>
+#### Consultant at Hepfer & Associates
+
+<div class="date">Sep 2016 - Present</div>
 
 - Importing and investigating raw data from company databases
 - Understanding how to present data in a meaningful way
 
-Coach for Grandville RoboDawgs Weather Balloon Program (May-July, 2016)
+#### Coach for Grandville RoboDawgs Weather Balloon Program
+
+<div class="date">May 2016 - Jul 2016</div>
+
 
 - Help underclassmen RoboDawg students transition to leadership positions in the robotics program
 - Students learn how to program in Python on Raspberry Pi units to collect data from their weather balloon launches
 
-AP Computer Science Tutor (May-June, 2016)
+#### AP Computer Science Tutor
+
+<div class="date">May 2016 - Jun 2016</div>
 
 - 1 on 1 tutoring in preparation for the AP Computer Science test
 
-Intern at Blue Medora, LLC (Summer, 2013; Summer, 2014)
+#### Intern at Blue Medora, LLC
+
+<div class="date">Summer 2013; Summer 2014</div>
 
 - Develop Oracle Enterprise Manager plugins
 
-Supervisor for RoboDawgs community camps (Summer, 2012)
+#### Supervisor for RoboDawgs community camps
+
+<div class="date">Summer 2012</div>
 
 - Instruct up to 40 campers during the busiest week
 - Delegate jobs between nine employees
@@ -57,7 +70,7 @@ Supervisor for RoboDawgs community camps (Summer, 2012)
 
 ### Technical skills
 
-Setup, created, and maintained this Jekyll website
+Setup, created, and maintain this Jekyll website
 
 - [Source code](https://github.com/aav7fl/aav7fl.github.io)
 
@@ -69,12 +82,14 @@ Familiar with: C#, Python, Markdown, Liquid, TI-Basic
 
 ### Honors
 
-Eagle Scout (2009)
+#### Eagle Scout (2009)
 
 - Received silver, gold, and bronze palms
   - Requires an additional five merit badges (beyond the required 21 for Eagle) for each palm, and a three-month observance between each palm. This must occur before a scout's 18th birthday to be eligible.
 
-Recipient of Grand Valley Music Department Scholarship (2012 - 2014)
+Recipient of Grand Valley Music Department Scholarship
+
+<div class="date">2012 - 2014</div>
 
 ---
 
