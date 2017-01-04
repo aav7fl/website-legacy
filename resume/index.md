@@ -4,7 +4,7 @@ title: Résumé
 style: resume.scss
 author: "Kyle M. Niewiada"
 email: kyle@kyleniewiada.org
-updated: "July, 2016"
+updated: "January, 2017"
 meta: "Kyle Niewiada's online résumé. It lists the educational background and highlights projects that are found to be interesting and worthy."
 ---
 
@@ -15,7 +15,7 @@ meta: "Kyle Niewiada's online résumé. It lists the educational background and 
 
 ### Objective
 
-To start my career as a software engineer
+To start a career writing meaningful frontend or backend software
 
 ---
 
@@ -29,22 +29,29 @@ BS, Computer Science; Grand Valley State University (2012-2016)
 
 ### Experience
 
-Grandville RoboDawgs Weather Balloon Coach (May-July, 2016)
+<span class="meta-left">Consultant at Hepfer & Associates</span> <span class="meta-right">(September 2016-Present)</span>
 
-- Help underclassmen RoboDawg students transition to leadership positions in the program
+- Importing and investigating raw data from company databases
+- Understanding how to present data in a meaningful way
+
+Coach for Grandville RoboDawgs Weather Balloon Program (May-July, 2016)
+
+- Help underclassmen RoboDawg students transition to leadership positions in the robotics program
 - Students learn how to program in Python on Raspberry Pi units to collect data from their weather balloon launches
 
 AP Computer Science Tutor (May-June, 2016)
 
-Internship at Blue Medora, LLC (Summer, 2013; Summer, 2014)
+- 1 on 1 tutoring in preparation for the AP Computer Science test
+
+Intern at Blue Medora, LLC (Summer, 2013; Summer, 2014)
 
 - Develop Oracle Enterprise Manager plugins
 
 Supervisor for RoboDawgs community camps (Summer, 2012)
 
+- Instruct up to 40 campers during the busiest week
 - Delegate jobs between nine employees
-- Tasked with new building renovations/repairs
-- Up to 40 campers during the busiest week
+- Conduct new building renovations/repairs
 
 ---
 
@@ -54,9 +61,9 @@ Setup, created, and maintained this Jekyll website
 
 - [Source code](https://github.com/aav7fl/aav7fl.github.io)
 
-Experience with: Java, C, C++, HTML, CSS
+Experience with: SQL, Java, C, C++, HTML, CSS
 
-Familiar with: C#, SQL, Python, Markdown, Liquid, TI-Basic
+Familiar with: C#, Python, Markdown, Liquid, TI-Basic
 
 ---
 
