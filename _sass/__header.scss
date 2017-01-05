@@ -1,15 +1,30 @@
 /***************
 HEADER STYLING
 ***************/
+
+//Edge, IE10+
+@supports (-ms-accelerator:true) or (-ms-high-contrast: none) or (-ms-high-contrast: active){
+	.header {
+		background-image: url('/assets/img/banner.jpg');
+	}
+}
+
+//NOT Edge, NOT IE10+
+@supports not (-ms-accelerator:true) and not((-ms-high-contrast: none) or (-ms-high-contrast: active)){
+	.header {
+		background-image: url('/assets/img/banner.svg');
+	}
+}
+
 .header {
 	background-color: #3a3a3c;
-	background-image: url('/assets/img/banner.svg');
 	background-size: cover;
 	background-position: center center;
 	color: #3a3a3c;
 	padding: 0;
 	height: 3em;
 }
+
 
 // Navigation Variables
 $content-width: 1000px;
