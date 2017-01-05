@@ -3,15 +3,13 @@ HEADER STYLING
 ***************/
 
 //Edge, IE10+
-@supports (-ms-accelerator:true){
-	.header {
+@supports (-ms-ime-align:auto) {.header {
 		background-image: url('/assets/img/banner.jpg');
 	}
 }
 
 //NOT Edge, NOT IE10+
-@supports not(-ms-accelerator:true){
-	.header {
+@supports (not (-ms-ime-align:auto)) {.header {
 		background-image: url('/assets/img/banner.svg');
 	}
 }
