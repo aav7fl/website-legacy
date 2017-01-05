@@ -31,7 +31,7 @@ To start a career writing meaningful frontend or backend software
 
 ### Experience
 
-#### Consultant at Hepfer & Associates
+#### Consultant at Hepfer & Associates, PLLC
 
 <div class="date">Sep 2016 - Present</div>
 
