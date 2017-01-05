@@ -2,10 +2,15 @@
 HEADER STYLING
 ***************/
 
-//Edge, IE10+
+//Edge
 @supports (-ms-ime-align:auto) {.header {
 		background-image: url('/assets/img/banner.jpg');
 	}
+}
+
+//IE10-11
+_:-ms-lang(x),.header {
+		background-image: url('/assets/img/banner.jpg');
 }
 
 //NOT Edge, NOT IE10+
@@ -13,6 +18,8 @@ HEADER STYLING
 		background-image: url('/assets/img/banner.svg');
 	}
 }
+
+
 
 .header {
 	background-color: #3a3a3c;
