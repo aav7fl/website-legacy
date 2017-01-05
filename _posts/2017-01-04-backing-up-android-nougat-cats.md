@@ -13,7 +13,7 @@ meta: "How to back up and restore your cats from the Google Android Nougat Neko 
 
 Every major release of Android in the past couple years has received Google's Easter Egg treatment. They like to sneak in wallpapers, silly animations, or a fun little game. With the release of Android Nougat (7.0.0), the Easter Egg ended up resembling some kind of [Neko Atsume](https://en.wikipedia.org/wiki/Neko_Atsume) themed game.
 
-The concept is quite simple. Once on Android 7.X.X, after [adding the Easter Egg](http://www.howtogeek.com/269207/how-to-enable-android-nougats-cat-collecting-easter-egg/), the player pulls down their notification menu and selects a piece of food to place out. Certain pieces of food net the player a better chance at catching a cat, but these pieces of food respectively take longer before a cat will eat it. After a cat eats the piece of food, the player will be given a chance of catching it depending on what piece of food was placed out. If they succeed the check, the player will receive a notification and the cat will appear in their inventory. If they fail, the cat will get away with the food and the player will only find an empty bowl with no notification.
+The concept is quite simple. Once on Android 7.X.X, after [adding the Easter Egg](http://www.howtogeek.com/269207/how-to-enable-android-nougats-cat-collecting-easter-egg/), the player pulls down their notification menu and selects a piece of food to place out. Certain pieces of food net the player a better chance at catching a cat, but these pieces of food respectively take longer before a cat will eat it. After a cat eats the piece of food, the player will be given a chance of catching it depending on what piece of food was placed out. If they succeed the random check, the player will receive a notification and the cat will appear in their inventory. If they fail, the cat will get away with the food and the player will only find an empty bowl with no notification.
 
 ![Dark blue cat from Android Nougat Easter Egg](/assets/img/2017/01/bluecat.png)*Jack's Mannequin. Because he's [Dark Blue](https://www.youtube.com/watch?v=P5LjFkibA7w)...*
 
@@ -34,7 +34,7 @@ I threw on USB debugging, connected my phone to the computer, and wrote the foll
 adb backup -f C:\CatsBackup_%date:~-4,4%%date:~-10,2%%date:~-7,2%.ab com.android.egg -system
 ```
 
-When the command above is run in Windows Command Prompt, a few screens will appears on the phone to confirm the backup and possibly enter a password to encrypt it. ADB will create a small file with today's date on my C: drive named `CatsBackup_20170104.ab` (January 04, 2017) and it will contain the backup data for my cats. If you're not using Windows Command Prompt, go ahead and change the file name to whatever you'd like. I just wanted to make it scriptable for myself.
+When the command above is run in Windows Command Prompt, a few screens will appear on the phone to confirm the backup and possibly enter a password to encrypt it. ADB will create a small file with today's date on my C: drive named `CatsBackup_20170104.ab` (January 04, 2017) and it will contain the backup data for my cats. If you're not using Windows Command Prompt, go ahead and change the file name to whatever you'd like. I just wanted to make it scriptable for myself.
 
 To restore, simply run:
 
