@@ -35,17 +35,17 @@ To start a career writing meaningful frontend or backend software
 
 <div class="date">Sep 2016 - Present</div>
 
-- Importing and investigating raw data from company databases
-- Searching for behavioral anomalies and trends
-- Understanding how to present data in a meaningful way
+- Import and investigate raw data from company databases
+- Search for behavioral anomalies and trends
+- Present data in a meaningful way
 
 #### Coach for Grandville RoboDawgs Weather Balloon Program
 
 <div class="date">May 2016 - Jul 2016</div>
 
 
-- Help underclassmen RoboDawg students transition to leadership positions in the robotics program
-- Students learn how to program in Python on Raspberry Pi units to collect data from their weather balloon launches
+- Assisted underclassmen RoboDawg students transitioning to leadership positions in the robotics program
+- Directed students to program Python on Raspberry Pi units and collect data from their weather balloon launches
 
 #### AP Computer Science Tutor
 
@@ -57,15 +57,15 @@ To start a career writing meaningful frontend or backend software
 
 <div class="date">Summer 2013; Summer 2014</div>
 
-- Develop Oracle Enterprise Manager plugins
+- Developed Oracle Enterprise Manager plugins
 
 #### Supervisor for RoboDawgs community camps
 
 <div class="date">Summer 2012</div>
 
-- Instruct up to 40 campers during the busiest week
-- Delegate jobs between nine employees
-- Conduct new building renovations/repairs
+- Instructed up to 40 campers during the busiest week
+- Delegated jobs between nine employees
+- Conducted new building renovations/repairs
 
 ---
 
@@ -111,7 +111,7 @@ To start a career writing meaningful frontend or backend software
 
 #### Rebuilt Zelda Save File
 
-- Rebuilt a Zelda Ocarina of Time save file after discovering a checksum algorithm
+- Rebuilt a Zelda Ocarina of Time save file after discovering the checksum algorithm
 - Used a GameShark with a parallel port to interface with the N64 cartridge, dump the ram, and recalculate the checksum
 - [Open source checksum calculator](https://github.com/Vi1i/OcarinaChecksumChecker)
 - [Blog post](/blog/2015/04/transferring-n64-saves/)
