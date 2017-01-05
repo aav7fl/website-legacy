@@ -3,14 +3,14 @@ HEADER STYLING
 ***************/
 
 //Edge, IE10+
-@supports (-ms-accelerator:true) or (-ms-high-contrast: none) or (-ms-high-contrast: active){
+@supports (-ms-accelerator:true){
 	.header {
 		background-image: url('/assets/img/banner.jpg');
 	}
 }
 
 //NOT Edge, NOT IE10+
-@supports not (-ms-accelerator:true) and not((-ms-high-contrast: none) or (-ms-high-contrast: active)){
+@supports not(-ms-accelerator:true){
 	.header {
 		background-image: url('/assets/img/banner.svg');
 	}
