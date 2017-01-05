@@ -4,10 +4,6 @@ HEADER STYLING
 .header {
 	background-color: #3a3a3c;
 	background-image: url('/assets/img/banner.svg');
-	@supports (-ms-accelerator:true) {
-		background-image: url('/assets/img/banner.jpg');
-	}
-	
 	background-size: cover;
 	background-position: center center;
 	color: #3a3a3c;
