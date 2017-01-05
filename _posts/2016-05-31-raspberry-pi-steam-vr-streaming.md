@@ -13,7 +13,7 @@ meta: "How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedde
 
 I think virtual reality is a lot of fun. I had a friend in college demo an Oculus DK1 to me and I was pretty amazed; even though I was running it on a laptop and the display drivers turned everything into wireframe models. I remember getting my hands on my first Google Cardboard, sliding my phone in, and exploring the world through Google Earth. When the HTC Vive went on sale with its advertised room-scale, I bought it. My first real chance to become heavily immersed in a virtual world.
 
-#### UPDATE (10/27/2016): After the most recent Raspbian update, I need to use an external powered USB hub for my wireless adapter. This is necessary to use the 5 GHz band which requires more power. 
+#### UPDATE (10/27/2016): After the most recent Raspbian update, I need to use an external powered USB hub for my wireless adapter. This is necessary to use the 5 GHz band which requires more power.
 
 However, my HTC Vive setup did not fit in my room. I ended up running some cables to put it in the room next door. But there was a problem. I wanted to let those around me in the VR room see what I was seeing. I had to figure out a way to mirror or broadcast my desktop to the other room.
 
@@ -41,16 +41,19 @@ After my installation was finished, I followed the Moonlight Embedded directions
 
 Adding the line:
 
-` deb http://archive.itimmer.nl/raspbian/moonlight jessie main `
+```shell
+deb http://archive.itimmer.nl/raspbian/moonlight jessie main
+```
 
 to this file:
 
-` /etc/apt/sources.list `
-
+```shell  
+/etc/apt/sources.list
+```
 
 And running the following to install Moonlight Embedded.
 
-```
+```shell
 apt-get update
 apt-get install moonlight-embedded
 ```
@@ -65,7 +68,7 @@ The application below is Windows' built-in remote desktop software. It is what I
 
 ![Adding remote desktop as Nvidia GameStream custom game](/assets/img/2016/05/GFEWindow.png)*Adding remote desktop as a Nvidia GameStream custom game*
 
-```
+```text
 Name: RemoteDesktop
 Target: "C:\Windows\System32\mstsc.exe"
 Start in: C:\Windows\System32
@@ -77,7 +80,7 @@ To finish the setup, Raspberry Pi needs to be paired as a GameStream client to y
 
 To initiate pairing, type the following on your Raspberry Pi terminal:
 
-```
+```shell
 moonlight pair 192.168.1.X
 ```
 
@@ -90,7 +93,7 @@ I created a handy streaming script for my own needs to start streaming on the Ra
 
 Check out the rest of the [documentation arguments](https://github.com/irtimmer/moonlight-embedded/tree/master/docs). Your settings will probably differ.
 
-```
+```shell
 #!/bin/bash
 
 #Disable screen saver blanking.
@@ -112,6 +115,7 @@ xset s on
 #Enable Energy Star features.
 xset +dpms
 ```
+
 
 *Don't forget! Ctrl+Alt+Shift+Q quits the streaming session.*
 

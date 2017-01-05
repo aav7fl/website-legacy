@@ -49,7 +49,9 @@ Here is how I did it.
 
 Star Wars, Mario Party, and Super Mario 64 use EEPROM to store their game save. This made my project easy. I followed a known method by using a DexDrive. The first thing that I did was dump each game using the GameShark’s parallel port with the open source software [N64RD](https://github.com/parasyte/n64rd) using the command below. (Others have tried using GameShark's software, but it has been problematic. Using N64RD seems to be the way to go). This program allowed me to back up each of my games for later use in my project. It also allowed me to dump my ram, but that is coming later. I used [this wiki](http://doc.kodewerx.org/hacking_n64.html) to know what addresses and offsets for the RAM and ROM space I needed.
 
-`$ ./n64rd -dgame.z64 -a 0xB0000000 -l 0x02000000`
+```shell
+$ ./n64rd -dgame.z64 -a 0xB0000000 -l 0x02000000
+```
 
 ### Transferring Saves
 
@@ -73,7 +75,9 @@ This led me to conclude that sram2mpk.bin was unlikely to work for my game. I th
 
 The documentation on the Zelda save file wiki claimed that save files were built by copying over a certain block of memory. After reading through this, I went back to my GameShark and dumped the entire contents of its RAM (using N64RD) while in game using the command below with N64RD.
 
-`$ ./n64rd -dmemory.z64 -a 0x80000000 -l 0x00800000`
+```shell
+$ ./n64rd -dmemory.z64 -a 0x80000000 -l 0x00800000
+```
 
 After opening up the RAM dump with my hex editor, I followed up to the address 0x0011A790 (or 0x8011A790 inside my GameShark memory) and copied 0x1450 bytes (the size of the game save file).
 
@@ -83,9 +87,11 @@ Once I had my save file, I converted it from N64 native to something that an emu
 
 I used [uCON64](http://ucon64.sourceforge.net/#ucon64) to do just that and convert Big Endian->Little Endian (or vise versa) with this command:
 
-`ucon64 --n64 --nint --dint --swap2 save.sra`
-
+```shell
+ucon64 --n64 --nint --dint --swap2 save.sra
 ```
+
+```text
 --n64         force recognition
 --nint        force ROM is not in interleaved format (1234, Z64)
 --dint        convert ROM to (non-)interleaved format (1234 <-> 2143)

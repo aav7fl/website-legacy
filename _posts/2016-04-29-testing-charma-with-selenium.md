@@ -26,19 +26,19 @@ To make Selenium WebDriver testing work for our project, we had to make sure tha
 
 To add another web browser or web driver, it is as easy as initializing the web driver for that browser, adding that driver to a global list accessible by the testing suites, starting that web driver, and then stopping it when it is complete.
 
-```
+```C#
 #if DEBUG
 ```
 
 Before our Selenium WebDriver can begin testing our website, we have to initialize the Internet Information Services (IIS) to locally deploy your website after build. Before I figured out how to do this, I manually ran an instance of our web app in the background and then ran the tests. But now the startup of our selenium tests are independent of a manual website launch. Once the Internet Information Service has been initialized, we are ready to begin testing.
 
-```
+```C#
 #else
 ```
 
 When testing in release mode, we will redirect all of our tests to our production webpage hosted on Azure services.
 
-```
+```C#
 #endif
 ```
 

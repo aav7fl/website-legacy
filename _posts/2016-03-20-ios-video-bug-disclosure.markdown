@@ -76,7 +76,9 @@ An example of this bug occurring on a human face is in [this YouTube video]( htt
 
 Across the web [\[1\]](https://www.reddit.com/r/ipad/comments/2w84cw/) [\[2\]](https://discussions.apple.com/thread/4581841) [\[3\]]( https://discussions.apple.com/thread/3822777), there exist somewhat related bugs with iOS video playback and reproduction. Although I can't say that these issues are directly related, the solution for most of these is to turn on AssistiveTouch.
 
-`General>Accessibility>AssistiveTouch>On`
+```text
+General>Accessibility>AssistiveTouch>On
+```
 
 AssistiveTouch (among other things) places a virtual shortcuts/home button on top of every screen on your device. When this occurs, the iOS device considers this a piece of the user interface (why shouldn't it be?). Because of this behavior, when trying to replicate the bug behavior with the video player, it will not occur because the AssistiveTouch is visible on screen.
 
