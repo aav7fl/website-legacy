@@ -1,50 +1,16 @@
-const child = require('child_process');
-const browserSync = require('browser-sync').create();
+//https://nvbn.github.io/2015/06/19/jekyll-browsersync/
+var gulp = require('gulp');
+var shell = require('gulp-shell');
+var browserSync = require('browser-sync').create();
 
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const gutil = require('gulp-util');
-const sass = require('gulp-sass');
-var download = require('gulp-download');
+// Task for building blog when something changed:
+gulp.task('build', shell.task(['bundle exec jekyll build --watch']));
 
-const siteRoot = '_site';
-const cssFiles = '_sass/*.?(s)css';
-//const cssFiles = '_site/assets/css/*.?(s)css';
-
-gulp.task('css', () => {
-  gulp.src(cssFiles)
-    .pipe(sass())
-    .pipe(concat('all.css'))
-    .pipe(gulp.dest('assets'));
+// Task for serving blog with Browsersync
+gulp.task('serve', function () {
+    browserSync.init({server: {baseDir: '_site/'}});
+    // Reloads page when some of the already built files changed:
+    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('jekyll', () => {
-  const jekyll = child.spawn('jekyll', ['build',
-    '--watch',
-    //'--incremental',
-    '--drafts'
-  ]);
-
-  const jekyllLogger = (buffer) => {
-    buffer.toString()
-      .split(/\n/)
-      .forEach((message) => gutil.log('Jekyll: ' + message));
-  };
-
-  jekyll.stdout.on('data', jekyllLogger);
-  jekyll.stderr.on('data', jekyllLogger);
-});
-
-gulp.task('serve', () => {
-  browserSync.init({
-    files: [siteRoot + '/**'],
-    port: 4000,
-    server: {
-      baseDir: siteRoot
-    }
-  });
-
-  gulp.watch(cssFiles, ['css']);
-});
-
-gulp.task('default', ['css', 'jekyll', 'serve']);
+gulp.task('default', ['build', 'serve']);

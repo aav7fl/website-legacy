@@ -16,15 +16,6 @@
     "url": "https://github.com/aav7fl/aav7fl.github.io/issues"
   },
   "homepage": "https://github.com/aav7fl/aav7fl.github.io#readme",
-  "devDependencies": {
-    "browser-sync": "^2.12.3",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.3.1",
-    "gulp-shell": "^0.5.2",
-    "gulp-util": "^3.0.7",
-    "lodash": "^4.11.1"
-  },
   "dependencies": {
     "lodash": "^4.11.1",
     "gulp": "^3.9.1",
