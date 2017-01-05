@@ -2,24 +2,20 @@
 HEADER STYLING
 ***************/
 
-//Edge
-@supports (-ms-ime-align:auto) {.header {
-		background-image: url('/assets/img/banner.jpg');
-	}
-}
 
-//IE10-11
+//Gave up with SVG and Edge. It won't handle "background-size: cover;" when using the SVG feGaussianBlur. Instead, it caps the SVG width after a certain threshold.
+
+//http://browserstrangeness.bitbucket.org/css_hacks.html
+//IE10-11, Edge
 _:-ms-lang(x),.header {
 		background-image: url('/assets/img/banner.jpg');
 }
 
-//NOT Edge, NOT IE10+
+//Any modern, non-microsoft browser.
 @supports (not (-ms-ime-align:auto)) {.header {
 		background-image: url('/assets/img/banner.svg');
 	}
 }
-
-
 
 .header {
 	background-color: #3a3a3c;
@@ -29,7 +25,6 @@ _:-ms-lang(x),.header {
 	padding: 0;
 	height: 3em;
 }
-
 
 // Navigation Variables
 $content-width: 1000px;
