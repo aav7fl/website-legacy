@@ -8,16 +8,11 @@ HEADER STYLING
 //http://browserstrangeness.bitbucket.org/css_hacks.html
 //IE10-11, Edge
 _:-ms-lang(x),.header {
-		background-image: url('/assets/img/banner.jpg');
-}
-
-//Any modern, non-microsoft browser.
-@supports (not (-ms-ime-align:auto)) {.header {
-		background-image: url('/assets/img/banner.svg');
-	}
+		background-image: url('/assets/img/banner.jpg') !important;
 }
 
 .header {
+	background-image: url('/assets/img/banner.svg');
 	background-color: #3a3a3c;
 	background-size: cover;
 	background-position: center center;
