@@ -5,7 +5,7 @@ author: "Kyle Niewiada"
 date: "2017-01-04 5:37"
 edit: "2017-01-04 5:37"
 comments: true
-image: /2017/01/banner.png
+image: /2017/01/banner.jpg
 published: true
 tag: "small project"
 meta: "How to back up and restore your cats from the Google Android Nougat Neko Easter Egg without root using ADB."
