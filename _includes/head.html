@@ -63,6 +63,22 @@
 
     {% endif %}
 
+    {% if page.layout == 'default' %}
+
+    <!--Begin head metadata info-->
+
+    <meta property="fb:app_id" content="137961485759" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:description" content="{{ page.meta }}" />
+    {% if page.image %}
+    <meta property="og:image" content="{{ '/assets/img' | prepend: site.url | append: page.image }}" />
+    {% endif %}
+
+    {% endif %}
+
     <!--End head metadata info-->
 
     {% if site.data.analytics.google_analytics %} {% include google_analytics.html %} {% endif %}
