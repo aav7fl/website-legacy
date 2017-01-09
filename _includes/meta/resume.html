@@ -1,0 +1,18 @@
+    <meta property="fb:app_id" content="{{ site.data.analytics.facebookAppID }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:description" content="{{ page.meta }}" />
+    {% if page.image %}
+    <meta property="og:image" content="{{ '/assets/img' | prepend: site.url | append: page.image }}" />
+    {% endif %}
+
+
+    <script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "description":"{{ page.meta }}",
+      "@type":"Blog"
+    }
+    </script>

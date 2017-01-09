@@ -13,7 +13,7 @@
   "@context":"http://schema.org",
   "@type":"Person",
   "email": "mailto:kyle@kyleniewiada.org",
-  "image": "{{ '/assets/img/kyle.jpg' | prepend: site.url }}",
+  "image": "{{ '/assets/img' | prepend: site.url | append: page.image }}",
   "name": "Kyle Niewiada",
   "url": "https://www.kyleniewiada.org/",
   "sameAs" : [

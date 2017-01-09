@@ -44,12 +44,16 @@
       {% include /meta/post.html %}
     {% endif %}
 
-    {% if page.layout == 'default' %}
+    {% if page.layout == 'default'%}
       {% include /meta/default.html %}
     {% endif %}
 
     {% if page.layout == 'person' %}
       {% include /meta/person.html %}
+    {% endif %}
+
+    {% if page.layout == 'resume'%}
+      {% include /meta/resume.html %}
     {% endif %}
     <!--End head metadata info-->
 
