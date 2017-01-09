@@ -1,30 +1,11 @@
 ---
-layout: default
+layout: person
 title: About Me
-date:   2013-04-13
+date: 2013-04-13
 edit: 2016-04-29
 meta: "Information about Kyle Niewiada. Learn how to pronounce my name. I enjoy programming. Difficult projects are fun. I share what I learn through open source."
+image: /kyle.jpg
 ---
-
-<script type="application/ld+json">
-{
-  "@context":"http://schema.org",
-  "@type":"Person",
-  "email": "mailto:kyle@kyleniewiada.org",
-  "image": "{{ '/assets/img/kyle.jpg' | prepend: site.url }}",
-  "name": "Kyle Niewiada",
-  "url": "https://www.kyleniewiada.org/",
-  "sameAs" : [
-  "https://www.facebook.com/KyleNiewiada",
-  "https://twitter.com/CrypticCitrus",
-  "https://www.youtube.com/KyleNiewiada",
-  "https://plus.google.com/u/0/+KyleNiewiada",
-  "https://kyleniewiada.bandcamp.com",
-  "https://github.com/aav7fl/",
-  "https://www.linkedin.com/in/kyleniewiada"
-  ]
-}
-</script>
 
 ![Kyle Niewiada](/assets/img/kyle.jpg)
 

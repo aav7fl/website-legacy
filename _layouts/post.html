@@ -2,42 +2,7 @@
 layout: default
 ---
 
-<!--Begin metadata info-->
 
-<script type="application/ld+json">
-{
-  "@context":"http://schema.org",
-  "description":"{{ page.meta }}",
-  "@type":"BlogPosting",
-  "headline":"{{ page.title }}",
-  "datePublished":"{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{% if page.edit %}{{ page.edit | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
-  "author": "{{page.author}}",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Kyle Niewiada",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ '/assets/img/logo.jpg' | prepend: site.url }}",
-      "height": 60,
-      "width": 227
-    }
-  },
-  "image": {
-    "@type": "ImageObject",
-    "url": "{{ '/assets/img' | prepend: site.url | append: page.image }}",
-    "height": 470,
-    "width": 800
-  },
-  "mainEntityOfPage": {
-     "@type": "WebPage",
-     "@id": "{{ site.url }}{{ page.url }}"
-  }
-
-}
-</script>
-
-<!--End metadata info-->
 
 <div class="post">
   {% if page.image %}
