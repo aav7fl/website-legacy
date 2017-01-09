@@ -12,6 +12,11 @@ meta: "Kyle Niewiada's personal website where he blogs and explains his projects
 }
 </script>
 
+<meta property=og:title content="{{ page.title }}">
+<meta property=og:description content="{{ page.meta }}">
+<meta property=og:url content="{{ site.url }}{{ page.url }}">
+<meta property=og:image content="{{ '/assets/img/preview.png' | prepend: site.url }}">
+
 
 <div class="home" id="home">
   <ul class="posts noList">
