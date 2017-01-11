@@ -21,9 +21,15 @@ sass:
   style: compressed
 
 exclude:
-  - package.json
   - node_modules
   - gulpfile.js
+  - CNAME
+  - config.rb
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - README.md
+
 gems:
   - jekyll-sitemap
   - jekyll-paginate
