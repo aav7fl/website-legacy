@@ -5,6 +5,7 @@ style: coalate.scss
 meta: "Kyle Niewiada's blog post archive. Posts and projects are listed into categories based on the magnitude of each project or by personal updates"
 image: /preview.png
 regenerate: true
+permalink: /archive/
 ---
 
 {% include coalateposts.html %}

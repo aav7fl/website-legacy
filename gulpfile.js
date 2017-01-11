@@ -5,7 +5,7 @@ var browserSync = require('browser-sync').create();
 
 // Task for building blog when something changed:
 gulp.task('build', shell.task(['bundle exec jekyll build --watch --incremental --verbose']));
-
+//--incremental --verbose
 // Task for serving blog with Browsersync
 gulp.task('serve', function () {
     browserSync.init({
@@ -15,7 +15,7 @@ gulp.task('serve', function () {
     // Reloads page when some of the already built files changed:
     //Because I'm not using incremental, I can have it watch a single file.
     //This prevents a plethora of reloads being sent.
-    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
+    gulp.watch('_site/index.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['build', 'serve']);
