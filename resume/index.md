@@ -7,6 +7,7 @@ email: kyle@kyleniewiada.org
 updated: "January, 2017"
 meta: "Kyle Niewiada's online résumé. This lists his educational background, career, and highlights projects from his blog."
 image: /kyle.jpg
+regenerate: true
 ---
 
 # {{page.author}}
