@@ -21,7 +21,7 @@ From the root directory of the repository:
 4. Install Node.js (with NPM)
 
   `https://nodejs.org/en/download/package-manager/`
-  
+
   In my case for Linux Mint
   ```
   curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
@@ -39,6 +39,13 @@ From the root directory of the repository:
 6. Launch Jekyll Server/Browser-Sync/Website
 
   `gulp`
+
+If you need to update any NPM dependencies ([source](http://stackoverflow.com/a/22849716/1813592)):
+```
+npm i -g npm-check-updates
+npm-check-updates -u
+npm install
+```
 
 This website is loosely inspired from (and originally based on) [Long-Haul](https://github.com/brianmaierjr/long-haul). I continue to make changes as I see fit.
 
