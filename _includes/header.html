@@ -1,4 +1,4 @@
-
+<!-- start header -->
 <div class="header">
   <div class="navigation">
     <div class="nav-container">
@@ -11,7 +11,7 @@
           </div>
           <ul class="nav-list">
             {% for menuitem in site.data.navigation %}
-                {% if menuitem.url == page.dir %}
+                {% if menuitem.url == page.url %}
                     {% assign class = "active" %}
                 {% else %}
                     {% assign class = "normal" %}
@@ -22,4 +22,4 @@
         </nav>
       </div>
   </div>
-</div><!-- end .header -->
+</div><!-- end header -->
