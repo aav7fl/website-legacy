@@ -18,7 +18,7 @@
     <!-- Critical Stylesheet -->
     <style type="text/css">
       {% capture include_to_scssify %}
-        {% include critical.scss %}
+        {% include child/critical.scss %}
       {% endcapture %}
       {{ include_to_scssify | scssify }}
       {% if page.style %}
@@ -31,5 +31,5 @@
 
     {% seo %}
 
-    {% if site.data.analytics.google_analytics %} {% include google_analytics.html %} {% endif %}
+    {% if site.data.analytics.google_analytics %} {% include child/google_analytics.html %} {% endif %}
 </head>
