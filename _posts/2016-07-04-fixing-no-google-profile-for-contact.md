@@ -1,11 +1,9 @@
 ---
-layout: "post"
 title: "Fixing 'No Google Profile for Contact'"
-author: "Kyle Niewiada"
 date: "2016-07-04 11:26"
 updated: "2016-07-04 11:26"
 comments: true
-image: /2016/07/banner2.jpg
+image: /assets/img/2016/07/banner2.jpg
 published: true
 tag: "small project"
 meta: "How I fixed the Google now 'No Google profile for Contact' message with my account. This occurred because of conflicting Google+ profiles."

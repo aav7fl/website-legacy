@@ -2,8 +2,9 @@
 layout: default
 title: Contact Me
 style: contact.scss
-meta: "Contact Kyle Niewiada. Use the entry form to send a message to Kyle."
-image: /kyle.jpg
+description: "Contact Kyle Niewiada. Use the entry form to send a message to Kyle."
+seo:
+  type: ContactPage
 regenerate: true
 permalink: /contact/
 ---

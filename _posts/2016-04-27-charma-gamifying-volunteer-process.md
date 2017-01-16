@@ -1,10 +1,8 @@
 ---
-layout: post
 title: 'Charma - Gamifying the Volunteer Process'
-author: Kyle Niewiada
 date: '2016-04-27 11:58'
 comments: true
-image: /2016/04/banner.jpg
+image: /assets/img/2016/04/banner.jpg
 published: true
 tag: "large project"
 meta: "Charma is an open source API and web application that promotes volunteerism. It was produced by Grand Valley State University and sponsored by Microsoft."

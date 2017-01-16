@@ -1,11 +1,9 @@
 ---
-layout: post
 title: Transferring My N64 Saves
-author: Kyle Niewiada
 date: "2015-04-11 16:41"
 updated: "2016-05-01 20:50"
 comments: true
-image: /2015/04/DSC09669.JPG
+image: /assets/img/2015/04/DSC09669.JPG
 published: true
 tag: "large project"
 meta: "How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file"

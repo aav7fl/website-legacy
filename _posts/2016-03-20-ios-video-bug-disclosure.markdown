@@ -1,10 +1,8 @@
 ---
-layout: post
 title: iOS Video Player Bug Disclosure
-author: Kyle Niewiada
 date: '2016-03-20 18:05'
 comments: true
-image: /2016/03/iPadTesting.jpg
+image: /assets/img/2016/03/iPadTesting.jpg
 published: true
 tag: "large project"
 meta: "A public disclosure that I discovered of an iOS video playback bug that decreases red and becomes washed out when user interface elements are hidden"

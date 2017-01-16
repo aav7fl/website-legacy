@@ -1,10 +1,8 @@
 ---
-layout: post
 title:  Restoring Vintage with 3D Printing
-author: Kyle Niewiada
 date:   2013-09-22
 comments: true
-image: /2013/09/small/DSC09139.JPG
+image: /assets/img/2013/09/small/DSC09139.JPG
 tag: "large project"
 meta: "Restoring my 1974 Marantz 2220B lamp housing with 3D printing. The old lamp house was brittle and broke from the incandescent bulb heat. I now use LEDs."
 redirect_from: "/blog/restoring-vintage-with-3d-printing/"

@@ -1,11 +1,9 @@
 ---
-layout: "post"
 title: "Preventing Windows Applications from Broadcasting a Taskbar Notification"
-author: "Kyle Niewiada"
 date: "2016-07-02 12:33"
 updated: "2016-08-04 13:47"
 comments: true
-image: /2016/07/banner.png
+image: /assets/img/2016/07/banner.png
 published: true
 tag: "small project"
 meta: "Using the Windows 10 registry editor to remove or mute application notifications in the system taskbar that will not stay hidden after a reboot."

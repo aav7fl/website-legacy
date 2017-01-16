@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "My Easy In-line USB Power Switch"
-author: Kyle Niewiada
 date: "2016-03-15 20:25"
 comments: true
-image: /2016/03/banner2.jpg
+image: /assets/img/2016/03/banner2.jpg
 published: true
 tag: "small project"
 meta: "How I added a rocker in-line power switch into my 10 foot USB 2.0 Type b cable. I referenced the USB 2.0 specifications to understand which wires to cut."

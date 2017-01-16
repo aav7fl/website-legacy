@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Somewhere to Start From"
-author: Kyle Niewiada
 date:   2013-04-13
 comments: false
 tag: "update"

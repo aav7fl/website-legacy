@@ -2,6 +2,7 @@ name: Kyle Niewiada's Website
 author:
   name: Kyle Niewiada
   email: kyle@kyleniewiada.org
+  twitter: CrypticCitrus #Necessary to place here to avoid SEO Plugin bug.
 description: My little corner of the Internet where I write about projects I've figured out
 timezone: 'America/Detroit'
 locale: "en-US"
@@ -18,7 +19,7 @@ markdown: kramdown
 highlighter: rouge
 paginate: 5
 url: https://www.kyleniewiada.org
-baseurl: "" # does not include hostname
+baseurl: ""
 
 sass:
   sass_dir: _sass
@@ -39,9 +40,38 @@ gems:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 # Serving
 detach:  false
 port:    4000
 host:    localhost
+
+#Social/SEO
+twitter:
+  username: CrypticCitrus
+facebook:
+  app_id: 137961485759
+logo: /assets/logo.jpg
+social:
+  links:
+    - https://www.facebook.com/KyleNiewiada
+    - https://twitter.com/CrypticCitrus
+    - https://www.youtube.com/KyleNiewiada
+    - https://plus.google.com/u/0/+KyleNiewiada
+    - https://kyleniewiada.bandcamp.com
+    - https://github.com/aav7fl/
+    - https://www.linkedin.com/in/kyleniewiada
+
+defaults:
+  - scope:
+      path: _posts
+    values:
+      layout: post
+      author: "Kyle Niewiada"
+      image: /assets/img/default-card.png
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/default-card.png
