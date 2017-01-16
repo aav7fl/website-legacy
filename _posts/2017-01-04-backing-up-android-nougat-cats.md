@@ -3,7 +3,7 @@ layout: "post"
 title: "Backing Up Android Nougat Easter Egg Cats (No Root)"
 author: "Kyle Niewiada"
 date: "2017-01-04 5:37"
-edit: "2017-01-04 5:37"
+updated: "2017-01-04 5:37"
 comments: true
 image: /2017/01/banner.jpg
 published: true

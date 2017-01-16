@@ -2,7 +2,7 @@
 layout: person
 title: About Me
 date: 2013-04-13
-edit: 2017-01-09
+updated: 2017-01-09
 meta: "A brief overview of Kyle Niewiada: I love programming and voiding warranties. I own two iFixit repair kits because I take everything apart. I make it my mission to find the perfect piece of software or hardware to solve my problem. I am interested in anything that allows me to work with a computer."
 image: /kyle.jpg
 regenerate: true

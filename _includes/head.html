@@ -19,7 +19,7 @@
     </title>
 
     <!-- Come and get me RSS readers -->
-    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    {% feed_meta %}
 
     <!-- Critical Stylesheet -->
     <style type="text/css">
@@ -36,8 +36,7 @@
       {% endif %}
     </style>
 
-    <!--<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}" />
 
     <!--Begin head metadata info-->
     {% if page.layout == 'post' %}

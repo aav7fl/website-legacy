@@ -18,9 +18,8 @@ markdown: kramdown
 highlighter: rouge
 paginate: 5
 url: https://www.kyleniewiada.org
-#enforce_ssl: www.kyleniewiada.org
-#url: http://localhost:4000
-#excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
+baseurl: "" # does not include hostname
+
 sass:
   sass_dir: _sass
   style: compressed
@@ -36,13 +35,13 @@ exclude:
   - README.md
 
 gems:
-  - jekyll-sitemap
-  - jekyll-paginate
+  - jekyll-feed
   - jekyll-gist
+  - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 # Serving
 detach:  false
 port:    4000
 host:    localhost
-baseurl: "" # does not include hostname

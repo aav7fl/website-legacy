@@ -3,7 +3,7 @@ layout: post
 title: Transferring My N64 Saves
 author: Kyle Niewiada
 date: "2015-04-11 16:41"
-edit: "2016-05-01 20:50"
+updated: "2016-05-01 20:50"
 comments: true
 image: /2015/04/DSC09669.JPG
 published: true

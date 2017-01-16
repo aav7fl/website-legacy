@@ -3,7 +3,7 @@ layout: "post"
 title: "Preventing Windows Applications from Broadcasting a Taskbar Notification"
 author: "Kyle Niewiada"
 date: "2016-07-02 12:33"
-edit: "2016-08-04 13:47"
+updated: "2016-08-04 13:47"
 comments: true
 image: /2016/07/banner.png
 published: true

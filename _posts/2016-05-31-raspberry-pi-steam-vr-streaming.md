@@ -3,7 +3,7 @@ layout: "post"
 title: "Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2"
 author: "Kyle Niewiada"
 date: "2016-05-31 16:44"
-edit: "2016-10-27 08:07"
+updated: "2016-10-27 08:07"
 comments: true
 image: /2016/05/banner2.jpg
 published: true

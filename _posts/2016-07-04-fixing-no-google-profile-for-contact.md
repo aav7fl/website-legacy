@@ -3,7 +3,7 @@ layout: "post"
 title: "Fixing 'No Google Profile for Contact'"
 author: "Kyle Niewiada"
 date: "2016-07-04 11:26"
-edit: "2016-07-04 11:26"
+updated: "2016-07-04 11:26"
 comments: true
 image: /2016/07/banner2.jpg
 published: true
