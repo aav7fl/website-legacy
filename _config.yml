@@ -6,7 +6,7 @@ description: My little corner of the Internet where I write about projects I've 
 timezone: 'America/Detroit'
 locale: "en-US"
 
-paginate_path: blog/page:num/
+paginate_path: blog/page/:num/
 permalink: blog/:year/:month/:title/
 
 #Collection of single pages. Helps keep organized.
@@ -39,6 +39,7 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-redirect-from
 
 # Serving
 detach:  false

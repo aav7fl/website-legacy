@@ -9,6 +9,7 @@ image: /2015/04/DSC09669.JPG
 published: true
 tag: "large project"
 meta: "How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file"
+redirect_from: "/blog/transferring-n64-saves/"
 ---
 
 When I was younger, I would spend weekends after school playing through the Legend of Zelda: Ocarina of Time. After a while, I beat it. I remember the fun I had navigating through puzzles and chasing down heart containers. I loved every minute of it.

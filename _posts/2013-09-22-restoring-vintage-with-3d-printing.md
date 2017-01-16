@@ -7,6 +7,7 @@ comments: true
 image: /2013/09/small/DSC09139.JPG
 tag: "large project"
 meta: "Restoring my 1974 Marantz 2220B lamp housing with 3D printing. The old lamp house was brittle and broke from the incandescent bulb heat. I now use LEDs."
+redirect_from: "/blog/restoring-vintage-with-3d-printing/"
 ---
 
 Now, I understand that some people like to have posts that show progress they've made before and after a project. I'm sorry to say that I don't have that many posts of the "before". I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker.
