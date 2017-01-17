@@ -70,7 +70,7 @@ defaults:
       path: _posts
     values:
       layout: post
-      # author: Kyle Niewiada
+      author: Kyle Niewiada
       image: /assets/img/default-card.png
       seo:
         type: BlogPosting
