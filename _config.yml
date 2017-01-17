@@ -71,7 +71,10 @@ defaults:
     values:
       layout: post
       author: Kyle Niewiada
-      image: /assets/img/default-card.png
+      image:
+        url: /assets/img/default-card.png
+        height: 400
+        width: 700
       seo:
         type: BlogPosting
   - scope:
