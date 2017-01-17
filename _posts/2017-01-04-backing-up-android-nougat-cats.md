@@ -1,9 +1,12 @@
 ---
 title: "Backing Up Android Nougat Easter Egg Cats (No Root)"
 date: "2017-01-04 5:37"
-updated: "2017-01-04 5:37"
+dateModified: "2017-01-04 5:37"
 comments: true
-image: /assets/img/2017/01/banner.jpg
+image:
+  url: /assets/img/2017/01/banner.jpg
+  height: 400
+  width: 700
 published: true
 tag: "small project"
 meta: "How to back up and restore your cats from the Google Android Nougat Neko Easter Egg without root using ADB."

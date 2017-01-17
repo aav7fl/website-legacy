@@ -5,20 +5,20 @@ layout: default
 <div class="post">
   {% if page.image %}
     <div class="featuredImage">
-        <img src="{{ page.image }}" alt="" />
+        <img src="{{ page.image.url }}" alt="" />
       </div>
   {% endif %}
   <h1 class="pageTitle">{{ page.title }}</h1>
-  <h3 class="meta">{{ page.author }}</h3>
+  <h3 class="meta">{{ page.author | default: site.author.name }}</h3>
   <p class="meta">{{ page.date | date: '%B %d, %Y' }} |<span class="time">{{ page.content | number_of_words | divided_by:120 | ceil }}</span> Minute Read | {{ page.tag | capitalize }}</p>
 
   {{ content }}
   <!-- POST NAVIGATION -->
   <div class="postNav clearfix">
     {% if page.previous.url %}
-      <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | prepend: site.baseurl }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
+      <a class="prev{% if page.previous.image.url %} image{% endif %}" href="{{ page.previous.url | prepend: site.baseurl }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
       {% if page.previous.image %}
-        <img src="{{ page.previous.image | prepend: site.baseurl }}" alt="">
+        <img src="{{ page.previous.image.url | prepend: site.baseurl }}" alt="">
       {% endif %}
     </a>
     {% endif %}

@@ -12,7 +12,7 @@ regenerate: true
 permalink: /resume/
 ---
 
-# {{page.author}}
+# {{page.author | default: site.author.name }}
 
 ##### [{{ page.email }}](mailto:{{ page.email }})
 

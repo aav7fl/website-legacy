@@ -2,7 +2,10 @@
 title: Creating a Hardcover Book from a Plethora of Facebook Messages
 date: "2015-12-17 18:00"
 comments: true
-image: /assets/img/2015/12/banner.jpg
+image:
+  url: /assets/img/2015/12/banner.jpg
+  height: 814
+  width: 1000
 published: true
 tag: "large project"
 meta: "How I made a hardcover book for someone by downloading my Facebook message archive reversing the order of each 20,000 message segment for readability"

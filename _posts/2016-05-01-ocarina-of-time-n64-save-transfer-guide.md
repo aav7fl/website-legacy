@@ -2,7 +2,10 @@
 title: "Nintendo 64 - The Legend of Zelda: Ocarina of Time Save File Transfer Guide"
 date: "2016-05-01 14:10"
 comments: true
-image: /assets/img/2016/05/banner.jpg
+image:
+  url: /assets/img/2016/05/banner.jpg
+  height: 470
+  width: 800
 published: true
 tag: "guide"
 meta: "An updated guide on how to dump the ram from The Legend of Zelda: Ocarina of Time on the Nintendo 64 and create an emulator friendly (.sra) save file."

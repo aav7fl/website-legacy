@@ -64,14 +64,20 @@ social:
     - https://github.com/aav7fl/
     - https://www.linkedin.com/in/kyleniewiada
 
+#Defaults
 defaults:
   - scope:
       path: _posts
     values:
       layout: post
-      author: "Kyle Niewiada"
+      # author: Kyle Niewiada
       image: /assets/img/default-card.png
+      seo:
+        type: BlogPosting
   - scope:
       path: ""
     values:
-      image: /assets/img/default-card.png
+      image:
+        url: /assets/img/default-card.png
+        height: 400
+        width: 700
