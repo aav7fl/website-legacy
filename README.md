@@ -51,4 +51,10 @@ npm install
 
 This website is loosely inspired from (and originally based on) [Long-Haul](https://github.com/brianmaierjr/long-haul). I continue to make changes as I see fit.
 
-##This website build uses [BrowserSync](https://browsersync.io/). It keeps your browsers in sync so I can develop in my VM and sync across to my physical machine for the results.
+##Extra information
+
+This website build uses [BrowserSync](https://browsersync.io/). It keeps your browsers in sync so I can develop in my VM and sync across to my physical machine for the results.
+
+Run tests with `rake` or `rake test`
+
+Run Travis-CI script with `bash ./script/cibuild`
