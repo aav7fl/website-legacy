@@ -8,7 +8,10 @@ task :test do
       'http://localhost:4000',
       '#!'
     ],
+    :check_html => true,
     :empty_alt_ignore => true,
     :only_4xx => true
   }).run
 end
+
+task :default => [:test]
