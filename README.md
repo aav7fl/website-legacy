@@ -55,7 +55,9 @@ This website is loosely inspired from (and originally based on) [Long-Haul](http
 
 This website build uses [BrowserSync](https://browsersync.io/). It keeps your browsers in sync so I can develop in my VM and sync across to my physical machine for the results.
 
-Run tests with `rake` or `rake test`
+Run RuboCop with `rake rubocop`
+
+Run tests with `rake test`
 
 Run Travis-CI script with `bash ./script/cibuild`
 

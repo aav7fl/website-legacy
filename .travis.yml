@@ -14,3 +14,4 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 sudo: false # route your build to the container-based infrastructure for a faster build
+cache: bundler
