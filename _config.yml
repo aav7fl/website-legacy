@@ -33,7 +33,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - package.json
+  - Rakefile
   - README.md
+  - script
   - vendor
 
 gems:

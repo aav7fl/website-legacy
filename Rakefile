@@ -2,7 +2,7 @@ require 'html/proofer'
 require 'rubocop/rake_task'
 require 'jekyll'
 
-task default: [:rubocop, :html_proofer]
+task default: [:rubocop, :test]
 
 task :build do
   puts 'Building site...'.yellow.bold
@@ -22,7 +22,6 @@ task :html_proofer do
     './_site',
     url_ignore:
     [
-      'http://localhost:4000',
       /.*discussions.apple.com.*/, # Apple blocking Travis CI/typhoeus
       '#!'
     ],
@@ -30,6 +29,11 @@ task :html_proofer do
     empty_alt_ignore: 'true',
     only_4xx: 'true'
   ).run
+end
+
+desc 'Run all tests'
+task :test do
+  Rake::Task['html_proofer'].invoke
 end
 
 desc 'Run RuboCop'
