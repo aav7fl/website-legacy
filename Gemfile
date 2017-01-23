@@ -7,3 +7,9 @@ gem "jekyll-paginate"
 gem "jekyll-redirect-from"
 gem 'jekyll-seo-tag'
 gem "jekyll-sitemap"
+
+# Test the build
+group :test do
+  gem 'rake'
+  gem 'html-proofer'
+end

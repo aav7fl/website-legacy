@@ -40,7 +40,7 @@ There exists a bug with the iOS video playback and color reproduction. When spec
 
 When I first stumbled across this bug, I thought there was a problem with my iPad Air 2. It was not until I tested this scenario on multiple iOS devices before I was convinced that it was a bug with either iOS or all recent hardware iterations. However, I wanted to be able to prove that this bug existed and that my eyes were not playing tricks.
 
-I dug out my colorimeter ([i1Display Pro](http://www.xrite.com/i1display-pro)) that I use to calibrate my monitors in hopes that it would be useful for my project. I tried to use the software that came with it, but nowhere could I find any options to let me read and collect the color value data points.
+I dug out my colorimeter ([i1Display Pro](http://www.xrite.com/categories/calibration-profiling/i1display-pro)) that I use to calibrate my monitors in hopes that it would be useful for my project. I tried to use the software that came with it, but nowhere could I find any options to let me read and collect the color value data points.
 
 After searching for software solutions that would allow me to read color data points from my colorimeter, I stumbled across HCFR. [HCFR](https://sourceforge.net/projects/hcfr/) is an open source calibration tool that allowed me to read the color percentages and values (among many other things) through my colorimeter; then graph and observe these data points.
 

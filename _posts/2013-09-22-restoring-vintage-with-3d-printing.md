@@ -28,7 +28,7 @@ While researching for information about my Marantz amp, I decided I should repla
 
 I had one problem. Like other people who own an older Marantz with plastic lamp housings, many of them have melted, become broken/brittle or lost shape. I was no exception. My lamp housing was partially melted and my tabs were broken off. They are hard to find in acceptable condition, and when one is found, it costs an arm and a leg to obtain.
 
-I did however discover that a user here on AK (Kudos to [bikemandan](http://www.audiokarma.org/forums/member.php?u=78937)!) [posted a 3D model](http://www.audiokarma.org/forums/showthread.php?t=467773) of a lamp housing he had created. I was able to use that as a starting point for my restoration.
+I did however discover that a user here on AK (Kudos to [bikemandan](http://www.audiokarma.org/forums/index.php?members/bikemandan.78937/)!) [posted a 3D model](http://www.audiokarma.org/forums/showthread.php?t=467773) of a lamp housing he had created. I was able to use that as a starting point for my restoration.
 
 After a bit of research, I concluded that his lamp housing had a very good chance of fitting perfectly with my model (it was about 90% perfect for me). I used his model to help re-create a version more suitable for both my 2220B, and a 3D printer. My result was this.
 

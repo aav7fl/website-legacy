@@ -1,0 +1,8 @@
+language: ruby
+rvm:
+- 2.2.5
+script: bundle exec rake test
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+sudo: false # route your build to the container-based infrastructure for a faster build

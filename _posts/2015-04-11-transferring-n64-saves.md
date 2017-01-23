@@ -65,7 +65,7 @@ I took known game save copies from the internet for each of my EEPROM games and 
 
 ### Hitting a Wall
 
-The first thing that I tried was dumping the SRAM by using the GameShark. However, I was unable to find any documentation on how to pull the SRAM data or if it was even accessible from the GameShark. But I did find [someone](https://www.assemblergames.com/forums/showthread.php?31850-Dumping-N64-Game-Saves-with-a-Gameshark-with-LPT-access&p=517929&viewfull=1#post517929) who was trying to dump the contents of their SRAM into the memory pack controller by uploading it with [gsuploader](https://github.com/ppcasm/gsuploader). According to their post, they had some luck with a few games but were unlucky with others.
+The first thing that I tried was dumping the SRAM by using the GameShark. However, I was unable to find any documentation on how to pull the SRAM data or if it was even accessible from the GameShark. But I did find [someone](http://assemblergames.com/l/threads/dumping-n64-game-saves-with-a-gameshark-with-lpt-access.31850/#post517929) who was trying to dump the contents of their SRAM into the memory pack controller by uploading it with [gsuploader](https://github.com/ppcasm/gsuploader). According to their post, they had some luck with a few games but were unlucky with others.
 
 I was unable to get sram2mpk.bin working with my Ocarina of Time game. I spent a whole day attempting to load the program, but every time it locked up on me and dumped no information. I was able to verify (with the help of Lawrence) that gsuploader was working correctly by loading up an older project named [Neon64](https://github.com/mikeryan/n64dev), an NES emulator for the N64. Below is an image of my N64 running Super Mario Bros 3 with the help of Neon64.
 
@@ -153,7 +153,7 @@ Software and resources I used:
 
 **EDIT (March 10, 2016):**
 
-Add contributions made by [Austin](/blog/2015/04/transferring-n64-saves/#comment-2561328816):
+Add contributions made by Austin:
 
 - There is no easy way to communicate with the Gameshark using a parallel-to-usb adapter so you will need an older machine with a built in parallel port, like the one shown in this guide.
 - You must have the expansion pack that expands the N64's RAM from 4MB to 8MB. The only way I could get n64rd to dump the RAM while in-game was by turning on the code generator in the Gameshark's menu before starting Ocarina of Time. This code generator option does not show up unless you have the expansion installed.
@@ -161,7 +161,7 @@ Add contributions made by [Austin](/blog/2015/04/transferring-n64-saves/#comment
 
 **EDIT (April 29, 2016):**
 
-Add contributions made by [Bkacjios](/blog/2015/04/transferring-n64-saves/#comment-2640491210):
+Add contributions made by Bkacjios:
 
 - Bkacjios has implemented the checksum algorithm in an **[online tool](https://bkacjios.github.io/OOT-Save-Converter/)** where you can upload your RAM dump and download a proper .sra save file. It has many other features, but this simplifies the process completely after obtaining your ram dump through the GameShark cartridge and seems to be the way to go.
 
