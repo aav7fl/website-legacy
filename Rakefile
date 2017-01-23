@@ -13,7 +13,7 @@ task :test do
     :only_4xx => true,
     :typhoeus => {
       :headers => {
-        "User-Agent" => "Mozilla/5.0 (compatible; My New User-Agent)"
+        "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"
       }
     }
   }).run
