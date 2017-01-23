@@ -53,7 +53,7 @@ This website is loosely inspired from (and originally based on) [Long-Haul](http
 
 ##Extra information
 
-This website build uses [BrowserSync](https://browsersync.io/). It keeps your browsers in sync so I can develop in my VM and sync across to my physical machine for the results.
+This website build uses [BrowserSync](https://browsersync.io/). It keeps the browsers in sync so I can develop in my VM and sync across to my physical machine/mobile devices for the results.
 
 Run RuboCop with `rake rubocop`
 
