@@ -1,6 +1,8 @@
 ##My personal website
 https://www.kyleniewiada.org/
 
+[![Build Status](https://travis-ci.org/aav7fl/aav7fl.github.io.svg?branch=master)](https://travis-ci.org/aav7fl/aav7fl.github.io)
+
 
 These following steps *should* work to get setup. But I might have missed something..
 
