@@ -6,7 +6,7 @@ task :test do
   HTML::Proofer.new("./_site", {
     :url_ignore => [
       'http://localhost:4000',
-      'https://discussions.apple.com/thread',#Apple blocking Travis CI/typhoeus
+      '/discussions.apple.com/',#Apple blocking Travis CI/typhoeus
       '#!'
     ],
     :check_html => true,
