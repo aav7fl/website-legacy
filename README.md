@@ -1,7 +1,9 @@
 ##My personal website
 https://www.kyleniewiada.org/
 
-[![Build Status](https://travis-ci.org/aav7fl/aav7fl.github.io.svg?branch=master)](https://travis-ci.org/aav7fl/aav7fl.github.io)
+Master: [![Build Status](https://travis-ci.org/aav7fl/aav7fl.github.io.svg?branch=master)](https://travis-ci.org/aav7fl/aav7fl.github.io)
+
+Testing: [![Build Status](https://travis-ci.org/aav7fl/aav7fl.github.io.svg?branch=testing)](https://travis-ci.org/aav7fl/aav7fl.github.io)
 
 
 These following steps *should* work to get setup. But I might have missed something..
