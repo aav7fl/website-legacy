@@ -58,3 +58,5 @@ This website build uses [BrowserSync](https://browsersync.io/). It keeps your br
 Run tests with `rake` or `rake test`
 
 Run Travis-CI script with `bash ./script/cibuild`
+
+Launch Dev environment (Jekyll Server/Browser-Sync/Website) with `gulp`
