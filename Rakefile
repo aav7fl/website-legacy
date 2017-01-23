@@ -22,7 +22,7 @@ task :html_proofer do
     './_site',
     url_ignore:
     [
-      %r{.*discussions.apple.com\/.*}, # Apple blocking Travis CI/typhoeus
+      %r{.*discussions.apple.com/.*}, # Apple blocking Travis CI/typhoeus
       '#!' # Ignore internal URL used for JS Menu.
     ],
     check_html: 'true',
