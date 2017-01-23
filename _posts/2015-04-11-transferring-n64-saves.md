@@ -5,6 +5,7 @@ dateModified: "2016-05-01 20:50"
 comments: true
 image:
   url: /assets/img/2015/04/DSC09669.JPG
+  alt: 'N64 interfacing with The Legend of Zelda: Ocarina of Time to dump active memory'
   height: 665
   width: 1000
 published: true
@@ -13,7 +14,7 @@ meta: "How I extracted my N64 save files such as Mario party and Zelda Ocarina o
 redirect_from: "/blog/transferring-n64-saves/"
 ---
 
-When I was younger, I would spend weekends after school playing through the Legend of Zelda: Ocarina of Time. After a while, I beat it. I remember the fun I had navigating through puzzles and chasing down heart containers. I loved every minute of it.
+When I was younger, I would spend weekends after school playing through The Legend of Zelda: Ocarina of Time. After a while, I beat it. I remember the fun I had navigating through puzzles and chasing down heart containers. I loved every minute of it.
 
 **If you are here looking for information on how to dump your N64 Ocarina of Time save files, check out my [new guide](/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/) for it. If you'd like to learn how to transfer other save files and how I originally dumped my Ocarina of Time save, read on.**
 
@@ -108,7 +109,7 @@ I tried grafting over my completed save data from RAM into an existing Ocarina o
 
 I tried using the algorithm from the wiki, but I was unable to get it to work. So instead I decided to work it out on my own. After a lot of digging around to see how the checksum is calculated, I was able to figure out the exact algorithm used. I took an existing Ocarina of Time save file, converted it back to N64 native (little endian -> big endian), and ran it against a large list of checksum/crc algorithms with many MANY programs. I found one that matched; and it was using [010 Editor](http://www.sweetscape.com/010editor). The name: UShort (16 bit) – Big Endian.
 
-![](/assets/img/2015/04/Checksum.png)
+![Finding the save file checksum](/assets/img/2015/04/Checksum.png)
 
 Lawrence and I were unable to find any information online about this algorithm and we wished to leave a way that others could follow these instructions using open source software. Lawrence contacted SweetScape (the company who created the 010 Editor) asking if they could make available for us more information on the algorithm used. [Graeme Sweet](http://www.sweetscape.com/companyinfo/) very generously provided us with information on how “UShort (16 bit) – Big Endian” was calculated. Lawrence and I created a software tool ([Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)) to calculate the checksum of an Ocarina of Time save file in native N64 format. The working source code has been posted. The instructions on how to run and calculate it can be found on the GitHub page. We hope to develope this further.
 

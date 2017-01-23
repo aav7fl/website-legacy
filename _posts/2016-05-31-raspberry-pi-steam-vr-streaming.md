@@ -5,6 +5,7 @@ dateModified: "2016-10-27 08:07"
 comments: true
 image:
   url: /assets/img/2016/05/banner2.jpg
+  alt: Raspberry Pi streaming setup behind monitor
   height: 455
   width: 800
 published: true

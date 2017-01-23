@@ -5,6 +5,7 @@ dateModified: "2016-07-04 11:26"
 comments: true
 image:
   url: /assets/img/2016/07/banner2.jpg
+  alt: No Account for Google Profile on Android Wear Watch
   height: 450
   width: 800
 published: true

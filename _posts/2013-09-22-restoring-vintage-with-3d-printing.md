@@ -4,6 +4,7 @@ date:   2013-09-22
 comments: true
 image:
   url: /assets/img/2013/09/small/DSC09139.JPG
+  alt: Marantz 2220B taken apart for upgrading parts
   height: 532
   width: 800
 tag: "large project"
@@ -103,9 +104,9 @@ A close up, and then with the faceplate on.
 
 Now I'm putting it all back together (with new vellum)
 
-![](/assets/img/2013/09/small/DSC09144.JPG)
+![Testing the Marantz 2220B before assembly](/assets/img/2013/09/small/DSC09144.JPG)
 
-![Marantz 2220B put back together](/assets/img/2013/09/small/DSC09144.JPG)*Faceplate engaged!*
+![Marantz 2220B put back together](/assets/img/2013/09/small/DSC09145.JPG)*Faceplate engaged!*
 
 Of course, I also re-adjusted my amp's voltage and amplifier biases (All 4).
 

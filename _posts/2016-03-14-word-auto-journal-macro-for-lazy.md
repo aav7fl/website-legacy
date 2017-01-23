@@ -4,6 +4,7 @@ date: "2016-03-14 16:19"
 comments: true
 image:
   url: /assets/img/2016/03/banner.png
+  alt: Microsoft Word output for auto journal macro
   height: 505
   width: 964
 published: true

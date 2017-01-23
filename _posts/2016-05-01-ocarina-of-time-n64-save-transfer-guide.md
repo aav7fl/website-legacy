@@ -4,6 +4,7 @@ date: "2016-05-01 14:10"
 comments: true
 image:
   url: /assets/img/2016/05/banner.jpg
+  alt: 'The Legend of Zelda: Ocarina of Time save converter'
   height: 470
   width: 800
 published: true

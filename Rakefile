@@ -22,12 +22,12 @@ task :html_proofer do
     './_site',
     url_ignore:
     [
-      /.*discussions.apple.com.*/, # Apple blocking Travis CI/typhoeus
-      '#!'
+      %r{.*discussions.apple.com\/.*}, # Apple blocking Travis CI/typhoeus
+      '#!' # Ignore internal URL used for JS Menu.
     ],
     check_html: 'true',
-    empty_alt_ignore: 'true',
-    only_4xx: 'true'
+    favicon: 'true',
+    only_4xx: 'true' # Used to hande `999 No Error` from LinkedIn
   ).run
 end
 

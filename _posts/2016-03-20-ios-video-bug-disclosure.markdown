@@ -4,6 +4,7 @@ date: '2016-03-20 18:05'
 comments: true
 image:
   url: /assets/img/2016/03/iPadTesting.jpg
+  alt: Testing iPad Air 2 colors with i1Display Pro colorimeter
   height: 521
   width: 800
 published: true
