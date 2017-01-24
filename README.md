@@ -1,6 +1,10 @@
 ##My personal website
 https://www.kyleniewiada.org/
 
+Master: [![Build Status](https://travis-ci.org/aav7fl/aav7fl.github.io.svg?branch=master)](https://travis-ci.org/aav7fl/aav7fl.github.io)
+
+Testing: [![Build Status](https://travis-ci.org/aav7fl/aav7fl.github.io.svg?branch=testing)](https://travis-ci.org/aav7fl/aav7fl.github.io)
+
 
 These following steps *should* work to get setup. But I might have missed something..
 
@@ -49,4 +53,14 @@ npm install
 
 This website is loosely inspired from (and originally based on) [Long-Haul](https://github.com/brianmaierjr/long-haul). I continue to make changes as I see fit.
 
-##This website build uses [BrowserSync](https://browsersync.io/). It keeps your browsers in sync so I can develop in my VM and sync across to my physical machine for the results.
+##Extra information
+
+This website build uses [BrowserSync](https://browsersync.io/). It keeps the browsers in sync so I can develop in my VM and sync across to my physical machine/mobile devices for the results.
+
+Run RuboCop with `rake rubocop`
+
+Run tests with `rake test`
+
+Run Travis-CI script with `bash ./script/cibuild`
+
+Launch Dev environment (Jekyll Server/Browser-Sync/Website) with `gulp`

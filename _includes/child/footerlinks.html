@@ -1,0 +1,9 @@
+<span> | </span>
+{% for menuitem in site.data.footer %}
+  {% if menuitem.name == "BandCamp" %}
+    <a href="{{ menuitem.url }}" rel='nofollow'>{{ menuitem.name }}</a>
+  {% else %}
+    <a href="{{ menuitem.url }}">{{ menuitem.name }}</a>
+  {% endif %}
+    <span> | </span>
+{% endfor %}

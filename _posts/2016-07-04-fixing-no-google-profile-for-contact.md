@@ -1,11 +1,13 @@
 ---
-layout: "post"
 title: "Fixing 'No Google Profile for Contact'"
-author: "Kyle Niewiada"
 date: "2016-07-04 11:26"
-updated: "2016-07-04 11:26"
+dateModified: "2016-07-04 11:26"
 comments: true
-image: /2016/07/banner2.jpg
+image:
+  url: /assets/img/2016/07/banner2.jpg
+  alt: No Account for Google Profile on Android Wear Watch
+  height: 450
+  width: 800
 published: true
 tag: "small project"
 meta: "How I fixed the Google now 'No Google profile for Contact' message with my account. This occurred because of conflicting Google+ profiles."

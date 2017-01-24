@@ -1,13 +1,16 @@
 ---
-layout: post
 title: "Microsoft Word Auto-Journal Macro for the Lazy"
-author: Kyle Niewiada
 date: "2016-03-14 16:19"
 comments: true
-image: /2016/03/banner.png
+image:
+  url: /assets/img/2016/03/banner.png
+  alt: Microsoft Word output for auto journal macro
+  height: 505
+  width: 964
 published: true
 tag: "small project"
 meta: "I created a Microsoft Word macro that automatically generated a skeleton entry for today and added up the total hours documented thus far"
+redirect_from: "/blog/word-auto-journal-macro-for-lazy/"
 ---
 
 A few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.

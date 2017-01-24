@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Discovering and Reverse Engineering My Steelcase Desk
-author: Kyle Niewiada
 date: "2015-08-17 15:47"
 comments: true
-image: /2015/08/banner.jpg
+image:
+  url: /assets/img/2015/08/banner.jpg
+  alt: Steelcase height-adjustable standing desk
+  height: 779
+  width: 800
 published: true
 tag: "medium project"
 meta: "How I reverse engineered the remote codes on my prototype Steelcase sit/stand desk unlocking secret developer codes to enable One Touch adjustments"
@@ -29,8 +31,8 @@ It wasn't until I had the desk back at home that I realized I could find no list
 
 I also had discovered that what I had in my hands was a **test sample**. On the back of the unit was slapped a sticker that was partially pulled off. It stated that it was from the product development labs, had a fill out date of May 7, 2003, the request number, the person who requested, the specialist, the description for the unit, and the sample ID.
 
-![](/assets/img/2015/08/test_sticker.jpg)
-![](/assets/img/2015/08/order_sticker.jpg)
+![Test sticker found on my Steelcase height-adjustable standing desk](/assets/img/2015/08/test_sticker.jpg)
+![Order sticker found on my Steelcase height-adjustable standing desk](/assets/img/2015/08/order_sticker.jpg)
 
 This might have explained why I had such an odd remote to it. I'm not sure what the lineup was like back in 2003 for Steelcase height-adjustable electric desks. I was unable to find desks that used the same remote as mine, or even a similar configuration. Given that I had a test unit, I began to wonder if there were special testing properties to the remote.
 

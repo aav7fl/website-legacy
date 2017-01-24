@@ -1,12 +1,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.meta %}
-    <meta name="description" content="{{ page.meta}}" />
-    {% endif %}
-
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
 
     <title>
@@ -14,7 +8,7 @@
         {% assign overwriteTitle = page.title | append: ' | Page ' | append: paginator.page %}
         {{ overwriteTitle }}
       {% else %}
-        {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+        {% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}
       {% endif %}
     </title>
 
@@ -24,10 +18,9 @@
     <!-- Critical Stylesheet -->
     <style type="text/css">
       {% capture include_to_scssify %}
-        {% include critical.scss %}
+        {% include child/critical.scss %}
       {% endcapture %}
       {{ include_to_scssify | scssify }}
-      /* additional critical stylesheet */
       {% if page.style %}
         {% capture include_to_scssify %}
           {% include extra/{{page.style}} %}
@@ -36,21 +29,7 @@
       {% endif %}
     </style>
 
-    <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}" />
+    {% seo %}
 
-    <!--Begin head metadata info-->
-    {% if page.layout == 'post' %}
-      {% include /meta/post.html %}
-    {% endif %}
-
-    {% if page.layout == 'default' or page.layout == 'resume'%}
-      {% include /meta/default.html %}
-    {% endif %}
-
-    {% if page.layout == 'person' %}
-      {% include /meta/person.html %}
-    {% endif %}
-    <!--End head metadata info-->
-
-    {% if site.data.analytics.google_analytics %} {% include google_analytics.html %} {% endif %}
+    {% if site.data.analytics.google_analytics %} {% include child/google_analytics.html %} {% endif %}
 </head>

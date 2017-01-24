@@ -1,11 +1,13 @@
 ---
-layout: "post"
 title: "Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2"
-author: "Kyle Niewiada"
 date: "2016-05-31 16:44"
-updated: "2016-10-27 08:07"
+dateModified: "2016-10-27 08:07"
 comments: true
-image: /2016/05/banner2.jpg
+image:
+  url: /assets/img/2016/05/banner2.jpg
+  alt: Raspberry Pi streaming setup behind monitor
+  height: 455
+  width: 800
 published: true
 tag: "medium project"
 meta: "How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR."

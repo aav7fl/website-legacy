@@ -1,10 +1,12 @@
 ---
-layout: post
 title:  Restoring Vintage with 3D Printing
-author: Kyle Niewiada
 date:   2013-09-22
 comments: true
-image: /2013/09/small/DSC09139.JPG
+image:
+  url: /assets/img/2013/09/small/DSC09139.JPG
+  alt: Marantz 2220B taken apart for upgrading parts
+  height: 532
+  width: 800
 tag: "large project"
 meta: "Restoring my 1974 Marantz 2220B lamp housing with 3D printing. The old lamp house was brittle and broke from the incandescent bulb heat. I now use LEDs."
 redirect_from: "/blog/restoring-vintage-with-3d-printing/"
@@ -27,7 +29,7 @@ While researching for information about my Marantz amp, I decided I should repla
 
 I had one problem. Like other people who own an older Marantz with plastic lamp housings, many of them have melted, become broken/brittle or lost shape. I was no exception. My lamp housing was partially melted and my tabs were broken off. They are hard to find in acceptable condition, and when one is found, it costs an arm and a leg to obtain.
 
-I did however discover that a user here on AK (Kudos to [bikemandan](http://www.audiokarma.org/forums/member.php?u=78937)!) [posted a 3D model](http://www.audiokarma.org/forums/showthread.php?t=467773) of a lamp housing he had created. I was able to use that as a starting point for my restoration.
+I did however discover that a user here on AK (Kudos to [bikemandan](http://www.audiokarma.org/forums/index.php?members/bikemandan.78937/)!) [posted a 3D model](http://www.audiokarma.org/forums/showthread.php?t=467773) of a lamp housing he had created. I was able to use that as a starting point for my restoration.
 
 After a bit of research, I concluded that his lamp housing had a very good chance of fitting perfectly with my model (it was about 90% perfect for me). I used his model to help re-create a version more suitable for both my 2220B, and a 3D printer. My result was this.
 
@@ -102,9 +104,9 @@ A close up, and then with the faceplate on.
 
 Now I'm putting it all back together (with new vellum)
 
-![](/assets/img/2013/09/small/DSC09144.JPG)
+![Testing the Marantz 2220B before assembly](/assets/img/2013/09/small/DSC09144.JPG)
 
-![Marantz 2220B put back together](/assets/img/2013/09/small/DSC09144.JPG)*Faceplate engaged!*
+![Marantz 2220B put back together](/assets/img/2013/09/small/DSC09145.JPG)*Faceplate engaged!*
 
 Of course, I also re-adjusted my amp's voltage and amplifier biases (All 4).
 

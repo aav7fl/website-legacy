@@ -1,18 +1,20 @@
 ---
-layout: post
 title: Transferring My N64 Saves
-author: Kyle Niewiada
 date: "2015-04-11 16:41"
-updated: "2016-05-01 20:50"
+dateModified: "2016-05-01 20:50"
 comments: true
-image: /2015/04/DSC09669.JPG
+image:
+  url: /assets/img/2015/04/DSC09669.JPG
+  alt: 'N64 interfacing with The Legend of Zelda: Ocarina of Time to dump active memory'
+  height: 665
+  width: 1000
 published: true
 tag: "large project"
 meta: "How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file"
 redirect_from: "/blog/transferring-n64-saves/"
 ---
 
-When I was younger, I would spend weekends after school playing through the Legend of Zelda: Ocarina of Time. After a while, I beat it. I remember the fun I had navigating through puzzles and chasing down heart containers. I loved every minute of it.
+When I was younger, I would spend weekends after school playing through The Legend of Zelda: Ocarina of Time. After a while, I beat it. I remember the fun I had navigating through puzzles and chasing down heart containers. I loved every minute of it.
 
 **If you are here looking for information on how to dump your N64 Ocarina of Time save files, check out my [new guide](/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/) for it. If you'd like to learn how to transfer other save files and how I originally dumped my Ocarina of Time save, read on.**
 
@@ -64,7 +66,7 @@ I took known game save copies from the internet for each of my EEPROM games and 
 
 ### Hitting a Wall
 
-The first thing that I tried was dumping the SRAM by using the GameShark. However, I was unable to find any documentation on how to pull the SRAM data or if it was even accessible from the GameShark. But I did find [someone](https://www.assemblergames.com/forums/showthread.php?31850-Dumping-N64-Game-Saves-with-a-Gameshark-with-LPT-access&p=517929&viewfull=1#post517929) who was trying to dump the contents of their SRAM into the memory pack controller by uploading it with [gsuploader](https://github.com/ppcasm/gsuploader). According to their post, they had some luck with a few games but were unlucky with others.
+The first thing that I tried was dumping the SRAM by using the GameShark. However, I was unable to find any documentation on how to pull the SRAM data or if it was even accessible from the GameShark. But I did find [someone](http://assemblergames.com/l/threads/dumping-n64-game-saves-with-a-gameshark-with-lpt-access.31850/#post517929) who was trying to dump the contents of their SRAM into the memory pack controller by uploading it with [gsuploader](https://github.com/ppcasm/gsuploader). According to their post, they had some luck with a few games but were unlucky with others.
 
 I was unable to get sram2mpk.bin working with my Ocarina of Time game. I spent a whole day attempting to load the program, but every time it locked up on me and dumped no information. I was able to verify (with the help of Lawrence) that gsuploader was working correctly by loading up an older project named [Neon64](https://github.com/mikeryan/n64dev), an NES emulator for the N64. Below is an image of my N64 running Super Mario Bros 3 with the help of Neon64.
 
@@ -107,7 +109,7 @@ I tried grafting over my completed save data from RAM into an existing Ocarina o
 
 I tried using the algorithm from the wiki, but I was unable to get it to work. So instead I decided to work it out on my own. After a lot of digging around to see how the checksum is calculated, I was able to figure out the exact algorithm used. I took an existing Ocarina of Time save file, converted it back to N64 native (little endian -> big endian), and ran it against a large list of checksum/crc algorithms with many MANY programs. I found one that matched; and it was using [010 Editor](http://www.sweetscape.com/010editor). The name: UShort (16 bit) – Big Endian.
 
-![](/assets/img/2015/04/Checksum.png)
+![Finding the save file checksum](/assets/img/2015/04/Checksum.png)
 
 Lawrence and I were unable to find any information online about this algorithm and we wished to leave a way that others could follow these instructions using open source software. Lawrence contacted SweetScape (the company who created the 010 Editor) asking if they could make available for us more information on the algorithm used. [Graeme Sweet](http://www.sweetscape.com/companyinfo/) very generously provided us with information on how “UShort (16 bit) – Big Endian” was calculated. Lawrence and I created a software tool ([Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)) to calculate the checksum of an Ocarina of Time save file in native N64 format. The working source code has been posted. The instructions on how to run and calculate it can be found on the GitHub page. We hope to develope this further.
 
@@ -152,7 +154,7 @@ Software and resources I used:
 
 **EDIT (March 10, 2016):**
 
-Add contributions made by [Austin](/blog/2015/04/transferring-n64-saves/#comment-2561328816):
+Add contributions made by Austin:
 
 - There is no easy way to communicate with the Gameshark using a parallel-to-usb adapter so you will need an older machine with a built in parallel port, like the one shown in this guide.
 - You must have the expansion pack that expands the N64's RAM from 4MB to 8MB. The only way I could get n64rd to dump the RAM while in-game was by turning on the code generator in the Gameshark's menu before starting Ocarina of Time. This code generator option does not show up unless you have the expansion installed.
@@ -160,7 +162,7 @@ Add contributions made by [Austin](/blog/2015/04/transferring-n64-saves/#comment
 
 **EDIT (April 29, 2016):**
 
-Add contributions made by [Bkacjios](/blog/2015/04/transferring-n64-saves/#comment-2640491210):
+Add contributions made by Bkacjios:
 
 - Bkacjios has implemented the checksum algorithm in an **[online tool](https://bkacjios.github.io/OOT-Save-Converter/)** where you can upload your RAM dump and download a proper .sra save file. It has many other features, but this simplifies the process completely after obtaining your ram dump through the GameShark cartridge and seems to be the way to go.
 

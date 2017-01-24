@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Testing Charma with Selenium
-author: Kyle Niewiada
 date: '2016-04-29 21:26'
 comments: true
-image: /2016/04/banner2.jpg
+image:
+  url: /assets/img/2016/04/banner2.jpg
+  alt: Testing Charma with Visual Studio and Selenium
+  height: 438
+  width: 800
 published: true
 tag: "medium project"
 meta: "How I used Selenium WebDriver to test our ASP.net web application, Charma. We use the Google Chrome and Firefox webdriver to test our website."

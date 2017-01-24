@@ -1,13 +1,16 @@
 ---
-layout: post
 title: Creating a Hardcover Book from a Plethora of Facebook Messages
-author: Kyle Niewiada
 date: "2015-12-17 18:00"
 comments: true
-image: /2015/12/banner.jpg
+image:
+  url: /assets/img/2015/12/banner.jpg
+  alt: Custom hardcover book composed of facebook chat messages
+  height: 814
+  width: 1000
 published: true
 tag: "large project"
 meta: "How I made a hardcover book for someone by downloading my Facebook message archive reversing the order of each 20,000 message segment for readability"
+redirect_from: "/blog/making-a-book-from-facebook-messages/"
 ---
 
 Back in October, I wanted to create a meaningful gift for someone very special to me for a special occasion. After brainstorming for a while, I came up with a crazy idea of creating a hardcover book from our earliest conversations on Facebook (I guess I can mark it off as a positive that the information giant held on to this).
@@ -36,7 +39,7 @@ First, I created a reasonable even spacing between each conversation to make it 
 
 Next, I used the macro found in an answer by the user macropod on [this Microsoft answers post](http://answers.microsoft.com/en-us/office/forum/office_2010-word/a-macro-for-multiple-find-and-replace/822f62cc-ac63-e011-8dfc-68b599b31bf5). This macro allowed me to replace multiple words in bulk. I used the macro to insert a tab character (\t) between each name and the date timestamp following. Then I set up a right aligned tab stop. This forced every timestamp to align on the right-hand side of the page demonstrated in the image above.
 
-![](/assets/img/2015/12/replace.png)
+![Finding and replacing text with tabs](/assets/img/2015/12/replace.png)
 
 With my last run, I replaced all of the names (in my example post they are “User 1\t” and “User 2\t”) using the built-in replace functions of Word with bolded counterparts to separate themselves from conversations. All pure cosmetic changes.
 
@@ -44,6 +47,6 @@ The conversations were now readable and I was happy with the result. I had rough
 
 I cleaned up the rest of my document, added odd/even page numbers, wrote a dedication, created chapters/table of contents, made an introduction, and the list goes on. Once I was satisfied with my formatting and the completion of the other pieces of my book, I exported the book as a [PDF/A](https://en.wikipedia.org/wiki/PDF/A). I will be presenting to her if she wants to attempt to click any hyperlinks inside our messages. I uploaded the PDF/A to Lulu, finished the cover, and refined the last details. I completed the project and ordered a proof copy. A week later it was sitting in my hands. It looked perfect. It was perfect.
 
-![](/assets/img/2015/12/side.jpg)
+![Side profile of the custom book I created](/assets/img/2015/12/side.jpg)
 
 I was proud and excited for the entire duration of this project. I left some Easter eggs and personal touches inside the book that I am sure she will enjoy. This book was made with love.
