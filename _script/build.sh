@@ -5,11 +5,9 @@ set -e
 
 # Install bundles if needed.
 bundle check || bundle install
+
 # Build the site
 bundle exec jekyll build
-
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
 
 # Checkout `master` and remove everything.
 git clone https://${GH_TOKEN}@github.com/aav7fl/aav7fl.github.io.git ../aav7fl.github.io.master
