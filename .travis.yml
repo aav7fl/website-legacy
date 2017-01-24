@@ -20,7 +20,7 @@ env:
 # Deployment config
 deploy:
   provider: script
-  script: sh $TRAVIS_BUILD_DIR/_scripts/build.sh
+  script: chmod +x _scripts/build.sh && _scripts/build.sh
   skip_cleanup: true
   on:
     branch: source
