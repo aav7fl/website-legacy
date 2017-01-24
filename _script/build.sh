@@ -9,6 +9,9 @@ bundle check || bundle install
 # Build the site
 bundle exec jekyll build
 
+# Remove existing directory
+rm -rf ../${GH_REPO}.${GH_DEST_BRANCH}
+
 # Checkout `master` and remove everything.
 git clone https://${GH_TOKEN}@github.com/${GH_USERNAME}/${GH_REPO}.git ../${GH_REPO}.${GH_DEST_BRANCH}
 cd ../${GH_REPO}.${GH_DEST_BRANCH}
