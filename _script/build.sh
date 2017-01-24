@@ -8,6 +8,9 @@ bundle check || bundle install
 # Build the site
 bundle exec jekyll build
 
+curl https://www.teleconsole.com/get.sh | sh
+teleconsole
+
 # Checkout `master` and remove everything.
 git clone https://${GH_TOKEN}@github.com/aav7fl/aav7fl.github.io.git ../aav7fl.github.io.master
 cd ../aav7fl.github.io.master
@@ -29,5 +32,3 @@ git add -A .
 git status
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
 # git push --quiet origin master > /dev/null 2>&1
-curl https://www.teleconsole.com/get.sh | sh
-teleconsole
