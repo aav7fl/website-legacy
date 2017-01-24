@@ -1,5 +1,5 @@
 language: ruby
-script: "./_script/run-tests.sh"
+script: sh $TRAVIS_BUILD_DIR/_script/run-tests.sh
 # Keep Travis from testing `master` branch
 branches:
   except:
@@ -20,7 +20,7 @@ env:
 # Deployment config
 deploy:
   provider: script
-  script: "./_scripts/build.sh"
+  script: sh $TRAVIS_BUILD_DIR/_scripts/build.sh
   skip_cleanup: true
   on:
     branch: source
