@@ -23,7 +23,7 @@ cp -R ../${GH_REPO}/_site/* .
 cp ../${GH_REPO}/.travis.yml .
 cp ../${GH_REPO}/CNAME .
 git config user.email ${GH_EMAIL}
-git config user.name "Travis-bot"
+git config user.name "Travis-CI-bot"
 
 # Commit and push generated content to `master` branch.
 git status
