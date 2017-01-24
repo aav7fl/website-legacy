@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.kyleniewiada.org/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="https://www.kyleniewiada.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.kyleniewiada.org/" rel="alternate" type="text/html" /><updated>2017-01-24T12:21:08-05:00</updated><id>https://www.kyleniewiada.org//</id><title type="html">Kyle Niewiada’s Website</title><subtitle>My little corner of the Internet where I write about projects I've figured out</subtitle><author><name>Kyle Niewiada</name><email>kyle@kyleniewiada.org</email></author><entry><title type="html">Backing Up Android Nougat Easter Egg Cats (No Root)</title><link href="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/" rel="alternate" type="text/html" title="Backing Up Android Nougat Easter Egg Cats (No Root)" /><published>2017-01-04T05:37:00-05:00</published><updated>2017-01-04T05:37:00-05:00</updated><id>https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/">&lt;p&gt;Every major release of Android in the past couple years has received Google’s Easter Egg treatment. They like to sneak in wallpapers, silly animations, or a fun little game. With the release of Android Nougat (7.0.0), the Easter Egg ended up resembling some kind of &lt;a href=&quot;https://en.wikipedia.org/wiki/Neko_Atsume&quot;&gt;Neko Atsume&lt;/a&gt; themed game.&lt;/p&gt;
+
+&lt;p&gt;The concept is quite simple. Once on Android 7.X.X, after &lt;a href=&quot;http://www.howtogeek.com/269207/how-to-enable-android-nougats-cat-collecting-easter-egg/&quot;&gt;adding the Easter Egg&lt;/a&gt;, the player pulls down their notification menu and selects a piece of food to place out. Certain pieces of food net the player a better chance at catching a cat, but these pieces of food respectively take longer before a cat will eat it. After a cat eats the piece of food, the player will be given a chance of catching it depending on what piece of food was placed out. If they succeed the random check, the player will receive a notification and the cat will appear in their inventory. If they fail, the cat will get away with the food and the player will only find an empty bowl with no notification.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2017/01/bluecat.png&quot; alt=&quot;Dark blue cat from Android Nougat Easter Egg&quot; /&gt;&lt;em&gt;Jack’s Mannequin. Because he’s &lt;a href=&quot;https://www.youtube.com/watch?v=P5LjFkibA7w&quot;&gt;Dark Blue&lt;/a&gt;…&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;google-gamifying-notifications&quot;&gt;Google Gamifying Notifications&lt;/h4&gt;
+
+&lt;p&gt;It’s silly. It really is. But I like looking at these cats and it’s almost like &lt;em&gt;Google &lt;u&gt;is&lt;/u&gt; gamifying the process of me checking my notifications&lt;/em&gt;…and that appears to be happening. They are keeping our vested interest by getting us to return to our notifications with the hope of discovering something new. I like this game..&lt;/p&gt;
+
+&lt;p&gt;I like my little collection of cats so much that I wanted to find a way to back them up. My phone is an LG Nexus 5X. I probably could’ve stopped at LG and you might have been able to guess what the problem is. My phone is probably doomed.&lt;/p&gt;
+
+&lt;p&gt;LG has a &lt;a href=&quot;http://www.techtimes.com/articles/186940/20161125/lg-cant-fix-nexus-5x-bootloop-issue-so-its-offering-full-refunds.htm&quot;&gt;pretty&lt;/a&gt; &lt;a href=&quot;http://www.trustedreviews.com/opinions/lg-g4-bootloop-problem-how-to-diagnose-and-fix&quot;&gt;large-scale&lt;/a&gt; &lt;a href=&quot;http://www.androidauthority.com/lg-v10-bootloop-problem-711334/&quot;&gt;problem&lt;/a&gt; with  &lt;a href=&quot;http://www.androidauthority.com/lg-bootloop-whats-going-on-735474/&quot;&gt;recent phones bootlooping&lt;/a&gt;. When I check out the results of &lt;a href=&quot;https://www.reddit.com/r/nexus5x/&quot;&gt;Nexus 5X Subreddit&lt;/a&gt;, I find horror stories of LG and their support. But I digress. I use the Nexus 5X for the latest Android updates, its cheaper cost, and Project Fi.&lt;/p&gt;
+
+&lt;p&gt;Because of the possible impending doom on my Nexus 5X, I wanted to find a way to back it up and keep the cats safe. My requirement, I didn’t want to root. A short while ago, I transferred over all of my devices from being rooted and jailbroken to running stock because of how much easier it was to maintain. If I was rooted, I would just turn to Titanium Backup and call it a day. But I couldn’t do that. Not without unlocking my bootloader and rooting.&lt;/p&gt;
+
+&lt;p&gt;After little bit of research, I found that ADB has this nifty built-in feature that can &lt;a href=&quot;https://wiki.gentoo.org/wiki/Android/adb&quot;&gt;backup applications&lt;/a&gt; and their data without root.
+I threw on USB debugging, connected my phone to the computer, and wrote the following line to back up my Android Nougat Cats with a script.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;adb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;backup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:\&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;CatsBackup_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:~&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:~&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:~&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ab&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;egg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When the command above is run in Windows Command Prompt, a few screens will appear on the phone to confirm the backup and possibly enter a password to encrypt it. ADB will create a small file with today’s date on my C: drive named &lt;code class=&quot;highlighter-rouge&quot;&gt;CatsBackup_20170104.ab&lt;/code&gt; (January 04, 2017) and it will contain the backup data for my cats. If you’re not using Windows Command Prompt, go ahead and change the file name to whatever you’d like. I just wanted to make it scriptable for myself.&lt;/p&gt;
+
+&lt;p&gt;To restore, simply run:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;adb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restore&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:\&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;CatsBackup_20170104&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ab&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I had a few issues at first where it wouldn’t restore properly. But after the data was erased for the Easter Egg, I was able to successfully restore one of my backups. That could just be my luck, and others might succeed restoring it over their current cat collection on the first try. But if you’re looking to back up your cat collection, this looks like the way to go. You should be able to restore this on any phone (Not sure how it will handle it on a newer version of Android though).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2017/01/velvetcat.png&quot; alt=&quot;Dark red cat from Android Nougat Easter Egg&quot; /&gt;&lt;em&gt;Velvet–for obvious reasons&lt;/em&gt;&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">Every major release of Android in the past couple years has received Google’s Easter Egg treatment. They like to sneak in wallpapers, silly animations, or a fun little game. With the release of Android Nougat (7.0.0), the Easter Egg ended up resembling some kind of Neko Atsume themed game.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2017/01/banner.jpg%22,%20%22height%22=%3E400,%20%22width%22=%3E700,%20%22alt%22=%3E%22Android%20Nougat%20Easter%20Egg%20App%22%7D" /></entry><entry><title type="html">Fixing ‘No Google Profile for Contact’</title><link href="https://www.kyleniewiada.org/blog/2016/07/fixing-no-google-profile-for-contact/" rel="alternate" type="text/html" title="Fixing 'No Google Profile for Contact'" /><published>2016-07-04T11:26:00-04:00</published><updated>2016-07-04T11:26:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/07/fixing-no-google-profile-for-contact</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/07/fixing-no-google-profile-for-contact/">&lt;p&gt;If you’re around me enough, you learn that I love to use voice commands. I’ve been known to walk into a room and shout “okay Google” hoping to hear a device accepting my query. Since early 2015, people have been able to use Google Now to send Hangouts messages. I tried jumping on that bandwagon but every time I attempted to send a message, I was greeted with the response &lt;code class=&quot;highlighter-rouge&quot;&gt;No Google profile for &amp;lt;Contact&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/07/noaccountphone.png&quot; alt=&quot;No Google profile for contact found&quot; /&gt;&lt;em&gt;No Google profile found on my phone&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It worked fine if I was sending an SMS, but never with a Hangouts message. There are a &lt;a href=&quot;https://productforums.google.com/forum/#!topic/hangouts/8Qm5O5ekTG4&quot;&gt;few&lt;/a&gt; &lt;a href=&quot;https://productforums.google.com/forum/#!topic/hangouts/spcmG8qtgiA&quot;&gt;examples&lt;/a&gt; of others finding their own solution or having a server-side fix rolled out. But this was not the solution for me. I tried everything from factory resetting my phone, sideloading the Google contacts app, even loading an Android ROM on a backup phone and retrying the voice commands. But nothing worked.&lt;/p&gt;
+
+&lt;h2 id=&quot;first-there-were-three&quot;&gt;First There Were Three&lt;/h2&gt;
+
+&lt;p&gt;It wasn’t until a few months ago that I realized I had somehow acquired &lt;em&gt;three Google+ profiles&lt;/em&gt; tied to my email. This was a little strange.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;My first Google+ account was set up and tied to my primary account.&lt;/li&gt;
+  &lt;li&gt;My second Google+ account was created as a separate profile for my YouTube account &lt;a href=&quot;https://support.google.com/youtube/answer/2663685&quot;&gt;described here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;When I was managing my accounts I noticed that I had a third one. It appeared that Google had made a Google+ &lt;a href=&quot;https://business.google.com/create&quot;&gt;business page&lt;/a&gt; for my YouTube’s Google+ account. Or maybe I did this by mistake, but I don’t recall going through the creation process.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now I had three Google+ accounts tied to my primary email. When I tried to speak a Google Now Hangouts command, it would not find any contacts. Honestly, I can’t remember if it ever worked before then.&lt;/p&gt;
+
+&lt;p&gt;I had a theory. I thought that there might be a conflict in which route my Google Now commands were following to gather my contacts. The first thing I did was &lt;a href=&quot;https://support.google.com/plus/answer/1044503&quot;&gt;delete my Google+ business page&lt;/a&gt; because it wasn’t linked to anything. Next, I tried to delete my Google+ page linked to my YouTube channel. However, because it was linked, I could not delete it. &lt;a href=&quot;https://www.youtube.com/account_transfer_channel&quot;&gt;This setting&lt;/a&gt; allowed me to switch my connected Google+ profile on my YouTube channel. After severing the link, I was then able to close my old YouTube’s Google+ account.&lt;/p&gt;
+
+&lt;h2 id=&quot;then-there-was-one&quot;&gt;Then There Was One&lt;/h2&gt;
+
+&lt;p&gt;Now I was down to a single Google+ profile. I tried ringing off my voice command “okay Google, send a hangouts message to &amp;lt;Contact&amp;gt;”… And it worked! Unlinking and removing the excess Google+ profiles fixed the path for Google Now finding my contacts. It appears as if there was a conflict between which Google+ account the commands were using.&lt;/p&gt;
+
+&lt;p&gt;If you’re scouring the Internet ripping your hair out like I was trying to find a solution for the ‘No Google profile for &amp;lt;Contact&amp;gt;’ message, check to see if you have any excess Google+ profiles tied to your account. Remove/unlink them if you can, and maybe it will fix your problem like it did mine.&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">If you’re around me enough, you learn that I love to use voice commands. I’ve been known to walk into a room and shout “okay Google” hoping to hear a device accepting my query. Since early 2015, people have been able to use Google Now to send Hangouts messages. I tried jumping on that bandwagon but every time I attempted to send a message, I was greeted with the response No Google profile for &amp;lt;Contact&amp;gt;.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2016/07/banner2.jpg%22,%20%22height%22=%3E450,%20%22width%22=%3E800,%20%22alt%22=%3E%22No%20Account%20for%20Google%20Profile%20on%20Android%20Wear%20Watch%22%7D" /></entry><entry><title type="html">Preventing Windows Applications from Broadcasting a Taskbar Notification</title><link href="https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/" rel="alternate" type="text/html" title="Preventing Windows Applications from Broadcasting a Taskbar Notification" /><published>2016-07-02T12:33:00-04:00</published><updated>2016-07-02T12:33:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/">&lt;p&gt;A few weeks ago a Windows application on my computer was broadcasting notifications that I did not care for. I have an application that communicates with my uninterruptible power supply to shut down my machine in the event of a power outage after a few minutes. If this program estimates less than five minutes of reserve power, the program will broadcast a notification in the system taskbar (with sound!) letting me know.&lt;/p&gt;
+
+&lt;h3 id=&quot;update-after-the-windows-10-anniversary-update-misbehaving-applications-no-longer-re-register-an-entry-for-notifications-this-guide-has-now-been-made-out-of-date-as-hiding-windows-notifications-will-now-handle-behavior-correctly&quot;&gt;UPDATE: After the Windows 10 Anniversary Update, misbehaving applications no longer re-register an entry for notifications. This guide has now been made out of date as hiding Windows Notifications will now handle behavior correctly.&lt;/h3&gt;
+
+&lt;p&gt;If you are familiar with Windows, then you know that there is a feature that allows you to hide notifications and icons to programs in the system tray. However, this application does not seem to respect those rules. Every time the application launches, it appears to reassociate itself and reset all settings made to keep it quiet. If I did manage to mute it, the changes would not survive a system reboot.&lt;/p&gt;
+
+&lt;p&gt;The notification is posted frequently, as my system’s max power draw while gaming will trigger the UPS power draw warning. I found this to happen quite frequently when I was playing in virtual reality and it was continually breaking my immersion by ringing out system notifications in the middle of &lt;a href=&quot;http://store.steampowered.com/app/322770/&quot;&gt;Vanishing Realms&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I understand that this is to help prevent the user from unknowingly leaving their system vulnerable during an outage when the user is not there. But if I lose power while in my VR headset, I am going to know very quickly that my machine should be shut off (not to mention my entire VR world will go black).&lt;/p&gt;
+
+&lt;p&gt;I wanted to keep the functionality of my uninterruptible power supply communications program, but I also wanted to remove the annoying notification. I did a bit of digging inside the Windows registry (Windows 10 64-bit) and found to be what looks like a set of the registry keys responsible for relaying an application notification.&lt;/p&gt;
+
+&lt;h1 id=&quot;removing-the-notification&quot;&gt;Removing the Notification&lt;/h1&gt;
+
+&lt;p&gt;This is a &lt;em&gt;very quick and dirty&lt;/em&gt; registry hack to prevent applications from relaying notifications in the system taskbar. Windows notifications are sent by writing to a parent registry key associated with an application. Each application will attempt to add notifications as a sub-key to the registered parent key. By removing my user’s permission to write to the parent key, the application will be unable to add sub-keys, and silently fails when it attempts to send notifications. I have not noticed any problems yet, but your mileage may vary.&lt;/p&gt;
+
+&lt;p&gt;In case it helps, my machine is using Windows 10 Pro 64-bit.&lt;/p&gt;
+
+&lt;h2 id=&quot;finding-the-notification-key&quot;&gt;Finding the Notification Key&lt;/h2&gt;
+
+&lt;p&gt;The first step is to find the key inside the registry associated with the application. Browse to:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Current\&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;One will find a list of keys for applications registered for the system notifications. If the application you’re looking for does not immediately jump out, it is probably one of the &lt;code class=&quot;highlighter-rouge&quot;&gt;Microsoft.Explorer.Notification.{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&lt;/code&gt; keys.&lt;/p&gt;
+
+&lt;p&gt;The only information that I could find about this and how the key is decided is the claim that &lt;a href=&quot;https://github.com/mumble-voip/mumble/issues/1777#issue-98981400&quot;&gt;it is the application GUID&lt;/a&gt;. However, my research has found that this registry key does not match the GUID for the installed application. My theory is that it is randomly generated upon install. But I have not yet verified this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/07/regedit0.png&quot; alt=&quot;The notification for my battery adding a subkey in the registry&quot; /&gt;&lt;em&gt;The notification for my battery adding a subkey in the registry&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;When the registered application has no notification to display, there will be no subkeys listed for that registry key. However, while a notification is displayed, one can refresh the registry editor (F5 key) and see that a subkey has been added. This will help identify which registry keys are associated with the application notifications.&lt;/p&gt;
+
+&lt;h2 id=&quot;removing-control-permissions&quot;&gt;Removing Control Permissions&lt;/h2&gt;
+
+&lt;p&gt;Next, control permissions need to be removed from that specific registry key. Right-click on the parent key and select &lt;code class=&quot;highlighter-rouge&quot;&gt;Permissions…&lt;/code&gt;.
+&lt;img src=&quot;/assets/img/2016/07/regedit1.png&quot; alt=&quot;Editing Windows registry permissions&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Select the user currently logged into the machine and deny &lt;code class=&quot;highlighter-rouge&quot;&gt;Full control&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Read&lt;/code&gt; permissions. Apply these changes. Attempt to re-create the application notification in the taskbar. If unable to re-create, the correct changes were made. If not, undo the changes and try looking for the key again.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/07/regedit2.png&quot; alt=&quot;Denying full control permissions in Windows registry&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These changes should allow for the removal of annoying applications that do not follow the proper guidelines or rules when it comes to Windows taskbar notifications. Sometimes programs have unintended consequences when the programmer makes assumptions about how and when a user will interact with their program. I was hit with a combination of a program that did not properly register notifications as well as provide no advanced options to disable such notifications (there &lt;em&gt;are&lt;/em&gt; other advanced options under the program).&lt;/p&gt;
+
+&lt;p&gt;If anyone out there has a better method or would like to point out any unforeseen consequences with this, please let me know. For everyone else, this should help tame such applications inside their Winpredows taskbar.&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">A few weeks ago a Windows application on my computer was broadcasting notifications that I did not care for. I have an application that communicates with my uninterruptible power supply to shut down my machine in the event of a power outage after a few minutes. If this program estimates less than five minutes of reserve power, the program will broadcast a notification in the system taskbar (with sound!) letting me know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2016/07/banner.png%22,%20%22height%22=%3E480,%20%22width%22=%3E1011,%20%22alt%22=%3E%22Windows%20registry%20notification%20entry%22%7D" /></entry><entry><title type="html">Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2</title><link href="https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/" rel="alternate" type="text/html" title="Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2" /><published>2016-05-31T16:44:00-04:00</published><updated>2016-05-31T16:44:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/">&lt;p&gt;I think virtual reality is a lot of fun. I had a friend in college demo an Oculus DK1 to me and I was pretty amazed; even though I was running it on a laptop and the display drivers turned everything into wireframe models. I remember getting my hands on my first Google Cardboard, sliding my phone in, and exploring the world through Google Earth. When the HTC Vive went on sale with its advertised room-scale, I bought it. My first real chance to become heavily immersed in a virtual world.&lt;/p&gt;
+
+&lt;h4 id=&quot;update-10272016-after-the-most-recent-raspbian-update-i-need-to-use-an-external-powered-usb-hub-for-my-wireless-adapter-this-is-necessary-to-use-the-5-ghz-band-which-requires-more-power&quot;&gt;UPDATE (10/27/2016): After the most recent Raspbian update, I need to use an external powered USB hub for my wireless adapter. This is necessary to use the 5 GHz band which requires more power.&lt;/h4&gt;
+
+&lt;p&gt;However, my HTC Vive setup did not fit in my room. I ended up running some cables to put it in the room next door. But there was a problem. I wanted to let those around me in the VR room see what I was seeing. I had to figure out a way to mirror or broadcast my desktop to the other room.&lt;/p&gt;
+
+&lt;p&gt;My first thought was that I was going to use my Steam Link as a way to rebroadcast desktop. After all, it’s another product by Valve and its primary function is for streaming games. I thought this was going to work because it had the feature to minimize the Steam Big Picture application and use the desktop instead. But as I began to find out, this did not work with all Steam VR applications and the usability of the HTC Vive suffered.&lt;/p&gt;
+
+&lt;p&gt;If I launched games from my Steam Link, I could no longer use the VR menu. If I tried to launch the Steam Link after I was in the VR menu, it would refuse because I was already “in game”. I tried using alternative software such as Splashtop (Remote software) to stream it to my device, but it was unable to draw the desktop unless I forced it; this interfered with my Vive yet again.&lt;/p&gt;
+
+&lt;p&gt;After failing to use the Steam Link and Splashtop, I came across others mentioning Nvidia’s GameStream as an alternative to streaming gameplay. Nvidia has a built-in feature with their new-ish graphics cards that allow one to stream their gaming setup to an Nvidia Shield tablet. I did not own a Nvidia Shield tablet. Luckily there was an open source client alternative, &lt;a href=&quot;https://github.com/irtimmer/moonlight-embedded&quot;&gt;Moonlight Embedded&lt;/a&gt;, that would allow streaming to a number of different clients. Sure, I could have probably set up a VNC server/VNC client but who knows how long it would have taken for me to get optimized for streaming games, and where was the fun in that?&lt;/p&gt;
+
+&lt;p&gt;It was settled. I was going to install Moonlight Embedded to my Raspberry Pi 2. Here is my setup so far.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-i-used&quot;&gt;What I used:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Raspberry Pi 2 running Raspbian Jessie (May 2016) using NOOBS
+    &lt;ul&gt;
+      &lt;li&gt;Including peripherals such as micoSD card, HDMI cable, case, mouse, keyboard, USB micro power adapter, a method to connect to home network such as wireless adapter or ethernet.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Computer with Windows 10&lt;/li&gt;
+  &lt;li&gt;Nvidia GTX 970 graphics card&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/irtimmer/moonlight-embedded&quot;&gt;Moonlight Embedded&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;setting-up-the-pi&quot;&gt;Setting Up the Pi&lt;/h2&gt;
+
+&lt;p&gt;The first thing that I did was install the latest Raspbian Jessie release on my Raspberry Pi 2 &lt;a href=&quot;https://www.raspberrypi.org/downloads/noobs/&quot;&gt;using NOOBS&lt;/a&gt;. &lt;strike&gt;I originally was using the TP-LINK TL-WDN3200 wireless adapter with my Raspberry Pi to connect on the 5 GHz network. But as I found out later, this was a problematic adapter.&lt;/strike&gt;  I was able to get the TP-LINK TL-WDN3200 working perfectly. I needed to remove DHCPCD (and the default network manager) and use WICD to manage my wireless adapter as DHCPCD appeared to make some kind of aggressive roaming check every minute creating a severe lag on my wireless signal. Make sure the Raspberry Pi is connected to the Internet before continuing.&lt;/p&gt;
+
+&lt;p&gt;After my installation was finished, I followed the Moonlight Embedded directions found in the &lt;a href=&quot;https://github.com/irtimmer/moonlight-embedded/wiki/Packages&quot;&gt;documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adding the line:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://archive.itimmer.nl/raspbian/moonlight jessie main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;to this file:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/etc/apt/sources.list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And running the following to install Moonlight Embedded.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get update
+apt-get install moonlight-embedded
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once everything was complete, Moonlight Embedded was installed on my Pi and ready to use.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-the-computer&quot;&gt;Setting Up the Computer&lt;/h2&gt;
+
+&lt;p&gt;I switched over to my desktop, opening up Nvidia GeForce Experience, and added the information below as a custom Shield game. Out of the box, Moonlight Embedded will launch you to the Steam Big Picture mode and leave you with the same problem as the Steam Link; getting stuck with Steam’s streaming mess. However, with Nvidia GeForce Experience, we can add the ability to stream the desktop without interfering with SteamVR at all. In Nvidia GeForce Experience, add the custom game to GameStream found below .&lt;/p&gt;
+
+&lt;p&gt;The application below is Windows’ built-in remote desktop software. It is what I use it to access my PC machine from the Pi in a separate room.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/05/GFEWindow.png&quot; alt=&quot;Adding remote desktop as Nvidia GameStream custom game&quot; /&gt;&lt;em&gt;Adding remote desktop as a Nvidia GameStream custom game&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Name: RemoteDesktop
+Target: &quot;C:\Windows\System32\mstsc.exe&quot;
+Start in: C:\Windows\System32
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;finishing-the-pi&quot;&gt;Finishing the Pi&lt;/h2&gt;
+
+&lt;p&gt;To finish the setup, Raspberry Pi needs to be paired as a GameStream client to your PC.&lt;/p&gt;
+
+&lt;p&gt;To initiate pairing, type the following on your Raspberry Pi terminal:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;moonlight pair 192.168.1.X
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(replace 192.168.1.X with your PC’s IP, which can be found by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;ipconfig&lt;/code&gt; into the Windows command prompt and matching it with your network interface)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Once pairing has been initiated, a window will pop up on the Windows desktop prompting for a code to be entered. Type in the pairing code presented on the Raspberry Pi into your desktop window, and then you should be successfully paired.&lt;/p&gt;
+
+&lt;p&gt;I created a handy streaming script for my own needs to start streaming on the Raspberry Pi found below. It adds in a few extra lines to disable screen blanking such that my remote session does not freeze or become unusable if my Raspberry Pi enters standby mode. However, none of the extra lines will be necessary &lt;em&gt;unless&lt;/em&gt; you change your /boot/config.txt to turn off the monitor when the screen blanks. Make sure to give the script execute permissions and you should be able to run it.&lt;/p&gt;
+
+&lt;p&gt;Check out the rest of the &lt;a href=&quot;https://github.com/irtimmer/moonlight-embedded/tree/master/docs&quot;&gt;documentation arguments&lt;/a&gt;. Your settings will probably differ.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#Disable screen saver blanking.&lt;/span&gt;
+xset s off
+
+&lt;span class=&quot;c&quot;&gt;#Disable Energy Star features.&lt;/span&gt;
+xset -dpms
+
+&lt;span class=&quot;c&quot;&gt;#Start the Moonlight stream. Make sure to replace the remote address with your own computer's IP.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#This is probably the only necessary command unless you make other changes to Raspbian&lt;/span&gt;
+moonlight stream -1080 -60fps -bitrate 20000 -localaudio -app RemoteDesktop 192.168.1.X
+
+&lt;span class=&quot;c&quot;&gt;#Enable screen saver blanking&lt;/span&gt;
+xset s off
+
+&lt;span class=&quot;c&quot;&gt;#Turn off power saving screen features.&lt;/span&gt;
+xset s on
+
+&lt;span class=&quot;c&quot;&gt;#Enable Energy Star features.&lt;/span&gt;
+xset +dpms
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Don’t forget! Ctrl+Alt+Shift+Q quits the streaming session.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;my-problems-and-solutions&quot;&gt;My Problems and Solutions&lt;/h2&gt;
+
+&lt;p&gt;My installation wasn’t very smooth. I had a lot of problems along the way that kept setting me back and extended the project duration for a couple days.&lt;/p&gt;
+
+&lt;h3 id=&quot;my-raspberry-pi-was-extremely-slow-at-downloading&quot;&gt;My Raspberry Pi was extremely slow at downloading.&lt;/h3&gt;
+
+&lt;p&gt;It was not receiving enough power so I do use a different USB adapter to give it more. I didn’t realize that’s what the flashing logo on the top right corner meant. But once I did figure it out, my download speeds over my network soared past the 1 Mbit that I was getting before.&lt;/p&gt;
+
+&lt;h3 id=&quot;audio-would-not-stream&quot;&gt;Audio would not stream.&lt;/h3&gt;
+
+&lt;p&gt;My audio wouldn’t stream at first to my Raspberry Pi because I wasn’t using the &lt;code class=&quot;highlighter-rouge&quot;&gt;-localaudio&lt;/code&gt; flag. This meant that the primary sound device was changing, then SteamVR was also attempting to change the primary audio device to the HTC Vive, and they were both conflicting with each other. If I did manage to have it to stream to the special Nvidia audio driver, I found it to stutter quite a bit. So I resolved this issue by using the local audio flag to prevent my sound device from changing, and mirroring the SteamVR audio to my primary sound driver on my computer.&lt;/p&gt;
+
+&lt;h3 id=&quot;wireless-streaming-stuttered-every-60-seconds-for-10-seconds&quot;&gt;Wireless streaming stuttered every 60 seconds for 10 seconds.&lt;/h3&gt;
+
+&lt;strike&gt;My wireless adapter was the primary culprit to this. There was some issue with it either being powered or sharing band with on the USB bus with my Raspberry Pi. I switched to my handy [IOGear Ethernet/Wireless adapter](http://www.amazon.com/IOGEAR-Universal-Ethernet-Adapter-GWU627/dp/B004UAKCS6) and have had little problems streaming 20 Mbit streams. This adapter might not work for everybody. It uses the 2.4 GHz band which is commonly known to be quite crowded. My Raspberry Pi is near the wireless access point, so it has little interference.&lt;/strike&gt;
+
+&lt;p&gt;I was able to get my 5 GHz wireless adapter working after uninstalling the newly introduced DHCPCD wireless manager and switching to WICD. I also added “max_usb_current=1” “/boot/config.txt” to prevent my wireless adapter from using all available power from the USB ports. Everything works flawlessly now over wireless.&lt;/p&gt;
+
+&lt;h3 id=&quot;my-hdmi-monitor-would-not-turn-off-after-screen-blanking-with-the-pi&quot;&gt;My HDMI monitor would not turn off after screen blanking with the Pi.&lt;/h3&gt;
+
+&lt;p&gt;I added the undocumented/unsupported &lt;code class=&quot;highlighter-rouge&quot;&gt;hdmi_blanking 1&lt;/code&gt; to the bottom of my &lt;code class=&quot;highlighter-rouge&quot;&gt;/boot/config.txt&lt;/code&gt; file and rebooted. This allowed my monitor to enter standby mode when the Raspberry Pi screen blanked.&lt;/p&gt;
+
+&lt;h3 id=&quot;if-my-monitor-turned-off-in-a-remote-session-i-could-not-turn-it-back-on-without-killing-the-session&quot;&gt;If my monitor turned off in a remote session, I could not turn it back on without killing the session.&lt;/h3&gt;
+
+&lt;p&gt;Because I enabled the ability for the monitor to shut down when the screen blanked off, if I was in a remote session and my Pi entered standby mode, I would be unable to escape because my Pi did not see any wake events as they were all being handed off to my remote session. My solution to this was just a bit more of a lazy hack. I decided to create a script (listed above) that turns off the power saving features before I enter streaming modesave file and restore them after ending the stream. This ensures that I will not get stuck with a monitor in standby while streaming.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-had-buffering-issues&quot;&gt;I had buffering issues.&lt;/h3&gt;
+
+&lt;strike&gt;I solved this simply by playing with the bit rate level. I decided to stick with 10 Mbits for a 720p 60fps stream. In the past 10 days, I've only had the stream freeze once. It's successful enough for me.&lt;/strike&gt;
+
+&lt;p&gt;The stream no longer freezes on me after getting the 5 GHz adapter working and the compression artifacts are extremely minimal. It looks great in 1080p/60 FPS.&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="medium project" /><summary type="html">I think virtual reality is a lot of fun. I had a friend in college demo an Oculus DK1 to me and I was pretty amazed; even though I was running it on a laptop and the display drivers turned everything into wireframe models. I remember getting my hands on my first Google Cardboard, sliding my phone in, and exploring the world through Google Earth. When the HTC Vive went on sale with its advertised room-scale, I bought it. My first real chance to become heavily immersed in a virtual world.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2016/05/banner2.jpg%22,%20%22height%22=%3E455,%20%22width%22=%3E800,%20%22alt%22=%3E%22Raspberry%20Pi%20streaming%20setup%20behind%20monitor%22%7D" /></entry><entry><title type="html">Nintendo 64 - The Legend of Zelda: Ocarina of Time Save File Transfer Guide</title><link href="https://www.kyleniewiada.org/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/" rel="alternate" type="text/html" title="Nintendo 64 - The Legend of Zelda: Ocarina of Time Save File Transfer Guide" /><published>2016-05-01T14:10:00-04:00</published><updated>2016-05-01T14:10:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/05/ocarina-of-time-n64-save-transfer-guide</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/">&lt;p&gt;It was brought to my attention that my &lt;a href=&quot;/blog/2015/04/transferring-n64-saves/&quot;&gt;original blog post&lt;/a&gt; outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.&lt;/p&gt;
+
+&lt;h2 id=&quot;required-tools&quot;&gt;Required tools:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Linux Mint (live CD will work too)
+    &lt;ul&gt;
+      &lt;li&gt;You can choose whatever Linux distro you would like, but the tutorial steps may not match with other Linux distros.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A Working Nintendo 64 (and controller)
+    &lt;ul&gt;
+      &lt;li&gt;It would be best if you could connect this to a TV so you can see the screen. Although I guess if someone makes a TASBot, you wouldn’t need a TV for it.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;8 MB Expansion Pak&lt;/li&gt;
+  &lt;li&gt;Nintendo 64 GameShark with a working parallel port
+    &lt;ul&gt;
+      &lt;li&gt;A working parallel port can usually be found on cartridge versions 3.2 and 3.3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Computer with a working parallel port&lt;/li&gt;
+  &lt;li&gt;Parallel cable
+    &lt;ul&gt;
+      &lt;li&gt;Other users were unable to get a USB to parallel cable to work. I would advise against using an adapter.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The Legend of Zelda: Ocarina of Time&lt;/li&gt;
+  &lt;li&gt;Super Mario 64
+    &lt;ul&gt;
+      &lt;li&gt;Or equivalent. This game is only needed to boot GameShark and change keycode for Ocarina of Time.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;part-one-preparing-the-transfer-computer&quot;&gt;Part One: Preparing the Transfer Computer&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Have your machine (with the parallel port) turned on and booted into its Linux partition or a Live CD equivalent.&lt;/li&gt;
+  &lt;li&gt;On that machine download the &lt;a href=&quot;https://github.com/parasyte/n64rd/releases&quot;&gt;latest release&lt;/a&gt; of N64RD. This tutorial uses version 0.2.0.&lt;/li&gt;
+  &lt;li&gt;Unzip its contents and navigate to the directory using a terminal.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To build N64RD, we need to install ‘scons’. From the command line, run:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo apt-get install -y scons
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After scons has finished installing, in the directory of the unzipped code, to build N64RD run:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; scons
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/2016/05/term.jpg&quot; alt=&quot;Terminal Output&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Your directory should now contain the ‘n64rd’ commandline executable file.&lt;/li&gt;
+  &lt;li&gt;Leave the terminal open and your machine on during the next few steps.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;part-two-preparing-the-nintendo-64&quot;&gt;Part Two: Preparing the Nintendo 64&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;If your Nintendo 64 freezes at any point, you will need to power down your Nintendo 64 and begin again from Part Two: Step 3.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Make sure the 8 MB Expansion Pak is installed in your Nintendo 64.&lt;/li&gt;
+  &lt;li&gt;Connect the Nintendo 64 to the television, and plug in the power cable.&lt;/li&gt;
+  &lt;li&gt;Insert Super Mario 64 into the GameShark, and insert the GameShark into the Nintendo 64.&lt;/li&gt;
+  &lt;li&gt;Turn on your TV and the Nintendo 64.&lt;/li&gt;
+  &lt;li&gt;Once the GameShark main menu has appeared, select ‘key codes’, scroll down to the keycode named “Zelda”, and activate it.&lt;/li&gt;
+  &lt;li&gt;Turn off your Nintendo 64.&lt;/li&gt;
+  &lt;li&gt;Take out the Super Mario 64 cartridge and replace it with the Legend of Zelda: Ocarina of Time.&lt;/li&gt;
+  &lt;li&gt;Connect your Nintendo 64 GameShark to your transfer computer with your parallel cable.&lt;/li&gt;
+  &lt;li&gt;Turn on your Nintendo 64.&lt;/li&gt;
+  &lt;li&gt;Go to the cheat menu and disable all cheats for Legend of Zelda: Ocarina of Time. This is to prevent any cheat conflicts from interfering with our RAM dump.&lt;/li&gt;
+  &lt;li&gt;Next, press the start button to load the ‘Start Game Options’ menu.&lt;/li&gt;
+  &lt;li&gt;Turn on the code generator.&lt;/li&gt;
+  &lt;li&gt;Launch the game with codes.&lt;/li&gt;
+  &lt;li&gt;Load the save file from the main menu that you wish to dump. Only one save may be dumped from RAM at a time.&lt;/li&gt;
+  &lt;li&gt;After the game has loaded, press pause.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;part-three-the-transfer&quot;&gt;Part Three: The Transfer&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/05/setup.jpg&quot; alt=&quot;N64 Transfer Setup&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;If everything is still running normally, on your transfer computer execute a RAM dump by running the following command with N64RD in the terminal.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ ./n64rd -dmemory.z64 -a 0x80000000 -l 0x00800000
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;This will take quite some time. I think I recall somewhere in the neighborhood of 10-20 minutes. After the execution begins, your game will probably freeze. This is fine.&lt;/li&gt;
+  &lt;li&gt;When N64RD has finished executing, you should have an 8 MB RAM dump file in that folder named ‘memory.z64’. Congratulations! You have dumped the active memory of the Legend of Zelda: The Ocarina of Time. You may now power down your Nintendo 64.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;part-four-extracting-the-save&quot;&gt;Part Four: Extracting the Save&lt;/h2&gt;
+
+&lt;p&gt;On a previous blog &lt;a href=&quot;/blog/2015/04/transferring-n64-saves/&quot;&gt;outlining the process&lt;/a&gt; I used to dump my Ocarina of Time save file, the user Bkacjios took some of that information to create a online RAM dump to save file converter. It will extract your save file from the RAM dump and generate a save file with a good checksum (making it a valid non-corrupt save).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/05/banner.jpg&quot; alt=&quot;Ocarina of Time save converter&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Use &lt;a href=&quot;http://www.jaytheham.com/zcw/Ocarina_of_Time_Version_Guide&quot;&gt;this wiki&lt;/a&gt; to determine which Ocarina of Time cartridge version you have.&lt;/li&gt;
+  &lt;li&gt;Navigate to &lt;a href=&quot;https://bkacjios.github.io/OOT-Save-Converter/&quot;&gt;https://bkacjios.github.io/OOT-Save-Converter/&lt;/a&gt;, import your RAM dump, select the correct cartridge version, and download your save file. Feel free to change any of the other options before downloading such as the file slot or other game settings.&lt;/li&gt;
+  &lt;li&gt;Congratulations! You have successfully dumped your Ocarina of Time RAM and extracted your save file to be used with emulators and other tools.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="guide" /><summary type="html">It was brought to my attention that my original blog post outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2016/05/banner.jpg%22,%20%22height%22=%3E470,%20%22width%22=%3E800,%20%22alt%22=%3E%22The%20Legend%20of%20Zelda:%20Ocarina%20of%20Time%20save%20converter%22%7D" /></entry><entry><title type="html">Testing Charma with Selenium</title><link href="https://www.kyleniewiada.org/blog/2016/04/testing-charma-with-selenium/" rel="alternate" type="text/html" title="Testing Charma with Selenium" /><published>2016-04-29T21:26:00-04:00</published><updated>2016-04-29T21:26:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/04/testing-charma-with-selenium</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/04/testing-charma-with-selenium/">&lt;p&gt;If you’re wondering what I’m talking about when I mention the word Charma, I’m referring to an open source web API and web application that I built with two other teammates as a sponsored project by Microsoft for my Grand Valley State University senior capstone. You can read about our project along with a video overview &lt;a href=&quot;/blog/2016/04/charma-gamifying-volunteer-process/&quot;&gt;here&lt;/a&gt;. One of my largest contributions to that project was implementing web browser testing using Selenium.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-largest-contribution-selenium&quot;&gt;My Largest Contribution (Selenium)&lt;/h2&gt;
+
+&lt;p&gt;For testing, our group decided to use Selenium WebDriver to test the interactions between our website and other browsers. The Selenium WebDriver allows for automated tasks to be written and run with different web browsers as a user would. It bypasses any cross-origin scripting policies by using a WebDriver to interact with each browser. Such examples for tests include selecting a field, inputting certain information into that field, submitting, and verifying results with what the website responds back with on the screen. Such a test is used on our registration page to verify that bad entries are not submitted and returned with proper error messages.&lt;/p&gt;
+
+&lt;p&gt;Before this project, I had never heard of Selenium. I would barely consider myself competent after seeing all the test coverage necessary for a website. Our tests are nowhere near complete. However, it did offer a necessary glimpse and small coverage for web browser automation testing.&lt;/p&gt;
+
+&lt;p&gt;In the beginning, when researching the Selenium WebDriver, a decision was made to implement our testing using the browser web drivers. It was not until late in our project that we discovered how slow each implementation of the browser web drivers were. In retrospect, we should have set up was a server to work with the HtmlUnit Driver. Our tests were not necessarily dependent on the ability to drive an actual browser. Using the HtmlUnit Driver would have been significantly faster and independent of the machine we were testing on. The limitations to testing with our webdriver is that we are platform dependent and dependent on the web driver staying up-to-date/compatible with current versions of their respective web browsers. But ahead is the result of my Selenium WebDriver implementation.&lt;/p&gt;
+
+&lt;p&gt;To make Selenium WebDriver testing work for our project, we had to make sure that each of us had installed the same web browsers to test with. All of our environments had Google Chrome and Firefox installed. We used the built-in web driver with Selenium for Firefox, and implemented Chromium’s web driver for Google Chrome. Additionally, all testing platforms needed to be on the same operating system because our Google Chrome web driver was OS dependent. Although, now looking back we could have made a check in the code to see which operating system the user was on and then branch to the appropriate web driver.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-it-up&quot;&gt;Setting It Up&lt;/h2&gt;
+
+&lt;p&gt;To add another web browser or web driver, it is as easy as initializing the web driver for that browser, adding that driver to a global list accessible by the testing suites, starting that web driver, and then stopping it when it is complete.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;#if DEBUG
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Before our Selenium WebDriver can begin testing our website, we have to initialize the Internet Information Services (IIS) to locally deploy your website after build. Before I figured out how to do this, I manually ran an instance of our web app in the background and then ran the tests. But now the startup of our selenium tests are independent of a manual website launch. Once the Internet Information Service has been initialized, we are ready to begin testing.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;#else
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When testing in release mode, we will redirect all of our tests to our production webpage hosted on Azure services.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;#endif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;running-our-selenium-tests&quot;&gt;Running Our Selenium Tests&lt;/h2&gt;
+
+&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/Y_hAWFAp140&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Each web driver for each web browser is initialized and the testing begins. The very first test we have is browsing to Python.org, searching for pycon, and verifying that results exist. We do this to simply verify whether or not our web drivers are working properly. If we fail, we immediately know that there is something wrong with the initialization or setup of our Selenium WebDrivers.&lt;/p&gt;
+
+&lt;p&gt;On the registration page we check for invalid emails, mismatching passwords, passwords that are too short, missing required fields, and ZIP Codes that are not numbers. The entire list of tests for the registration page take roughly 2 seconds for each browser. Next, we verify that all links in the header are what we expect. Such that there are no missing and no extra links in the header of our website. If there is, that would be an example of a routing problem that we may have missed and should inspect immediately. After this, we dynamically grab all links in the header of the website, and test the response code from each URL to verify every link is alive.&lt;/p&gt;
+
+&lt;p&gt;Each link is grabbed dynamically such that if we add a new webpage to our website, we do not need to change too many of our tests. We visit each of those links in the header, and upon each page that we visit, we verify that there are no dead images on each page. After a visit to each link has been made, we repeat the same process and check to verify that no dead links exist on any page that we can find. We separate these two cycles to split up our testing methods and to better understand what goes wrong when a test fails. These tests are verified by getting the HTTP response code from each link we find.&lt;/p&gt;
+
+&lt;p&gt;After all these tests have run, the web drivers exit, and the Internet Information Services are stopped. The results are then displayed.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;p&gt;We had to watch out for our Visual Studio Team Foundation Server failing our tests because it did not have the same operating system as the rest of our testing platform. So I set up a category for the Selenium WebDriver tests with the name “Selenium”. This category was then noted and filtered out of the build steps on the Team Foundation Server. This ensured that our tests would not fail online and then fail to deploy our website after pulling the source code from GitHub.&lt;/p&gt;
+
+&lt;p&gt;Our web driver tests are set up to allows us to create repeated tests and test these interactions across multiple web browsers dynamically. Our project is set up to maintain a list of all implemented web drivers on the system, and then in parallel will run each test for the list of web browsers.&lt;/p&gt;
+
+&lt;p&gt;An unusual note is that we found Firefox to be significantly slower than Google Chrome when it came to interactions with the Selenium WebDriver. I am not entirely sure the reason that this happens.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
+
+&lt;p&gt;I had a great last semester a Grand Valley State University. I was given the opportunity to work with two other outstanding students and briefly with Eric, our mentor at Microsoft. I learned quite a bit about the enormous scope of our enterprise level MVC ASP.net web application and how much more test coverage we actually needed for our project. Tomorrow I graduate and I begin my software developer career. Here’s to the future.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/04/cap.jpg&quot; alt=&quot;my graduation cap lined with LED strings&quot; /&gt;&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="medium project" /><summary type="html">If you’re wondering what I’m talking about when I mention the word Charma, I’m referring to an open source web API and web application that I built with two other teammates as a sponsored project by Microsoft for my Grand Valley State University senior capstone. You can read about our project along with a video overview here. One of my largest contributions to that project was implementing web browser testing using Selenium.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2016/04/banner2.jpg%22,%20%22height%22=%3E438,%20%22width%22=%3E800,%20%22alt%22=%3E%22Testing%20Charma%20with%20Visual%20Studio%20and%20Selenium%22%7D" /></entry><entry><title type="html">Charma - Gamifying the Volunteer Process</title><link href="https://www.kyleniewiada.org/blog/2016/04/charma-gamifying-volunteer-process/" rel="alternate" type="text/html" title="Charma - Gamifying the Volunteer Process" /><published>2016-04-27T11:58:00-04:00</published><updated>2016-04-27T11:58:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/04/charma-gamifying-volunteer-process</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/04/charma-gamifying-volunteer-process/">&lt;p&gt;For my last semester at Grand Valley State University, I was part of a fantastic group sponsored by Microsoft to create an open source web API that promoted volunteerism. For our capstone project, Xinyi Ou, Dave Walsh, and I created Charma; an open source API and web application that attempts to gamify the connections between volunteers and charitable organizations.&lt;/p&gt;
+
+&lt;h2 id=&quot;video-overview&quot;&gt;Video Overview&lt;/h2&gt;
+
+&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/HWSoWfWqcsU&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;source-code&quot;&gt;&lt;a href=&quot;https://github.com/aav7fl/GVSU-capstone-project&quot;&gt;Source Code&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;Charma is an open source API and web application that promotes volunteerism. Specifically, Charma facilitates a bidirectional connection between volunteers and the charitable opportunities in their community. In collaboration with a local non-profit called Gamers Outreach, we developed Charma to utilize gamification techniques and engage both charities and volunteers in the process of tracking past and future opportunities. Charma is implemented as an ASP.NET, enterprise level web application that follows both Web API and MVC design protocols. The RESTful API layer accesses data from an Azure hosted server and the web application provides a user-friendly interface. Both the open source API and application is available publicly on GitHub and commits are automatically tested and pushed to production through a continuous deployment pipeline. Technical skills that were gained from the project include programming in the .NET framework and designing a RESTful API.&lt;/p&gt;
+
+&lt;p&gt;Many charitable organizations depend on volunteers to drive impact in their communities. Charma is a web application and RESTful API that assists these charities in the process of recruiting and retaining volunteers that will remain engaged in their cause. Within Charma, volunteers can host public profiles that highlight their set of skills and interests, and based on their profile, we match them to charitable organizations that need their help. Additionally, volunteers can use the platform to track their progress in hours toward their volunteering goals. Charities benefit from this tracking model in the continuous feedback that they get from their existing volunteers.&lt;/p&gt;
+
+&lt;p&gt;Currently available applications that connect volunteers to charities are mostly static in nature. Volunteers visit the site to sift through a list of charities. Once volunteers have found a charity, the experience is usually considered complete. In contrast, Charma tries to engage volunteers beyond the initial point of contact with a charity. Through gamification techniques and a bidirectional rating system, volunteers are incentivized to return to the application to keep track of their ongoing progress or provide feedback to charities. In addition, they have access to their own volunteering data to understand how their time is spent.&lt;/p&gt;
+
+&lt;p&gt;Charma lets charities to have a more dynamic relationship with their volunteers. Charities can see who has volunteered with them in the past and also see who is interested in volunteering with them. This makes the process of finding volunteers for their next project or event simpler. They can also distinguish volunteers that may be more experienced, based on the volunteer’s history and badges. All of these features will invite charities to participate on Charma more often, helping to build a lively community on Charma.&lt;/p&gt;
+
+&lt;p&gt;Charma has two main components: the RESTful API and the web application. The RESTful API is available to other developers in case they plan to build additional interfaces on top of what Charma currently offers. Potential extensions built using the API could be a mobile application that allows a volunteer to enter hours while out at the event, or a mobile application that allows charities to approve hours while at the event. The web application component is the web interface that we have already developed that allows users to generate a profile or post and find information about charities.&lt;/p&gt;
+
+&lt;p&gt;With the support of our sponsor, Microsoft, we have been fortunate to receive access to enterprise level tools and cloud-based resources to aid in the development of our project. The web application and web API were built with ASP.NET in Visual Studio. Charma is currently hosted as a web service in Azure. The main database as well as other types of storage for the application is also implemented in Azure. Finally, the continuous deployment process is handled through Visual Studio Team Services, a tool that helps us integrate testing and deployment in one pipeline. At the end of the semester, Charma will continue to be available on GitHub as an open source project.&lt;/p&gt;
+
+&lt;p&gt;The initial concept for Charma came out of a desire to help charities and volunteers. We wanted to help make the volunteering process even more rewarding. As part of this mission, we strongly believe that applications such as Charma should remain open source for developers and free for the end users, whether they be charities or volunteers. Our hope is that more developers will extend the functionality of Charma in the future.&lt;/p&gt;
+
+&lt;p&gt;Throughout our project, we collaborated with Gamers Outreach, a 501(c)(3) non-profit organization and its volunteers to guide us in our design choices. One of our most difficult design choices was deciding on the best way to gamify our application. Some volunteers were hesitant to share anything publicly because they felt it was not tactful. They were also concerned that their volunteerism would be perceived as less altruistic. These were concerns that we continued to address with our application. In our research, we found multiple blueprints for gamification such as badges, leaderboards, unlocks, and tangible goods. We compromised and decided to go with a mix of badges, customized rewards, and tangible goods. Based on our feedback from Gamers Outreach, we found this to be the best way to incentivize volunteers with attainable and desirable rewards.&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="large project" /><summary type="html">For my last semester at Grand Valley State University, I was part of a fantastic group sponsored by Microsoft to create an open source web API that promoted volunteerism. For our capstone project, Xinyi Ou, Dave Walsh, and I created Charma; an open source API and web application that attempts to gamify the connections between volunteers and charitable organizations.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2016/04/banner.jpg%22,%20%22height%22=%3E470,%20%22width%22=%3E800,%20%22alt%22=%3E%22Charma%20homepage%22%7D" /></entry><entry><title type="html">iOS Video Player Bug Disclosure</title><link href="https://www.kyleniewiada.org/blog/2016/03/ios-video-bug-disclosure/" rel="alternate" type="text/html" title="iOS Video Player Bug Disclosure" /><published>2016-03-20T18:05:00-04:00</published><updated>2016-03-20T18:05:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/03/ios-video-bug-disclosure</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/03/ios-video-bug-disclosure/">&lt;p&gt;There exists a bug with the iOS video playback and color reproduction. When specific combinations and proportions of colors are present on screen, if (and only if) all user interface elements are hidden, then a decrease in color temperature (mostly red) occurs. This seemingly subtle shift in color turns cartoon characters and online content creators into ghostly pale figures.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/comparison.jpg&quot; alt=&quot;comparing video playback demonstrating bug with and without user interface&quot; /&gt;&lt;em&gt;Note the subtle differences in facial tones and woodgrain color&lt;/em&gt;&lt;/p&gt;
+
+&lt;video width=&quot;800&quot; controls=&quot;&quot; loop=&quot;&quot;&gt;
+  &lt;source src=&quot;/assets/files/2016/03/bug_example.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;h2 id=&quot;steps-to-reproduce&quot;&gt;Steps to Reproduce:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Turn off auto brightness under iOS settings (just in case it may influence the results).&lt;/li&gt;
+  &lt;li&gt;Open Safari on your iOS device and navigate to this page.&lt;/li&gt;
+  &lt;li&gt;Play the video above in full-screen mode (landscape works best).&lt;/li&gt;
+  &lt;li&gt;Tap to hide any user interface elements (such as the AssistiveTouch button or  playback buttons).&lt;/li&gt;
+  &lt;li&gt;Once the user interface is hidden, the face of the character in the middle of the screen will transition for a few seconds to a whitish-green.&lt;/li&gt;
+  &lt;li&gt;Tapping the screen to bring back the user interface will cause the face to regain its proper coloring.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;reproducible-so-far-on&quot;&gt;Reproducible (so far) on:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;iPhone 6 (iOS 9.2.1)&lt;/li&gt;
+  &lt;li&gt;iPad 4 (iOS 9.2.1)&lt;/li&gt;
+  &lt;li&gt;iPad Air 2 (iOS 9.0.2)&lt;/li&gt;
+  &lt;li&gt;iPad Pro (iOS 9.2.1)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;proof-through-testing&quot;&gt;Proof through Testing&lt;/h2&gt;
+
+&lt;p&gt;When I first stumbled across this bug, I thought there was a problem with my iPad Air 2. It was not until I tested this scenario on multiple iOS devices before I was convinced that it was a bug with either iOS or all recent hardware iterations. However, I wanted to be able to prove that this bug existed and that my eyes were not playing tricks.&lt;/p&gt;
+
+&lt;p&gt;I dug out my colorimeter (&lt;a href=&quot;http://www.xrite.com/categories/calibration-profiling/i1display-pro&quot;&gt;i1Display Pro&lt;/a&gt;) that I use to calibrate my monitors in hopes that it would be useful for my project. I tried to use the software that came with it, but nowhere could I find any options to let me read and collect the color value data points.&lt;/p&gt;
+
+&lt;p&gt;After searching for software solutions that would allow me to read color data points from my colorimeter, I stumbled across HCFR. &lt;a href=&quot;https://sourceforge.net/projects/hcfr/&quot;&gt;HCFR&lt;/a&gt; is an open source calibration tool that allowed me to read the color percentages and values (among many other things) through my colorimeter; then graph and observe these data points.&lt;/p&gt;
+
+&lt;h2 id=&quot;capturing-results&quot;&gt;Capturing Results&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/iPadTesting2.jpg&quot; alt=&quot;Capturing iPad Air 2 results&quot; /&gt;&lt;em&gt;Capturing iPad Air 2 results&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I used the bug reproduction video above for my sample capture data on my iPad Air 2. Below is a video demonstrating the live capture with my colorimeter as I replicate the bug behavior –hiding and restoring the user interface.&lt;/p&gt;
+
+&lt;video width=&quot;800&quot; controls=&quot;&quot; autoplay=&quot;&quot; loop=&quot;&quot;&gt;
+  &lt;source src=&quot;/assets/files/2016/03/graphs.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/capture_small.jpg&quot; alt=&quot;HCFR Capture Window&quot; /&gt;&lt;em&gt;&lt;a href=&quot;/assets/img/2016/03/capture_large.jpg&quot;&gt;HCFR Capture Window (click to view larger image)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[&lt;a href=&quot;/assets/files/2016/03/ColorMeasures1.chc&quot;&gt;HCFR Capture Results File&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;h3 id=&quot;disclosure&quot;&gt;Disclosure&lt;/h3&gt;
+&lt;p&gt;December 13, 2015 I submitted this to &lt;a href=&quot;https://bugreport.apple.com/&quot;&gt;Apple’s bug reporter&lt;/a&gt;. February 16, 2016 Apple Developer Relations responded that this was a limitation of the hardware and could not be fixed without a significant impact to power. They state plans to address this issue in the next hardware architecture.&lt;/p&gt;
+
+&lt;h3 id=&quot;reproducibility&quot;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;p&gt;Only under certain conditions with specific color palettes am I able to reproduce this bug. This happens very infrequently. The majority of the time this change in color temperature will not occur. But when it does, it becomes painfully obvious. I have been able to reproduce this with a higher success rate when viewing cartoons because of their stable color palette of the scene. The most notable example I have come across is the TV show, &lt;a href=&quot;https://en.wikipedia.org/wiki/Archer_(TV_series)&quot;&gt;Archer&lt;/a&gt; where it occurred many times throughout the first six seasons.&lt;/p&gt;
+
+&lt;h4 id=&quot;non-cartoon-example&quot;&gt;Non-Cartoon Example&lt;/h4&gt;
+
+&lt;p&gt;An example of this bug occurring on a human face is in &lt;a href=&quot;https://youtu.be/utWQW_TF4ZY?t=535&quot;&gt;this YouTube video&lt;/a&gt; of jacksepticeye. Around the 8:55 mark, the game in the background consists of predominantly gray colors. During this time, when the user interface for YouTube is hidden on the iOS device, the flesh tones on Sean’s face in the corner will transition into a harsh white.&lt;/p&gt;
+
+&lt;h2 id=&quot;solutions&quot;&gt;“Solutions”&lt;/h2&gt;
+
+&lt;p&gt;Across the web &lt;a href=&quot;https://www.reddit.com/r/ipad/comments/2w84cw/&quot;&gt;[1]&lt;/a&gt; &lt;a href=&quot;https://discussions.apple.com/thread/4581841&quot;&gt;[2]&lt;/a&gt; &lt;a href=&quot;https://discussions.apple.com/thread/3822777&quot;&gt;[3]&lt;/a&gt;, there exist somewhat related bugs with iOS video playback and reproduction. Although I can’t say that these issues are directly related, the solution for most of these is to turn on AssistiveTouch.&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;General&amp;gt;Accessibility&amp;gt;AssistiveTouch&amp;gt;On
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;AssistiveTouch (among other things) places a virtual shortcuts/home button on top of every screen on your device. When this occurs, the iOS device considers this a piece of the user interface (why shouldn’t it be?). Because of this behavior, when trying to replicate the bug behavior with the video player, it will not occur because the AssistiveTouch is visible on screen.&lt;/p&gt;
+
+&lt;p&gt;I found it a little strange that the AssistiveTouch solution for other brightness issues on the iPad worked for the color changes during video playback.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-does-this-bug-happen&quot;&gt;Why Does This Bug Happen?&lt;/h2&gt;
+
+&lt;p&gt;I don’t know. I have been trying to figure this out for months. I had hopes that submitting the bug report would give me more answers. I simply do not understand  the &lt;em&gt;exact&lt;/em&gt; conditions that produce this bug. I tried reproducing the bug with an image containing the top eight prominent colors in the bug example video. It did not work.&lt;/p&gt;
+
+&lt;p&gt;Here are the best (abeit far-fetched) theories that I can come up with as to why the (1) color shifts (2) with certain color palettes (3) during videos with a hidden user interface.&lt;/p&gt;
+
+&lt;h3 id=&quot;theories&quot;&gt;Theories&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;It &lt;em&gt;really&lt;/em&gt; is a hardware bug that Apple can’t fix without sacrificing power saving features baked into the operating system.&lt;/li&gt;
+  &lt;li&gt;Maybe it’s possible that iOS is detecting low color on the screen and is assuming that the content is nonmedia (i.e. books/text). It is reducing color gamut to somehow save power with the GPU (if that’s even possible) or something similar.&lt;/li&gt;
+  &lt;li&gt;Perhaps the shift in the red channel has something to do with early preparations for the upcoming &lt;a href=&quot;http://www.macrumors.com/how-to/use-ios-9-3-night-shift-mode/&quot;&gt;Night Shift&lt;/a&gt; feature.&lt;/li&gt;
+  &lt;li&gt;It’s a software bug that they are unable to fix without changing too much of iOS.&lt;/li&gt;
+  &lt;li&gt;Maybe a recent change in iOS video players is a contributing factor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Without knowing more about iOS inner workings, it’s hard to say how much of the operating system this bug affects. But for now, it remains a mystery to myself.&lt;/p&gt;
+
+&lt;p&gt;I wanted to publicly disclose this bug because I understand how frustrating it can be to research such a subtle bug and come up empty while trying to reproduce it. I am hoping that this post will help other users that search for the problem demonstrated be aware that it exists, can be reproduced, and let them know what I have discovered.&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="large project" /><summary type="html">There exists a bug with the iOS video playback and color reproduction. When specific combinations and proportions of colors are present on screen, if (and only if) all user interface elements are hidden, then a decrease in color temperature (mostly red) occurs. This seemingly subtle shift in color turns cartoon characters and online content creators into ghostly pale figures.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2016/03/iPadTesting.jpg%22,%20%22height%22=%3E521,%20%22width%22=%3E800,%20%22alt%22=%3E%22Testing%20iPad%20Air%202%20colors%20with%20i1Display%20Pro%20colorimeter%22%7D" /></entry><entry><title type="html">My Easy In-line USB Power Switch</title><link href="https://www.kyleniewiada.org/blog/2016/03/easy-inline-usb-power-switch/" rel="alternate" type="text/html" title="My Easy In-line USB Power Switch" /><published>2016-03-15T20:25:00-04:00</published><updated>2016-03-15T20:25:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/03/easy-inline-usb-power-switch</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/03/easy-inline-usb-power-switch/">&lt;p&gt;I had a USB microphone that was plugged into my computer; it was on at all times. If I was watching a movie, the blue glow from beneath the microphone mesh would illuminate my desk.&lt;/p&gt;
+
+&lt;p&gt;Rather than wear out the durability of my USB connector with 1,500 mating cycles &lt;a href=&quot;http://www.usb.org/developers/docs/devclass_docs/CabConn20.pdf&quot;&gt;[1]&lt;/a&gt; &lt;a href=&quot;https://gct.co/usb-connectors/&quot;&gt;[2]&lt;/a&gt;, I decided to add an in-line power switch to the USB cable. My idea was to add the same kind of switch used in retrofitting old lamps.&lt;/p&gt;
+
+&lt;p&gt;I am almost positive (&lt;em&gt;electric joke&lt;/em&gt;) that most people have done something similar to this before. When I take a quick look on Amazon, I can find USB micro cables with in-line power switches. However, none for USB 2.0 A-&amp;gt;B connectors. So I made one myself.&lt;/p&gt;
+
+&lt;p&gt;The USB 2.0 specification layout gave me a definition to what each wire inside the cable should be (assuming I can’t guess). The red wire carried the power, and that was the wire I was going to use in my switch. The black wire was the ground, the green wire was for data in positive, and the white wire was for data in negative.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/layout.png&quot; alt=&quot;USB 2.0 specification layout&quot; /&gt;&lt;em&gt;&lt;a href=&quot;http://www.usb.org/developers/docs/ecn1.pdf&quot;&gt;http://www.usb.org/developers/docs/ecn1.pdf&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I used my X-Acto knife with #2 blades and wire strippers to tear open the shielding on a cable and strip away the wire insulation. I soldered the red wires to the switch connectors, filled it with hot glue, surrounded the edges with electric tape to act like an overmold, and threw it all together.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/prototype.jpg&quot; alt=&quot;Prototype/Proof of concept&quot; /&gt;&lt;em&gt;Prototype/Proof of concept&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Wow… What a terrible prototype that was. But it worked. When I flipped the switch off, the microphone lost power and it turned off. When I flipped the switch on, the microphone came back to life. No more disconnecting and reconnecting the USB cable to the microphone.&lt;/p&gt;
+
+&lt;p&gt;I was not satisfied. I wanted a clean professional look for this. I could do better. So I ordered up a new switch and cable to attempt it again.
+I stripped away the outer cable shielding being careful not to take too much away. I wanted to keep as much as the cable as possible so that I didn’t need any support outside of the switch casing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/assembly.jpg&quot; alt=&quot;/assets/img/2016/03/assembly.jpg&quot; /&gt;&lt;em&gt;The assembly process&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of soldering the red wire, this time I decided to simply wrap it around the screws and tighten it down. Before closing the switch casing back up, I wrapped the data and ground wires with tinfoil to add any shielding that may had been removed earlier. I closed it back up and confirmed the cable as working.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/final.jpg&quot; alt=&quot;completion of the in-line USB power switch&quot; /&gt;&lt;em&gt;All finished up&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is my final product; A USB cable (A-&amp;gt;B) with an in-line power switch near the end. Whenever I feel the need to dim the blue light from the microphone, or turn off its features, it’s only a flip of a switch away. I made this approximately one year ago and it has held up without any problems. A smaller switch may have been a better idea, but I was looking to use pieces that I could easily find. Here is a picture of it set up with my microphone.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/banner2.jpg&quot; alt=&quot;final results of the in-line USB power switch&quot; /&gt;&lt;em&gt;final results of the in-line USB power switch&lt;/em&gt;&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">I had a USB microphone that was plugged into my computer; it was on at all times. If I was watching a movie, the blue glow from beneath the microphone mesh would illuminate my desk.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2016/03/banner2.jpg%22,%20%22height%22=%3E603,%20%22width%22=%3E800,%20%22alt%22=%3E%22Inline%20power%20switch%20on%20a%20USB%20cable%22%7D" /></entry><entry><title type="html">Microsoft Word Auto-Journal Macro for the Lazy</title><link href="https://www.kyleniewiada.org/blog/2016/03/word-auto-journal-macro-for-lazy/" rel="alternate" type="text/html" title="Microsoft Word Auto-Journal Macro for the Lazy" /><published>2016-03-14T16:19:00-04:00</published><updated>2016-03-14T16:19:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/03/word-auto-journal-macro-for-lazy</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/03/word-auto-journal-macro-for-lazy/">&lt;p&gt;A few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.&lt;/p&gt;
+
+&lt;p&gt;As is the motivation for many projects/scripts of mine, I wanted to automate the process as much as possible such that I never had to think about it again [anytime soon]. This was shortly after I had &lt;a href=&quot;/blog/2015/12/making-a-book-from-facebook-messages/&quot;&gt;concluded work on a previous project&lt;/a&gt; that involved using Microsoft Word with macro scripts. I was ready to learn more about its advanced features. I wanted an automatic running total because I would often forget to recalculate my grand total after each entry. There were probably other solutions that were better suited for this, but I really wanted to see how useful Microsoft Word macros (I know the evil stigma associated with macros) could be to me.&lt;/p&gt;
+
+&lt;h4 id=&quot;goals&quot;&gt;Goals:&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Automatically insert a new blank entry for today with the cursor ready to write a description&lt;/li&gt;
+  &lt;li&gt;The ability to total hours for all entries without the user remembering&lt;/li&gt;
+  &lt;li&gt;Automatically update total hours at top of document&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;results&quot;&gt;Results:&lt;/h4&gt;
+
+&lt;p&gt;I created a Microsoft Word macro enabled document that when opened will:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Automatically remove empty paragraphs that Microsoft Word &lt;em&gt;loves&lt;/em&gt; to place at the end of your document&lt;/li&gt;
+  &lt;li&gt;Add skeleton text containing today’s date, start, end, and total time&lt;/li&gt;
+  &lt;li&gt;Add a paragraph labeled “Description:”&lt;/li&gt;
+  &lt;li&gt;Calculate total hours on exit without user needing to remember&lt;/li&gt;
+  &lt;li&gt;Automatically add skeleton entry on document open&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;what-it-does&quot;&gt;What it does&lt;/h3&gt;
+
+&lt;p&gt;I have provided an example document below. It includes a text-button to add the total number of hours for each entry and another text-button to add new journal entries.&lt;/p&gt;
+
+&lt;p&gt;The macro calculates the total number of hours entered by searching for the ‘Total [*]’ string. When it matches, it will add the number found between ‘[]’ to a running total until the entire document has been searched. It will then return the total. The example document shows this total at the top. It is not foolproof. It can be easily defeated if someone decides to include the ‘Total [*]’ string inside their journal entry, or if one wants to overflow the numbers. But it works for me without any major issues (including the null value case), and that is what mattered.&lt;/p&gt;
+
+&lt;p&gt;The macro adds a new journal entry to the end of the text by searching for the end of the document, removing any extra paragraphs at the end of the document, and then adding in the pre-scripted skeleton structure for a new journal entry with the date of today. During planning, I could have gone above and beyond and calculated the total hours between the start time and end time of a task/added it to the ‘Total []’ field, but I decided to draw the line there. The amount of work I was putting in for something that would take no time to accomplish would not be paying off.&lt;/p&gt;
+
+&lt;p&gt;When the document is closed, the macro will run and add up the total number of hours from the listed entries automatically. A save dialog will then pop up and the user may choose to save or discard changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;source-code-and-example-document&quot;&gt;Source code and example document&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/files/2016/03/JournalExample.docm&quot;&gt;Microsoft Word Auto-Journal example document&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Above is a link to the macro enabled Microsoft Word document example. Below is the source code for the macro. Most of it is pieced together from other examples online accomplishing similar tasks. I spent most of my time looking at different resources for visual basic techniques and have mentioned those sources in nearby comments for pieces of code where available.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;Sub AutoOpen()
+
+    Call autoText
+    
+End Sub
+
+&amp;#39;Generate form fill text for document on call
+Sub autoText()
+    
+    &amp;#39;remove the empty paragraph that word likes to add to the end of the document on open.
+    Call removeEmptyPara
+    Selection.EndKey Unit:=wdStory
+    Selection.TypeParagraph
+    Selection.InsertDateTime DateTimeFormat:=&amp;quot;MMMM dd, yyyy&amp;quot;, _
+    InsertAsField:=False
+    Selection.TypeText vbTab &amp;amp; &amp;quot;Start [] End [] Total []&amp;quot;
+    Selection.EndKey Unit:=wdStory
+    Selection.TypeParagraph
+    Selection.TypeText &amp;quot;Description: &amp;quot;
+
+End Sub
+
+&amp;#39;Removes empty paragraphs located at the end of the document
+Sub removeEmptyPara()
+    &amp;#39;http://www.extendoffice.com/documents/word/647-word-remove-empty-paragraphs.html
+    Selection.Find.ClearFormattin
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = &amp;quot;^p^p&amp;quot;
+        .Replacement.Text = &amp;quot;&amp;quot;
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchByte = False
+        .MatchAllWordForms = False
+        .MatchSoundsLike = False
+        .MatchWildcards = False
+        .MatchFuzzy = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+
+End Sub
+
+Sub AutoClose()
+
+    Call findTotal
+
+End Sub
+
+Sub findTotal()
+
+    &amp;#39;based on http://stackoverflow.com/questions/6425595/word-vba-how-to-select-text-between-two-substrings-and-assign-to-variable
+    
+    Dim firstTerm As String
+    Dim secondTerm As String
+    Dim myRange As Range
+    Dim documentText As String
+
+    Dim startPos As Long &amp;#39;Stores the starting position of firstTerm
+    Dim stopPos As Long &amp;#39;Stores the starting position of secondTerm based on first term&amp;#39;s location
+    Dim nextPosition As Long &amp;#39;The next position to search for the firstTerm
+    Dim total As Double
+    
+    total = 0
+    nextPosition = 1
+
+    firstTerm = &amp;quot;Total [&amp;quot;
+    secondTerm = &amp;quot;]&amp;quot;
+
+    &amp;#39;Get all the document text and store it in a variable.
+    Set myRange = ActiveDocument.Range
+    &amp;#39;Maximum limit of a string is 2 billion characters.
+    &amp;#39;So, hopefully your document is not bigger than that.  However, expect declining performance based on how big doucment is
+    documentText = myRange.Text
+
+    &amp;#39;Loop documentText till you can&amp;#39;t find any more matching &amp;quot;terms&amp;quot;
+    Do Until nextPosition = 0
+        startPos = InStr(nextPosition, documentText, firstTerm, vbTextCompare)
+        stopPos = InStr(startPos, documentText, secondTerm, vbTextCompare)
+
+        &amp;#39;prevents empty brackets from crashing macro
+        If stopPos - startPos &amp;lt;&amp;gt; Len(firstTerm) Then
+            &amp;#39;Debug.Print Mid$(documentText, startPos + Len(firstTerm), stopPos - startPos - Len(firstTerm))
+            total = total + Mid$(documentText, startPos + Len(firstTerm), stopPos - startPos - Len(firstTerm))
+        End If
+        nextPosition = InStr(stopPos, documentText, firstTerm, vbTextCompare)
+    Loop
+    
+    Debug.Print &amp;quot;Total = &amp;quot;; total
+    ActiveDocument.Variables(&amp;quot;total&amp;quot;).Delete
+    ActiveDocument.Variables.Add Name:=&amp;quot;total&amp;quot;, Value:=total
+    &amp;#39;MsgBox &amp;quot;I&amp;#39;m done&amp;quot;
+    Call UpdateAll
+
+End Sub
+
+Sub UpdateAll()
+    &amp;#39;Based on unknown source.
+    Dim oStory As Range
+    For Each oStory In ActiveDocument.StoryRanges
+        oStory.Fields.Update
+        If oStory.StoryType &amp;lt;&amp;gt; wdMainTextStory Then
+            While Not (oStory.NextStoryRange Is Nothing)
+                Set oStory = oStory.NextStoryRange
+                oStory.Fields.Update
+            Wend
+        End If
+    Next oStory
+    Set oStory = Nothing
+End Sub&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/aav7fl/7df0051c6fa9fd8a42bb.js&quot;&gt; &lt;/script&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">A few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2016/03/banner.png%22,%20%22height%22=%3E505,%20%22width%22=%3E964,%20%22alt%22=%3E%22Microsoft%20Word%20output%20for%20auto%20journal%20macro%22%7D" /></entry></feed>
