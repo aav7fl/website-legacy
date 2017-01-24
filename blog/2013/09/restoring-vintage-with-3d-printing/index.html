@@ -1,1 +1,341 @@
-<!DOCTYPE html> <html class="no-js" lang="en"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" /> <title> Restoring Vintage with 3D Printing </title> <!-- Come and get me RSS readers --> <link type="application/atom+xml" rel="alternate" href="https://www.kyleniewiada.org/feed.xml" title="Kyle Niewiada's Website" /> <!-- Critical Stylesheet --> <style type="text/css"> html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:.8em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local("Open Sans Light"),local("OpenSans-Light"),url("/assets/fonts/open-sans-v13-latin-300.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-300.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local("Open Sans"),local("OpenSans"),url("/assets/fonts/open-sans-v13-latin-regular.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-regular.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local("Open Sans Semibold"),local("OpenSans-Semibold"),url("/assets/fonts/open-sans-v13-latin-600.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-600.woff") format("woff")}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;src:local("PT Serif"),local("PTSerif-Regular"),url("/assets/fonts/pt-serif-v8-latin-regular.woff2") format("woff2"),url("/assets/fonts/pt-serif-v8-latin-regular.woff") format("woff")}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;src:local("PT Serif Italic"),local("PTSerif-Italic"),url("/assets/fonts/pt-serif-v8-latin-italic.woff2") format("woff2"),url("/assets/fonts/pt-serif-v8-latin-italic.woff") format("woff")}@font-face{font-family:'PT Serif';font-style:normal;font-weight:700;src:local("PT Serif Bold"),local("PTSerif-Bold"),url("/assets/fonts/pt-serif-v8-latin-700.woff2") format("woff2"),url("/assets/fonts/pt-serif-v8-latin-700.woff") format("woff")}@font-face{font-family:'PT Serif';font-style:italic;font-weight:700;src:local("PT Serif Bold Italic"),local("PTSerif-BoldItalic"),url("/assets/fonts/pt-serif-v8-latin-700italic.woff2") format("woff2"),url("/assets/fonts/pt-serif-v8-latin-700italic.woff") format("woff")}.pageTitle{margin:.5em auto .5em;text-align:center}body{font-size:1em;line-height:1.45}body .intro{font-size:1.25em;line-height:1.7}@media (min-width: 43.75em){body{font-size:1em;line-height:1.375}}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:.5rem 0 .5rem;font-family:"Open Sans",Helvetica,Arial,sans-serif}h1,.h1{font-size:2em;line-height:1.25}@media (min-width: 43.75em){h1,.h1{font-size:2.5em;line-height:1.125}}@media (min-width: 56.25em){h1,.h1{font-size:3em;line-height:1.05}}h2,.h2{font-size:1.625em;line-height:1.15384615}@media (min-width: 43.75em){h2,.h2{font-size:2em;line-height:1.25}}@media (min-width: 56.25em){h2,.h2{font-size:2.25em;line-height:1.25}}h3,.h3{font-size:1.375em;line-height:1.13636364}@media (min-width: 43.75em){h3,.h3{font-size:1.5em;line-height:1.25}}@media (min-width: 56.25em){h3,.h3{font-size:1.75em;line-height:1.25}}h4,.h4{font-size:1.125em;line-height:1.11111111}@media (min-width: 43.75em){h4,.h4{line-height:1.22222222}}blockquote{font-size:1.25em;line-height:1.25;padding:0}@media (min-width: 43.75em){blockquote{font-size:1.5em;line-height:1.45833333}}.coalate h1,.coalate h2,.coalate h3,.coalate h4,.coalate h5,.coalate h6{margin:.5rem 0 .5rem;font-family:"Open Sans",Helvetica,Arial,sans-serif}.titlemeta{overflow:auto;color:#696969;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-size:.8em}.titlemeta .meta-left{float:left}.titlemeta .meta-right{float:right}.code{font-size:.8em}.container{max-width:700px;margin-right:auto;margin-left:auto;padding:0 20px}.container:after{content:" ";display:block;clear:both}.post .postTitle{text-align:left}.post .meta{text-align:center;color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300}.post img{display:block;margin-left:auto;margin-right:auto}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{font-family:"PT Serif",Georgia,Times,serif;line-height:1.75;font-size:112.5%;color:#111;overflow-x:hidden}body p,body ul{margin:0 0 1.5rem}::-moz-selection{background:#3d256d;color:white}::selection{background:#3d256d;color:white}img,video,audio,iframe,object{max-width:100%}@media (min-width: 800px){.container{width:800px;margin-right:auto;margin-left:auto;padding:0}}a{color:#3d256d}a:hover{color:#1d1234}.noList{list-style:none;padding-left:0;margin-left:0}dt{font-weight:bold}dd{margin:0 0 1.5rem}.post ul ul,.post ul ol,.post ol ul,.post ol ol{margin:0}.pagination .next{float:left}.pagination .previous{float:right}.posts li{margin-bottom:4rem;position:relative}.posts li:before{content:"";position:absolute;bottom:-2rem;left:0;background:#e6e6e6;height:2px;width:60px}.posts li a{text-decoration:none}.posts li a:hover{text-decoration:underline}.posts li .date{color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:.8em}.logo img{display:none}.post .featuredImage{margin-top:2rem}.post .featuredImage img{margin-bottom:0}@media (min-width: 800px){#contact form{width:100%;float:left}}_:-ms-lang(x),.header{background-image:url("/assets/img/banner.jpg") !important}.header{background-image:url("/assets/img/banner.svg");background-color:#3a3a3c;background-size:cover;background-position:center center;color:#3a3a3c;padding:0;height:3em}@media (min-width: 800px){.header{height:15em;position:relative;padding-bottom:2em}.header .container{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);margin:auto auto}}.navigation{height:70px;background:#262626;font-family:"Open Sans",Helvetica,Arial,sans-serif}.brand{position:absolute;padding-left:20px;float:left;line-height:70px;font-size:1.4em}.brand a,.brand a:visited{color:#fff;text-decoration:none}.nav-container{max-width:1000px;margin:0 auto}nav{float:right}nav ul{list-style:none;margin:0;padding:0}nav ul li{float:left;position:relative}nav ul li a,nav ul li a:visited{display:block;padding:0 20px;line-height:70px;color:#fff;text-decoration:none}nav ul li a:hover,nav ul li a:visited:hover{background:#00b2d9;color:#fff}.nav-dropdown{position:absolute;display:none;box-shadow:0 3px 12px rgba(0,0,0,0.15)}.nav-mobile{display:none;position:absolute;top:0;right:0;height:70px;width:70px}@media only screen and (max-width: 799px){.nav-mobile{display:block}nav{width:100%;padding:70px 0 15px}nav ul{display:none}nav ul li{float:none}nav ul li a{padding:15px;line-height:20px}nav ul li ul li a{padding-left:30px}.nav-dropdown{position:static}}@media screen and (min-width: 800px){.nav-list{display:block !important}}.nav-list{background:#262626}#nav-toggle{position:absolute;left:18px;top:22px;cursor:pointer;padding:10px 35px 16px 0px}#nav-toggle span,#nav-toggle span:before,#nav-toggle span:after{cursor:pointer;border-radius:1px;height:5px;width:35px;background:#fff;position:absolute;display:block;content:'';transition:all 300ms ease-in-out}#nav-toggle span:before{top:-10px}#nav-toggle span:after{bottom:-10px}#nav-toggle.active span{background-color:transparent}#nav-toggle.active span:before,#nav-toggle.active span:after{top:0}#nav-toggle.active span:before{transform:rotate(45deg)}#nav-toggle.active span:after{transform:rotate(-45deg)}ul.nav-list li.active{background:#3d256d;padding-bottom:4px} </style> <!-- Begin Jekyll SEO tag v2.1.0 --> <title>Restoring Vintage with 3D Printing - Kyle Niewiada’s Website</title> <meta property="og:title" content="Restoring Vintage with 3D Printing" /> <meta name="description" content="Now, I understand that some people like to have posts that show progress they’ve made before and after a project. I’m sorry to say that I don’t have that many posts of the “before”. I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker." /> <meta property="og:description" content="Now, I understand that some people like to have posts that show progress they’ve made before and after a project. I’m sorry to say that I don’t have that many posts of the “before”. I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker." /> <link rel="canonical" href="https://www.kyleniewiada.org/blog/2013/09/restoring-vintage-with-3d-printing/" /> <meta property="og:url" content="https://www.kyleniewiada.org/blog/2013/09/restoring-vintage-with-3d-printing/" /> <meta property="og:site_name" content="Kyle Niewiada’s Website" /> <meta property="og:image" content="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2013/09/small/DSC09139.JPG%22,%20%22height%22=%3E532,%20%22width%22=%3E800,%20%22alt%22=%3E%22Marantz%202220B%20taken%20apart%20for%20upgrading%20parts%22%7D" /> <meta property="og:image:height" content="532" /> <meta property="og:image:width" content="800" /> <meta property="og:type" content="article" /> <meta property="article:published_time" content="2013-09-22T00:00:00-04:00" /> <meta name="twitter:card" content="summary_large_image" /> <meta name="twitter:site" content="@CrypticCitrus" /> <meta name="twitter:creator" content="@CrypticCitrus" /> <meta property="fb:app_id" content="137961485759" /> <script type="application/ld+json"> {"@context": "http://schema.org", "@type": "BlogPosting", "headline": "Restoring Vintage with 3D Printing", "image": "https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2013/09/small/DSC09139.JPG%22,%20%22height%22=%3E532,%20%22width%22=%3E800,%20%22alt%22=%3E%22Marantz%202220B%20taken%20apart%20for%20upgrading%20parts%22%7D", "datePublished": "2013-09-22T00:00:00-04:00", "description": "Now, I understand that some people like to have posts that show progress they’ve made before and after a project. I’m sorry to say that I don’t have that many posts of the “before”. I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker.", "publisher": {"@type": "Organization", "logo": {"@type": "ImageObject", "url": "https://www.kyleniewiada.org/assets/logo.jpg"}}, "url": "https://www.kyleniewiada.org/blog/2013/09/restoring-vintage-with-3d-printing/"}</script> <!-- End Jekyll SEO tag --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-37567352-1', 'auto'); ga('send', 'pageview'); </script> </head> <body> <!-- start header --> <div class="header"> <div class="navigation"> <div class="nav-container"> <div class="brand"> <a href="/">Kyle Niewiada</a> </div> <nav> <div class="nav-mobile"> <a id="nav-toggle" href="#!"><span></span></a> </div> <ul class="nav-list"> <li class="normal"><a href="/">Home</a></li> <li class="normal"><a href="/about/">About</a></li> <li class="normal"><a href="/archive/">Archive</a></li> <li class="normal"><a href="/contact/">Contact</a></li> <li class="normal"><a href="/resume/">Résumé</a></li> </ul> </nav> </div> </div> </div> <!-- end header --> <div class="content"> <div class="container"> <!-- lazy way to hide page title on blog posts --> <div class="post"> <div class="featuredImage"> <img src="/assets/img/2013/09/small/DSC09139.JPG" alt="Marantz 2220B taken apart for upgrading parts" /> </div> <h1 class="pageTitle">Restoring Vintage with 3D Printing</h1> <h3 class="meta">Kyle Niewiada</h3> <p class="meta">September 22, 2013 |<span class="time">14</span> Minute Read | Large project</p> <p>Now, I understand that some people like to have posts that show progress they’ve made before and after a project. I’m sorry to say that I don’t have that many posts of the “before”. I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker.</p> <p>I originally made this thread on <a href="http://www.audiokarma.org/forums/showthread.php?p=7108861">AudioKarma</a>, but thought this would also be an appropriate place to write this post.</p> <p>Before I begin, I started this project to restore my own Marantz 2220b. I’ve had the little guy…er…rather not so little, for roughly two years. In that time, I have loved having it as my main (and only) amp (and it happily replaced my Sony amp from the 90s).</p> <p>My story begins with my amp (what else!?).<br /> Sorry for this poor photo. This was from a few months ago. I forgot to take ‘before pictures’. As you can see in the photo, there are two-ish burnt lamps. Since I took this photo, nearly all of my lamps burned themselves out. That lead me to decide on a project to restore my amp.</p> <p><img src="/assets/img/2013/09/small/bHhSN6f.jpg" alt="original lighting of amplifier" /><em>Original Lighting</em></p> <p>Those pretty blue (or in this case– greenish) lamps…er..normal lamps were in need of replacing. When I had first purchased this (from a smoker), it ended up being pretty filthy on this inside. But at the time, all of the lamps worked. So I spent my time cleaning it out and running DeoxIT through the pots and switches.</p> <p>While researching for information about my Marantz amp, I decided I should replace all of the incandescent bulbs and fuses with LEDs. So I made my purchases from ebay (both for the lamps and for the stereo/dial bulbs). I will post information at the bottom if you are interested.</p> <p>I had one problem. Like other people who own an older Marantz with plastic lamp housings, many of them have melted, become broken/brittle or lost shape. I was no exception. My lamp housing was partially melted and my tabs were broken off. They are hard to find in acceptable condition, and when one is found, it costs an arm and a leg to obtain.</p> <p>I did however discover that a user here on AK (Kudos to <a href="http://www.audiokarma.org/forums/index.php?members/bikemandan.78937/">bikemandan</a>!) <a href="http://www.audiokarma.org/forums/showthread.php?t=467773">posted a 3D model</a> of a lamp housing he had created. I was able to use that as a starting point for my restoration.</p> <p>After a bit of research, I concluded that his lamp housing had a very good chance of fitting perfectly with my model (it was about 90% perfect for me). I used his model to help re-create a version more suitable for both my 2220B, and a 3D printer. My result was this.</p> <p><img src="/assets/img/2013/09/small/2220B_Lamp_housing_edit_preview_featured.jpg" alt="3D model of Marantz 2220B light housing" /><em>Link to file on <a href="http://www.thingiverse.com/thing:150349">Thingiverse</a></em></p> <p>Now I was tasked with trying to find a place to print it. I discovered that 3D printing was expensive! Luckily, I had two friends who both had 3D printers. Unluckily, neither of them had theirs working with no ETA.<br /> That is when I found out that my local university had just very recently purchased a Makerbot Replicator 2.</p> <p>I scheduled up a time to work with the 3D printer. That’s when I discovered that I was the first person to use it with one of my own designs. This is where I ran into a few issues with the 3D printer.</p> <p>It started out very nicely.</p> <p><img src="/assets/img/2013/09/small/IMG_0100.JPG" alt="Makerbot 2 printing Marantz Housing" /><em>Makerbot 2 printing Marantz Housing</em></p> <p><img src="/assets/img/2013/09/small/IMG_0103.JPG" alt="Makerbot 2 printing Marantz Housing" /></p> <p><img src="/assets/img/2013/09/small/IMG_0107.JPG" alt="Makerbot 2 printing Marantz Housing" /></p> <p><img src="/assets/img/2013/09/small/IMG_0106.JPG" alt="Makerbot 2 printing Marantz Housing" /></p> <p>But then, as the printer approached the top of the design, it could not figure out how to print the top layer without supports (I have a personal opinion on what the algorithm should have done, but that’s another story). So near the end of the print, it turned into a stringy disaster.</p> <p><img src="/assets/img/2013/09/small/IMG_0110.JPG" alt="Failed housing design" /><em>Failed housing design</em></p> <p><img src="/assets/img/2013/09/small/IMG_0108.JPG" alt="Failed housing design" /></p> <p>I had also discovered that during the print job, the temperature of the room had changed by well over 10 degrees. This caused my model to warp in on itself on the build platform. Either way… this model was not going to work.</p> <p>After that print job, the girl running the printer suggested I could try it again overnight. I quickly agreed, added supports to the model, and awaited the final product.</p> <p>The next day, I checked on the print job only to find out that it had stopped 10% of the way through. This seemed like a very odd bug, and I decided to print it again. After about another hour of re-calibrating and re-fixing the build platform, the printing started. It was taking a long time to start the print job because none of us had ever printed an object of this size and ‘sorta complexity’ before. We kept missing important steps of the print setup.</p> <p>Around an hour into the print job, I noticed that the printer was plugged into a power strip with a motion sensor. It was at that point that I realized the printer must have been shut off the previous night (Causing the print job to stop &amp; cancel) because no one was around to trip the motion sensor. Because I couldn’t stick around for the print job to finish (I had class), I improvised.</p> <p>This fan blew the rubber bands in front of the sensor causing it to reset its timer every few seconds.</p> <p><img src="/assets/img/2013/09/small/2013-09-10%2012.04.14.jpg" alt="fan blowing a rubber band in front of a sensor" /></p> <p>Here is the final photo I took of it printing before leaving. You can see the breakaway supports that are being added at the bottom (or in this case the front of the model).</p> <p><img src="/assets/img/2013/09/small/2013-09-10%2011.48.39.jpg" alt="Makerbot 2 printing Marantz 2220B light housing again" /></p> <p>This quick setup kept the printer from going off for the duration of the 5.5 hour print job.</p> <p>At the end of the day, I picked up my model, broke off its temporary supports, and prepared it for the rebuild of my Marantz 2220B.</p> <p>Here are a few photos of the final results. You can see the original lamp housing on the left, the failed (string and warped) print job in the middle, and then the final model on the far right. It’s worth mentioning that the mode on the right had to be slightly modified; hence the rough edges in the back. I had to increase the size of the hole in the back (which has been updated in my thingiverse model) in order to get the fuse lamps to fit through it.</p> <p>The end cost to me was free (it probably won’t happen again) because they have not figured out a way to charge students at my university on printed objects. But, I was also the first student they’ve ever had use their printer for a project. Every object printed up to this point were small items found built into the device or from the popular sections of thingiverse.</p> <p><img src="/assets/img/2013/09/small/DSC09132.JPG" alt="final print model" /></p> <p><img src="/assets/img/2013/09/small/DSC09131.JPG" alt="final print model" /></p> <p><img src="/assets/img/2013/09/small/DSC09130.JPG" alt="final print model" /></p> <p><img src="/assets/img/2013/09/small/DSC09129.JPG" alt="original, prototype, and final print model" /><em>Original, prototype, and final</em></p> <p>Now I had a perfectly built lamp housing to go in as a replacement for my old one. I placed the model into my Marantz and you can see that it fits without any issues.</p> <p><img src="/assets/img/2013/09/small/DSC09138.JPG" alt="printed model inside Marantz 2220B" /><em>Almost ready for the first test..</em></p> <p><img src="/assets/img/2013/09/small/DSC09137.JPG" alt="printed model inside Marantz 2220B with lights on" /><em>An overview of my Marantz with the bright blue part placed inside.</em></p> <p><img src="/assets/img/2013/09/small/DSC09139.JPG" alt="overview and comparison of parts" /><em>An overview and comparison of the parts</em></p> <p>A close up, and then with the faceplate on.</p> <p><img src="/assets/img/2013/09/small/DSC09140.JPG" alt="close up with faceplate on" /></p> <p><img src="/assets/img/2013/09/small/DSC09141.JPG" alt="close up with faceplate on" /><em>Front glass finally on</em></p> <p>Now I’m putting it all back together (with new vellum)</p> <p><img src="/assets/img/2013/09/small/DSC09144.JPG" alt="Testing the Marantz 2220B before assembly" /></p> <p><img src="/assets/img/2013/09/small/DSC09145.JPG" alt="Marantz 2220B put back together" /><em>Faceplate engaged!</em></p> <p>Of course, I also re-adjusted my amp’s voltage and amplifier biases (All 4).</p> <p>Here are the final results of it all in action. (For those of you wondering about the feet; Yes, I still have them. But I removed them because they hang over my speakers just on the edge causing damage to the wooden speaker cabinets.)<br /> Overall, it is very red and blue. Maybe too blue.. but I think it will grow on me more than the green… maybe.<br /> <strong>Edit: It has. I like it.</strong></p> <p><img src="/assets/img/2013/09/small/DSC09158.JPG" alt="final shots of Marantz 2220B after restoration" /><em>Yellowcard poster hiding in the back…</em></p> <p><img src="/assets/img/2013/09/small/DSC09157.JPG" alt="final shots of Marantz 2220B after restoration" /></p> <p><img src="/assets/img/2013/09/small/DSC09152.JPG" alt="final shots of Marantz 2220B after restoration" /><em>Pairing up with my setup</em></p> <p>Nice even lighting, adjusted bias, and a great looking amplifier. I hope you’ve enjoyed this post as much as I have!</p> <p>If you have any questions about the process or would like you know anything else, feel free to ask!</p> <p>Afterthoughts:</p> <p>3D printing has been in the news a lot lately. I get it. It seems to be a pretty big deal. Well…it is! When one makes a 3D model on the computer and prints it for the very first time, holds that object in their hand, they are left with a surreal feeling. This is beginning to blur the lines between what we see as imaginative, and reality. It truly is a fantastic technology that I eagerly await any growth in its field. Here is to a future technology that can help enhance our lives one print job at a time.</p> <p>–Lots of information and links that somebody might want to know–</p> <p>Printer Used: Makerbot Replicator 2<br /> Plastic: PLA (Blue)<br /> Time to print (With automatic supports): 5.5 hours on default standard settings.<br /> Marantz Model: 2220B<br /> Turntable: Rega Planar 3 (With 24V motor upgrade.. it needed a new motor at the time, decided to upgrade during replacement)<br /> Speakers: Sansui SP-1700 pair (Only one is shown. Grills are removed. I love the look). They sound amazing paired with the 2220B.<br /> Headphones: Sony MDR-V6 circa early 1990s</p> <p>Blue LED Fuses were purchased from ebay user investmentaudio.<br /> LED Stereo “bulb” + Amber indicator LED were purchased from ebay user wlyn5455.<br /> <a href="http://www.thingiverse.com/thing:30132">Original Lamp Housing Design</a><br /> <a href="http://www.thingiverse.com/thing:150349">My Lamp Housing Re-Design</a></p> <p>Keep listening</p> <!-- POST NAVIGATION --> <div class="postNav clearfix"> <a class="prev image" href="/blog/2013/04/somewhere-to-start/"><span>&laquo;&nbsp;Somewhere to Start From</span> <img src="/assets/img/default-card.png" alt="Previous Article"> </a> <a class="next image" href="/blog/2015/04/transferring-n64-saves/"><span>Transferring My N64 Saves&nbsp;&raquo;</span> <img src="/assets/img/2015/04/DSC09669.JPG" alt="Next Article"> </a> </div> </div> <!-- Add Disqus comments. --> <div id="disqus_thread"></div> <script type="text/javascript"> /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ var disqus_shortname = 'kyleniewiada'; // required: replace example with your forum shortname var disqus_identifier = "/blog/2013/09/restoring-vintage-with-3d-printing/"; /* * * DON'T EDIT BELOW THIS LINE * * */ (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> </div> </div><!-- end content --> <!-- start footer --> <div class="footer"> <div class="container"> <span class="meta"> <span> | </span> <a href="https://www.linkedin.com/in/kyleniewiada/">LinkedIn</a> <span> | </span> <a href="https://github.com/aav7fl">GitHub</a> <span> | </span> <a href="https://twitter.com/CrypticCitrus">Twitter</a> <span> | </span> <a href="https://www.youtube.com/user/KyleNiewiada">YouTube</a> <span> | </span> <a href="https://kyleniewiada.bandcamp.com/" rel='nofollow'>BandCamp</a> <span> | </span> </span> </div> </div> <!-- end footer --> <!-- start scripts --> <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> <script defer src="/assets/js/nav.js" type="text/javascript"></script> <!-- end scripts --> <!-- start noncritical style --> <link rel="stylesheet" href="/assets/css/noncritical.css" media="none" onload="if(media!='all')media='all'"> <!-- end noncritical style --> </body> </html>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+
+    <title>
+      
+        Restoring Vintage with 3D Printing
+      
+    </title>
+
+    <!-- Come and get me RSS readers -->
+    <link type="application/atom+xml" rel="alternate" href="https://www.kyleniewiada.org/feed.xml" title="Kyle Niewiada's Website" />
+
+    <!-- Critical Stylesheet -->
+    <style type="text/css">
+      
+      html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:.8em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local("Open Sans Light"),local("OpenSans-Light"),url("/assets/fonts/open-sans-v13-latin-300.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-300.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local("Open Sans"),local("OpenSans"),url("/assets/fonts/open-sans-v13-latin-regular.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-regular.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local("Open Sans Semibold"),local("OpenSans-Semibold"),url("/assets/fonts/open-sans-v13-latin-600.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-600.woff") format("woff")}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;src:local("PT Serif"),local("PTSerif-Regular"),url("/assets/fonts/pt-serif-v8-latin-regular.woff2") format("woff2"),url("/assets/fonts/pt-serif-v8-latin-regular.woff") format("woff")}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;src:local("PT Serif Italic"),local("PTSerif-Italic"),url("/assets/fonts/pt-serif-v8-latin-italic.woff2") format("woff2"),url("/assets/fonts/pt-serif-v8-latin-italic.woff") format("woff")}@font-face{font-family:'PT Serif';font-style:normal;font-weight:700;src:local("PT Serif Bold"),local("PTSerif-Bold"),url("/assets/fonts/pt-serif-v8-latin-700.woff2") format("woff2"),url("/assets/fonts/pt-serif-v8-latin-700.woff") format("woff")}@font-face{font-family:'PT Serif';font-style:italic;font-weight:700;src:local("PT Serif Bold Italic"),local("PTSerif-BoldItalic"),url("/assets/fonts/pt-serif-v8-latin-700italic.woff2") format("woff2"),url("/assets/fonts/pt-serif-v8-latin-700italic.woff") format("woff")}.pageTitle{margin:.5em auto .5em;text-align:center}body{font-size:1em;line-height:1.45}body .intro{font-size:1.25em;line-height:1.7}@media (min-width: 43.75em){body{font-size:1em;line-height:1.375}}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:.5rem 0 .5rem;font-family:"Open Sans",Helvetica,Arial,sans-serif}h1,.h1{font-size:2em;line-height:1.25}@media (min-width: 43.75em){h1,.h1{font-size:2.5em;line-height:1.125}}@media (min-width: 56.25em){h1,.h1{font-size:3em;line-height:1.05}}h2,.h2{font-size:1.625em;line-height:1.15384615}@media (min-width: 43.75em){h2,.h2{font-size:2em;line-height:1.25}}@media (min-width: 56.25em){h2,.h2{font-size:2.25em;line-height:1.25}}h3,.h3{font-size:1.375em;line-height:1.13636364}@media (min-width: 43.75em){h3,.h3{font-size:1.5em;line-height:1.25}}@media (min-width: 56.25em){h3,.h3{font-size:1.75em;line-height:1.25}}h4,.h4{font-size:1.125em;line-height:1.11111111}@media (min-width: 43.75em){h4,.h4{line-height:1.22222222}}blockquote{font-size:1.25em;line-height:1.25;padding:0}@media (min-width: 43.75em){blockquote{font-size:1.5em;line-height:1.45833333}}.coalate h1,.coalate h2,.coalate h3,.coalate h4,.coalate h5,.coalate h6{margin:.5rem 0 .5rem;font-family:"Open Sans",Helvetica,Arial,sans-serif}.titlemeta{overflow:auto;color:#696969;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-size:.8em}.titlemeta .meta-left{float:left}.titlemeta .meta-right{float:right}.code{font-size:.8em}.container{max-width:700px;margin-right:auto;margin-left:auto;padding:0 20px}.container:after{content:" ";display:block;clear:both}.post .postTitle{text-align:left}.post .meta{text-align:center;color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300}.post img{display:block;margin-left:auto;margin-right:auto}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{font-family:"PT Serif",Georgia,Times,serif;line-height:1.75;font-size:112.5%;color:#111;overflow-x:hidden}body p,body ul{margin:0 0 1.5rem}::-moz-selection{background:#3d256d;color:white}::selection{background:#3d256d;color:white}img,video,audio,iframe,object{max-width:100%}@media (min-width: 800px){.container{width:800px;margin-right:auto;margin-left:auto;padding:0}}a{color:#3d256d}a:hover{color:#1d1234}.noList{list-style:none;padding-left:0;margin-left:0}dt{font-weight:bold}dd{margin:0 0 1.5rem}.post ul ul,.post ul ol,.post ol ul,.post ol ol{margin:0}.pagination .next{float:left}.pagination .previous{float:right}.posts li{margin-bottom:4rem;position:relative}.posts li:before{content:"";position:absolute;bottom:-2rem;left:0;background:#e6e6e6;height:2px;width:60px}.posts li a{text-decoration:none}.posts li a:hover{text-decoration:underline}.posts li .date{color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:.8em}.logo img{display:none}.post .featuredImage{margin-top:2rem}.post .featuredImage img{margin-bottom:0}@media (min-width: 800px){#contact form{width:100%;float:left}}_:-ms-lang(x),.header{background-image:url("/assets/img/banner.jpg") !important}.header{background-image:url("/assets/img/banner.svg");background-color:#3a3a3c;background-size:cover;background-position:center center;color:#3a3a3c;padding:0;height:3em}@media (min-width: 800px){.header{height:15em;position:relative;padding-bottom:2em}.header .container{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);margin:auto auto}}.navigation{height:70px;background:#262626;font-family:"Open Sans",Helvetica,Arial,sans-serif}.brand{position:absolute;padding-left:20px;float:left;line-height:70px;font-size:1.4em}.brand a,.brand a:visited{color:#fff;text-decoration:none}.nav-container{max-width:1000px;margin:0 auto}nav{float:right}nav ul{list-style:none;margin:0;padding:0}nav ul li{float:left;position:relative}nav ul li a,nav ul li a:visited{display:block;padding:0 20px;line-height:70px;color:#fff;text-decoration:none}nav ul li a:hover,nav ul li a:visited:hover{background:#00b2d9;color:#fff}.nav-dropdown{position:absolute;display:none;box-shadow:0 3px 12px rgba(0,0,0,0.15)}.nav-mobile{display:none;position:absolute;top:0;right:0;height:70px;width:70px}@media only screen and (max-width: 799px){.nav-mobile{display:block}nav{width:100%;padding:70px 0 15px}nav ul{display:none}nav ul li{float:none}nav ul li a{padding:15px;line-height:20px}nav ul li ul li a{padding-left:30px}.nav-dropdown{position:static}}@media screen and (min-width: 800px){.nav-list{display:block !important}}.nav-list{background:#262626}#nav-toggle{position:absolute;left:18px;top:22px;cursor:pointer;padding:10px 35px 16px 0px}#nav-toggle span,#nav-toggle span:before,#nav-toggle span:after{cursor:pointer;border-radius:1px;height:5px;width:35px;background:#fff;position:absolute;display:block;content:'';transition:all 300ms ease-in-out}#nav-toggle span:before{top:-10px}#nav-toggle span:after{bottom:-10px}#nav-toggle.active span{background-color:transparent}#nav-toggle.active span:before,#nav-toggle.active span:after{top:0}#nav-toggle.active span:before{transform:rotate(45deg)}#nav-toggle.active span:after{transform:rotate(-45deg)}ul.nav-list li.active{background:#3d256d;padding-bottom:4px}
+
+      
+    </style>
+
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<title>Restoring Vintage with 3D Printing - Kyle Niewiada’s Website</title>
+<meta property="og:title" content="Restoring Vintage with 3D Printing" />
+<meta name="description" content="Now, I understand that some people like to have posts that show progress they’ve made before and after a project. I’m sorry to say that I don’t have that many posts of the “before”. I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker." />
+<meta property="og:description" content="Now, I understand that some people like to have posts that show progress they’ve made before and after a project. I’m sorry to say that I don’t have that many posts of the “before”. I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker." />
+<link rel="canonical" href="https://www.kyleniewiada.org/blog/2013/09/restoring-vintage-with-3d-printing/" />
+<meta property="og:url" content="https://www.kyleniewiada.org/blog/2013/09/restoring-vintage-with-3d-printing/" />
+<meta property="og:site_name" content="Kyle Niewiada’s Website" />
+<meta property="og:image" content="https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2013/09/small/DSC09139.JPG%22,%20%22height%22=%3E532,%20%22width%22=%3E800,%20%22alt%22=%3E%22Marantz%202220B%20taken%20apart%20for%20upgrading%20parts%22%7D" />
+<meta property="og:image:height" content="532" />
+<meta property="og:image:width" content="800" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-09-22T00:00:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@CrypticCitrus" />
+<meta name="twitter:creator" content="@CrypticCitrus" />
+<meta property="fb:app_id" content="137961485759" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Restoring Vintage with 3D Printing",
+"image": "https://www.kyleniewiada.org/%7B%22url%22=%3E%22/assets/img/2013/09/small/DSC09139.JPG%22,%20%22height%22=%3E532,%20%22width%22=%3E800,%20%22alt%22=%3E%22Marantz%202220B%20taken%20apart%20for%20upgrading%20parts%22%7D",
+"datePublished": "2013-09-22T00:00:00-04:00",
+"description": "Now, I understand that some people like to have posts that show progress they’ve made before and after a project. I’m sorry to say that I don’t have that many posts of the “before”. I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker.",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "https://www.kyleniewiada.org/assets/logo.jpg"}},
+"url": "https://www.kyleniewiada.org/blog/2013/09/restoring-vintage-with-3d-printing/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+     <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ ga('create', 'UA-37567352-1', 'auto');
+ ga('send', 'pageview');
+</script>
+ 
+</head>
+
+
+<body>
+   <!-- start header -->
+<div class="header">
+  <div class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="/">Kyle Niewiada</a>
+      </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            
+                
+                <li class="normal"><a href="/">Home</a></li>
+            
+                
+                <li class="normal"><a href="/about/">About</a></li>
+            
+                
+                <li class="normal"><a href="/archive/">Archive</a></li>
+            
+                
+                <li class="normal"><a href="/contact/">Contact</a></li>
+            
+                
+                <li class="normal"><a href="/resume/">Résumé</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+  </div>
+</div>
+<!-- end header -->
+
+   <div class="content">
+      <div class="container">
+        <!-- lazy way to hide page title on blog posts -->
+        
+         <div class="post">
+  
+    <div class="featuredImage">
+        <img src="/assets/img/2013/09/small/DSC09139.JPG" alt="Marantz 2220B taken apart for upgrading parts" />
+      </div>
+  
+  <h1 class="pageTitle">Restoring Vintage with 3D Printing</h1>
+  <h3 class="meta">Kyle Niewiada</h3>
+  <p class="meta">September 22, 2013 |<span class="time">14</span> Minute Read | Large project</p>
+
+  <p>Now, I understand that some people like to have posts that show progress they’ve made before and after a project. I’m sorry to say that I don’t have that many posts of the “before”. I only thought about documentation half-way through. Without further delay, my (mostly restored?) Marantz 2220b as told by a lurker.</p>
+
+<p>I originally made this thread on <a href="http://www.audiokarma.org/forums/showthread.php?p=7108861">AudioKarma</a>, but thought this would also be an appropriate place to write this post.</p>
+
+<p>Before I begin, I started this project to restore my own Marantz 2220b. I’ve had the little guy…er…rather not so little, for roughly two years. In that time, I have loved having it as my main (and only) amp (and it happily replaced my Sony amp from the 90s).</p>
+
+<p>My story begins with my amp (what else!?).<br />
+Sorry for this poor photo. This was from a few months ago. I forgot to take ‘before pictures’. As you can see in the photo, there are two-ish burnt lamps. Since I took this photo, nearly all of my lamps burned themselves out. That lead me to decide on a project to restore my amp.</p>
+
+<p><img src="/assets/img/2013/09/small/bHhSN6f.jpg" alt="original lighting of amplifier" /><em>Original Lighting</em></p>
+
+<p>Those pretty blue (or in this case– greenish) lamps…er..normal lamps were in need of replacing. When I had first purchased this (from a smoker), it ended up being pretty filthy on this inside. But at the time, all of the lamps worked. So I spent my time cleaning it out and running DeoxIT through the pots and switches.</p>
+
+<p>While researching for information about my Marantz amp, I decided I should replace all of the incandescent bulbs and fuses with LEDs. So I made my purchases from ebay (both for the lamps and for the stereo/dial bulbs). I will post information at the bottom if you are interested.</p>
+
+<p>I had one problem. Like other people who own an older Marantz with plastic lamp housings, many of them have melted, become broken/brittle or lost shape. I was no exception. My lamp housing was partially melted and my tabs were broken off. They are hard to find in acceptable condition, and when one is found, it costs an arm and a leg to obtain.</p>
+
+<p>I did however discover that a user here on AK (Kudos to <a href="http://www.audiokarma.org/forums/index.php?members/bikemandan.78937/">bikemandan</a>!) <a href="http://www.audiokarma.org/forums/showthread.php?t=467773">posted a 3D model</a> of a lamp housing he had created. I was able to use that as a starting point for my restoration.</p>
+
+<p>After a bit of research, I concluded that his lamp housing had a very good chance of fitting perfectly with my model (it was about 90% perfect for me). I used his model to help re-create a version more suitable for both my 2220B, and a 3D printer. My result was this.</p>
+
+<p><img src="/assets/img/2013/09/small/2220B_Lamp_housing_edit_preview_featured.jpg" alt="3D model of  Marantz 2220B light housing" /><em>Link to file on <a href="http://www.thingiverse.com/thing:150349">Thingiverse</a></em></p>
+
+<p>Now I was tasked with trying to find a place to print it. I discovered that 3D printing was expensive! Luckily, I had two friends who both had 3D printers. Unluckily, neither of them had theirs working with no ETA.<br />
+That is when I found out that my local university had just very recently purchased a Makerbot Replicator 2.</p>
+
+<p>I scheduled up a time to work with the 3D printer. That’s when I discovered that I was the first person to use it with one of my own designs. This is where I ran into a few issues with the 3D printer.</p>
+
+<p>It started out very nicely.</p>
+
+<p><img src="/assets/img/2013/09/small/IMG_0100.JPG" alt="Makerbot 2 printing Marantz Housing" /><em>Makerbot 2 printing Marantz Housing</em></p>
+
+<p><img src="/assets/img/2013/09/small/IMG_0103.JPG" alt="Makerbot 2 printing Marantz Housing" /></p>
+
+<p><img src="/assets/img/2013/09/small/IMG_0107.JPG" alt="Makerbot 2 printing Marantz Housing" /></p>
+
+<p><img src="/assets/img/2013/09/small/IMG_0106.JPG" alt="Makerbot 2 printing Marantz Housing" /></p>
+
+<p>But then, as the printer approached the top of the design, it could not figure out how to print the top layer without supports (I have a personal opinion on what the algorithm should have done, but that’s another story). So near the end of the print, it turned into a stringy disaster.</p>
+
+<p><img src="/assets/img/2013/09/small/IMG_0110.JPG" alt="Failed housing design" /><em>Failed housing design</em></p>
+
+<p><img src="/assets/img/2013/09/small/IMG_0108.JPG" alt="Failed housing design" /></p>
+
+<p>I had also discovered that during the print job, the temperature of the room had changed by well over 10 degrees. This caused my model to warp in on itself on the build platform. Either way… this model was not going to work.</p>
+
+<p>After that print job, the girl running the printer suggested I could try it again overnight. I quickly agreed, added supports to the model, and awaited the final product.</p>
+
+<p>The next day, I checked on the print job only to find out that it had stopped 10% of the way through. This seemed like a very odd bug, and I decided to print it again. After about another hour of re-calibrating and re-fixing the build platform, the printing started. It was taking a long time to start the print job because none of us had ever printed an object of this size and ‘sorta complexity’ before. We kept missing important steps of the print setup.</p>
+
+<p>Around an hour into the print job, I noticed that the printer was plugged into a power strip with a motion sensor. It was at that point that I realized the printer must have been shut off the previous night (Causing the print job to stop &amp; cancel) because no one was around to trip the motion sensor. Because I couldn’t stick around for the print job to finish (I had class), I improvised.</p>
+
+<p>This fan blew the rubber bands in front of the sensor causing it to reset its timer every few seconds.</p>
+
+<p><img src="/assets/img/2013/09/small/2013-09-10%2012.04.14.jpg" alt="fan blowing a rubber band in front of a sensor" /></p>
+
+<p>Here is the final photo I took of it printing before leaving. You can see the breakaway supports that are being added at the bottom (or in this case the front of the model).</p>
+
+<p><img src="/assets/img/2013/09/small/2013-09-10%2011.48.39.jpg" alt="Makerbot 2  printing Marantz 2220B light housing again" /></p>
+
+<p>This quick setup kept the printer from going off for the duration of the 5.5 hour print job.</p>
+
+<p>At the end of the day, I picked up my model, broke off its temporary supports, and prepared it for the rebuild of my Marantz 2220B.</p>
+
+<p>Here are a few photos of the final results. You can see the original lamp housing on the left, the failed (string and warped) print job in the middle, and then the final model on the far right. It’s worth mentioning that the mode on the right had to be slightly modified; hence the rough edges in the back. I had to increase the size of the hole in the back (which has been updated in my thingiverse model) in order to get the fuse lamps to fit through it.</p>
+
+<p>The end cost to me was free (it probably won’t happen again) because they have not figured out a way to charge students at my university on printed objects. But, I was also the first student they’ve ever had use their printer for a project. Every object printed up to this point were small items found built into the device or from the popular sections of thingiverse.</p>
+
+<p><img src="/assets/img/2013/09/small/DSC09132.JPG" alt="final print model" /></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09131.JPG" alt="final print model" /></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09130.JPG" alt="final print model" /></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09129.JPG" alt="original, prototype, and final print model" /><em>Original, prototype, and final</em></p>
+
+<p>Now I had a perfectly built lamp housing to go in as a replacement for my old one. I placed the model into my Marantz and you can see that it fits without any issues.</p>
+
+<p><img src="/assets/img/2013/09/small/DSC09138.JPG" alt="printed model inside Marantz 2220B" /><em>Almost ready for the first test..</em></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09137.JPG" alt="printed model inside Marantz 2220B with lights on" /><em>An overview of my Marantz with the bright blue part placed inside.</em></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09139.JPG" alt="overview and comparison of parts" /><em>An overview and comparison of the parts</em></p>
+
+<p>A close up, and then with the faceplate on.</p>
+
+<p><img src="/assets/img/2013/09/small/DSC09140.JPG" alt="close up with faceplate on" /></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09141.JPG" alt="close up with faceplate on" /><em>Front glass finally on</em></p>
+
+<p>Now I’m putting it all back together (with new vellum)</p>
+
+<p><img src="/assets/img/2013/09/small/DSC09144.JPG" alt="Testing the Marantz 2220B before assembly" /></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09145.JPG" alt="Marantz 2220B put back together" /><em>Faceplate engaged!</em></p>
+
+<p>Of course, I also re-adjusted my amp’s voltage and amplifier biases (All 4).</p>
+
+<p>Here are the final results of it all in action. (For those of you wondering about the feet; Yes, I still have them. But I removed them because they hang over my speakers just on the edge causing damage to the wooden speaker cabinets.)<br />
+Overall, it is very red and blue. Maybe too blue.. but I think it will grow on me more than the green… maybe.<br />
+<strong>Edit: It has. I like it.</strong></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09158.JPG" alt="final shots of Marantz 2220B after restoration" /><em>Yellowcard poster hiding in the back…</em></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09157.JPG" alt="final shots of Marantz 2220B after restoration" /></p>
+
+<p><img src="/assets/img/2013/09/small/DSC09152.JPG" alt="final shots of Marantz 2220B after restoration" /><em>Pairing up with my setup</em></p>
+
+<p>Nice even lighting, adjusted bias, and a great looking amplifier. I hope you’ve enjoyed this post as much as I have!</p>
+
+<p>If you have any questions about the process or would like you know anything else, feel free to ask!</p>
+
+<p>Afterthoughts:</p>
+
+<p>3D printing has been in the news a lot lately. I get it. It seems to be a pretty big deal. Well…it is! When one makes a 3D model on the computer and prints it for the very first time, holds that object in their hand, they are left with a surreal feeling. This is beginning to blur the lines between what we see as imaginative, and reality. It truly is a fantastic technology that I eagerly await any growth in its field. Here is to a future technology that can help enhance our lives one print job at a time.</p>
+
+<p>–Lots of information and links that somebody might want to know–</p>
+
+<p>Printer Used: Makerbot Replicator 2<br />
+Plastic: PLA (Blue)<br />
+Time to print (With automatic supports): 5.5 hours on default standard settings.<br />
+Marantz Model: 2220B<br />
+Turntable: Rega Planar 3 (With 24V motor upgrade.. it needed a new motor at the time, decided to upgrade during replacement)<br />
+Speakers: Sansui SP-1700 pair (Only one is shown. Grills are removed. I love the look). They sound amazing paired with the 2220B.<br />
+Headphones: Sony MDR-V6 circa early 1990s</p>
+
+<p>Blue LED Fuses were purchased from ebay user investmentaudio.<br />
+LED Stereo “bulb” + Amber indicator LED were purchased from ebay user wlyn5455.<br />
+<a href="http://www.thingiverse.com/thing:30132">Original Lamp Housing Design</a><br />
+<a href="http://www.thingiverse.com/thing:150349">My Lamp Housing Re-Design</a></p>
+
+<p>Keep listening</p>
+
+  <!-- POST NAVIGATION -->
+  <div class="postNav clearfix">
+    
+      <a class="prev image" href="/blog/2013/04/somewhere-to-start/"><span>&laquo;&nbsp;Somewhere to Start From</span>
+      
+        <img src="/assets/img/default-card.png" alt="Previous Article">
+      
+    </a>
+    
+    
+      <a class="next image" href="/blog/2015/04/transferring-n64-saves/"><span>Transferring My N64 Saves&nbsp;&raquo;</span>
+      
+        <img src="/assets/img/2015/04/DSC09669.JPG" alt="Next Article">
+      
+      </a>
+    
+  </div>
+</div>
+
+				
+<!-- Add Disqus comments. -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'kyleniewiada'; // required: replace example with your forum shortname
+  var disqus_identifier = "/blog/2013/09/restoring-vintage-with-3d-printing/";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+      </div>
+   </div><!-- end content -->
+   <!-- start footer -->
+  <div class="footer">
+    <div class="container">
+      <span class="meta">
+        <span> | </span>
+
+  
+    <a href="https://www.linkedin.com/in/kyleniewiada/">LinkedIn</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://github.com/aav7fl">GitHub</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://twitter.com/CrypticCitrus">Twitter</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://www.youtube.com/user/KyleNiewiada">YouTube</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://kyleniewiada.bandcamp.com/" rel='nofollow'>BandCamp</a>
+  
+    <span> | </span>
+
+
+      </span>
+    </div>
+  </div>
+<!-- end footer -->
+
+<!-- start scripts -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script defer src="/assets/js/nav.js" type="text/javascript"></script>
+
+<!-- end scripts -->
+
+<!-- start noncritical style -->
+  <link rel="stylesheet" href="/assets/css/noncritical.css" media="none" onload="if(media!='all')media='all'">
+<!-- end noncritical style -->
+
+</body>
+</html>
