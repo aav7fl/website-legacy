@@ -9,24 +9,21 @@ bundle check || bundle install
 # Build the site
 bundle exec jekyll build
 
-# Remove existing directory
-rm -rf ../${GH_REPO}.${GH_DEST_BRANCH}
-
 # Checkout `master` and remove everything.
-git clone https://${GH_TOKEN}@github.com/${GH_USERNAME}/${GH_REPO}.git ../${GH_REPO}.${GH_DEST_BRANCH}
-cd ../${GH_REPO}.${GH_DEST_BRANCH}
-git checkout ${GH_DEST_BRANCH}
+git clone https://${GH_TOKEN}@github.com/aav7fl/aav7fl.github.io.git ../aav7fl.github.io.master
+cd ../aav7fl.github.io.master
+git checkout master
 rm -rf *
 
 # Copy generated HTML site from source branch in original repository.
 # Now the `master` branch will contain only the contents of the _site directory.
-cp -R ../${GH_REPO}/_site/* .
+cp -R ../aav7fl.github.io/_site/* .
 
 # Make sure we have the updated .travis.yml file so tests won't run on master.
-cp ../${GH_REPO}/.travis.yml .
-cp ../${GH_REPO}/CNAME .
+cp ../aav7fl.github.io/.travis.yml .
+cp ../aav7fl.github.io/CNAME .
 git config user.email ${GH_EMAIL}
-git config user.name "Travis-CI-bot"
+git config user.name "Travis-bot"
 
 # Commit and push generated content to `master` branch.
 git status
