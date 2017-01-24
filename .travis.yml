@@ -5,7 +5,7 @@ branches:
   except:
   - master
 cache: bundler
-sudo: false
+sudo: required
 rvm:
 - 2.2.0
 env:
