@@ -48,7 +48,7 @@ gems:
 
 # Serving
 detach:  false
-port:    4000
+port:    3000
 host:    localhost
 
 #Social/SEO
