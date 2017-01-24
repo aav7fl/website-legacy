@@ -24,7 +24,7 @@ baseurl: ""
 sass:
   sass_dir: _sass
   style: compressed
-
+# a test line
 exclude:
   - node_modules
   - gulpfile.js
