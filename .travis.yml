@@ -5,7 +5,7 @@ branches:
   except:
   - master
 cache: bundler
-sudo: false
+sudo: required
 rvm:
 - 2.2.0
 env:
@@ -20,7 +20,7 @@ env:
 # Deployment config
 deploy:
   provider: script
-  script: chmod +x _scripts/build.sh && _scripts/build.sh
+  script: sh $TRAVIS_BUILD_DIR/_scripts/build.sh
   skip_cleanup: true
   on:
     branch: source
