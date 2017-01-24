@@ -1,3 +1,4 @@
+# For Jekyll
 _site
 tmp
 .sass-cache
@@ -5,3 +6,7 @@ tmp
 .ruby-version
 .jekyll-metadata
 nohup.out
+
+# For Travis.
+.bundle
+vendor
