@@ -21,6 +21,7 @@ cp -R ../aav7fl.github.io/_site/* .
 
 # Make sure we have the updated .travis.yml file so tests won't run on master.
 cp ../aav7fl.github.io/.travis.yml .
+cp ../aav7fl.github.io/CNAME .
 git config user.email ${GH_EMAIL}
 git config user.name "aavf7l-bot"
 
@@ -29,4 +30,4 @@ git status
 git add -A .
 git status
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-# git push --quiet origin master > /dev/null 2>&1
+git push --quiet origin master > /dev/null 2>&1
