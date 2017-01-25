@@ -1,8 +1,5 @@
 name: Kyle Niewiada's Website
-author:
-  name: Kyle Niewiada
-  email: kyle@kyleniewiada.org
-  twitter: CrypticCitrus #Necessary to place here to avoid SEO Plugin bug.
+author: Kyle Niewiada
 description: My little corner of the Internet where I write about projects I've figured out
 timezone: 'America/Detroit'
 locale: "en-US"
