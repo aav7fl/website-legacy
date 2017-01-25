@@ -1,13 +1,13 @@
 name: Kyle Niewiada's Website
 author: Kyle Niewiada
 description: My little corner of the Internet where I write about projects I've figured out
-timezone: 'America/Detroit'
+timezone: America/Detroit
 locale: "en-US"
 
 paginate_path: blog/page/:num/
 permalink: blog/:year/:month/:title/
 
-#Collection of single pages. Helps keep organized.
+# Collection of single pages. Helps keep organized.
 collections:
   pages:
     output: true
@@ -15,7 +15,7 @@ collections:
 markdown: kramdown
 highlighter: rouge
 paginate: 5
-url: https://www.kyleniewiada.org
+url: "https://www.kyleniewiada.org"
 baseurl: ""
 
 sass:
@@ -40,7 +40,7 @@ gems:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-redirect-from
-  - jekyll-seo-tag
+#  - jekyll-seo-tag
   - jekyll-sitemap
 
 # Serving
@@ -71,11 +71,6 @@ defaults:
     values:
       layout: post
       author: Kyle Niewiada
-      image:
-        url: /assets/img/default-card.png
-        alt: Default-card
-        height: 400
-        width: 700
       seo:
         type: BlogPosting
   - scope:
@@ -83,5 +78,6 @@ defaults:
     values:
       image:
         url: /assets/img/default-card.png
+        alt: Default-card
         height: 400
         width: 700

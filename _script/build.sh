@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/savaslabs/savaslabs.github.io/blob/9434cee6fe1cce54de4bc0294da1c6e9f52476e0/_scripts/build.sh
 
 # Enable error reporting to the console.
 set -e
@@ -10,20 +11,20 @@ bundle check || bundle install
 bundle exec jekyll build
 
 # Checkout `master` and remove everything.
-git clone https://${GH_TOKEN}@github.com/aav7fl/aav7fl.github.io.git ../aav7fl.github.io.master
-cd ../aav7fl.github.io.master
-git checkout master
+git clone https://${GH_TOKEN}@github.com/${GH_USERNAME}/${GH_REPO}.git ../${GH_REPO}.${GH_DEST_BRANCH}
+cd ../${GH_REPO}.${GH_DEST_BRANCH}
+git checkout ${GH_DEST_BRANCH}
 rm -rf *
 
 # Copy generated HTML site from source branch in original repository.
 # Now the `master` branch will contain only the contents of the _site directory.
-cp -R ../aav7fl.github.io/_site/* .
+cp -R ../${GH_REPO}/_site/* .
 
 # Make sure we have the updated .travis.yml file so tests won't run on master.
-cp ../aav7fl.github.io/.travis.yml .
-cp ../aav7fl.github.io/CNAME .
-git config user.email ${GH_EMAIL}
-git config user.name "Travis-bot"
+cp ../${GH_REPO}/.travis.yml .
+cp ../${GH_REPO}/CNAME .
+git config --global user.email "travis@travis-ci.org"
+git config --global user.name "Travis CI"
 
 # Commit and push generated content to `master` branch.
 git status
