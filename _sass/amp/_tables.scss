@@ -1,0 +1,66 @@
+/***************
+TABLE STYLES
+***************/
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+	border-color:#ccc;
+	width: 100%;
+
+	caption {
+		margin: 0 0 7px;
+		font-size: 0.75em;
+		color: $grey;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+}
+
+tr {
+	border-bottom: 1px solid lighten($grey, 15%);
+}
+
+td {
+	font-family:$sans-serif;
+	font-size:14px;
+	padding:2px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#ccc;
+	color:#333;
+	background-color:#fff;
+
+	&:first-child
+	{
+		font-weight: bold;
+	}
+}
+
+th {
+	font-family:$sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	padding:2px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#ccc;
+	color:#333;
+	background-color:#f0f0f0
+}
+
+@media screen and (max-width: 767px)
+{
+	tg
+	{
+		width: auto;
+	}
+	col
+	{
+		width: auto;
+	}
+}

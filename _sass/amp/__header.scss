@@ -1,0 +1,198 @@
+/***************
+HEADER STYLING
+***************/
+
+
+//Gave up with SVG and Edge. It won't handle "background-size: cover;" when using the SVG feGaussianBlur. Instead, it caps the SVG width after a certain threshold.
+
+.header {
+	background-image: url('/assets/img/banner.svg');
+	background-color: #3a3a3c;
+	background-size: cover;
+	background-position: center center;
+	color: #3a3a3c;
+	padding: 0;
+	height: 3em;
+}
+
+// Navigation Variables
+$content-width: 1000px;
+$breakpoint: 800px;
+$nav-height: 70px;
+$nav-background: #262626;
+$nav-font-color: #ffffff;
+$link-hover-color: #00b2d9;
+$nav-active: $primary-color;
+
+
+@media (min-width: $breakpoint){
+	.header {
+		height: 15em;
+		position: relative;
+		padding-bottom: 2em;
+
+		.container {
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			//width: 800px;
+			margin: auto auto;
+		}
+  }
+}
+
+// Outer navigation wrapper
+.navigation {
+  height: $nav-height;
+	background: $nav-background;
+	font-family: $sans-serif;
+}
+
+// Logo and branding
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: $nav-height;
+  font-size: 1.4em;
+  a,
+  a:visited {
+    color: $nav-font-color;
+    text-decoration: none;
+  }
+}
+
+// Container with no padding for navbar
+.nav-container {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+// Navigation
+nav {
+  float: right;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      a, a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        color: $nav-font-color;
+        text-decoration: none;
+        &:hover {
+          background: $link-hover-color;
+          color: $nav-font-color;
+        }
+			}
+    }
+  }
+}
+
+// Dropdown list binds to JS toggle event
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+
+// Binds to JS Toggle
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+	height: $nav-height;
+  width: $nav-height;
+}
+//lazy width hack
+@media only screen and (max-width: -1+$breakpoint) {
+  // Hamburger nav visible on mobile only
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+   width: 100%;
+    padding: $nav-height 0 15px;
+    ul {
+      display: none;
+      li {
+        float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        ul li a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: block;
+  }
+}
+
+.nav-list {
+	background: $nav-background;
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: $nav-font-color;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+ul.nav-list li.active
+{
+    background: $nav-active;
+    padding-bottom: 4px;
+}

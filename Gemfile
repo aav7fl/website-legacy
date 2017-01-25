@@ -10,8 +10,9 @@ gem 'jekyll-sitemap'
 gem 'rubocop'
 
 # For AMP
-gem 'nokogiri'
 gem 'fastimage'
+gem 'nokogiri'
+
 
 group :jekyll_plugins do
   gem 'jekyll-seo-tag'

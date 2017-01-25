@@ -1,0 +1,58 @@
+---
+layout: amp
+---
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    {% seo %}
+
+    <style amp-custom>
+    {% capture include_to_scssify %}
+      {% include amp/amp.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+
+    {% if page.style %}
+      {% capture include_to_scssify %}
+        {% include extra/{{page.style}} %}
+      {% endcapture %}
+      {{ include_to_scssify | scssify }}
+    {% endif %}
+
+    {% capture include_to_scssify %}
+      {% include amp/noncritical.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+</head>
+
+<body>
+{% capture header %}{% include amp/header.html %}{% endcapture %}
+{% capture sidebar %}{% include amp/sidebar.html %}{% endcapture %}
+
+{{ sidebar | amp_images }}
+
+<div class="post">
+  <!-- <h1 class="post-title"> -->
+  {{ header | amp_images }}
+  <!-- </h1> -->
+  {{ content | markdownify | amp_images }}
+</div>
+
+{% capture footer %}{% include amp/footer.html %}{% endcapture %}
+{{ footer | amp_images: false, 24, 24 }}
+</body>
+
+</html>

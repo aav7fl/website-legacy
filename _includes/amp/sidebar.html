@@ -1,0 +1,13 @@
+<button on="tap:sidebar.open"> = </button>
+<amp-sidebar id='sidebar' layout='nodisplay'>
+  <ul class="nav-list">
+    {% for menuitem in site.data.navigation %}
+        {% if menuitem.url == page.url %}
+            {% assign class = "active" %}
+        {% else %}
+            {% assign class = "normal" %}
+        {% endif %}
+        <li class="{{ class }}"><a href="{{ menuitem.url }}">{{ menuitem.title }}</a></li>
+    {% endfor %}
+  </ul>
+</amp-sidebar>

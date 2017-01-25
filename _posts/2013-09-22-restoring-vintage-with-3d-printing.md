@@ -66,11 +66,11 @@ Around an hour into the print job, I noticed that the printer was plugged into a
 
 This fan blew the rubber bands in front of the sensor causing it to reset its timer every few seconds.
 
-![fan blowing a rubber band in front of a sensor](/assets/img/2013/09/small/2013-09-10%2012.04.14.jpg)
+![fan blowing a rubber band in front of a sensor](/assets/img/2013/09/small/2013-09-10_12.04.14.jpg)
 
 Here is the final photo I took of it printing before leaving. You can see the breakaway supports that are being added at the bottom (or in this case the front of the model).
 
-![Makerbot 2  printing Marantz 2220B light housing again](/assets/img/2013/09/small/2013-09-10%2011.48.39.jpg)
+![Makerbot 2  printing Marantz 2220B light housing again](/assets/img/2013/09/small/2013-09-10_11.48.39.jpg)
 
 This quick setup kept the printer from going off for the duration of the 5.5 hour print job.
 

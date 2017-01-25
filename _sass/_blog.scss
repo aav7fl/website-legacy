@@ -2,7 +2,7 @@
 POST STYLING
 ***************/
 .post {
-	img + em, video + em {
+	img + em, amp-img + em, video + em {
 		text-align: center;
 		font-size: .9em;
 		font-style: italic;
@@ -10,7 +10,7 @@ POST STYLING
 		display: block;
 	}
 
-	img + p {
+	img + p, amp-img + p {
 		margin-bottom: 2rem;
 	}
 }
