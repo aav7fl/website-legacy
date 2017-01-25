@@ -7,6 +7,8 @@ locale: "en-US"
 paginate_path: blog/page/:num/
 permalink: blog/:year/:month/:title/
 
+ampdir: AMP
+
 # Collection of single pages. Helps keep organized.
 collections:
   pages:

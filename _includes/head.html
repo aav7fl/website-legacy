@@ -3,7 +3,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
-
+    {% if page.path contains '_posts' %}
+      {% unless page.skip_amp %}
+        <link rel="amphtml" href="{{ page.id | prepend: '/AMP' | prepend: site.baseurl }}">
+      {% endunless %}
+    {% endif %}
     <title>
       {% if paginator and paginator.page > 1 %}
         {% assign overwriteTitle = page.title | append: ' | Page ' | append: paginator.page %}
