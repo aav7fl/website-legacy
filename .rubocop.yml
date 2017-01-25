@@ -1,3 +1,4 @@
 AllCops:
   Exclude:
     - _plugins/**/* #Ignore plugin that I didn't write. Only forked
+    - vendor/**/*
