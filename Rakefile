@@ -26,7 +26,7 @@ task :html_proofer do
       %r{https://www.kyleniewiada.org.*}, # Internal_domains doesn't handle this
       '#!' # Ignore internal URL used for JS Menu.
     ],
-    file_ignore: [%r{_site/AMP/.*}], # Ignore AMP Pages
+    file_ignore: [%r{_site/amp/.*}], # Ignore AMP Pages
     # internal_domains: ['www.kyleniewiada.org'],
     allow_hash_href: 'true',
     check_html: 'true',

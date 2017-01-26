@@ -5,7 +5,7 @@
     <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
     {% if page.path contains '_posts' %}
       {% unless page.skip_amp %}
-        <link rel="amphtml" href="{{ page.id | prepend: '/AMP' | prepend: site.baseurl }}">
+        <link rel="amphtml" href="{{ page.url | prepend: site.ampdir | prepend: site.url }}">
       {% endunless %}
     {% endif %}
     <title>

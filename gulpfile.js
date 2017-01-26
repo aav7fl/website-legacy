@@ -14,7 +14,7 @@ gulp.task('serve', function () {
         "notify": false,
       });
     // Reloads page when some of the already built files changed:
-    //Because I force the reload of the home page using incremental, I can have it watch a single file. Not guaranteed to work; Just likely. 
+    //Because I force the reload of the home page using incremental, I can have it watch a single file. Not guaranteed to work; Just likely.
     //This prevents a plethora of reloads being sent.
     gulp.watch('_site/index.html').on('change', browserSync.reload);
 });

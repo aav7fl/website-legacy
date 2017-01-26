@@ -21,7 +21,7 @@ $maroon:  #85144B;
 // Gray Scale
 $white:  #fff;
 $silver: #ddd;
-$grey:   #aaa;
+$gray:   #808080;
 $banner-grey: #3a3a3c;
 $black:  #111;
 
@@ -44,7 +44,7 @@ CONSISTENT SETTINGS
 
 $br: 5px; // Border-radius
 $btn-br: 5px; // Button border-radius
-$padding: 40px; // Padding and margins
+$padding: 16px; // Padding and margins
 $line-height: 44px; // Consistent height for buttons, inputs etc.
 
 /***************
@@ -55,3 +55,16 @@ TYPE SETTINGS
 $sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
 //$serif: Georgia, Times, Times New Roman, serif;
 $serif: "PT Serif", Georgia, Times, serif;
+
+/***************
+NAVIGATION AND CONTENT
+***************/
+$navigation-width: 1000px;
+$breakpoint: 800px;
+$nav-height: 70px;
+$nav-background: #262626;
+$nav-font-color: #ffffff;
+$link-hover-color: #00b2d9;
+$nav-active: $primary-color;
+
+$content-width: 700px;
