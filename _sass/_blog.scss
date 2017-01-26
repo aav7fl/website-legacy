@@ -65,7 +65,7 @@ POST NAV STYLING
 			text-decoration: none;
 			color: white;
 			text-shadow: 1px 1px 8px rgba(0,0,0,.8);
-			padding: 0 .5rem;
+			//padding: 0 .5rem;
 			position: relative;
 			//@include transition(all 0.2s ease-in-out);
 		}
@@ -90,7 +90,7 @@ POST NAV STYLING
 	}
 }
 
-@media (min-width: 800px){
+@media (min-width: $breakpoint){
 	.postNav {
 
 		.prev, .next {

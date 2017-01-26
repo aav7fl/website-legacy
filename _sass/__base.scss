@@ -1,20 +1,6 @@
 /***************
 GLOBAL Extra
 ***************/
-.header-amp {
-	background: $nav-background;
-	margin-bottom: $padding;
-	padding: $padding;
-	text-align: center;
-	font-size: 1.4em;
-	font-weight: 400;
-	a, a:hover {
-    color: #fff;
-    text-decoration: none;
-		overflow: visible;
-	}
-}
-
 .line-separator {
 	height:1px;
 	background:$gray;
@@ -32,12 +18,16 @@ GLOBAL Extra
 	max-width: $content-width;
 	margin-right: auto;
 	margin-left: auto;
-	padding: 0 20px;
+	padding: 0 $padding;
 
 	img {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	@media (min-width: $breakpoint){
+		padding: 0;
 	}
 
 }

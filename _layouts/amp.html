@@ -16,7 +16,7 @@ layout: amp
 {% capture post %}{% include amp/post.html %}{% endcapture %}
 {{ post | amp_images }}
 
-<center><a href="{{ page.canonical_url | prepend: site.baseurl }}" class="meta">Comments are available here on the full webpage.</a></center>
+{% if page.comments %}<a href="{{ page.canonical_url | prepend: site.baseurl }}" class="meta center">Comments are available on the full webpage.</a>{% endif %}
 
 {% capture footer %}{% include amp/footer.html %}{% endcapture %}
 {{ footer | amp_images: false, 24, 24 }}

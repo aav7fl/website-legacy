@@ -31,6 +31,7 @@ $secondary-color: #1b3665;
 $tertiary-color: #33446f;
 $link-color: $primary-color;
 $resume-accent: #0b5394;
+$subtle-gray: #d3d3d3;
 
 $bad-color: $red; // Bad color for errors, validation etc.
 $good-color: $green; // Good color for success etc.
@@ -61,6 +62,7 @@ NAVIGATION AND CONTENT
 ***************/
 $navigation-width: 1000px;
 $breakpoint: 800px;
+$breakpoint-small: 600px;
 $nav-height: 70px;
 $nav-background: #262626;
 $nav-font-color: #ffffff;

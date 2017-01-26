@@ -1,132 +1,49 @@
 /***************
 PAGE STYLES
 ***************/
-.pageTitle {
-	text-align: center;
-	font-size: 2rem;
-	line-height: 1.2;
-	@media (min-width: $breakpoint) {
-		font-size: 2.5em;
-	}
-}
-
-
-
-/***************
-A MORE MODERN SCALE
-http://typecast.com/blog/a-more-modern-scale-for-web-typography
-***************/
-
 body {
   font-size: 16px;
-  /* equivalent to 16px */
   line-height: 1.6;
 	color: $black;
-  /* equivalent to 20px */
 	font-family: $serif;
 }
 
-// @media (min-width: 43.75em) {
-//   body {
-//     font-size: 1em;
-//     /* equivalent to 16px */
-//     line-height: 1.375;
-//     /* equivalent to 22px */
-//   }
-// }
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  margin: 0 0 .5rem;
-  font-family: $sans-serif;
-	font-weight: 600;
+p {
+	font-size:120%;
 }
 
-// Headings
-// h1, .h1 {
-//   font-size: 2em; // 2x body copy size = 32px
-//   line-height: 1.25; // 45px / 36px
-// }
-//
-// @media (min-width: 43.75em) {
-//   h1, .h1 {
-//     font-size: 2.5em; // 2.5x body copy size = 40px
-//     line-height: 1.125;
-//   }
-// }
-//
-// @media (min-width: 56.25em) {
-//   h1, .h1 {
-//     font-size: 3em; // 3x body copy size = 48px
-//     line-height: 1.05; // keep to a multiple of the 20px line height and something more appropriate for display headings
-//   }
-// }
-//
-// h2, .h2 {
-//   font-size: 1.625em; // 1.625x body copy size = 26px
-//   line-height: 1.15384615; // 30px / 26px
-// }
-//
-// @media (min-width: 43.75em) {
-//   h2, .h2 {
-//     font-size: 2em; // 2x body copy size = 32px
-//     line-height: 1.25;
-//   }
-// }
-//
-// @media (min-width: 56.25em) {
-//   h2, .h2 {
-//     font-size: 2.25em; // 2.25x body copy size = 36px
-//     line-height: 1.25;
-//   }
-// }
-//
-// h3, .h3 {
-//   font-size: 1.375em; // 1.375x body copy size = 22px
-//   line-height: 1.13636364; //25px / 22px
-// }
-//
-// @media (min-width: 43.75em) {
-//   h3, .h3 {
-//     font-size: 1.5em; // 1.5x body copy size = 24px
-//     line-height: 1.25;
-//   }
-// }
-//
-// @media (min-width: 56.25em) {
-//   h3, .h3 {
-//     font-size: 1.75em; // 1.75x body copy size = 28px
-//     line-height: 1.25;
-//   }
-// }
-//
-// h4, .h4 {
-//   font-size: 1.125em; // 1.125x body copy size = 18px
-//   line-height: 1.11111111;
-// }
-//
-// @media (min-width: 43.75em) {
-//   h4, .h4 {
-//     line-height: 1.22222222; // 22px / 18px
-//   }
-// }
+.pageTitle {
+	text-align: left;
+	font-size: 200%;
+	line-height: 1.2;
+	font-weight: 400;
+	@media (min-width: $breakpoint-small) {
+		font-size: 250%;
+	}
+	@media (min-width: $breakpoint) {
+		font-size: 300%;
+	}
+}
 
-// blockquote {
-//   font-size: 1.25em; // 20px / 16px
-//   line-height: 1.25; // 25px / 20px
-//   padding: 0;
-// }
-//
-// @media (min-width: 43.75em) {
-//   blockquote {
-//     font-size: 1.5em; // 24px / 16px
-//     line-height: 1.45833333; // 35px / 24px
-//   }
-// }
+.meta {
+	text-align: left;
+	color: $gray;
+	font-family: $sans-serif;
+	font-weight: 300;
+	font-size: 120%;
+	@media (min-width: $breakpoint-small) {
+		font-size: 130%;
+	}
+	@media (min-width: $breakpoint) {
+		font-size: 140%;
+	}
+}
 
-// .coalate h1, .coalate h2, .coalate h3, .coalate h4, .coalate h5, .coalate h6, {
-// margin: .5rem 0 .5rem;
-// font-family: $sans-serif;
-// }
+.meta.center{
+	text-align: center;
+	display: block;
+}
+
 
 .titlemeta {
 	overflow: auto;
@@ -142,14 +59,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	}
 }
 
-.code {
-	font-size: .8em;
+code {
+	background: $subtle-gray;
+	line-height: 1.2;
 }
 
-.meta {
-	text-align: center;
-	color: $gray;
-	font-family: $sans-serif;
-	font-weight: 300;
-	font-size: 1em;
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 0 0 .5rem;
+  font-family: $sans-serif;
+	font-weight: 600;
 }
+
+
+// .coalate h1, .coalate h2, .coalate h3, .coalate h4, .coalate h5, .coalate h6, {
+// margin: .5rem 0 .5rem;
+// font-family: $sans-serif;
+// }
