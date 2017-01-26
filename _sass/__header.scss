@@ -10,23 +10,20 @@ HEADER STYLING
 	color: #3a3a3c;
 	padding: 0;
 	height: 3em;
-	margin-bottom: $padding;
-	font-family: $sans-serif;
 }
 
-@media (min-width: $breakpoint_1){
+@media (min-width: $breakpoint_2){
 	.header {
 		height: 10em;
 		position: relative;
-		padding-bottom: 2em;
-
+		margin-bottom: $padding;
+		
 		.container {
 			position: relative;
 			top: 50%;
 			-webkit-transform: translateY(-50%);
 			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
-			//width: 800px;
 			margin: auto auto;
 		}
   }
@@ -55,7 +52,7 @@ HEADER STYLING
 
 // Container with no padding for navbar
 .nav-container {
-  max-width: $navigation-width;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -103,7 +100,7 @@ nav {
   width: $nav-height;
 }
 //lazy width hack
-@media only screen and (max-width: $breakpoint_1) {
+@media only screen and (max-width: -1+$breakpoint_2) {
   // Hamburger nav visible on mobile only
   .nav-mobile {
     display: block;
@@ -130,9 +127,9 @@ nav {
   }
 }
 
-@media screen and (min-width: $breakpoint_1) {
+@media screen and (min-width: $breakpoint_2) {
   .nav-list {
-    display: block;// !important;
+    display: block !important;
   }
 }
 

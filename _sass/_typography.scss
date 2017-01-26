@@ -8,10 +8,6 @@ body, p, li, ul{
 	font-family: $sans-serif;
 }
 
-@media(min-width:30em){html{font-size:130%;}}
-@media(min-width:60em){html{font-size:135%;}}
-@media(min-width:120em){html{font-size:160%}}
-
 // p , ul {
 // 	margin: 0 0 1.5rem;
 // }
@@ -21,10 +17,10 @@ body, p, li, ul{
 	font-size: 200%;
 	line-height: 1.2;
 	font-weight: 400;
-	@media (min-width: $breakpoint_3) {
+	@media (min-width: $breakpoint_2) {
 		font-size: 250%;
 	}
-	@media (min-width: $breakpoint_4) {
+	@media (min-width: $breakpoint_3) {
 		font-size: 300%;
 	}
 }
@@ -34,10 +30,10 @@ body, p, li, ul{
 	font-family: $sans-serif;
 	font-weight: 300;
 	font-size: 120%;
-	@media (min-width: $breakpoint_3) {
+	@media (min-width: $breakpoint_2) {
 		font-size: 130%;
 	}
-	@media (min-width: $breakpoint_4) {
+	@media (min-width: $breakpoint_3) {
 		font-size: 140%;
 	}
 }
