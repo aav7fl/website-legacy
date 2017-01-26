@@ -110,7 +110,7 @@
 {% endif %}
 
 {% if page.url %}
-  {% unless page.url contains "/amp/" %}
+  {% unless page.url contains site.ampdir %}
   <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
   <meta property="og:url" content="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
   {% endunless %}

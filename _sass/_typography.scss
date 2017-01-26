@@ -1,40 +1,43 @@
 /***************
 PAGE STYLES
 ***************/
-body {
+body, p, li, ul{
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.58;
 	color: $black;
-	font-family: $serif;
+	font-family: $sans-serif;
 }
 
-p {
-	font-size:120%;
-}
+@media(min-width:30em){html{font-size:130%;}}
+@media(min-width:60em){html{font-size:135%;}}
+@media(min-width:120em){html{font-size:160%}}
+
+// p , ul {
+// 	margin: 0 0 1.5rem;
+// }
 
 .pageTitle {
 	text-align: left;
 	font-size: 200%;
 	line-height: 1.2;
 	font-weight: 400;
-	@media (min-width: $breakpoint-small) {
+	@media (min-width: $breakpoint_3) {
 		font-size: 250%;
 	}
-	@media (min-width: $breakpoint) {
+	@media (min-width: $breakpoint_4) {
 		font-size: 300%;
 	}
 }
 
 .meta {
-	text-align: left;
 	color: $gray;
 	font-family: $sans-serif;
 	font-weight: 300;
 	font-size: 120%;
-	@media (min-width: $breakpoint-small) {
+	@media (min-width: $breakpoint_3) {
 		font-size: 130%;
 	}
-	@media (min-width: $breakpoint) {
+	@media (min-width: $breakpoint_4) {
 		font-size: 140%;
 	}
 }
@@ -44,12 +47,11 @@ p {
 	display: block;
 }
 
-
 .titlemeta {
 	overflow: auto;
 	color: $subtle-color;
 	font-family: $sans-serif;
-	font-size: .8em;
+	font-size: 100%;
 
 	.meta-left {
 	  float: left;
@@ -70,6 +72,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-weight: 600;
 }
 
+// Text Selection Styling
+::-moz-selection {
+	background: $primary-color;
+	color: white;
+}
+
+::selection {
+	background: $primary-color;
+	color: white;
+}
+
+/***************
+LINK STYLING
+***************/
+
+a {
+	color: $link-color;
+
+	&:hover {
+		color: darken($link-color, 15%);
+	}
+}
 
 // .coalate h1, .coalate h2, .coalate h3, .coalate h4, .coalate h5, .coalate h6, {
 // margin: .5rem 0 .5rem;

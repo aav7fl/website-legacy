@@ -26,45 +26,13 @@ GLOBAL Extra
 		margin-right: auto;
 	}
 
-	@media (min-width: $breakpoint){
-		padding: 0;
-	}
+	// @media (min-width: $breakpoint_1){
+	// 	padding: 0;
+	// }
 
 }
 
-/***************
-GLOBAL STYLE
-***************/
-// A better box-sizing practice http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-// html {
-//   box-sizing: border-box;
-// }
-// *, *:before, *:after {
-//   box-sizing: inherit;
-// }
-//
-// body {
-// 	font-family: $serif;
-// 	line-height: 1.75;
-// 	font-size: 112.5%; // 18px base font size
-// 	color: $black;
-// 	overflow-x: hidden;
-//
-	p , ul {
-		margin: 0 0 1.5rem;
-	}
-// }
 
-// Text Selection Styling
-::-moz-selection {
-	background: $primary-color;
-	color: white;
-}
-
-::selection {
-	background: $primary-color;
-	color: white;
-}
 
 // Media Styling
 img,video,audio,iframe,object{
@@ -80,18 +48,6 @@ img,video,audio,iframe,object{
 // 		padding: 0;
 // 	}
 // }
-
-/***************
-LINK STYLING
-***************/
-
-a {
-	color: $link-color;
-
-	&:hover {
-		color: darken($link-color, 15%);
-	}
-}
 
 /***************
 LIST STYLING

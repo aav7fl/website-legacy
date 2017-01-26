@@ -11,9 +11,10 @@ HEADER STYLING
 	padding: 0;
 	height: 3em;
 	margin-bottom: $padding;
+	font-family: $sans-serif;
 }
 
-@media (min-width: $breakpoint){
+@media (min-width: $breakpoint_1){
 	.header {
 		height: 10em;
 		position: relative;
@@ -102,7 +103,7 @@ nav {
   width: $nav-height;
 }
 //lazy width hack
-@media only screen and (max-width: -1+$breakpoint) {
+@media only screen and (max-width: $breakpoint_1) {
   // Hamburger nav visible on mobile only
   .nav-mobile {
     display: block;
@@ -129,7 +130,7 @@ nav {
   }
 }
 
-@media screen and (min-width: $breakpoint) {
+@media screen and (min-width: $breakpoint_1) {
   .nav-list {
     display: block;// !important;
   }
