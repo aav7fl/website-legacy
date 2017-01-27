@@ -17,7 +17,7 @@ HEADER STYLING
 		height: 10em;
 		position: relative;
 		margin-bottom: $padding;
-		
+
 		.container {
 			position: relative;
 			top: 50%;
@@ -52,7 +52,7 @@ HEADER STYLING
 
 // Container with no padding for navbar
 .nav-container {
-  max-width: 100%;
+  max-width: $navigation-width;
   margin: 0 auto;
 }
 
