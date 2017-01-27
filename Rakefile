@@ -8,8 +8,8 @@ task :build do
   puts 'Building site...'.yellow.bold
   # Build once because and ignore everything because
   # Fastimage doesn't know about the images that exist yet.
-  sh 'jekyll build > /dev/null  2>&1'
-  Jekyll::Commands::Build.process(future: true)
+  sh 'bundle exec jekyll build > /dev/null  2>&1'
+  sh 'bundle exec jekyll build'
 end
 
 task :clean do

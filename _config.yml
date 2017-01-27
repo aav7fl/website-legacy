@@ -46,7 +46,7 @@ gems:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-redirect-from
-#  - jekyll-seo-tag
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 # Serving

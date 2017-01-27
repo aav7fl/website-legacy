@@ -9,6 +9,7 @@ layout: amp
 {{ head | amp_images }}
 
 <body>
+{% include child/google_analytics-amp.html %}
 
 {% capture header %}{% include amp/header.html %}{% endcapture %}
 {{ header | amp_images }}
