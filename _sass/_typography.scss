@@ -1,135 +1,59 @@
 /***************
 PAGE STYLES
 ***************/
+
+body, p, li, ul{
+  font-size: 16px;
+  line-height: 1.58;
+	color: $black;
+	font-family: $sans-serif;
+}
+
+p code, p pre {
+  background-color: $white;
+  color: #9e023b;
+  display: inline-block;
+  border: 1px solid $subtle-gray;
+  border-radius: .2em;
+  padding: 0 .3em;
+}
+
 .pageTitle {
-	margin: .5em auto .5em;
+	text-align: left;
+	font-size: 200%;
+	line-height: 1.2;
+	font-weight: 400;
+	@media (min-width: $breakpoint_2) {
+		font-size: 250%;
+	}
+	@media (min-width: $breakpoint_3) {
+		font-size: 300%;
+	}
+}
+
+.meta {
+	color: $gray;
+	font-family: $sans-serif;
+	font-weight: 300;
+	font-size: 120%;
+	@media (min-width: $breakpoint_2) {
+		font-size: 130%;
+	}
+	@media (min-width: $breakpoint_3) {
+		font-size: 140%;
+	}
+}
+
+.meta.center{
 	text-align: center;
-}
-
-
-/***************
-A MORE MODERN SCALE
-http://typecast.com/blog/a-more-modern-scale-for-web-typography
-***************/
-
-body {
-  font-size: 1em;
-  /* equivalent to 16px */
-  line-height: 1.45;
-  /* equivalent to 20px */
-
-  .intro {
-    font-size: 1.25em;
-    line-height: 1.7;
-  }
-}
-
-@media (min-width: 43.75em) {
-  body {
-    font-size: 1em;
-    /* equivalent to 16px */
-    line-height: 1.375;
-    /* equivalent to 22px */
-  }
-}
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  margin: .5rem 0 .5rem;
-  font-family: $sans-serif;
-}
-
-// Headings
-h1, .h1 {
-  font-size: 2em; // 2x body copy size = 32px
-  line-height: 1.25; // 45px / 36px
-}
-
-@media (min-width: 43.75em) {
-  h1, .h1 {
-    font-size: 2.5em; // 2.5x body copy size = 40px
-    line-height: 1.125;
-  }
-}
-
-@media (min-width: 56.25em) {
-  h1, .h1 {
-    font-size: 3em; // 3x body copy size = 48px
-    line-height: 1.05; // keep to a multiple of the 20px line height and something more appropriate for display headings
-  }
-}
-
-h2, .h2 {
-  font-size: 1.625em; // 1.625x body copy size = 26px
-  line-height: 1.15384615; // 30px / 26px
-}
-
-@media (min-width: 43.75em) {
-  h2, .h2 {
-    font-size: 2em; // 2x body copy size = 32px
-    line-height: 1.25;
-  }
-}
-
-@media (min-width: 56.25em) {
-  h2, .h2 {
-    font-size: 2.25em; // 2.25x body copy size = 36px
-    line-height: 1.25;
-  }
-}
-
-h3, .h3 {
-  font-size: 1.375em; // 1.375x body copy size = 22px
-  line-height: 1.13636364; //25px / 22px
-}
-
-@media (min-width: 43.75em) {
-  h3, .h3 {
-    font-size: 1.5em; // 1.5x body copy size = 24px
-    line-height: 1.25;
-  }
-}
-
-@media (min-width: 56.25em) {
-  h3, .h3 {
-    font-size: 1.75em; // 1.75x body copy size = 28px
-    line-height: 1.25;
-  }
-}
-
-h4, .h4 {
-  font-size: 1.125em; // 1.125x body copy size = 18px
-  line-height: 1.11111111;
-}
-
-@media (min-width: 43.75em) {
-  h4, .h4 {
-    line-height: 1.22222222; // 22px / 18px
-  }
-}
-
-blockquote {
-  font-size: 1.25em; // 20px / 16px
-  line-height: 1.25; // 25px / 20px
-  padding: 0;
-}
-
-@media (min-width: 43.75em) {
-  blockquote {
-    font-size: 1.5em; // 24px / 16px
-    line-height: 1.45833333; // 35px / 24px
-  }
-}
-
-.coalate h1, .coalate h2, .coalate h3, .coalate h4, .coalate h5, .coalate h6, {
-margin: .5rem 0 .5rem;
-font-family: $sans-serif;
+	display: block;
 }
 
 .titlemeta {
 	overflow: auto;
 	color: $subtle-color;
 	font-family: $sans-serif;
-	font-size: .8em;
+	font-size: 100%;
 
 	.meta-left {
 	  float: left;
@@ -139,6 +63,47 @@ font-family: $sans-serif;
 	}
 }
 
-.code {
-	font-size: .8em;
+// blockquote:before {
+//   color: #dc0;
+//   font-size: 4em;
+//   line-height: 0.1em;
+//   margin-right: 0.25em;
+//   vertical-align: -0.4em;
+// }
+// blockquote p {
+//   display: inline;
+// }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 0 0 .5rem;
+  font-family: $sans-serif;
+	font-weight: 600;
 }
+
+// Text Selection Styling
+::-moz-selection {
+	background: $primary-color;
+	color: white;
+}
+
+::selection {
+	background: $primary-color;
+	color: white;
+}
+
+/***************
+LINK STYLING
+***************/
+
+a {
+	color: $link-color;
+
+	&:hover {
+		color: darken($link-color, 15%);
+	}
+}
+
+// .coalate h1, .coalate h2, .coalate h3, .coalate h4, .coalate h5, .coalate h6, {
+// margin: .5rem 0 .5rem;
+// font-family: $sans-serif;
+// }

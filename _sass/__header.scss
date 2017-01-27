@@ -2,15 +2,6 @@
 HEADER STYLING
 ***************/
 
-
-//Gave up with SVG and Edge. It won't handle "background-size: cover;" when using the SVG feGaussianBlur. Instead, it caps the SVG width after a certain threshold.
-
-//http://browserstrangeness.bitbucket.org/css_hacks.html
-//IE10-11, Edge
-_:-ms-lang(x),.header {
-		background-image: url('/assets/img/banner.jpg') !important;
-}
-
 .header {
 	background-image: url('/assets/img/banner.svg');
 	background-color: #3a3a3c;
@@ -21,21 +12,11 @@ _:-ms-lang(x),.header {
 	height: 3em;
 }
 
-// Navigation Variables
-$content-width: 1000px;
-$breakpoint: 800px;
-$nav-height: 70px;
-$nav-background: #262626;
-$nav-font-color: #ffffff;
-$link-hover-color: #00b2d9;
-$nav-active: $primary-color;
-
-
-@media (min-width: $breakpoint){
+@media (min-width: $breakpoint_2){
 	.header {
-		height: 15em;
+		height: 10em;
 		position: relative;
-		padding-bottom: 2em;
+		margin-bottom: $padding;
 
 		.container {
 			position: relative;
@@ -43,7 +24,6 @@ $nav-active: $primary-color;
 			-webkit-transform: translateY(-50%);
 			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
-			//width: 800px;
 			margin: auto auto;
 		}
   }
@@ -72,7 +52,7 @@ $nav-active: $primary-color;
 
 // Container with no padding for navbar
 .nav-container {
-  max-width: $content-width;
+  max-width: $navigation-width;
   margin: 0 auto;
 }
 
@@ -120,7 +100,7 @@ nav {
   width: $nav-height;
 }
 //lazy width hack
-@media only screen and (max-width: -1+$breakpoint) {
+@media only screen and (max-width: -1+$breakpoint_2) {
   // Hamburger nav visible on mobile only
   .nav-mobile {
     display: block;
@@ -147,7 +127,7 @@ nav {
   }
 }
 
-@media screen and (min-width: $breakpoint) {
+@media screen and (min-width: $breakpoint_2) {
   .nav-list {
     display: block !important;
   }

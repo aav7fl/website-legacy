@@ -1,0 +1,12 @@
+/***************
+HEADER STYLING
+***************/
+
+
+//Gave up with SVG and Edge. It won't handle "background-size: cover;" when using the SVG feGaussianBlur. Instead, it caps the SVG width after a certain threshold.
+
+//http://browserstrangeness.bitbucket.org/css_hacks.html
+//IE10-11, Edge
+_:-ms-lang(x),.header {
+		background-image: url('/assets/img/banner.jpg') !important;
+}

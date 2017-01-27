@@ -10,13 +10,18 @@ image:
 published: true
 tag: "large project"
 meta: "Charma is an open source API and web application that promotes volunteerism. It was produced by Grand Valley State University and sponsored by Microsoft."
+amp:
+  - YouTube
 ---
 
 For my last semester at Grand Valley State University, I was part of a fantastic group sponsored by Microsoft to create an open source web API that promoted volunteerism. For our capstone project, Xinyi Ou, Dave Walsh, and I created Charma; an open source API and web application that attempts to gamify the connections between volunteers and charitable organizations.
 
 ## Video Overview
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/HWSoWfWqcsU" allowfullscreen></iframe>
+{% include video.html
+  type="YouTube"
+  src="https://www.youtube.com/embed/HWSoWfWqcsU"
+%}
 
 ### [Source Code](https://github.com/aav7fl/GVSU-capstone-project)
 

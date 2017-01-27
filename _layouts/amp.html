@@ -1,0 +1,27 @@
+---
+layout: amp
+---
+
+<!doctype html>
+<html amp lang="en">
+
+{% capture head %}{% include amp/head.html %}{% endcapture %}
+{{ head | amp_images }}
+
+<body>
+{% include child/google_analytics-amp.html %}
+
+{% capture header %}{% include amp/header.html %}{% endcapture %}
+{{ header | amp_images }}
+
+{% capture post %}{% include amp/post.html %}{% endcapture %}
+{{ post | amp_images }}
+
+{% if page.comments %}<a href="{{ page.canonical_url | prepend: site.baseurl }}" class="meta center">Comments are available on the full webpage.</a>{% endif %}
+
+{% capture footer %}{% include amp/footer.html %}{% endcapture %}
+{{ footer | amp_images: false, 24, 24 }}
+
+</body>
+
+</html>

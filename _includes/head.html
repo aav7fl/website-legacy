@@ -2,8 +2,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
 
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#3d256d">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#3d256d">
+
+    <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
+    {% if page.path contains '_posts' %}
+      {% unless page.skip_amp %}
+        <link rel="amphtml" href="{{ page.url | prepend: site.ampdir | prepend: site.url }}">
+      {% endunless %}
+    {% endif %}
     <title>
       {% if paginator and paginator.page > 1 %}
         {% assign overwriteTitle = page.title | append: ' | Page ' | append: paginator.page %}

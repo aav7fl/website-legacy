@@ -2,7 +2,7 @@
 POST STYLING
 ***************/
 .post {
-	img + em, video + em {
+	img + em, amp-img + em, video + em {
 		text-align: center;
 		font-size: .9em;
 		font-style: italic;
@@ -10,9 +10,24 @@ POST STYLING
 		display: block;
 	}
 
-	img + p {
+	img + p, amp-img + p {
 		margin-bottom: 2rem;
 	}
+}
+
+//
+// .highlighter-rogue{
+//   background: $subtle-gray;
+//   line-height: 1.2;
+// 	border: 1px solid;
+// 	border-radius: .4em;
+// }
+
+blockquote {
+  background: #ffa;
+  border-left: 10px solid #dc0;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
 }
 
 /***************
@@ -57,7 +72,6 @@ POST NAV STYLING
 			-webkit-transform: translateY(-50%);
 			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
-			width: 100%;
 			line-height: 1.4;
 		}
 
@@ -65,7 +79,7 @@ POST NAV STYLING
 			text-decoration: none;
 			color: white;
 			text-shadow: 1px 1px 8px rgba(0,0,0,.8);
-			padding: 0 .5rem;
+			//padding: 0 .5rem;
 			position: relative;
 			//@include transition(all 0.2s ease-in-out);
 		}
@@ -90,7 +104,7 @@ POST NAV STYLING
 	}
 }
 
-@media (min-width: 800px){
+@media (min-width: $breakpoint_2){
 	.postNav {
 
 		.prev, .next {

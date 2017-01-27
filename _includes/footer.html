@@ -6,12 +6,11 @@
       </span>
     </div>
   </div>
+  <!-- start scripts -->
+    {% include child/scripts.html %}
+  <!-- end scripts -->
+
+  <!-- start noncritical style -->
+    <link rel="stylesheet" href="/assets/css/noncritical.css" media="none" onload="if(media!='all')media='all'">
+  <!-- end noncritical style -->
 <!-- end footer -->
-
-<!-- start scripts -->
-  {% include child/scripts.html %}
-<!-- end scripts -->
-
-<!-- start noncritical style -->
-  <link rel="stylesheet" href="/assets/css/noncritical.css" media="none" onload="if(media!='all')media='all'">
-<!-- end noncritical style -->

@@ -6,7 +6,10 @@ task default: [:rubocop, :test]
 
 task :build do
   puts 'Building site...'.yellow.bold
-  Jekyll::Commands::Build.process(future: true)
+  # Build once because and ignore everything because
+  # Fastimage doesn't know about the images that exist yet.
+  sh 'bundle exec jekyll build > /dev/null  2>&1'
+  sh 'bundle exec jekyll build'
 end
 
 task :clean do
@@ -26,6 +29,7 @@ task :html_proofer do
       %r{https://www.kyleniewiada.org.*}, # Internal_domains doesn't handle this
       '#!' # Ignore internal URL used for JS Menu.
     ],
+    file_ignore: [%r{_site/amp/.*}], # Ignore AMP Pages
     # internal_domains: ['www.kyleniewiada.org'],
     allow_hash_href: 'true',
     check_html: 'true',

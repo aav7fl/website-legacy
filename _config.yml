@@ -7,13 +7,19 @@ locale: "en-US"
 paginate_path: blog/page/:num/
 permalink: blog/:year/:month/:title/
 
+ampdir: /amp
+
 # Collection of single pages. Helps keep organized.
 collections:
   pages:
     output: true
 
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax-highlighter: rouge
+
 paginate: 5
 url: "https://www.kyleniewiada.org"
 baseurl: ""
@@ -40,7 +46,7 @@ gems:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-redirect-from
-#  - jekyll-seo-tag
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 # Serving
