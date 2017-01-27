@@ -1,0 +1,225 @@
+<!doctype html>
+<html amp lang="en">
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet" type="text/css"><meta charset="utf-8"><title>iOS Video Player Bug Disclosure</title><link rel="canonical" href="https://www.kyleniewiada.org/blog/2016/03/ios-video-bug-disclosure/"><meta property="og:url" content="https://www.kyleniewiada.org/blog/2016/03/ios-video-bug-disclosure/"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#3d256d"><!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#3d256d"><!-- Begin Jekyll SEO tag v2.1.0 --><title>iOS Video Player Bug Disclosure - Kyle Niewiada’s Website</title><meta property="og:title" content="iOS Video Player Bug Disclosure"><meta name="description" content="My little corner of the Internet where I write about projects I’ve figured out"><meta property="og:description" content="My little corner of the Internet where I write about projects I’ve figured out"><meta property="og:site_name" content="Kyle Niewiada’s Website"><meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/03/iPadTesting.jpg"><meta property="og:image:height" content="521"><meta property="og:image:width" content="800"><meta property="og:type" content="article"><meta property="article:published_time" content="2016-03-20T18:05:00-04:00"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CrypticCitrus"><meta name="twitter:creator" content="@CrypticCitrus"><meta property="fb:app_id" content="137961485759"><script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "iOS Video Player Bug Disclosure",
+"author": {"@type": "Person",
+"name": "Kyle Niewiada"},
+"image": {"@type": "ImageObject",
+"url": "https://www.kyleniewiada.org/assets/img/2016/03/iPadTesting.jpg",
+"height": 521,
+"width": 800},
+"datePublished": "2016-03-20T18:05:00-04:00",
+"dateModified": "2016-03-20T18:05:00-04:00",
+"description": "My little corner of the Internet where I write about projects I’ve figured out",
+"publisher": {"@type": "Organization",
+"name": "Kyle Niewiada",
+"logo": {"@type": "ImageObject",
+"url": "https://www.kyleniewiada.org/assets/logo.jpg"}},
+"mainEntityOfPage": {"@type": "WebPage",
+"@id": "https://www.kyleniewiada.org/amp/blog/2016/03/ios-video-bug-disclosure/"},
+"url": "https://www.kyleniewiada.org/amp/blog/2016/03/ios-video-bug-disclosure/"}</script><!-- End Jekyll SEO tag --><style amp-custom>
+  
+  body,p,li,ul{font-size:16px;line-height:1.58;color:#111;font-family:"Open Sans",Helvetica,Arial,sans-serif}p code,p pre{background-color:#fff;color:#9e023b;display:inline-block;border:1px solid #d3d3d3;border-radius:.2em;padding:0 .3em}.pageTitle{text-align:left;font-size:200%;line-height:1.2;font-weight:400}@media (min-width: 600px){.pageTitle{font-size:250%}}@media (min-width: 1000px){.pageTitle{font-size:300%}}.meta{color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:120%}@media (min-width: 600px){.meta{font-size:130%}}@media (min-width: 1000px){.meta{font-size:140%}}.meta.center{text-align:center;display:block}.titlemeta{overflow:auto;color:#696969;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-size:100%}.titlemeta .meta-left{float:left}.titlemeta .meta-right{float:right}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 .5rem;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:600}::-moz-selection{background:#3d256d;color:white}::selection{background:#3d256d;color:white}a{color:#3d256d}a:hover{color:#1d1234}.line-separator{height:1px;background:gray;margin-top:16px;margin-bottom:16px}.container:after{content:" ";display:block;clear:both}.post,.container{max-width:700px;margin-right:auto;margin-left:auto;padding:0 16px}.post img,.container img{display:block;margin-left:auto;margin-right:auto}img,video,audio,iframe,object,amp-video{max-width:100%}.noList{list-style:none;padding-left:0;margin-left:0}.pagination .next{float:left}.pagination .previous{float:right}.posts li{margin-bottom:4rem;position:relative}.posts li:before{content:"";position:absolute;bottom:-2rem;left:0;background:#e6e6e6;height:2px;width:60px}.posts li a{text-decoration:none}.posts li a:hover{text-decoration:underline}.posts li .date{color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:.8em}.header-amp{background:#262626;margin-bottom:16px;padding:16px;text-align:center;font-size:1.4em;font-weight:400}.header-amp a,.header-amp a:hover{color:#fff;text-decoration:none;overflow:visible}
+
+
+  
+
+  
+  .footer{text-align:center;padding:2rem 0}.footer .container{border-top:4px solid #d9d9d9;padding-top:.5em}.footer ul{text-align:center}.post img+em,.post amp-img+em,.post video+em{text-align:center;font-size:.9em;font-style:italic;color:#5e5e5e;display:block}.post img+p,.post amp-img+p{margin-bottom:2rem}blockquote{background:#ffa;border-left:10px solid #dc0;margin:1.5em 10px;padding:0.5em 10px}.postNav{border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;overflow:hidden}.postNav .prev,.postNav .next{display:block;width:100%;height:5rem;overflow:hidden;position:relative;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:800;font-size:.9em;text-align:center}.postNav .prev img,.postNav .next img{display:block;position:absolute;top:50%;-webkit-transform:translateY(-50%);-webkit-filter:brightness(40%);-ms-transform:translateY(-50%);transform:translateY(-50%);filter:brightness(40%);left:0;width:100%;height:auto}.postNav .prev span,.postNav .next span{z-index:1;position:relative;padding:.5rem;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);line-height:1.4}.postNav .prev.image,.postNav .next.image{text-decoration:none;color:white;text-shadow:1px 1px 8px rgba(0,0,0,0.8);position:relative}.postNav .prev:hover.image,.postNav .next:hover.image{opacity:.8}.postNav .prev span{left:0}.postNav .next span{right:0}@media (min-width: 600px){.postNav .prev,.postNav .next{width:50%}.postNav .prev{float:left;text-align:left}.postNav .next{text-align:right;float:right}}.button,.button-secondary,.button-tertiary,.button__outline{background-color:#3d256d;display:inline-block;position:relative;font-family:"Open Sans",Helvetica,Arial,sans-serif;text-decoration:none;color:#fff;font-size:1em;line-height:1.2em;font-weight:normal;padding:.5em 1.5em;border:0;border-radius:4px;cursor:pointer;margin-bottom:.5em}.button:hover,.button-secondary:hover,.button-tertiary:hover,.button__outline:hover,.button:focus,.button-secondary:focus,.button-tertiary:focus,.button__outline:focus{color:#fff;text-decoration:none;background-color:#281847}.button:active,.button-secondary:active,.button-tertiary:active,.button__outline:active{top:1px}.button-secondary{background-color:#1b3665}.button-secondary:hover{background-color:#10203d}.button-tertiary{background-color:#33446f}.button-tertiary:hover{background-color:#232f4c}.button__outline{background-color:transparent;border:3px solid #3d256d;color:#3d256d}.button__outline:hover{background-color:#3d256d;color:#fff}.highlight{background:#d3d3d3;overflow-y:hidden;padding:16px}.highlight .c{color:#999988;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#999988;font-style:italic}.highlight .cp{color:#999999;font-weight:bold}.highlight .c1{color:#999988;font-style:italic}.highlight .cs{color:#999999;font-weight:bold;font-style:italic}.highlight .gd{color:#000000;background-color:#fdd}.highlight .gd .x{color:#000000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000000;background-color:#dfd}.highlight .gi .x{color:#000000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#445588;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086B3}.highlight .nc{color:#445588;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#990000;font-weight:bold}.highlight .nf{color:#990000;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}
+
+  </style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async src="https://cdn.ampproject.org/v0.js"></script><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+
+<body>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-37567352-1"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+</amp-analytics>
+
+
+
+<!-- start header -->
+<h1 class="header-amp">
+  <a href="/">Kyle Niewiada</a>
+</h1>
+<!-- end header -->
+
+
+<div class="post">
+  <div class="post_info">
+    <h1 class="pageTitle">iOS Video Player Bug Disclosure</h1>
+
+    <h2 class="meta">Kyle Niewiada
+
+    <h3 class="meta">March 20, 2016 | 9 Minute Read</h3>
+
+    
+    <div class="featuredImage">
+      <amp-img src="/assets/img/2016/03/iPadTesting.jpg" alt="Testing iPad Air 2 colors with i1Display Pro colorimeter" width="800" height="521" layout="responsive"><noscript><img src="/assets/img/2016/03/iPadTesting.jpg" alt="Testing iPad Air 2 colors with i1Display Pro colorimeter" width="800" height="521"></noscript></amp-img>
+</div>
+    
+
+    <div class="line-separator"></div>
+
+  </h2>
+</div>
+
+  <p>There exists a bug with the iOS video playback and color reproduction. When specific combinations and proportions of colors are present on screen, if (and only if) all user interface elements are hidden, then a decrease in color temperature (mostly red) occurs. This seemingly subtle shift in color turns cartoon characters and online content creators into ghostly pale figures.</p>
+
+<p><amp-img src="/assets/img/2016/03/comparison.jpg" alt="comparing video playback demonstrating bug with and without user interface" width="906" height="494" layout="responsive"><noscript><img src="/assets/img/2016/03/comparison.jpg" alt="comparing video playback demonstrating bug with and without user interface" width="906" height="494"></noscript></amp-img><em>Note the subtle differences in facial tones and woodgrain color</em></p>
+
+<!-- Method to implement AMP-Video. -->
+
+<amp-video height="420" width="700" poster="/assets/files/2016/03/bug_example_poster.png" layout="responsive" controls="" loop=""><div fallback="">
+    Your browser doesn’t support HTML5 video
+  </div>
+  <source type="video/mp4" src="/assets/files/2016/03/bug_example.mp4"></source></amp-video><h2 id="steps-to-reproduce">Steps to Reproduce:</h2>
+
+<ol>
+<li>Turn off auto brightness under iOS settings (just in case it may influence the results).</li>
+  <li>Open Safari on your iOS device and navigate to this page.</li>
+  <li>Play the video above in full-screen mode (landscape works best).</li>
+  <li>Tap to hide any user interface elements (such as the AssistiveTouch button or  playback buttons).</li>
+  <li>Once the user interface is hidden, the face of the character in the middle of the screen will transition for a few seconds to a whitish-green.</li>
+  <li>Tapping the screen to bring back the user interface will cause the face to regain its proper coloring.</li>
+</ol>
+<h3 id="reproducible-so-far-on">Reproducible (so far) on:</h3>
+
+<ul>
+<li>iPhone 6 (iOS 9.2.1)</li>
+  <li>iPad 4 (iOS 9.2.1)</li>
+  <li>iPad Air 2 (iOS 9.0.2)</li>
+  <li>iPad Pro (iOS 9.2.1)</li>
+</ul>
+<h2 id="proof-through-testing">Proof through Testing</h2>
+
+<p>When I first stumbled across this bug, I thought there was a problem with my iPad Air 2. It was not until I tested this scenario on multiple iOS devices before I was convinced that it was a bug with either iOS or all recent hardware iterations. However, I wanted to be able to prove that this bug existed and that my eyes were not playing tricks.</p>
+
+<p>I dug out my colorimeter (<a href="http://www.xrite.com/categories/calibration-profiling/i1display-pro">i1Display Pro</a>) that I use to calibrate my monitors in hopes that it would be useful for my project. I tried to use the software that came with it, but nowhere could I find any options to let me read and collect the color value data points.</p>
+
+<p>After searching for software solutions that would allow me to read color data points from my colorimeter, I stumbled across HCFR. <a href="https://sourceforge.net/projects/hcfr/">HCFR</a> is an open source calibration tool that allowed me to read the color percentages and values (among many other things) through my colorimeter; then graph and observe these data points.</p>
+
+<h2 id="capturing-results">Capturing Results</h2>
+
+<p><amp-img src="/assets/img/2016/03/iPadTesting2.jpg" alt="Capturing iPad Air 2 results" width="800" height="532" layout="responsive"><noscript><img src="/assets/img/2016/03/iPadTesting2.jpg" alt="Capturing iPad Air 2 results" width="800" height="532"></noscript></amp-img><em>Capturing iPad Air 2 results</em></p>
+
+<p>I used the bug reproduction video above for my sample capture data on my iPad Air 2. Below is a video demonstrating the live capture with my colorimeter as I replicate the bug behavior –hiding and restoring the user interface.</p>
+
+<!-- Method to implement AMP-Video. -->
+
+<amp-video height="420" width="700" poster="/assets/files/2016/03/graphs_poster.png" layout="responsive" controls="" autoplay="" loop=""><div fallback="">
+    Your browser doesn’t support HTML5 video
+  </div>
+  <source type="video/mp4" src="/assets/files/2016/03/graphs.mp4"></source></amp-video><p><amp-img src="/assets/img/2016/03/capture_small.jpg" alt="HCFR Capture Window" width="800" height="392" layout="responsive"><noscript><img src="/assets/img/2016/03/capture_small.jpg" alt="HCFR Capture Window" width="800" height="392"></noscript></amp-img><em><a href="/assets/img/2016/03/capture_large.jpg">HCFR Capture Window (click to view larger image)</a></em></p>
+
+<p>[<a href="/assets/files/2016/03/ColorMeasures1.chc">HCFR Capture Results File</a>]</p>
+
+<h2 id="notes">Notes</h2>
+
+<h3 id="disclosure">Disclosure</h3>
+<p>December 13, 2015 I submitted this to <a href="https://bugreport.apple.com/">Apple’s bug reporter</a>. February 16, 2016 Apple Developer Relations responded that this was a limitation of the hardware and could not be fixed without a significant impact to power. They state plans to address this issue in the next hardware architecture.</p>
+
+<h3 id="reproducibility">Reproducibility</h3>
+
+<p>Only under certain conditions with specific color palettes am I able to reproduce this bug. This happens very infrequently. The majority of the time this change in color temperature will not occur. But when it does, it becomes painfully obvious. I have been able to reproduce this with a higher success rate when viewing cartoons because of their stable color palette of the scene. The most notable example I have come across is the TV show, <a href="https://en.wikipedia.org/wiki/Archer_(TV_series)">Archer</a> where it occurred many times throughout the first six seasons.</p>
+
+<h4 id="non-cartoon-example">Non-Cartoon Example</h4>
+
+<p>An example of this bug occurring on a human face is in <a href="https://youtu.be/utWQW_TF4ZY?t=535">this YouTube video</a> of jacksepticeye. Around the 8:55 mark, the game in the background consists of predominantly gray colors. During this time, when the user interface for YouTube is hidden on the iOS device, the flesh tones on Sean’s face in the corner will transition into a harsh white.</p>
+
+<h2 id="solutions">“Solutions”</h2>
+
+<p>Across the web <a href="https://www.reddit.com/r/ipad/comments/2w84cw/">[1]</a> <a href="https://discussions.apple.com/thread/4581841">[2]</a> <a href="https://discussions.apple.com/thread/3822777">[3]</a>, there exist somewhat related bugs with iOS video playback and reproduction. Although I can’t say that these issues are directly related, the solution for most of these is to turn on AssistiveTouch.</p>
+
+<div class="language-text highlighter-rouge">
+<pre class="highlight"><code>General&gt;Accessibility&gt;AssistiveTouch&gt;On
+</code></pre>
+</div>
+
+<p>AssistiveTouch (among other things) places a virtual shortcuts/home button on top of every screen on your device. When this occurs, the iOS device considers this a piece of the user interface (why shouldn’t it be?). Because of this behavior, when trying to replicate the bug behavior with the video player, it will not occur because the AssistiveTouch is visible on screen.</p>
+
+<p>I found it a little strange that the AssistiveTouch solution for other brightness issues on the iPad worked for the color changes during video playback.</p>
+
+<h2 id="why-does-this-bug-happen">Why Does This Bug Happen?</h2>
+
+<p>I don’t know. I have been trying to figure this out for months. I had hopes that submitting the bug report would give me more answers. I simply do not understand  the <em>exact</em> conditions that produce this bug. I tried reproducing the bug with an image containing the top eight prominent colors in the bug example video. It did not work.</p>
+
+<p>Here are the best (abeit far-fetched) theories that I can come up with as to why the (1) color shifts (2) with certain color palettes (3) during videos with a hidden user interface.</p>
+
+<h3 id="theories">Theories</h3>
+<ul>
+<li>It <em>really</em> is a hardware bug that Apple can’t fix without sacrificing power saving features baked into the operating system.</li>
+  <li>Maybe it’s possible that iOS is detecting low color on the screen and is assuming that the content is nonmedia (i.e. books/text). It is reducing color gamut to somehow save power with the GPU (if that’s even possible) or something similar.</li>
+  <li>Perhaps the shift in the red channel has something to do with early preparations for the upcoming <a href="http://www.macrumors.com/how-to/use-ios-9-3-night-shift-mode/">Night Shift</a> feature.</li>
+  <li>It’s a software bug that they are unable to fix without changing too much of iOS.</li>
+  <li>Maybe a recent change in iOS video players is a contributing factor</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Without knowing more about iOS inner workings, it’s hard to say how much of the operating system this bug affects. But for now, it remains a mystery to myself.</p>
+
+<p>I wanted to publicly disclose this bug because I understand how frustrating it can be to research such a subtle bug and come up empty while trying to reproduce it. I am hoping that this post will help other users that search for the problem demonstrated be aware that it exists, can be reproduced, and let them know what I have discovered.</p>
+
+
+</div>
+
+<a href="/blog/2016/03/ios-video-bug-disclosure/" class="meta center">Comments are available on the full webpage.</a>
+
+
+<!-- start footer -->
+  <div class="footer">
+    <div class="container">
+      <span class="meta">
+        <span> | </span>
+
+  
+    <a href="https://www.linkedin.com/in/kyleniewiada/">LinkedIn</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://github.com/aav7fl">GitHub</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://twitter.com/CrypticCitrus">Twitter</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://www.youtube.com/user/KyleNiewiada">YouTube</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://kyleniewiada.bandcamp.com/" rel="nofollow">BandCamp</a>
+  
+    <span> | </span>
+
+
+      </span>
+    </div>
+  </div>
+<!-- end footer -->
+
+</body>
+
+</html>

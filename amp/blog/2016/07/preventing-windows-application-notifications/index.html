@@ -1,0 +1,179 @@
+<!doctype html>
+<html amp lang="en">
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet" type="text/css"><meta charset="utf-8"><title>Preventing Windows Applications from Broadcasting a Taskbar Notification</title><link rel="canonical" href="https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/"><meta property="og:url" content="https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#3d256d"><!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#3d256d"><!-- Begin Jekyll SEO tag v2.1.0 --><title>Preventing Windows Applications from Broadcasting a Taskbar Notification - Kyle Niewiada’s Website</title><meta property="og:title" content="Preventing Windows Applications from Broadcasting a Taskbar Notification"><meta name="description" content="My little corner of the Internet where I write about projects I’ve figured out"><meta property="og:description" content="My little corner of the Internet where I write about projects I’ve figured out"><meta property="og:site_name" content="Kyle Niewiada’s Website"><meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/07/banner.png"><meta property="og:image:height" content="480"><meta property="og:image:width" content="1011"><meta property="og:type" content="article"><meta property="article:published_time" content="2016-07-02T12:33:00-04:00"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CrypticCitrus"><meta name="twitter:creator" content="@CrypticCitrus"><meta property="fb:app_id" content="137961485759"><script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Preventing Windows Applications from Broadcasting a Taskbar Notification",
+"author": {"@type": "Person",
+"name": "Kyle Niewiada"},
+"image": {"@type": "ImageObject",
+"url": "https://www.kyleniewiada.org/assets/img/2016/07/banner.png",
+"height": 480,
+"width": 1011},
+"datePublished": "2016-07-02T12:33:00-04:00",
+"dateModified": "2016-08-04T13:47:00-04:00",
+"description": "My little corner of the Internet where I write about projects I’ve figured out",
+"publisher": {"@type": "Organization",
+"name": "Kyle Niewiada",
+"logo": {"@type": "ImageObject",
+"url": "https://www.kyleniewiada.org/assets/logo.jpg"}},
+"mainEntityOfPage": {"@type": "WebPage",
+"@id": "https://www.kyleniewiada.org/amp/blog/2016/07/preventing-windows-application-notifications/"},
+"url": "https://www.kyleniewiada.org/amp/blog/2016/07/preventing-windows-application-notifications/"}</script><!-- End Jekyll SEO tag --><style amp-custom>
+  
+  body,p,li,ul{font-size:16px;line-height:1.58;color:#111;font-family:"Open Sans",Helvetica,Arial,sans-serif}p code,p pre{background-color:#fff;color:#9e023b;display:inline-block;border:1px solid #d3d3d3;border-radius:.2em;padding:0 .3em}.pageTitle{text-align:left;font-size:200%;line-height:1.2;font-weight:400}@media (min-width: 600px){.pageTitle{font-size:250%}}@media (min-width: 1000px){.pageTitle{font-size:300%}}.meta{color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:120%}@media (min-width: 600px){.meta{font-size:130%}}@media (min-width: 1000px){.meta{font-size:140%}}.meta.center{text-align:center;display:block}.titlemeta{overflow:auto;color:#696969;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-size:100%}.titlemeta .meta-left{float:left}.titlemeta .meta-right{float:right}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 .5rem;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:600}::-moz-selection{background:#3d256d;color:white}::selection{background:#3d256d;color:white}a{color:#3d256d}a:hover{color:#1d1234}.line-separator{height:1px;background:gray;margin-top:16px;margin-bottom:16px}.container:after{content:" ";display:block;clear:both}.post,.container{max-width:700px;margin-right:auto;margin-left:auto;padding:0 16px}.post img,.container img{display:block;margin-left:auto;margin-right:auto}img,video,audio,iframe,object,amp-video{max-width:100%}.noList{list-style:none;padding-left:0;margin-left:0}.pagination .next{float:left}.pagination .previous{float:right}.posts li{margin-bottom:4rem;position:relative}.posts li:before{content:"";position:absolute;bottom:-2rem;left:0;background:#e6e6e6;height:2px;width:60px}.posts li a{text-decoration:none}.posts li a:hover{text-decoration:underline}.posts li .date{color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:.8em}.header-amp{background:#262626;margin-bottom:16px;padding:16px;text-align:center;font-size:1.4em;font-weight:400}.header-amp a,.header-amp a:hover{color:#fff;text-decoration:none;overflow:visible}
+
+
+  
+
+  
+  .footer{text-align:center;padding:2rem 0}.footer .container{border-top:4px solid #d9d9d9;padding-top:.5em}.footer ul{text-align:center}.post img+em,.post amp-img+em,.post video+em{text-align:center;font-size:.9em;font-style:italic;color:#5e5e5e;display:block}.post img+p,.post amp-img+p{margin-bottom:2rem}blockquote{background:#ffa;border-left:10px solid #dc0;margin:1.5em 10px;padding:0.5em 10px}.postNav{border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;overflow:hidden}.postNav .prev,.postNav .next{display:block;width:100%;height:5rem;overflow:hidden;position:relative;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:800;font-size:.9em;text-align:center}.postNav .prev img,.postNav .next img{display:block;position:absolute;top:50%;-webkit-transform:translateY(-50%);-webkit-filter:brightness(40%);-ms-transform:translateY(-50%);transform:translateY(-50%);filter:brightness(40%);left:0;width:100%;height:auto}.postNav .prev span,.postNav .next span{z-index:1;position:relative;padding:.5rem;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);line-height:1.4}.postNav .prev.image,.postNav .next.image{text-decoration:none;color:white;text-shadow:1px 1px 8px rgba(0,0,0,0.8);position:relative}.postNav .prev:hover.image,.postNav .next:hover.image{opacity:.8}.postNav .prev span{left:0}.postNav .next span{right:0}@media (min-width: 600px){.postNav .prev,.postNav .next{width:50%}.postNav .prev{float:left;text-align:left}.postNav .next{text-align:right;float:right}}.button,.button-secondary,.button-tertiary,.button__outline{background-color:#3d256d;display:inline-block;position:relative;font-family:"Open Sans",Helvetica,Arial,sans-serif;text-decoration:none;color:#fff;font-size:1em;line-height:1.2em;font-weight:normal;padding:.5em 1.5em;border:0;border-radius:4px;cursor:pointer;margin-bottom:.5em}.button:hover,.button-secondary:hover,.button-tertiary:hover,.button__outline:hover,.button:focus,.button-secondary:focus,.button-tertiary:focus,.button__outline:focus{color:#fff;text-decoration:none;background-color:#281847}.button:active,.button-secondary:active,.button-tertiary:active,.button__outline:active{top:1px}.button-secondary{background-color:#1b3665}.button-secondary:hover{background-color:#10203d}.button-tertiary{background-color:#33446f}.button-tertiary:hover{background-color:#232f4c}.button__outline{background-color:transparent;border:3px solid #3d256d;color:#3d256d}.button__outline:hover{background-color:#3d256d;color:#fff}.highlight{background:#d3d3d3;overflow-y:hidden;padding:16px}.highlight .c{color:#999988;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#999988;font-style:italic}.highlight .cp{color:#999999;font-weight:bold}.highlight .c1{color:#999988;font-style:italic}.highlight .cs{color:#999999;font-weight:bold;font-style:italic}.highlight .gd{color:#000000;background-color:#fdd}.highlight .gd .x{color:#000000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000000;background-color:#dfd}.highlight .gi .x{color:#000000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#445588;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086B3}.highlight .nc{color:#445588;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#990000;font-weight:bold}.highlight .nf{color:#990000;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}
+
+  </style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async src="https://cdn.ampproject.org/v0.js"></script>
+
+<body>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-37567352-1"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+</amp-analytics>
+
+
+
+<!-- start header -->
+<h1 class="header-amp">
+  <a href="/">Kyle Niewiada</a>
+</h1>
+<!-- end header -->
+
+
+<div class="post">
+  <div class="post_info">
+    <h1 class="pageTitle">Preventing Windows Applications from Broadcasting a Taskbar Notification</h1>
+
+    <h2 class="meta">Kyle Niewiada
+
+    <h3 class="meta">July 02, 2016 | 7 Minute Read</h3>
+
+    
+    <div class="featuredImage">
+      <amp-img src="/assets/img/2016/07/banner.png" alt="Windows registry notification entry" width="1011" height="480" layout="responsive"><noscript><img src="/assets/img/2016/07/banner.png" alt="Windows registry notification entry" width="1011" height="480"></noscript></amp-img>
+</div>
+    
+
+    <div class="line-separator"></div>
+
+  </h2>
+</div>
+
+  <p>A few weeks ago a Windows application on my computer was broadcasting notifications that I did not care for. I have an application that communicates with my uninterruptible power supply to shut down my machine in the event of a power outage after a few minutes. If this program estimates less than five minutes of reserve power, the program will broadcast a notification in the system taskbar (with sound!) letting me know.</p>
+
+<blockquote>
+  <p>UPDATE: After the Windows 10 Anniversary Update, misbehaving applications no longer re-register an entry for notifications. This guide has now been made out of date as hiding Windows Notifications will now handle behavior correctly.</p>
+</blockquote>
+
+<p>If you are familiar with Windows, then you know that there is a feature that allows you to hide notifications and icons to programs in the system tray. However, this application does not seem to respect those rules. Every time the application launches, it appears to reassociate itself and reset all settings made to keep it quiet. If I did manage to mute it, the changes would not survive a system reboot.</p>
+
+<p>The notification is posted frequently, as my system’s max power draw while gaming will trigger the UPS power draw warning. I found this to happen quite frequently when I was playing in virtual reality and it was continually breaking my immersion by ringing out system notifications in the middle of <a href="http://store.steampowered.com/app/322770/">Vanishing Realms</a>.</p>
+
+<p>I understand that this is to help prevent the user from unknowingly leaving their system vulnerable during an outage when the user is not there. But if I lose power while in my VR headset, I am going to know very quickly that my machine should be shut off (not to mention my entire VR world will go black).</p>
+
+<p>I wanted to keep the functionality of my uninterruptible power supply communications program, but I also wanted to remove the annoying notification. I did a bit of digging inside the Windows registry (Windows 10 64-bit) and found to be what looks like a set of the registry keys responsible for relaying an application notification.</p>
+
+<h1 id="removing-the-notification">Removing the Notification</h1>
+
+<p>This is a <em>very quick and dirty</em> registry hack to prevent applications from relaying notifications in the system taskbar. Windows notifications are sent by writing to a parent registry key associated with an application. Each application will attempt to add notifications as a sub-key to the registered parent key. By removing my user’s permission to write to the parent key, the application will be unable to add sub-keys, and silently fails when it attempts to send notifications. I have not noticed any problems yet, but your mileage may vary.</p>
+
+<p>In case it helps, my machine is using Windows 10 Pro 64-bit.</p>
+
+<h2 id="finding-the-notification-key">Finding the Notification Key</h2>
+
+<p>The first step is to find the key inside the registry associated with the application. Browse to:</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Current\
+</code></pre>
+</div>
+
+<p>One will find a list of keys for applications registered for the system notifications. If the application you’re looking for does not immediately jump out, it is probably one of the <code class="highlighter-rouge">Microsoft.Explorer.Notification.{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}</code> keys.</p>
+
+<p>The only information that I could find about this and how the key is decided is the claim that <a href="https://github.com/mumble-voip/mumble/issues/1777#issue-98981400">it is the application GUID</a>. However, my research has found that this registry key does not match the GUID for the installed application. My theory is that it is randomly generated upon install. But I have not yet verified this.</p>
+
+<p><amp-img src="/assets/img/2016/07/regedit0.png" alt="The notification for my battery adding a subkey in the registry" width="1011" height="796" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit0.png" alt="The notification for my battery adding a subkey in the registry" width="1011" height="796"></noscript></amp-img><em>The notification for my battery adding a subkey in the registry</em></p>
+
+<p>When the registered application has no notification to display, there will be no subkeys listed for that registry key. However, while a notification is displayed, one can refresh the registry editor (F5 key) and see that a subkey has been added. This will help identify which registry keys are associated with the application notifications.</p>
+
+<h2 id="removing-control-permissions">Removing Control Permissions</h2>
+
+<p>Next, control permissions need to be removed from that specific registry key. Right-click on the parent key and select <code class="highlighter-rouge">Permissions…</code>.
+<amp-img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions" width="1002" height="708" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions" width="1002" height="708"></noscript></amp-img></p>
+
+<p>Select the user currently logged into the machine and deny <code class="highlighter-rouge">Full control</code> and <code class="highlighter-rouge">Read</code> permissions. Apply these changes. Attempt to re-create the application notification in the taskbar. If unable to re-create, the correct changes were made. If not, undo the changes and try looking for the key again.</p>
+
+<p><amp-img src="/assets/img/2016/07/regedit2.png" alt="Denying full control permissions in Windows registry" width="1002" height="708" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit2.png" alt="Denying full control permissions in Windows registry" width="1002" height="708"></noscript></amp-img></p>
+
+<p>These changes should allow for the removal of annoying applications that do not follow the proper guidelines or rules when it comes to Windows taskbar notifications. Sometimes programs have unintended consequences when the programmer makes assumptions about how and when a user will interact with their program. I was hit with a combination of a program that did not properly register notifications as well as provide no advanced options to disable such notifications (there <em>are</em> other advanced options under the program).</p>
+
+<p>If anyone out there has a better method or would like to point out any unforeseen consequences with this, please let me know. For everyone else, this should help tame such applications inside their Winpredows taskbar.</p>
+
+
+</div>
+
+<a href="/blog/2016/07/preventing-windows-application-notifications/" class="meta center">Comments are available on the full webpage.</a>
+
+
+<!-- start footer -->
+  <div class="footer">
+    <div class="container">
+      <span class="meta">
+        <span> | </span>
+
+  
+    <a href="https://www.linkedin.com/in/kyleniewiada/">LinkedIn</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://github.com/aav7fl">GitHub</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://twitter.com/CrypticCitrus">Twitter</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://www.youtube.com/user/KyleNiewiada">YouTube</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://kyleniewiada.bandcamp.com/" rel="nofollow">BandCamp</a>
+  
+    <span> | </span>
+
+
+      </span>
+    </div>
+  </div>
+<!-- end footer -->
+
+</body>
+
+</html>

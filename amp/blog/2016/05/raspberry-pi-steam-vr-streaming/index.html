@@ -1,0 +1,279 @@
+<!doctype html>
+<html amp lang="en">
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet" type="text/css"><meta charset="utf-8"><title>Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2</title><link rel="canonical" href="https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/"><meta property="og:url" content="https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#3d256d"><!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#3d256d"><!-- Begin Jekyll SEO tag v2.1.0 --><title>Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2 - Kyle Niewiada’s Website</title><meta property="og:title" content="Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2"><meta name="description" content="My little corner of the Internet where I write about projects I’ve figured out"><meta property="og:description" content="My little corner of the Internet where I write about projects I’ve figured out"><meta property="og:site_name" content="Kyle Niewiada’s Website"><meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg"><meta property="og:image:height" content="455"><meta property="og:image:width" content="800"><meta property="og:type" content="article"><meta property="article:published_time" content="2016-05-31T16:44:00-04:00"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CrypticCitrus"><meta name="twitter:creator" content="@CrypticCitrus"><meta property="fb:app_id" content="137961485759"><script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2",
+"author": {"@type": "Person",
+"name": "Kyle Niewiada"},
+"image": {"@type": "ImageObject",
+"url": "https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg",
+"height": 455,
+"width": 800},
+"datePublished": "2016-05-31T16:44:00-04:00",
+"dateModified": "2016-10-27T08:07:00-04:00",
+"description": "My little corner of the Internet where I write about projects I’ve figured out",
+"publisher": {"@type": "Organization",
+"name": "Kyle Niewiada",
+"logo": {"@type": "ImageObject",
+"url": "https://www.kyleniewiada.org/assets/logo.jpg"}},
+"mainEntityOfPage": {"@type": "WebPage",
+"@id": "https://www.kyleniewiada.org/amp/blog/2016/05/raspberry-pi-steam-vr-streaming/"},
+"url": "https://www.kyleniewiada.org/amp/blog/2016/05/raspberry-pi-steam-vr-streaming/"}</script><!-- End Jekyll SEO tag --><style amp-custom>
+  
+  body,p,li,ul{font-size:16px;line-height:1.58;color:#111;font-family:"Open Sans",Helvetica,Arial,sans-serif}p code,p pre{background-color:#fff;color:#9e023b;display:inline-block;border:1px solid #d3d3d3;border-radius:.2em;padding:0 .3em}.pageTitle{text-align:left;font-size:200%;line-height:1.2;font-weight:400}@media (min-width: 600px){.pageTitle{font-size:250%}}@media (min-width: 1000px){.pageTitle{font-size:300%}}.meta{color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:120%}@media (min-width: 600px){.meta{font-size:130%}}@media (min-width: 1000px){.meta{font-size:140%}}.meta.center{text-align:center;display:block}.titlemeta{overflow:auto;color:#696969;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-size:100%}.titlemeta .meta-left{float:left}.titlemeta .meta-right{float:right}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 .5rem;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:600}::-moz-selection{background:#3d256d;color:white}::selection{background:#3d256d;color:white}a{color:#3d256d}a:hover{color:#1d1234}.line-separator{height:1px;background:gray;margin-top:16px;margin-bottom:16px}.container:after{content:" ";display:block;clear:both}.post,.container{max-width:700px;margin-right:auto;margin-left:auto;padding:0 16px}.post img,.container img{display:block;margin-left:auto;margin-right:auto}img,video,audio,iframe,object,amp-video{max-width:100%}.noList{list-style:none;padding-left:0;margin-left:0}.pagination .next{float:left}.pagination .previous{float:right}.posts li{margin-bottom:4rem;position:relative}.posts li:before{content:"";position:absolute;bottom:-2rem;left:0;background:#e6e6e6;height:2px;width:60px}.posts li a{text-decoration:none}.posts li a:hover{text-decoration:underline}.posts li .date{color:gray;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:300;font-size:.8em}.header-amp{background:#262626;margin-bottom:16px;padding:16px;text-align:center;font-size:1.4em;font-weight:400}.header-amp a,.header-amp a:hover{color:#fff;text-decoration:none;overflow:visible}
+
+
+  
+
+  
+  .footer{text-align:center;padding:2rem 0}.footer .container{border-top:4px solid #d9d9d9;padding-top:.5em}.footer ul{text-align:center}.post img+em,.post amp-img+em,.post video+em{text-align:center;font-size:.9em;font-style:italic;color:#5e5e5e;display:block}.post img+p,.post amp-img+p{margin-bottom:2rem}blockquote{background:#ffa;border-left:10px solid #dc0;margin:1.5em 10px;padding:0.5em 10px}.postNav{border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;overflow:hidden}.postNav .prev,.postNav .next{display:block;width:100%;height:5rem;overflow:hidden;position:relative;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:800;font-size:.9em;text-align:center}.postNav .prev img,.postNav .next img{display:block;position:absolute;top:50%;-webkit-transform:translateY(-50%);-webkit-filter:brightness(40%);-ms-transform:translateY(-50%);transform:translateY(-50%);filter:brightness(40%);left:0;width:100%;height:auto}.postNav .prev span,.postNav .next span{z-index:1;position:relative;padding:.5rem;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);line-height:1.4}.postNav .prev.image,.postNav .next.image{text-decoration:none;color:white;text-shadow:1px 1px 8px rgba(0,0,0,0.8);position:relative}.postNav .prev:hover.image,.postNav .next:hover.image{opacity:.8}.postNav .prev span{left:0}.postNav .next span{right:0}@media (min-width: 600px){.postNav .prev,.postNav .next{width:50%}.postNav .prev{float:left;text-align:left}.postNav .next{text-align:right;float:right}}.button,.button-secondary,.button-tertiary,.button__outline{background-color:#3d256d;display:inline-block;position:relative;font-family:"Open Sans",Helvetica,Arial,sans-serif;text-decoration:none;color:#fff;font-size:1em;line-height:1.2em;font-weight:normal;padding:.5em 1.5em;border:0;border-radius:4px;cursor:pointer;margin-bottom:.5em}.button:hover,.button-secondary:hover,.button-tertiary:hover,.button__outline:hover,.button:focus,.button-secondary:focus,.button-tertiary:focus,.button__outline:focus{color:#fff;text-decoration:none;background-color:#281847}.button:active,.button-secondary:active,.button-tertiary:active,.button__outline:active{top:1px}.button-secondary{background-color:#1b3665}.button-secondary:hover{background-color:#10203d}.button-tertiary{background-color:#33446f}.button-tertiary:hover{background-color:#232f4c}.button__outline{background-color:transparent;border:3px solid #3d256d;color:#3d256d}.button__outline:hover{background-color:#3d256d;color:#fff}.highlight{background:#d3d3d3;overflow-y:hidden;padding:16px}.highlight .c{color:#999988;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#999988;font-style:italic}.highlight .cp{color:#999999;font-weight:bold}.highlight .c1{color:#999988;font-style:italic}.highlight .cs{color:#999999;font-weight:bold;font-style:italic}.highlight .gd{color:#000000;background-color:#fdd}.highlight .gd .x{color:#000000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000000;background-color:#dfd}.highlight .gi .x{color:#000000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#445588;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086B3}.highlight .nc{color:#445588;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#990000;font-weight:bold}.highlight .nf{color:#990000;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}
+
+  </style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async src="https://cdn.ampproject.org/v0.js"></script>
+
+<body>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-37567352-1"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+</amp-analytics>
+
+
+
+<!-- start header -->
+<h1 class="header-amp">
+  <a href="/">Kyle Niewiada</a>
+</h1>
+<!-- end header -->
+
+
+<div class="post">
+  <div class="post_info">
+    <h1 class="pageTitle">Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2</h1>
+
+    <h2 class="meta">Kyle Niewiada
+
+    <h3 class="meta">May 31, 2016 | 14 Minute Read</h3>
+
+    
+    <div class="featuredImage">
+      <amp-img src="/assets/img/2016/05/banner2.jpg" alt="Raspberry Pi streaming setup behind monitor" width="800" height="455" layout="responsive"><noscript><img src="/assets/img/2016/05/banner2.jpg" alt="Raspberry Pi streaming setup behind monitor" width="800" height="455"></noscript></amp-img>
+</div>
+    
+
+    <div class="line-separator"></div>
+
+  </h2>
+</div>
+
+  <p>I think virtual reality is a lot of fun. I had a friend in college demo an Oculus DK1 to me and I was pretty amazed; even though I was running it on a laptop and the display drivers turned everything into wireframe models. I remember getting my hands on my first Google Cardboard, sliding my phone in, and exploring the world through Google Earth. When the HTC Vive went on sale with its advertised room-scale, I bought it. My first real chance to become heavily immersed in a virtual world.</p>
+
+<blockquote>
+  <p>UPDATE (10/27/2016): After the most recent Raspbian update, I need to use an external powered USB hub for my wireless adapter. This is necessary to use the 5 GHz band which requires more power.</p>
+</blockquote>
+
+<p>However, my HTC Vive setup did not fit in my room. I ended up running some cables to put it in the room next door. But there was a problem. I wanted to let those around me in the VR room see what I was seeing. I had to figure out a way to mirror or broadcast my desktop to the other room.</p>
+
+<p>My first thought was that I was going to use my Steam Link as a way to rebroadcast desktop. After all, it’s another product by Valve and its primary function is for streaming games. I thought this was going to work because it had the feature to minimize the Steam Big Picture application and use the desktop instead. But as I began to find out, this did not work with all Steam VR applications and the usability of the HTC Vive suffered.</p>
+
+<p>If I launched games from my Steam Link, I could no longer use the VR menu. If I tried to launch the Steam Link after I was in the VR menu, it would refuse because I was already “in game”. I tried using alternative software such as Splashtop (Remote software) to stream it to my device, but it was unable to draw the desktop unless I forced it; this interfered with my Vive yet again.</p>
+
+<p>After failing to use the Steam Link and Splashtop, I came across others mentioning Nvidia’s GameStream as an alternative to streaming gameplay. Nvidia has a built-in feature with their new-ish graphics cards that allow one to stream their gaming setup to an Nvidia Shield tablet. I did not own a Nvidia Shield tablet. Luckily there was an open source client alternative, <a href="https://github.com/irtimmer/moonlight-embedded">Moonlight Embedded</a>, that would allow streaming to a number of different clients. Sure, I could have probably set up a VNC server/VNC client but who knows how long it would have taken for me to get optimized for streaming games, and where was the fun in that?</p>
+
+<p>It was settled. I was going to install Moonlight Embedded to my Raspberry Pi 2. Here is my setup so far.</p>
+
+<h2 id="what-i-used">What I used:</h2>
+
+<ul>
+<li>Raspberry Pi 2 running Raspbian Jessie (May 2016) using NOOBS
+    <ul>
+<li>Including peripherals such as micoSD card, HDMI cable, case, mouse, keyboard, USB micro power adapter, a method to connect to home network such as wireless adapter or ethernet.</li>
+    </ul>
+</li>
+  <li>Computer with Windows 10</li>
+  <li>Nvidia GTX 970 graphics card</li>
+  <li><a href="https://github.com/irtimmer/moonlight-embedded">Moonlight Embedded</a></li>
+</ul>
+<h2 id="setting-up-the-pi">Setting Up the Pi</h2>
+
+<p>The first thing that I did was install the latest Raspbian Jessie release on my Raspberry Pi 2 <a href="https://www.raspberrypi.org/downloads/noobs/">using NOOBS</a>. <strike>I originally was using the TP-LINK TL-WDN3200 wireless adapter with my Raspberry Pi to connect on the 5 GHz network. But as I found out later, this was a problematic adapter.</strike>  I was able to get the TP-LINK TL-WDN3200 working perfectly. I needed to remove DHCPCD (and the default network manager) and use WICD to manage my wireless adapter as DHCPCD appeared to make some kind of aggressive roaming check every minute creating a severe lag on my wireless signal. Make sure the Raspberry Pi is connected to the Internet before continuing.</p>
+
+<p>After my installation was finished, I followed the Moonlight Embedded directions found in the <a href="https://github.com/irtimmer/moonlight-embedded/wiki/Packages">documentation</a></p>
+
+<p>Adding the line:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>deb http://archive.itimmer.nl/raspbian/moonlight jessie main
+</code></pre>
+</div>
+
+<p>to this file:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>/etc/apt/sources.list
+</code></pre>
+</div>
+
+<p>And running the following to install Moonlight Embedded.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>apt-get update
+apt-get install moonlight-embedded
+</code></pre>
+</div>
+
+<p>Once everything was complete, Moonlight Embedded was installed on my Pi and ready to use.</p>
+
+<h2 id="setting-up-the-computer">Setting Up the Computer</h2>
+
+<p>I switched over to my desktop, opening up Nvidia GeForce Experience, and added the information below as a custom Shield game. Out of the box, Moonlight Embedded will launch you to the Steam Big Picture mode and leave you with the same problem as the Steam Link; getting stuck with Steam’s streaming mess. However, with Nvidia GeForce Experience, we can add the ability to stream the desktop without interfering with SteamVR at all. In Nvidia GeForce Experience, add the custom game to GameStream found below .</p>
+
+<p>The application below is Windows’ built-in remote desktop software. It is what I use it to access my PC machine from the Pi in a separate room.</p>
+
+<p><amp-img src="/assets/img/2016/05/GFEWindow.png" alt="Adding remote desktop as Nvidia GameStream custom game" width="1200" height="720" layout="responsive"><noscript><img src="/assets/img/2016/05/GFEWindow.png" alt="Adding remote desktop as Nvidia GameStream custom game" width="1200" height="720"></noscript></amp-img><em>Adding remote desktop as a Nvidia GameStream custom game</em></p>
+
+<div class="language-text highlighter-rouge">
+<pre class="highlight"><code>Name: RemoteDesktop
+Target: "C:\Windows\System32\mstsc.exe"
+Start in: C:\Windows\System32
+</code></pre>
+</div>
+
+<h2 id="finishing-the-pi">Finishing the Pi</h2>
+
+<p>To finish the setup, Raspberry Pi needs to be paired as a GameStream client to your PC.</p>
+
+<p>To initiate pairing, type the following on your Raspberry Pi terminal:</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code>moonlight pair 192.168.1.X
+</code></pre>
+</div>
+
+<p><em>(replace 192.168.1.X with your PC’s IP, which can be found by typing <code class="highlighter-rouge">ipconfig</code> into the Windows command prompt and matching it with your network interface)</em></p>
+
+<p>Once pairing has been initiated, a window will pop up on the Windows desktop prompting for a code to be entered. Type in the pairing code presented on the Raspberry Pi into your desktop window, and then you should be successfully paired.</p>
+
+<p>I created a handy streaming script for my own needs to start streaming on the Raspberry Pi found below. It adds in a few extra lines to disable screen blanking such that my remote session does not freeze or become unusable if my Raspberry Pi enters standby mode. However, none of the extra lines will be necessary <em>unless</em> you change your /boot/config.txt to turn off the monitor when the screen blanks. Make sure to give the script execute permissions and you should be able to run it.</p>
+
+<p>Check out the rest of the <a href="https://github.com/irtimmer/moonlight-embedded/tree/master/docs">documentation arguments</a>. Your settings will probably differ.</p>
+
+<div class="language-shell highlighter-rouge">
+<pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c">#Disable screen saver blanking.</span>
+xset s off
+
+<span class="c">#Disable Energy Star features.</span>
+xset -dpms
+
+<span class="c">#Start the Moonlight stream. Make sure to replace the remote address with your own computer's IP.</span>
+<span class="c">#This is probably the only necessary command unless you make other changes to Raspbian</span>
+moonlight stream -1080 -60fps -bitrate 20000 -localaudio -app RemoteDesktop 192.168.1.X
+
+<span class="c">#Enable screen saver blanking</span>
+xset s off
+
+<span class="c">#Turn off power saving screen features.</span>
+xset s on
+
+<span class="c">#Enable Energy Star features.</span>
+xset +dpms
+</code></pre>
+</div>
+
+<p><em>Don’t forget! Ctrl+Alt+Shift+Q quits the streaming session.</em></p>
+
+<h2 id="my-problems-and-solutions">My Problems and Solutions</h2>
+
+<p>My installation wasn’t very smooth. I had a lot of problems along the way that kept setting me back and extended the project duration for a couple days.</p>
+
+<h3 id="my-raspberry-pi-was-extremely-slow-at-downloading">My Raspberry Pi was extremely slow at downloading.</h3>
+
+<p>It was not receiving enough power so I do use a different USB adapter to give it more. I didn’t realize that’s what the flashing logo on the top right corner meant. But once I did figure it out, my download speeds over my network soared past the 1 Mbit that I was getting before.</p>
+
+<h3 id="audio-would-not-stream">Audio would not stream.</h3>
+
+<p>My audio wouldn’t stream at first to my Raspberry Pi because I wasn’t using the <code class="highlighter-rouge">-localaudio</code> flag. This meant that the primary sound device was changing, then SteamVR was also attempting to change the primary audio device to the HTC Vive, and they were both conflicting with each other. If I did manage to have it to stream to the special Nvidia audio driver, I found it to stutter quite a bit. So I resolved this issue by using the local audio flag to prevent my sound device from changing, and mirroring the SteamVR audio to my primary sound driver on my computer.</p>
+
+<h3 id="wireless-streaming-stuttered-every-60-seconds-for-10-seconds">Wireless streaming stuttered every 60 seconds for 10 seconds.</h3>
+
+<strike>My wireless adapter was the primary culprit to this. There was some issue with it either being powered or sharing band with on the USB bus with my Raspberry Pi. I switched to my handy [IOGear Ethernet/Wireless adapter](http://www.amazon.com/IOGEAR-Universal-Ethernet-Adapter-GWU627/dp/B004UAKCS6) and have had little problems streaming 20 Mbit streams. This adapter might not work for everybody. It uses the 2.4 GHz band which is commonly known to be quite crowded. My Raspberry Pi is near the wireless access point, so it has little interference.</strike>
+
+<p>I was able to get my 5 GHz wireless adapter working after uninstalling the newly introduced DHCPCD wireless manager and switching to WICD. I also added “max_usb_current=1” “/boot/config.txt” to prevent my wireless adapter from using all available power from the USB ports. Everything works flawlessly now over wireless.</p>
+
+<h3 id="my-hdmi-monitor-would-not-turn-off-after-screen-blanking-with-the-pi">My HDMI monitor would not turn off after screen blanking with the Pi.</h3>
+
+<p>I added the undocumented/unsupported <code class="highlighter-rouge">hdmi_blanking 1</code> to the bottom of my <code class="highlighter-rouge">/boot/config.txt</code> file and rebooted. This allowed my monitor to enter standby mode when the Raspberry Pi screen blanked.</p>
+
+<h3 id="if-my-monitor-turned-off-in-a-remote-session-i-could-not-turn-it-back-on-without-killing-the-session">If my monitor turned off in a remote session, I could not turn it back on without killing the session.</h3>
+
+<p>Because I enabled the ability for the monitor to shut down when the screen blanked off, if I was in a remote session and my Pi entered standby mode, I would be unable to escape because my Pi did not see any wake events as they were all being handed off to my remote session. My solution to this was just a bit more of a lazy hack. I decided to create a script (listed above) that turns off the power saving features before I enter streaming modesave file and restore them after ending the stream. This ensures that I will not get stuck with a monitor in standby while streaming.</p>
+
+<h3 id="i-had-buffering-issues">I had buffering issues.</h3>
+
+<strike>I solved this simply by playing with the bit rate level. I decided to stick with 10 Mbits for a 720p 60fps stream. In the past 10 days, I've only had the stream freeze once. It's successful enough for me.</strike>
+
+<p>The stream no longer freezes on me after getting the 5 GHz adapter working and the compression artifacts are extremely minimal. It looks great in 1080p/60 FPS.</p>
+
+
+</div>
+
+<a href="/blog/2016/05/raspberry-pi-steam-vr-streaming/" class="meta center">Comments are available on the full webpage.</a>
+
+
+<!-- start footer -->
+  <div class="footer">
+    <div class="container">
+      <span class="meta">
+        <span> | </span>
+
+  
+    <a href="https://www.linkedin.com/in/kyleniewiada/">LinkedIn</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://github.com/aav7fl">GitHub</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://twitter.com/CrypticCitrus">Twitter</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://www.youtube.com/user/KyleNiewiada">YouTube</a>
+  
+    <span> | </span>
+
+  
+    <a href="https://kyleniewiada.bandcamp.com/" rel="nofollow">BandCamp</a>
+  
+    <span> | </span>
+
+
+      </span>
+    </div>
+  </div>
+<!-- end footer -->
+
+</body>
+
+</html>
