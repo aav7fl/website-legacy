@@ -9,7 +9,7 @@
       {% endif %}
 
       <tr>
-        <td>{{ post.date | date: '%b %d' }}</td>
+        <td nowrap>{{ post.date | date: '%b %d' }}</td>
         <td><a href="{{ post.url }}">{{ post.title }}</a></td>
         <td>{{post.tag | default: 'Other' | capitalize | truncatewords: 1, ""}}</td>
       </tr>

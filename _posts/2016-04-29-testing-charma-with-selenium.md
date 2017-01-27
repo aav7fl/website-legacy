@@ -46,7 +46,10 @@ When testing in release mode, we will redirect all of our tests to our productio
 
 ## Running Our Selenium Tests
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/Y_hAWFAp140" allowfullscreen></iframe>
+{% include video.html
+  type="YouTube"
+  src="https://www.youtube.com/embed/Y_hAWFAp140"
+%}
 
 Each web driver for each web browser is initialized and the testing begins. The very first test we have is browsing to Python.org, searching for pycon, and verifying that results exist. We do this to simply verify whether or not our web drivers are working properly. If we fail, we immediately know that there is something wrong with the initialization or setup of our Selenium WebDrivers.
 

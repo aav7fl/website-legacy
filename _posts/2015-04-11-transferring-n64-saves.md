@@ -16,7 +16,7 @@ redirect_from: "/blog/transferring-n64-saves/"
 
 When I was younger, I would spend weekends after school playing through The Legend of Zelda: Ocarina of Time. After a while, I beat it. I remember the fun I had navigating through puzzles and chasing down heart containers. I loved every minute of it.
 
-**If you are here looking for information on how to dump your N64 Ocarina of Time save files, check out my [new guide](/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/) for it. If you'd like to learn how to transfer other save files and how I originally dumped my Ocarina of Time save, read on.**
+> If you are here looking for information on how to dump your N64 Ocarina of Time save files, check out my [new guide](/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/) for it. If you'd like to learn how to transfer other save files and how I originally dumped my Ocarina of Time save, read on.
 
 About a year ago, I discovered that my Ocarina of Time cartridge was on borrowed time. It turned out that this was one of a handful of cartridges in the Nintendo 64 library that uses a battery to maintain its save file. According to the trustworthy Internet, these batteries have a lifespan between 15 and 20 years. So I did what any other dreamy eyed gamer would do. I got out my N64 and started tinkering with it.
 

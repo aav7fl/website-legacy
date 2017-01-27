@@ -15,7 +15,11 @@ collections:
     output: true
 
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax-highlighter: rouge
+
 paginate: 5
 url: "https://www.kyleniewiada.org"
 baseurl: ""

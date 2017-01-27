@@ -1,6 +1,7 @@
 /***************
 PAGE STYLES
 ***************/
+
 body, p, li, ul{
   font-size: 16px;
   line-height: 1.58;
@@ -8,9 +9,14 @@ body, p, li, ul{
 	font-family: $sans-serif;
 }
 
-// p , ul {
-// 	margin: 0 0 1.5rem;
-// }
+p code, p pre {
+  background-color: $white;
+  color: #9e023b;
+  display: inline-block;
+  border: 1px solid $subtle-gray;
+  border-radius: .2em;
+  padding: 0 .3em;
+}
 
 .pageTitle {
 	text-align: left;
@@ -57,10 +63,16 @@ body, p, li, ul{
 	}
 }
 
-code {
-	background: $subtle-gray;
-	line-height: 1.2;
-}
+// blockquote:before {
+//   color: #dc0;
+//   font-size: 4em;
+//   line-height: 0.1em;
+//   margin-right: 0.25em;
+//   vertical-align: -0.4em;
+// }
+// blockquote p {
+//   display: inline;
+// }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0 0 .5rem;

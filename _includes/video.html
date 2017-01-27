@@ -1,0 +1,37 @@
+<!-- Method to implement AMP-Video. -->
+{% assign height = include.height | default: "420" %}
+{% assign width = include.width | default: "700" %}
+{% assign type = include.type | default: "normal" %}
+
+{% if type contains 'normal' %}
+{% if page.url contains site.ampdir %}
+<amp-video height="{{ height }}" width="{{ width }}" poster="{{ include.poster }}" layout="responsive" controls {{ include.controls }}>
+  <div fallback>
+    Your browser doesn’t support HTML5 video
+  </div>
+  <source type="video/mp4" src="{{ include.src }}"/>
+</amp-video>
+{% else %}
+<video width="{{ width }}" controls {{ include.controls }}>
+  <source src="{{ include.src }}" type="video/mp4" />
+  <p>Your browser doesn’t support HTML5 video</p>
+</video>
+{% endif %}
+{% endif %}
+
+{% if type contains 'YouTube' %}
+{% if page.url contains site.ampdir %}
+<!-- Assumes YouTube ID will always be the last 11 digits. For now. -->
+<amp-youtube
+  data-videoid="{{ include.src | slice: -11, 11 }}"
+  layout="responsive"
+  height="{{ height }}" width="{{ width }}">
+</amp-youtube>
+{% else %}
+<iframe
+  src="{{ include.src }}"
+  height="{{ height }}" width="{{ width }}"
+  allowfullscreen="">
+</iframe>
+{% endif %}
+{% endif %}

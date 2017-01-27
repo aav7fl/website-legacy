@@ -15,6 +15,21 @@ POST STYLING
 	}
 }
 
+//
+// .highlighter-rogue{
+//   background: $subtle-gray;
+//   line-height: 1.2;
+// 	border: 1px solid;
+// 	border-radius: .4em;
+// }
+
+blockquote {
+  background: #ffa;
+  border-left: 10px solid #dc0;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
 /***************
 POST NAV STYLING
 ***************/
@@ -57,7 +72,6 @@ POST NAV STYLING
 			-webkit-transform: translateY(-50%);
 			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
-			width: 100%;
 			line-height: 1.4;
 		}
 
@@ -90,7 +104,7 @@ POST NAV STYLING
 	}
 }
 
-@media (min-width: $breakpoint_1){
+@media (min-width: $breakpoint_2){
 	.postNav {
 
 		.prev, .next {

@@ -10,16 +10,19 @@ image:
 published: true
 tag: "large project"
 meta: "A public disclosure that I discovered of an iOS video playback bug that decreases red and becomes washed out when user interface elements are hidden"
+amp:
+  - video
 ---
 
 There exists a bug with the iOS video playback and color reproduction. When specific combinations and proportions of colors are present on screen, if (and only if) all user interface elements are hidden, then a decrease in color temperature (mostly red) occurs. This seemingly subtle shift in color turns cartoon characters and online content creators into ghostly pale figures.
 
 ![comparing video playback demonstrating bug with and without user interface](/assets/img/2016/03/comparison.jpg)*Note the subtle differences in facial tones and woodgrain color*
 
-<video width="800" controls loop>
-  <source src="/assets/files/2016/03/bug_example.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+{% include video.html
+  src="/assets/files/2016/03/bug_example.mp4"
+  poster="/assets/files/2016/03/bug_example_poster.png"
+  controls="loop"
+%}
 
 ## Steps to Reproduce:
 
@@ -51,10 +54,11 @@ After searching for software solutions that would allow me to read color data po
 
 I used the bug reproduction video above for my sample capture data on my iPad Air 2. Below is a video demonstrating the live capture with my colorimeter as I replicate the bug behavior --hiding and restoring the user interface.
 
-<video width="800" controls autoplay loop>
-  <source src="/assets/files/2016/03/graphs.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+{% include video.html
+  src="/assets/files/2016/03/graphs.mp4"
+  poster="/assets/files/2016/03/graphs_poster.png"
+  controls="autoplay loop"
+%}
 
 ![HCFR Capture Window](/assets/img/2016/03/capture_small.jpg)*[HCFR Capture Window (click to view larger image)](/assets/img/2016/03/capture_large.jpg)*
 
