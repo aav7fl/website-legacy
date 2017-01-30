@@ -63,24 +63,15 @@ p code, p pre {
 	}
 }
 
-// blockquote:before {
-//   color: #dc0;
-//   font-size: 4em;
-//   line-height: 0.1em;
-//   margin-right: 0.25em;
-//   vertical-align: -0.4em;
-// }
-// blockquote p {
-//   display: inline;
-// }
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0 0 .5rem;
   font-family: $sans-serif;
 	font-weight: 600;
 }
 
-// Text Selection Styling
+/***************
+TEXT SELECTION STYLING
+***************/
 ::-moz-selection {
 	background: $primary-color;
 	color: white;
@@ -94,7 +85,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 /***************
 LINK STYLING
 ***************/
-
 a {
 	color: $link-color;
 
@@ -102,8 +92,3 @@ a {
 		color: darken($link-color, 15%);
 	}
 }
-
-// .coalate h1, .coalate h2, .coalate h3, .coalate h4, .coalate h5, .coalate h6, {
-// margin: .5rem 0 .5rem;
-// font-family: $sans-serif;
-// }
