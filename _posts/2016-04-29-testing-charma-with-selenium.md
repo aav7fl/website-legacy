@@ -3,7 +3,7 @@ title: Testing Charma with Selenium
 date: '2016-04-29 21:26'
 comments: true
 image:
-  url: /assets/img/2016/04/banner2.jpg
+  path: /assets/img/2016/04/banner2.jpg
   alt: Testing Charma with Visual Studio and Selenium
   height: 438
   width: 800

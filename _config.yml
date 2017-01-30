@@ -83,7 +83,7 @@ defaults:
       path: ""
     values:
       image:
-        url: /assets/img/default-card.png
+        path: /assets/img/default-card.png
         alt: Default-card
         height: 400
         width: 700

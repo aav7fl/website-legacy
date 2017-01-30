@@ -3,7 +3,7 @@ title: "My Easy In-line USB Power Switch"
 date: "2016-03-15 20:25"
 comments: true
 image:
-  url: /assets/img/2016/03/banner2.jpg
+  path: /assets/img/2016/03/banner2.jpg
   alt: Inline power switch on a USB cable
   height: 603
   width: 800
