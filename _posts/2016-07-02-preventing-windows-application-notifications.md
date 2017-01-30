@@ -4,7 +4,7 @@ date: "2016-07-02 12:33"
 dateModified: "2016-08-04 13:47"
 comments: true
 image:
-  url: /assets/img/2016/07/banner.png
+  path: /assets/img/2016/07/banner.png
   alt: Windows registry notification entry
   height: 480
   width: 1011

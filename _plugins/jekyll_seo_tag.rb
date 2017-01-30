@@ -30,7 +30,7 @@ module Jekyll
     def options
       {
         "version" => Jekyll::SeoTag::VERSION,
-        "title"   => title?
+        "title"   => title?,
       }
     end
 
@@ -39,7 +39,7 @@ module Jekyll
         "page"      => context.registers[:page],
         "site"      => context.registers[:site].site_payload["site"],
         "paginator" => context["paginator"],
-        "seo_tag"   => options
+        "seo_tag"   => options,
       }
     end
 
@@ -50,7 +50,7 @@ module Jekyll
     def info
       {
         :registers => context.registers,
-        :filters   => [Jekyll::Filters]
+        :filters   => [Jekyll::Filters],
       }
     end
 
@@ -72,4 +72,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag("seo",  Jekyll::SeoTag)
+Liquid::Template.register_tag("seo", Jekyll::SeoTag)

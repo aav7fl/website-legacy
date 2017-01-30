@@ -1,0 +1,11 @@
+<!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. -->
+
+{% if include.src == "SEO" %}
+  {% if page.url contains site.ampdir %}
+    {% capture seo_text %}{% seo %}{% endcapture %}
+  <!-- Assumes AmpDir is never in JSON-LD -->
+  {{ seo_text | remove: site.ampdir }}
+  {% else %}
+    {% seo %}
+  {% endif %}
+{% endif %}

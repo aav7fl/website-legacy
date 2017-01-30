@@ -4,7 +4,7 @@ date: "2017-01-04 5:37"
 dateModified: "2017-01-04 5:37"
 comments: true
 image:
-  url: /assets/img/2017/01/banner.jpg
+  path: /assets/img/2017/01/banner.jpg
   alt: Android Nougat Easter Egg App
   height: 400
   width: 700

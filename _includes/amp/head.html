@@ -1,11 +1,12 @@
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'> -->
 
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
-  <link rel="canonical" href="{{ page.canonical_url | prepend: site.baseurl | prepend: site.url }}" />
-  <meta property="og:url" content="{{ page.canonical_url | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
+  <!-- <link rel="canonical" href="{{ page.canonical_url | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:url" content="{{ page.canonical_url | prepend: site.baseurl | prepend: site.url }}" /> -->
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   <!-- Chrome, Firefox OS and Opera -->
@@ -13,7 +14,7 @@
   <!-- Windows Phone -->
   <meta name="msapplication-navbutton-color" content="#3d256d">
 
-  {% seo %}
+  {% include amp-check.html src="SEO" %}
 
   <style amp-custom>
   {% capture include_to_scssify %}

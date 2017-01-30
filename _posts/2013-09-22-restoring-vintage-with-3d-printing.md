@@ -3,7 +3,7 @@ title:  Restoring Vintage with 3D Printing
 date:   2013-09-22
 comments: true
 image:
-  url: /assets/img/2013/09/small/DSC09139.JPG
+  path: /assets/img/2013/09/small/DSC09139.JPG
   alt: Marantz 2220B taken apart for upgrading parts
   height: 532
   width: 800

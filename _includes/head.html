@@ -40,7 +40,7 @@
       {% endif %}
     </style>
 
-    {% seo %}
+    {% include amp-check.html src="SEO" %}
 
     {% if site.data.analytics.google_analytics %} {% include child/google_analytics.html %} {% endif %}
 </head>

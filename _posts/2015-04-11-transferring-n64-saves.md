@@ -4,7 +4,7 @@ date: "2015-04-11 16:41"
 dateModified: "2016-05-01 20:50"
 comments: true
 image:
-  url: /assets/img/2015/04/DSC09669.JPG
+  path: /assets/img/2015/04/DSC09669.JPG
   alt: 'N64 interfacing with The Legend of Zelda: Ocarina of Time to dump active memory'
   height: 665
   width: 1000

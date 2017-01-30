@@ -3,7 +3,7 @@ title: Creating a Hardcover Book from a Plethora of Facebook Messages
 date: "2015-12-17 18:00"
 comments: true
 image:
-  url: /assets/img/2015/12/banner.jpg
+  path: /assets/img/2015/12/banner.jpg
   alt: Custom hardcover book composed of facebook chat messages
   height: 814
   width: 1000

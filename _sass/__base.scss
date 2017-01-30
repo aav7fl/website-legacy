@@ -25,55 +25,24 @@ GLOBAL Extra
 		margin-left: auto;
 		margin-right: auto;
 	}
-
-	// @media (min-width: $breakpoint_1){
-	// 	padding: 0;
-	// }
-
 }
 
 
-
-// Media Styling
+/***************
+MEDIA STYLING
+***************/
 img,video,audio,iframe,object,amp-video{
 	max-width:100%;
 }
 
-// @media (min-width: 800px){
-// 	.container {
-// 		//@include container(800px);
-// 		width: 800px;
-// 		margin-right: auto;
-// 		margin-left: auto;
-// 		padding: 0;
-// 	}
-// }
-
 /***************
 LIST STYLING
 ***************/
-
 .noList {
 	list-style:none;
 	padding-left:0;
 	margin-left:0;
 }
-//
-// dt {
-// 	font-weight: bold;
-// }
-//
-// dd {
-// 	margin: 0 0 1.5rem;
-// }
-//
-// .post ul ul,
-// .post ul ol,
-// .post ol ul,
-// .post ol ol {
-//   margin: 0;
-// }
-
 
 /***************
 PAGINATION STYLING
@@ -91,7 +60,6 @@ PAGINATION STYLING
 POST LIST STYLING
 ***************/
 .posts {
-
 	li {
 		margin-bottom: 4rem;
 		position: relative;
@@ -122,16 +90,3 @@ POST LIST STYLING
 		}
 	}
 }
-
-/***************
-CONTACT PAGE STYLING
-***************/
-// @media (min-width: 800px){
-// 	#contact {
-// 		form {
-// 			//@include span(6 of 12);
-// 			width: 100%;
-// 			float: left;
-// 		}
-// 	}
-// }

@@ -3,7 +3,7 @@ title: Discovering and Reverse Engineering My Steelcase Desk
 date: "2015-08-17 15:47"
 comments: true
 image:
-  url: /assets/img/2015/08/banner.jpg
+  path: /assets/img/2015/08/banner.jpg
   alt: Steelcase height-adjustable standing desk
   height: 779
   width: 800

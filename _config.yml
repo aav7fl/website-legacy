@@ -41,6 +41,9 @@ exclude:
   - script
   - vendor
 
+exclude_from_sitemap:
+  - /amp
+
 gems:
   - jekyll-feed
   - jekyll-gist
@@ -83,7 +86,7 @@ defaults:
       path: ""
     values:
       image:
-        url: /assets/img/default-card.png
+        path: /assets/img/default-card.png
         alt: Default-card
         height: 400
         width: 700
