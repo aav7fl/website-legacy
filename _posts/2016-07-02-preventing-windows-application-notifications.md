@@ -58,4 +58,4 @@ Select the user currently logged into the machine and deny `Full control` and `R
 
 These changes should allow for the removal of annoying applications that do not follow the proper guidelines or rules when it comes to Windows taskbar notifications. Sometimes programs have unintended consequences when the programmer makes assumptions about how and when a user will interact with their program. I was hit with a combination of a program that did not properly register notifications as well as provide no advanced options to disable such notifications (there *are* other advanced options under the program).
 
-If anyone out there has a better method or would like to point out any unforeseen consequences with this, please let me know. For everyone else, this should help tame such applications inside their Winpredows taskbar.
+If anyone out there has a better method or would like to point out any unforeseen consequences with this, please let me know. For everyone else, this should help tame such applications inside their Windows taskbar.
