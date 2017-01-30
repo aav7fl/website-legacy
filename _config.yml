@@ -41,6 +41,9 @@ exclude:
   - script
   - vendor
 
+exclude_from_sitemap:
+  - /amp
+
 gems:
   - jekyll-feed
   - jekyll-gist
