@@ -1,7 +1,7 @@
 ---
 title: "Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2"
 date: "2016-05-31 16:44"
-dateModified: "2016-10-27 08:07"
+date_modified: "2016-10-27 08:07"
 comments: true
 image:
   path: /assets/img/2016/05/banner2.jpg

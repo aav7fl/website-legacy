@@ -1,7 +1,7 @@
 ---
 title: Transferring My N64 Saves
 date: "2015-04-11 16:41"
-dateModified: "2016-05-01 20:50"
+date_modified: "2016-05-01 20:50"
 comments: true
 image:
   path: /assets/img/2015/04/DSC09669.JPG
