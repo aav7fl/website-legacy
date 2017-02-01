@@ -21,7 +21,7 @@ The concept is quite simple. Once on Android 7.X.X, after [adding the Easter Egg
 
 #### Google Gamifying Notifications
 
-It's silly. It really is. But I like looking at these cats and it's almost like _Google <u>is</u> gamifying the process of me checking my notifications_...and that appears to be happening. They are keeping our vested interest by getting us to return to our notifications with the hope of discovering something new. I like this game..
+It's silly. It really is. But I like looking at these cats and it's almost like _Google is gamifying the process of me checking my notifications_...and that appears to be happening. They are keeping our vested interest by getting us to return to our notifications with the hope of discovering something new. I like this game..
 
  I like my little collection of cats so much that I wanted to find a way to back them up. My phone is an LG Nexus 5X. I probably could've stopped at LG and you might have been able to guess what the problem is. My phone is probably doomed.
 
