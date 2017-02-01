@@ -1,11 +1,17 @@
 <!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. -->
 
 {% if include.src == "SEO" %}
+  {% capture seo_text %}{% seo %}{% endcapture %}
+  <!-- Extract extra <title> tag. -->
+  {% assign open_tag = "<title>" %}
+  {% assign close_tag = "</title>" %}
+  {% assign extract = seo_text | split: open_tag | last | split: close_tag | first % | prepend: open_tag | append: close_tag %}
+  {% assign seo_text = seo_text | remove: extract %}
+
   {% if page.url contains site.ampdir %}
-    {% capture seo_text %}{% seo %}{% endcapture %}
-  <!-- Assumes AmpDir is never in JSON-LD -->
-  {{ seo_text | remove: site.ampdir }}
+    <!-- Assumes AmpDir is never in JSON-LD -->
+    {{ seo_text | remove: site.ampdir }}
   {% else %}
-    {% seo %}
+    {{ seo_text }}
   {% endif %}
 {% endif %}

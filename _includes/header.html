@@ -9,12 +9,12 @@
         <nav id="menu">
           <ul class="menu-closed">
             {% for menuitem in site.data.navigation %}
-                {% if menuitem.url == page.url and menuitem.title != site.author %}
-                  {% assign class = "active" %}
-                {% else %}
-                    {% assign class = "normal" %}
-                {% endif %}
-                <li class="{{ class }}"><a href="{{ menuitem.url }}">{{ menuitem.title }}</a></li>
+              {% if menuitem.url == page.url and menuitem.title != site.author %}
+                {% assign class = "active" %}
+              {% else %}
+                  {% assign class = "normal" %}
+              {% endif %}
+              <li class="{{ class }}"><a href="{{ menuitem.url }}">{{ menuitem.title }}</a></li>
             {% endfor %}
             <li><a href="#">&#215; Close menu</a></li>
             <li><a href="#menu">&#9776; Menu</a></li>
