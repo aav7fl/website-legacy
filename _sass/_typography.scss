@@ -2,15 +2,9 @@
 PAGE STYLES
 ***************/
 
-body, p, li, ul{
-  font-size: 16px;
-  line-height: 1.58;
-	color: $black;
-	font-family: $sans-serif;
-}
-
 p code, p pre {
   background-color: $white;
+  font-size: 100%;
   color: #9e023b;
   display: inline-block;
   border: 1px solid $subtle-gray;
@@ -61,6 +55,12 @@ p code, p pre {
 	.meta-right {
 	  float: right;
 	}
+}
+
+p {
+  display: block;
+  margin-top: $padding;
+  margin-bottom: $padding;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {

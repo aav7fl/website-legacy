@@ -1,3 +1,14 @@
+body {
+	margin: 0;
+}
+
+body, p, li, ul{
+  font-size: 16px;
+  line-height: 1.58;
+	color: $black;
+	font-family: $sans-serif;
+}
+
 /***************
 GLOBAL Extra
 ***************/
