@@ -4,181 +4,137 @@ HEADER STYLING
 
 .header {
 	background-image: url('/assets/img/banner.svg');
-	background-color: #3a3a3c;
+	background-color: $banner-grey;
 	background-size: cover;
 	background-position: center center;
-	color: #3a3a3c;
+	color: $banner-grey;
 	padding: 0;
-	height: 3em;
+	height: auto;
+	margin-bottom: $padding;
+
+	// Outer navigation wrapper
+	.navigation {
+		background: $nav-background;
+		font-family: $sans-serif;
+	}
+
+	// Container with no padding for navbar
+	.nav-container {
+	  max-width: $navigation-width;
+	  margin: 0 auto;
+	}
 }
 
+/* Remove header image when screen width is too small */
 @media (min-width: $breakpoint_2){
 	.header {
-		height: 10em;
+		min-height: 10em;
 		position: relative;
 		margin-bottom: $padding;
-
-		.container {
-			position: relative;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-			margin: auto auto;
-		}
-  }
+	}
 }
 
-// Outer navigation wrapper
-.navigation {
-  height: $nav-height;
-	background: $nav-background;
-	font-family: $sans-serif;
-}
-
-// Logo and branding
-.brand {
-  position: absolute;
-  padding-left: 20px;
-  float: left;
-  line-height: $nav-height;
-  font-size: 1.4em;
-  a,
-  a:visited {
-    color: $nav-font-color;
-    text-decoration: none;
-  }
-}
-
-// Container with no padding for navbar
-.nav-container {
-  max-width: $navigation-width;
-  margin: 0 auto;
-}
-
-// Navigation
 nav {
-  float: right;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      float: left;
-      position: relative;
-      a, a:visited {
-        display: block;
-        padding: 0 20px;
-        line-height: $nav-height;
-        color: $nav-font-color;
-        text-decoration: none;
-        &:hover {
-          background: $link-hover-color;
-          color: $nav-font-color;
-        }
-			}
-    }
-  }
+	height: $nav-height; /* Menu height */
+	overflow: hidden; /* Don't show anything outside the nav */
 }
 
-// Dropdown list binds to JS toggle event
-.nav-dropdown {
-  position: absolute;
-  display: none;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	max-height: $nav-height*2; /* Menu height x 2 */
+	position: relative; /* Position the menu button relative to this item */
+	.active
+	{
+			background: $nav-active;
+	}
 }
 
-/* Mobile navigation */
-
-// Binds to JS Toggle
-.nav-mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-	height: $nav-height;
-  width: $nav-height;
-}
-//lazy width hack
-@media only screen and (max-width: -1+$breakpoint_2) {
-  // Hamburger nav visible on mobile only
-  .nav-mobile {
-    display: block;
-  }
-  nav {
-   width: 100%;
-    padding: $nav-height 0 15px;
-    ul {
-      display: none;
-      li {
-        float: none;
-        a {
-          padding: 15px;
-          line-height: 20px;
-        }
-        ul li a {
-          padding-left: 30px;
-        }
-      }
-    }
-  }
-  .nav-dropdown {
-    position: static;
-  }
+nav li {
+	display: inline-block;
+	padding: 0;
 }
 
-@media screen and (min-width: $breakpoint_2) {
-  .nav-list {
-    display: block !important;
-  }
+nav a {
+	display: inline-block;
+	padding: 0 1em;
+	color: $nav-font-color;
+	text-decoration: none;
+	white-space: nowrap;
+	line-height: $nav-height; /* Menu height */
+	height: $nav-height; /* Menu height */
 }
 
-.nav-list {
-	background: $nav-background;
+nav a:hover {
+	color: $nav-font-color;
+	background-color: $link-hover-color;
 }
 
-#nav-toggle {
-  position: absolute;
-  left: 18px;
-  top: 22px;
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-  span,
-  span:before,
-  span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
-    width: 35px;
-    background: $nav-font-color;
-    position: absolute;
-    display: block;
-    content: '';
-    transition: all 300ms ease-in-out;
-  }
-  span:before {
-    top: -10px;
-  }
-  span:after {
-    bottom: -10px;
-  }
-  &.active span {
-    background-color: transparent;
-    &:before,
-    &:after {
-      top: 0;
-    }
-    &:before {
-      transform: rotate(45deg);
-    }
-    &:after {
-      transform: rotate(-45deg);
-    }
-  }
+nav li:first-child {
+	left: 0;
+	vertical-align: top;
+	font-size: 75%; /* Hide when screen width is too small */
+	:hover {
+		color: $nav-font-color;
+		background-color: $nav-background;
+	}
+	@media (min-width: $breakpoint_0){
+		font-size: 100%;
+	}
+	@media (min-width: $breakpoint_1){
+		font-size: 140%;
+	}
 }
 
-ul.nav-list li.active
-{
-    background: $nav-active;
-    padding-bottom: 4px;
+nav li:last-child { /* The menu button */
+	position: absolute; /* Move the menu button out of flow */
+	right: 0;
+	bottom: $nav-height; /* Move upwards, the same distance as the menu height */
+	background-image: linear-gradient(to right, rgba(19, 51, 61, 0) 0, $nav-background 2em);
+	padding-left: 3em;
+}
+
+nav li:nth-last-child(2) { /* The close button */
+	display: none;
+}
+
+nav#menu:target {
+	height: auto;
+	padding: 0;
+}
+
+nav#menu:target ul {
+	max-height: none;
+}
+
+nav#menu:target li {
+	display: block;
+}
+
+nav#menu:target a {
+	display: block;
+	padding: 0 2em;
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+nav#menu:target li:not(:first-child) {
+	margin-top: 2px;
+	a:hover {
+		background-color: $link-hover-color;
+	}
+}
+
+nav#menu:target li:last-child {
+	display: none;
+}
+
+nav#menu:target li:nth-last-child(2) {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	border-left: 2px solid $nav-background;
+	background: $nav-background-light;
 }

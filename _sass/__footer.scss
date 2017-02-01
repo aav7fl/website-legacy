@@ -3,15 +3,31 @@ FOOTER STYLING
 ***************/
 .footer {
 	text-align: center;
-	padding: 2rem 0;
+	padding: $padding 0;
+	font-size: 100%;
 
 	.container {
 		border-top: 4px solid darken(white, 15%);
-		padding-top: .5em;
-		//@include container(90%);
+		padding-top: $padding;
 	}
 
-	ul {
-		text-align: center;
+	.footerblock {
+		display: block;
+		margin-bottom: $padding/2;
+		a{
+			text-decoration: none;
+			border: 3px solid $subtle-gray;
+			padding: 0 .3em;
+		}
+		a:hover{
+			background-color: $primary-color;
+			color: white;
+		}
+		@media (min-width: $breakpoint_2) {
+			display: inline-block;
+		}
+	}
+	@media (min-width: $breakpoint_2) {
+		font-size: 110%;
 	}
 }

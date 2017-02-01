@@ -1,9 +1,15 @@
-<span> | </span>
+{% assign counter = 0 %}
+<div class="footerblock">
 {% for menuitem in site.data.footer %}
+  {% if counter >= 3 %}
+    </div><div class="footerblock">
+    {% assign counter = 0 %}
+  {% endif %}
   {% if menuitem.name == "BandCamp" %}
     <a href="{{ menuitem.url }}" rel='nofollow'>{{ menuitem.name }}</a>
   {% else %}
     <a href="{{ menuitem.url }}">{{ menuitem.name }}</a>
   {% endif %}
-    <span> | </span>
+  {% assign counter = counter | plus: 1 %}
 {% endfor %}
+</div>
