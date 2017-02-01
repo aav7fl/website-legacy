@@ -1,15 +1,14 @@
-{% assign counter = 0 %}
-<div class="footerblock">
+<footer>
+  <div class="flex-list"><ul>
 {% for menuitem in site.data.footer %}
-  {% if counter >= 3 %}
-    </div><div class="footerblock">
-    {% assign counter = 0 %}
-  {% endif %}
+  <li>
   {% if menuitem.name == "BandCamp" %}
     <a href="{{ menuitem.url }}" rel='nofollow'>{{ menuitem.name }}</a>
   {% else %}
     <a href="{{ menuitem.url }}">{{ menuitem.name }}</a>
   {% endif %}
-  {% assign counter = counter | plus: 1 %}
+  </li>
 {% endfor %}
+</ul>
 </div>
+</footer>
