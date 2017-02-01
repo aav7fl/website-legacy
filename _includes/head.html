@@ -16,7 +16,7 @@
     {% endif %}
     <title>
       {% if paginator and paginator.page > 1 %}
-        {% assign overwriteTitle = page.title | append: ' | Page ' | append: paginator.page %}
+        {% assign overwriteTitle = page.title | append: ' - Page ' | append: paginator.page %}
         {{ overwriteTitle }}
       {% else %}
         {% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}
