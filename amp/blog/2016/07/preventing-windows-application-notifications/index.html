@@ -3,10 +3,10 @@
 
 
 
-  <meta charset="utf-8"><title>Preventing Windows Applications from Broadcasting a Taskbar Notification</title><link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#3d256d"><!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#3d256d"><!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. --><!-- Extract extra <title> tag. --><!-- Assumes AmpDir is never in JSON-LD --><!-- Begin Jekyll SEO tag v2.1.0 --><meta property="og:title" content="Preventing Windows Applications from Broadcasting a Taskbar Notification"><meta name="description" content="My little corner of the Internet where I write about projects I’ve figured out"><meta property="og:description" content="My little corner of the Internet where I write about projects I’ve figured out"><link rel="canonical" href="https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/"><meta property="og:url" content="https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/"><meta property="og:site_name" content="Kyle Niewiada’s Website"><meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/07/banner.png"><meta property="og:image:height" content="480"><meta property="og:image:width" content="1011"><meta property="og:type" content="article"><meta property="article:published_time" content="2016-07-02T12:33:00-04:00"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CrypticCitrus"><meta name="twitter:creator" content="@CrypticCitrus"><meta property="fb:app_id" content="137961485759"><script type="application/ld+json">
+  <meta charset="utf-8"><title>Preventing Windows Apps from Broadcasting a Taskbar Notification</title><link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#3d256d"><!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#3d256d"><!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. --><!-- Extract extra <title> tag. --><!-- Assumes AmpDir is never in JSON-LD --><!-- Begin Jekyll SEO tag v2.1.0 --><meta property="og:title" content="Preventing Windows Apps from Broadcasting a Taskbar Notification"><meta name="description" content="Using the Windows 10 registry editor to remove or mute application notifications in the system taskbar that will not stay hidden after a reboot."><meta property="og:description" content="Using the Windows 10 registry editor to remove or mute application notifications in the system taskbar that will not stay hidden after a reboot."><link rel="canonical" href="https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/"><meta property="og:url" content="https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/"><meta property="og:site_name" content="Kyle Niewiada’s Website"><meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/07/banner.png"><meta property="og:image:height" content="480"><meta property="og:image:width" content="1011"><meta property="og:type" content="article"><meta property="article:published_time" content="2016-07-02T12:33:00-04:00"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CrypticCitrus"><meta name="twitter:creator" content="@CrypticCitrus"><meta property="fb:app_id" content="137961485759"><script type="application/ld+json">
 {"@context": "http://schema.org",
 "@type": "BlogPosting",
-"headline": "Preventing Windows Applications from Broadcasting a Taskbar Notification",
+"headline": "Preventing Windows Apps from Broadcasting a Taskbar Notification",
 "author": {"@type": "Person",
 "name": "Kyle Niewiada"},
 "image": {"@type": "ImageObject",
@@ -15,7 +15,7 @@
 "width": 1011},
 "datePublished": "2016-07-02T12:33:00-04:00",
 "dateModified": "2016-08-04T13:47:00-04:00",
-"description": "My little corner of the Internet where I write about projects I’ve figured out",
+"description": "Using the Windows 10 registry editor to remove or mute application notifications in the system taskbar that will not stay hidden after a reboot.",
 "publisher": {"@type": "Organization",
 "name": "Kyle Niewiada",
 "logo": {"@type": "ImageObject",
@@ -64,7 +64,7 @@
 
 <div class="post">
   <div class="post_info">
-    <h1 class="pageTitle">Preventing Windows Applications from Broadcasting a Taskbar Notification</h1>
+    <h1 class="pageTitle">Preventing Windows Apps from Broadcasting a Taskbar Notification</h1>
 
     <h2 class="meta">Kyle Niewiada
 
@@ -95,13 +95,13 @@
 
 <p>I wanted to keep the functionality of my uninterruptible power supply communications program, but I also wanted to remove the annoying notification. I did a bit of digging inside the Windows registry (Windows 10 64-bit) and found to be what looks like a set of the registry keys responsible for relaying an application notification.</p>
 
-<h1 id="removing-the-notification">Removing the Notification</h1>
+<h2 id="removing-the-notification">Removing the Notification</h2>
 
 <p>This is a <em>very quick and dirty</em> registry hack to prevent applications from relaying notifications in the system taskbar. Windows notifications are sent by writing to a parent registry key associated with an application. Each application will attempt to add notifications as a sub-key to the registered parent key. By removing my user’s permission to write to the parent key, the application will be unable to add sub-keys, and silently fails when it attempts to send notifications. I have not noticed any problems yet, but your mileage may vary.</p>
 
 <p>In case it helps, my machine is using Windows 10 Pro 64-bit.</p>
 
-<h2 id="finding-the-notification-key">Finding the Notification Key</h2>
+<h3 id="finding-the-notification-key">Finding the Notification Key</h3>
 
 <p>The first step is to find the key inside the registry associated with the application. Browse to:</p>
 
@@ -118,7 +118,7 @@
 
 <p>When the registered application has no notification to display, there will be no subkeys listed for that registry key. However, while a notification is displayed, one can refresh the registry editor (F5 key) and see that a subkey has been added. This will help identify which registry keys are associated with the application notifications.</p>
 
-<h2 id="removing-control-permissions">Removing Control Permissions</h2>
+<h3 id="removing-control-permissions">Removing Control Permissions</h3>
 
 <p>Next, control permissions need to be removed from that specific registry key. Right-click on the parent key and select <code class="highlighter-rouge">Permissions…</code>.
 <amp-img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions" width="1002" height="708" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions" width="1002" height="708"></noscript></amp-img></p>
