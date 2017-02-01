@@ -9,7 +9,7 @@ image:
   width: 800
 published: true
 tag: "large project"
-meta: "Charma is an open source API and web application that promotes volunteerism. It was produced by Grand Valley State University and sponsored by Microsoft."
+description: "Charma is an open source API and web application that promotes volunteerism. It was produced by Grand Valley State University and sponsored by Microsoft."
 amp:
   - YouTube
 ---

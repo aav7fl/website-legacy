@@ -10,7 +10,7 @@ image:
   width: 1000
 published: true
 tag: "large project"
-meta: "How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file"
+description: "How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file"
 redirect_from: "/blog/transferring-n64-saves/"
 ---
 
