@@ -26,12 +26,11 @@ task :html_proofer do
     url_ignore:
     [
       %r{.*discussions.apple.com/.*}, # Apple blocking Travis CI/typhoeus
-      %r{https://www.kyleniewiada.org.*}, # Internal_domains doesn't handle this
-      '#!' # Ignore internal URL used for JS Menu.
+      %r{https://www.kyleniewiada.org.*} # Internal_domains doesn't handle this
     ],
     file_ignore: [%r{_site/amp/.*}], # Ignore AMP Pages
     # internal_domains: ['www.kyleniewiada.org'],
-    allow_hash_href: 'true',
+    allow_hash_href: 'false',
     check_html: 'true',
     favicon: 'true',
     only_4xx: 'true' # Used to hande `999 No Error` from LinkedIn

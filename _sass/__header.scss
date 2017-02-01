@@ -74,7 +74,7 @@ nav a:hover {
 nav li:first-child {
 	left: 0;
 	vertical-align: top;
-	font-size: 0%; /* Hide when screen width is too small */
+	font-size: 75%; /* Hide when screen width is too small */
 	:hover {
 		color: $nav-font-color;
 		background-color: $nav-background;
