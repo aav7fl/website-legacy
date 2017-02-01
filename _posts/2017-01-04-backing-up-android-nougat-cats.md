@@ -10,7 +10,7 @@ image:
   width: 700
 published: true
 tag: "small project"
-meta: "How to back up and restore your cats from the Google Android Nougat Neko Easter Egg without root using ADB."
+description: "How to back up and restore your cats from the Google Android Nougat Neko Easter Egg without root using ADB."
 ---
 
 Every major release of Android in the past couple years has received Google's Easter Egg treatment. They like to sneak in wallpapers, silly animations, or a fun little game. With the release of Android Nougat (7.0.0), the Easter Egg ended up resembling some kind of [Neko Atsume](https://en.wikipedia.org/wiki/Neko_Atsume) themed game.

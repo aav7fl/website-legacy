@@ -8,7 +8,7 @@ image:
   height: 532
   width: 800
 tag: "large project"
-meta: "Restoring my 1974 Marantz 2220B lamp housing with 3D printing. The old lamp house was brittle and broke from the incandescent bulb heat. I now use LEDs."
+description: "Restoring my 1974 Marantz 2220B lamp housing with 3D printing. The old lamp house was brittle and broke from the incandescent bulb heat. I now use LEDs."
 redirect_from: "/blog/restoring-vintage-with-3d-printing/"
 ---
 

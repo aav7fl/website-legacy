@@ -10,7 +10,7 @@ image:
   width: 800
 published: true
 tag: "small project"
-meta: "How I fixed the Google now 'No Google profile for Contact' message with my account. This occurred because of conflicting Google+ profiles."
+description: "How I fixed the Google now 'No Google profile for Contact' message with my account. This occurred because of conflicting Google+ profiles."
 ---
 
 If you’re around me enough, you learn that I love to use voice commands. I’ve been known to walk into a room and shout “okay Google” hoping to hear a device accepting my query. Since early 2015, people have been able to use Google Now to send Hangouts messages. I tried jumping on that bandwagon but every time I attempted to send a message, I was greeted with the response `No Google profile for <Contact>`.

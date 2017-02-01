@@ -9,7 +9,7 @@ image:
   width: 800
 published: true
 tag: "small project"
-meta: "How I added a rocker in-line power switch into my 10 foot USB 2.0 Type b cable. I referenced the USB 2.0 specifications to understand which wires to cut."
+description: "How I added a rocker in-line power switch into my 10 foot USB 2.0 Type b cable. I referenced the USB 2.0 specifications to understand which wires to cut."
 ---
 
 I had a USB microphone that was plugged into my computer; it was on at all times. If I was watching a movie, the blue glow from beneath the microphone mesh would illuminate my desk.

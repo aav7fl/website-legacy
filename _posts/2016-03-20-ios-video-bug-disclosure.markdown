@@ -9,7 +9,7 @@ image:
   width: 800
 published: true
 tag: "large project"
-meta: "A public disclosure that I discovered of an iOS video playback bug that decreases red and becomes washed out when user interface elements are hidden"
+description: "A public disclosure that I discovered of an iOS video playback bug that decreases red and becomes washed out when user interface elements are hidden"
 amp:
   - video
 ---

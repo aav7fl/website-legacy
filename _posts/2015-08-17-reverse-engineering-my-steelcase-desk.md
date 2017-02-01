@@ -9,7 +9,7 @@ image:
   width: 800
 published: true
 tag: "medium project"
-meta: "How I reverse engineered the remote codes on my prototype Steelcase sit/stand desk unlocking secret developer codes to enable One Touch adjustments"
+description: "How I reverse engineered the remote codes on my prototype Steelcase sit/stand desk unlocking secret developer codes to enable One Touch adjustments"
 ---
 
 In 2013 I made the plunge for a height-adjustable standing desk. I had wanted one for a while because I was becoming restless sitting down throughout the day in my computer chair. I wanted to be able to move around easily while I was using it and not be chained to sitting. I won't go into the health benefits or drawbacks of such a setup, but instead how I discovered and reprogrammed my desk.

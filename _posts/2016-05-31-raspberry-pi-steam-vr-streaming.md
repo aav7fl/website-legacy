@@ -1,5 +1,5 @@
 ---
-title: "Streaming My Desktop for a Virtual Reality Spectator View Using My Raspberry Pi 2"
+title: "Streaming a Virtual Reality Spectator View to My Raspberry Pi 2"
 date: "2016-05-31 16:44"
 date_modified: "2016-10-27 08:07"
 comments: true
@@ -10,7 +10,7 @@ image:
   width: 800
 published: true
 tag: "medium project"
-meta: "How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR."
+description: "How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR."
 ---
 
 I think virtual reality is a lot of fun. I had a friend in college demo an Oculus DK1 to me and I was pretty amazed; even though I was running it on a laptop and the display drivers turned everything into wireframe models. I remember getting my hands on my first Google Cardboard, sliding my phone in, and exploring the world through Google Earth. When the HTC Vive went on sale with its advertised room-scale, I bought it. My first real chance to become heavily immersed in a virtual world.
