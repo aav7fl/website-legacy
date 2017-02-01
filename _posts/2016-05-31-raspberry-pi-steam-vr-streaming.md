@@ -37,7 +37,7 @@ It was settled. I was going to install Moonlight Embedded to my Raspberry Pi 2. 
 
 ## Setting Up the Pi
 
-The first thing that I did was install the latest Raspbian Jessie release on my Raspberry Pi 2 [using NOOBS](https://www.raspberrypi.org/downloads/noobs/). <strike>I originally was using the TP-LINK TL-WDN3200 wireless adapter with my Raspberry Pi to connect on the 5 GHz network. But as I found out later, this was a problematic adapter.</strike>  I was able to get the TP-LINK TL-WDN3200 working perfectly. I needed to remove DHCPCD (and the default network manager) and use WICD to manage my wireless adapter as DHCPCD appeared to make some kind of aggressive roaming check every minute creating a severe lag on my wireless signal. Make sure the Raspberry Pi is connected to the Internet before continuing.
+The first thing that I did was install the latest Raspbian Jessie release on my Raspberry Pi 2 [using NOOBS](https://www.raspberrypi.org/downloads/noobs/). <s>I originally was using the TP-LINK TL-WDN3200 wireless adapter with my Raspberry Pi to connect on the 5 GHz network. But as I found out later, this was a problematic adapter.</s>  I was able to get the TP-LINK TL-WDN3200 working perfectly. I needed to remove DHCPCD (and the default network manager) and use WICD to manage my wireless adapter as DHCPCD appeared to make some kind of aggressive roaming check every minute creating a severe lag on my wireless signal. Make sure the Raspberry Pi is connected to the Internet before continuing.
 
 After my installation was finished, I followed the Moonlight Embedded directions found in the [documentation](https://github.com/irtimmer/moonlight-embedded/wiki/Packages)
 
@@ -135,7 +135,7 @@ My audio wouldn't stream at first to my Raspberry Pi because I wasn't using the 
 
 ### Wireless streaming stuttered every 60 seconds for 10 seconds.
 
-<strike>My wireless adapter was the primary culprit to this. There was some issue with it either being powered or sharing band with on the USB bus with my Raspberry Pi. I switched to my handy [IOGear Ethernet/Wireless adapter](http://www.amazon.com/IOGEAR-Universal-Ethernet-Adapter-GWU627/dp/B004UAKCS6) and have had little problems streaming 20 Mbit streams. This adapter might not work for everybody. It uses the 2.4 GHz band which is commonly known to be quite crowded. My Raspberry Pi is near the wireless access point, so it has little interference.</strike>
+<s>My wireless adapter was the primary culprit to this. There was some issue with it either being powered or sharing band with on the USB bus with my Raspberry Pi. I switched to my handy [IOGear Ethernet/Wireless adapter](http://www.amazon.com/IOGEAR-Universal-Ethernet-Adapter-GWU627/dp/B004UAKCS6) and have had little problems streaming 20 Mbit streams. This adapter might not work for everybody. It uses the 2.4 GHz band which is commonly known to be quite crowded. My Raspberry Pi is near the wireless access point, so it has little interference.</s>
 
 I was able to get my 5 GHz wireless adapter working after uninstalling the newly introduced DHCPCD wireless manager and switching to WICD. I also added "max_usb_current=1" "/boot/config.txt" to prevent my wireless adapter from using all available power from the USB ports. Everything works flawlessly now over wireless.
 
@@ -150,6 +150,6 @@ Because I enabled the ability for the monitor to shut down when the screen blank
 
 ### I had buffering issues.
 
-<strike>I solved this simply by playing with the bit rate level. I decided to stick with 10 Mbits for a 720p 60fps stream. In the past 10 days, I've only had the stream freeze once. It's successful enough for me.</strike>
+<s>I solved this simply by playing with the bit rate level. I decided to stick with 10 Mbits for a 720p 60fps stream. In the past 10 days, I've only had the stream freeze once. It's successful enough for me.</s>
 
 The stream no longer freezes on me after getting the 5 GHz adapter working and the compression artifacts are extremely minimal. It looks great in 1080p/60 FPS.
