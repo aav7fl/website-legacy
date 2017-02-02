@@ -8,7 +8,7 @@
    <div class="content">
       <div class="container">
         <!-- lazy way to hide page title on blog posts -->
-        {% if page.layout != 'post' %}<h1 class="pageTitle">{{ page.title }}</h1>{% endif %}
+        {% if page.layout != 'post' %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
          {{ content }}
         {% include comments.html %}
       </div>

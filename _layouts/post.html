@@ -4,7 +4,7 @@ layout: default
 
 <div class="post">
 
-  <h1 class="pageTitle">{{ page.title }}</h1>
+  <h1 class="page-title">{{ page.title }}</h1>
 
   <h2 class="meta">{{ page.author | default: site.author }} on {{ page.date | date: '%B %d, %Y' }}</h2>
 
@@ -20,20 +20,24 @@ layout: default
 
   {{ content }}
   <!-- POST NAVIGATION -->
-  <div class="postNav clearfix">
+  <div class="post-nav">
     {% if page.previous.url %}
+    <div class="post-nav-container">
       <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | prepend: site.baseurl }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
       {% if page.previous.image %}
         <img src="{{ page.previous.image.path | prepend: site.baseurl }}" alt="Previous Article">
       {% endif %}
-    </a>
+      </a>
+    </div>
     {% endif %}
     {% if page.next.url %}
+    <div class="post-nav-container">
       <a class="next{% if page.next.image %} image{% endif %}" href="{{ page.next.url | prepend: site.baseurl }}"><span>{{ page.next.title }}&nbsp;&raquo;</span>
       {% if page.next.image %}
         <img src="{{ page.next.image.path | prepend: site.baseurl }}" alt="Next Article">
       {% endif %}
       </a>
+    </div>
     {% endif %}
   </div>
 </div>

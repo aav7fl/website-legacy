@@ -9,22 +9,22 @@ redirect_from:
 ---
 
 <div class="home" id="home">
-  <ul class="posts noList">
+  <ul class="posts no-list">
     {% for post in paginator.posts %}
       <li>
-        <div class="titlemeta"><span class="meta-left">{{ post.date | date: '%B %d, %Y' }}</span><span class="meta-right">{{ post.tag | capitalize}}</span></div>
+        <div class="title-meta"><span class="left">{{ post.date | date: '%B %d, %Y' }}</span><span class="right">{{ post.tag | capitalize}}</span></div>
         <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         <p class="description">{{ post.content | strip_html | strip_newlines | truncate: 250 }}</p>
       </li>
     {% endfor %}
   </ul>
   <!-- Pagination links -->
-  <div class="pagination">
+  <div class="pagination clearfix">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous button__outline">Newer Posts</a>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="right button-outline">Newer Posts</a>
     {% endif %}
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next button__outline">Older Posts</a>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="left button-outline">Older Posts</a>
     {% endif %}
   </div>
 </div>

@@ -25,7 +25,7 @@ HEADER STYLING
 }
 
 /* Remove header image when screen width is too small */
-@media (min-width: $breakpoint_2){
+@media (min-width: $breakpoint-2){
 	.header {
 		min-height: 10em;
 		position: relative;
@@ -78,10 +78,10 @@ nav li:first-child {
 		color: $nav-font-color;
 		background-color: $nav-background;
 	}
-	@media (min-width: $breakpoint_0){
+	@media (min-width: $breakpoint-0){
 		font-size: 100%;
 	}
-	@media (min-width: $breakpoint_1){
+	@media (min-width: $breakpoint-1){
 		font-size: 140%;
 	}
 }

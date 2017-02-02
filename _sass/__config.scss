@@ -61,10 +61,10 @@ $serif: "PT Serif", Georgia, Times, serif;
 NAVIGATION AND CONTENT
 ***************/
 $navigation-width: 1000px;
-$breakpoint_0: 330px;
-$breakpoint_1: 400px;
-$breakpoint_2: 600px;
-$breakpoint_3: 1000px;
+$breakpoint-0: 330px;
+$breakpoint-1: 400px;
+$breakpoint-2: 600px;
+$breakpoint-3: 1000px;
 $nav-height: 70px;
 $nav-background: #262626;
 $nav-background-light: #535353;
@@ -74,3 +74,5 @@ $link-hover-color: #00b2d9;
 $nav-active: $primary-color;
 
 $content-width: 700px;
+
+$inline-code: #9e023b;
