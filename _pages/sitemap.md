@@ -6,24 +6,19 @@ regenerate: true
 permalink: /sitemap/
 ---
 
-<h2>Blog Posts</h2>
+## Blog Posts
 
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-
   {% if year != nyear %}
-  <h3><th colspan="3">{{ post.date | date: '%Y' }}</th></h3>
+### {{ post.date | date: '%Y' }}
   {% endif %}
-
-  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-
+- [{{ post.title }}]({{ post.url }})
 {% endfor %}
 
-<h2>Other Pages</h2>
+## Other Pages
 
 {% for page in site.pages %}
-
-  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-
+- [{{ page.title }}]({{ page.url }})
 {% endfor %}
