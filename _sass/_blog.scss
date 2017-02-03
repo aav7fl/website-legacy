@@ -25,92 +25,56 @@ blockquote {
 /***************
 POST NAV STYLING
 ***************/
-.postNav {
-	border-top: 1px solid darken(white, 10%);
-	border-bottom: 1px solid darken(white, 10%);
-	overflow: hidden;
+.post-nav {
+	display: flex;
+	flex-direction: column;
 
-	.prev, .next {
-		display: block;
-		width: 100%;
-		height: 5rem;
-		overflow: hidden;
-		position: relative;
-		font-family: $sans-serif;
-		font-weight: 800;
-		font-size: .9em;
-		text-align: center;
+	font-weight: bold;
 
-		img {
-			display: block;
-			position: absolute;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-      -webkit-filter: brightness(40%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-      filter: brightness(40%);
-			left: 0;
-			width: 100%;
-			height: auto;
-		}
-
-		span {
-			z-index: 1;
-			position: relative;
-			padding: .5rem;
-			position: absolute;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-			line-height: 1.4;
-		}
-
-		&.image {
+	position: relative;
+	:link {
 			text-decoration: none;
-			color: white;
-			text-shadow: 1px 1px 8px rgba(0,0,0,.8);
-			//padding: 0 .5rem;
-			position: relative;
-			//@include transition(all 0.2s ease-in-out);
+	}
+	.post-link:hover {
+  	img {
+				filter: blur(1px) brightness(80%);
 		}
-
-		&:hover {
-			&.image {
-				opacity: .8;
-			}
+		.post-link .previous-link, .post-link .next-link {
+			background-color:rgba(0,0,0,0.8);
 		}
 	}
-
-	.prev {
-		span {
-			left: 0;
-		}
+	img {
+		position: relative;
+		filter: blur(1px) brightness(40%);
+		transform: translateY(-50%) scale(1.35);
+	}
+	.post-link .previous-link, .post-link .next-link {
+		padding: .5em;
+		z-index: 1;
+		color: white;
+		text-shadow: 0 1px 0 black;
+		position: relative;
 	}
 
+	.post-link {
+		height: 6em;
+		overflow: hidden;
+		margin: .1em;
+	}
+
+	.previous {
+		text-align: left;
+	}
 	.next {
-		span {
-			right: 0;
-		}
+		text-align: right;
 	}
-}
 
-@media (min-width: $breakpoint_2){
-	.postNav {
+	@media all and (min-width: 600px) {
+		flex-direction: row;
 
-		.prev, .next {
-			width: 50%;
-		}
-
-		.prev {
-			float: left;
-			text-align: left;
-		}
-
-		.next {
-			text-align: right;
-			float: right;
+		.post-link {
+			flex-basis: 0;
+			flex-grow: 1;
 		}
 	}
 }

@@ -1,5 +1,5 @@
 ---
-layout: person
+layout: default
 title: About Me
 date: 2013-04-13
 updated: 2017-01-09

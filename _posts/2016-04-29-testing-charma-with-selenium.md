@@ -10,6 +10,8 @@ image:
 published: true
 tag: "medium project"
 description: "How I used Selenium WebDriver to test our ASP.net web application, Charma. We use the Google Chrome and Firefox webdriver to test our website."
+amp:
+  - YouTube
 ---
 
 If you’re wondering what I’m talking about when I mention the word Charma, I’m referring to an open source web API and web application that I built with two other teammates as a sponsored project by Microsoft for my Grand Valley State University senior capstone. You can read about our project along with a video overview [here](/blog/2016/04/charma-gamifying-volunteer-process/). One of my largest contributions to that project was implementing web browser testing using Selenium.

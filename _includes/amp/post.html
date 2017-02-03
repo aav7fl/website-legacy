@@ -1,6 +1,7 @@
-<div class="post">
+<main>
+  <article class="post">
   <div class="post_info">
-    <h1 class="pageTitle">{{ page.title }}</h1>
+    <h1 class="page-title">{{ page.title }}</h1>
 
     <h2 class="meta">{{ page.author | default: site.author }}</h3>
 
@@ -18,4 +19,5 @@
 
   {{ content | markdownify }}
 
-</div>
+  </article>
+</main>

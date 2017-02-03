@@ -2,9 +2,9 @@ body {
 	margin: 0;
 }
 
-body, p, li, ul{
-  font-size: 16px;
-  line-height: 1.58;
+body, p, li, ul, input, textarea{
+  font-size: 1em;
+  line-height: 1.58; //TODO
 	color: $black;
 	font-family: $sans-serif;
 }
@@ -13,19 +13,19 @@ body, p, li, ul{
 GLOBAL Extra
 ***************/
 .line-separator {
-	height:1px;
+	height: 0.1em;
 	background:$gray;
 	margin-top: $padding;
 	margin-bottom: $padding;
 }
 
-.container:after {
-    content: " ";
-    display: block;
-    clear: both;
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
 }
 
-.post, .container{
+.post, .content{
 	max-width: $content-width;
 	margin-right: auto;
 	margin-left: auto;
@@ -42,29 +42,24 @@ GLOBAL Extra
 /***************
 MEDIA STYLING
 ***************/
-img,video,audio,iframe,object,amp-video{
+img,video,audio,iframe,object{
 	max-width:100%;
 }
 
 /***************
 LIST STYLING
 ***************/
-.noList {
+.no-list {
 	list-style:none;
 	padding-left:0;
 	margin-left:0;
 }
 
-/***************
-PAGINATION STYLING
-***************/
-.pagination {
-	.next {
-		float: left;
-	}
-	.previous {
-		float: right;
-	}
+.left {
+	float: left;
+}
+.right {
+	float: right;
 }
 
 /***************
