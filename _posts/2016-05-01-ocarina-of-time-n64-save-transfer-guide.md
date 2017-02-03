@@ -54,7 +54,7 @@ It was brought to my attention that my [original blog post](/blog/2015/04/transf
 
 ## Part Two: Preparing the Nintendo 64
 
-**If your Nintendo 64 freezes at any point, you will need to power down your Nintendo 64 and begin again from Part Two: Step 3.**
+>If your Nintendo 64 freezes at any point, you will need to power down your Nintendo 64 and begin again from Part Two: Step 3.
 
 1. Make sure the 8 MB Expansion Pak is installed in your Nintendo 64.
 2. Connect the Nintendo 64 to the television, and plug in the power cable.
