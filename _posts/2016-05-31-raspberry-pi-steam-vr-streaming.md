@@ -86,7 +86,7 @@ To initiate pairing, type the following on your Raspberry Pi terminal:
 moonlight pair 192.168.1.X
 ```
 
-*(replace 192.168.1.X with your PC's IP, which can be found by typing `ipconfig` into the Windows command prompt and matching it with your network interface)*
+>Replace 192.168.1.X with your PC's IP, which can be found by typing `ipconfig` into the Windows command prompt and matching it with your network interface
 
 
 Once pairing has been initiated, a window will pop up on the Windows desktop prompting for a code to be entered. Type in the pairing code presented on the Raspberry Pi into your desktop window, and then you should be successfully paired.
