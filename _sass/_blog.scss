@@ -35,18 +35,24 @@ POST NAV STYLING
 	:link {
 			text-decoration: none;
 	}
-	:hover {
-  	opacity: .8; 
+	.post-link:hover {
+  	img {
+				filter: blur(1px) brightness(80%);
+		}
+		.post-link .previous-link, .post-link .next-link {
+			background-color:rgba(0,0,0,0.8);
+		}
 	}
 	img {
 		position: relative;
 		filter: blur(1px) brightness(40%);
-		transform: translateY(-50%) scale(1.05);
+		transform: translateY(-50%) scale(1.35);
 	}
 	.post-link .previous-link, .post-link .next-link {
 		padding: .5em;
 		z-index: 1;
 		color: white;
+		text-shadow: 0 1px 0 black;
 		position: relative;
 	}
 
