@@ -14,7 +14,7 @@ description: "How I added a rocker in-line power switch into my 10 foot USB 2.0 
 
 I had a USB microphone that was plugged into my computer; it was on at all times. If I was watching a movie, the blue glow from beneath the microphone mesh would illuminate my desk.
 
-Rather than wear out the durability of my USB connector with 1,500 mating cycles [\[1\]](http://www.usb.org/developers/docs/devclass_docs/CabConn20.pdf) [\[2\]](https://gct.co/usb-connector), I decided to add an in-line power switch to the USB cable. My idea was to add the same kind of switch used in retrofitting old lamps.
+Rather than wear out the durability of my USB connector with 1,500 mating cycles [\[1\]](http://www.usb.org/developers/docs/devclass_docs/CabConn20.pdf) [\[2\]](https://gct.co/usb), I decided to add an in-line power switch to the USB cable. My idea was to add the same kind of switch used in retrofitting old lamps.
 
 I am almost positive (*electric joke*) that most people have done something similar to this before. When I take a quick look on Amazon, I can find USB micro cables with in-line power switches. However, none for USB 2.0 A->B connectors. So I made one myself.
 

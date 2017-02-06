@@ -49,4 +49,118 @@ When the document is closed, the macro will run and add up the total number of h
 
 Above is a link to the macro enabled Microsoft Word document example. Below is the source code for the macro. Most of it is pieced together from other examples online accomplishing similar tasks. I spent most of my time looking at different resources for visual basic techniques and have mentioned those sources in nearby comments for pieces of code where available.
 
-{% gist aav7fl/7df0051c6fa9fd8a42bb %}
+```vb
+
+Sub AutoOpen()
+
+    Call autoText
+
+End Sub
+
+'Generate form fill text for document on call
+Sub autoText()
+
+    'remove the empty paragraph that word likes to add to the end of the document on open.
+    Call removeEmptyPara
+    Selection.EndKey Unit:=wdStory
+    Selection.TypeParagraph
+    Selection.InsertDateTime DateTimeFormat:="MMMM dd, yyyy", _
+    InsertAsField:=False
+    Selection.TypeText vbTab & "Start [] End [] Total []"
+    Selection.EndKey Unit:=wdStory
+    Selection.TypeParagraph
+    Selection.TypeText "Description: "
+
+End Sub
+
+'Removes empty paragraphs located at the end of the document
+Sub removeEmptyPara()
+    'http://www.extendoffice.com/documents/word/647-word-remove-empty-paragraphs.html
+    Selection.Find.ClearFormattin
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "^p^p"
+        .Replacement.Text = ""
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchByte = False
+        .MatchAllWordForms = False
+        .MatchSoundsLike = False
+        .MatchWildcards = False
+        .MatchFuzzy = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+
+End Sub
+
+Sub AutoClose()
+
+    Call findTotal
+
+End Sub
+
+Sub findTotal()
+
+    'based on http://stackoverflow.com/questions/6425595/word-vba-how-to-select-text-between-two-substrings-and-assign-to-variable
+
+    Dim firstTerm As String
+    Dim secondTerm As String
+    Dim myRange As Range
+    Dim documentText As String
+
+    Dim startPos As Long 'Stores the starting position of firstTerm
+    Dim stopPos As Long 'Stores the starting position of secondTerm based on first term's location
+    Dim nextPosition As Long 'The next position to search for the firstTerm
+    Dim total As Double
+
+    total = 0
+    nextPosition = 1
+
+    firstTerm = "Total ["
+    secondTerm = "]"
+
+    'Get all the document text and store it in a variable.
+    Set myRange = ActiveDocument.Range
+    'Maximum limit of a string is 2 billion characters.
+    'So, hopefully your document is not bigger than that.  However, expect declining performance based on how big doucment is
+    documentText = myRange.Text
+
+    'Loop documentText till you can't find any more matching "terms"
+    Do Until nextPosition = 0
+        startPos = InStr(nextPosition, documentText, firstTerm, vbTextCompare)
+        stopPos = InStr(startPos, documentText, secondTerm, vbTextCompare)
+
+        'prevents empty brackets from crashing macro
+        If stopPos - startPos <> Len(firstTerm) Then
+            'Debug.Print Mid$(documentText, startPos + Len(firstTerm), stopPos - startPos - Len(firstTerm))
+            total = total + Mid$(documentText, startPos + Len(firstTerm), stopPos - startPos - Len(firstTerm))
+        End If
+        nextPosition = InStr(stopPos, documentText, firstTerm, vbTextCompare)
+    Loop
+
+    Debug.Print "Total = "; total
+    ActiveDocument.Variables("total").Delete
+    ActiveDocument.Variables.Add Name:="total", Value:=total
+    'MsgBox "I'm done"
+    Call UpdateAll
+
+End Sub
+
+Sub UpdateAll()
+    'Based on unknown source.
+    Dim oStory As Range
+    For Each oStory In ActiveDocument.StoryRanges
+        oStory.Fields.Update
+        If oStory.StoryType <> wdMainTextStory Then
+            While Not (oStory.NextStoryRange Is Nothing)
+                Set oStory = oStory.NextStoryRange
+                oStory.Fields.Update
+            Wend
+        End If
+    Next oStory
+    Set oStory = Nothing
+End Sub
+```
