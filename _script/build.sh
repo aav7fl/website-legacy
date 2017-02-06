@@ -7,6 +7,9 @@ set -e
 # Install bundles if needed.
 bundle check || bundle install
 
+# Install NPM
+npm install
+
 # Build the site
 bundle exec jekyll build
 

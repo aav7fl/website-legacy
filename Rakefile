@@ -1,3 +1,4 @@
+require 'English'
 require 'html/proofer'
 require 'rubocop/rake_task'
 require 'jekyll'
@@ -17,9 +18,8 @@ task :clean do
   Jekyll::Commands::Clean.process({})
 end
 
-desc 'Build and test website'
+desc 'Test website with html_proofer'
 task :html_proofer do
-  Rake::Task['build'].invoke
   puts 'Running html proofer...'.yellow.bold
   HTML::Proofer.new(
     './_site',
@@ -37,9 +37,27 @@ task :html_proofer do
   ).run
 end
 
+desc 'Test website AMP validation'
+task :amp do
+  amp_dir = '_site/amp'
+  puts 'Running AMP Validator...'.yellow.bold
+  command = "find #{amp_dir} -name *.html \
+  | xargs -L1 bash -c \'output=$(amphtml-validator --format color $0;); \
+  if [[ \"$output\" != *PASS ]]; then echo \"TEST FAILURE\" 1>&2 && exit 1; \
+  else echo -e \"$output\"; fi;\'"
+  system command
+  if $CHILD_STATUS.exitstatus.zero?
+    puts 'AMP Validator finished successfully.'.green
+  else
+    puts 'AMP Validator FAILED.'.red.bold
+  end
+end
+
 desc 'Run all tests'
 task :test do
+  Rake::Task['build'].invoke
   Rake::Task['html_proofer'].invoke
+  Rake::Task['amp'].invoke
 end
 
 desc 'Run RuboCop'
