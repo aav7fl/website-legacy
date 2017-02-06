@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.kyleniewiada.org/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="https://www.kyleniewiada.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.kyleniewiada.org/" rel="alternate" type="text/html" /><updated>2017-02-02T21:48:04-05:00</updated><id>https://www.kyleniewiada.org//</id><title type="html">Kyle Niewiada’s Website</title><subtitle>My little corner of the Internet where I write about projects I've figured out</subtitle><author><name>Kyle Niewiada</name></author><entry><title type="html">Backing Up Android Nougat Easter Egg Cats (No Root)</title><link href="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/" rel="alternate" type="text/html" title="Backing Up Android Nougat Easter Egg Cats (No Root)" /><published>2017-01-04T05:37:00-05:00</published><updated>2017-01-04T05:37:00-05:00</updated><id>https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/">&lt;p&gt;Every major release of Android in the past couple years has received Google’s Easter Egg treatment. They like to sneak in wallpapers, silly animations, or a fun little game. With the release of Android Nougat (7.0.0), the Easter Egg ended up resembling some kind of &lt;a href=&quot;https://en.wikipedia.org/wiki/Neko_Atsume&quot;&gt;Neko Atsume&lt;/a&gt; themed game.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.kyleniewiada.org/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="https://www.kyleniewiada.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.kyleniewiada.org/" rel="alternate" type="text/html" /><updated>2017-02-06T18:55:09-05:00</updated><id>https://www.kyleniewiada.org//</id><title type="html">Kyle Niewiada’s Website</title><subtitle>My little corner of the Internet where I write about projects I've figured out</subtitle><author><name>Kyle Niewiada</name></author><entry><title type="html">Backing Up Android Nougat Easter Egg Cats (No Root)</title><link href="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/" rel="alternate" type="text/html" title="Backing Up Android Nougat Easter Egg Cats (No Root)" /><published>2017-01-04T05:37:00-05:00</published><updated>2017-01-04T05:37:00-05:00</updated><id>https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/">&lt;p&gt;Every major release of Android in the past couple years has received Google’s Easter Egg treatment. They like to sneak in wallpapers, silly animations, or a fun little game. With the release of Android Nougat (7.0.0), the Easter Egg ended up resembling some kind of &lt;a href=&quot;https://en.wikipedia.org/wiki/Neko_Atsume&quot;&gt;Neko Atsume&lt;/a&gt; themed game.&lt;/p&gt;
 
 &lt;p&gt;The concept is quite simple. Once on Android 7.X.X, after &lt;a href=&quot;http://www.howtogeek.com/269207/how-to-enable-android-nougats-cat-collecting-easter-egg/&quot;&gt;adding the Easter Egg&lt;/a&gt;, the player pulls down their notification menu and selects a piece of food to place out. Certain pieces of food net the player a better chance at catching a cat, but these pieces of food respectively take longer before a cat will eat it. After a cat eats the piece of food, the player will be given a chance of catching it depending on what piece of food was placed out. If they succeed the random check, the player will receive a notification and the cat will appear in their inventory. If they fail, the cat will get away with the food and the player will only find an empty bowl with no notification.&lt;/p&gt;
 
@@ -543,7 +543,7 @@ xset +dpms
 
 &lt;p&gt;I wanted to publicly disclose this bug because I understand how frustrating it can be to research such a subtle bug and come up empty while trying to reproduce it. I am hoping that this post will help other users that search for the problem demonstrated be aware that it exists, can be reproduced, and let them know what I have discovered.&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="large project" /><summary type="html">There exists a bug with the iOS video playback and color reproduction. When specific combinations and proportions of colors are present on screen, if (and only if) all user interface elements are hidden, then a decrease in color temperature (mostly red) occurs. This seemingly subtle shift in color turns cartoon characters and online content creators into ghostly pale figures.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/assets/img/2016/03/iPadTesting.jpg" /></entry><entry><title type="html">My Easy In-line USB Power Switch</title><link href="https://www.kyleniewiada.org/blog/2016/03/easy-inline-usb-power-switch/" rel="alternate" type="text/html" title="My Easy In-line USB Power Switch" /><published>2016-03-15T20:25:00-04:00</published><updated>2016-03-15T20:25:00-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/03/easy-inline-usb-power-switch</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/03/easy-inline-usb-power-switch/">&lt;p&gt;I had a USB microphone that was plugged into my computer; it was on at all times. If I was watching a movie, the blue glow from beneath the microphone mesh would illuminate my desk.&lt;/p&gt;
 
-&lt;p&gt;Rather than wear out the durability of my USB connector with 1,500 mating cycles &lt;a href=&quot;http://www.usb.org/developers/docs/devclass_docs/CabConn20.pdf&quot;&gt;[1]&lt;/a&gt; &lt;a href=&quot;https://gct.co/usb-connector&quot;&gt;[2]&lt;/a&gt;, I decided to add an in-line power switch to the USB cable. My idea was to add the same kind of switch used in retrofitting old lamps.&lt;/p&gt;
+&lt;p&gt;Rather than wear out the durability of my USB connector with 1,500 mating cycles &lt;a href=&quot;http://www.usb.org/developers/docs/devclass_docs/CabConn20.pdf&quot;&gt;[1]&lt;/a&gt; &lt;a href=&quot;https://gct.co/usb&quot;&gt;[2]&lt;/a&gt;, I decided to add an in-line power switch to the USB cable. My idea was to add the same kind of switch used in retrofitting old lamps.&lt;/p&gt;
 
 &lt;p&gt;I am almost positive (&lt;em&gt;electric joke&lt;/em&gt;) that most people have done something similar to this before. When I take a quick look on Amazon, I can find USB micro cables with in-line power switches. However, none for USB 2.0 A-&amp;gt;B connectors. So I made one myself.&lt;/p&gt;
 
@@ -608,116 +608,118 @@ I stripped away the outer cable shielding being careful not to take too much awa
 
 &lt;p&gt;Above is a link to the macro enabled Microsoft Word document example. Below is the source code for the macro. Most of it is pieced together from other examples online accomplishing similar tasks. I spent most of my time looking at different resources for visual basic techniques and have mentioned those sources in nearby comments for pieces of code where available.&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;Sub AutoOpen()
+&lt;div class=&quot;language-vb highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AutoOpen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
-    Call autoText
-    
-End Sub
+    &lt;span class=&quot;k&quot;&gt;Call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autoText&lt;/span&gt;
 
-&amp;#39;Generate form fill text for document on call
-Sub autoText()
-    
-    &amp;#39;remove the empty paragraph that word likes to add to the end of the document on open.
-    Call removeEmptyPara
-    Selection.EndKey Unit:=wdStory
-    Selection.TypeParagraph
-    Selection.InsertDateTime DateTimeFormat:=&amp;quot;MMMM dd, yyyy&amp;quot;, _
-    InsertAsField:=False
-    Selection.TypeText vbTab &amp;amp; &amp;quot;Start [] End [] Total []&amp;quot;
-    Selection.EndKey Unit:=wdStory
-    Selection.TypeParagraph
-    Selection.TypeText &amp;quot;Description: &amp;quot;
+&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
 
-End Sub
+&lt;span class=&quot;c1&quot;&gt;'Generate form fill text for document on call&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;autoText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
-&amp;#39;Removes empty paragraphs located at the end of the document
-Sub removeEmptyPara()
-    &amp;#39;http://www.extendoffice.com/documents/word/647-word-remove-empty-paragraphs.html
-    Selection.Find.ClearFormattin
-    Selection.Find.Replacement.ClearFormatting
-    With Selection.Find
-        .Text = &amp;quot;^p^p&amp;quot;
-        .Replacement.Text = &amp;quot;&amp;quot;
-        .Forward = True
-        .Wrap = wdFindContinue
-        .Format = False
-        .MatchCase = False
-        .MatchWholeWord = False
-        .MatchByte = False
-        .MatchAllWordForms = False
-        .MatchSoundsLike = False
-        .MatchWildcards = False
-        .MatchFuzzy = False
-    End With
-    Selection.Find.Execute Replace:=wdReplaceAll
+    &lt;span class=&quot;c1&quot;&gt;'remove the empty paragraph that word likes to add to the end of the document on open.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;removeEmptyPara&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EndKey&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wdStory&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TypeParagraph&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InsertDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTimeFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MMMM dd, yyyy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;InsertAsField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TypeText&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbTab&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Start [] End [] Total []&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EndKey&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wdStory&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TypeParagraph&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TypeText&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Description: &quot;&lt;/span&gt;
 
-End Sub
+&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
 
-Sub AutoClose()
+&lt;span class=&quot;c1&quot;&gt;'Removes empty paragraphs located at the end of the document&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;removeEmptyPara&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;'http://www.extendoffice.com/documents/word/647-word-remove-empty-paragraphs.html&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClearFormattin&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Replacement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClearFormatting&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;With&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Find&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;^p^p&quot;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Replacement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Forward&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;True&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Wrap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wdFindContinue&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchCase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchWholeWord&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchByte&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchAllWordForms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchSoundsLike&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchWildcards&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchFuzzy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;With&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Execute&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wdReplaceAll&lt;/span&gt;
 
-    Call findTotal
+&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
 
-End Sub
+&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AutoClose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
-Sub findTotal()
+    &lt;span class=&quot;k&quot;&gt;Call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findTotal&lt;/span&gt;
 
-    &amp;#39;based on http://stackoverflow.com/questions/6425595/word-vba-how-to-select-text-between-two-substrings-and-assign-to-variable
-    
-    Dim firstTerm As String
-    Dim secondTerm As String
-    Dim myRange As Range
-    Dim documentText As String
+&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
 
-    Dim startPos As Long &amp;#39;Stores the starting position of firstTerm
-    Dim stopPos As Long &amp;#39;Stores the starting position of secondTerm based on first term&amp;#39;s location
-    Dim nextPosition As Long &amp;#39;The next position to search for the firstTerm
-    Dim total As Double
-    
-    total = 0
-    nextPosition = 1
+&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;findTotal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
-    firstTerm = &amp;quot;Total [&amp;quot;
-    secondTerm = &amp;quot;]&amp;quot;
+    &lt;span class=&quot;c1&quot;&gt;'based on http://stackoverflow.com/questions/6425595/word-vba-how-to-select-text-between-two-substrings-and-assign-to-variable&lt;/span&gt;
 
-    &amp;#39;Get all the document text and store it in a variable.
-    Set myRange = ActiveDocument.Range
-    &amp;#39;Maximum limit of a string is 2 billion characters.
-    &amp;#39;So, hopefully your document is not bigger than that.  However, expect declining performance based on how big doucment is
-    documentText = myRange.Text
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;firstTerm&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;secondTerm&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myRange&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;documentText&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
 
-    &amp;#39;Loop documentText till you can&amp;#39;t find any more matching &amp;quot;terms&amp;quot;
-    Do Until nextPosition = 0
-        startPos = InStr(nextPosition, documentText, firstTerm, vbTextCompare)
-        stopPos = InStr(startPos, documentText, secondTerm, vbTextCompare)
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'Stores the starting position of firstTerm&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;stopPos&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'Stores the starting position of secondTerm based on first term's location&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nextPosition&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'The next position to search for the firstTerm&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;
 
-        &amp;#39;prevents empty brackets from crashing macro
-        If stopPos - startPos &amp;lt;&amp;gt; Len(firstTerm) Then
-            &amp;#39;Debug.Print Mid$(documentText, startPos + Len(firstTerm), stopPos - startPos - Len(firstTerm))
-            total = total + Mid$(documentText, startPos + Len(firstTerm), stopPos - startPos - Len(firstTerm))
-        End If
-        nextPosition = InStr(stopPos, documentText, firstTerm, vbTextCompare)
-    Loop
-    
-    Debug.Print &amp;quot;Total = &amp;quot;; total
-    ActiveDocument.Variables(&amp;quot;total&amp;quot;).Delete
-    ActiveDocument.Variables.Add Name:=&amp;quot;total&amp;quot;, Value:=total
-    &amp;#39;MsgBox &amp;quot;I&amp;#39;m done&amp;quot;
-    Call UpdateAll
+    &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;nextPosition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 
-End Sub
+    &lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Total [&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;secondTerm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;]&quot;&lt;/span&gt;
 
-Sub UpdateAll()
-    &amp;#39;Based on unknown source.
-    Dim oStory As Range
-    For Each oStory In ActiveDocument.StoryRanges
-        oStory.Fields.Update
-        If oStory.StoryType &amp;lt;&amp;gt; wdMainTextStory Then
-            While Not (oStory.NextStoryRange Is Nothing)
-                Set oStory = oStory.NextStoryRange
-                oStory.Fields.Update
-            Wend
-        End If
-    Next oStory
-    Set oStory = Nothing
-End Sub&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/aav7fl/7df0051c6fa9fd8a42bb.js&quot;&gt; &lt;/script&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">A few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/assets/img/2016/03/banner.png" /></entry></feed>
+    &lt;span class=&quot;c1&quot;&gt;'Get all the document text and store it in a variable.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActiveDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;'Maximum limit of a string is 2 billion characters.&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;'So, hopefully your document is not bigger than that.  However, expect declining performance based on how big doucment is&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;'Loop documentText till you can't find any more matching &quot;terms&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Do&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nextPosition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nextPosition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbTextCompare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;stopPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbTextCompare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;'prevents empty brackets from crashing macro&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;'Debug.Print Mid$(documentText, startPos + Len(firstTerm), stopPos - startPos - Len(firstTerm))&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mid&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;nextPosition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stopPos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbTextCompare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Loop&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;Debug&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Total = &quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ActiveDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;total&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Delete&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ActiveDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;total&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;'MsgBox &quot;I'm done&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UpdateAll&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UpdateAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;'Based on unknown source.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;oStory&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;For&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Each&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActiveDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StoryRanges&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fields&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Update&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StoryType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wdMainTextStory&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;While&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Not&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NextStoryRange&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;Is&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Nothing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NextStoryRange&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fields&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Update&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;Wend&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Next&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Nothing&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">A few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/assets/img/2016/03/banner.png" /></entry></feed>
