@@ -1,6 +1,6 @@
 {
   "name": "aav7fl.github.io",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "https://www.kyleniewiada.org/",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,8 @@
     "lodash": "^4.17.4",
     "gulp": "^3.9.1",
     "browser-sync": "^2.18.6",
-    "gulp-shell": "^0.5.2"
+    "gulp-shell": "^0.5.2",
+    "amphtml-validator": "^1.0.18"
   },
   "devDependencies": {}
 }
