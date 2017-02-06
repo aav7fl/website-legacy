@@ -90,7 +90,7 @@ nav li:last-child { /* The menu button */
 	position: absolute; /* Move the menu button out of flow */
 	right: 0;
 	bottom: $nav-height; /* Move upwards, the same distance as the menu height */
-	background-image: linear-gradient(to right, rgba(19, 51, 61, 0) 0, $nav-background 2em);
+	background-image: linear-gradient(to right, $nav-background-transparent 0, $nav-background 2em);
 	padding-left: 3em;
 }
 

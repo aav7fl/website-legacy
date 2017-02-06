@@ -67,6 +67,7 @@ $breakpoint-2: 600px;
 $breakpoint-3: 1000px;
 $nav-height: 70px;
 $nav-background: #262626;
+$nav-background-transparent: rgba(33,33,33,0);
 $nav-background-light: #535353;
 $menu-button: $banner-grey;
 $nav-font-color: #ffffff;
@@ -76,3 +77,7 @@ $nav-active: $primary-color;
 $content-width: 700px;
 
 $inline-code: #9e023b;
+$post-nav-link-height: 6em;
+
+$blockquote-color: #ffa;
+$blockquote-border-color: #dc0;

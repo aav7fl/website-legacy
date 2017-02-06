@@ -11,13 +11,13 @@ POST STYLING
 	}
 
 	img + p, amp-img + p {
-		margin-bottom: 2rem;
+		margin-bottom: 2em;
 	}
 }
 
 blockquote {
-  background: #ffa;
-  border-left: 10px solid #dc0;
+  background: $blockquote-color;
+  border-left: 10px solid $blockquote-border-color;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
 }
@@ -29,50 +29,41 @@ POST NAV STYLING
 	display: flex;
 	flex-direction: column;
 
-	font-weight: bold;
-
-	position: relative;
-	:link {
-			text-decoration: none;
-	}
-	.post-link:hover {
-  	img {
-				filter: blur(1px) brightness(80%);
-		}
-		.post-link .previous-link, .post-link .next-link {
-			background-color:rgba(0,0,0,0.8);
-		}
-	}
-	img {
-		position: relative;
-		filter: blur(1px) brightness(40%);
-		transform: translateY(-50%) scale(1.35);
-	}
-	.post-link .previous-link, .post-link .next-link {
-		padding: .5em;
-		z-index: 1;
-		color: white;
-		text-shadow: 0 1px 0 black;
-		position: relative;
-	}
-
-	.post-link {
-		height: 6em;
-		overflow: hidden;
+	.post-nav-link {
+		height: $post-nav-link-height;
 		margin: .1em;
+		overflow: hidden;
+		position: relative;
+
+		.link-text {
+			z-index: 1;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			box-sizing: border-box;
+			padding: .5em;
+			font-weight: bold;
+			color: white;
+		}
+
+		.previous { text-align: left; }
+		.next { text-align: right; }
+
+		.link-image {
+			position: absolute;
+			filter: blur(1px) brightness(40%);
+			transition: all 0.35s ease-in-out;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
 
-	.previous {
-		text-align: left;
-	}
-	.next {
-		text-align: right;
-	}
+	.post-nav-link:hover img { transform: translateY(-50%) scale(1.2); }
 
 	@media all and (min-width: 600px) {
 		flex-direction: row;
 
-		.post-link {
+		.post-nav-link {
 			flex-basis: 0;
 			flex-grow: 1;
 		}
