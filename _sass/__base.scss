@@ -9,6 +9,10 @@ body, p, li, ul, input, textarea{
 	font-family: $sans-serif;
 }
 
+img,video,audio,iframe,object{
+	max-width:100%;
+}
+
 /***************
 GLOBAL Extra
 ***************/
@@ -36,14 +40,6 @@ GLOBAL Extra
 		margin-left: auto;
 		margin-right: auto;
 	}
-}
-
-
-/***************
-MEDIA STYLING
-***************/
-img,video,audio,iframe,object{
-	max-width:100%;
 }
 
 /***************

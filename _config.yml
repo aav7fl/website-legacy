@@ -19,6 +19,10 @@ kramdown:
   input: GFM
   hard_wrap: false
   syntax-highlighter: rouge
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    table_class: 'rouge-table'
 
 paginate: 5
 url: "https://www.kyleniewiada.org"

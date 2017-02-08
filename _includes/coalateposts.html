@@ -1,18 +1,16 @@
-<div class="coalate">
-  <table>
-    {% for post in site.posts %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+<table class="table-post">
+  {% for post in site.posts %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
 
-      {% if year != nyear %}
-        <tr><th colspan="3">{{ post.date | date: '%Y' }}</th></tr>
-      {% endif %}
+    {% if year != nyear %}
+      <tr><th colspan="3">{{ post.date | date: '%Y' }}</th></tr>
+    {% endif %}
 
-      <tr>
-        <td>{{ post.date | date: '%b %d' }}</td>
-        <td><a href="{{ post.url }}">{{ post.title }}</a></td>
-        <td>{{post.tag | default: 'Other' | capitalize | truncatewords: 1, ""}}</td>
-      </tr>
-    {% endfor %}
-  </table>
-</div>
+    <tr>
+      <td>{{ post.date | date: '%b %d' }}</td>
+      <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+      <td>{{post.tag | default: 'Other' | capitalize | truncatewords: 1, ""}}</td>
+    </tr>
+  {% endfor %}
+</table>
