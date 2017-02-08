@@ -50,6 +50,7 @@ task :amp do
     puts 'AMP Validator finished successfully.'.green
   else
     puts 'AMP Validator FAILED.'.red.bold
+    exit(false)
   end
 end
 
