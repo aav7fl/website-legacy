@@ -164,3 +164,4 @@ Sub UpdateAll()
     Set oStory = Nothing
 End Sub
 ```
+{% gist 7df0051c6fa9fd8a42bb %}
