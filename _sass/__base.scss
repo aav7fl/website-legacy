@@ -61,7 +61,7 @@ LIST STYLING
 /***************
 POST LIST STYLING
 ***************/
-.posts {
+.post-list {
 	li {
 		margin-bottom: 4rem;
 		position: relative;
@@ -85,7 +85,6 @@ POST LIST STYLING
 
 		.date {
 			color: $dim-grey;
-			font-weight: 300;
 			font-size: .8em;
 		}
 	}

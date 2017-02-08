@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <div class="home" id="home">
-  <ul class="posts no-list">
+  <ul class="post-list no-list">
     {% for post in paginator.posts %}
       <li>
         <div class="title-meta"><span class="left">{{ post.date | date: '%B %d, %Y' }}</span><span class="right">{{ post.tag | capitalize}}</span></div>
