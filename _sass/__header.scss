@@ -4,7 +4,7 @@ HEADER STYLING
 
 .header {
 	background-image: url('/assets/img/banner.svg');
-	background-color: $banner-grey;
+	background-color: $dark-grey;
 	background-size: cover;
 	background-position: center center;
 	padding: 0;
@@ -14,7 +14,6 @@ HEADER STYLING
 	// Outer navigation wrapper
 	.navigation {
 		background: $nav-background;
-		font-family: $sans-serif;
 	}
 
 	// Container with no padding for navbar

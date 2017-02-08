@@ -9,7 +9,7 @@ footer {
 	    position: relative;
 	    margin: 1em;
 	    overflow: hidden;
-			border-top: 1px solid $subtle-gray;
+			border-top: 1px solid $light-grey;
 	}
 	.flex-list ul {
 	    display: flex;
@@ -27,7 +27,7 @@ footer {
 	    padding: 0 1em;
 	    text-align: center;
 	    border-left: 1px solid #ccc;
-	    background-color: #fff;
+	    background-color: $white;
 			@media (min-width: $breakpoint-2) {
 				font-size: 110%;
 			}
