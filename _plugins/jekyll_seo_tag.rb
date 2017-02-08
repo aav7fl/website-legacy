@@ -1,7 +1,7 @@
 require "jekyll-seo-tag/version"
 
 module Jekyll
-  class SeoTag < Liquid::Tag
+  class SeoTag_Custom < Liquid::Tag
     attr_accessor :context
 
     # Matches all whitespace that follows either
@@ -29,7 +29,7 @@ module Jekyll
 
     def options
       {
-        "version" => Jekyll::SeoTag::VERSION,
+        "version" => Jekyll::SeoTag_Custom::VERSION,
         "title"   => title?,
       }
     end
@@ -72,4 +72,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag("seo", Jekyll::SeoTag)
+Liquid::Template.register_tag("seo", Jekyll::SeoTag_Custom)

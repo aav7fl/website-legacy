@@ -18,7 +18,7 @@ GLOBAL Extra
 ***************/
 .line-separator {
 	height: 0.1em;
-	background:$gray;
+	background: $light-grey;
 	margin-top: $padding;
 	margin-bottom: $padding;
 }
@@ -61,7 +61,7 @@ LIST STYLING
 /***************
 POST LIST STYLING
 ***************/
-.posts {
+.post-list {
 	li {
 		margin-bottom: 4rem;
 		position: relative;
@@ -78,16 +78,13 @@ POST LIST STYLING
 
 		a {
 			text-decoration: none;
-
 			&:hover {
 				text-decoration: underline;
 			}
 		}
 
 		.date {
-			color: $gray;
-			font-family: $sans-serif;
-			font-weight: 300;
+			color: $dim-grey;
 			font-size: .8em;
 		}
 	}

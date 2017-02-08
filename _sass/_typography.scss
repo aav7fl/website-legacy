@@ -16,8 +16,7 @@ PAGE STYLES
 }
 
 .meta {
-	color: $gray;
-	font-family: $sans-serif;
+	color: $dim-grey;
 	font-weight: 300;
 	font-size: 120%;
 	@media (min-width: $breakpoint-2) {
@@ -35,14 +34,13 @@ a.meta {
 
 .title-meta {
 	overflow: auto;
-	color: $subtle-color;
-	font-family: $sans-serif;
+	color: $dim-grey;
 	font-size: 100%;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0 0 .5rem;
-  font-family: $sans-serif;
+  // font-family: $sans-serif;
 	font-weight: 600;
 }
 
@@ -62,7 +60,7 @@ CODE STYLING
 code, pre {
     border-radius: .2em;
     background-color: $code-background;
-    border: .1em solid $subtle-gray;
+    border: .1em solid $light-grey;
 }
 
 code {

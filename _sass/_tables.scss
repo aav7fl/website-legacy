@@ -9,11 +9,10 @@ TABLE STYLES
 	width: 100%;
 
 	tr {
-		border-bottom: 1px solid lighten($gray, 15%);
+		border-bottom: 1px solid lighten($dim-grey, 15%);
 	}
 
 	td {
-		font-family:$sans-serif;
 		font-size:14px;
 		padding:2px 5px;
 		border-style:solid;
@@ -22,7 +21,7 @@ TABLE STYLES
 		word-break:normal;
 		border-color:#ccc;
 		color:#333;
-		background-color:#fff;
+		background-color:$white;
 
 		&:first-child
 		{
@@ -32,7 +31,6 @@ TABLE STYLES
 	}
 
 	th {
-		font-family:$sans-serif;
 		font-size:14px;
 		font-weight:bold;
 		padding:2px 5px;

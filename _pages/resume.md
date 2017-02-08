@@ -11,21 +11,20 @@ seo:
 regenerate: true
 permalink: /resume/
 ---
+<header>
+<h1>{{page.author | default: site.author }}</h1>
+<a href="mailto:{{ page.email }}">{{ page.email }}</a>
+</header>
 
-# {{page.author | default: site.author }}
-
-##### [{{ page.email }}](mailto:{{ page.email }})
-
-
-### Objective
+## Objective
 
 To start a career writing meaningful frontend or backend software
 
 ---
 
-### Education
+## Education
 
-#### BS, Computer Science; Grand Valley State University
+### BS, Computer Science; Grand Valley State University
 
 <div class="date">2012 - 2016</div>
 
@@ -33,9 +32,9 @@ To start a career writing meaningful frontend or backend software
 
 ---
 
-### Experience
+## Experience
 
-#### Consultant at Hepfer & Associates, PLLC
+### Consultant at Hepfer & Associates, PLLC
 
 <div class="date">Sep 2016 - Present</div>
 
@@ -43,7 +42,7 @@ To start a career writing meaningful frontend or backend software
 - Search for behavioral anomalies and trends
 - Present data in a meaningful way
 
-#### Coach for Grandville RoboDawgs Weather Balloon Program
+### Coach for Grandville RoboDawgs Weather Balloon Program
 
 <div class="date">May 2016 - Jul 2016</div>
 
@@ -51,19 +50,19 @@ To start a career writing meaningful frontend or backend software
 - Assisted underclassmen RoboDawg students transitioning to leadership positions in the robotics program
 - Directed students to program Python on Raspberry Pi units and collect data from their weather balloon launches
 
-#### AP Computer Science Tutor
+### AP Computer Science Tutor
 
 <div class="date">May 2016 - Jun 2016</div>
 
 - 1 on 1 tutoring in preparation for the AP Computer Science Exam
 
-#### Intern at Blue Medora, LLC
+### Intern at Blue Medora, LLC
 
 <div class="date">Summer 2013; Summer 2014</div>
 
 - Developed Oracle Enterprise Manager plugins
 
-#### Supervisor for RoboDawgs community camps
+### Supervisor for RoboDawgs community camps
 
 <div class="date">Summer 2012</div>
 
@@ -73,61 +72,61 @@ To start a career writing meaningful frontend or backend software
 
 ---
 
-### Technical skills
+## Technical skills
 
-#### Jekyll
+### Jekyll
 
 - Setup, modify, and maintain this Jekyll website
 - [Source code](https://github.com/aav7fl/aav7fl.github.io)
 
-#### Experience with:
+### Experience with:
 
 - SQL, Java, C, C++, HTML, CSS
 
-#### Familiar with:
+### Familiar with:
 
 - C#, Python, Markdown, Liquid, TI-Basic
 
 ---
 
-### Honors
+## Honors
 
-#### Eagle Scout
+### Eagle Scout
 
 <div class="date">2009</div>
 
 - Received silver, gold, and bronze palms
   - Requires an additional five merit badges (beyond the required 21 for Eagle) for each palm, and a three-month observance between each palm. This must occur before a scout's 18th birthday to be eligible.
 
-#### Recipient of Grand Valley Music Department Scholarship
+### Recipient of Grand Valley Music Department Scholarship
 
 <div class="date">2012 - 2014</div>
 
 ---
 
-### Projects
+## Projects
 
-#### Created Web API and Web App
+### Created Web API and Web App
 
 - Created an open source web API and ASP.NET web application connecting organizations and volunteers through gamification
 - [Source code](https://github.com/aav7fl/GVSU-capstone-project)
 - [Blog post](/blog/2016/04/charma-gamifying-volunteer-process/)
 
-#### Rebuilt Zelda Save File
+### Rebuilt Zelda Save File
 
 - Rebuilt a Zelda Ocarina of Time save file after discovering the checksum algorithm
 - Used a GameShark with a parallel port to interface with the N64 cartridge, dump the ram, and recalculate the checksum
 - [Open source checksum calculator](https://github.com/Vi1i/OcarinaChecksumChecker)
 - [Blog post](/blog/2015/04/transferring-n64-saves/)
 
-#### Restoration with 3D Printing
+### Restoration with 3D Printing
 
 - Restored a vintage amplifier using 3D printing
 - An old piece for my 1970s amplifier broke and I used 3D printing to complement my restoration project
 - [Blog post](/blog/2013/09/restoring-vintage-with-3d-printing/)
 
 
-#### Reverse Engineered my Desk Remote
+### Reverse Engineered my Desk Remote
 
 - Reverse engineered remote codes to my Steelcase electric desk
 - Discovered and documented the remote codes with explanations to each setting
@@ -135,21 +134,21 @@ To start a career writing meaningful frontend or backend software
 
 ---
 
-### Activities
+## Activities
 
-#### University Arts Chorale & Cantate Chamber Ensemble
+### University Arts Chorale & Cantate Chamber Ensemble
 
 <div class="date">2012 - 2014</div>
 
-#### Grand Valley Computing Club
+### Grand Valley Computing Club
 
 <div class="date">2012 - 2013</div>
 
-#### Piano
+### Piano
 
 <div class="date">2002 - 2013</div>
 
-#### Volunteer at Festival of the Arts Screen Printing
+### Volunteer at Festival of the Arts Screen Printing
 
 <div class="date">Summer 2013 - Summer 2016</div>
 
