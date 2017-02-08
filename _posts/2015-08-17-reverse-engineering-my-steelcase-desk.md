@@ -63,6 +63,7 @@ PArA Mode: PArA
 
 ![Passcode mode](/assets/img/2015/08/passcode.jpg)*Passcode mode*
 
+{: .table-post}
   | Code: 	| P-Mode:                                                         	| PArA Mode:                                                      	| Default Value (As I found it) 	|
   |---------|-------------------------------------------------------------------|-------------------------------------------------------------------|---------------------------------|
   | 111   	| Set offset curve multiplier (from min)                          	| X                                                               	| 1970                          	|

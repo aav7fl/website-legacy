@@ -2,16 +2,6 @@
 PAGE STYLES
 ***************/
 
-p code, p pre {
-  background-color: $white;
-  font-size: 100%;
-  color: $inline-code;
-  display: inline-block;
-  border: 0.1em solid $subtle-gray;
-  border-radius: .2em;
-  padding: 0 .3em;
-}
-
 .page-title {
 	text-align: left;
 	font-size: 200%;
@@ -64,6 +54,32 @@ a {
 	&:hover {
 		color: darken($link-color, 15%);
 	}
+}
+
+/***************
+CODE STYLING
+***************/
+code, pre {
+    border-radius: .2em;
+    background-color: $code-background;
+    border: .1em solid $subtle-gray;
+}
+
+code {
+    padding: 2px 4px;
+    color: $inline-code;
+}
+
+pre {
+    padding: $padding;
+    overflow-y:hidden;
+}
+
+pre code {
+    color: inherit;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
 }
 
 /***************
