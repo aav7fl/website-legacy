@@ -18,10 +18,8 @@ $blue:  #0b5394;
 // $orange:  #FF851B;
 // $green: #2ECC40;
 
-
+$primary-color: #3d256d; // Make sure to also change color in _data/colors.yaml
 $resume-accent: $blue;
-
-$primary-color: #3d256d;
 $link-color: $primary-color;
 $bad-color: $red; // Bad color for errors, validation etc.
 

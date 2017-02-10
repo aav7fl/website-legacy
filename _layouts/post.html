@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: no-title
 ---
 
-  <article class="post">
+<article>
   <header>
     <h1 class="page-title">{{ page.title }}</h1>
 
@@ -12,9 +12,7 @@ layout: default
   </header>
 
   {% if page.image %}
-  <div class="featuredImage">
     <img src="{{ page.image.path }}" alt="{{ page.image.alt }}"/>
-  </div>
   {% endif %}
 
   <div class="line-separator"></div>
@@ -24,5 +22,4 @@ layout: default
   <div class="line-separator"></div>
 
   {% include post-nav.html %}
-
 </article>

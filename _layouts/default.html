@@ -3,13 +3,16 @@
 
 {% include head.html %}
 
-<body>
+  <body>
   {% include header.html %}
     <main class="content">
     <!-- lazy way to hide page title on blog posts -->
-    {% if page.layout != 'post' %}<h1 class="page-title">{{ page.title }}</h1>
+    {% if page.layout != 'no-title' and page.layout != 'post' %}
+      <h1 class="page-title">{{ page.title }}</h1>
     {% endif %}
+
     {{ content }}
+
     {% include comments.html %}
     </main>
   {% include footer.html %}
