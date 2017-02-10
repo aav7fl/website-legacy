@@ -1,5 +1,5 @@
 ---
-layout: resume
+layout: no-title
 title: Résumé
 style: resume.scss
 author: "Kyle M. Niewiada"
@@ -12,7 +12,7 @@ regenerate: true
 permalink: /resume/
 ---
 <header>
-<h1>{{page.author | default: site.author }}</h1>
+<h1>{{ page.author | default: site.author }}</h1>
 <a href="mailto:{{ page.email }}">{{ page.email }}</a>
 </header>
 

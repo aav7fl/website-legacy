@@ -2,14 +2,14 @@ body {
 	margin: 0;
 }
 
-body, p, li, ul, input, textarea{
+body, p, li, ul, input, textarea {
   font-size: 1em;
-  line-height: 1.58; //TODO
+  line-height: 1.58;
 	color: $black;
 	font-family: $sans-serif;
 }
 
-img,video,audio,iframe,object{
+img,video,audio,iframe,object {
 	max-width:100%;
 }
 
@@ -29,7 +29,7 @@ GLOBAL Extra
     clear:both;
 }
 
-.post, .content{
+.content{
 	max-width: $content-width;
 	margin-right: auto;
 	margin-left: auto;
@@ -63,13 +63,13 @@ POST LIST STYLING
 ***************/
 .post-list {
 	li {
-		margin-bottom: 4rem;
+		margin-bottom: 4em;
 		position: relative;
 
 		&:before {
 			content: "";
 			position: absolute;
-			bottom: -2rem;
+			bottom: -2em;
 			left: 0;
 			background: darken(white, 10%);
 			height: 2px;

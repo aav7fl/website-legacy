@@ -1,7 +1,7 @@
 /***************
 POST STYLING
 ***************/
-.post {
+article {
 	img + em, amp-img + em, video + em {
 		text-align: center;
 		font-size: .9em;
@@ -60,7 +60,7 @@ POST NAV STYLING
 
 	.post-nav-link:hover img { transform: translateY(-50%) scale(1.2); }
 
-	@media all and (min-width: 600px) {
+	@media all and (min-width: $breakpoint-2) {
 		flex-direction: row;
 
 		.post-nav-link {
