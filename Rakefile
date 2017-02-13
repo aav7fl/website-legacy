@@ -43,7 +43,8 @@ task :amp do
   puts 'Running AMP Validator...'.yellow.bold
   command = "find #{amp_dir} -name *.html \
   | xargs -L1 bash -c \'output=$(amphtml-validator --format color $0;); \
-  if [[ \"$output\" != *PASS ]]; then echo \"TEST FAILURE\" 1>&2 && exit 1; \
+  if [[ \"$output\" != *PASS ]]; \
+    then echo \"TEST FAILURE\" 1>&2 && exit 1; \
   else echo -e \"$output\"; fi;\'"
   system command
   if $CHILD_STATUS.exitstatus.zero?

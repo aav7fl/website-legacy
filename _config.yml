@@ -49,6 +49,7 @@ exclude_from_sitemap:
   - /amp
 
 gems:
+  - amp-jekyll
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate

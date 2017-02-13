@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'amp-jekyll'
 gem 'fastimage'
 gem 'jekyll'
 gem 'jekyll-feed'
