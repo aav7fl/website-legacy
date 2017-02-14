@@ -5,7 +5,7 @@ tmp
 .DS_Store
 .ruby-version
 .jekyll-metadata
-node_modules
+node_modules/
 
 # For Travis.
 .bundle

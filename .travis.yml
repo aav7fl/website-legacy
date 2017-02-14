@@ -4,6 +4,8 @@ script: sh $TRAVIS_BUILD_DIR/_script/run-tests.sh
 branches:
   except:
   - master
+node_js:
+- '6.1'
 cache: bundler
 sudo: false
 rvm:
