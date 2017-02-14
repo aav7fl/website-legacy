@@ -5,6 +5,7 @@
 set -e
 
 # Install bundles if needed.
+. $HOME/.nvm/nvm.sh && nvm install 6.1 && nvm use 6.1
 bundle check || bundle install
 
 # Install NPM

@@ -111,7 +111,7 @@ Travis-CI setup was completed largely following a blog post from [Savas Labs](ht
 
 Travis-CI will check if all of my PRs will build before I am allowed to merge them with the `source branch`.
 
-Travis-CI script located in `_script/cibuild`
+Travis-CI script located in `_scripts/cibuild`
 
 ### Tests
 
