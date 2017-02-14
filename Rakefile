@@ -3,7 +3,7 @@ require 'html/proofer'
 require 'rubocop/rake_task'
 require 'jekyll'
 
-task default: [:rubocop, :test]
+task default: [:test]
 
 task :build do
   puts 'Building site...'.yellow.bold
@@ -55,14 +55,16 @@ task :amp do
   end
 end
 
+desc 'Run RuboCop'
+task :rubocop do
+  puts 'Running RuboCop Validator...'.yellow.bold
+  RuboCop::RakeTask.new
+end
+
 desc 'Run all tests'
 task :test do
+  Rake::Task['rubocop'].invoke
   Rake::Task['build'].invoke
   Rake::Task['html_proofer'].invoke
   Rake::Task['amp'].invoke
-end
-
-desc 'Run RuboCop'
-task :rubocop do
-  RuboCop::RakeTask.new
 end

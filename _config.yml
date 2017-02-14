@@ -39,6 +39,7 @@ exclude:
   - config.rb
   - Gemfile
   - Gemfile.lock
+  - LICENSE.txt
   - package.json
   - Rakefile
   - README.md

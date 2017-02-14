@@ -1,6 +1,6 @@
 language: node_js
 sudo: false
-script: sh $TRAVIS_BUILD_DIR/_scripts/run-tests.sh
+script: "./_scripts/run-tests.sh"
 branches:
   except:
   - master
@@ -25,8 +25,6 @@ before_install:
   - . $HOME/.nvm/nvm.sh && nvm install 6.1 && nvm use 6.1
   - gem install bundler
   - bundle check || bundle install
-  # - chmod 755 $TRAVIS_BUILD_DIR/_script/build.sh
-  # - chmod 755 $TRAVIS_BUILD_DIR/_script/run-tests.sh
 
 # Deployment config
 deploy:
