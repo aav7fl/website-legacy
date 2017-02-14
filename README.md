@@ -4,12 +4,19 @@
 
 https://www.kyleniewiada.org/
 
-This is my personal website where I write about projects I have worked on.
+This is my personal website that I tweak and write about projects I have worked on.
 
 **Check out [the repo Wiki](https://github.com/aav7fl/aav7fl.github.io/wiki) for the latest documentation and information.**
 
+## Features
+- Mobile responsive
+- Uses modern HTML5 and CSS3
+- AMP validated ([Accelerated Mobile Pages](https://www.ampproject.org/))
+- Ready for Travis continuous integration
+- Basic Testing
+
 ---
 
-`source` branch contains the website source code.
+`source` [default] branch contains the website source code.
 
 `master` branch contains the generated website.

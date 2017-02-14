@@ -1,12 +1,10 @@
 # For Jekyll
-_site
-tmp
-.sass-cache
-.DS_Store
-.ruby-version
-.jekyll-metadata
+_site/
 node_modules/
+tmp/
+.sass-cache/
+.jekyll-metadata
 
 # For Travis.
-.bundle
-vendor
+.bundle/
+vendor/
