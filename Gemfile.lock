@@ -9,6 +9,10 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    amp-jekyll (1.0.1)
+      fastimage (>= 1.8.0)
+      jekyll (~> 3.0)
+      nokogiri (>= 1.6.0)
     ast (2.3.0)
     colorator (1.1.0)
     colored (1.2)
@@ -107,6 +111,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  amp-jekyll
   fastimage
   html-proofer
   jekyll

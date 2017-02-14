@@ -1,13 +1,12 @@
-language: ruby
-script: sh $TRAVIS_BUILD_DIR/_script/run-tests.sh
-# Keep Travis from testing `master` branch
+language: node_js
+sudo: false
+script: "./_scripts/run-tests.sh"
 branches:
   except:
   - master
+node_js:
+- '6.1'
 cache: bundler
-sudo: false
-rvm:
-- 2.2.0
 
 env:
   global:
@@ -19,14 +18,19 @@ env:
   - secure: ol4s+iUpSC3U0+dhIcefHohs02ehUIpOHTnsd6MNGFIkFK65rP13ytQfhwcLsZtUBx6T+gA+ECRvJc/Ild4rRYPfyjr0Ao/7khQJX6sU9rXxxmoKVgIe+Fz6e9W89atZoLVLjeHmEQSZUkzyOAl6F+25h4Q26sB7aRvoTPcnRGAMG4lDwz/SC5gXS7ENN1f+7avm2bB08TRc5ic/PQu5q01/vlyA6El2/VOWF8z+Q51eAtDeQGlkm2kQ66poK8H8olZzg+bYn/Vrjq9umQ09Ic2R+/zbChRPaoVYcRw7tp0N3EyT4hJU1WGQ6CZbNfv2+c5TMCEBe16Fit0Ad6/g9bqZhKZuGBm7GpB3DXbi8Zuv2faq/2hgQ6TAPF9VNrKpufbS0c2OtlKcjXGlueeLf6aEHuCM9sDQkxs2akW0hM000h0Plw9rjnla0q4bnNv9GjC4fH4c5ICjCBXNMhtUYcR6ij2jop3F/3VztsP6oY3E9PzqKuAR7KgP8nYe4mbk3rwGGFYUiC+2UC/MDm6FCwkXlc3RhGLBKwjDZ6dkCpp2kAb0j6nhKPJhB61i1N45PysAyqYcMI9jL+YU1gMUE27nhZgTakdgNPLagcFcbUXyrPLq7G4TR2GP0ZojwXGYRQXZU8bB8ROBR/oaucT67dtsyyE51ZnSqxTT9RmxCVo=
 
 before_install:
-- chmod 755 $TRAVIS_BUILD_DIR/_script/build.sh
-- chmod 755 $TRAVIS_BUILD_DIR/_script/run-tests.sh
+  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+  - npm cache clear
+  - rvm install 2.2
+  - rvm use 2.2
+  - . $HOME/.nvm/nvm.sh && nvm install 6.1 && nvm use 6.1
+  - gem install bundler
+  - bundle check || bundle install
 
 # Deployment config
 deploy:
   provider: script
-  script: sh $TRAVIS_BUILD_DIR/_script/build.sh
-  skip_cleanup: true
+  script: "./_scripts/build.sh"
+  skip_cleanup: false
   on:
     branch: source
 

@@ -39,6 +39,7 @@ exclude:
   - config.rb
   - Gemfile
   - Gemfile.lock
+  - LICENSE.txt
   - package.json
   - Rakefile
   - README.md
@@ -49,6 +50,7 @@ exclude_from_sitemap:
   - /amp
 
 gems:
+  - amp-jekyll
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
