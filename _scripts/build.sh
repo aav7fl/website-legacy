@@ -35,6 +35,5 @@ git config --global user.name "Travis CI"
 # Commit and push generated content to `master` branch.
 git status
 git add -A .
-git status
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
 git push --quiet origin master > /dev/null 2>&1
