@@ -91,6 +91,6 @@ On a previous blog [outlining the process](/blog/2015/04/transferring-n64-saves/
 
 ![Ocarina of Time save converter](/assets/img/2016/05/banner.jpg)
 
-1. Use [this wiki](http://www.jaytheham.com/zcw/Ocarina_of_Time_Version_Guide) to determine which Ocarina of Time cartridge version you have.
+1. Use [this wiki](http://zeldaspeedruns.com/oot/generalknowledge/version-differences) to determine which Ocarina of Time cartridge version you have.
 2. Navigate to [https://bkacjios.github.io/OOT-Save-Converter/](https://bkacjios.github.io/OOT-Save-Converter/), import your RAM dump, select the correct cartridge version, and download your save file. Feel free to change any of the other options before downloading such as the file slot or other game settings.
 3. Congratulations! You have successfully dumped your Ocarina of Time RAM and extracted your save file to be used with emulators and other tools.
