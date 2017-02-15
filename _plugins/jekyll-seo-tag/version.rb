@@ -2,7 +2,7 @@
 module Liquid; class Tag; end; end
 
 module Jekyll
-  class SeoTag_Custom < Liquid::Tag
-    VERSION = "2.1.0".freeze
+  class SeoTag < Liquid::Tag
+    VERSION_CUSTOM = "2.1.0".freeze
   end
 end

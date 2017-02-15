@@ -17,7 +17,8 @@ bundle exec jekyll build
 # Checkout `master` and remove everything.
 git clone https://${GH_TOKEN}@github.com/${GH_USERNAME}/${GH_REPO}.git ../${GH_REPO}.${GH_DEST_BRANCH}
 cd ../${GH_REPO}.${GH_DEST_BRANCH}
-git checkout ${GH_DEST_BRANCH}
+# Sick of `checkout` filling up my log
+git checkout --quiet ${GH_DEST_BRANCH}
 rm -rf *
 
 # Copy generated HTML site from source branch in original repository.

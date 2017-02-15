@@ -33,17 +33,17 @@ sass:
   style: compressed
 
 exclude:
-  - node_modules
+  - Gemfile
+  - Gemfile.lock
   - gulpfile.js
   - CNAME
   - config.rb
-  - Gemfile
-  - Gemfile.lock
   - LICENSE.txt
+  - node_modules
   - package.json
   - Rakefile
-  - README.md
   - script
+  - spec
   - vendor
 
 exclude_from_sitemap:

@@ -1,7 +1,7 @@
 require "jekyll-seo-tag/version"
 
 module Jekyll
-  class SeoTag_Custom < Liquid::Tag
+  class SeoTag < Liquid::Tag
     attr_accessor :context
 
     # Matches all whitespace that follows either
@@ -13,7 +13,7 @@ module Jekyll
     # We will not strip any whitespace if the next character is a '-'
     #   so that we do not interfere with the HTML comment at the
     #   very begining
-    MINIFY_REGEX = %r!(?<=[{}]|[>,]\n)\s+(?\!-)!
+    MINIFY_REGEX_CUSTOM = %r!(?<=[{}]|[>,]\n)\s+(?\!-)!
 
     def initialize(_tag_name, text, _tokens)
       super
@@ -29,7 +29,7 @@ module Jekyll
 
     def options
       {
-        "version" => Jekyll::SeoTag_Custom::VERSION,
+        "version" => Jekyll::SeoTag::VERSION_CUSTOM,
         "title"   => title?,
       }
     end
@@ -60,7 +60,7 @@ module Jekyll
 
     def template_contents
       @template_contents ||= begin
-        File.read(template_path).gsub(MINIFY_REGEX, "")
+        File.read(template_path).gsub(MINIFY_REGEX_CUSTOM, "")
       end
     end
 
@@ -72,4 +72,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag("seo", Jekyll::SeoTag_Custom)
+Liquid::Template.register_tag("seo", Jekyll::SeoTag)
