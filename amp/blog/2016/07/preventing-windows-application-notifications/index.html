@@ -71,7 +71,7 @@
 
       
       <div class="featuredImage">
-        <amp-img src="/assets/img/2016/07/banner.png" alt="Windows registry notification entry" layout="responsive"><noscript><img src="/assets/img/2016/07/banner.png" alt="Windows registry notification entry"></noscript></amp-img>
+        <amp-img src="/assets/img/2016/07/banner.png" alt="Windows registry notification entry" width="1011" height="480" layout="responsive"><noscript><img src="/assets/img/2016/07/banner.png" alt="Windows registry notification entry" width="1011" height="480"></noscript></amp-img>
 </div>
       
 
@@ -113,18 +113,18 @@
 
 <p>The only information that I could find about this and how the key is decided is the claim that <a href="https://github.com/mumble-voip/mumble/issues/1777#issue-98981400">it is the application GUID</a>. However, my research has found that this registry key does not match the GUID for the installed application. My theory is that it is randomly generated upon install. But I have not yet verified this.</p>
 
-<p><amp-img src="/assets/img/2016/07/regedit0.png" alt="The notification for my battery adding a subkey in the registry" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit0.png" alt="The notification for my battery adding a subkey in the registry"></noscript></amp-img><em>The notification for my battery adding a subkey in the registry</em></p>
+<p><amp-img src="/assets/img/2016/07/regedit0.png" alt="The notification for my battery adding a subkey in the registry" width="1011" height="796" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit0.png" alt="The notification for my battery adding a subkey in the registry" width="1011" height="796"></noscript></amp-img><em>The notification for my battery adding a subkey in the registry</em></p>
 
 <p>When the registered application has no notification to display, there will be no subkeys listed for that registry key. However, while a notification is displayed, one can refresh the registry editor (F5 key) and see that a subkey has been added. This will help identify which registry keys are associated with the application notifications.</p>
 
 <h3 id="removing-control-permissions">Removing Control Permissions</h3>
 
 <p>Next, control permissions need to be removed from that specific registry key. Right-click on the parent key and select <code class="highlighter-rouge">Permissions…</code>.
-<amp-img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions"></noscript></amp-img></p>
+<amp-img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions" width="1002" height="708" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions" width="1002" height="708"></noscript></amp-img></p>
 
 <p>Select the user currently logged into the machine and deny <code class="highlighter-rouge">Full control</code> and <code class="highlighter-rouge">Read</code> permissions. Apply these changes. Attempt to re-create the application notification in the taskbar. If unable to re-create, the correct changes were made. If not, undo the changes and try looking for the key again.</p>
 
-<p><amp-img src="/assets/img/2016/07/regedit2.png" alt="Denying full control permissions in Windows registry" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit2.png" alt="Denying full control permissions in Windows registry"></noscript></amp-img></p>
+<p><amp-img src="/assets/img/2016/07/regedit2.png" alt="Denying full control permissions in Windows registry" width="1002" height="708" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit2.png" alt="Denying full control permissions in Windows registry" width="1002" height="708"></noscript></amp-img></p>
 
 <p>These changes should allow for the removal of annoying applications that do not follow the proper guidelines or rules when it comes to Windows taskbar notifications. Sometimes programs have unintended consequences when the programmer makes assumptions about how and when a user will interact with their program. I was hit with a combination of a program that did not properly register notifications as well as provide no advanced options to disable such notifications (there <em>are</em> other advanced options under the program).</p>
 
