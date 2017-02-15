@@ -12,6 +12,7 @@ bundle check || bundle install
 npm install
 
 # Build the site
+bundle exec jekyll build > /dev/null  2>&1
 bundle exec jekyll build
 
 # Checkout `master` and remove everything.
