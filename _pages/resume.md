@@ -4,7 +4,6 @@ title: Résumé
 style: resume.scss
 author: "Kyle M. Niewiada"
 email: kyle@kyleniewiada.org
-updateDate: "January, 2017"
 description: "Kyle Niewiada's online résumé. This lists his educational background, career, and highlights projects from his blog."
 seo:
   type: Website
@@ -154,4 +153,4 @@ To start a career writing meaningful frontend or backend software
 
 ---
 
-<p style="text-align:right;">Updated {{page.updateDate}}</p>
+<p style="text-align:right;">Updated {{ page.last_modified_at | date: '%B, %Y' }}</p>
