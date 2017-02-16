@@ -3,10 +3,11 @@ title: Discovering and Reverse Engineering My Steelcase Desk
 date: "2015-08-17 15:47"
 comments: true
 image:
-  path: /assets/img/2015/08/banner.jpg
-  alt: Steelcase height-adjustable standing desk
-  height: 779
-  width: 800
+  default:  
+    path: /assets/img/2015/08/banner.jpg
+    alt: Steelcase height-adjustable standing desk
+    height: 779
+    width: 800
 published: true
 tag: "medium project"
 description: "How I reverse engineered the remote codes on my prototype Steelcase sit/stand desk unlocking secret developer codes to enable One Touch adjustments"

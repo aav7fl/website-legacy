@@ -3,10 +3,11 @@ title: 'Charma - Gamifying the Volunteer Process'
 date: '2016-04-27 11:58'
 comments: true
 image:
-  path: /assets/img/2016/04/banner.jpg
-  alt: Charma homepage
-  height: 470
-  width: 800
+  default:  
+    path: /assets/img/2016/04/banner.jpg
+    alt: Charma homepage
+    height: 470
+    width: 800
 published: true
 tag: "large project"
 description: "Charma is an open source API and web application that promotes volunteerism. It was produced by Grand Valley State University and sponsored by Microsoft."

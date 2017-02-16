@@ -49,6 +49,8 @@ GEM
       jekyll (~> 3.3)
     jekyll-gist (1.4.0)
       octokit (~> 4.2)
+    jekyll-last-modified-at (0.3.4)
+      jekyll
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.12.1)
       jekyll (~> 3.3)
@@ -117,6 +119,7 @@ DEPENDENCIES
   jekyll
   jekyll-feed
   jekyll-gist
+  jekyll-last-modified-at
   jekyll-paginate
   jekyll-redirect-from
   jekyll-seo-tag
@@ -126,4 +129,4 @@ DEPENDENCIES
   rubocop
 
 BUNDLED WITH
-   1.14.3
+   1.14.4

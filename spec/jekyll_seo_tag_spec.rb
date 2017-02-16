@@ -168,8 +168,7 @@ describe Jekyll::SeoTag do
       end
 
       context "when given the image height and width" do
-        let(:image) { { "facebook" => "/img/foo.png", "height" => 1, "width" => 2 } }
-        let(:page) { make_page("image" => image) }
+        let(:page) { make_page("image" => { "facebook" => { "path" => "/img/foo.png", "height" => 1, "width" => 2 } }) }
 
         it "outputs the image" do
           expected = %r!<meta property="og:image:height" content="1" />!
@@ -196,10 +195,10 @@ describe Jekyll::SeoTag do
       end
     end
 
-    context "with image.path, image.height, and image.width" do
+    context "with image.default.path, image.default.height, and image.default.width" do
       let(:meta) do
         {
-          "image" => { "path" => "/img/banner.png", "height" => 1, "width" => 2 },
+          "image" => { "default" => { "path" => "/img/banner.png", "height" => 1, "width" => 2 } },
           "url"   => "http://example.invalid",
         }
       end
@@ -209,20 +208,6 @@ describe Jekyll::SeoTag do
         expect(json_data["image"]["url"]).to eql("http://example.invalid/img/banner.png")
         expect(json_data["image"]["height"]).to eql(1)
         expect(json_data["image"]["width"]).to eql(2)
-      end
-    end
-
-    context "with image.path only" do
-      let(:meta) do
-        {
-          "image" => { "path" => "/img/banner.png" },
-          "url"   => "http://example.invalid",
-        }
-      end
-      let(:page) { make_post(meta) }
-
-      it "outputs the image object" do
-        expect(json_data["image"]).to eql("http://example.invalid/img/banner.png")
       end
     end
 
@@ -243,6 +228,16 @@ describe Jekyll::SeoTag do
     context "with seo type is BlogPosting" do
       let(:site) { make_site("url" => "http://example.invalid") }
       let(:page) { make_post("seo" => { "type" => "BlogPosting" }, "permalink" => "/foo/") }
+
+      it "outputs the mainEntityOfPage" do
+        expect(json_data["mainEntityOfPage"]["@type"]).to eql("WebPage")
+        expect(json_data["mainEntityOfPage"]["@id"]).to eql("http://example.invalid/foo/")
+      end
+    end
+
+    context "with seo type is CreativeWork" do
+      let(:site) { make_site("url" => "http://example.invalid") }
+      let(:page) { make_post("seo" => { "type" => "CreativeWork" }, "permalink" => "/foo/") }
 
       it "outputs the mainEntityOfPage" do
         expect(json_data["mainEntityOfPage"]["@type"]).to eql("WebPage")

@@ -53,6 +53,7 @@ gems:
   - amp-jekyll
   - jekyll-feed
   - jekyll-gist
+  - jekyll-last-modified-at
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag
@@ -92,7 +93,8 @@ defaults:
       path: ""
     values:
       image:
-        path: /assets/img/default-card.png
-        alt: Default-card
-        height: 400
-        width: 700
+        default:
+          path: /assets/img/default-card.png
+          alt: Default-card
+          height: 400
+          width: 700
