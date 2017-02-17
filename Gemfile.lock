@@ -57,6 +57,7 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.0.0)
       jekyll (~> 3.1)
+    jekyll-sitemap (0.10.0)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.13.2)
@@ -120,6 +121,7 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-redirect-from
   jekyll-seo-tag
+  jekyll-sitemap
   nokogiri
   rake
   rubocop

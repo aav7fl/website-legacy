@@ -1,5 +1,5 @@
 require 'English'
-require 'html/proofer'
+require 'html-proofer'
 require 'rubocop/rake_task'
 require 'jekyll'
 
@@ -21,18 +21,17 @@ end
 desc 'Test website with html_proofer'
 task :html_proofer do
   puts 'Running html proofer...'.yellow.bold
-  HTML::Proofer.new(
+  HTMLProofer.check_directory(
     './_site',
     url_ignore:
     [
-      %r{.*discussions.apple.com/.*}, # Apple blocking Travis CI/typhoeus
-      %r{https://www.kyleniewiada.org.*} # Internal_domains doesn't handle this
+      %r{.*discussions.apple.com/.*} # Apple blocking Travis CI/typhoeus
     ],
-    file_ignore: [%r{_site/amp/.*}], # Ignore AMP Pages
-    # internal_domains: ['www.kyleniewiada.org'],
-    allow_hash_href: 'false',
+    allow_hash_href: 'true',
     check_html: 'true',
-    favicon: 'true',
+    check_opengraph: 'true',
+    file_ignore: [%r{_site/amp/.*}], # Ignore AMP Pages
+    internal_domains: ['www.kyleniewiada.org'],
     only_4xx: 'true' # Used to hande `999 No Error` from LinkedIn
   ).run
 end

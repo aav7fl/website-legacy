@@ -8,6 +8,7 @@ gem 'jekyll-gist'
 gem 'jekyll-last-modified-at'
 gem 'jekyll-paginate'
 gem 'jekyll-redirect-from'
+gem 'jekyll-sitemap'
 gem 'nokogiri'
 gem 'rubocop'
 

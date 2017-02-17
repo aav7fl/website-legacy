@@ -9,6 +9,7 @@
     <meta name="msapplication-navbutton-color" content="{{ site.data.colors.primary-color }}">
 
     <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}">
     {% if page.path contains '_posts' %}
       {% unless page.skip_amp %}
         <link rel="amphtml" href="{{ page.url | prepend: site.ampdir | prepend: site.url }}">

@@ -54,6 +54,7 @@ gems:
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Serving
 detach:  false
@@ -94,7 +95,3 @@ defaults:
       author: Kyle Niewiada
       seo:
         type: BlogPosting
-  - scope:
-      path: _site/amp
-    values:
-      sitemap: false
