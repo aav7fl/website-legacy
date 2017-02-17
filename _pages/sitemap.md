@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sitemap
-description: "Website Sitemap"
+description: "A webpage version of the website sitemap for KyleNiewiada.org providing a simple overview of all website content."
 regenerate: true
 permalink: /sitemap/
 ---
