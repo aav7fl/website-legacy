@@ -46,9 +46,6 @@ exclude:
   - spec
   - vendor
 
-exclude_from_sitemap:
-  - /amp
-
 gems:
   - amp-jekyll
   - jekyll-feed
@@ -57,7 +54,6 @@ gems:
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag
-  - jekyll-sitemap
 
 # Serving
 detach:  false
@@ -83,13 +79,6 @@ social:
 #Defaults
 defaults:
   - scope:
-      path: _posts
-    values:
-      layout: post
-      author: Kyle Niewiada
-      seo:
-        type: BlogPosting
-  - scope:
       path: ""
     values:
       image:
@@ -98,3 +87,14 @@ defaults:
           alt: Default-card
           height: 400
           width: 700
+  - scope:
+      path: _posts
+    values:
+      layout: post
+      author: Kyle Niewiada
+      seo:
+        type: BlogPosting
+  - scope:
+      path: _site/amp
+    values:
+      sitemap: false
