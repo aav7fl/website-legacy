@@ -8,7 +8,6 @@ set -e
 bundle check || bundle install
 
 # Install NPM
-. $HOME/.nvm/nvm.sh && nvm install 6.1 && nvm use 6.1
 npm install
 
 # Build the site
