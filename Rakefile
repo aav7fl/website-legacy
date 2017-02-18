@@ -7,10 +7,23 @@ task default: [:test]
 
 task :build do
   puts 'Building site...'.yellow.bold
-  # Build once because and ignore everything because
-  # Fastimage doesn't know about the images that exist yet.
-  sh 'bundle exec jekyll build > /dev/null  2>&1'
-  sh 'bundle exec jekyll build'
+  # Build twice to handle FastImage issue of non-existent images on init build
+  orig_stdout = STDOUT.clone
+  STDOUT.reopen('/dev/null', 'w')
+  Jekyll::Commands::Build.process({})
+  STDOUT.reopen(orig_stdout)
+  Jekyll::Commands::Build.process({})
+end
+
+task :serve do
+  puts 'Serving site...'.yellow.bold
+  options = {
+    'serving'     => true,
+    'watch'       => true,
+    'incremental' => true,
+    'config'      => %w(_config.yml)
+  }
+  Jekyll::Commands::Serve.process(options)
 end
 
 task :clean do
@@ -38,19 +51,14 @@ end
 
 desc 'Test website AMP validation'
 task :amp do
-  amp_dir = '_site/amp'
   puts 'Running AMP Validator...'.yellow.bold
-  command = "find #{amp_dir} -name *.html \
-  | xargs -L1 bash -c \'output=$(amphtml-validator --format color $0;); \
-  if [[ \"$output\" != *PASS ]]; \
-    then echo \"TEST FAILURE\" 1>&2 && exit 1; \
-  else echo -e \"$output\"; fi;\'"
-  system command
+  amp_dir = '_site/amp'
+  system "find #{amp_dir} -name *.html | xargs -L1 amphtml-validator"
   if $CHILD_STATUS.exitstatus.zero?
     puts 'AMP Validator finished successfully.'.green
   else
     puts 'AMP Validator FAILED.'.red.bold
-    exit(false)
+    exit($CHILD_STATUS.exitstatus)
   end
 end
 
