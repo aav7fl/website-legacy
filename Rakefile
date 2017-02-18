@@ -39,8 +39,13 @@ task :html_proofer do
     allow_hash_href: 'true',
     check_html: 'true',
     check_opengraph: 'true',
-    http_status_ignore: [999], # Used to hande `999 No Error` from LinkedIn
-    internal_domains: ['www.kyleniewiada.org']
+    file_ignore: [%r{_site/amp/.*}], # Ignore AMP. Handled by AMP-Validator
+    http_status_ignore: [999], # `999 No Error` from LinkedIn
+    internal_domains: ['www.kyleniewiada.org'],
+    url_ignore:
+    [
+      %r{.*discussions.apple.com/.*} # Apple blocking Travis CI/typhoeus
+    ]
   ).run
 end
 
