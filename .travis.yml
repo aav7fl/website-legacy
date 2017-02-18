@@ -29,7 +29,7 @@ before_install:
 install:
   - gem install bundler
   - bundle install --deployment
-  # - npm install # Handled by Travis automatically.
+  - npm install
 
 script:
   - bundle exec rake test
