@@ -5,7 +5,7 @@
 set -e
 
 # Install gems
-bundle install
+bundle install --deployment
 
 # Install NPM packages
 npm install
