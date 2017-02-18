@@ -4,16 +4,6 @@
 # Enable error reporting to the console.
 set -e
 
-# Install bundles if needed.
-bundle check || bundle install
-
-# Install NPM
-npm install
-
-# Build the site
-bundle exec jekyll build > /dev/null  2>&1
-bundle exec jekyll build
-
 # Checkout `master` and remove everything.
 git clone https://${GH_TOKEN}@github.com/${GH_USERNAME}/${GH_REPO}.git ../${GH_REPO}.${GH_DEST_BRANCH}
 cd ../${GH_REPO}.${GH_DEST_BRANCH}

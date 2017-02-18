@@ -23,18 +23,19 @@ env:
 before_install:
   - rvm install 2.2.6
   - rvm use 2.2.6
-  - gem install bundler
-  - bundle check || bundle install
 
-# Deployment config
+install:
+  - gem install bundler
+  - bundle install
+  # - npm install # Handled by Travis automatically.
+
 deploy:
   provider: script
-  script: "./_scripts/build.sh"
+  script: "./_scripts/deploy.sh"
   skip_cleanup: true
   on:
     branch: source
 
-#Notifications
 notifications:
   email:
     on_success: never # default: change
