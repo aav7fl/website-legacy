@@ -4,6 +4,12 @@
 # Enable error reporting to the console.
 set -e
 
+# Install gems
+bundle install
+
+# Install NPM packages
+npm install
+
 # Checkout `master` and remove everything.
 git clone https://${GH_TOKEN}@github.com/${GH_USERNAME}/${GH_REPO}.git ../${GH_REPO}.${GH_DEST_BRANCH}
 cd ../${GH_REPO}.${GH_DEST_BRANCH}
