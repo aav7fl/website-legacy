@@ -10,20 +10,32 @@
 
     <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" href="{{ "/touch-icon.png" | prepend: site.baseurl }}">
-    {% if page.path contains '_posts' %}
+    <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}">
+    <link rel="icon" sizes="192x192" href="{{ "/icon-hires.png" | prepend: site.baseurl }}" >
+    <link rel="icon" sizes="128x128" href="{{ "/icon.png" | prepend: site.baseurl }}" >
+    {% if page.layout == 'post' %}
       {% unless page.skip_amp %}
         <link rel="amphtml" href="{{ page.url | prepend: site.ampdir | prepend: site.url }}">
       {% endunless %}
     {% endif %}
-    <title>
-      {% if paginator and paginator.page > 1 %}
-        {% assign overwriteTitle = page.title | append: ' - Page ' | append: paginator.page %}
-        {{ overwriteTitle }}
+
+    <!-- Messy way to capture custom page title to replace SEO Tags -->
+    {% capture page_title %}
+      {% if page.title %}
+        {% if paginator and paginator.page > 1 %}
+          {{ page.title | append: ' - Page ' | append: paginator.page | append: ' | ' | append: site.author }}
+        {% elsif page.layout != 'post' %}
+          {{ page.title | append: ' | ' | append: site.author }}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
       {% else %}
-        {% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}
+        {{ site.name }}
       {% endif %}
-    </title>
+    {% endcapture %}
+    {% assign page_title = page_title | strip %}
+    <title>{{ page_title }}</title>
+    <meta property="og:title" content="{{ page_title }}" />
 
     <!-- Come and get me RSS readers -->
     {% feed_meta %}

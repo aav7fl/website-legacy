@@ -8,6 +8,11 @@
   {% assign extract = seo_text | split: open_tag | last | split: close_tag | first % | prepend: open_tag | append: close_tag %}
   {% assign seo_text = seo_text | remove: extract %}
 
+  {% assign open_tag = '<meta property="og:title"' %}
+  {% assign close_tag = '>' %}
+  {% assign extract = seo_text | split: open_tag | last | split: close_tag | first % | prepend: open_tag | append: close_tag %}
+  {% assign seo_text = seo_text | remove: extract %}
+
   {% if page.url contains site.ampdir %}
     <!-- Assumes AmpDir is never in JSON-LD -->
     {{ seo_text | remove: site.ampdir }}
