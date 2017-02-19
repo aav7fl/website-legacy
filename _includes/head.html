@@ -7,10 +7,10 @@
     <meta name="theme-color" content="{{ site.data.colors.primary-color }}">
     <!-- Windows Phone -->
     <meta name="msapplication-navbutton-color" content="{{ site.data.colors.primary-color }}">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=XBrXxWP0Kz" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=XBrXxWP0Kz" sizes="16x16">
-    <link rel="manifest" href="/manifest.json?v=XBrXxWP0Kz">
-    <link rel="shortcut icon" href="/favicon.ico?v=XBrXxWP0Kz">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
     {% if page.layout == 'post' %}
       {% unless page.skip_amp %}
         <link rel="amphtml" href="{{ page.url | prepend: site.ampdir | prepend: site.url }}">
