@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/aav7fl/jekyll-seo-tag.git
+  revision: 02eb92629300750aa90727c977dee388b94a4cd1
+  specs:
+    jekyll-seo-tag (2.1.0)
+      jekyll (~> 3.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -57,8 +64,6 @@ GEM
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
-    jekyll-seo-tag (2.1.0)
-      jekyll (~> 3.3)
     jekyll-sitemap (1.0.0)
       jekyll (~> 3.3)
     jekyll-watch (1.5.0)
@@ -123,7 +128,7 @@ DEPENDENCIES
   jekyll-last-modified-at
   jekyll-paginate
   jekyll-redirect-from
-  jekyll-seo-tag (>= 2.1.0)
+  jekyll-seo-tag!
   jekyll-sitemap
   nokogiri
   rake

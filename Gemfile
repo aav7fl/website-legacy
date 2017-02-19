@@ -13,7 +13,9 @@ gem 'nokogiri'
 gem 'rubocop'
 
 group :jekyll_plugins do
-  gem 'jekyll-seo-tag', '>=2.1.0'
+  git 'https://github.com/aav7fl/jekyll-seo-tag.git' do
+    gem 'jekyll-seo-tag', branch: 'testing'
+  end
 end
 
 # Test the build

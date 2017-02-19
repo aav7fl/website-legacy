@@ -53,7 +53,7 @@ gems:
   - jekyll-last-modified-at
   - jekyll-paginate
   - jekyll-redirect-from
-  # - jekyll-seo-tag
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 # Serving
