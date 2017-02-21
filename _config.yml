@@ -95,3 +95,10 @@ defaults:
       author: Kyle Niewiada
       seo:
         type: BlogPosting
+  - scope:
+      path: _drafts
+    values:
+      layout: post
+      author: Kyle Niewiada
+      seo:
+        type: BlogPosting

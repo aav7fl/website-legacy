@@ -4,11 +4,11 @@ date: "2017-02-20 2:37"
 comments: true
 image:
   default:  
-    path: /assets/img/2017/01/banner.jpg
-    alt: Android Nougat Easter Egg App
+    path: /assets/img/2017/02/banner.png
+    alt: Travis-CI build log for my Jekyll site
     height: 400
     width: 700
-published: false
+published: true
 tag: "large project"
 description: "My Jekyll website was in need of an update. I ending up adding tests, continuous integration (Travis-CI), Accelerated Mobile Pages, SEO improvements, and more."
 ---
@@ -116,17 +116,7 @@ Now all of my AMP pages are valid, and they appear to integrate properly into my
 Running AMP Validator...
 _site/amp/blog/2013/04/somewhere-to-start/index.html: PASS
 _site/amp/blog/2013/09/restoring-vintage-with-3d-printing/index.html: PASS
-_site/amp/blog/2015/04/transferring-n64-saves/index.html: PASS
-_site/amp/blog/2015/08/reverse-engineering-my-steelcase-desk/index.html: PASS
-_site/amp/blog/2015/12/making-a-book-from-facebook-messages/index.html: PASS
-_site/amp/blog/2016/03/word-auto-journal-macro-for-lazy/index.html: PASS
-_site/amp/blog/2016/03/easy-inline-usb-power-switch/index.html: PASS
-_site/amp/blog/2016/03/ios-video-bug-disclosure/index.html: PASS
-_site/amp/blog/2016/04/charma-gamifying-volunteer-process/index.html: PASS
-_site/amp/blog/2016/04/testing-charma-with-selenium/index.html: PASS
-_site/amp/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/index.html: PASS
-_site/amp/blog/2016/05/raspberry-pi-steam-vr-streaming/index.html: PASS
-_site/amp/blog/2016/07/preventing-windows-application-notifications/index.html: PASS
+...
 _site/amp/blog/2016/07/fixing-no-google-profile-for-contact/index.html: PASS
 _site/amp/blog/2017/01/backing-up-android-nougat-cats/index.html: PASS
 AMP Validator finished successfully.
@@ -179,15 +169,29 @@ I would add a video in my post with:
 
 ## Other Improvements
 
-Outside of testing/building, there were a few other improvements that I made to my website. I fixed how some of the plugins interacted with AMP and JSON-LD tags, I added a Wiki to my website repo in case anyone wants to build from it, removed old code while implementing newer standards, and put forth a small graphical upgrade with favicon branding and banners.
+Outside of testing/building, there were a few other improvements that I made to my website. I fixed how some of the plugins interacted with AMP and JSON-LD tags, I added a Wiki to my website repo, removed old code while implementing newer standards, and put forth a small graphical upgrade with favicon branding and banners.
 
 ### Plugins/SEO PR
 
-Earlier in this post I talked about how I was using Travis-CI to build and deploy my website. Now that I was building outside of GitHub, I could use my own plug-ins. One of them I've already mentioned, amp-jekyll. Another plugin that I was using was a proposal of jekyll-seo-tag that I forked until my [pull request](https://github.com/jekyll/jekyll-seo-tag/pull/151) was deemed acceptable from the project maintainers. My pull request simply corrected and updated the JSON-LD for a blog post to meet Google's current standards.
+Earlier in this post I talked about how I was using Travis-CI to build and deploy my website. Now that I was building outside of GitHub, I could use my own plug-ins. One of them I've already mentioned; amp-jekyll. Another plugin that I was using was a proposal of jekyll-seo-tag that I forked until my [pull request](https://github.com/jekyll/jekyll-seo-tag/pull/151) is deemed acceptable from the project maintainers. My pull request corrects and updates the JSON-LD for a blog post to meet Google's current standards.
 
 ### Website Wiki
 
+I have also added a [wiki to my website repo](https://github.com/aav7fl/aav7fl.github.io/wiki). I did this because the `README.md` for my repo was becoming far too large to include all of the information about how to build, customize, and deploy my website. This also meant that I could make separate changes to the documentation without adding another code commit.
+
 ### Less Code is More
+
 (CSS, JS, HTML Tags, HTML5 tags, Favicon gen/design/16x16 dithering/apple-touch-icon etc., Flexboxes, SVG edge bug ios background)
+Lastly, I made a substantial improvement and overhaul to the website CSS.
+- Removed my CSS normalize/Strongly simplified
+- Dropped support for < Internet Explorer 10
+- Removed JavaScript header navigation, (CSS3 only now)
+- Switched my footer and post navigation to use Flexboxes that collapse responsively with media queries
+- Changed over to HTML5 body tags (main, article, footer)
+- Fixed SVG banner image bugs that existed in Edge and iOS
+- Explain that more??
+- Added favicon sets using [RealFaviconGenerator](https://realfavicongenerator.net/) with updated colors
 
 ### Sitemap
+
+ Maybe not include this? Not exciting..

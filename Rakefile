@@ -18,10 +18,11 @@ end
 task :serve do
   puts 'Serving site...'.yellow.bold
   options = {
-    'serving'     => true,
-    'watch'       => true,
+    'config'      => %w(_config.yml),
+    'drafts'      => true,
     'incremental' => true,
-    'config'      => %w(_config.yml)
+    'serving'     => true,
+    'watch'       => true
   }
   Jekyll::Commands::Serve.process(options)
 end
