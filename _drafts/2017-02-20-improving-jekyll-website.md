@@ -19,6 +19,8 @@ Next, my website felt a little bulky. My CSS was a little over-the-top, I really
 
 Here's a link to the [website source code](https://github.com/aav7fl/aav7fl.github.io/tree/539c5f439a092fa9d1ad7b335b86a0c07f2955a6) right before this blog post was released.
 
+{% include toc.html %}
+
 ## Testing
 
 (Testing what/why/how)

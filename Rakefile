@@ -5,23 +5,34 @@ require 'jekyll'
 
 task default: [:test]
 
-task :build do
-  puts 'Building site...'.yellow.bold
+task :build, [:options] do |t, args|
   # Build twice to handle FastImage issue of non-existent images on init build
+  puts 'Building site...'.yellow.bold
+  args.with_defaults(options: {})
   orig_stdout = STDOUT.clone
   STDOUT.reopen('/dev/null', 'w')
   Jekyll::Commands::Build.process({})
   STDOUT.reopen(orig_stdout)
-  Jekyll::Commands::Build.process({})
+  Jekyll::Commands::Build.process(args[:options])
+end
+
+task :build_watch do
+  # Build the site with custom options such as drafts enabled.
+  puts 'Building site with drafts...'.yellow.bold
+  options = {
+    'incremental' => true,
+    'show_drafts' => true,
+    'watch'       => true
+  }
+  Rake::Task['build'].invoke(options)
 end
 
 task :serve do
   puts 'Serving site...'.yellow.bold
   options = {
-    'config'      => %w(_config.yml),
-    'drafts'      => true,
     'incremental' => true,
     'serving'     => true,
+    'show_drafts' => true,
     'watch'       => true
   }
   Jekyll::Commands::Serve.process(options)

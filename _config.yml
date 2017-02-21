@@ -78,6 +78,14 @@ social:
     - https://www.linkedin.com/in/kyleniewiada
 
 #Defaults
+
+values: &post_val
+  layout: post
+  author: Kyle Niewiada
+  seo:
+    type: BlogPosting
+  regenerate: true
+
 defaults:
   - scope:
       path: ""
@@ -90,15 +98,7 @@ defaults:
           width: 700
   - scope:
       path: _posts
-    values:
-      layout: post
-      author: Kyle Niewiada
-      seo:
-        type: BlogPosting
+    values: *post_val
   - scope:
       path: _drafts
-    values:
-      layout: post
-      author: Kyle Niewiada
-      seo:
-        type: BlogPosting
+    values: *post_val
