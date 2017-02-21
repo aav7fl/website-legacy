@@ -55,6 +55,10 @@ POST NAV STYLING
 			transition: all 0.35s ease-in-out;
 			top: 50%;
 			transform: translateY(-50%);
+			width: auto;
+	    height: auto;
+	    min-width: 100%;
+	    min-height: 100%;
 		}
 	}
 

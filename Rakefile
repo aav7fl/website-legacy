@@ -5,7 +5,7 @@ require 'jekyll'
 
 task default: [:test]
 
-task :build, [:options] do |t, args|
+task :build, [:options] do |_t, args|
   # Build twice to handle FastImage issue of non-existent images on init build
   puts 'Building site...'.yellow.bold
   args.with_defaults(options: {})
