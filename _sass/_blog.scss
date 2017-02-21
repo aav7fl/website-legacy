@@ -22,6 +22,11 @@ blockquote {
   padding: 0.5em 10px;
 }
 
+summary{
+	font-size: 130%;
+	font-weight: bold;
+}
+
 /***************
 POST NAV STYLING
 ***************/
@@ -44,6 +49,7 @@ POST NAV STYLING
 			padding: .5em;
 			font-weight: bold;
 			color: white;
+			background: rgba(0,0,0,.6); // When IE11 dies. Remove this.
 		}
 
 		.previous { text-align: left; }
@@ -51,7 +57,8 @@ POST NAV STYLING
 
 		.link-image {
 			position: absolute;
-			filter: blur(1px) brightness(40%);
+			// filter: blur(1px) brightness(40%); // When IE11 dies. Add this back.
+			filter: blur(1px);
 			transition: all 0.35s ease-in-out;
 			top: 50%;
 			transform: translateY(-50%);
