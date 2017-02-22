@@ -1,6 +1,6 @@
 ---
 title: "Improving Jekyll in 2017"
-date: "2017-02-20 2:37"
+date: "2017-02-22 5:34"
 comments: true
 image:
   default:  
@@ -8,9 +8,9 @@ image:
     alt: Travis-CI build log for my Jekyll site
     height: 400
     width: 700
-published: true
+published: false
 tag: "large project"
-description: "My Jekyll website was in need of an update. I ending up adding tests, continuous integration (Travis-CI), Accelerated Mobile Pages, SEO improvements, and more."
+description: "My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more."
 ---
 
 When I took a look at my website last year, it needed help. There wasn't a whole lot wrong, but there definitely were areas that needed improvement. For starters, I wasn't testing anything (don't judge me). How would I test things? By overkilling the project and setting up [Travis-CI](https://travis-ci.org/) of course.
@@ -19,7 +19,7 @@ Next, my website felt a little bulky. The CSS was over-the-top, I didn't need a 
 
 The last major change that I wanted to implement was **AMP** ([accelerated mobile pages](https://www.ampproject.org/)) to make is easier for mobile devices hitting my blog. This led down a rabbit hole of further changes.
 
-Link to the [website source code]() right before this blog post was released.
+Link to the [website source code](https://github.com/aav7fl/aav7fl.github.io/tree/3030f13cf278bb7e08fb2cabd50d7b24dd1eff0c) right before this blog post was released.
 
 {% include toc.html %}
 
@@ -83,7 +83,7 @@ I'm actually a little proud of this, but my build time is now around 1½ minutes
 
 Read more on [Travis-CI caching docs](https://docs.travis-ci.com/user/caching/).
 
-## AMP
+## AMP Pages
 
 Starting back in the middle of 2016, I wanted to implement AMP ([accelerated mobile pages](https://www.ampproject.org/)) in my website. In case you didn't know, it's a streamlined version of the webpage strongly optimized for mobile rendering and reduced load times. It also comes with its own special restrictions.
 
