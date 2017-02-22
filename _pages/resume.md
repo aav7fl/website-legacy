@@ -80,11 +80,11 @@ To start a career writing meaningful frontend or backend software
 
 ### Experience with:
 
-- SQL, Java, C, C++, HTML, CSS
+- Java, C++, SQL, HTML, CSS
 
 ### Familiar with:
 
-- C#, Python, Markdown, Liquid, TI-Basic
+- Ruby, C, C#, Python, Liquid, Markdown, TI-Basic
 
 ---
 
