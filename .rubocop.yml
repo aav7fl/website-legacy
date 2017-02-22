@@ -1,5 +1,3 @@
 AllCops:
   Exclude:
-    - _plugins/**/* # Ignore plugin that I didn't write. Only forked
     - vendor/**/* # Ignore Travis-CI build directory
-    - spec/**/* # Ignore spec brought in from a plugin

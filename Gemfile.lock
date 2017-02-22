@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/aav7fl/jekyll-seo-tag.git
-  revision: 02eb92629300750aa90727c977dee388b94a4cd1
+  revision: 3410feec9784ced33f5f47e4b36cb3b6dc9f334b
   specs:
     jekyll-seo-tag (2.1.0)
       jekyll (~> 3.3)
@@ -40,7 +40,7 @@ GEM
       parallel (~> 1.3)
       typhoeus (~> 0.7)
       yell (~> 2.0)
-    i18n (0.8.0)
+    i18n (0.8.1)
     jekyll (3.4.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
