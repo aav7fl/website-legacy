@@ -1,4 +1,300 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="https://www.kyleniewiada.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.kyleniewiada.org/" rel="alternate" type="text/html" /><updated>2017-02-22T17:51:06-05:00</updated><id>https://www.kyleniewiada.org/</id><title type="html">Kyle Niewiada’s Website</title><subtitle>My little corner of the Internet where I write about projects I've figured out</subtitle><author><name>Kyle Niewiada</name></author><entry><title type="html">Backing Up Android Nougat Easter Egg Cats (No Root)</title><link href="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/" rel="alternate" type="text/html" title="Backing Up Android Nougat Easter Egg Cats (No Root)" /><published>2017-01-04T05:37:00-05:00</published><updated>2017-02-16T14:52:47-05:00</updated><id>https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/">&lt;p&gt;Every major release of Android in the past couple years has received Google’s Easter Egg treatment. They like to sneak in wallpapers, silly animations, or a fun little game. With the release of Android Nougat (7.0.0), the Easter Egg ended up resembling some kind of &lt;a href=&quot;https://en.wikipedia.org/wiki/Neko_Atsume&quot;&gt;Neko Atsume&lt;/a&gt; themed game.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="https://www.kyleniewiada.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.kyleniewiada.org/" rel="alternate" type="text/html" /><updated>2017-02-22T18:17:04-05:00</updated><id>https://www.kyleniewiada.org/</id><title type="html">Kyle Niewiada’s Website</title><subtitle>My little corner of the Internet where I write about projects I've figured out</subtitle><author><name>Kyle Niewiada</name></author><entry><title type="html">Improving Jekyll in 2017</title><link href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/" rel="alternate" type="text/html" title="Improving Jekyll in 2017" /><published>2017-02-22T05:34:00-05:00</published><updated>2017-02-22T18:15:37-05:00</updated><id>https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/">&lt;p&gt;When I took a look at my website last year, it needed help. There wasn’t a whole lot wrong, but there definitely were areas that needed improvement. For starters, I wasn’t testing anything (don’t judge me). How would I test things? By overkilling the project and setting up &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis-CI&lt;/a&gt; of course.&lt;/p&gt;
+
+&lt;p&gt;Next, my website felt a little bulky. The CSS was over-the-top, I didn’t need a JavaScript header menu, I had unnecessary nested HTML tags, and still didn’t like how some of the elements collapsed on mobile devices.&lt;/p&gt;
+
+&lt;p&gt;The last major change that I wanted to implement was &lt;strong&gt;AMP&lt;/strong&gt; (&lt;a href=&quot;https://www.ampproject.org/&quot;&gt;accelerated mobile pages&lt;/a&gt;) to make is easier for mobile devices hitting my blog. This led down a rabbit hole of further changes.&lt;/p&gt;
+
+&lt;p&gt;Link to the &lt;a href=&quot;https://github.com/aav7fl/aav7fl.github.io/tree/2ff155a26e3c91837f35e794433fce7f3f020a30&quot;&gt;website source code&lt;/a&gt; right before this blog post was released.&lt;/p&gt;
+
+&lt;div class=&quot;line-separator&quot;&gt;&lt;/div&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div class=&quot;table-of-contents&quot;&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#testing&quot; id=&quot;markdown-toc-testing&quot;&gt;Testing&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#html-proofer&quot; id=&quot;markdown-toc-html-proofer&quot;&gt;HTML Proofer&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#amphtml-validator&quot; id=&quot;markdown-toc-amphtml-validator&quot;&gt;amphtml-validator&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#rubocop&quot; id=&quot;markdown-toc-rubocop&quot;&gt;RuboCop&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#travis-ci&quot; id=&quot;markdown-toc-travis-ci&quot;&gt;Travis-CI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#amp-pages&quot; id=&quot;markdown-toc-amp-pages&quot;&gt;AMP Pages&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#amp-sitemap-conflict&quot; id=&quot;markdown-toc-amp-sitemap-conflict&quot;&gt;AMP Sitemap Conflict&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#amp-seo-fixes&quot; id=&quot;markdown-toc-amp-seo-fixes&quot;&gt;AMP SEO Fixes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#amp-videos&quot; id=&quot;markdown-toc-amp-videos&quot;&gt;AMP Videos&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#fixing-the-head&quot; id=&quot;markdown-toc-fixing-the-head&quot;&gt;Fixing the &amp;lt;Head&amp;gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#fixing-the-post&quot; id=&quot;markdown-toc-fixing-the-post&quot;&gt;Fixing the Post&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#results&quot; id=&quot;markdown-toc-results&quot;&gt;Results&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#other-improvements&quot; id=&quot;markdown-toc-other-improvements&quot;&gt;Other Improvements&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#plugins&quot; id=&quot;markdown-toc-plugins&quot;&gt;Plugins&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#website-wiki&quot; id=&quot;markdown-toc-website-wiki&quot;&gt;Website Wiki&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#less-code-is-more&quot; id=&quot;markdown-toc-less-code-is-more&quot;&gt;Less Code is More&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#conclusion&quot; id=&quot;markdown-toc-conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;line-separator&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;p&gt;My website needed testing. I had no excuse. With every new feature added, there was another chance that something would slip by and ruin my production release. After adding AMP, I would manually validate each page in Google Chrome using the &lt;code class=&quot;highlighter-rouge&quot;&gt;#development=1&lt;/code&gt; tag in my URL. For every change the HTML layout, I would miss a close tag. This needed to change.&lt;/p&gt;
+
+&lt;h3 id=&quot;html-proofer&quot;&gt;HTML Proofer&lt;/h3&gt;
+
+&lt;p&gt;My first improvement to testing my website was adding &lt;a href=&quot;https://github.com/gjtorikian/html-proofer&quot;&gt;HTMLProofer&lt;/a&gt;. HTMLProofer “is a set of tests to validate your HTML output. These tests check if your image references are legitimate, if they have alt tags, if your internal links are working, and so on. It’s intended to be an all-in-one checker for your output.”&lt;/p&gt;
+
+&lt;p&gt;Cool, right? After I set up the RubyGem, I found some broken HTML tags, a few 404 outgoing links, and missing alt tags on images. A few problems solved.&lt;/p&gt;
+
+&lt;h3 id=&quot;amphtml-validator&quot;&gt;amphtml-validator&lt;/h3&gt;
+
+&lt;p&gt;After I implemented AMP (more on that later), I needed a better way to test rather than opening up my browser and validating each page through the Chrome dev tools. &lt;a href=&quot;https://github.com/ampproject/amphtml/tree/master/validator/nodejs&quot;&gt;amphtml-validator&lt;/a&gt; to the rescue; a Node.js package command line tool that validates AMP HTML files.&lt;/p&gt;
+
+&lt;p&gt;With a little Ruby-Fu, I was able to add the Node.js package execution to my Rakefile. It finds all of the &lt;code class=&quot;highlighter-rouge&quot;&gt;*.html&lt;/code&gt; files in my AMP directory and passes them one at a time to the amphtml-validator. I check the exit status of the Node.js package, let the user know if it fails, and continue with my day.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Test website AMP validation'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:amp&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Running AMP Validator...'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;yellow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bold&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;amp_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'_site/amp'&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;find &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amp_dir&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; -iname *.html | xargs -L1 amphtml-validator&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$CHILD_STATUS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;exitstatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;zero?&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'AMP Validator finished successfully.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;green&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'AMP Validator FAILED.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bold&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vg&quot;&gt;$CHILD_STATUS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;exitstatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;rubocop&quot;&gt;RuboCop&lt;/h3&gt;
+
+&lt;p&gt;When I was working on a pull request for another project, the project’s Rake tests introduced me to &lt;a href=&quot;https://github.com/bbatsov/rubocop&quot;&gt;RuboCop&lt;/a&gt;. RuboCop is a static code analyzer for Ruby that enforces guidelines from the &lt;a href=&quot;https://github.com/bbatsov/ruby-style-guide&quot;&gt;Ruby Style Guide&lt;/a&gt;. It was a neat little tool that I added to my Rakefile to ensure Ruby code that I wrote would be understood by others. It wasn’t a huge change, but it was there to keep myself in check with the community style guidelines (something that I had very little experience with).&lt;/p&gt;
+
+&lt;p&gt;I added this to my project by installing the RuboCop RubyGem and adding its config file. The config file excludes a directory that would currently break a Travis-CI build.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.rubocop.yml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;AllCops&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;Exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;vendor/**/*&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Ignore Travis-CI build directory&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;travis-ci&quot;&gt;Travis-CI&lt;/h2&gt;
+
+&lt;p&gt;Adding tests were great. But I also liked the idea that if I was away from my build environment I could make a small change on my phone, test it, and deploy to production. This was a bit of a pipe dream for me. I knew as soon as I added tests, I wouldn’t be able to rely completely on GitHub builds. Likewise, if I wanted to add special plugins or RubyGems, say goodbye to GitHub builds.&lt;/p&gt;
+
+&lt;p&gt;But &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis-CI&lt;/a&gt; saves the day! Travis-CI will watch for code changes in my repo, fetch it, test it, and if it passes it could push my &lt;code class=&quot;highlighter-rouge&quot;&gt;_site/&lt;/code&gt; folder to my GH-Pages branch (where GitHub will deploy online). Pretty cool, huh?&lt;/p&gt;
+
+&lt;p&gt;I stumbled across this idea from Savas Labs who wrote a blog post last fall on how they &lt;a href=&quot;http://savaslabs.com/2016/10/25/deploy-jekyll-with-travis.html&quot;&gt;deploy to GitHub Pages using Travis-CI&lt;/a&gt;. They were not the first, but I liked some of the ideas that they used. They would bring in pull requests to the source branch, test it, and deploy to a master branch for GH-Pages based on test results. I have followed suit. I made some changes to the scripts, like how I cache different directories and rely on the built in Node.JS versions, but the idea is still the same.&lt;/p&gt;
+
+&lt;p&gt;I’m actually a little proud of this, but my build time is now around 1½ minutes, and deploying only takes another 15 seconds. This was accomplished by:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Caching Bundler&lt;/li&gt;
+  &lt;li&gt;Caching Node_Modules&lt;/li&gt;
+  &lt;li&gt;Resolving &lt;a href=&quot;https://github.com/travis-ci/travis-ci/issues/5092#issuecomment-245937070&quot;&gt;RVM and Node_Modules &lt;code class=&quot;highlighter-rouge&quot;&gt;which&lt;/code&gt; conflict&lt;/a&gt;. This shaved nearly a minute off the build!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Read more on &lt;a href=&quot;https://docs.travis-ci.com/user/caching/&quot;&gt;Travis-CI caching docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;amp-pages&quot;&gt;AMP Pages&lt;/h2&gt;
+
+&lt;p&gt;Starting back in the middle of 2016, I wanted to implement AMP (&lt;a href=&quot;https://www.ampproject.org/&quot;&gt;accelerated mobile pages&lt;/a&gt;) in my website. In case you didn’t know, it’s a streamlined version of the webpage strongly optimized for mobile rendering and reduced load times. It also comes with its own special restrictions.&lt;/p&gt;
+
+&lt;p&gt;If there was something that would make the web experience faster for any readers, I was interested. My biggest problems were that Jekyll had yet to implement multiple layouts natively. This meant that I needed to rely on an external plugin in order to generate the AMP pages. Good thing I setup up Travis-CI!&lt;/p&gt;
+
+&lt;p&gt;I turned to &lt;a href=&quot;https://github.com/juusaw/amp-jekyll&quot;&gt;amp-jekyll&lt;/a&gt; (which is now a RubyGem!) to add an AMP layout. There were a few small changes that I needed to make though. I had to figure out how to &lt;a href=&quot;https://www.ampproject.org/docs/reference/components/amp-video&quot;&gt;properly add videos&lt;/a&gt; to my posts, remove the AMP pages from my sitemap, and change the canonical URL on my AMP pages while using Jekyll-SEO-Tag.&lt;/p&gt;
+
+&lt;h3 id=&quot;amp-sitemap-conflict&quot;&gt;AMP Sitemap Conflict&lt;/h3&gt;
+
+&lt;p&gt;In order to avoid duplicate results, AMP pages are not &lt;a href=&quot;https://twitter.com/JohnMu/status/786588362706673664&quot;&gt;necessary in the sitemap&lt;/a&gt; unless they are standalone pages. Referencing them in the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; of the normal page is enough. Because &lt;a href=&quot;https://github.com/jekyll/jekyll-sitemap&quot;&gt;jekyll-sitemap&lt;/a&gt; knew nothing about my AMP ambitions, I had to manually set a default in my &lt;code class=&quot;highlighter-rouge&quot;&gt;amp.html&lt;/code&gt; layout frontmatter to stop them from being included.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts/amp.html&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;amp&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;sitemap&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Easy enough.&lt;/p&gt;
+
+&lt;h3 id=&quot;amp-seo-fixes&quot;&gt;AMP SEO Fixes&lt;/h3&gt;
+
+&lt;p&gt;Next, my AMP pages had conflicts with  &lt;a href=&quot;https://github.com/jekyll/jekyll-seo-tag&quot;&gt;Jekyll-SEO-Tag&lt;/a&gt;. Every AMP page would list its canonical URL as itself, when in reality it should be linking to the normal version of the webpage.&lt;/p&gt;
+
+&lt;p&gt;This was solved by cheating. I call it cheating because it’s not a robust solution. If I happen to include the &lt;code class=&quot;highlighter-rouge&quot;&gt;site.ampdir&lt;/code&gt; anywhere in my SEO tags on an AMP page, that text will be removed.&lt;/p&gt;
+
+&lt;p&gt;If my AMP Page canonical URL contained &lt;code class=&quot;highlighter-rouge&quot;&gt;/amp&lt;/code&gt; like so: &lt;code class=&quot;highlighter-rouge&quot;&gt;href=&quot;https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/&quot;&lt;/code&gt;, it would now be altered to &lt;code class=&quot;highlighter-rouge&quot;&gt;href=&quot;https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/&quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There’s always a chance that this could mess up. I’m positive I could break this if I put &lt;code class=&quot;highlighter-rouge&quot;&gt;/amp&lt;/code&gt; somewhere in my title, but I decided that in my personal case, the pros far outweigh the cons.&lt;/p&gt;
+
+&lt;p&gt;Here’s now I do it. Whenever I grab the SEO tag, I make sure to run in through my “parser” first to fix it.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/amp-check.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;capture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;seo_text&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;seo&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;endcapture&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SEO&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'amp'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+    &amp;lt;!-- Assumes AmpDir is never in JSON-LD --&amp;gt;
+    &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;seo_text&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;site.ampdir&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;seo_text&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now all I need to do is call the Jekyll-SEO-Tag with &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;amp-check.html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;SEO&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%}&lt;/span&gt;&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; of my layout. Problem solved.&lt;/p&gt;
+
+&lt;h3 id=&quot;amp-videos&quot;&gt;AMP Videos&lt;/h3&gt;
+
+&lt;p&gt;AMP Videos require a bit of finesse to implement. They need to have a special JS file loaded in the head and they need to follow the correct &lt;a href=&quot;https://www.ampproject.org/docs/reference/components/amp-video&quot;&gt;amp-video guidelines&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;fixing-the-head&quot;&gt;Fixing the &amp;lt;Head&amp;gt;&lt;/h4&gt;
+
+&lt;p&gt;To get that &lt;em&gt;special JS file&lt;/em&gt;, I decided the easiest way would be to add a frontmatter variable in each post stating which special AMP JS files were needed. Then I would make a check for it in the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;. For example, a blog post with an embedded video would have:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;video&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then the AMP &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; layout would include:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/amp/head.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% if page.amp contains 'video' %}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;custom-element=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;amp-video&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.ampproject.org/v0/amp-video-0.1.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+{% endif %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;fixing-the-post&quot;&gt;Fixing the Post&lt;/h4&gt;
+
+&lt;p&gt;Now that the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; had the correct dependencies, I had to figure out how to embed the video file in my blog post in the appropriate way for each page layout.&lt;/p&gt;
+
+&lt;p&gt;This was accomplished with a small &lt;code class=&quot;highlighter-rouge&quot;&gt;include&lt;/code&gt; that would take in the parameters from a post specifying the video type and other special properties.&lt;/p&gt;
+
+&lt;p&gt;I would add a video to my post with:&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;video&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/assets/files/2016/03/bug_example.mp4&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;poster&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/assets/files/2016/03/bug_example_poster.png&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;controls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;loop&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then the video &lt;code class=&quot;highlighter-rouge&quot;&gt;include&lt;/code&gt; would properly insert the video for both AMP and default layouts.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/video.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- Method to implement AMP-Video. --&amp;gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;420&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;700&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;normal&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;ow&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'normal'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'amp'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+    &amp;lt;amp-video height=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot; width=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot; poster=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;poster&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot; layout=&quot;responsive&quot; controls &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;controls&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;gt;
+      &amp;lt;div fallback&amp;gt;
+        Your browser doesn’t support HTML5 video
+      &amp;lt;/div&amp;gt;
+      &amp;lt;source type=&quot;video/mp4&quot; src=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot;/&amp;gt;
+    &amp;lt;/amp-video&amp;gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+    &amp;lt;video width=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot; controls &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;controls&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&amp;gt;
+      &amp;lt;source src=&quot;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&quot; type=&quot;video/mp4&quot; /&amp;gt;
+      &amp;lt;p&amp;gt;Your browser doesn’t support HTML5 video&amp;lt;/p&amp;gt;
+    &amp;lt;/video&amp;gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In the code above, it first checks to see if the video type from the post is a “normal” embedded video, or a YouTube video (not shown). Next, it checks to see if the webpage layout is of type &lt;code class=&quot;highlighter-rouge&quot;&gt;amp&lt;/code&gt;. If this is also true, then it will insert the correct HTML layout for an AMP video. Otherwise, it will insert the video with normal HTML5.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You can find more information or any updates to my implementation on the &lt;a href=&quot;https://github.com/aav7fl/aav7fl.github.io/wiki&quot;&gt;repo Wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;
+
+&lt;p&gt;Now when I run the &lt;code class=&quot;highlighter-rouge&quot;&gt;amphtml-validator&lt;/code&gt; tests, all of my AMP pages pass.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Running AMP Validator...
+_site/amp/blog/2013/04/somewhere-to-start/index.html: PASS
+_site/amp/blog/2013/09/restoring-vintage-with-3d-printing/index.html: PASS
+...
+_site/amp/blog/2016/07/fixing-no-google-profile-for-contact/index.html: PASS
+_site/amp/blog/2017/01/backing-up-android-nougat-cats/index.html: PASS
+AMP Validator finished successfully.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;An explanation on my testing method is found earlier in this post.&lt;/p&gt;
+
+&lt;h2 id=&quot;other-improvements&quot;&gt;Other Improvements&lt;/h2&gt;
+
+&lt;p&gt;Outside of testing/building, there were a few other improvements that I made to my website. I fixed conflicts with AMP pages and other plugins, added a wiki to the website repo, and put forth a small graphical upgrade with favicon branding and banners.&lt;/p&gt;
+
+&lt;h3 id=&quot;plugins&quot;&gt;Plugins&lt;/h3&gt;
+
+&lt;p&gt;Earlier in this post I talked about how I was using Travis-CI to build and deploy my website. Building outside of GitHub offered me the freedom to use my own plugins or RubyGems rather than limiting myself to the &lt;a href=&quot;https://pages.github.com/versions/&quot;&gt;GitHub-Pages Allowed Dependencies&lt;/a&gt;. One of them I’ve already mentioned; amp-jekyll. This was used to implement an AMP layout to my blog postings.&lt;/p&gt;
+
+&lt;p&gt;The only custom RubyGem that I am using is Jekyll-SEO-Tag. Well… a fork of Jekyll-SEO-Tag. That is, until they hopefully accept my &lt;a href=&quot;https://github.com/jekyll/jekyll-seo-tag/pull/151&quot;&gt;pull request&lt;/a&gt;. My pull request corrects and updates the JSON-LD for a blog post to meet Google’s current recommendations. But for now, I have a special entry in my Gemfile pointing to my fork.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/aav7fl/jekyll-seo-tag.git'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll-seo-tag'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;branch: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'testing'&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;website-wiki&quot;&gt;Website Wiki&lt;/h3&gt;
+
+&lt;p&gt;I added a &lt;a href=&quot;https://github.com/aav7fl/aav7fl.github.io/wiki&quot;&gt;wiki to my website repo&lt;/a&gt;
+so others could build out their own project from my website if they wanted to. Additionally, the &lt;code class=&quot;highlighter-rouge&quot;&gt;README.md&lt;/code&gt; for my repo was becoming far too large to include all of the information about how to build, customize, and deploy my website. This meant that I could make separate changes to the documentation without adding another code commit.&lt;/p&gt;
+
+&lt;h3 id=&quot;less-code-is-more&quot;&gt;Less Code is More&lt;/h3&gt;
+
+&lt;p&gt;Lastly, I made a substantial improvements to the CSS, lightened the webpage layout, and squashed remaining bugs that I could find (looking at you MS Edge…). Below is a fairly comprehensive list of the major changes I made. They don’t deserve their own individual section, but they are still worth mentioning&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Removed CSS normalize/Strongly simplified&lt;/li&gt;
+  &lt;li&gt;Removed complicated JavaScript header navigation (CSS3 only now)&lt;/li&gt;
+  &lt;li&gt;Switched post-navigation and footer to use Flexbox that collapses responsively&lt;/li&gt;
+  &lt;li&gt;Switched to HTML5 tags (&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;main&amp;gt;&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;article&amp;gt;&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Fixed SVG banner image bugs that existed in Edge/IE and iOS Safari
+    &lt;ul&gt;
+      &lt;li&gt;Edge/IE would not dislpay the SVG banner if it met the following conditions:
+        &lt;ul&gt;
+          &lt;li&gt;Set as a CSS background-image&lt;/li&gt;
+          &lt;li&gt;Displayed with &lt;code class=&quot;highlighter-rouge&quot;&gt;background-size: cover;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;Stretched too wide (it would disappear immediately).
+This was resolved by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;x=&quot;0&quot; y=&quot;0&quot;&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;filter&amp;gt;&lt;/code&gt; tag in my SVG file. What a bug…&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;iOS Safari would display the banner with a smokey-white haze when using the Gaussian Blur filter as it somehow conflicted with the background layer. This was resolved by removing the background fill from the SVG and instead handling it with the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;DIV&amp;gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;background:&lt;/code&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Added favicon sets (like Apple-Touch-Icon) using &lt;a href=&quot;https://realfavicongenerator.net/&quot;&gt;RealFaviconGenerator&lt;/a&gt; with updated colors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;As much as I tried to stay entirely within the GitHub Pages ecosystem, it didn’t fit my needs. But that was a good thing. This gave me the chance to check out other build environments and different tools that wouldn’t have been in my reach before. This gave me the opportunity to look at other open source projects, to learn about their process, and contribute my own work back.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions or concerns about how or why I did something, or I wasn’t clear on an explanation, feel free to comment about it below and I’ll try to get back to you.&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="large project" /><summary type="html">When I took a look at my website last year, it needed help. There wasn’t a whole lot wrong, but there definitely were areas that needed improvement. For starters, I wasn’t testing anything (don’t judge me). How would I test things? By overkilling the project and setting up Travis-CI of course.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22default%22=%3E%7B%22path%22=%3E%22/assets/img/2017/02/banner.png%22,%20%22alt%22=%3E%22Travis-CI%20build%20log%20for%20my%20Jekyll%20site%22,%20%22height%22=%3E400,%20%22width%22=%3E700%7D%7D" /></entry><entry><title type="html">Backing Up Android Nougat Easter Egg Cats (No Root)</title><link href="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/" rel="alternate" type="text/html" title="Backing Up Android Nougat Easter Egg Cats (No Root)" /><published>2017-01-04T05:37:00-05:00</published><updated>2017-02-16T14:52:47-05:00</updated><id>https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/">&lt;p&gt;Every major release of Android in the past couple years has received Google’s Easter Egg treatment. They like to sneak in wallpapers, silly animations, or a fun little game. With the release of Android Nougat (7.0.0), the Easter Egg ended up resembling some kind of &lt;a href=&quot;https://en.wikipedia.org/wiki/Neko_Atsume&quot;&gt;Neko Atsume&lt;/a&gt; themed game.&lt;/p&gt;
 
 &lt;p&gt;The concept is quite simple. Once on Android 7.X.X, after &lt;a href=&quot;http://www.howtogeek.com/269207/how-to-enable-android-nougats-cat-collecting-easter-egg/&quot;&gt;adding the Easter Egg&lt;/a&gt;, the player pulls down their notification menu and selects a piece of food to place out. Certain pieces of food net the player a better chance at catching a cat, but these pieces of food respectively take longer before a cat will eat it. After a cat eats the piece of food, the player will be given a chance of catching it depending on what piece of food was placed out. If they succeed the random check, the player will receive a notification and the cat will appear in their inventory. If they fail, the cat will get away with the food and the player will only find an empty bowl with no notification.&lt;/p&gt;
 
@@ -568,158 +864,4 @@ I stripped away the outer cable shielding being careful not to take too much awa
 
 &lt;p&gt;Here is my final product; A USB cable (A-&amp;gt;B) with an in-line power switch near the end. Whenever I feel the need to dim the blue light from the microphone, or turn off its features, it’s only a flip of a switch away. I made this approximately one year ago and it has held up without any problems. A smaller switch may have been a better idea, but I was looking to use pieces that I could easily find. Here is a picture of it set up with my microphone.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/banner2.jpg&quot; alt=&quot;final results of the in-line USB power switch&quot; /&gt;&lt;em&gt;final results of the in-line USB power switch&lt;/em&gt;&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">I had a USB microphone that was plugged into my computer; it was on at all times. If I was watching a movie, the blue glow from beneath the microphone mesh would illuminate my desk.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22default%22=%3E%7B%22path%22=%3E%22/assets/img/2016/03/banner2.jpg%22,%20%22alt%22=%3E%22Inline%20power%20switch%20on%20a%20USB%20cable%22,%20%22height%22=%3E603,%20%22width%22=%3E800%7D%7D" /></entry><entry><title type="html">Microsoft Word Auto-Journal Macro for the Lazy</title><link href="https://www.kyleniewiada.org/blog/2016/03/word-auto-journal-macro-for-lazy/" rel="alternate" type="text/html" title="Microsoft Word Auto-Journal Macro for the Lazy" /><published>2016-03-14T16:19:00-04:00</published><updated>2017-02-16T14:52:47-05:00</updated><id>https://www.kyleniewiada.org/blog/2016/03/word-auto-journal-macro-for-lazy</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/03/word-auto-journal-macro-for-lazy/">&lt;p&gt;A few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.&lt;/p&gt;
-
-&lt;p&gt;As is the motivation for many projects/scripts of mine, I wanted to automate the process as much as possible such that I never had to think about it again [anytime soon]. This was shortly after I had &lt;a href=&quot;/blog/2015/12/making-a-book-from-facebook-messages/&quot;&gt;concluded work on a previous project&lt;/a&gt; that involved using Microsoft Word with macro scripts. I was ready to learn more about its advanced features. I wanted an automatic running total because I would often forget to recalculate my grand total after each entry. There were probably other solutions that were better suited for this, but I really wanted to see how useful Microsoft Word macros (I know the evil stigma associated with macros) could be to me.&lt;/p&gt;
-
-&lt;h4 id=&quot;goals&quot;&gt;Goals:&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Automatically insert a new blank entry for today with the cursor ready to write a description&lt;/li&gt;
-  &lt;li&gt;The ability to total hours for all entries without the user remembering&lt;/li&gt;
-  &lt;li&gt;Automatically update total hours at top of document&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;results&quot;&gt;Results:&lt;/h4&gt;
-
-&lt;p&gt;I created a Microsoft Word macro enabled document that when opened will:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Automatically remove empty paragraphs that Microsoft Word &lt;em&gt;loves&lt;/em&gt; to place at the end of your document&lt;/li&gt;
-  &lt;li&gt;Add skeleton text containing today’s date, start, end, and total time&lt;/li&gt;
-  &lt;li&gt;Add a paragraph labeled “Description:”&lt;/li&gt;
-  &lt;li&gt;Calculate total hours on exit without user needing to remember&lt;/li&gt;
-  &lt;li&gt;Automatically add skeleton entry on document open&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;what-it-does&quot;&gt;What it does&lt;/h3&gt;
-
-&lt;p&gt;I have provided an example document below. It includes a text-button to add the total number of hours for each entry and another text-button to add new journal entries.&lt;/p&gt;
-
-&lt;p&gt;The macro calculates the total number of hours entered by searching for the ‘Total [*]’ string. When it matches, it will add the number found between ‘[]’ to a running total until the entire document has been searched. It will then return the total. The example document shows this total at the top. It is not foolproof. It can be easily defeated if someone decides to include the ‘Total [*]’ string inside their journal entry, or if one wants to overflow the numbers. But it works for me without any major issues (including the null value case), and that is what mattered.&lt;/p&gt;
-
-&lt;p&gt;The macro adds a new journal entry to the end of the text by searching for the end of the document, removing any extra paragraphs at the end of the document, and then adding in the pre-scripted skeleton structure for a new journal entry with the date of today. During planning, I could have gone above and beyond and calculated the total hours between the start time and end time of a task/added it to the ‘Total []’ field, but I decided to draw the line there. The amount of work I was putting in for something that would take no time to accomplish would not be paying off.&lt;/p&gt;
-
-&lt;p&gt;When the document is closed, the macro will run and add up the total number of hours from the listed entries automatically. A save dialog will then pop up and the user may choose to save or discard changes.&lt;/p&gt;
-
-&lt;h3 id=&quot;source-code-and-example-document&quot;&gt;Source code and example document&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/files/2016/03/JournalExample.docm&quot;&gt;Microsoft Word Auto-Journal example document&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Above is a link to the macro enabled Microsoft Word document example. Below is the source code for the macro. Most of it is pieced together from other examples online accomplishing similar tasks. I spent most of my time looking at different resources for visual basic techniques and have mentioned those sources in nearby comments for pieces of code where available.&lt;/p&gt;
-
-&lt;div class=&quot;language-vb highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AutoOpen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;Call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autoText&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;'Generate form fill text for document on call&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;autoText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;'remove the empty paragraph that word likes to add to the end of the document on open.&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;removeEmptyPara&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EndKey&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wdStory&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TypeParagraph&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InsertDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTimeFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MMMM dd, yyyy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;InsertAsField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TypeText&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbTab&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Start [] End [] Total []&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EndKey&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wdStory&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TypeParagraph&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TypeText&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Description: &quot;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;'Removes empty paragraphs located at the end of the document&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;removeEmptyPara&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;'http://www.extendoffice.com/documents/word/647-word-remove-empty-paragraphs.html&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClearFormattin&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Replacement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClearFormatting&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;With&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Find&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;^p^p&quot;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Replacement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Forward&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;True&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Wrap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wdFindContinue&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchCase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchWholeWord&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchByte&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchAllWordForms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchSoundsLike&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchWildcards&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MatchFuzzy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;With&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Execute&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wdReplaceAll&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AutoClose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;Call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findTotal&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;findTotal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;'based on http://stackoverflow.com/questions/6425595/word-vba-how-to-select-text-between-two-substrings-and-assign-to-variable&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;firstTerm&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;secondTerm&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myRange&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;documentText&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'Stores the starting position of firstTerm&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;stopPos&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'Stores the starting position of secondTerm based on first term's location&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nextPosition&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'The next position to search for the firstTerm&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;nextPosition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Total [&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;secondTerm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;]&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;'Get all the document text and store it in a variable.&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActiveDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;'Maximum limit of a string is 2 billion characters.&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;'So, hopefully your document is not bigger than that.  However, expect declining performance based on how big doucment is&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;'Loop documentText till you can't find any more matching &quot;terms&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Do&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nextPosition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nextPosition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbTextCompare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;stopPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbTextCompare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;'prevents empty brackets from crashing macro&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;'Debug.Print Mid$(documentText, startPos + Len(firstTerm), stopPos - startPos - Len(firstTerm))&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mid&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;startPos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;nextPosition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stopPos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;documentText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbTextCompare&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Loop&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;Debug&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Total = &quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ActiveDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;total&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Delete&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ActiveDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;total&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;'MsgBox &quot;I'm done&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UpdateAll&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UpdateAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;'Based on unknown source.&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;oStory&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;For&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Each&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActiveDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StoryRanges&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fields&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Update&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StoryType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wdMainTextStory&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;While&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Not&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NextStoryRange&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;Is&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Nothing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NextStoryRange&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Fields&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Update&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;Wend&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Next&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oStory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Nothing&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Sub&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">A few months back I was given the requirement for a project to keep some kind of journal logging the number of hours I spent on a task along with a short description. Because the project was deeply integrated with Microsoft products and services, I decided that it would be best to write such a journal with Microsoft Word.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22default%22=%3E%7B%22path%22=%3E%22/assets/img/2016/03/banner.png%22,%20%22alt%22=%3E%22Microsoft%20Word%20output%20for%20auto%20journal%20macro%22,%20%22height%22=%3E505,%20%22width%22=%3E964%7D%7D" /></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/img/2016/03/banner2.jpg&quot; alt=&quot;final results of the in-line USB power switch&quot; /&gt;&lt;em&gt;final results of the in-line USB power switch&lt;/em&gt;&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="small project" /><summary type="html">I had a USB microphone that was plugged into my computer; it was on at all times. If I was watching a movie, the blue glow from beneath the microphone mesh would illuminate my desk.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/%7B%22default%22=%3E%7B%22path%22=%3E%22/assets/img/2016/03/banner2.jpg%22,%20%22alt%22=%3E%22Inline%20power%20switch%20on%20a%20USB%20cable%22,%20%22height%22=%3E603,%20%22width%22=%3E800%7D%7D" /></entry></feed>
