@@ -19,7 +19,7 @@ Next, my website felt a little bulky. The CSS was over-the-top, I didn't need a 
 
 The last major change that I wanted to implement was **AMP** ([accelerated mobile pages](https://www.ampproject.org/)) to make is easier for mobile devices hitting my blog. This led down a rabbit hole of further changes.
 
-Link to the [website source code](https://github.com/aav7fl/aav7fl.github.io/tree/2ff155a26e3c91837f35e794433fce7f3f020a30) right before this blog post was released.
+> Link to the [website source code](https://github.com/aav7fl/aav7fl.github.io/tree/2ff155a26e3c91837f35e794433fce7f3f020a30) right before this blog post was released.
 
 {% include toc.html %}
 
