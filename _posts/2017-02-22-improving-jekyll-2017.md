@@ -115,7 +115,7 @@ If my AMP Page canonical URL contained `/amp` like so: `href="https://www.kyleni
 
 There's always a chance that this could mess up. I'm positive I could break this if I put `/amp` somewhere in my title, but I decided that in my personal case, the pros far outweigh the cons.
 
-Here's now I do it. Whenever I grab the SEO tag, I make sure to run in through my "parser" first to fix it.
+Here's how I do it. Whenever I grab the SEO tag, I make sure to run in through my "parser" first to fix it.
 
 `_includes/amp-check.html`
 {% raw %}
