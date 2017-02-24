@@ -43,7 +43,7 @@ Here is how I did it.
 - Dump contents of active RAM (with my glorious Pentium III)
 - <s>Recalculate save checksum</s>
 - <s>Graft a new save file from dumped data with a hex editor</s>
-- Although this blog post follows the above, an **[easier method](https://bkacjios.github.io/OOT-Save-Converter/)** for converting the RAM dumps has been created by Bkacjios)
+- Although this blog post follows the above, an **[easier method](https://bkacjios.github.io/OOT-Save-Converter/)** for converting the RAM dumps has been created by Bkacjios
 - Load in Project64 and play
 
 ![the N64 transfer setup](/assets/img/2015/04/DSC09658.JPG)*The N64 transfer setup*
