@@ -81,7 +81,7 @@
 "height": 814,
 "width": 1000},
 "datePublished": "2015-12-17T18:00:00-05:00",
-"dateModified": "2017-02-19T15:26:46-05:00",
+"dateModified": "2017-02-24T15:45:09-05:00",
 "description": "How I made a hardcover book for someone by downloading my Facebook message archive reversing the order of each 20,000 message segment for readability",
 "publisher": {"@type": "Organization",
 "name": "Kyle Niewiada",
@@ -168,7 +168,7 @@
 
 <h2 id="fixing-facebook-messages">Fixing Facebook Messages</h2>
 
-<p>After finding a service that would print my hardcover book, I had to figure out how I was going to get my archived messages “print ready”. I recalled Facebook had a feature that <a href="https://www.facebook.com/help/212802592074644">allows you to download your entire archive</a>. I jumped through the hoops to download my data and was presented a small zip file. This file contained a slimmed-down web-ready version of my Facebook data. Lucky for me, this included a single HTM file that had all undeleted Facebook messages. The structure of the file placed messages inside thread structures. Unlucky for me, these messages inside of each thread were in descending order with the newest messages on top. If I placed the messages in the book like this, it would feel as if the reader was traveling backwards through the story. Making matters worse, each thread was limited to 20,000 messages. After 20,000 messages were written, a new thread was created. The old filled-up threads were then buried by newer threads of conversations above it.</p>
+<p>After finding a service that would print my hardcover book, I had to figure out how I was going to get my archived messages “print ready”. I recalled Facebook had a feature that <a href="https://www.facebook.com/help/131112897028467">allows you to download your entire archive</a>. I jumped through the hoops to download my data and was presented a small zip file. This file contained a slimmed-down web-ready version of my Facebook data. Lucky for me, this included a single HTM file that had all undeleted Facebook messages. The structure of the file placed messages inside thread structures. Unlucky for me, these messages inside of each thread were in descending order with the newest messages on top. If I placed the messages in the book like this, it would feel as if the reader was traveling backwards through the story. Making matters worse, each thread was limited to 20,000 messages. After 20,000 messages were written, a new thread was created. The old filled-up threads were then buried by newer threads of conversations above it.</p>
 
 <p>With some help from a friend, we created a Python script that parsed through the original messages.htm file and reversed the order of all messages in each given thread. It would then output all of those messages reversed in a simpler HTML file that allowed for easy copy/pasting. I’ve uploaded this project script to GitHub and it can be found here:</p>
 
