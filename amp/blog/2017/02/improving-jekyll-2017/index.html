@@ -14,7 +14,7 @@
 "height": 400,
 "width": 700},
 "datePublished": "2017-02-22T05:34:00-05:00",
-"dateModified": "2017-02-23T08:52:04-05:00",
+"dateModified": "2017-02-26T23:39:37-05:00",
 "description": "My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more.",
 "publisher": {"@type": "Organization",
 "name": "Kyle Niewiada",
@@ -219,7 +219,16 @@
 
 <p>This was solved by cheating. I call it cheating because it’s not a robust solution. If I happen to include the <code class="highlighter-rouge">site.ampdir</code> anywhere in my SEO tags on an AMP page, that text will be removed.</p>
 
-<p>If my AMP Page canonical URL contained <code class="highlighter-rouge">/amp</code> like so: <code class="highlighter-rouge">href="https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/"</code>, it would now be altered to <code class="highlighter-rouge">href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"</code>.</p>
+<p>If my AMP Page canonical URL contained <code class="highlighter-rouge">/amp</code> like so:</p>
+<div class="language-html highlighter-rouge">
+<pre class="highlight"><code>href="https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/"
+</code></pre>
+</div>
+<p>It would now be altered to:</p>
+<div class="language-html highlighter-rouge">
+<pre class="highlight"><code>href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"
+</code></pre>
+</div>
 
 <p>There’s always a chance that this could mess up. I’m positive I could break this if I put <code class="highlighter-rouge">/amp</code> somewhere in my title, but I decided that in my personal case, the pros far outweigh the cons.</p>
 
