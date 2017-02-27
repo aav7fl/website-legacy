@@ -3,7 +3,7 @@
 
 
 
-  <meta charset="utf-8"><title>Improving Jekyll in 2017</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#3d256d"><!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#3d256d"><!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. --><!-- Extract extra <title> tag. --><!-- Assumes AmpDir is never in JSON-LD --><!-- Begin Jekyll SEO tag v2.1.0 --><meta name="description" content="My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more."><meta property="og:description" content="My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more."><link rel="canonical" href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"><meta property="og:url" content="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"><meta property="og:site_name" content="Kyle Niewiada’s Website"><meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2017/02/banner.png"><meta property="og:image:height" content="400"><meta property="og:image:width" content="700"><meta property="og:type" content="article"><meta property="article:published_time" content="2017-02-22T05:34:00-05:00"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CrypticCitrus"><meta name="twitter:creator" content="@CrypticCitrus"><meta property="fb:app_id" content="137961485759"><script type="application/ld+json">
+  <meta charset="utf-8"><title>Improving Jekyll in 2017</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#3d256d"><!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#3d256d"><!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. --><!-- Extract extra <title> tag. --><!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it --><!-- Begin Jekyll SEO tag v2.1.0 --><meta name="description" content="My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more."><meta property="og:description" content="My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more."><link rel="canonical" href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"><meta property="og:url" content="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"><meta property="og:site_name" content="Kyle Niewiada’s Website"><meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2017/02/banner.png"><meta property="og:image:height" content="400"><meta property="og:image:width" content="700"><meta property="og:type" content="article"><meta property="article:published_time" content="2017-02-22T05:34:00-05:00"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CrypticCitrus"><meta name="twitter:creator" content="@CrypticCitrus"><meta property="fb:app_id" content="137961485759"><script type="application/ld+json">
 {"@context": "http://schema.org",
 "@type": "BlogPosting",
 "headline": "Improving Jekyll in 2017",
@@ -14,7 +14,7 @@
 "height": 400,
 "width": 700},
 "datePublished": "2017-02-22T05:34:00-05:00",
-"dateModified": "2017-02-26T23:39:37-05:00",
+"dateModified": "2017-02-27T13:18:25-05:00",
 "description": "My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more.",
 "publisher": {"@type": "Organization",
 "name": "Kyle Niewiada",
@@ -87,7 +87,7 @@
 <p>The last major change that I wanted to implement was <strong>AMP</strong> (<a href="https://www.ampproject.org/">accelerated mobile pages</a>) to make is easier for mobile devices hitting my blog. This led down a rabbit hole of further changes.</p>
 
 <blockquote>
-  <p>Link to the <a href="https://github.com/aav7fl/aav7fl.github.io/tree/2ff155a26e3c91837f35e794433fce7f3f020a30">website source code</a> right before this blog post was released.</p>
+  <p>Link to the <a href="https://github.com/aav7fl/aav7fl.github.io/tree/2ff155a26e3c91837f35e794433fce7f3f020a30">website source code</a> right before this blog post was released; but it may be helpful to check out later revisions of code to see how things have changed.</p>
 </blockquote>
 
 <div class="line-separator"></div>
@@ -217,7 +217,9 @@
 
 <p>Next, my AMP pages had conflicts with  <a href="https://github.com/jekyll/jekyll-seo-tag">Jekyll-SEO-Tag</a>. Every AMP page would list its canonical URL as itself, when in reality it should be linking to the normal version of the webpage.</p>
 
-<p>This was solved by cheating. I call it cheating because it’s not a robust solution. If I happen to include the <code class="highlighter-rouge">site.ampdir</code> anywhere in my SEO tags on an AMP page, that text will be removed.</p>
+<p><del>This was solved by cheating. I call it cheating because it’s not a robust solution. If I happen to include the <code class="highlighter-rouge">site.ampdir</code> anywhere in my SEO tags on an AMP page, that text will be removed.</del></p>
+
+<p>The new method of changing the canonical url on AMP pages is accomplished by removing the first instance of <code class="highlighter-rouge">site.ampdir</code> in my <code class="highlighter-rouge">page.url</code> on pages whose layout is of type <code class="highlighter-rouge">amp</code>. I then rebuild the canonical url in the same format as Jekyll SEO Tag and update the JSON-LD with a small replace filter.</p>
 
 <p>If my AMP Page canonical URL contained <code class="highlighter-rouge">/amp</code> like so:</p>
 <div class="language-html highlighter-rouge">
@@ -230,9 +232,7 @@
 </code></pre>
 </div>
 
-<p>There’s always a chance that this could mess up. I’m positive I could break this if I put <code class="highlighter-rouge">/amp</code> somewhere in my title, but I decided that in my personal case, the pros far outweigh the cons.</p>
-
-<p>Here’s how I do it. Whenever I grab the SEO tag, I make sure to run in through my “parser” first to fix it.</p>
+<p>Whenever I grab the SEO tag, I make sure to run in through my “parser” first to fix it. Here’s how I do it.</p>
 
 <p><code class="highlighter-rouge">_includes/amp-check.html</code></p>
 
@@ -240,12 +240,10 @@
 <pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="na">seo_text</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">seo</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
 
 <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">src</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"SEO"</span><span class="w"> </span><span class="p">%}</span>
-  <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">layout</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'amp'</span><span class="w"> </span><span class="p">%}</span>
-    &lt;!-- Assumes AmpDir is never in JSON-LD --&gt;
-    <span class="p">{{</span><span class="w"> </span><span class="nv">seo_text</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span>site.ampdir<span class="w"> </span><span class="p">}}</span>
-  <span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
-    <span class="p">{{</span><span class="w"> </span><span class="nv">seo_text</span><span class="w"> </span><span class="p">}}</span>
-  <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+  &lt;!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it --&gt;
+  <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">canonical_amp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">absolute_url</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">canonical_amp_removed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove_first</span><span class="p">:</span><span class="w"> </span>site.ampdir<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">absolute_url</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{{</span><span class="w"> </span><span class="nv">seo_text</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span>canonical_amp<span class="p">,</span><span class="w"> </span>canonical_amp_removed<span class="w"> </span><span class="p">}}</span>
 <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
 </code></pre>
 </div>
