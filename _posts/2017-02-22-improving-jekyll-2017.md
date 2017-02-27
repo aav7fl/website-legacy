@@ -19,7 +19,7 @@ Next, my website felt a little bulky. The CSS was over-the-top, I didn't need a 
 
 The last major change that I wanted to implement was **AMP** ([accelerated mobile pages](https://www.ampproject.org/)) to make is easier for mobile devices hitting my blog. This led down a rabbit hole of further changes.
 
-> Link to the [website source code](https://github.com/aav7fl/aav7fl.github.io/tree/2ff155a26e3c91837f35e794433fce7f3f020a30) right before this blog post was released.
+> Link to the [website source code](https://github.com/aav7fl/aav7fl.github.io/tree/2ff155a26e3c91837f35e794433fce7f3f020a30) right before this blog post was released; but it may be helpful to check out later revisions of code to see how things have changed.
 
 {% include toc.html %}
 
@@ -109,9 +109,11 @@ Easy enough.
 
 Next, my AMP pages had conflicts with  [Jekyll-SEO-Tag](https://github.com/jekyll/jekyll-seo-tag). Every AMP page would list its canonical URL as itself, when in reality it should be linking to the normal version of the webpage.
 
-This was solved by cheating. I call it cheating because it's not a robust solution. If I happen to include the `site.ampdir` anywhere in my SEO tags on an AMP page, that text will be removed.
+~~This was solved by cheating. I call it cheating because it's not a robust solution. If I happen to include the `site.ampdir` anywhere in my SEO tags on an AMP page, that text will be removed.~~
 
-If my AMP Page canonical URL contained `/amp` like so: 
+The new method of changing the canonical url on AMP pages is accomplished by removing the first instance of `site.ampdir` in my `page.url` on pages whose layout is of type `amp`. I then rebuild the canonical url in the same format as Jekyll SEO Tag and update the JSON-LD with a small replace filter.
+
+If my AMP Page canonical URL contained `/amp` like so:
 ```html
 href="https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/"
 ```
@@ -120,9 +122,7 @@ It would now be altered to:
 href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"
 ```
 
-There's always a chance that this could mess up. I'm positive I could break this if I put `/amp` somewhere in my title, but I decided that in my personal case, the pros far outweigh the cons.
-
-Here's how I do it. Whenever I grab the SEO tag, I make sure to run in through my "parser" first to fix it.
+Whenever I grab the SEO tag, I make sure to run in through my "parser" first to fix it. Here's how I do it.
 
 `_includes/amp-check.html`
 {% raw %}
@@ -130,12 +130,10 @@ Here's how I do it. Whenever I grab the SEO tag, I make sure to run in through m
 {% capture seo_text %}{% seo %}{% endcapture %}
 
 {% if include.src == "SEO" %}
-  {% if page.layout == 'amp' %}
-    <!-- Assumes AmpDir is never in JSON-LD -->
-    {{ seo_text | remove: site.ampdir }}
-  {% else %}
-    {{ seo_text }}
-  {% endif %}
+  <!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it -->
+  {% assign canonical_amp = page.url | absolute_url %}
+  {% assign canonical_amp_removed = page.url | remove_first: site.ampdir | absolute_url %}
+  {{ seo_text | replace: canonical_amp, canonical_amp_removed }}
 {% endif %}
 ```
 {% endraw %}
