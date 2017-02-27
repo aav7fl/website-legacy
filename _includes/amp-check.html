@@ -14,8 +14,11 @@
   {% assign seo_text = seo_text | remove: extract %}
 
   {% if page.layout == 'amp' %}
-    <!-- Assumes AmpDir is never in JSON-LD -->
-    {{ seo_text | remove: site.ampdir }}
+    <!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it -->
+    {% assign canonical_amp = page.url | absolute_url %}
+    {% assign canonical_amp_removed = page.url | remove_first: site.ampdir | absolute_url %}
+
+    {{ seo_text | replace: canonical_amp, canonical_amp_removed }}
   {% else %}
     {{ seo_text }}
   {% endif %}
