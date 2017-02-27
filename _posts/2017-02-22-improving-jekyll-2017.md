@@ -111,7 +111,14 @@ Next, my AMP pages had conflicts with  [Jekyll-SEO-Tag](https://github.com/jekyl
 
 This was solved by cheating. I call it cheating because it's not a robust solution. If I happen to include the `site.ampdir` anywhere in my SEO tags on an AMP page, that text will be removed.
 
-If my AMP Page canonical URL contained `/amp` like so: `href="https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/"`, it would now be altered to `href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"`.
+If my AMP Page canonical URL contained `/amp` like so: 
+```html
+href="https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/"
+```
+It would now be altered to:
+```html
+href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"
+```
 
 There's always a chance that this could mess up. I'm positive I could break this if I put `/amp` somewhere in my title, but I decided that in my personal case, the pros far outweigh the cons.
 
