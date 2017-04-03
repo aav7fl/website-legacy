@@ -55,7 +55,7 @@ To start a career writing meaningful frontend or backend software
 
 - 1 on 1 tutoring in preparation for the AP Computer Science Exam
 
-### Intern at Blue Medora, LLC
+### Software Developer Intern at Blue Medora, LLC
 
 <div class="date">Summer 2013; Summer 2014</div>
 
