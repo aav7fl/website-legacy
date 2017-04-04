@@ -3,11 +3,10 @@ title: Creating a Hardcover Book from a Plethora of Facebook Messages
 date: "2015-12-17 18:00"
 comments: true
 image:
-  default:  
-    path: /assets/img/2015/12/banner.jpg
-    alt: Custom hardcover book composed of facebook chat messages
-    height: 814
-    width: 1000
+  path: /assets/img/2015/12/banner.jpg
+  alt: Custom hardcover book composed of facebook chat messages
+  height: 814
+  width: 1000
 published: true
 tag: "large project"
 description: "How I made a hardcover book for someone by downloading my Facebook message archive reversing the order of each 20,000 message segment for readability"

@@ -3,11 +3,10 @@ title: iOS Video Player Bug Disclosure
 date: '2016-03-20 18:05'
 comments: true
 image:
-  default:  
-    path: /assets/img/2016/03/iPadTesting.jpg
-    alt: Testing iPad Air 2 colors with i1Display Pro colorimeter
-    height: 521
-    width: 800
+  path: /assets/img/2016/03/iPadTesting.jpg
+  alt: Testing iPad Air 2 colors with i1Display Pro colorimeter
+  height: 521
+  width: 800
 published: true
 tag: "large project"
 description: "A public disclosure that I discovered of an iOS video playback bug that decreases red and becomes washed out when user interface elements are hidden"

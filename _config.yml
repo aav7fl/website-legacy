@@ -91,11 +91,10 @@ defaults:
       path: ""
     values:
       image:
-        default:
-          path: /assets/img/default-card.png
-          alt: Default-card
-          height: 400
-          width: 700
+        path: /assets/img/default-card.png
+        alt: Default-card
+        height: 400
+        width: 700
   - scope:
       path: _posts
     values: *post_val

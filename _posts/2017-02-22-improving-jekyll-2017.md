@@ -3,11 +3,10 @@ title: "Improving Jekyll in 2017"
 date: "2017-02-22 5:34"
 comments: true
 image:
-  default:  
-    path: /assets/img/2017/02/banner.png
-    alt: Travis-CI build log for my Jekyll site
-    height: 400
-    width: 700
+  path: /assets/img/2017/02/banner.png
+  alt: Travis-CI build log for my Jekyll site
+  height: 400
+  width: 700
 published: true
 tag: "large project"
 description: "My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more."
