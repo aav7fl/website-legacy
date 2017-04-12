@@ -4,9 +4,9 @@ date: "2017-01-04 5:37"
 comments: true
 image:
   path: /assets/img/2017/01/banner.jpg
-  alt: Android Nougat Easter Egg App
   height: 400
   width: 700
+alt: Android Nougat Easter Egg App
 published: true
 tag: "small project"
 description: "How to back up and restore your cats from the Google Android Nougat Neko Easter Egg without root using ADB."

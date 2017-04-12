@@ -4,9 +4,9 @@ date: "2015-04-11 16:41"
 comments: true
 image:
   path: /assets/img/2015/04/DSC09669.JPG
-  alt: 'N64 interfacing with The Legend of Zelda: Ocarina of Time to dump active memory'
   height: 665
   width: 1000
+alt: 'N64 interfacing with The Legend of Zelda: Ocarina of Time to dump active memory'
 published: true
 tag: "large project"
 description: "How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file"

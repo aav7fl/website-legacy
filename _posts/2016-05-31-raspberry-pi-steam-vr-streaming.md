@@ -4,9 +4,9 @@ date: "2016-05-31 16:44"
 comments: true
 image:
   path: /assets/img/2016/05/banner2.jpg
-  alt: Raspberry Pi streaming setup behind monitor
   height: 455
   width: 800
+alt: Raspberry Pi streaming setup behind monitor
 published: true
 tag: "medium project"
 description: "How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR."

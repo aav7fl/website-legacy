@@ -92,9 +92,9 @@ defaults:
     values:
       image:
         path: /assets/img/default-card.png
-        alt: Default-card
         height: 400
         width: 700
+      alt: Default-card
   - scope:
       path: _posts
     values: *post_val

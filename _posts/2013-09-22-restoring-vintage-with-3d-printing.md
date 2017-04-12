@@ -4,9 +4,9 @@ date:   2013-09-22
 comments: true
 image:
   path: /assets/img/2013/09/small/DSC09139.JPG
-  alt: Marantz 2220B taken apart for upgrading parts
   height: 532
   width: 800
+alt: Marantz 2220B taken apart for upgrading parts
 tag: "large project"
 description: "Restoring my 1974 Marantz 2220B lamp housing with 3D printing. The old lamp house was brittle and broke from the incandescent bulb heat. I now use LEDs."
 redirect_from: "/blog/restoring-vintage-with-3d-printing/"

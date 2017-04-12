@@ -4,9 +4,9 @@ date: "2016-03-14 16:19"
 comments: true
 image:
   path: /assets/img/2016/03/banner.png
-  alt: Microsoft Word output for auto journal macro
   height: 505
   width: 964
+alt: Microsoft Word output for auto journal macro
 published: true
 tag: "small project"
 description: "I created a Microsoft Word macro that automatically generated a skeleton entry for today and added up the total hours documented thus far"
