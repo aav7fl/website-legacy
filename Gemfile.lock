@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/aav7fl/jekyll-seo-tag.git
-  revision: aa0b47bb8d9cf673e9e7ae7e272644b9421899df
+  revision: be9bdf7a9529eea83fb0d21def15b40a31765c61
+  branch: failing_tests
   specs:
     jekyll-seo-tag (2.2.0)
       jekyll (~> 3.3)
