@@ -1,7 +1,10 @@
 require 'English'
 require 'html-proofer'
+require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 require 'jekyll'
+require 'uri'
+require 'net/http'
 
 task default: [:test]
 
@@ -72,6 +75,14 @@ task :amp do
     puts 'AMP Validator FAILED.'.red.bold
     exit($CHILD_STATUS.exitstatus)
   end
+end
+
+desc 'Test JSON-LD'
+task :json do
+  RSpec::Core::RakeTask.new(:spec) do |t|
+    t.pattern = 'spec/*_spec.rb'
+  end
+  Rake::Task["spec"].execute
 end
 
 desc 'Run RuboCop'

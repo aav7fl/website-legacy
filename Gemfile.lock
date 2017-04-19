@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/aav7fl/jekyll-seo-tag.git
-  revision: be9bdf7a9529eea83fb0d21def15b40a31765c61
-  branch: failing_tests
-  specs:
-    jekyll-seo-tag (2.2.0)
-      jekyll (~> 3.3)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -24,6 +16,7 @@ GEM
     colorator (1.1.0)
     colored (1.2)
     concurrent-ruby (1.0.5)
+    diff-lcs (1.3)
     ethon (0.10.1)
       ffi (>= 1.3.0)
     faraday (0.12.0.1)
@@ -64,7 +57,9 @@ GEM
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
-    jekyll-sitemap (1.0.0)
+    jekyll-seo-tag (2.2.0)
+      jekyll (~> 3.3)
+    jekyll-sitemap (1.1.1)
       jekyll (~> 3.3)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
@@ -79,7 +74,7 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
-    octokit (4.6.2)
+    octokit (4.7.0)
       sawyer (~> 0.8.0, >= 0.5.3)
     parallel (1.11.1)
     parser (2.4.0.0)
@@ -95,6 +90,19 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     rouge (1.11.1)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
     rubocop (0.48.1)
       parser (>= 2.3.3.1, < 3.0)
       powerpack (~> 0.1)
@@ -112,7 +120,7 @@ GEM
       ethon (>= 0.8.0)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    unicode-display_width (1.1.3)
+    unicode-display_width (1.2.1)
     yell (2.0.7)
 
 PLATFORMS
@@ -128,11 +136,12 @@ DEPENDENCIES
   jekyll-last-modified-at
   jekyll-paginate
   jekyll-redirect-from
-  jekyll-seo-tag!
+  jekyll-seo-tag
   jekyll-sitemap
   nokogiri
   rake
+  rspec
   rubocop
 
 BUNDLED WITH
-   1.14.4
+   1.14.6
