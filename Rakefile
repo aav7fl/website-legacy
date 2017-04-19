@@ -77,10 +77,12 @@ end
 
 desc 'Test JSON-LD'
 task :json do
+  puts 'Testing JSON-LD against Google Structured Data Testing
+   Tool...'.yellow.bold
   RSpec::Core::RakeTask.new(:spec) do |t|
     t.pattern = 'spec/*_spec.rb'
   end
-  Rake::Task["spec"].execute
+  Rake::Task['spec'].execute
 end
 
 desc 'Run RuboCop'
@@ -91,8 +93,9 @@ end
 
 desc 'Run all tests'
 task :test do
-  Rake::Task['rubocop'].invoke
   Rake::Task['build'].invoke
+  Rake::Task['json'].invoke
+  Rake::Task['rubocop'].invoke
   Rake::Task['html_proofer'].invoke
   Rake::Task['amp'].invoke
 end
