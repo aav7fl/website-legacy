@@ -3,8 +3,6 @@ require 'html-proofer'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 require 'jekyll'
-require 'uri'
-require 'net/http'
 
 task default: [:test]
 
