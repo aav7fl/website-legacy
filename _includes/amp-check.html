@@ -5,7 +5,7 @@
   <!-- Extract extra <title> tag. -->
   {% assign open_tag = "<title>" %}
   {% assign close_tag = "</title>" %}
-  {% assign extract = seo_text | split: open_tag | last | split: close_tag | first % | prepend: open_tag | append: close_tag %}
+  {% assign extract = seo_text | split: open_tag | last | split: close_tag | first | prepend: open_tag | append: close_tag %}
   {% assign seo_text = seo_text | remove: extract %}
 
   {% assign open_tag = '<meta property="og:title"' %}

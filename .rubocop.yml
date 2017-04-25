@@ -1,3 +1,22 @@
+Metrics/LineLength:
+  Exclude:
+    - spec/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Style/Documentation:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
+
+Style/IndentHeredoc:
+  Exclude:
+    - spec/**/*
+
 AllCops:
   Exclude:
     - vendor/**/* # Ignore Travis-CI build directory
+    - node_modules/**/* # Ignore node modules directory

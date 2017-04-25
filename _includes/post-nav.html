@@ -4,7 +4,7 @@
     <a class="post-nav-link" href="{{ page.previous.url | prepend: site.baseurl }}">
     <div class="link-text previous">&laquo;&nbsp;{{ page.previous.title }}</div>
     {% if page.previous.image %}
-      <img class="link-image" src="{{ page.previous.image.default.path | prepend: site.baseurl }}" alt="Previous Article">
+      <img class="link-image" src="{{ page.previous.image.path | prepend: site.baseurl }}" alt="Previous Article">
     {% endif %}
     </a>
   {% endif %}
@@ -12,7 +12,7 @@
     <a class="post-nav-link" href="{{ page.next.url | prepend: site.baseurl }}">
     <div class="link-text next">{{ page.next.title }}&nbsp;&raquo;</div>
     {% if page.next.image %}
-      <img class="link-image" src="{{ page.next.image.default.path | prepend: site.baseurl }}" alt="Next Article">
+      <img class="link-image" src="{{ page.next.image.path | prepend: site.baseurl }}" alt="Next Article">
     {% endif %}
     </a>
   {% endif %}
