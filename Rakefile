@@ -57,7 +57,8 @@ task :html_proofer do
     internal_domains: ['www.kyleniewiada.org'],
     url_ignore:
     [
-      %r{.*discussions.apple.com/.*} # Apple blocking Travis CI/typhoeus
+      %r{.*discussions.apple.com/.*}, # Apple blocking Travis CI/typhoeus
+      %r{.*/#comment-.*} # Internal Disqus comments
     ]
   ).run
 end

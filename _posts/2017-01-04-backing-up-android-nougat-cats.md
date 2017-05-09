@@ -46,3 +46,5 @@ adb restore C:\CatsBackup_20170104.ab
 I had a few issues at first where it wouldn't restore properly. But after the data was erased for the Easter Egg, I was able to successfully restore one of my backups. That could just be my luck, and others might succeed restoring it over their current cat collection on the first try. But if you're looking to back up your cat collection, this looks like the way to go. You should be able to restore this on any phone (Not sure how it will handle it on a newer version of Android though).
 
 ![Dark red cat from Android Nougat Easter Egg](/assets/img/2017/01/velvetcat.png)*Velvet--for obvious reasons*
+
+> Update May 9, 2017: WolfLeader116 wrote a really nice batch script to simplify the process of backing up/restoring and posted it on Pastebin ([https://pastebin.com/59LnfS7M](https://pastebin.com/59LnfS7M)). Check out their [explanation in the comments](/blog/2017/01/backing-up-android-nougat-cats/#comment-3295881956) below.
