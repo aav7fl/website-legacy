@@ -99,7 +99,7 @@ Here are the best (abeit far-fetched) theories that I can come up with as to why
 ### Theories
 - It *really* is a hardware bug that Apple can't fix without sacrificing power saving features baked into the operating system.
 - Maybe it's possible that iOS is detecting low color on the screen and is assuming that the content is nonmedia (i.e. books/text). It is reducing color gamut to somehow save power with the GPU (if that's even possible) or something similar.
-- Perhaps the shift in the red channel has something to do with early preparations for the upcoming [Night Shift](https://support.apple.com/en-us/HT202613) feature.
+- Perhaps the shift in the red channel has something to do with early preparations for the upcoming [Night Shift](https://support.apple.com/en-us/HT207570) feature.
 - It's a software bug that they are unable to fix without changing too much of iOS.
 - Maybe a recent change in iOS video players is a contributing factor
 
