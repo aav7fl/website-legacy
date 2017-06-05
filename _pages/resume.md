@@ -15,12 +15,6 @@ permalink: /resume/
 <a href="mailto:{{ page.email }}">{{ page.email }}</a>
 </header>
 
-## Objective
-
-To start a career writing meaningful frontend or backend software
-
----
-
 ## Education
 
 ### BS, Computer Science; Grand Valley State University
@@ -33,9 +27,13 @@ To start a career writing meaningful frontend or backend software
 
 ## Experience
 
+### Associate Software Engineer at Gordon Food Service
+
+<div class="date">Jun 2017 - Present</div>
+
 ### Consultant at Hepfer & Associates, PLLC
 
-<div class="date">Sep 2016 - Present</div>
+<div class="date">Sep 2016 - Jun 2017</div>
 
 - Import and investigate raw data from company databases
 - Search for behavioral anomalies and trends
