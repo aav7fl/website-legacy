@@ -65,7 +65,7 @@ I took known game save copies from the internet for each of my EEPROM games and 
 
 ### Hitting a Wall
 
-The first thing that I tried was dumping the SRAM by using the GameShark. However, I was unable to find any documentation on how to pull the SRAM data or if it was even accessible from the GameShark. But I did find [someone](http://assemblergames.com/l/threads/dumping-n64-game-saves-with-a-gameshark-with-lpt-access.31850/#post517929) who was trying to dump the contents of their SRAM into the memory pack controller by uploading it with [gsuploader](https://github.com/ppcasm/gsuploader). According to their post, they had some luck with a few games but were unlucky with others.
+The first thing that I tried was dumping the SRAM by using the GameShark. However, I was unable to find any documentation on how to pull the SRAM data or if it was even accessible from the GameShark. But I did find [someone](https://assemblergames.com/threads/dumping-n64-game-saves-with-a-gameshark-with-lpt-access.31850/#post-517929) who was trying to dump the contents of their SRAM into the memory pack controller by uploading it with [gsuploader](https://github.com/ppcasm/gsuploader). According to their post, they had some luck with a few games but were unlucky with others.
 
 I was unable to get sram2mpk.bin working with my Ocarina of Time game. I spent a whole day attempting to load the program, but every time it locked up on me and dumped no information. I was able to verify (with the help of Lawrence) that gsuploader was working correctly by loading up an older project named [Neon64](https://github.com/mikeryan/n64dev), an NES emulator for the N64. Below is an image of my N64 running Super Mario Bros 3 with the help of Neon64.
 
@@ -147,7 +147,7 @@ Software and resources I used:
 - [N64RD](https://github.com/parasyte/n64rd)
 - [010 Editor](http://www.sweetscape.com/010editor/)
 - [uCON64](http://ucon64.sourceforge.net/#ucon64)
-- [Project64](http://www.pj64-emu.com/downloads/project64/binaries/)
+- [Project64](http://www.pj64-emu.com/windows-binaries)
 - [Zelda high definition texture pack]( http://www.emutalk.net/threads/51481-Zelda-Ocarina-of-time-Community-Retexture-Project-V6-Development-Topic)
 - [Our Custom Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)
 

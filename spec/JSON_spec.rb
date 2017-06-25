@@ -29,10 +29,6 @@ RSpec.describe 'Test JSON-LD' do
     let(:html_invalid) do
       %(<script type="application/ld+json">
       {"@context": "http://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Test Headline",
-      "author": {"@type": "Person",
-      "name": "Kyle Niewiada"},
       "image": {"@type": "ImageObject",
       "url": "https://www.kyleniewiada.org/assets/img/banner.png",
       "height": 400,
