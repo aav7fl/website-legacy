@@ -147,7 +147,7 @@ Software and resources I used:
 - [N64RD](https://github.com/parasyte/n64rd)
 - [010 Editor](http://www.sweetscape.com/010editor/)
 - [uCON64](http://ucon64.sourceforge.net/#ucon64)
-- [Project64](http://www.pj64-emu.com/windows-binaries)
+- [Project64](http://www.pj64-emu.com/public-releases)
 - [Zelda high definition texture pack]( http://www.emutalk.net/threads/51481-Zelda-Ocarina-of-time-Community-Retexture-Project-V6-Development-Topic)
 - [Our Custom Ocarina Checksum Checker](https://github.com/Vi1i/OcarinaChecksumChecker)
 
