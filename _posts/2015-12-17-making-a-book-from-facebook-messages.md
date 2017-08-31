@@ -37,7 +37,7 @@ After my messages were in their correct order, I shifted focus on how I was goin
 
 First, I created a reasonable even spacing between each conversation to make it easier on the eyes (0pt spacing before each paragraph and 6pt spacing after each paragraph). This also condensed the length of my book to something far more practical. I set the font to Times New Roman/Size 11.
 
-Next, I used the macro found in an answer by the user macropod on [this Microsoft answers post](https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_other/a-macro-for-multiple-find-and-replace/822f62cc-ac63-e011-8dfc-68b599b31bf5#ThreadAnswers). This macro allowed me to replace multiple words in bulk. I used the macro to insert a tab character (\t) between each name and the date timestamp following. Then I set up a right aligned tab stop. This forced every timestamp to align on the right-hand side of the page demonstrated in the image above.
+Next, I used the macro found in an answer by the user macropod on [this Microsoft answers post](https://answers.microsoft.com/message/bd688c86-bd63-e011-8dfc-68b599b31bf5?threadId=822f62cc-ac63-e011-8dfc-68b599b31bf5). This macro allowed me to replace multiple words in bulk. I used the macro to insert a tab character (\t) between each name and the date timestamp following. Then I set up a right aligned tab stop. This forced every timestamp to align on the right-hand side of the page demonstrated in the image above.
 
 ![Finding and replacing text with tabs](/assets/img/2015/12/replace.png)
 
