@@ -73,7 +73,7 @@ Adding tests were great. But I also liked the idea that if I was away from my bu
 
 But [Travis-CI](https://travis-ci.org/) saves the day! Travis-CI will watch for code changes in my repo, fetch it, test it, and if it passes it could push my `_site/` folder to my GH-Pages branch (where GitHub will deploy online). Pretty cool, huh?
 
-I stumbled across this idea from Savas Labs who wrote a blog post last fall on how they [deploy to GitHub Pages using Travis-CI](http://savaslabs.com/2016/10/25/deploy-jekyll-with-travis.html). They were not the first, but I liked some of the ideas that they used. They would bring in pull requests to the source branch, test it, and deploy to a master branch for GH-Pages based on test results. I have followed suit. I made some changes to the scripts, like how I cache different directories and rely on the built in Node.JS versions, but the idea is still the same.
+I stumbled across this idea from Savas Labs who wrote a blog post last fall on how they [deploy to GitHub Pages using Travis-CI](https://savaslabs.com/2016/10/25/deploy-jekyll-with-travis.html). They were not the first, but I liked some of the ideas that they used. They would bring in pull requests to the source branch, test it, and deploy to a master branch for GH-Pages based on test results. I have followed suit. I made some changes to the scripts, like how I cache different directories and rely on the built in Node.JS versions, but the idea is still the same.
 
 I'm actually a little proud of this, but my build time is now around 1½ minutes, and deploying only takes another 15 seconds. This was accomplished by:
 - Caching Bundler
