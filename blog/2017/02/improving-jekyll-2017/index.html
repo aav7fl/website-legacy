@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     
       
-        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/">
+        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/" data-proofer-ignore>
       
     
 
@@ -53,7 +53,7 @@
   
 
   
-    <!-- Begin Jekyll SEO tag v2.2.3 -->
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
 
 
 <meta name="author" content="Kyle Niewiada" />
@@ -73,7 +73,7 @@
 <meta name="twitter:creator" content="@CrypticCitrus" />
 <meta property="fb:app_id" content="137961485759" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Improving Jekyll in 2017","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":400,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2017/02/banner.png","@type":"imageObject"},"datePublished":"2017-02-22T05:34:00-05:00","dateModified":"2017-04-12T13:51:12-04:00","description":"My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"},"url":"https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"}</script>
+{"name":null,"description":"My Jekyll website needed an update; so I fixed that. This is how I added tests, Travis-CI builds, Accelerated Mobile Pages, SEO improvements, and more.","url":"https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/","headline":"Improving Jekyll in 2017","dateModified":"2017-10-01T09:19:51-04:00","datePublished":"2017-02-22T05:34:00-05:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":400,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2017/02/banner.png","@type":"imageObject"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -137,7 +137,7 @@
 
     <h2 class="meta">Kyle Niewiada on February 22, 2017</h2>
 
-    <h3 class="meta">24 Minute Read | Large project</h3>
+    <h3 class="meta">23 Minute Read | Large project</h3>
   </header>
 
   
@@ -207,7 +207,7 @@
 <p>With a little Ruby-Fu, I was able to add the Node.js package execution to my Rakefile. It finds all of the <code class="highlighter-rouge">*.html</code> files in my AMP directory and passes them one at a time to the amphtml-validator. I check the exit status of the Node.js package, let the user know if it fails, and continue with my day.</p>
 
 <p><code class="highlighter-rouge">Rakefile</code></p>
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">desc</span> <span class="s1">'Test website AMP validation'</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">desc</span> <span class="s1">'Test website AMP validation'</span>
 <span class="n">task</span> <span class="ss">:amp</span> <span class="k">do</span>
   <span class="nb">puts</span> <span class="s1">'Running AMP Validator...'</span><span class="p">.</span><span class="nf">yellow</span><span class="p">.</span><span class="nf">bold</span>
   <span class="n">amp_dir</span> <span class="o">=</span> <span class="s1">'_site/amp'</span>
@@ -219,8 +219,7 @@
     <span class="nb">exit</span><span class="p">(</span><span class="vg">$CHILD_STATUS</span><span class="p">.</span><span class="nf">exitstatus</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="rubocop">RuboCop</h3>
 
@@ -229,11 +228,10 @@
 <p>I added this to my project by installing the RuboCop RubyGem and adding its config file. The config file excludes a directory that would currently break a Travis-CI build.</p>
 
 <p><code class="highlighter-rouge">.rubocop.yml</code></p>
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">AllCops</span><span class="pi">:</span>
-  <span class="s">Exclude</span><span class="pi">:</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">AllCops</span><span class="pi">:</span>
+  <span class="na">Exclude</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s">vendor/**/*</span> <span class="c1"># Ignore Travis-CI build directory</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="travis-ci">Travis-CI</h2>
 
@@ -241,7 +239,7 @@
 
 <p>But <a href="https://travis-ci.org/">Travis-CI</a> saves the day! Travis-CI will watch for code changes in my repo, fetch it, test it, and if it passes it could push my <code class="highlighter-rouge">_site/</code> folder to my GH-Pages branch (where GitHub will deploy online). Pretty cool, huh?</p>
 
-<p>I stumbled across this idea from Savas Labs who wrote a blog post last fall on how they <a href="http://savaslabs.com/2016/10/25/deploy-jekyll-with-travis.html">deploy to GitHub Pages using Travis-CI</a>. They were not the first, but I liked some of the ideas that they used. They would bring in pull requests to the source branch, test it, and deploy to a master branch for GH-Pages based on test results. I have followed suit. I made some changes to the scripts, like how I cache different directories and rely on the built in Node.JS versions, but the idea is still the same.</p>
+<p>I stumbled across this idea from Savas Labs who wrote a blog post last fall on how they <a href="https://savaslabs.com/2016/10/25/deploy-jekyll-with-travis.html">deploy to GitHub Pages using Travis-CI</a>. They were not the first, but I liked some of the ideas that they used. They would bring in pull requests to the source branch, test it, and deploy to a master branch for GH-Pages based on test results. I have followed suit. I made some changes to the scripts, like how I cache different directories and rely on the built in Node.JS versions, but the idea is still the same.</p>
 
 <p>I’m actually a little proud of this, but my build time is now around 1½ minutes, and deploying only takes another 15 seconds. This was accomplished by:</p>
 <ul>
@@ -265,12 +263,11 @@
 <p>In order to avoid duplicate results, AMP pages are not <a href="https://twitter.com/JohnMu/status/786588362706673664">necessary in the sitemap</a> unless they are standalone pages. Referencing them in the <code class="highlighter-rouge">&lt;head&gt;</code> of the normal page is enough. Because <a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a> knew nothing about my AMP ambitions, I had to manually set a default in my <code class="highlighter-rouge">amp.html</code> layout frontmatter to stop them from being included.</p>
 
 <p><code class="highlighter-rouge">_layouts/amp.html</code></p>
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="nn">---</span>
-<span class="s">layout</span><span class="pi">:</span> <span class="s">amp</span>
-<span class="s">sitemap</span><span class="pi">:</span> <span class="s">false</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">amp</span>
+<span class="na">sitemap</span><span class="pi">:</span> <span class="no">false</span>
 <span class="nn">---</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Easy enough.</p>
 
@@ -283,19 +280,17 @@
 <p>The new method of changing the canonical url on AMP pages is accomplished by removing the first instance of <code class="highlighter-rouge">site.ampdir</code> in my <code class="highlighter-rouge">page.url</code> on pages whose layout is of type <code class="highlighter-rouge">amp</code>. I then rebuild the canonical url in the same format as Jekyll SEO Tag and update the JSON-LD with a small replace filter.</p>
 
 <p>If my AMP Page canonical URL contained <code class="highlighter-rouge">/amp</code> like so:</p>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code>href="https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/"
-</code></pre>
-</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>href="https://www.kyleniewiada.org/amp/blog/2017/02/improving-jekyll-2017/"
+</code></pre></div></div>
 <p>It would now be altered to:</p>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code>href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"
-</code></pre>
-</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>href="https://www.kyleniewiada.org/blog/2017/02/improving-jekyll-2017/"
+</code></pre></div></div>
 
 <p>Whenever I grab the SEO tag, I make sure to run in through my “parser” first to fix it. Here’s how I do it.</p>
 
 <p><code class="highlighter-rouge">_includes/amp-check.html</code></p>
 
-<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="na">seo_text</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">seo</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="na">seo_text</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">seo</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
 
 <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">src</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"SEO"</span><span class="w"> </span><span class="p">%}</span>
   &lt;!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it --&gt;
@@ -303,10 +298,9 @@
   <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">canonical_amp_removed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove_first</span><span class="p">:</span><span class="w"> </span>site.ampdir<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">absolute_url</span><span class="w"> </span><span class="p">%}</span>
   <span class="p">{{</span><span class="w"> </span><span class="nv">seo_text</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span>canonical_amp<span class="p">,</span><span class="w"> </span>canonical_amp_removed<span class="w"> </span><span class="p">}}</span>
 <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>Now all I need to do is call the Jekyll-SEO-Tag with <code class="highlighter-rouge"><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">amp-check.html</span><span class="w"> </span><span class="err">src=</span><span class="nt">"SEO"</span><span class="w"> </span><span class="err">%}</span></code> in the <code class="highlighter-rouge">&lt;head&gt;</code> of my layout. Problem solved.</p>
+<p>Now all I need to do is call the Jekyll-SEO-Tag with <code class="highlighter-rouge">{% include amp-check.html src="SEO" %}</code> in the <code class="highlighter-rouge">&lt;head&gt;</code> of my layout. Problem solved.</p>
 
 <h3 id="amp-videos">AMP Videos</h3>
 
@@ -316,20 +310,18 @@
 
 <p>To get that <em>special JS file</em>, I decided the easiest way would be to add a frontmatter variable in each post stating which special AMP JS files were needed. Then I would make a check for it in the <code class="highlighter-rouge">&lt;head&gt;</code>. For example, a blog post with an embedded video would have:</p>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">amp</span><span class="pi">:</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">amp</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">video</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then the AMP <code class="highlighter-rouge">&lt;head&gt;</code> layout would include:</p>
 
 <p><code class="highlighter-rouge">_includes/amp/head.html</code></p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code>{% if page.amp contains 'video' %}
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if page.amp contains 'video' %}
   <span class="nt">&lt;script </span><span class="na">async</span> <span class="na">custom-element=</span><span class="s">"amp-video"</span> <span class="na">src=</span><span class="s">"https://cdn.ampproject.org/v0/amp-video-0.1.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 {% endif %}
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="fixing-the-post">Fixing the Post</h4>
 
@@ -339,19 +331,18 @@
 
 <p>I would add a video to my post with:</p>
 
-<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">video</span><span class="p">.</span><span class="na">html</span><span class="err">
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">video</span><span class="p">.</span><span class="na">html</span><span class="err">
 </span><span class="w">  </span><span class="na">src</span><span class="o">=</span><span class="s2">"/assets/files/2016/03/bug_example.mp4"</span><span class="err">
 </span><span class="w">  </span><span class="na">poster</span><span class="o">=</span><span class="s2">"/assets/files/2016/03/bug_example_poster.png"</span><span class="err">
 </span><span class="w">  </span><span class="na">controls</span><span class="o">=</span><span class="s2">"loop"</span><span class="err">
 </span><span class="p">%}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then the video <code class="highlighter-rouge">include</code> would properly insert the video for both AMP and default layouts.</p>
 
 <p><code class="highlighter-rouge">_includes/video.html</code></p>
 
-<div class="language-liquid highlighter-rouge"><pre class="highlight"><code>&lt;!-- Method to implement AMP-Video. --&gt;
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Method to implement AMP-Video. --&gt;
 <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">height</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">default</span><span class="p">:</span><span class="w"> </span><span class="s2">"420"</span><span class="w"> </span><span class="p">%}</span>
 <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">width</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">default</span><span class="p">:</span><span class="w"> </span><span class="s2">"700"</span><span class="w"> </span><span class="p">%}</span>
 <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">default</span><span class="p">:</span><span class="w"> </span><span class="s2">"normal"</span><span class="w"> </span><span class="p">%}</span>
@@ -371,8 +362,7 @@
     &lt;/video&gt;
   <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
 <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>In the code above, it first checks to see if the video type from the post is a “normal” embedded video, or a YouTube video (not shown). Next, it checks to see if the webpage layout is of type <code class="highlighter-rouge">amp</code>. If this is also true, then it will insert the correct HTML layout for an AMP video. Otherwise, it will insert the video with normal HTML5.</p>
 
@@ -384,15 +374,14 @@
 
 <p>Now when I run the <code class="highlighter-rouge">amphtml-validator</code> tests, all of my AMP pages pass.</p>
 
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code>Running AMP Validator...
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Running AMP Validator...
 _site/amp/blog/2013/04/somewhere-to-start/index.html: PASS
 _site/amp/blog/2013/09/restoring-vintage-with-3d-printing/index.html: PASS
 ...
 _site/amp/blog/2016/07/fixing-no-google-profile-for-contact/index.html: PASS
 _site/amp/blog/2017/01/backing-up-android-nougat-cats/index.html: PASS
 AMP Validator finished successfully.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>An explanation on my testing method is found earlier in this post.</p>
 
@@ -407,13 +396,12 @@ AMP Validator finished successfully.
 <p>The only custom RubyGem that I am using is Jekyll-SEO-Tag. Well… a fork of Jekyll-SEO-Tag. That is, until they hopefully accept my <a href="https://github.com/jekyll/jekyll-seo-tag/pull/151">pull request</a>. My pull request corrects and updates the JSON-LD for a blog post to meet Google’s current recommendations. But for now, I have a special entry in my Gemfile pointing to my fork.</p>
 
 <p><code class="highlighter-rouge">Gemfile</code></p>
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
   <span class="n">git</span> <span class="s1">'https://github.com/aav7fl/jekyll-seo-tag.git'</span> <span class="k">do</span>
     <span class="n">gem</span> <span class="s1">'jekyll-seo-tag'</span><span class="p">,</span> <span class="ss">branch: </span><span class="s1">'testing'</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="website-wiki">Website Wiki</h3>
 
@@ -460,7 +448,7 @@ This was resolved by adding <code class="highlighter-rouge">x="0" y="0"</code> t
     <a class="post-nav-link" href="/blog/2017/01/backing-up-android-nougat-cats/">
     <div class="link-text previous">&laquo;&nbsp;Backing Up Android Nougat Easter Egg Cats (No Root)</div>
     
-      <img class="link-image" src="https://www.kyleniewiada.org/assets/img/2017/01/banner.jpg" alt="Previous Article">
+      <img class="link-image" src="/assets/img/2017/01/banner.jpg" alt="Previous Article">
     
     </a>
   

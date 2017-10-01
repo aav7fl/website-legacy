@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     
       
-        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2016/03/ios-video-bug-disclosure/">
+        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2016/03/ios-video-bug-disclosure/" data-proofer-ignore>
       
     
 
@@ -53,7 +53,7 @@
   
 
   
-    <!-- Begin Jekyll SEO tag v2.2.3 -->
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
 
 
 <meta name="author" content="Kyle Niewiada" />
@@ -73,7 +73,7 @@
 <meta name="twitter:creator" content="@CrypticCitrus" />
 <meta property="fb:app_id" content="137961485759" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"iOS Video Player Bug Disclosure","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":521,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2016/03/iPadTesting.jpg","@type":"imageObject"},"datePublished":"2016-03-20T18:05:00-04:00","dateModified":"2017-05-09T07:28:01-04:00","description":"A public disclosure that I discovered of an iOS video playback bug that decreases red and becomes washed out when user interface elements are hidden","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2016/03/ios-video-bug-disclosure/"},"url":"https://www.kyleniewiada.org/blog/2016/03/ios-video-bug-disclosure/"}</script>
+{"name":null,"description":"A public disclosure that I discovered of an iOS video playback bug that decreases red and becomes washed out when user interface elements are hidden","url":"https://www.kyleniewiada.org/blog/2016/03/ios-video-bug-disclosure/","headline":"iOS Video Player Bug Disclosure","dateModified":"2017-05-09T07:28:01-04:00","datePublished":"2016-03-20T18:05:00-04:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":521,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2016/03/iPadTesting.jpg","@type":"imageObject"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2016/03/ios-video-bug-disclosure/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -219,9 +219,8 @@
 
 <p>Across the web <a href="https://www.reddit.com/r/ipad/comments/2w84cw/">[1]</a> <a href="https://discussions.apple.com/thread/4581841">[2]</a> <a href="https://discussions.apple.com/thread/3822777">[3]</a>, there exist somewhat related bugs with iOS video playback and reproduction. Although I can’t say that these issues are directly related, the solution for most of these is to turn on AssistiveTouch.</p>
 
-<div class="language-text highlighter-rouge"><pre class="highlight"><code>General&gt;Accessibility&gt;AssistiveTouch&gt;On
-</code></pre>
-</div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>General&gt;Accessibility&gt;AssistiveTouch&gt;On
+</code></pre></div></div>
 
 <p>AssistiveTouch (among other things) places a virtual shortcuts/home button on top of every screen on your device. When this occurs, the iOS device considers this a piece of the user interface (why shouldn’t it be?). Because of this behavior, when trying to replicate the bug behavior with the video player, it will not occur because the AssistiveTouch is visible on screen.</p>
 
@@ -257,7 +256,7 @@
     <a class="post-nav-link" href="/blog/2016/03/easy-inline-usb-power-switch/">
     <div class="link-text previous">&laquo;&nbsp;My Easy In-line USB Power Switch</div>
     
-      <img class="link-image" src="https://www.kyleniewiada.org/assets/img/2016/03/banner2.jpg" alt="Previous Article">
+      <img class="link-image" src="/assets/img/2016/03/banner2.jpg" alt="Previous Article">
     
     </a>
   

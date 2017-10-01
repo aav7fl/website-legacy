@@ -3,8 +3,64 @@
 
 
 
-  <meta charset="utf-8"><title>Transferring My N64 Saves</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#3d256d"><!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#3d256d"><!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. --><!-- Extract extra <title> tag. --><!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it --><!-- Begin Jekyll SEO tag v2.2.3 --><meta name="author" content="Kyle Niewiada"><meta property="og:locale" content="en_US"><meta name="description" content="How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file"><meta property="og:description" content="How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file"><link rel="canonical" href="https://www.kyleniewiada.org/blog/2015/04/transferring-n64-saves/"><meta property="og:url" content="https://www.kyleniewiada.org/blog/2015/04/transferring-n64-saves/"><meta property="og:site_name" content="Kyle Niewiada’s Website"><meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2015/04/DSC09669.JPG"><meta property="og:image:height" content="665"><meta property="og:image:width" content="1000"><meta property="og:type" content="article"><meta property="article:published_time" content="2015-04-11T16:41:00-04:00"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CrypticCitrus"><meta name="twitter:creator" content="@CrypticCitrus"><meta property="fb:app_id" content="137961485759"><script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Transferring My N64 Saves","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":665,"width":1000,"url":"https://www.kyleniewiada.org/assets/img/2015/04/DSC09669.JPG","@type":"imageObject"},"datePublished":"2015-04-11T16:41:00-04:00","dateModified":"2017-08-17T17:15:21-04:00","description":"How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2015/04/transferring-n64-saves/"},"url":"https://www.kyleniewiada.org/blog/2015/04/transferring-n64-saves/"}</script><!-- End Jekyll SEO tag --><style amp-custom>
+  <meta charset="utf-8">
+  <title>Transferring My N64 Saves</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#3d256d">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#3d256d">
+
+  <!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. -->
+
+
+  
+  <!-- Extract extra <title> tag. -->
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+    <!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it -->
+    
+    
+
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+
+
+<meta name="author" content="Kyle Niewiada">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file">
+<meta property="og:description" content="How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file">
+<link rel="canonical" href="/blog/2015/04/transferring-n64-saves/">
+<meta property="og:url" content="/blog/2015/04/transferring-n64-saves/">
+<meta property="og:site_name" content="Kyle Niewiada’s Website">
+<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2015/04/DSC09669.JPG">
+<meta property="og:image:height" content="665">
+<meta property="og:image:width" content="1000">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-04-11T16:41:00-04:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CrypticCitrus">
+<meta name="twitter:creator" content="@CrypticCitrus">
+<meta property="fb:app_id" content="137961485759">
+<script type="application/ld+json">
+{"name":null,"description":"How I extracted my N64 save files such as Mario party and Zelda Ocarina of Time by dumping the ram, calculating the checksum and building the sra save file","url":"/blog/2015/04/transferring-n64-saves/","headline":"Transferring My N64 Saves","dateModified":"2017-08-17T17:15:21-04:00","datePublished":"2015-04-11T16:41:00-04:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":665,"width":1000,"url":"https://www.kyleniewiada.org/assets/img/2015/04/DSC09669.JPG","@type":"imageObject"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2015/04/transferring-n64-saves/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+
+
+
+  <style amp-custom>
   
   @font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local("Open Sans Light"),local("OpenSans-Light"),url("/assets/fonts/open-sans-v13-latin-300.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-300.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local("Open Sans"),local("OpenSans"),url("/assets/fonts/open-sans-v13-latin-regular.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-regular.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local("Open Sans Semibold"),local("OpenSans-Semibold"),url("/assets/fonts/open-sans-v13-latin-600.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-600.woff") format("woff")}.page-title{text-align:left;font-size:200%;line-height:1.2;font-weight:normal}@media (min-width: 600px){.page-title{font-size:250%}}@media (min-width: 1000px){.page-title{font-size:300%}}.meta{color:#696969;font-weight:300;font-size:120%}@media (min-width: 600px){.meta{font-size:130%}}@media (min-width: 1000px){.meta{font-size:140%}}a.meta{text-align:center;display:block}.title-meta{overflow:auto;color:#696969;font-size:100%}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 .5rem;font-weight:600}a{color:#3d256d}a:hover{color:#1d1234}code,pre{border-radius:.2em;background-color:#f5f5f5;border:0.1em solid #d3d3d3}code{padding:2px 4px;color:#9e023b}pre{padding:16px;overflow-y:hidden}pre code{color:inherit;background-color:transparent;padding:0;border:0}body{margin:0}body,p,li,ul,input,textarea{font-size:1em;line-height:1.58;color:#111;font-family:"Open Sans",Helvetica,Arial,sans-serif}img,video,audio,iframe,object{max-width:100%}main{display:block}.line-separator{height:2px;background:#d3d3d3;margin-top:16px;margin-bottom:16px}.clearfix:after{content:"";display:block;clear:both}.content{max-width:700px;margin-right:auto;margin-left:auto;padding:0 16px}.content img{display:block;margin-left:auto;margin-right:auto}.no-list{list-style:none;padding-left:0;margin-left:0}.left{float:left}.right{float:right}.post-list li{margin-bottom:4em;position:relative}.post-list li:before{content:"";position:absolute;bottom:-2em;left:0;background:#e6e6e6;height:2px;width:60px}.post-list li a{text-decoration:none}.post-list li a:hover{text-decoration:underline}.post-list li .date{color:#696969;font-size:.8em}.header-amp{background:#262626;margin-bottom:16px;padding:16px;text-align:center;font-size:1.4em;font-weight:normal}.header-amp a,.header-amp a:hover{color:#fff;text-decoration:none;overflow:visible}
 
@@ -14,9 +70,16 @@
   
   footer{padding:16px 0}footer .flex-list{position:relative;margin:1em;overflow:hidden;border-top:1px solid #d3d3d3}footer .flex-list ul{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;margin-left:-1px;padding:0}footer .flex-list li{list-style:none;flex-grow:1;flex-basis:auto;margin:.25em 0;padding:0 1em;text-align:center;border-left:1px solid #ccc;background-color:#fff}@media (min-width: 600px){footer .flex-list li{font-size:110%}}footer a{text-decoration:none}footer a:hover{background:#3d256d;color:white}article img+em,article amp-img+em,article video+em{text-align:center;font-size:.9em;font-style:italic;color:#5e5e5e;display:block}article img+p,article amp-img+p{margin-bottom:2em}blockquote{background:#ffa;border-left:10px solid #dc0;margin:1.5em 10px;padding:0.5em 10px}.post-nav{display:flex;flex-direction:column}.post-nav .post-nav-link{height:6em;margin:.1em;overflow:hidden;position:relative}.post-nav .post-nav-link .link-text{z-index:1;position:absolute;height:100%;width:100%;box-sizing:border-box;padding:.5em;font-weight:bold;color:white;background:rgba(0,0,0,0.6)}.post-nav .post-nav-link .previous{text-align:left}.post-nav .post-nav-link .next{text-align:right}.post-nav .post-nav-link .link-image{position:absolute;filter:blur(1px);transition:all 0.35s ease-in-out;top:50%;transform:translateY(-50%);width:auto;height:auto;min-width:100%;min-height:100%}.post-nav .post-nav-link:hover img{transform:translateY(-50%) scale(1.2)}@media all and (min-width: 600px){.post-nav{flex-direction:row}.post-nav .post-nav-link{flex-basis:0;flex-grow:1}}.button-outline{line-height:1.2em;padding:.5em 1.5em;border-radius:4px;text-decoration:none;cursor:pointer}.button-outline{background-color:transparent;border:3px solid #3d256d;color:#3d256d}.button-outline:hover{background-color:#3d256d;color:#fff}.highlight .c{color:#999988;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#999988;font-style:italic}.highlight .cp{color:#999999;font-weight:bold}.highlight .c1{color:#999988;font-style:italic}.highlight .cs{color:#999999;font-weight:bold;font-style:italic}.highlight .gd{color:#000000;background-color:#fdd}.highlight .gd .x{color:#000000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000000;background-color:#dfd}.highlight .gi .x{color:#000000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#445588;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086B3}.highlight .nc{color:#445588;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#990000;font-weight:bold}.highlight .nf{color:#990000;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}
 
-  </style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </style>
 
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async src="https://cdn.ampproject.org/v0.js"></script>
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  
+  
+
+
 
 <body>
 <amp-analytics type="googleanalytics">
@@ -38,13 +101,18 @@
 
 
 <!-- start header -->
-<header><h1 class="header-amp">
+<header>
+  <h1 class="header-amp">
     <a href="/">Kyle Niewiada</a>
   </h1>
-</header><!-- end header -->
+</header>
+<!-- end header -->
 
 
-<main class="content"><article><div class="post_info">
+
+<main class="content">
+  <article>
+    <div class="post_info">
       <h1 class="page-title">Transferring My N64 Saves</h1>
 
       <h2 class="meta">Kyle Niewiada
@@ -53,8 +121,8 @@
 
       
       <div class="featuredImage">
-        <amp-img src="https://www.kyleniewiada.org/assets/img/2015/04/DSC09669.JPG" alt="N64 interfacing with The Legend of Zelda: Ocarina of Time to dump active memory" width="1000" height="665" layout="responsive"><noscript><img src="https://www.kyleniewiada.org/assets/img/2015/04/DSC09669.JPG" alt="N64 interfacing with The Legend of Zelda: Ocarina of Time to dump active memory" width="1000" height="665"></noscript></amp-img>
-</div>
+        <amp-img src="/assets/img/2015/04/DSC09669.JPG" alt="N64 interfacing with The Legend of Zelda: Ocarina of Time to dump active memory" width="1000" height="665" layout="responsive"><noscript><img src="/assets/img/2015/04/DSC09669.JPG" alt="N64 interfacing with The Legend of Zelda: Ocarina of Time to dump active memory" width="1000" height="665"></noscript></amp-img>
+      </div>
       
 
       <div class="line-separator"></div>
@@ -73,26 +141,28 @@
 <p>I created a project with one goal in mind. To transfer all game saves from my minuscule N64 library into a digital format that I could use on other devices. I had four games that I needed to get saves off of.</p>
 
 <ul>
-<li>The Legend of Zelda: Ocarina of Time</li>
+  <li>The Legend of Zelda: Ocarina of Time</li>
   <li>Star Wars Episode One: Racer</li>
   <li>Mario Party 3</li>
   <li>Super Mario 64</li>
 </ul>
+
 <p>Here is how I did it.</p>
 
 <h4 id="eeprom-saves-star-wars-mario-party-and-super-mario">EEPROM Saves (Star Wars, Mario Party, and Super Mario):</h4>
 
 <ul>
-<li>Dump ROM</li>
+  <li>Dump ROM</li>
   <li>Transfer save to memory pack using GameShark</li>
   <li>Transfer memory pack data to computer using DexDrive</li>
   <li>Graft a new save file from DexDrive save with a hex editor</li>
   <li>Load in Project64 and play</li>
 </ul>
+
 <h4 id="ocarina-of-time-save-sram">Ocarina of Time Save (SRAM):</h4>
 
 <ul>
-<li>Dump ROM</li>
+  <li>Dump ROM</li>
   <li>Dump contents of active RAM (with my glorious Pentium III)</li>
   <li>
     <s>Recalculate save checksum</s>
@@ -103,16 +173,15 @@
   <li>Although this blog post follows the above, an <strong><a href="https://bkacjios.github.io/OOT-Save-Converter/">easier method</a></strong> for converting the RAM dumps has been created by Bkacjios</li>
   <li>Load in Project64 and play</li>
 </ul>
+
 <p><amp-img src="/assets/img/2015/04/DSC09658.JPG" alt="the N64 transfer setup" width="1000" height="665" layout="responsive"><noscript><img src="/assets/img/2015/04/DSC09658.JPG" alt="the N64 transfer setup" width="1000" height="665"></noscript></amp-img><em>The N64 transfer setup</em></p>
 
 <h3 id="dumping-my-rom">Dumping My ROM</h3>
 
 <p>Star Wars, Mario Party, and Super Mario 64 use EEPROM to store their game save. This made my project easy. I followed a known method by using a DexDrive. The first thing that I did was dump each game using the GameShark’s parallel port with the open source software <a href="https://github.com/parasyte/n64rd">N64RD</a> using the command below. (Others have tried using GameShark’s software, but it has been problematic. Using N64RD seems to be the way to go). This program allowed me to back up each of my games for later use in my project. It also allowed me to dump my ram, but that is coming later. I used <a href="http://doc.kodewerx.org/hacking_n64.html">this wiki</a> to know what addresses and offsets for the RAM and ROM space I needed.</p>
 
-<div class="language-shell highlighter-rouge">
-<pre class="highlight"><code><span class="gp">$ </span>./n64rd -dgame.z64 -a 0xB0000000 -l 0x02000000
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./n64rd <span class="nt">-dgame</span>.z64 <span class="nt">-a</span> 0xB0000000 <span class="nt">-l</span> 0x02000000
+</code></pre></div></div>
 
 <h3 id="transferring-saves">Transferring Saves</h3>
 
@@ -136,10 +205,8 @@
 
 <p>The documentation on the Zelda save file wiki claimed that save files were built by copying over a certain block of memory. After reading through this, I went back to my GameShark and dumped the entire contents of its RAM (using N64RD) while in game using the command below with N64RD.</p>
 
-<div class="language-shell highlighter-rouge">
-<pre class="highlight"><code><span class="gp">$ </span>./n64rd -dmemory.z64 -a 0x80000000 -l 0x00800000
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./n64rd <span class="nt">-dmemory</span>.z64 <span class="nt">-a</span> 0x80000000 <span class="nt">-l</span> 0x00800000
+</code></pre></div></div>
 
 <p>After opening up the RAM dump with my hex editor, I followed up to the address 0x0011A790 (or 0x8011A790 inside my GameShark memory) and copied 0x1450 bytes (the size of the game save file).</p>
 
@@ -149,18 +216,14 @@
 
 <p>I used <a href="http://ucon64.sourceforge.net/#ucon64">uCON64</a> to do just that and convert Big Endian-&gt;Little Endian (or vise versa) with this command:</p>
 
-<div class="language-shell highlighter-rouge">
-<pre class="highlight"><code>ucon64 --n64 --nint --dint --swap2 save.sra
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ucon64 <span class="nt">--n64</span> <span class="nt">--nint</span> <span class="nt">--dint</span> <span class="nt">--swap2</span> save.sra
+</code></pre></div></div>
 
-<div class="language-text highlighter-rouge">
-<pre class="highlight"><code>--n64         force recognition
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--n64         force recognition
 --nint        force ROM is not in interleaved format (1234, Z64)
 --dint        convert ROM to (non-)interleaved format (1234 &lt;-&gt; 2143)
 --swap2       word-swap ROM (1234 &lt;-&gt; 3412)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><amp-img src="/assets/img/2015/04/memoryDumpSwap.png" alt="Byte swapped memory dump (Little Endian)" width="618" height="634" layout="responsive"><noscript><img src="/assets/img/2015/04/memoryDumpSwap.png" alt="Byte swapped memory dump (Little Endian)" width="618" height="634"></noscript></amp-img><em>Byte swapped memory dump (Little Endian)</em></p>
 
@@ -197,53 +260,61 @@
 <p>Materials I needed to complete my project:</p>
 
 <ul>
-<li>N64 &amp; Controller</li>
+  <li>N64 &amp; Controller</li>
   <li>8 MB RAM expansion pack</li>
   <li>Memory pack</li>
   <li>GameShark (with a working parallel port)</li>
   <li>Parallel port cable (and a machine with a parallel port)</li>
   <li>N64 DexDrive (and a machine with a serial port)</li>
 </ul>
+
 <p>Software and resources I used:</p>
 
 <ul>
-<li><a href="https://github.com/parasyte/n64rd">N64RD</a></li>
+  <li><a href="https://github.com/parasyte/n64rd">N64RD</a></li>
   <li><a href="http://www.sweetscape.com/010editor/">010 Editor</a></li>
   <li><a href="http://ucon64.sourceforge.net/#ucon64">uCON64</a></li>
   <li><a href="http://www.pj64-emu.com/public-releases">Project64</a></li>
   <li><a href="http://www.emutalk.net/threads/51481-Zelda-Ocarina-of-time-Community-Retexture-Project-V6-Development-Topic">Zelda high definition texture pack</a></li>
   <li><a href="https://github.com/Vi1i/OcarinaChecksumChecker">Our Custom Ocarina Checksum Checker</a></li>
 </ul>
+
 <p><strong>EDIT (March 10, 2016):</strong></p>
 
 <p>Add contributions made by Austin:</p>
 
 <ul>
-<li>There is no easy way to communicate with the Gameshark using a parallel-to-usb adapter so you will need an older machine with a built in parallel port, like the one shown in this guide.</li>
+  <li>There is no easy way to communicate with the Gameshark using a parallel-to-usb adapter so you will need an older machine with a built in parallel port, like the one shown in this guide.</li>
   <li>You must have the expansion pack that expands the N64’s RAM from 4MB to 8MB. The only way I could get n64rd to dump the RAM while in-game was by turning on the code generator in the Gameshark’s menu before starting Ocarina of Time. This code generator option does not show up unless you have the expansion installed.</li>
   <li>If you’re using a downloaded ROM, make sure its version matches the version of your save. You can dump the ROM yourself as shown in the guide so that you don’t have to worry about this.</li>
 </ul>
+
 <p><strong>EDIT (April 29, 2016):</strong></p>
 
 <p>Add contributions made by Bkacjios:</p>
 
 <ul>
-<li>Bkacjios has implemented the checksum algorithm in an <strong><a href="https://bkacjios.github.io/OOT-Save-Converter/">online tool</a></strong> where you can upload your RAM dump and download a proper .sra save file. It has many other features, but this simplifies the process completely after obtaining your ram dump through the GameShark cartridge and seems to be the way to go.</li>
+  <li>Bkacjios has implemented the checksum algorithm in an <strong><a href="https://bkacjios.github.io/OOT-Save-Converter/">online tool</a></strong> where you can upload your RAM dump and download a proper .sra save file. It has many other features, but this simplifies the process completely after obtaining your ram dump through the GameShark cartridge and seems to be the way to go.</li>
 </ul>
+
 <p><strong>EDIT (May 01, 2016):</strong></p>
 
 <p>I’ve added an updated guide specifically for Ocarina of Time. Check out my <a href="/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/">new guide</a> for it.</p>
 
 
-  </article></main>
+  </article>
+</main>
+
 
 <a href="/blog/2015/04/transferring-n64-saves/" class="meta center">Comments are available on the full webpage.</a>
 
 
 <!-- start footer -->
-<footer class="content"><div class="flex-list">
+<footer class="content">
+  <div class="flex-list">
   <ul>
-<li>
+  
+    <li>
       <a href="https://www.linkedin.com/in/kyleniewiada/">LinkedIn</a>
     </li>
   
@@ -270,7 +341,9 @@
   </ul>
 </div>
 
-</footer><!-- end footer -->
+</footer>
+<!-- end footer -->
+
 
 </body>
 

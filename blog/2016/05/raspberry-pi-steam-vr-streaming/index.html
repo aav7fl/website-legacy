@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     
       
-        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2016/05/raspberry-pi-steam-vr-streaming/">
+        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2016/05/raspberry-pi-steam-vr-streaming/" data-proofer-ignore>
       
     
 
@@ -53,7 +53,7 @@
   
 
   
-    <!-- Begin Jekyll SEO tag v2.2.3 -->
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
 
 
 <meta name="author" content="Kyle Niewiada" />
@@ -73,7 +73,7 @@
 <meta name="twitter:creator" content="@CrypticCitrus" />
 <meta property="fb:app_id" content="137961485759" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Streaming a Virtual Reality Spectator View to My Raspberry Pi 2","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":455,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg","@type":"imageObject"},"datePublished":"2016-05-31T16:44:00-04:00","dateModified":"2017-04-12T13:51:12-04:00","description":"How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/"},"url":"https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/"}</script>
+{"name":null,"description":"How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR.","url":"https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/","headline":"Streaming a Virtual Reality Spectator View to My Raspberry Pi 2","dateModified":"2017-04-12T13:51:12-04:00","datePublished":"2016-05-31T16:44:00-04:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":455,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg","@type":"imageObject"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -183,22 +183,19 @@
 
 <p>Adding the line:</p>
 
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code>deb http://archive.itimmer.nl/raspbian/moonlight jessie main
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://archive.itimmer.nl/raspbian/moonlight jessie main
+</code></pre></div></div>
 
 <p>to this file:</p>
 
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code>/etc/apt/sources.list
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/apt/sources.list
+</code></pre></div></div>
 
 <p>And running the following to install Moonlight Embedded.</p>
 
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code>apt-get update
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get update
 apt-get install moonlight-embedded
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Once everything was complete, Moonlight Embedded was installed on my Pi and ready to use.</p>
 
@@ -210,11 +207,10 @@ apt-get install moonlight-embedded
 
 <p><img src="/assets/img/2016/05/GFEWindow.png" alt="Adding remote desktop as Nvidia GameStream custom game" /><em>Adding remote desktop as a Nvidia GameStream custom game</em></p>
 
-<div class="language-text highlighter-rouge"><pre class="highlight"><code>Name: RemoteDesktop
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Name: RemoteDesktop
 Target: "C:\Windows\System32\mstsc.exe"
 Start in: C:\Windows\System32
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="finishing-the-pi">Finishing the Pi</h2>
 
@@ -222,9 +218,8 @@ Start in: C:\Windows\System32
 
 <p>To initiate pairing, type the following on your Raspberry Pi terminal:</p>
 
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code>moonlight pair 192.168.1.X
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>moonlight pair 192.168.1.X
+</code></pre></div></div>
 
 <blockquote>
   <p>Replace 192.168.1.X with your PC’s IP, which can be found by typing <code class="highlighter-rouge">ipconfig</code> into the Windows command prompt and matching it with your network interface</p>
@@ -236,17 +231,17 @@ Start in: C:\Windows\System32
 
 <p>Check out the rest of the <a href="https://github.com/irtimmer/moonlight-embedded/tree/master/docs">documentation arguments</a>. Your settings will probably differ.</p>
 
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
 <span class="c">#Disable screen saver blanking.</span>
 xset s off
 
 <span class="c">#Disable Energy Star features.</span>
-xset -dpms
+xset <span class="nt">-dpms</span>
 
 <span class="c">#Start the Moonlight stream. Make sure to replace the remote address with your own computer's IP.</span>
 <span class="c">#This is probably the only necessary command unless you make other changes to Raspbian</span>
-moonlight stream -1080 -60fps -bitrate 20000 -localaudio -app RemoteDesktop 192.168.1.X
+moonlight stream <span class="nt">-1080</span> <span class="nt">-60fps</span> <span class="nt">-bitrate</span> 20000 <span class="nt">-localaudio</span> <span class="nt">-app</span> RemoteDesktop 192.168.1.X
 
 <span class="c">#Enable screen saver blanking</span>
 xset s off
@@ -256,8 +251,7 @@ xset s on
 
 <span class="c">#Enable Energy Star features.</span>
 xset +dpms
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><em>Don’t forget! Ctrl+Alt+Shift+Q quits the streaming session.</em></p>
 
@@ -302,7 +296,7 @@ xset +dpms
     <a class="post-nav-link" href="/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/">
     <div class="link-text previous">&laquo;&nbsp;N64 - The Legend of Zelda: Ocarina of Time Save Transfer Guide</div>
     
-      <img class="link-image" src="https://www.kyleniewiada.org/assets/img/2016/05/banner.jpg" alt="Previous Article">
+      <img class="link-image" src="/assets/img/2016/05/banner.jpg" alt="Previous Article">
     
     </a>
   

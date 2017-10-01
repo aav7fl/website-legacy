@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     
       
-        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2016/07/preventing-windows-application-notifications/">
+        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2016/07/preventing-windows-application-notifications/" data-proofer-ignore>
       
     
 
@@ -53,7 +53,7 @@
   
 
   
-    <!-- Begin Jekyll SEO tag v2.2.3 -->
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
 
 
 <meta name="author" content="Kyle Niewiada" />
@@ -73,7 +73,7 @@
 <meta name="twitter:creator" content="@CrypticCitrus" />
 <meta property="fb:app_id" content="137961485759" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Preventing Windows Apps from Broadcasting a Taskbar Notification","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":480,"width":1011,"url":"https://www.kyleniewiada.org/assets/img/2016/07/banner.png","@type":"imageObject"},"datePublished":"2016-07-02T12:33:00-04:00","dateModified":"2017-04-12T13:51:12-04:00","description":"Using the Windows 10 registry editor to remove or mute application notifications in the system taskbar that will not stay hidden after a reboot.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/"},"url":"https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/"}</script>
+{"name":null,"description":"Using the Windows 10 registry editor to remove or mute application notifications in the system taskbar that will not stay hidden after a reboot.","url":"https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/","headline":"Preventing Windows Apps from Broadcasting a Taskbar Notification","dateModified":"2017-04-12T13:51:12-04:00","datePublished":"2016-07-02T12:33:00-04:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":480,"width":1011,"url":"https://www.kyleniewiada.org/assets/img/2016/07/banner.png","@type":"imageObject"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2016/07/preventing-windows-application-notifications/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -170,9 +170,8 @@
 
 <p>The first step is to find the key inside the registry associated with the application. Browse to:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Current\
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Current\
+</code></pre></div></div>
 
 <p>One will find a list of keys for applications registered for the system notifications. If the application you’re looking for does not immediately jump out, it is probably one of the <code class="highlighter-rouge">Microsoft.Explorer.Notification.{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}</code> keys.</p>
 
@@ -204,7 +203,7 @@
     <a class="post-nav-link" href="/blog/2016/05/raspberry-pi-steam-vr-streaming/">
     <div class="link-text previous">&laquo;&nbsp;Streaming a Virtual Reality Spectator View to My Raspberry Pi 2</div>
     
-      <img class="link-image" src="https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg" alt="Previous Article">
+      <img class="link-image" src="/assets/img/2016/05/banner2.jpg" alt="Previous Article">
     
     </a>
   

@@ -3,8 +3,64 @@
 
 
 
-  <meta charset="utf-8"><title>Streaming a Virtual Reality Spectator View to My Raspberry Pi 2</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#3d256d"><!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#3d256d"><!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. --><!-- Extract extra <title> tag. --><!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it --><!-- Begin Jekyll SEO tag v2.2.3 --><meta name="author" content="Kyle Niewiada"><meta property="og:locale" content="en_US"><meta name="description" content="How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR."><meta property="og:description" content="How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR."><link rel="canonical" href="https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/"><meta property="og:url" content="https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/"><meta property="og:site_name" content="Kyle Niewiada’s Website"><meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg"><meta property="og:image:height" content="455"><meta property="og:image:width" content="800"><meta property="og:type" content="article"><meta property="article:published_time" content="2016-05-31T16:44:00-04:00"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CrypticCitrus"><meta name="twitter:creator" content="@CrypticCitrus"><meta property="fb:app_id" content="137961485759"><script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Streaming a Virtual Reality Spectator View to My Raspberry Pi 2","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":455,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg","@type":"imageObject"},"datePublished":"2016-05-31T16:44:00-04:00","dateModified":"2017-04-12T13:51:12-04:00","description":"How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/"},"url":"https://www.kyleniewiada.org/blog/2016/05/raspberry-pi-steam-vr-streaming/"}</script><!-- End Jekyll SEO tag --><style amp-custom>
+  <meta charset="utf-8">
+  <title>Streaming a Virtual Reality Spectator View to My Raspberry Pi 2</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#3d256d">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#3d256d">
+
+  <!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. -->
+
+
+  
+  <!-- Extract extra <title> tag. -->
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+    <!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it -->
+    
+    
+
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+
+
+<meta name="author" content="Kyle Niewiada">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR.">
+<meta property="og:description" content="How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR.">
+<link rel="canonical" href="/blog/2016/05/raspberry-pi-steam-vr-streaming/">
+<meta property="og:url" content="/blog/2016/05/raspberry-pi-steam-vr-streaming/">
+<meta property="og:site_name" content="Kyle Niewiada’s Website">
+<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg">
+<meta property="og:image:height" content="455">
+<meta property="og:image:width" content="800">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-05-31T16:44:00-04:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CrypticCitrus">
+<meta name="twitter:creator" content="@CrypticCitrus">
+<meta property="fb:app_id" content="137961485759">
+<script type="application/ld+json">
+{"name":null,"description":"How I used my Raspberry Pi 2 to stream my desktop using Moonlight Embedded for my HTC Vive virtual reality spectator view without interfering with SteamVR.","url":"/blog/2016/05/raspberry-pi-steam-vr-streaming/","headline":"Streaming a Virtual Reality Spectator View to My Raspberry Pi 2","dateModified":"2017-04-12T13:51:12-04:00","datePublished":"2016-05-31T16:44:00-04:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":455,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg","@type":"imageObject"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2016/05/raspberry-pi-steam-vr-streaming/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+
+
+
+  <style amp-custom>
   
   @font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local("Open Sans Light"),local("OpenSans-Light"),url("/assets/fonts/open-sans-v13-latin-300.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-300.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local("Open Sans"),local("OpenSans"),url("/assets/fonts/open-sans-v13-latin-regular.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-regular.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local("Open Sans Semibold"),local("OpenSans-Semibold"),url("/assets/fonts/open-sans-v13-latin-600.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-600.woff") format("woff")}.page-title{text-align:left;font-size:200%;line-height:1.2;font-weight:normal}@media (min-width: 600px){.page-title{font-size:250%}}@media (min-width: 1000px){.page-title{font-size:300%}}.meta{color:#696969;font-weight:300;font-size:120%}@media (min-width: 600px){.meta{font-size:130%}}@media (min-width: 1000px){.meta{font-size:140%}}a.meta{text-align:center;display:block}.title-meta{overflow:auto;color:#696969;font-size:100%}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 .5rem;font-weight:600}a{color:#3d256d}a:hover{color:#1d1234}code,pre{border-radius:.2em;background-color:#f5f5f5;border:0.1em solid #d3d3d3}code{padding:2px 4px;color:#9e023b}pre{padding:16px;overflow-y:hidden}pre code{color:inherit;background-color:transparent;padding:0;border:0}body{margin:0}body,p,li,ul,input,textarea{font-size:1em;line-height:1.58;color:#111;font-family:"Open Sans",Helvetica,Arial,sans-serif}img,video,audio,iframe,object{max-width:100%}main{display:block}.line-separator{height:2px;background:#d3d3d3;margin-top:16px;margin-bottom:16px}.clearfix:after{content:"";display:block;clear:both}.content{max-width:700px;margin-right:auto;margin-left:auto;padding:0 16px}.content img{display:block;margin-left:auto;margin-right:auto}.no-list{list-style:none;padding-left:0;margin-left:0}.left{float:left}.right{float:right}.post-list li{margin-bottom:4em;position:relative}.post-list li:before{content:"";position:absolute;bottom:-2em;left:0;background:#e6e6e6;height:2px;width:60px}.post-list li a{text-decoration:none}.post-list li a:hover{text-decoration:underline}.post-list li .date{color:#696969;font-size:.8em}.header-amp{background:#262626;margin-bottom:16px;padding:16px;text-align:center;font-size:1.4em;font-weight:normal}.header-amp a,.header-amp a:hover{color:#fff;text-decoration:none;overflow:visible}
 
@@ -14,9 +70,16 @@
   
   footer{padding:16px 0}footer .flex-list{position:relative;margin:1em;overflow:hidden;border-top:1px solid #d3d3d3}footer .flex-list ul{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;margin-left:-1px;padding:0}footer .flex-list li{list-style:none;flex-grow:1;flex-basis:auto;margin:.25em 0;padding:0 1em;text-align:center;border-left:1px solid #ccc;background-color:#fff}@media (min-width: 600px){footer .flex-list li{font-size:110%}}footer a{text-decoration:none}footer a:hover{background:#3d256d;color:white}article img+em,article amp-img+em,article video+em{text-align:center;font-size:.9em;font-style:italic;color:#5e5e5e;display:block}article img+p,article amp-img+p{margin-bottom:2em}blockquote{background:#ffa;border-left:10px solid #dc0;margin:1.5em 10px;padding:0.5em 10px}.post-nav{display:flex;flex-direction:column}.post-nav .post-nav-link{height:6em;margin:.1em;overflow:hidden;position:relative}.post-nav .post-nav-link .link-text{z-index:1;position:absolute;height:100%;width:100%;box-sizing:border-box;padding:.5em;font-weight:bold;color:white;background:rgba(0,0,0,0.6)}.post-nav .post-nav-link .previous{text-align:left}.post-nav .post-nav-link .next{text-align:right}.post-nav .post-nav-link .link-image{position:absolute;filter:blur(1px);transition:all 0.35s ease-in-out;top:50%;transform:translateY(-50%);width:auto;height:auto;min-width:100%;min-height:100%}.post-nav .post-nav-link:hover img{transform:translateY(-50%) scale(1.2)}@media all and (min-width: 600px){.post-nav{flex-direction:row}.post-nav .post-nav-link{flex-basis:0;flex-grow:1}}.button-outline{line-height:1.2em;padding:.5em 1.5em;border-radius:4px;text-decoration:none;cursor:pointer}.button-outline{background-color:transparent;border:3px solid #3d256d;color:#3d256d}.button-outline:hover{background-color:#3d256d;color:#fff}.highlight .c{color:#999988;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#999988;font-style:italic}.highlight .cp{color:#999999;font-weight:bold}.highlight .c1{color:#999988;font-style:italic}.highlight .cs{color:#999999;font-weight:bold;font-style:italic}.highlight .gd{color:#000000;background-color:#fdd}.highlight .gd .x{color:#000000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000000;background-color:#dfd}.highlight .gi .x{color:#000000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#445588;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086B3}.highlight .nc{color:#445588;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#990000;font-weight:bold}.highlight .nf{color:#990000;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}
 
-  </style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </style>
 
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async src="https://cdn.ampproject.org/v0.js"></script>
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  
+  
+
+
 
 <body>
 <amp-analytics type="googleanalytics">
@@ -38,13 +101,18 @@
 
 
 <!-- start header -->
-<header><h1 class="header-amp">
+<header>
+  <h1 class="header-amp">
     <a href="/">Kyle Niewiada</a>
   </h1>
-</header><!-- end header -->
+</header>
+<!-- end header -->
 
 
-<main class="content"><article><div class="post_info">
+
+<main class="content">
+  <article>
+    <div class="post_info">
       <h1 class="page-title">Streaming a Virtual Reality Spectator View to My Raspberry Pi 2</h1>
 
       <h2 class="meta">Kyle Niewiada
@@ -53,8 +121,8 @@
 
       
       <div class="featuredImage">
-        <amp-img src="https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg" alt="Raspberry Pi streaming setup behind monitor" width="800" height="455" layout="responsive"><noscript><img src="https://www.kyleniewiada.org/assets/img/2016/05/banner2.jpg" alt="Raspberry Pi streaming setup behind monitor" width="800" height="455"></noscript></amp-img>
-</div>
+        <amp-img src="/assets/img/2016/05/banner2.jpg" alt="Raspberry Pi streaming setup behind monitor" width="800" height="455" layout="responsive"><noscript><img src="/assets/img/2016/05/banner2.jpg" alt="Raspberry Pi streaming setup behind monitor" width="800" height="455"></noscript></amp-img>
+      </div>
       
 
       <div class="line-separator"></div>
@@ -81,15 +149,16 @@
 <h2 id="what-i-used">What I used:</h2>
 
 <ul>
-<li>Raspberry Pi 2 running Raspbian Jessie (May 2016) using NOOBS
+  <li>Raspberry Pi 2 running Raspbian Jessie (May 2016) using NOOBS
     <ul>
-<li>Including peripherals such as micoSD card, HDMI cable, case, mouse, keyboard, USB micro power adapter, a method to connect to home network such as wireless adapter or ethernet.</li>
+      <li>Including peripherals such as micoSD card, HDMI cable, case, mouse, keyboard, USB micro power adapter, a method to connect to home network such as wireless adapter or ethernet.</li>
     </ul>
-</li>
+  </li>
   <li>Computer with Windows 10</li>
   <li>Nvidia GTX 970 graphics card</li>
   <li><a href="https://github.com/irtimmer/moonlight-embedded">Moonlight Embedded</a></li>
 </ul>
+
 <h2 id="setting-up-the-pi">Setting Up the Pi</h2>
 
 <p>The first thing that I did was install the latest Raspbian Jessie release on my Raspberry Pi 2 <a href="https://www.raspberrypi.org/downloads/noobs/">using NOOBS</a>. <s>I originally was using the TP-LINK TL-WDN3200 wireless adapter with my Raspberry Pi to connect on the 5 GHz network. But as I found out later, this was a problematic adapter.</s>  I was able to get the TP-LINK TL-WDN3200 working perfectly. I needed to remove DHCPCD (and the default network manager) and use WICD to manage my wireless adapter as DHCPCD appeared to make some kind of aggressive roaming check every minute creating a severe lag on my wireless signal. Make sure the Raspberry Pi is connected to the Internet before continuing.</p>
@@ -98,25 +167,19 @@
 
 <p>Adding the line:</p>
 
-<div class="language-shell highlighter-rouge">
-<pre class="highlight"><code>deb http://archive.itimmer.nl/raspbian/moonlight jessie main
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://archive.itimmer.nl/raspbian/moonlight jessie main
+</code></pre></div></div>
 
 <p>to this file:</p>
 
-<div class="language-shell highlighter-rouge">
-<pre class="highlight"><code>/etc/apt/sources.list
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/apt/sources.list
+</code></pre></div></div>
 
 <p>And running the following to install Moonlight Embedded.</p>
 
-<div class="language-shell highlighter-rouge">
-<pre class="highlight"><code>apt-get update
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get update
 apt-get install moonlight-embedded
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Once everything was complete, Moonlight Embedded was installed on my Pi and ready to use.</p>
 
@@ -128,12 +191,10 @@ apt-get install moonlight-embedded
 
 <p><amp-img src="/assets/img/2016/05/GFEWindow.png" alt="Adding remote desktop as Nvidia GameStream custom game" width="1200" height="720" layout="responsive"><noscript><img src="/assets/img/2016/05/GFEWindow.png" alt="Adding remote desktop as Nvidia GameStream custom game" width="1200" height="720"></noscript></amp-img><em>Adding remote desktop as a Nvidia GameStream custom game</em></p>
 
-<div class="language-text highlighter-rouge">
-<pre class="highlight"><code>Name: RemoteDesktop
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Name: RemoteDesktop
 Target: "C:\Windows\System32\mstsc.exe"
 Start in: C:\Windows\System32
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="finishing-the-pi">Finishing the Pi</h2>
 
@@ -141,10 +202,8 @@ Start in: C:\Windows\System32
 
 <p>To initiate pairing, type the following on your Raspberry Pi terminal:</p>
 
-<div class="language-shell highlighter-rouge">
-<pre class="highlight"><code>moonlight pair 192.168.1.X
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>moonlight pair 192.168.1.X
+</code></pre></div></div>
 
 <blockquote>
   <p>Replace 192.168.1.X with your PC’s IP, which can be found by typing <code class="highlighter-rouge">ipconfig</code> into the Windows command prompt and matching it with your network interface</p>
@@ -156,18 +215,17 @@ Start in: C:\Windows\System32
 
 <p>Check out the rest of the <a href="https://github.com/irtimmer/moonlight-embedded/tree/master/docs">documentation arguments</a>. Your settings will probably differ.</p>
 
-<div class="language-shell highlighter-rouge">
-<pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
 <span class="c">#Disable screen saver blanking.</span>
 xset s off
 
 <span class="c">#Disable Energy Star features.</span>
-xset -dpms
+xset <span class="nt">-dpms</span>
 
 <span class="c">#Start the Moonlight stream. Make sure to replace the remote address with your own computer's IP.</span>
 <span class="c">#This is probably the only necessary command unless you make other changes to Raspbian</span>
-moonlight stream -1080 -60fps -bitrate 20000 -localaudio -app RemoteDesktop 192.168.1.X
+moonlight stream <span class="nt">-1080</span> <span class="nt">-60fps</span> <span class="nt">-bitrate</span> 20000 <span class="nt">-localaudio</span> <span class="nt">-app</span> RemoteDesktop 192.168.1.X
 
 <span class="c">#Enable screen saver blanking</span>
 xset s off
@@ -177,8 +235,7 @@ xset s on
 
 <span class="c">#Enable Energy Star features.</span>
 xset +dpms
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><em>Don’t forget! Ctrl+Alt+Shift+Q quits the streaming session.</em></p>
 
@@ -215,15 +272,19 @@ xset +dpms
 <p>The stream no longer freezes on me after getting the 5 GHz adapter working and the compression artifacts are extremely minimal. It looks great in 1080p/60 FPS.</p>
 
 
-  </article></main>
+  </article>
+</main>
+
 
 <a href="/blog/2016/05/raspberry-pi-steam-vr-streaming/" class="meta center">Comments are available on the full webpage.</a>
 
 
 <!-- start footer -->
-<footer class="content"><div class="flex-list">
+<footer class="content">
+  <div class="flex-list">
   <ul>
-<li>
+  
+    <li>
       <a href="https://www.linkedin.com/in/kyleniewiada/">LinkedIn</a>
     </li>
   
@@ -250,7 +311,9 @@ xset +dpms
   </ul>
 </div>
 
-</footer><!-- end footer -->
+</footer>
+<!-- end footer -->
+
 
 </body>
 

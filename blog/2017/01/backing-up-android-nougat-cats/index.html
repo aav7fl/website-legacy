@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     
       
-        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2017/01/backing-up-android-nougat-cats/">
+        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2017/01/backing-up-android-nougat-cats/" data-proofer-ignore>
       
     
 
@@ -53,7 +53,7 @@
   
 
   
-    <!-- Begin Jekyll SEO tag v2.2.3 -->
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
 
 
 <meta name="author" content="Kyle Niewiada" />
@@ -73,7 +73,7 @@
 <meta name="twitter:creator" content="@CrypticCitrus" />
 <meta property="fb:app_id" content="137961485759" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Backing Up Android Nougat Easter Egg Cats (No Root)","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":400,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2017/01/banner.jpg","@type":"imageObject"},"datePublished":"2017-01-04T05:37:00-05:00","dateModified":"2017-05-09T07:03:23-04:00","description":"How to back up and restore your cats from the Google Android Nougat Neko Easter Egg without root using ADB.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/"},"url":"https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/"}</script>
+{"name":null,"description":"How to back up and restore your cats from the Google Android Nougat Neko Easter Egg without root using ADB.","url":"https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/","headline":"Backing Up Android Nougat Easter Egg Cats (No Root)","dateModified":"2017-05-09T07:03:23-04:00","datePublished":"2017-01-04T05:37:00-05:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":400,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2017/01/banner.jpg","@type":"imageObject"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2017/01/backing-up-android-nougat-cats/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -165,17 +165,15 @@
 <p>After little bit of research, I found that ADB has this nifty built-in feature that can <a href="https://wiki.gentoo.org/wiki/Android/adb">backup applications</a> and their data without root.
 I threw on USB debugging, connected my phone to the computer, and wrote the following line to back up my Android Nougat Cats with a script.</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">adb</span> <span class="n">backup</span> <span class="o">-</span><span class="n">f</span> <span class="no">C</span><span class="p">:\</span><span class="no">CatsBackup_</span><span class="o">%</span><span class="n">date</span><span class="ss">:~</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="o">%%</span><span class="n">date</span><span class="ss">:~</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="o">%%</span><span class="n">date</span><span class="ss">:~</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="o">%</span><span class="p">.</span><span class="nf">ab</span> <span class="n">com</span><span class="p">.</span><span class="nf">android</span><span class="p">.</span><span class="nf">egg</span> <span class="o">-</span><span class="nb">system</span>
-</code></pre>
-</div>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">adb</span> <span class="n">backup</span> <span class="o">-</span><span class="n">f</span> <span class="no">C</span><span class="p">:\</span><span class="no">CatsBackup_</span><span class="o">%</span><span class="n">date</span><span class="ss">:~</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="o">%%</span><span class="n">date</span><span class="ss">:~</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="o">%%</span><span class="n">date</span><span class="ss">:~</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="o">%</span><span class="p">.</span><span class="nf">ab</span> <span class="n">com</span><span class="p">.</span><span class="nf">android</span><span class="p">.</span><span class="nf">egg</span> <span class="o">-</span><span class="nb">system</span>
+</code></pre></div></div>
 
 <p>When the command above is run in Windows Command Prompt, a few screens will appear on the phone to confirm the backup and possibly enter a password to encrypt it. ADB will create a small file with today’s date on my C: drive named <code class="highlighter-rouge">CatsBackup_20170104.ab</code> (January 04, 2017) and it will contain the backup data for my cats. If you’re not using Windows Command Prompt, go ahead and change the file name to whatever you’d like. I just wanted to make it scriptable for myself.</p>
 
 <p>To restore, simply run:</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">adb</span> <span class="n">restore</span> <span class="no">C</span><span class="p">:\</span><span class="no">CatsBackup_20170104</span><span class="p">.</span><span class="nf">ab</span>
-</code></pre>
-</div>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">adb</span> <span class="n">restore</span> <span class="no">C</span><span class="p">:\</span><span class="no">CatsBackup_20170104</span><span class="p">.</span><span class="nf">ab</span>
+</code></pre></div></div>
 
 <p>I had a few issues at first where it wouldn’t restore properly. But after the data was erased for the Easter Egg, I was able to successfully restore one of my backups. That could just be my luck, and others might succeed restoring it over their current cat collection on the first try. But if you’re looking to back up your cat collection, this looks like the way to go. You should be able to restore this on any phone (Not sure how it will handle it on a newer version of Android though).</p>
 
@@ -194,7 +192,7 @@ I threw on USB debugging, connected my phone to the computer, and wrote the foll
     <a class="post-nav-link" href="/blog/2016/07/fixing-no-google-profile-for-contact/">
     <div class="link-text previous">&laquo;&nbsp;Fixing 'No Google Profile for Contact'</div>
     
-      <img class="link-image" src="https://www.kyleniewiada.org/assets/img/2016/07/banner2.jpg" alt="Previous Article">
+      <img class="link-image" src="/assets/img/2016/07/banner2.jpg" alt="Previous Article">
     
     </a>
   
