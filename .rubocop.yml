@@ -13,10 +13,10 @@ Metrics/MethodLength:
 Style/Documentation:
   Enabled: false
 
-Style/FileName:
+Naming/FileName:
   Enabled: false
 
-Style/IndentHeredoc:
+Layout/IndentHeredoc:
   Exclude:
     - spec/**/*
 

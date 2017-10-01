@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     {% if page.layout == 'post' %}
       {% unless page.skip_amp %}
-        <link rel="amphtml" href="{{ page.url | prepend: site.ampdir | prepend: site.url }}">
+        <link rel="amphtml" href="{{ page.url | prepend: site.ampdir | prepend: site.url }}" data-proofer-ignore>
       {% endunless %}
     {% endif %}
 

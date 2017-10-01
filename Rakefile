@@ -54,11 +54,13 @@ task :html_proofer do
     check_opengraph: 'true',
     file_ignore: [%r{_site/amp/.*}], # Ignore AMP. Handled by AMP-Validator
     http_status_ignore: [999], # `999 No Error` from LinkedIn
-    internal_domains: ['www.kyleniewiada.org', 'https://www.kyleniewiada.org'],
+    internal_domains: ['www.kyleniewiada.org'],
     url_ignore:
     [
-      %r{.*discussions.apple.com/.*}, # Apple blocking Travis CI/typhoeus
-      %r{.*/#comment-.*} # Internal Disqus comments
+      %r{.*apple.com/.*}, # Apple blocking Travis CI/typhoeus
+      %r{.*savaslabs.com/.*}, # SavasLabs blocking Travis CI/typhoeus
+      %r{.*/#comment-.*}, # Internal Disqus comments
+      %r{https://www.kyleniewiada.org/amp/.*} # Interal AMP Pages.
     ]
   ).run
 end
@@ -67,7 +69,7 @@ desc 'Test website AMP validation'
 task :amp do
   puts 'Running AMP Validator...'.yellow.bold
   amp_dir = '_site/amp'
-  system("find #{amp_dir} -iname *.html | xargs -L1 amphtml-validator")
+  system("find #{amp_dir} -iname '*.html' | xargs -L1 amphtml-validator")
   if $CHILD_STATUS.exitstatus.zero?
     puts 'AMP Validator finished successfully.'.green
   else
