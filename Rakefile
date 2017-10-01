@@ -54,7 +54,7 @@ task :html_proofer do
     check_opengraph: 'true',
     file_ignore: [%r{_site/amp/.*}], # Ignore AMP. Handled by AMP-Validator
     http_status_ignore: [999], # `999 No Error` from LinkedIn
-    internal_domains: ['www.kyleniewiada.org'],
+    internal_domains: ['www.kyleniewiada.org', 'https://www.kyleniewiada.org'],
     url_ignore:
     [
       %r{.*discussions.apple.com/.*}, # Apple blocking Travis CI/typhoeus
@@ -95,7 +95,7 @@ end
 desc 'Run all tests'
 task :test do
   Rake::Task['build'].invoke
-  Rake::Task['json'].invoke
+  # Rake::Task['json'].invoke
   Rake::Task['rubocop'].invoke
   Rake::Task['html_proofer'].invoke
   Rake::Task['amp'].invoke

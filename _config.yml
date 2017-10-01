@@ -46,7 +46,7 @@ exclude:
   - spec
   - vendor
 
-gems:
+plugins:
   - amp-jekyll
   - jekyll-feed
   - jekyll-gist

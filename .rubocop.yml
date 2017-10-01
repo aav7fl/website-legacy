@@ -1,8 +1,12 @@
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
 Metrics/LineLength:
   Exclude:
     - spec/**/*
 
-Metrics/BlockLength:
+Metrics/MethodLength:
   Exclude:
     - spec/**/*
 
