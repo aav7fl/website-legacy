@@ -24,7 +24,7 @@ RSpec::Matchers.define :be_valid_json_ld do |_expected|
     response = Net::HTTP.post_form(url, params)
 
     if response.code == '302'
-      raise StandardError::UserLimitedError, 'This account has likely become temporarily rate limited. (Response code 302).'
+      raise UserLimitedError, 'This account has likely become temporarily rate limited. (Response code 302).'
     end
 
     JSON.parse(response.body.split("\n")[1])
