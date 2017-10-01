@@ -94,10 +94,18 @@ task :rubocop do
   RuboCop::RakeTask.new
 end
 
+desc 'Run all tests except the JSON validator'
+task :local do
+  Rake::Task['build'].invoke
+  Rake::Task['rubocop'].invoke
+  Rake::Task['html_proofer'].invoke
+  Rake::Task['amp'].invoke
+end
+
 desc 'Run all tests'
 task :test do
   Rake::Task['build'].invoke
-  # Rake::Task['json'].invoke
+  Rake::Task['json'].invoke
   Rake::Task['rubocop'].invoke
   Rake::Task['html_proofer'].invoke
   Rake::Task['amp'].invoke

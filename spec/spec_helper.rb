@@ -18,7 +18,7 @@ RSpec::Matchers.define :be_valid_json_ld do |_expected|
   end
 
   def validate_json_ld(html)
-    sleep(3) # Prevent getting rate limited by Google.
+    sleep(rand(2..5)) # Prevent getting rate limited by Google.
     params = { 'html' => html }
     url = URI.parse('https://search.google.com/structured-data/testing-tool/validate')
     response = Net::HTTP.post_form(url, params)
