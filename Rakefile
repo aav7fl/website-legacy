@@ -97,7 +97,7 @@ end
 desc 'Run all tests except the JSON validator'
 task :test do
   Rake::Task['build'].invoke
-  Rake::Task['json'].invoke
+  # Rake::Task['json'].invoke
   Rake::Task['rubocop'].invoke
   Rake::Task['html_proofer'].invoke
   Rake::Task['amp'].invoke
