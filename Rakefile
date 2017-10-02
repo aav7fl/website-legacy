@@ -94,7 +94,7 @@ task :rubocop do
   RuboCop::RakeTask.new
 end
 
-desc 'Run all tests'
+desc 'Run all tests except the JSON validator'
 task :test do
   Rake::Task['build'].invoke
   # Rake::Task['json'].invoke
