@@ -31,6 +31,10 @@ permalink: /resume/
 
 <div class="date">Jun 2017 - Present</div>
 
+- Provide unique digital dialogue opportunities for customers to place orders with an AI agent using only their voice
+- Capture customers' interests with web-based recipe tools with Spring Boot and WebLogic
+- Create custom integration jobs between different company platforms 
+
 ### Consultant at Hepfer & Associates, PLLC
 
 <div class="date">Sep 2016 - Jun 2017</div>
