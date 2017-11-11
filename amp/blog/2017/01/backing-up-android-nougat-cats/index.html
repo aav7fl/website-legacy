@@ -53,7 +53,7 @@
 <meta name="twitter:creator" content="@CrypticCitrus">
 <meta property="fb:app_id" content="137961485759">
 <script type="application/ld+json">
-{"name":null,"description":"How to back up and restore your cats from the Google Android Nougat Neko Easter Egg without root using ADB.","url":"/blog/2017/01/backing-up-android-nougat-cats/","headline":"Backing Up Android Nougat Easter Egg Cats (No Root)","dateModified":"2017-05-09T07:03:23-04:00","datePublished":"2017-01-04T05:37:00-05:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":400,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2017/01/banner.jpg","@type":"imageObject"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2017/01/backing-up-android-nougat-cats/"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"How to back up and restore your cats from the Google Android Nougat Neko Easter Egg without root using ADB.","url":"/blog/2017/01/backing-up-android-nougat-cats/","headline":"Backing Up Android Nougat Easter Egg Cats (No Root)","dateModified":"2017-11-11T11:16:43-05:00","datePublished":"2017-01-04T05:37:00-05:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":400,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2017/01/banner.jpg","@type":"imageObject"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2017/01/backing-up-android-nougat-cats/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -117,7 +117,7 @@
 
       <h2 class="meta">Kyle Niewiada
 
-      <h3 class="meta">January 04, 2017 | 6 Minute Read</h3>
+      <h3 class="meta">January 04, 2017 | 7 Minute Read</h3>
 
       
       <div class="featuredImage">
@@ -166,6 +166,14 @@ I threw on USB debugging, connected my phone to the computer, and wrote the foll
 <blockquote>
   <p>Update May 9, 2017: WolfLeader116 wrote a really nice batch script to simplify the process of backing up/restoring and posted it on Pastebin (<a href="https://pastebin.com/59LnfS7M">https://pastebin.com/59LnfS7M</a>). Check out their <a href="/blog/2017/01/backing-up-android-nougat-cats/#comment-3295881956">explanation in the comments</a> below.</p>
 </blockquote>
+
+<blockquote>
+  <p>Update November 11, 2017: I recently upgraded my phone to the Pixel 2 and it must have been a weird upgrade process because my Neko game was a frozen-like state. This is because the activation activity had not occurred so the game was not allowed to run. To manually activate the game on Android Oreo, you just need to run the following ADB Shell command. A little cat will pop up on the bottom of your screen like a toast notification and you should be good to go (except the notifications when you find a cat are broken/sharing the cat crashes the app after it successfully exports).</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb shell am start -n com.android.egg/.neko.NekoActivationActivity
+</code></pre></div></div>
+
 
 
   </article>
