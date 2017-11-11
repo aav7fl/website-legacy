@@ -48,3 +48,10 @@ I had a few issues at first where it wouldn't restore properly. But after the da
 ![Dark red cat from Android Nougat Easter Egg](/assets/img/2017/01/velvetcat.png)*Velvet--for obvious reasons*
 
 > Update May 9, 2017: WolfLeader116 wrote a really nice batch script to simplify the process of backing up/restoring and posted it on Pastebin ([https://pastebin.com/59LnfS7M](https://pastebin.com/59LnfS7M)). Check out their [explanation in the comments](/blog/2017/01/backing-up-android-nougat-cats/#comment-3295881956) below.
+
+> Update November 11, 2017: I recently upgraded my phone to the Pixel 2 and it must have been a weird upgrade process because my Neko game was a frozen-like state. This is because the activation activity had not occurred so the game was not allowed to run. To manually activate the game on Android Oreo, you just need to run the following ADB Shell command. A little cat will pop up on the bottom of your screen like a toast notification and you should be good to go (except the notifications when you find a cat are broken/sharing the cat crashes the app after it successfully exports).
+
+```
+adb shell am start -n com.android.egg/.neko.NekoActivationActivity
+```
+
