@@ -14,13 +14,13 @@ description: "How I added a rocker in-line power switch into my 10 foot USB 2.0 
 
 I had a USB microphone that was plugged into my computer; it was on at all times. If I was watching a movie, the blue glow from beneath the microphone mesh would illuminate my desk.
 
-Rather than wear out the durability of my USB connector with 1,500 mating cycles [\[1\]](http://www.usb.org/developers/docs/devclass_docs/CabConn20.pdf) [\[2\]](https://gct.co/usb), I decided to add an in-line power switch to the USB cable. My idea was to add the same kind of switch used in retrofitting old lamps.
+Rather than wear out the durability of my USB connector with 1,500 mating cycles [\[1\]](https://en.wikipedia.org/wiki/USB) [\[2\]](https://gct.co/usb), I decided to add an in-line power switch to the USB cable. My idea was to add the same kind of switch used in retrofitting old lamps.
 
 I am almost positive (*electric joke*) that most people have done something similar to this before. When I take a quick look on Amazon, I can find USB micro cables with in-line power switches. However, none for USB 2.0 A->B connectors. So I made one myself.
 
 The USB 2.0 specification layout gave me a definition to what each wire inside the cable should be (assuming I can’t guess). The red wire carried the power, and that was the wire I was going to use in my switch. The black wire was the ground, the green wire was for data in positive, and the white wire was for data in negative.
 
-![USB 2.0 specification layout](/assets/img/2016/03/layout.png)*[http://www.usb.org/developers/docs/ecn1.pdf](http://www.usb.org/developers/docs/ecn1.pdf)*
+![USB 2.0 specification layout](/assets/img/2016/03/layout.png)*[https://en.wikipedia.org/wiki/USB](https://en.wikipedia.org/wiki/USB)*
 
 I used my X-Acto knife with \#2 blades and wire strippers to tear open the shielding on a cable and strip away the wire insulation. I soldered the red wires to the switch connectors, filled it with hot glue, surrounded the edges with electric tape to act like an overmold, and threw it all together.
 
