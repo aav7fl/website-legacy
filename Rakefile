@@ -53,8 +53,8 @@ task :html_proofer do
     check_html: 'true',
     check_opengraph: 'true',
     file_ignore: [%r{_site/amp/.*}], # Ignore AMP. Handled by AMP-Validator
-    http_status_ignore: [999], # `999 No Error` from LinkedIn
     internal_domains: ['www.kyleniewiada.org'],
+    only_4xx: 'true', # Sick of other random http codes. 
     url_ignore:
     [
       %r{.*apple.com/.*}, # Apple blocking Travis CI/typhoeus
