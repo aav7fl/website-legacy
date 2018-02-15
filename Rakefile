@@ -54,7 +54,7 @@ task :html_proofer do
     check_opengraph: 'true',
     file_ignore: [%r{_site/amp/.*}], # Ignore AMP. Handled by AMP-Validator
     internal_domains: ['www.kyleniewiada.org'],
-    only_4xx: 'true', # Sick of other random http codes. 
+    only_4xx: 'true', # Sick of other random http codes.
     url_ignore:
     [
       %r{.*apple.com/.*}, # Apple blocking Travis CI/typhoeus
