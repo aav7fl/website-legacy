@@ -5,6 +5,9 @@ branches:
   - master
 node_js:
   - '6.1'
+  - '7'  
+  - '8'  
+  - '9'
   - '10'
 cache:
   directories:
