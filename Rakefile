@@ -61,6 +61,7 @@ task :html_proofer do
       %r{.*savaslabs.com/.*}, # SavasLabs blocking Travis CI/typhoeus
       %r{.*/#comment-.*}, # Internal Disqus comments
       %r{.*pj64-emu.com/.*}, # PJ-64 has weird SSL that fail HTML Proofer
+      %r{.*kodewerx.org/.*}, # This site responses weirdly..
       %r{https://www.kyleniewiada.org/amp/.*} # Interal AMP Pages.
     ]
   ).run
