@@ -15,7 +15,7 @@
   "homepage": "https://github.com/aav7fl/aav7fl.github.io#readme",
   "devDependencies": {
     "amphtml-validator": "^1.0.22",
-    "browser-sync": "^2.18.8",
+    "browser-sync": "^2.24.1",
     "gulp": "^3.9.1",
     "gulp-shell": "^0.6.3"
   }
