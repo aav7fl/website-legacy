@@ -22,7 +22,7 @@ env:
 before_install:
   # Workaround for npm which rvm issue https://github.com/travis-ci/travis-ci/issues/5092#issuecomment-245937070
   - if [ -f node_modules/.bin/which ]; then mv node_modules/.bin/which node_modules/.bin/which.backup; fi
-  - rvm install 2.2.6 && rvm use 2.2.6
+  - rvm install 2.5.1 && rvm use 2.5.1
   - if [ -f node_modules/.bin/which.backup ]; then mv node_modules/.bin/which.backup node_modules/.bin/which; fi
 
 install:
