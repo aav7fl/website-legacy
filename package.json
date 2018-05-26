@@ -1,7 +1,7 @@
 {
   "name": "aav7fl.github.io",
   "version": "1.0.3",
-  "description": "https://www.kyleniewiada.org/",
+  "description": "https://kyleniewiada.org/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
