@@ -25,7 +25,7 @@ kramdown:
     table_class: 'rouge-table'
 
 paginate: 5
-url: "https://www.kyleniewiada.org"
+url: "https://kyleniewiada.org"
 baseurl: ""
 
 sass:
