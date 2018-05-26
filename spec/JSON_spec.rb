@@ -11,7 +11,7 @@ RSpec.describe 'Test JSON-LD' do
       "author": {"@type": "Person",
       "name": "Kyle Niewiada"},
       "image": {"@type": "ImageObject",
-      "url": "https://www.kyleniewiada.org/assets/img/banner.png",
+      "url": "https://kyleniewiada.org/assets/img/banner.png",
       "height": 400,
       "width": 700},
       "datePublished": "2017-02-22T05:34:00-05:00",
@@ -20,27 +20,27 @@ RSpec.describe 'Test JSON-LD' do
       "publisher": {"@type": "Organization",
       "name": "Kyle Niewiada",
       "logo": {"@type": "ImageObject",
-      "url": "https://www.kyleniewiada.org/assets/img/logo.png"}},
+      "url": "https://kyleniewiada.org/assets/img/logo.png"}},
       "mainEntityOfPage": {"@type": "WebPage",
-      "@id": "https://www.kyleniewiada.org/blog/test/"},
-      "url": "https://www.kyleniewiada.org/blog/test/"}</script>)
+      "@id": "https://kyleniewiada.org/blog/test/"},
+      "url": "https://kyleniewiada.org/blog/test/"}</script>)
     end
 
     let(:html_invalid) do
       %(<script type="application/ld+json">
       {"@context": "http://schema.org",
       "image": {"@type": "ImageObject",
-      "url": "https://www.kyleniewiada.org/assets/img/banner.png",
+      "url": "https://kyleniewiada.org/assets/img/banner.png",
       "height": 400,
       "width": 700},
       "description": "Test description",
       "publisher": {"@type": "Organization",
       "name": "Kyle Niewiada",
       "logo": {"@type": "ImageObject",
-      "url": "https://www.kyleniewiada.org/assets/img/logo.png"}},
+      "url": "https://kyleniewiada.org/assets/img/logo.png"}},
       "mainEntityOfPage": {"@type": "WebPage",
-      "@id": "https://www.kyleniewiada.org/blog/test/"},
-      "url": "https://www.kyleniewiada.org/blog/test/"}</script>)
+      "@id": "https://kyleniewiada.org/blog/test/"},
+      "url": "https://kyleniewiada.org/blog/test/"}</script>)
     end
 
     it 'validates' do
