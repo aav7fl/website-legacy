@@ -4,7 +4,7 @@
 
 ![Kyle Niewiada logo](https://cloud.githubusercontent.com/assets/3487107/22938412/b6252638-f2a9-11e6-9623-603320928bac.png)
 
-https://kyleniewiada.org/
+https://www.kyleniewiada.org/
 
 This is my personal website that I tweak and write about projects I have worked on.
 
