@@ -1,0 +1,332 @@
+<!doctype html>
+<html amp lang="en">
+
+
+
+  <meta charset="utf-8">
+  <title>Bringing Home Automation Back Home</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#3d256d">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#3d256d">
+
+  <!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. -->
+
+
+  
+  <!-- Extract extra <title> tag. -->
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+    <!-- Assumes AmpDir is always first instance in page.url based on how amp-jekyll builds it -->
+    
+    
+
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+
+<meta name="generator" content="Jekyll v3.8.2">
+
+<meta name="author" content="Kyle Niewiada">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="How I am bringing home automation back home to control devices in my apartment with the help of Home Assistant and Node-RED.">
+<meta property="og:description" content="How I am bringing home automation back home to control devices in my apartment with the help of Home Assistant and Node-RED.">
+<link rel="canonical" href="/blog/2018/06/bringing-home-automation-back-home/">
+<meta property="og:url" content="/blog/2018/06/bringing-home-automation-back-home/">
+<meta property="og:site_name" content="Kyle Niewiada’s Website">
+<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2018/06/banner.png">
+<meta property="og:image:height" content="322">
+<meta property="og:image:width" content="700">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-06-03T16:47:00-04:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CrypticCitrus">
+<meta name="twitter:creator" content="@CrypticCitrus">
+<meta property="fb:app_id" content="137961485759">
+<script type="application/ld+json">
+{"description":"How I am bringing home automation back home to control devices in my apartment with the help of Home Assistant and Node-RED.","image":{"height":322,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2018/06/banner.png","@type":"imageObject"},"headline":"Bringing Home Automation Back Home","dateModified":"2018-06-03T16:49:09-04:00","@type":"BlogPosting","datePublished":"2018-06-03T16:47:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2018/06/bringing-home-automation-back-home/"},"url":"/blog/2018/06/bringing-home-automation-back-home/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"author":{"@type":"Person","name":"Kyle Niewiada"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+
+
+
+  <style amp-custom>
+  
+  @font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local("Open Sans Light"),local("OpenSans-Light"),url("/assets/fonts/open-sans-v13-latin-300.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-300.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local("Open Sans"),local("OpenSans"),url("/assets/fonts/open-sans-v13-latin-regular.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-regular.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local("Open Sans Semibold"),local("OpenSans-Semibold"),url("/assets/fonts/open-sans-v13-latin-600.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-600.woff") format("woff")}.page-title{text-align:left;font-size:200%;line-height:1.2;font-weight:normal}@media (min-width: 600px){.page-title{font-size:250%}}@media (min-width: 1000px){.page-title{font-size:300%}}.meta{color:#696969;font-weight:300;font-size:120%}@media (min-width: 600px){.meta{font-size:130%}}@media (min-width: 1000px){.meta{font-size:140%}}a.meta{text-align:center;display:block}.title-meta{overflow:auto;color:#696969;font-size:100%}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 .5rem;font-weight:600}a{color:#3d256d}a:hover{color:#1d1234}code,pre{border-radius:.2em;background-color:#f5f5f5;border:0.1em solid #d3d3d3}code{padding:2px 4px;color:#9e023b}pre{padding:16px;overflow-y:hidden}pre code{color:inherit;background-color:transparent;padding:0;border:0}body{margin:0}body,p,li,ul,input,textarea{font-size:1em;line-height:1.58;color:#111;font-family:"Open Sans",Helvetica,Arial,sans-serif}img,video,audio,iframe,object{max-width:100%}main{display:block}.line-separator{height:2px;background:#d3d3d3;margin-top:16px;margin-bottom:16px}.clearfix:after{content:"";display:block;clear:both}.content{max-width:700px;margin-right:auto;margin-left:auto;padding:0 16px}.content img{display:block;margin-left:auto;margin-right:auto}.no-list{list-style:none;padding-left:0;margin-left:0}.left{float:left}.right{float:right}.post-list li{margin-bottom:4em;position:relative}.post-list li:before{content:"";position:absolute;bottom:-2em;left:0;background:#e6e6e6;height:2px;width:60px}.post-list li a{text-decoration:none}.post-list li a:hover{text-decoration:underline}.post-list li .date{color:#696969;font-size:.8em}.header-amp{background:#262626;margin-bottom:16px;padding:16px;text-align:center;font-size:1.4em;font-weight:normal}.header-amp a,.header-amp a:hover{color:#fff;text-decoration:none;overflow:visible}
+
+
+  
+
+  
+  footer{padding:16px 0}footer .flex-list{position:relative;margin:1em;overflow:hidden;border-top:1px solid #d3d3d3}footer .flex-list ul{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;margin-left:-1px;padding:0}footer .flex-list li{list-style:none;flex-grow:1;flex-basis:auto;margin:.25em 0;padding:0 1em;text-align:center;border-left:1px solid #ccc;background-color:#fff}@media (min-width: 600px){footer .flex-list li{font-size:110%}}footer a{text-decoration:none}footer a:hover{background:#3d256d;color:white}article img+em,article amp-img+em,article video+em{text-align:center;font-size:.9em;font-style:italic;color:#5e5e5e;display:block}article img+p,article amp-img+p{margin-bottom:2em}blockquote{background:#ffa;border-left:10px solid #dc0;margin:1.5em 10px;padding:0.5em 10px}.post-nav{display:flex;flex-direction:column}.post-nav .post-nav-link{height:6em;margin:.1em;overflow:hidden;position:relative}.post-nav .post-nav-link .link-text{z-index:1;position:absolute;height:100%;width:100%;box-sizing:border-box;padding:.5em;font-weight:bold;color:white;background:rgba(0,0,0,0.6)}.post-nav .post-nav-link .previous{text-align:left}.post-nav .post-nav-link .next{text-align:right}.post-nav .post-nav-link .link-image{position:absolute;filter:blur(1px);transition:all 0.35s ease-in-out;top:50%;transform:translateY(-50%);width:auto;height:auto;min-width:100%;min-height:100%}.post-nav .post-nav-link:hover img{transform:translateY(-50%) scale(1.2)}@media all and (min-width: 600px){.post-nav{flex-direction:row}.post-nav .post-nav-link{flex-basis:0;flex-grow:1}}.button-outline{line-height:1.2em;padding:.5em 1.5em;border-radius:4px;text-decoration:none;cursor:pointer}.button-outline{background-color:transparent;border:3px solid #3d256d;color:#3d256d}.button-outline:hover{background-color:#3d256d;color:#fff}.highlight .c{color:#999988;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#999988;font-style:italic}.highlight .cp{color:#999999;font-weight:bold}.highlight .c1{color:#999988;font-style:italic}.highlight .cs{color:#999999;font-weight:bold;font-style:italic}.highlight .gd{color:#000000;background-color:#fdd}.highlight .gd .x{color:#000000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000000;background-color:#dfd}.highlight .gi .x{color:#000000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#445588;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086B3}.highlight .nc{color:#445588;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#990000;font-weight:bold}.highlight .nf{color:#990000;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}
+
+  </style>
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  
+  
+
+
+
+<body>
+<amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-37567352-1"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+</amp-analytics>
+
+
+
+<!-- start header -->
+<header>
+  <h1 class="header-amp">
+    <a href="/">Kyle Niewiada</a>
+  </h1>
+</header>
+<!-- end header -->
+
+
+
+<main class="content">
+  <article>
+    <div class="post_info">
+      <h1 class="page-title">Bringing Home Automation Back Home</h1>
+
+      <h2 class="meta">Kyle Niewiada
+
+      <h3 class="meta">June 03, 2018 | 12 Minute Read</h3>
+
+      
+      <div class="featuredImage">
+        <amp-img src="/assets/img/2018/06/banner.png" alt="My Home Assistant dashboard" width="700" height="322" layout="responsive"><noscript><img src="/assets/img/2018/06/banner.png" alt="My Home Assistant dashboard" width="700" height="322"></noscript></amp-img>
+      </div>
+      
+
+      <div class="line-separator"></div>
+
+    </h2>
+</div>
+
+    <p>I’m a big fan of automation. Repetitive tasks annoy me and I try to find the best way to optimize activities. Earlier this year when Google Home rolled out custom routines, a weird behavior involving lights and routines prevented me from syncing my new Philips Hue bulbs with Google Home. This was a huge pain point for me because I always use my voice to command my lights.</p>
+
+<p>My attempt at solving this problem led me into a massive project of shifting control from my smart devices wherever possible into my own hands. Granted there are still external services that are still required for a few of my devices, but this got me closer to full control. My solution was using the open source project <a href="https://www.home-assistant.io/">Home Assistant</a>.</p>
+
+<p>Home Assistant is an automation platform that has +1,000 components for different devices and services. It’s written in Python3, has an <a href="https://community.home-assistant.io/">active community</a>, and openly accepts contributions into its project. Home Assistant’s large library of compatible devices made it easy for me to hook up all of my smart plugs, smart lights, and other silly <em>smart</em> devices. I personally run Home Assistant on <a href="https://github.com/home-assistant/hassio#readme">Hass.io</a>, a Docker-based system that handles Home Assistant updates and runs very well on my Raspberry Pi 3.</p>
+
+<div class="line-separator"></div>
+<h2>Table of Contents</h2>
+<div class="table-of-contents">
+<ul id="markdown-toc">
+  <li>
+<a href="#fixing-my-lack-of-light-control" id="markdown-toc-fixing-my-lack-of-light-control">Fixing My Lack of Light Control</a>    <ul>
+      <li><a href="#step-one" id="markdown-toc-step-one">Step One</a></li>
+      <li><a href="#step-two" id="markdown-toc-step-two">Step Two</a></li>
+    </ul>
+  </li>
+  <li><a href="#what-did-i-really-fix" id="markdown-toc-what-did-i-really-fix">What Did I Really Fix?</a></li>
+  <li>
+<a href="#automating-mundane-tasks" id="markdown-toc-automating-mundane-tasks">Automating Mundane Tasks</a>    <ul>
+      <li>
+<a href="#sample-automations" id="markdown-toc-sample-automations">Sample Automations</a>        <ul>
+          <li><a href="#dim-the-lights-with-media-playback" id="markdown-toc-dim-the-lights-with-media-playback">Dim the Lights With Media Playback</a></li>
+          <li><a href="#improving-the-philips-hue-colorloop" id="markdown-toc-improving-the-philips-hue-colorloop">Improving the Philips Hue Colorloop</a></li>
+          <li><a href="#welcoming-each-occupant-home" id="markdown-toc-welcoming-each-occupant-home">Welcoming Each Occupant Home</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#additional-useful-home-assistant-components" id="markdown-toc-additional-useful-home-assistant-components">Additional Useful Home Assistant Components</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+</div>
+<div class="line-separator"></div>
+
+<h2 id="fixing-my-lack-of-light-control">Fixing My Lack of Light Control</h2>
+
+<p>When I first started working with Home Assistant, I wanted to solve only one problem. Controlling my lights using my voice. This was a two stage process. The first was connecting my lights to Home Assistant, and the second step was connecting a voice interface to Home Assistant.</p>
+
+<h3 id="step-one">Step One</h3>
+
+<p>Connecting up Home Assistant to my Hue Lights took less than five minutes. As soon as Home Assistant started up, its <a href="https://www.home-assistant.io/components/discovery/">discovery service</a> automatically prompted to authenticate locally on my network with my Hue hub. What a piece of cake. I could now control the lights from the Home Assistant web interface.</p>
+
+<h3 id="step-two">Step Two</h3>
+
+<p>Commanding my lights using my voice was another simple-ish task. All I needed to do was set up a Google Actions project and connect it to the <a href="https://www.home-assistant.io/components/google_assistant/">Google Assistant</a> component. I was already  familiar with Actions on Google which made hooking this up trivial. However, I don’t use this exact component anymore because Actions on Google unpublishes <em>test projects</em> after a few days (which breaks my syncing). I have since switched to using Google Assistant via the <a href="https://www.home-assistant.io/cloud/google_assistant/">Home Assistant Cloud</a> component.</p>
+
+<h2 id="what-did-i-really-fix">What Did I Really Fix?</h2>
+
+<p><amp-img src="/assets/img/2018/06/xkcd_automation.png" alt="xkcd Automation" width="404" height="408" layout="responsive"><noscript><img src="/assets/img/2018/06/xkcd_automation.png" alt="xkcd Automation" width="404" height="408"></noscript></amp-img><em>Automation (<a href="https://xkcd.com/1871/">Source</a>)</em></p>
+
+<p>I think understand what you’re about to say; “Kyle, I thought you were trying to get away from the cloud, not build your own components in the cloud!” To that I would say you are absolutely correct! All I did was shift the cloud problem from my Google Home… back to my Google Home… huh. But remember, I can still control my devices locally if I pull up the web interface on my network… but then I could just open the Hue App on my phone. <em>What was I solving by doing this again?</em></p>
+
+<p>At the very least, I fixed being able to control my lights using my voice. Even if I’m using the exact same vocal interface. Plus, now I had this wonderful automation tooling that I could use streamline tasks in my apartment. Let’s break down what I use to help with my automations and a few of my favorite examples.</p>
+
+<h2 id="automating-mundane-tasks">Automating Mundane Tasks</h2>
+
+<p>When I first started working on automation with Home Assistant, I was using its built-in YAML files to carry out tasks. I learned very quickly that this was extremely tedious as I had to reload my Home Assistant automations whenever I wanted to test them. It was also incredibly difficult to debug these types of automations. That’s when I came across the <a href="https://github.com/AYapejian/node-red-contrib-home-assistant">Home Assistant nodes</a> for Node-RED.</p>
+
+<p>The idea behind using Node-RED is that Home Assistant will maintain all of the entity states and services while Node-RED controls the conditions and behaviors from those state changes. The Home Assistant node allows me to access the Home Assistant API directly within Node-RED.</p>
+
+<p>For example, my vacuuming automation inside Node-RED checks with Home Assistant to see whether or not the house is occupied or empty. When Node-RED detects that the occupancy status from Home Assistant is empty, it continues to check if the current time is within the vacuum scheduler timeframe. If it is, send a service call to Home Assistant telling the vacuum to start. This flow can be seen below.</p>
+
+<p><amp-img src="/assets/img/2018/06/automation_vacuum.png" alt="Node-RED Vacuum Flow" width="800" height="267" layout="responsive"><noscript><img src="/assets/img/2018/06/automation_vacuum.png" alt="Node-RED Vacuum Flow" width="800" height="267"></noscript></amp-img><em>Node-RED Vacuum Flow</em></p>
+
+<p>If you think about that xkcd comic from earlier, this is a ridiculously complicated flow when I could just ignore the vacuum automation and use its built-in scheduling. But that’s not how we do things around here, is it?</p>
+
+<p>There are a few other notes on this vacuum flow. I give my vacuum the courtesy of turning on all the lights when it starts running so it can see objects in a clear view. One may also notice the <code class="highlighter-rouge">node-red-contrib-persist</code> node which maintains the last known state between flow redeploys. I also have an <code class="highlighter-rouge">rbe</code> (Report by Exception) node which allows me to ignore repeated commands. This ensures that the vacuum doesn’t schedule itself more than once per day by accident.</p>
+
+<blockquote>
+  <p>Be careful with this one. If you mess up and reset your trigger condition at 1 AM and it starts vacuuming, your significant other will not be very happy when they are awoken by a vacuum and bright lights. <em>Speaking from experience…</em></p>
+</blockquote>
+
+<h3 id="sample-automations">Sample Automations</h3>
+
+<p>Here are a few samples of my favorite automations set up around the apartment.</p>
+
+<h4 id="dim-the-lights-with-media-playback">Dim the Lights With Media Playback</h4>
+
+<ul>
+  <li>Dim the kitchen and living room lights if I am watching something on Plex or Chromecast.
+ On <code class="highlighter-rouge">pause</code>/<code class="highlighter-rouge">stop</code>, restore the lights back to full brightness only if the sun is above a certain horizon angle.
+    <ul>
+      <li>But wait, now if someone is cooking in the kitchen while the other person is trying to watch a show, the cook will have trouble seeing. Ok, insert a <code class="highlighter-rouge">cooking mode</code> <code class="highlighter-rouge">input_boolean</code> to prevent dimming specific lights. Solved.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><amp-img src="/assets/img/2018/06/automation_playback.png" alt="Media Playback Flow" width="800" height="491" layout="responsive"><noscript><img src="/assets/img/2018/06/automation_playback.png" alt="Media Playback Flow" width="800" height="491"></noscript></amp-img><em>Media Playback Flow</em></p>
+
+<h4 id="improving-the-philips-hue-colorloop">Improving the Philips Hue Colorloop</h4>
+
+<ul>
+  <li>Create my own colorloop for Philips Hue bulbs because the built-in API colorloop effect moves nauseatingly fast.</li>
+</ul>
+
+<p><amp-img src="/assets/img/2018/06/automation_colorloop.png" alt="Hue Colorloop Flow" width="643" height="238" layout="responsive"><noscript><img src="/assets/img/2018/06/automation_colorloop.png" alt="Hue Colorloop Flow" width="643" height="238"></noscript></amp-img><em>Hue Colorloop Flow</em></p>
+
+<p>In case you’re wondering what’s inside the <code class="highlighter-rouge">colorwave</code> node, it’s a piece of JavaScript that I hacked together to rotate through the peak color coordinates on each RGB channel for the best looking light. It’s probably more complicated than it needs to be, but breaking it down like this helps me understand what each component of the code is performing. I make use of the <code class="highlighter-rouge">flow</code> variables a lot to keep the configuration parameters easy to change.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">timeout</span> <span class="o">=</span> <span class="nx">flow</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"transitionTime"</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">rainbow</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"#FF0000"</span><span class="p">,</span> <span class="s2">"#FF8000"</span><span class="p">,</span> <span class="s2">"#FFFF00"</span><span class="p">,</span> <span class="s2">"#80FF00"</span><span class="p">,</span> <span class="s2">"#00FF00"</span><span class="p">,</span> <span class="s2">"#00FF80"</span><span class="p">,</span> <span class="s2">"#00FFFF"</span><span class="p">,</span> <span class="s2">"#0080FF"</span><span class="p">,</span> <span class="s2">"#7F00FF"</span><span class="p">,</span> <span class="s2">"#FF00FF"</span><span class="p">,</span> <span class="s2">"#FF007F"</span><span class="p">];</span>
+
+<span class="nx">rainbowPosition</span> <span class="o">=</span> <span class="nx">flow</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"rainbowPosition"</span><span class="p">);</span> <span class="c1">// Flow value that starts at 0.</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">payload</span> <span class="o">===</span> <span class="s2">"on"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">flow</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s2">"rainbowId"</span><span class="p">,</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">sendColors</span><span class="p">,</span> <span class="nx">timeout</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">sendColors</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">checkRainbowPosition</span><span class="p">();</span>
+    <span class="nx">flow</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s2">"rainbowPosition"</span><span class="p">,</span> <span class="nx">flow</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"rainbowPosition"</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nx">node</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span> <span class="na">payload</span><span class="p">:</span> <span class="p">{</span><span class="s2">"on"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="s2">"hex"</span><span class="p">:</span><span class="nx">rainbow</span><span class="p">[</span><span class="nx">flow</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"rainbowPosition"</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">"transitionTime"</span><span class="p">:</span><span class="nx">flow</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"transitionTime"</span><span class="p">)}</span> <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">checkRainbowPosition</span><span class="p">(){</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nx">flow</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"rainbowPosition"</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nx">rainbow</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">flow</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s2">"rainbowPosition"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="welcoming-each-occupant-home">Welcoming Each Occupant Home</h4>
+
+<ul>
+  <li>When someone arrives home, turn on the lights (+ set the bedroom to their favorite color scene), and broadcast their arrival over all Google Home speakers.
+ We also have it set up to turn off all lights and switch to Eco mode if every person has left the apartment.
+    <ul>
+      <li>But what if the other person is sleeping? Then we need to make sure that we add in a <code class="highlighter-rouge">sleeping mode</code> <code class="highlighter-rouge">input_boolean</code> that disables the announcement and prevents changing the bedroom lights.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><amp-img src="/assets/img/2018/06/automation_welcome_home.png" alt="Welcome Home Flow" width="619" height="324" layout="responsive"><noscript><img src="/assets/img/2018/06/automation_welcome_home.png" alt="Welcome Home Flow" width="619" height="324"></noscript></amp-img><em>Welcome Home Flow</em></p>
+
+<h2 id="additional-useful-home-assistant-components">Additional Useful Home Assistant Components</h2>
+
+<ul>
+  <li>
+<a href="https://darksky.net/dev">DarkSky API</a> gathers hyperlocal weather information at the apartment and can be presented on the Home Assistant dashboard.</li>
+  <li>
+<a href="https://www.home-assistant.io/getting-started/presence-detection/">Presence Detection</a> from Home Assistant helps identify who is home or away.</li>
+  <li>
+<a href="https://github.com/pkozul/ha-floorplan">Floorplan for Home Assistant</a> is an interactive tool that allows a user to toggle/open/view entities from Home Assistant on a user created SVG layout of their living space.</li>
+</ul>
+
+<p><amp-img src="/assets/img/2018/06/automation_floorplan.png" alt="Floorplan example" width="400" height="252" layout="responsive"><noscript><img src="/assets/img/2018/06/automation_floorplan.png" alt="Floorplan example" width="400" height="252"></noscript></amp-img><em>Floorplan example</em></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Home Assistant and Node-RED make a wonderful pairing to control smart devices around the domicile. They have fixed many problems for me with applications like the geo-fencing from Hue, slow eco-mode for Nest, and the broken implementation of Google Home routines. Putting control back in the user’s hands of each device allows them to avoid being locked into a single ecosystem, and in some cases avoid concerns about a <a href="https://twitter.com/tweethue/status/1002258308210798592">cloud outage</a> for their devices. This pair makes an excellent start on bringing home automation back home.</p>
+
+
+  </article>
+</main>
+
+
+<a href="/blog/2018/06/bringing-home-automation-back-home/" class="meta center">Comments are available on the full webpage.</a>
+
+
+<!-- start footer -->
+<footer class="content">
+  <div class="flex-list">
+  <ul>
+  
+    <li>
+      <a href="https://www.linkedin.com/in/kyleniewiada/">LinkedIn</a>
+    </li>
+  
+    <li>
+      <a href="https://github.com/aav7fl">GitHub</a>
+    </li>
+  
+    <li>
+      <a href="https://twitter.com/CrypticCitrus">Twitter</a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/user/KyleNiewiada">YouTube</a>
+    </li>
+  
+    <li>
+      <a href="https://kyleniewiada.bandcamp.com/" rel="nofollow">BandCamp</a>
+    </li>
+  
+    <li>
+      <a href="/sitemap/">Sitemap</a>
+    </li>
+  
+  </ul>
+</div>
+
+</footer>
+<!-- end footer -->
+
+
+</body>
+
+</html>
