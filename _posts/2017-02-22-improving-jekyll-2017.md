@@ -78,7 +78,7 @@ I stumbled across this idea from Savas Labs who wrote a blog post last fall on h
 I'm actually a little proud of this, but my build time is now around 1½ minutes, and deploying only takes another 15 seconds. This was accomplished by:
 - Caching Bundler
 - Caching Node_Modules
-- Resolving [RVM and Node_Modules `which` conflict](https://github.com/travis-ci/travis-ci/issues/5092#issuecomment-245937070). This shaved nearly a minute off the build!
+- Resolving [RVM and Node_Modules `which` conflict](https://github.com/aav7fl/aav7fl.github.io/blob/72e003eba56facb762a0bd2ffb79876e5a9e299a/.travis.yml#L23). This shaved nearly a minute off the build!
 
 Read more on [Travis-CI caching docs](https://docs.travis-ci.com/user/caching/).
 
