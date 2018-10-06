@@ -31,6 +31,7 @@ permalink: /resume/
 
 <div class="date">Jun 2017 - Present</div>
 
+- Build and architect a chatbot that switches seamlessly between AI and a human when necessary
 - Provide unique digital dialogue opportunities for customers to place orders with an AI agent using only their voice
 - Capture customers' interests with web-based recipe tools with Spring Boot and WebLogic
 - Create custom integration jobs between different company platforms 
