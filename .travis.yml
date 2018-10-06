@@ -42,5 +42,7 @@ deploy:
 
 notifications:
   email:
+    recipients:
+      - kyle@kyleniewiada.org
     on_success: change
     on_failure: always
