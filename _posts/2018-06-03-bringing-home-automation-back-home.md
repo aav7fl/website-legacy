@@ -109,6 +109,14 @@ function checkRainbowPosition(){
 
 ![Welcome Home Flow](/assets/img/2018/06/automation_welcome_home.png)*Welcome Home Flow*
 
+#### Morning News with a Switch
+
+This one is a bit custom but it should give a cool idea on something to automate. I've found that the local news streams their broadcast online, and it is compatible with my Chromecast. 
+
+Using Node-RED, I can watch for specific button presses of my Hue light switch in the morning between 5:00 AM-7:00 AM. I use that trigger to turn my CEC-friendly TV on and cast the morning news. All with a single button press in my kitchen. 
+
+It really gives me the feeling of living in one of those future movies.
+
 ## Additional Useful Home Assistant Components
 
 - [DarkSky API](https://darksky.net/dev) gathers hyperlocal weather information at the apartment and can be presented on the Home Assistant dashboard.
