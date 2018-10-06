@@ -270,6 +270,8 @@ Lastly, I made a substantial improvements to the CSS, lightened the webpage layo
   - iOS Safari would display the banner with a smokey-white haze when using the Gaussian Blur filter as it somehow conflicted with the background layer. This was resolved by removing the background fill from the SVG and instead handling it with the `<DIV>` `background:`.
 - Added favicon sets (like Apple-Touch-Icon) using [RealFaviconGenerator](https://realfavicongenerator.net/) with updated colors
 
+> I've had a reader mention [WebsitePlanet](https://www.websiteplanet.com/webtools/favicon-generator/) an alternative to RealFaviconGenerator. WebsitePlanet generates a bunch of different sizes at the same time; so keep that in mind if one website does it better than the other.
+
 ## Conclusion
 
 As much as I tried to stay entirely within the GitHub Pages ecosystem, it didn't fit my needs. But that was a good thing. This gave me the chance to check out other build environments and different tools that wouldn't have been in my reach before. This gave me the opportunity to look at other open source projects, to learn about their process, and contribute my own work back.
