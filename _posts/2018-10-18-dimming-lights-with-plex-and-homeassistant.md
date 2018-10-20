@@ -9,12 +9,13 @@ image:
 alt: My Home Assistant dashboard
 published: true
 tag: "small project"
+permalink: /test/apples/
 description: "How I use the new webhooks endpoints added to Home Assistant to trigger dimming the lights when my media starts on Plex."
 ---
 
 Last week, the Home Assistant project launched webhooks triggers. This means a user could create an endpoint could be hit from an external source to trigger an automation.
 
-On this [Home Assistant community post](https://community.home-assistant.io/t/plex-webhooks-wip/73095), rossdargan had this great idea to parse the incoming JSON, and push it back to the local MQTT server so it could be read properly by the automations. 
+On this [Home Assistant community post](https://community.home-assistant.io/t/plex-webhooks-wip/73095), rossdargan had this great idea to parse the incoming JSON, and push it back to the local MQTT server so it could be read properly by the automations.
 
 
 ```yaml
@@ -59,5 +60,5 @@ On this [Home Assistant community post](https://community.home-assistant.io/t/pl
           input_boolean.turn_off
         {% endif %}
     entity_id: input_boolean.plex
-{% endraw %}    
+{% endraw %}
 ```
