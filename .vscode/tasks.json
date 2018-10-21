@@ -6,7 +6,7 @@
         {
             "label": "Serve",
             "type": "gulp",
-            "task": "serve",
+            "task": "default",
             "problemMatcher": [],
             "auto": true
         },
