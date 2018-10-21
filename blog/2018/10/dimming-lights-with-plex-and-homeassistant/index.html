@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#3d256d">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#3d256d">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+      
+        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2018/10/dimming-lights-with-plex-and-homeassistant/" data-proofer-ignore>
+      
+    
+
+    <!-- Messy way to capture custom page title to replace SEO Tags -->
+    
+    
+    <title>How I Dim My Hue Lights with a Plex Webhook</title>
+    <meta property="og:title" content="How I Dim My Hue Lights with a Plex Webhook" />
+
+    <!-- Come and get me RSS readers -->
+    <link type="application/atom+xml" rel="alternate" href="https://www.kyleniewiada.org/feed.xml" title="Kyle Niewiada's Website" />
+
+    <!-- Critical Stylesheet -->
+    <style type="text/css">
+      
+      @font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local("Open Sans Light"),local("OpenSans-Light"),url("/assets/fonts/open-sans-v13-latin-300.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-300.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local("Open Sans"),local("OpenSans"),url("/assets/fonts/open-sans-v13-latin-regular.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-regular.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local("Open Sans Semibold"),local("OpenSans-Semibold"),url("/assets/fonts/open-sans-v13-latin-600.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-600.woff") format("woff")}.page-title{text-align:left;font-size:200%;line-height:1.2;font-weight:normal}@media (min-width: 600px){.page-title{font-size:250%}}@media (min-width: 1000px){.page-title{font-size:300%}}.meta{color:#696969;font-weight:300;font-size:120%}@media (min-width: 600px){.meta{font-size:130%}}@media (min-width: 1000px){.meta{font-size:140%}}a.meta{text-align:center;display:block}.title-meta{overflow:auto;color:#696969;font-size:100%}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 .5rem;font-weight:600}a{color:#3d256d}a:hover{color:#1d1234}code,pre{border-radius:.2em;background-color:#f5f5f5;border:0.1em solid #d3d3d3}code{padding:2px 4px;color:#9e023b}pre{padding:16px;overflow-y:hidden}pre code{color:inherit;background-color:transparent;padding:0;border:0}body{margin:0}body,p,li,ul,input,textarea{font-size:1em;line-height:1.58;color:#111;font-family:"Open Sans",Helvetica,Arial,sans-serif}img,video,audio,iframe,object{max-width:100%}main{display:block}.line-separator{height:2px;background:#d3d3d3;margin-top:16px;margin-bottom:16px}.clearfix:after{content:"";display:block;clear:both}.content{max-width:700px;margin-right:auto;margin-left:auto;padding:0 16px}.content img{display:block;margin-left:auto;margin-right:auto}.no-list{list-style:none;padding-left:0;margin-left:0}.left{float:left}.right{float:right}.post-list li{margin-bottom:4em;position:relative}.post-list li:before{content:"";position:absolute;bottom:-2em;left:0;background:#e6e6e6;height:2px;width:60px}.post-list li a{text-decoration:none}.post-list li a:hover{text-decoration:underline}.post-list li .date{color:#696969;font-size:.8em}.header{background-image:url("/assets/img/banner.svg");background-color:#3a3a3a;background-size:cover;background-position:center center;padding:0;height:auto;margin-bottom:16px}.header .navigation{background:#262626}.header .nav-container{max-width:1000px;margin:0 auto}@media (min-width: 600px){.header{min-height:10em;position:relative;margin-bottom:16px}}nav{height:70px;overflow:hidden}nav ul{margin:0;padding:0;list-style-type:none;max-height:140px;position:relative}nav ul .active{background:#3d256d}nav li{display:inline-block;padding:0}nav a{display:inline-block;padding:0 1em;color:#fff;text-decoration:none;white-space:nowrap;line-height:70px;height:70px}nav a:hover{color:#fff;background-color:#00b2d9}nav li:first-child{left:0;vertical-align:top;font-size:75%}nav li:first-child :hover{color:#fff;background-color:#262626}@media (min-width: 330px){nav li:first-child{font-size:100%}}@media (min-width: 400px){nav li:first-child{font-size:140%}}nav li:last-child{position:absolute;right:0;bottom:70px;background-image:linear-gradient(to right, rgba(38,38,38,0) 0, #262626 2em);padding-left:3em}nav li:nth-last-child(2){display:none}nav#menu:target{height:auto;padding:0}nav#menu:target ul{max-height:none}nav#menu:target li{display:block}nav#menu:target a{display:block;background-color:rgba(255,255,255,0.05)}nav#menu:target li:not(:first-child){margin-top:2px}nav#menu:target li:not(:first-child) a:hover{background-color:#00b2d9}nav#menu:target li:last-child{display:none}nav#menu:target li:nth-last-child(2){display:inline-block;position:absolute;top:0;right:0;margin:0;border-left:2px solid #262626;background:#3a3a3a}
+
+      
+    </style>
+
+    <!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. -->
+
+
+  
+  <!-- Extract extra <title> tag. -->
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+
+<meta name="generator" content="Jekyll v3.8.4" />
+
+<meta name="author" content="Kyle Niewiada" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How I use the new webhooks endpoints added to Home Assistant to trigger dimming the lights when my media starts on Plex." />
+<meta property="og:description" content="How I use the new webhooks endpoints added to Home Assistant to trigger dimming the lights when my media starts on Plex." />
+<link rel="canonical" href="https://www.kyleniewiada.org/blog/2018/10/dimming-lights-with-plex-and-homeassistant/" />
+<meta property="og:url" content="https://www.kyleniewiada.org/blog/2018/10/dimming-lights-with-plex-and-homeassistant/" />
+<meta property="og:site_name" content="Kyle Niewiada’s Website" />
+<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2018/10/banner.jpg" />
+<meta property="og:image:height" content="398" />
+<meta property="og:image:width" content="700" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-18T16:47:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@CrypticCitrus" />
+<meta name="twitter:creator" content="@CrypticCitrus" />
+<meta property="fb:app_id" content="137961485759" />
+<script type="application/ld+json">
+{"description":"How I use the new webhooks endpoints added to Home Assistant to trigger dimming the lights when my media starts on Plex.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"@type":"BlogPosting","image":{"height":398,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2018/10/banner.jpg","@type":"imageObject"},"url":"https://www.kyleniewiada.org/blog/2018/10/dimming-lights-with-plex-and-homeassistant/","headline":"How I Dim My Hue Lights with a Plex Webhook","dateModified":"2018-10-21T11:31:56-04:00","datePublished":"2018-10-18T16:47:00-04:00","author":{"@type":"Person","name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2018/10/dimming-lights-with-plex-and-homeassistant/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+
+
+
+     <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ ga('create', 'UA-37567352-1', 'auto');
+ ga('send', 'pageview');
+</script>
+ 
+</head>
+
+
+  <body>
+  <!-- start header -->
+<header class="header">
+  <div class="navigation">
+    <div class="nav-container">
+      <nav id="menu">
+        <ul class="menu-closed">
+          
+            
+            <li class="normal"><a href="/">Kyle Niewiada</a></li>
+          
+            
+            <li class="normal"><a href="/">Home</a></li>
+          
+            
+            <li class="normal"><a href="/about/">About</a></li>
+          
+            
+            <li class="normal"><a href="/archive/">Archive</a></li>
+          
+            
+            <li class="normal"><a href="/contact/">Contact</a></li>
+          
+            
+            <li class="normal"><a href="/resume/">Résumé</a></li>
+          
+          <li><a href="#">&#215; Close menu</a></li>
+          <li><a href="#menu">&#9776; Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+    <main class="content">
+    <!-- lazy way to hide page title on blog posts -->
+    
+
+    <article>
+  <header>
+    <h1 class="page-title">How I Dim My Hue Lights with a Plex Webhook</h1>
+
+    <h2 class="meta">Kyle Niewiada on October 18, 2018</h2>
+
+    <h3 class="meta">10 Minute Read | Small project</h3>
+  </header>
+
+  
+    <img src="/assets/img/2018/10/banner.jpg" alt="My Home Assistant dashboard"/>
+  
+
+  <div class="line-separator"></div>
+
+  <p>Last week, the Home Assistant project launched webhooks triggers for automations. This means a user could create an endpoint to be hit from an external source and start a task. In my case, I wanted to use webhooks from Plex to dim (or brighten) my lights as quickly as possible.</p>
+
+<h2 id="problems-with-other-methods">Problems with other methods</h2>
+
+<p>Let me be upfront. Plex webhooks are only available to users to are subscribed to PlexPass. I also want to note that this requires a Home Assistant instance to be set up with the ability to control the lights. In my case, I’m using Hue bulbs because of their fairly open API. Before landing on using webhooks through Home Assistant, I considered a few other options to automate my lights.</p>
+
+<h3 id="hellohue">HelloHue</h3>
+
+<p>One common method of controlling the lighting with Plex playback is using <a href="https://github.com/ledge74/HelloHue.bundle">HelloHue</a>. The issue here is that plugins are becoming deprecated with Plex, and I can’t control more complicated automations. For example, I have an automation to make sure my lights won’t dim if I am preparing a meal in the kitchen.</p>
+
+<h3 id="tautulli">Tautulli</h3>
+
+<p>Another common method of controlling lights with Plex is using <a href="https://github.com/Tautulli/Tautulli">Tautulli</a>. Tautulli can be set up to watch for certain playback behaviors, filter users, and post an MQTT message to a channel that Home Assistant is watching. This is an <em>OK</em> method, but I found that this introduced a small amount of lag and would require another application to be working at all times if I didn’t want my lighting automations to hiccup.</p>
+
+<h3 id="node-red">Node-RED</h3>
+
+<p>The last option that I had considered (and used for quite some time), was adding a webhook endpoint inside of Node-RED. This was an <em>OK</em> method as well, but I try to keep things secure. My problem with this method is the following:</p>
+
+<ol>
+  <li>I prefer to avoid exposing local network applications to the internet without it being necessary.</li>
+  <li>I prefer to access local network applications with <code class="highlighter-rouge">SSL</code>. If it’s an internal app, I will use a self-signed certificate by my local CA. If it’s an external facing app, I look to sign it with Let’s Encrypt. In my head, this makes me feel a little bit better in case a device on my network is compromised and begins snooping.</li>
+  <li>The Node-RED webhook endpoint is unable to run both <code class="highlighter-rouge">HTTP</code> &amp; <code class="highlighter-rouge">HTTPS</code> at the same time. I’m not quite sure why this occurred, but it may have something to do with the Node-RED implementation I am using. This means I cannot use SSL locally on Node-RED if I want to use the webhook from Plex.</li>
+  <li>Without setting up a (reverse?) proxy through nginx (or the likes) and using an external CA like <a href="https://letsencrypt.org/">Let’s Encrypt</a>, I’m unable to <code class="highlighter-rouge">POST</code> requests from Plex webhooks because Plex does not recognize my local CA (and why would it?) causing them to fail.</li>
+</ol>
+
+<h2 id="sticking-with-home-assistant-webhooks">Sticking with Home Assistant webhooks</h2>
+
+<p>That means the solution I chose to use were the newly introduced webhooks for Home Assistant.</p>
+
+<blockquote>
+  <p>My rationale behind this decision is that because I am already exposing Home Assistant externally, and I would prefer not to open another attack vector with Node-RED, I might as well just use the <code class="highlighter-rouge">HTTPS</code> endpoint on Home Assistant. If I was not already exposing Home Assistant externally, I likely would have kept using the non-ssl webhook from Node-RED locally.</p>
+</blockquote>
+
+<p>On this <a href="https://community.home-assistant.io/t/plex-webhooks-wip/73095">Home Assistant community post</a>, rossdargan had this great idea to parse the incoming <code class="highlighter-rouge">JSON</code> (disguised in a <code class="highlighter-rouge">form-data</code> message), and push it back to the local MQTT server so it could be read properly by the automations. I added the following to my <code class="highlighter-rouge">automations.yaml</code> and it worked great. I’m still not completely satisfied with the parsing though. I do wish it was using a proper parsing library instead..</p>
+
+<h3 id="parsing-and-sending-the-payload-to-mqtt">Parsing and sending the payload to MQTT</h3>
+
+<p>Plex webhooks have a problem where they send their <code class="highlighter-rouge">json</code> payload with a <code class="highlighter-rouge">Content-Type</code> header of <code class="highlighter-rouge">form-data</code> instead of <code class="highlighter-rouge">application/json</code>. That’s why we have have to parse the “<code class="highlighter-rouge">data</code>” from the payload first, and repost it through a local MQTT channel before being able to interpret it as a <code class="highlighter-rouge">json</code> object.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># Home Assistant automations.yaml</span>
+<span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1539725480000'</span>
+  <span class="na">alias</span><span class="pi">:</span> <span class="s">Plex Webhook MQTT</span>
+  <span class="na">trigger</span><span class="pi">:</span>
+    <span class="na">platform</span><span class="pi">:</span> <span class="s">webhook</span>
+    <span class="na">webhook_id</span><span class="pi">:</span> <span class="kt">!secret</span> <span class="s">plex_webhook</span>
+  <span class="na">action</span><span class="pi">:</span>
+   <span class="pi">-</span> <span class="na">service</span><span class="pi">:</span> <span class="s">mqtt.publish</span>
+     <span class="na">data_template</span><span class="pi">:</span>
+       <span class="na">topic</span><span class="pi">:</span> <span class="s1">'</span><span class="s">plex/update'</span>
+       <span class="na">payload_template</span><span class="pi">:</span> <span class="pi">&gt;</span>
+         <span class="no">{{ (trigger.data['payload'] | string)[12:][:-2] | replace ("\\\\", "\\") | replace ("\\\'", "'") | replace ("\\x","?") }}</span>
+
+</code></pre></div></div>
+
+<h3 id="receiving-the-mqtt-message">Receiving the MQTT message</h3>
+
+<p>After that automation is set, we can listen to the MQTT channel and check its conditions. In the automation below, I check to see who is watching TV and which player UUID they are using. I’m not sure the best way to find the UUID other than checking the logs or debugging the Plex webhook messages.</p>
+
+<p>Once these conditions are met, I check the playback state of the event being received. If it’s starting/resuming, I flip on a boolean value for <code class="highlighter-rouge">plex_playback</code>. If it’s stopping/pausing, I flip that boolean value off.</p>
+
+<p>That boolean value is what I use to determine the playback state for my other automations in Node-RED. In my case, it works like this:</p>
+
+<p>If <code class="highlighter-rouge">plex_playback</code> value is turned on, I will check the following conditions in Node-RED before dimming the lights.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">Is anyone cooking in the kitchen?</code> If true, don’t dim the kitchen lights.</li>
+  <li><code class="highlighter-rouge">Is this content the morning news?</code> If true, don’t dim any lights. I need to wake up.</li>
+  <li><code class="highlighter-rouge">Is the master light override control on?</code> If true, leave all lights where they are.</li>
+</ul>
+
+<p>If <code class="highlighter-rouge">plex_playback</code> value is turned off, I will check the following conditions in Node-RED before brightening the lights.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">Is the sun angle lower than 8°</code> If true, don’t brighten the lights. It’s too late at night for that.</li>
+  <li><code class="highlighter-rouge">Is the master light override control on?</code> If true, leave all lights where they are.</li>
+</ul>
+
+<p>Here’s the automation for changing the boolean value:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># Home Assistant automations.yaml</span>
+<span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1539522762000'</span>
+  <span class="na">alias</span><span class="pi">:</span> <span class="s">Plex State Toggle</span>
+  <span class="na">trigger</span><span class="pi">:</span>
+    <span class="na">platform</span><span class="pi">:</span> <span class="s">mqtt</span>
+    <span class="na">topic</span><span class="pi">:</span> <span class="s1">'</span><span class="s">plex/update'</span>
+  <span class="na">condition</span><span class="pi">:</span>
+    <span class="na">condition</span><span class="pi">:</span> <span class="s">and</span>
+    <span class="na">conditions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">condition</span><span class="pi">:</span> <span class="s">template</span>
+      <span class="na">value_template</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{trigger.payload_json.Account['title']</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">'PLEX_USER'</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="pi">-</span> <span class="na">condition</span><span class="pi">:</span> <span class="s">template</span>
+      <span class="na">value_template</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{trigger.payload_json.Player['uuid']</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">'PLAYER_UUID'</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="pi">-</span> <span class="na">condition</span><span class="pi">:</span> <span class="s">template</span>
+  <span class="na">action</span><span class="pi">:</span>
+    <span class="na">service_template</span><span class="pi">:</span> <span class="pi">&gt;</span>
+        <span class="no">{% if ((trigger.payload_json.event == 'media.play') or (trigger.payload_json.event == 'media.resume')) %}</span>
+          <span class="no">input_boolean.turn_on</span>
+        <span class="no">{% elif ((trigger.payload_json.event == 'media.pause') or (trigger.payload_json.event == 'media.stop')) %}</span>
+          <span class="no">input_boolean.turn_off</span>
+        <span class="no">{% endif %}</span>
+    <span class="na">entity_id</span><span class="pi">:</span> <span class="s">input_boolean.plex</span>
+
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>There you have it. The quickest (non-deprecated) method I could come up with for changing my lights when starting/stopping content on Plex. I’m sure there are ways to improve this. That’s ok, I don’t mind. This was only a weekend project to improve my lighting events. If only Plex states could be monitored as quickly as my Chromecast can be. One can only dream…</p>
+
+
+  <div class="line-separator"></div>
+
+  <!-- POST NAVIGATION -->
+<div class="post-nav">
+  
+    <a class="post-nav-link" href="/blog/2018/06/bringing-home-automation-back-home/">
+    <div class="link-text previous">&laquo;&nbsp;Bringing Home Automation Back Home</div>
+    
+      <img class="link-image" src="/assets/img/2018/06/banner.png" alt="Previous Article">
+    
+    </a>
+  
+  
+</div>
+
+</article>
+
+
+
+    
+<!-- Add Disqus comments. -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'kyleniewiada'; // required: replace example with your forum shortname
+  var disqus_identifier = "/blog/2018/10/dimming-lights-with-plex-and-homeassistant/";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </main>
+  <!-- start footer -->
+<footer class="content">
+  <div class="flex-list">
+  <ul>
+  
+    <li>
+      <a href="https://www.linkedin.com/in/kyleniewiada/" >LinkedIn</a>
+    </li>
+  
+    <li>
+      <a href="https://github.com/aav7fl" >GitHub</a>
+    </li>
+  
+    <li>
+      <a href="https://twitter.com/CrypticCitrus" >Twitter</a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/user/KyleNiewiada" >YouTube</a>
+    </li>
+  
+    <li>
+      <a href="https://kyleniewiada.bandcamp.com/" rel='nofollow'>BandCamp</a>
+    </li>
+  
+    <li>
+      <a href="/sitemap/" >Sitemap</a>
+    </li>
+  
+  </ul>
+</div>
+
+</footer>
+<!-- start noncritical style -->
+<link rel="preload" href="/assets/css/noncritical.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/assets/css/noncritical.css"></noscript>
+<script>
+  /*loadCss*/
+  !function(w){"use strict";var loadCSS=function(href,before,media){function ready(cb){return doc.body?cb():void setTimeout(function(){ready(cb)})}function loadCB(){ss.addEventListener&&ss.removeEventListener("load",loadCB),ss.media=media||"all"}var ref,doc=w.document,ss=doc.createElement("link");if(before)ref=before;else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet",ss.href=href,ss.media="only x",ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){for(var resolvedHref=ss.href,i=sheets.length;i--;)if(sheets[i].href===resolvedHref)return cb();setTimeout(function(){onloadcssdefined(cb)})};return ss.addEventListener&&ss.addEventListener("load",loadCB),ss.onloadcssdefined=onloadcssdefined,onloadcssdefined(loadCB),ss};"undefined"!=typeof exports?exports.loadCSS=loadCSS:w.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+
+  /*link[rel=preload] polyfill*/
+  !function(w){if(w.loadCSS){var rp=loadCSS.relpreload={};if(rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){return!1}},rp.poly=function(){for(var links=w.document.getElementsByTagName("link"),i=0;i<links.length;i++){var link=links[i];"preload"===link.rel&&"style"===link.getAttribute("as")&&(w.loadCSS(link.href,link),link.rel=null)}},!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);w.addEventListener&&w.addEventListener("load",function(){w.clearInterval(run)}),w.attachEvent&&w.attachEvent("onload",function(){w.clearInterval(run)})}}}(this);
+</script>
+<!-- end noncritical style -->
+<!-- end footer -->
+
+  </body>
+</html>
