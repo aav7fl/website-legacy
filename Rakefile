@@ -23,7 +23,7 @@ task :build_watch do
   options = {
     'incremental' => true,
     'show_drafts' => true,
-    'watch'      => true
+    'watch'       => true
   }
   Rake::Task['build'].invoke(options)
 end
