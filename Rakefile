@@ -21,9 +21,9 @@ task :build_watch do
   # Build the site with custom options such as drafts enabled.
   puts 'Building site with drafts...'.yellow.bold
   options = {
-    'incremental' => true,
-    'show_drafts' => true,
-    'watch'       => true
+    :incremental => true,
+    :show_drafts => true,
+    :watch       => true
   }
   Rake::Task['build'].invoke(options)
 end
@@ -31,10 +31,10 @@ end
 task :serve do
   puts 'Serving site...'.yellow.bold
   options = {
-    'incremental' => true,
-    'serving'     => true,
-    'show_drafts' => true,
-    'watch'       => true
+    :incremental => true,
+    :serving     => true,
+    :show_drafts => true,
+    :watch       => true
   }
   Jekyll::Commands::Serve.process(options)
 end
