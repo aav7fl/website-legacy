@@ -23,7 +23,7 @@ task :build_watch do
   options = {
     incremental: true,
     show_drafts: true,
-    watch:       true
+          watch: true
   }
   Rake::Task['build'].invoke(options)
 end
@@ -32,9 +32,9 @@ task :serve do
   puts 'Serving site...'.yellow.bold
   options = {
     incremental: true,
-    serving:     true,
+        serving: true,
     show_drafts: true,
-    watch:       true
+          watch: true
   }
   Jekyll::Commands::Serve.process(options)
 end
