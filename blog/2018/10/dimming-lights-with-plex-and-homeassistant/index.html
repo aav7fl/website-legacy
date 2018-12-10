@@ -74,7 +74,7 @@
 <meta name="twitter:creator" content="@CrypticCitrus" />
 <meta property="fb:app_id" content="137961485759" />
 <script type="application/ld+json">
-{"description":"How I use the new webhooks endpoints added to Home Assistant to trigger dimming the lights when my media starts on Plex.","image":{"height":398,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2018/10/banner.jpg","@type":"imageObject"},"@type":"BlogPosting","url":"https://www.kyleniewiada.org/blog/2018/10/dimming-lights-with-plex-and-homeassistant/","headline":"How I Dim My Hue Lights with a Plex Webhook","dateModified":"2018-10-21T11:31:56-04:00","datePublished":"2018-10-18T16:47:00-04:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2018/10/dimming-lights-with-plex-and-homeassistant/"},"author":{"@type":"Person","name":"Kyle Niewiada"},"@context":"http://schema.org"}</script>
+{"description":"How I use the new webhooks endpoints added to Home Assistant to trigger dimming the lights when my media starts on Plex.","image":{"height":398,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2018/10/banner.jpg","@type":"imageObject"},"@type":"BlogPosting","url":"https://www.kyleniewiada.org/blog/2018/10/dimming-lights-with-plex-and-homeassistant/","headline":"How I Dim My Hue Lights with a Plex Webhook","dateModified":"2018-12-10T17:07:04-05:00","datePublished":"2018-10-18T16:47:00-04:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2018/10/dimming-lights-with-plex-and-homeassistant/"},"author":{"@type":"Person","name":"Kyle Niewiada"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -227,8 +227,7 @@
 
 <p>Here’s the automation for changing the boolean value:</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="c1"># Home Assistant automations.yaml</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Home Assistant automations.yaml</span>
 <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1539522762000'</span>
   <span class="na">alias</span><span class="pi">:</span> <span class="s">Plex State Toggle</span>
   <span class="na">trigger</span><span class="pi">:</span>
@@ -250,7 +249,6 @@
           <span class="no">input_boolean.turn_off</span>
         <span class="no">{% endif %}</span>
     <span class="na">entity_id</span><span class="pi">:</span> <span class="s">input_boolean.plex</span>
-
 </code></pre></div></div>
 
 <h2 id="conclusion">Conclusion</h2>
