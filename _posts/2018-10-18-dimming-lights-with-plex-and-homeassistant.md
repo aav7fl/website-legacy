@@ -10,6 +10,7 @@ alt: My Home Assistant dashboard
 published: true
 tag: "small project"
 description: "How I use the new webhooks endpoints added to Home Assistant to trigger dimming the lights when my media starts on Plex."
+lcb: "{"
 ---
 
 Last week, the Home Assistant project launched webhooks triggers for automations. This means a user could create an endpoint to be hit from an external source and start a task. In my case, I wanted to use webhooks from Plex to dim (or brighten) my lights as quickly as possible.
@@ -86,7 +87,6 @@ If `plex_playback` value is turned off, I will check the following conditions in
 Here's the automation for changing the boolean value:
 
 ```yaml
-{% raw %}
 # Home Assistant automations.yaml
 - id: '1539522762000'
   alias: Plex State Toggle
@@ -97,19 +97,18 @@ Here's the automation for changing the boolean value:
     condition: and
     conditions:
     - condition: template
-      value_template: "{{trigger.payload_json.Account['title'] == 'PLEX_USER' }}"
+      value_template: "{{page.lcb}}{{page.lcb}}trigger.payload_json.Account['title'] == 'PLEX_USER' }}"
     - condition: template
-      value_template: "{{trigger.payload_json.Player['uuid'] == 'PLAYER_UUID' }}"
+      value_template: "{{page.lcb}}{{page.lcb}}trigger.payload_json.Player['uuid'] == 'PLAYER_UUID' }}"
     - condition: template
   action:
     service_template: >
-        {% if ((trigger.payload_json.event == 'media.play') or (trigger.payload_json.event == 'media.resume')) %}
+        {{page.lcb}}% if ((trigger.payload_json.event == 'media.play') or (trigger.payload_json.event == 'media.resume')) %}
           input_boolean.turn_on
-        {% elif ((trigger.payload_json.event == 'media.pause') or (trigger.payload_json.event == 'media.stop')) %}
+        {{page.lcb}}% elif ((trigger.payload_json.event == 'media.pause') or (trigger.payload_json.event == 'media.stop')) %}
           input_boolean.turn_off
-        {% endif %}
+        {{page.lcb}}% endif %}
     entity_id: input_boolean.plex
-{% endraw %}
 ```
 
 ## Conclusion
