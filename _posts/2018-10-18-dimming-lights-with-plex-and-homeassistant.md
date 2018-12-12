@@ -111,6 +111,8 @@ Here's the automation for changing the boolean value:
     entity_id: input_boolean.plex
 ```
 
+> After HomeAssistant introduced their [Cloud Webhook](https://www.nabucasa.com/config/webhooks/) in `0.84.0`, my `payload_template` for the incoming WebHooks needed to be changed to `{{ (trigger.data | string)[154:][:-55] }}` until HomeAssistant is able to handle JSON payloads in multipart data WebHooks. It's a _terrible_ solution and entirely based on assumed headers of the payload, but it works for now.
+
 ## Conclusion
 
 There you have it. The quickest (non-deprecated) method I could come up with for changing my lights when starting/stopping content on Plex. I'm sure there are ways to improve this. That's ok, I don't mind. This was only a weekend project to improve my lighting events. If only Plex states could be monitored as quickly as my Chromecast can be. One can only dream...
