@@ -4,8 +4,8 @@ date: "2018-06-03 16:47"
 comments: true
 image:
   path: /assets/img/2018/06/banner.png
-  height: 720
-  width: 1200
+  height: 948
+  width: 1920
 alt: My Home Assistant dashboard
 published: true
 tag: "large project"

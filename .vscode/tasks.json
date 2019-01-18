@@ -19,6 +19,11 @@
                 "reveal": "always",
                 "panel": "new"
             }
+        },
+        {
+            "type": "gulp",
+            "task": "build",
+            "problemMatcher": []
         }
     ]
 }
