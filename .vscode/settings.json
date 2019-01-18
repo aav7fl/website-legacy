@@ -1,3 +1,6 @@
 {
-    "terminal.integrated.shellArgs.linux": [ "-l" ]
+    "terminal.integrated.shellArgs.linux": [
+        "-l"
+    ],
+    "git.enableSmartCommit": true
 }
