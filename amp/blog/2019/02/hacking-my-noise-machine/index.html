@@ -54,7 +54,7 @@
 <meta name="twitter:creator" content="@CrypticCitrus">
 <meta property="fb:app_id" content="137961485759">
 <script type="application/ld+json">
-{"description":"Hacking voice &amp; WiFi control into my dumb noise machine using an ESP32 module connected to Home Assistant and triggered with a Google Home.","@type":"BlogPosting","headline":"Hacking Voice &amp; WiFi Control into My Dumb Noise Machine","dateModified":"2019-02-27T21:00:10-05:00","datePublished":"2019-02-27T16:56:00-05:00","url":"/blog/2019/02/hacking-my-noise-machine/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2019/02/hacking-my-noise-machine/"},"author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":473,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2019/02/banner_noise_machine.png","@type":"imageObject"},"@context":"http://schema.org"}</script>
+{"description":"Hacking voice &amp; WiFi control into my dumb noise machine using an ESP32 module connected to Home Assistant and triggered with a Google Home.","@type":"BlogPosting","headline":"Hacking Voice &amp; WiFi Control into My Dumb Noise Machine","dateModified":"2019-02-27T21:33:11-05:00","datePublished":"2019-02-27T16:56:00-05:00","url":"/blog/2019/02/hacking-my-noise-machine/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2019/02/hacking-my-noise-machine/"},"author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":473,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2019/02/banner_noise_machine.png","@type":"imageObject"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -192,7 +192,7 @@
 
 <p>Trying to come up with a solution, I attempted to swap the NPN transistor with a PNP variant. But that was heading in the wrong direction and didn’t work. Backtracking, I swapped out the first transistor for one with that could handle a little more power. I used the highest rated NPN transistor from my variety pack. In my case, this happened to be the 2N2222.</p>
 
-<p>With my new circuit at hand, I was ready to test. But then nothing happened. I was befuddled. Like many people online, I was running a 1K ohm transistor into the base of my transistor. But it wasn’t doing anything. Okay, maybe my GPIO pin from the ESP32 was still putting out too much voltage into the transistor base?</p>
+<p>With my new circuit at hand, I was ready to test. But then nothing happened. I was befuddled. Like many people online, I was running a 1K ohm transistor into the base of my transistor. But it wasn’t doing anything. Okay, maybe my GPIO pin from the ESP32 was still putting out too much current into the transistor base?</p>
 
 <p>I grabbed a higher rated resistor from my bag, this time 220k ohm. Why did I pick that one? It was the first bag of resistors on top of my pile that was greater than 1K ohm. Besides, what did I have to lose by using a transistor with too much resistance (besides burning it out)?</p>
 
