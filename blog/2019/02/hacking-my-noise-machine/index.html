@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#3d256d">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#3d256d">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+      
+        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2019/02/hacking-my-noise-machine/" data-proofer-ignore>
+      
+    
+
+    <!-- Messy way to capture custom page title to replace SEO Tags -->
+    
+    
+    <title>Hacking Voice & WiFi Control into My Dumb Noise Machine</title>
+    <meta property="og:title" content="Hacking Voice & WiFi Control into My Dumb Noise Machine" />
+
+    <!-- Come and get me RSS readers -->
+    <link type="application/atom+xml" rel="alternate" href="https://www.kyleniewiada.org/feed.xml" title="Kyle Niewiada's Website" />
+
+    <!-- Critical Stylesheet -->
+    <style type="text/css">
+      
+      @font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local("Open Sans Light"),local("OpenSans-Light"),url("/assets/fonts/open-sans-v13-latin-300.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-300.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local("Open Sans"),local("OpenSans"),url("/assets/fonts/open-sans-v13-latin-regular.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-regular.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local("Open Sans Semibold"),local("OpenSans-Semibold"),url("/assets/fonts/open-sans-v13-latin-600.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-600.woff") format("woff")}.page-title{text-align:left;font-size:200%;line-height:1.2;font-weight:normal}@media (min-width: 600px){.page-title{font-size:250%}}@media (min-width: 1000px){.page-title{font-size:300%}}.meta{color:#696969;font-weight:300;font-size:120%}@media (min-width: 600px){.meta{font-size:130%}}@media (min-width: 1000px){.meta{font-size:140%}}a.meta{text-align:center;display:block}.title-meta{overflow:auto;color:#696969;font-size:100%}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 .5rem;font-weight:600}a{color:#3d256d}a:hover{color:#1d1234}code,pre{border-radius:.2em;background-color:#f5f5f5;border:0.1em solid #d3d3d3}code{padding:2px 4px;color:#9e023b}pre{padding:16px;overflow-y:hidden}pre code{color:inherit;background-color:transparent;padding:0;border:0}body{margin:0}body,p,li,ul,input,textarea{font-size:1em;line-height:1.58;color:#111;font-family:"Open Sans",Helvetica,Arial,sans-serif}img,video,audio,iframe,object{max-width:100%}main{display:block}.line-separator{height:2px;background:#d3d3d3;margin-top:16px;margin-bottom:16px}.clearfix:after{content:"";display:block;clear:both}.content{max-width:700px;margin-right:auto;margin-left:auto;padding:0 16px}.content img{display:block;margin-left:auto;margin-right:auto}.no-list{list-style:none;padding-left:0;margin-left:0}.left{float:left}.right{float:right}.post-list li{margin-bottom:4em;position:relative}.post-list li:before{content:"";position:absolute;bottom:-2em;left:0;background:#e6e6e6;height:2px;width:60px}.post-list li a{text-decoration:none}.post-list li a:hover{text-decoration:underline}.post-list li .date{color:#696969;font-size:.8em}.header{background-image:url("/assets/img/banner.svg");background-color:#3a3a3a;background-size:cover;background-position:center center;padding:0;height:auto;margin-bottom:16px}.header .navigation{background:#262626}.header .nav-container{max-width:1000px;margin:0 auto}@media (min-width: 600px){.header{min-height:10em;position:relative;margin-bottom:16px}}nav{height:70px;overflow:hidden}nav ul{margin:0;padding:0;list-style-type:none;max-height:140px;position:relative}nav ul .active{background:#3d256d}nav li{display:inline-block;padding:0}nav a{display:inline-block;padding:0 1em;color:#fff;text-decoration:none;white-space:nowrap;line-height:70px;height:70px}nav a:hover{color:#fff;background-color:#00b2d9}nav li:first-child{left:0;vertical-align:top;font-size:75%}nav li:first-child :hover{color:#fff;background-color:#262626}@media (min-width: 330px){nav li:first-child{font-size:100%}}@media (min-width: 400px){nav li:first-child{font-size:140%}}nav li:last-child{position:absolute;right:0;bottom:70px;background-image:linear-gradient(to right, rgba(38,38,38,0) 0, #262626 2em);padding-left:3em}nav li:nth-last-child(2){display:none}nav#menu:target{height:auto;padding:0}nav#menu:target ul{max-height:none}nav#menu:target li{display:block}nav#menu:target a{display:block;background-color:rgba(255,255,255,0.05)}nav#menu:target li:not(:first-child){margin-top:2px}nav#menu:target li:not(:first-child) a:hover{background-color:#00b2d9}nav#menu:target li:last-child{display:none}nav#menu:target li:nth-last-child(2){display:inline-block;position:absolute;top:0;right:0;margin:0;border-left:2px solid #262626;background:#3a3a3a}
+
+      
+    </style>
+
+    <!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. -->
+
+
+  
+  <!-- Extract extra <title> tag. -->
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+
+<meta name="generator" content="Jekyll v3.8.5" />
+
+<meta name="author" content="Kyle Niewiada" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hacking voice &amp; WiFi control into my dumb noise machine using an ESP32 module connected to Home Assistant and triggered with a Google Home." />
+<meta property="og:description" content="Hacking voice &amp; WiFi control into my dumb noise machine using an ESP32 module connected to Home Assistant and triggered with a Google Home." />
+<link rel="canonical" href="https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine/" />
+<meta property="og:url" content="https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine/" />
+<meta property="og:site_name" content="Kyle Niewiada’s Website" />
+<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2019/02/banner_noise_machine.png" />
+<meta property="og:image:height" content="473" />
+<meta property="og:image:width" content="700" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-27T16:56:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@CrypticCitrus" />
+<meta name="twitter:creator" content="@CrypticCitrus" />
+<meta property="fb:app_id" content="137961485759" />
+<script type="application/ld+json">
+{"description":"Hacking voice &amp; WiFi control into my dumb noise machine using an ESP32 module connected to Home Assistant and triggered with a Google Home.","@type":"BlogPosting","headline":"Hacking Voice &amp; WiFi Control into My Dumb Noise Machine","dateModified":"2019-02-27T21:00:10-05:00","datePublished":"2019-02-27T16:56:00-05:00","url":"https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine/"},"author":{"@type":"Person","name":"Kyle Niewiada"},"image":{"height":473,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2019/02/banner_noise_machine.png","@type":"imageObject"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+
+
+
+     <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ ga('create', 'UA-37567352-1', 'auto');
+ ga('send', 'pageview');
+</script>
+ 
+</head>
+
+
+  <body>
+  <!-- start header -->
+<header class="header">
+  <div class="navigation">
+    <div class="nav-container">
+      <nav id="menu">
+        <ul class="menu-closed">
+          
+            
+            <li class="normal"><a href="/">Kyle Niewiada</a></li>
+          
+            
+            <li class="normal"><a href="/">Home</a></li>
+          
+            
+            <li class="normal"><a href="/about/">About</a></li>
+          
+            
+            <li class="normal"><a href="/archive/">Archive</a></li>
+          
+            
+            <li class="normal"><a href="/contact/">Contact</a></li>
+          
+            
+            <li class="normal"><a href="/resume/">Résumé</a></li>
+          
+          <li><a href="#">&#215; Close menu</a></li>
+          <li><a href="#menu">&#9776; Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+    <main class="content">
+    <!-- lazy way to hide page title on blog posts -->
+    
+
+    <article>
+  <header>
+    <h1 class="page-title">Hacking Voice & WiFi Control into My Dumb Noise Machine</h1>
+
+    <h2 class="meta">Kyle Niewiada on February 27, 2019</h2>
+
+    <h3 class="meta">16 Minute Read | Medium project</h3>
+  </header>
+
+  
+    <img src="/assets/img/2019/02/banner_noise_machine.png" alt="Noise machine with a custom circuit driven by an ESP32 installed"/>
+  
+
+  <div class="line-separator"></div>
+
+  <p>Picture this. It’s night time. You’re winding down and the end of a long work day getting for sleep. You climb into bed and pull the cozy covers up to your neck. Rolling over, you whisper a command to your digital assistant to turn off the lights. The room goes dark but something feels different.</p>
+
+<p>A creaking noise of the house cuts through your silent slumber as the duct above expands with the furnace. Pestering you awake, it dawns on you that you’ve forgotten to turn on the noise machine.</p>
+
+<p>The trek is cold and dangerous. After gathering the willpower, you slide out of the bed. Your feet scurry across the frozen carpet until reaching the pedestal under then noise machine. The button clicks after a quick press and your hand coils back into its warm sleeve. It brings to life an orchestra of synthetic crickets. You can now sleep in peace.</p>
+
+<p>What if you never needed to make that dangerous trek? Your feet could stay warm, the monsters couldn’t grab you, and your hand could stay under your pillow? That’s a question I asked myself all winter long. Eventually, I decided to do something about that. I wanted to control my noise machine using my voice.</p>
+
+<h2 id="solving-a-fabricated-nuisance">Solving a Fabricated Nuisance</h2>
+
+<p>It’s no secret that I love using my voice. I sing along to custom soundtracks in Beat Saber (here’s my <a href="https://scoresaber.com/u/76561198019635216">Score Saber</a> plug), and I write large portions of these posts using dictation software. For this reason, I wanted to set a primary goal of controlling my noise machine using my voice. Bonus points if I could get it to integrate with my favorite home automation platform, <a href="https://github.com/home-assistant/home-assistant">Home Assistant</a>.</p>
+
+<p>Since my Home Assistant instance is already connected to my Google Home, I could expose and control any Home Assistant entity to Google as a controllable device. This means easier voice integration.</p>
+
+<p>The first thing I had to do was disassemble my <a href="https://smile.amazon.com/gp/product/B01H6WXUX8/">noise machine</a> to see what I was up against. I scraped off the bottom foam feet, sourced myself a skinny screwdriver, and went to work at removing the screws. Once I was inside, I found how much empty space I had to work with. A lot! I took a look at the board and it had a very forgiving soldering pins. This excited me.</p>
+
+<p><img src="/assets/img/2019/02/noise_machine_before.png" alt="Empty noise machine before I started hacking it" /><em>Empty noise machine before hacking it</em></p>
+
+<p>Before progressing, I wanted to make sure all the pieces I needed were available. I pulled out my multimeter and began to investigate how the box worked. Conveniently, the box is powered with a 5V line with batteries as a backup. With my <del>super basic</del> extreme electronic skills, I noticed that if I bridged the connections on the button, it would trigger its action–so like… a normal button. Simple enough, right?</p>
+
+<p>At this point, it dawned on me that a friend had gifted me an ESP32 board for Christmas a few years back. Until now, I hadn’t thought of a good project for it. Due to the generous space inside the noise machine, I knew it would be possible to fit an amateur wiring job inside without too many issues and possibly control the box.</p>
+
+<h2 id="prototyping">Prototyping</h2>
+
+<p>After a quick Google search, I learned that the Home Assistant platform that recently launched an <a href="https://www.home-assistant.io/components/esphome/">ESPHome integration</a>. Lucky for me, ESPHome <a href="https://esphome.io/devices/nodemcu_esp32">supports for my board</a>! A quick firmware flash and Home Assistant integration change later, I was able to produce a proof of concept that toggled an LED bulb on the ESP32 through the control of my Home Assistant front-end.</p>
+
+<p>Lucky for me, the ESP32 board that I was using required a 5V power source. Conveniently, the noise machine was already using a 5V line for its main power. I just tapped into that and it worked perfectly. I don’t <em>think</em> I’m drawing enough current to cause any problems.</p>
+
+<!-- Method to implement AMP-Video. -->
+
+<video width="700" controls="">
+  <source src="/assets/files/2019/02/noise_machine_prototyping.mp4" type="video/mp4" />
+  <p>Your browser doesn’t support HTML5 video</p>
+</video>
+
+<p>Perfect. It looked like all the pieces were going to line up. I just had to figure out how to create a circuit using the ESP32 that would trigger a button press. A quick search online suggested that these button presses could be bypassed by using an NPN transistor to behave like a switch. This would allow me to change the voltage passing between the two button terminals.</p>
+
+<p>I needed some parts, so I visited my neighbor to borrow two transistors. While over there, I had my breadboard sliced in half so it would fit inside the noise machine. Once I returned home, I tossed a bunch wires together, positioned my transistor and suddenly had a working prototype.</p>
+
+<p>Because I don’t work on projects like this very often, I had a measly supply of resistors and nonexistent supply of transistors/wires. Honestly, this was probably the best time for me to stock up on proper parts like this. I put in an order and anxiously waited for them to arrive.</p>
+
+<h2 id="building">Building</h2>
+
+<p>Since we live in the future, the order took less than 48 hours to arrive. Once I had all my new parts opened, I went to work.</p>
+
+<blockquote>
+  <p>I’m nowhere near experienced at this work. I like to think I’m competent enough to get by. If you’re trying to follow along at home, I’d advise against it. I have no idea what I’m doing.</p>
+</blockquote>
+
+<p>Here’s a high level overview (I tried my best) showing my circuit. I’m not quite sure how to represent everything very well…</p>
+
+<p><img src="/assets/img/2019/02/noise_machine_wiring.svg" alt="ESP32 circuit to control noise machine power button" /><em>A high level look at the ESP32 circuit  controlling my noise machine power state</em></p>
+
+<p>Almost immediately I thought I had my circuit ready. But something wasn’t quite right. With my circuit connected, if I tried to use the physical button on the machine, it wouldn’t work. I realized I had probably created a parallel circuit so now the connection was going the path of least resistance.</p>
+
+<p>Trying to come up with a solution, I attempted to swap the NPN transistor with a PNP variant. But that was heading in the wrong direction and didn’t work. Backtracking, I swapped out the first transistor for one with that could handle a little more power. I used the highest rated NPN transistor from my variety pack. In my case, this happened to be the 2N2222.</p>
+
+<p>With my new circuit at hand, I was ready to test. But then nothing happened. I was befuddled. Like many people online, I was running a 1K ohm transistor into the base of my transistor. But it wasn’t doing anything. Okay, maybe my GPIO pin from the ESP32 was still putting out too much voltage into the transistor base?</p>
+
+<p>I grabbed a higher rated resistor from my bag, this time 220k ohm. Why did I pick that one? It was the first bag of resistors on top of my pile that was greater than 1K ohm. Besides, what did I have to lose by using a transistor with too much resistance (besides burning it out)?</p>
+
+<p>In the most anti-climactic fashion, it worked. My machine could both be triggered from the physical button, and the GPIO pin on my ESP32. I was almost ready to put it back together. There were just a few loose ends I needed to tie up.</p>
+
+<!-- Method to implement AMP-Video. -->
+
+<video width="700" controls="" autoplay="" loop="">
+  <source src="/assets/files/2019/02/noise_machine_animation.mp4" type="video/mp4" />
+  <p>Your browser doesn’t support HTML5 video</p>
+</video>
+
+<h2 id="extra-credit">Extra Credit</h2>
+
+<p>First, I wanted to add in a small LED that would let me know when my circuit triggered. This would help me debug if something wasn’t working correctly. I slapped on a green LED, added some code to ensure it went off at the same time. Piece of cake.</p>
+
+<p>In addition to adding a status LED for my commands, I also did something super hacky. I noticed there was an open pad on the circuit board inside my noise machine. This open pad allowed me to tap into any voltage passing through the power LED. Can you guess where I’m going with this?</p>
+
+<p>I soldered a wire to that pad and connected it to an input pin on my ESP32. Now whenever the device was on, I could read the voltage from the power LED’s circuit and know for certain what its state was. This would allow me to reflect in the Home Assistant user interface if someone had turned the noise machine on with the physical button so that the UI toggle would correctly represent the machine’s state.</p>
+
+<p>Check out the video demo where I control the noise box with my voice. Don’t worry, <strong>I muted the Google hot phrase</strong>!</p>
+
+<!-- Method to implement AMP-Video. -->
+
+<video width="700" controls="">
+  <source src="/assets/files/2019/02/noise_machine_demo.mp4" type="video/mp4" />
+  <p>Your browser doesn’t support HTML5 video</p>
+</video>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Thankfully, my Home Assistant instance already had a <a href="https://www.nabucasa.com/config/google_assistant/">Google Home integration</a>. This meant once I had the ESP32 module connected using ESPHome, I only needed to expose the entity to Google.</p>
+
+<p>Voice control was now a success. My dumb noise machine went through a transformation stuffed with wires and an ESP32 module. No more decisions needed to be made on whether I wanted to suffer with the creaking all night, or end up dashing across the frozen carpet to turn it on. My <del>dumb</del> <em>smarter</em> noise machine was fully controllable from my cozy warm bed.</p>
+
+<h2 id="source-code">Source Code</h2>
+
+<p>Here’s the source configuration of my ESP32 board if anyone wants to try this, or use some of it to control their own devices.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">esphome</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">esp_32</span>
+  <span class="na">platform</span><span class="pi">:</span> <span class="s">ESP32</span>
+  <span class="na">board</span><span class="pi">:</span> <span class="s">nodemcu-32s</span>
+  <span class="na">build_path</span><span class="pi">:</span> <span class="s">esp_32</span>
+  <span class="na">arduino_version</span><span class="pi">:</span> <span class="s">espressif32@1.5.0</span>
+  <span class="na">esphome_core_version</span><span class="pi">:</span>
+    <span class="na">repository</span><span class="pi">:</span> <span class="s">https://github.com/esphome/esphome-core.git</span>
+    <span class="na">tag</span><span class="pi">:</span> <span class="s">v1.11.2</span>
+  <span class="na">use_custom_code</span><span class="pi">:</span> <span class="no">false</span>
+  <span class="na">board_flash_mode</span><span class="pi">:</span> <span class="s">dout</span>
+<span class="na">wifi</span><span class="pi">:</span>
+  <span class="na">domain</span><span class="pi">:</span> <span class="s">.local</span>
+  <span class="na">networks</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">password</span><span class="pi">:</span> <span class="s">REDACTED</span>
+    <span class="na">ssid</span><span class="pi">:</span> <span class="s">REDACTED</span>
+  <span class="na">use_address</span><span class="pi">:</span> <span class="s">esp_32.local</span>
+<span class="na">logger</span><span class="pi">:</span>
+  <span class="na">baud_rate</span><span class="pi">:</span> <span class="s">115200</span>
+  <span class="na">hardware_uart</span><span class="pi">:</span> <span class="s">UART0</span>
+  <span class="na">tx_buffer_size</span><span class="pi">:</span> <span class="s">512</span>
+<span class="na">api</span><span class="pi">:</span>
+  <span class="na">password</span><span class="pi">:</span> <span class="s">REDACTED</span>
+  <span class="na">port</span><span class="pi">:</span> <span class="s">6053</span>
+<span class="na">ota</span><span class="pi">:</span>
+  <span class="na">password</span><span class="pi">:</span> <span class="s">REDACTED</span>
+  <span class="na">safe_mode</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">sensor</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">platform</span><span class="pi">:</span> <span class="s">adc</span>
+  <span class="na">pin</span><span class="pi">:</span> <span class="s">36</span>
+  <span class="na">id</span><span class="pi">:</span> <span class="s">noise_machine_voltage</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">Noise Machine Voltage</span>
+  <span class="na">update_interval</span><span class="pi">:</span> <span class="s">2s</span>
+<span class="na">switch</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">platform</span><span class="pi">:</span> <span class="s">gpio</span>
+  <span class="na">pin</span><span class="pi">:</span>
+    <span class="na">number</span><span class="pi">:</span> <span class="s">23</span>
+  <span class="na">id</span><span class="pi">:</span> <span class="s">noise_machine_pin</span>
+  <span class="na">internal</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">noise_machine_pin</span>
+<span class="pi">-</span> <span class="na">platform</span><span class="pi">:</span> <span class="s">gpio</span>
+  <span class="na">pin</span><span class="pi">:</span>
+    <span class="na">number</span><span class="pi">:</span> <span class="s">21</span>
+  <span class="na">id</span><span class="pi">:</span> <span class="s">event_led</span>
+  <span class="na">internal</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">event_led</span>
+<span class="pi">-</span> <span class="na">platform</span><span class="pi">:</span> <span class="s">template</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">Noise Machine</span>
+  <span class="na">icon</span><span class="pi">:</span> <span class="s">mdi:volume-high</span>
+  <span class="na">lambda</span><span class="pi">:</span> <span class="kt">!lambda</span> <span class="pi">|-</span>
+    <span class="no">if (id(noise_machine_voltage).state &gt; 0.5) {</span>
+      <span class="no">return true;</span>
+    <span class="no">} else {</span>
+      <span class="no">return false;</span>
+    <span class="no">}</span>
+  <span class="no">turn_on_action:</span>
+    <span class="no">then:</span>
+    <span class="no">- switch.turn_on:</span>
+        <span class="no">id: noise_machine_pin</span>
+    <span class="no">- switch.turn_on:</span>
+        <span class="no">id: event_led</span>
+    <span class="no">- delay: 500ms</span>
+    <span class="no">- switch.turn_off:</span>
+        <span class="no">id: noise_machine_pin</span>
+    <span class="no">- switch.turn_off:</span>
+        <span class="no">id: event_led</span>
+  <span class="no">turn_off_action:</span>
+    <span class="no">then:</span>
+    <span class="no">- switch.turn_on:</span>
+        <span class="no">id: noise_machine_pin</span>
+    <span class="no">- switch.turn_on:</span>
+        <span class="no">id: event_led</span>
+    <span class="no">- delay: 500ms</span>
+    <span class="no">- switch.turn_off:</span>
+        <span class="no">id: noise_machine_pin</span>
+    <span class="no">- switch.turn_off:</span>
+        <span class="no">id: event_led</span>
+<span class="na">status_led</span><span class="pi">:</span>
+  <span class="na">pin</span><span class="pi">:</span>
+    <span class="na">number</span><span class="pi">:</span> <span class="s">2</span>
+</code></pre></div></div>
+
+
+  <div class="line-separator"></div>
+
+  <!-- POST NAVIGATION -->
+<div class="post-nav">
+  
+    <a class="post-nav-link" href="/blog/2018/10/dimming-lights-with-plex-and-homeassistant/">
+    <div class="link-text previous">&laquo;&nbsp;How I Dim My Hue Lights with a Plex Webhook</div>
+    
+      <img class="link-image" src="/assets/img/2018/10/banner.jpg" alt="Previous Article">
+    
+    </a>
+  
+  
+</div>
+
+</article>
+
+
+
+    
+<!-- Add Disqus comments. -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'kyleniewiada'; // required: replace example with your forum shortname
+  var disqus_identifier = "/blog/2019/02/hacking-my-noise-machine/";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </main>
+  <!-- start footer -->
+<footer class="content">
+  <div class="flex-list">
+  <ul>
+  
+    <li>
+      <a href="https://www.linkedin.com/in/kyleniewiada/" >LinkedIn</a>
+    </li>
+  
+    <li>
+      <a href="https://github.com/aav7fl" >GitHub</a>
+    </li>
+  
+    <li>
+      <a href="https://twitter.com/CrypticCitrus" >Twitter</a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/user/KyleNiewiada" >YouTube</a>
+    </li>
+  
+    <li>
+      <a href="https://kyleniewiada.bandcamp.com/" rel='nofollow'>BandCamp</a>
+    </li>
+  
+    <li>
+      <a href="/sitemap/" >Sitemap</a>
+    </li>
+  
+  </ul>
+</div>
+
+</footer>
+<!-- start noncritical style -->
+<link rel="preload" href="/assets/css/noncritical.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/assets/css/noncritical.css"></noscript>
+<script>
+  /*loadCss*/
+  !function(w){"use strict";var loadCSS=function(href,before,media){function ready(cb){return doc.body?cb():void setTimeout(function(){ready(cb)})}function loadCB(){ss.addEventListener&&ss.removeEventListener("load",loadCB),ss.media=media||"all"}var ref,doc=w.document,ss=doc.createElement("link");if(before)ref=before;else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet",ss.href=href,ss.media="only x",ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){for(var resolvedHref=ss.href,i=sheets.length;i--;)if(sheets[i].href===resolvedHref)return cb();setTimeout(function(){onloadcssdefined(cb)})};return ss.addEventListener&&ss.addEventListener("load",loadCB),ss.onloadcssdefined=onloadcssdefined,onloadcssdefined(loadCB),ss};"undefined"!=typeof exports?exports.loadCSS=loadCSS:w.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+
+  /*link[rel=preload] polyfill*/
+  !function(w){if(w.loadCSS){var rp=loadCSS.relpreload={};if(rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){return!1}},rp.poly=function(){for(var links=w.document.getElementsByTagName("link"),i=0;i<links.length;i++){var link=links[i];"preload"===link.rel&&"style"===link.getAttribute("as")&&(w.loadCSS(link.href,link),link.rel=null)}},!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);w.addEventListener&&w.addEventListener("load",function(){w.clearInterval(run)}),w.attachEvent&&w.attachEvent("onload",function(){w.clearInterval(run)})}}}(this);
+</script>
+<!-- end noncritical style -->
+<!-- end footer -->
+
+  </body>
+</html>
