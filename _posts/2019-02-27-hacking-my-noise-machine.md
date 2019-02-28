@@ -68,7 +68,7 @@ Almost immediately I thought I had my circuit ready. But something wasn’t quit
 
 Trying to come up with a solution, I attempted to swap the NPN transistor with a PNP variant. But that was heading in the wrong direction and didn't work. Backtracking, I swapped out the first transistor for one with that could handle a little more power. I used the highest rated NPN transistor from my variety pack. In my case, this happened to be the 2N2222.
 
-With my new circuit at hand, I was ready to test. But then nothing happened. I was befuddled. Like many people online, I was running a 1K ohm transistor into the base of my transistor. But it wasn’t doing anything. Okay, maybe my GPIO pin from the ESP32 was still putting out too much voltage into the transistor base?
+With my new circuit at hand, I was ready to test. But then nothing happened. I was befuddled. Like many people online, I was running a 1K ohm transistor into the base of my transistor. But it wasn’t doing anything. Okay, maybe my GPIO pin from the ESP32 was still putting out too much current into the transistor base?
 
 I grabbed a higher rated resistor from my bag, this time 220k ohm. Why did I pick that one? It was the first bag of resistors on top of my pile that was greater than 1K ohm. Besides, what did I have to lose by using a transistor with too much resistance (besides burning it out)?
 
