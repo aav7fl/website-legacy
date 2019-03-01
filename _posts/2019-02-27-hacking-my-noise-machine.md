@@ -164,26 +164,36 @@ switch:
     }
   turn_on_action:
     then:
-    - switch.turn_on:
-        id: noise_machine_pin
-    - switch.turn_on:
-        id: event_led
-    - delay: 500ms
-    - switch.turn_off:
-        id: noise_machine_pin
-    - switch.turn_off:
-        id: event_led
+    - if:
+        condition:
+        - lambda: !lambda |-
+            return id(noise_machine_voltage).state <= 0.5;
+        then:
+        - switch.turn_on:
+            id: noise_machine_pin
+        - switch.turn_on:
+            id: event_led
+        - delay: 500ms
+        - switch.turn_off:
+            id: noise_machine_pin
+        - switch.turn_off:
+            id: event_led
   turn_off_action:
     then:
-    - switch.turn_on:
-        id: noise_machine_pin
-    - switch.turn_on:
-        id: event_led
-    - delay: 500ms
-    - switch.turn_off:
-        id: noise_machine_pin
-    - switch.turn_off:
-        id: event_led
+    - if:
+        condition:
+        - lambda: !lambda |-
+            return id(noise_machine_voltage).state > 0.5;
+        then:
+        - switch.turn_on:
+            id: noise_machine_pin
+        - switch.turn_on:
+            id: event_led
+        - delay: 500ms
+        - switch.turn_off:
+            id: noise_machine_pin
+        - switch.turn_off:
+            id: event_led
 status_led:
   pin:
     number: 2
