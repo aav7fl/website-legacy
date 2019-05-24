@@ -1,4 +1,186 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://www.kyleniewiada.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.kyleniewiada.org/" rel="alternate" type="text/html" /><updated>2019-05-24T12:33:17-04:00</updated><id>https://www.kyleniewiada.org/feed.xml</id><title type="html">Kyle Niewiada’s Website</title><subtitle>My little corner of the Internet where I write about projects I've figured out</subtitle><author><name>Kyle Niewiada</name></author><entry><title type="html">Hacking Voice &amp;amp; WiFi Control into My Dumb Noise Machine</title><link href="https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine/" rel="alternate" type="text/html" title="Hacking Voice &amp; WiFi Control into My Dumb Noise Machine" /><published>2019-02-27T16:56:00-05:00</published><updated>2019-03-01T16:58:33-05:00</updated><id>https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine/">&lt;p&gt;Picture this. It’s night time. You’re winding down and the end of a long work day getting for sleep. You climb into bed and pull the cozy covers up to your neck. Rolling over, you whisper a command to your digital assistant to turn off the lights. The room goes dark but something feels different.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://www.kyleniewiada.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.kyleniewiada.org/" rel="alternate" type="text/html" /><updated>2019-05-24T19:50:10-04:00</updated><id>https://www.kyleniewiada.org/feed.xml</id><title type="html">Kyle Niewiada’s Website</title><subtitle>My little corner of the Internet where I write about projects I've figured out</subtitle><author><name>Kyle Niewiada</name></author><entry><title type="html">Trading in Nest for TensorFlow and Z-Wave</title><link href="https://www.kyleniewiada.org/blog/2019/05/trading-nest-for-tensorflow/" rel="alternate" type="text/html" title="Trading in Nest for TensorFlow and Z-Wave" /><published>2019-05-24T17:39:00-04:00</published><updated>2019-05-24T19:45:08-04:00</updated><id>https://www.kyleniewiada.org/blog/2019/05/trading-nest-for-tensorflow</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2019/05/trading-nest-for-tensorflow/">&lt;p&gt;A few weeks ago, Google &lt;a href=&quot;https://blog.google/products/google-nest/helpful-home/&quot;&gt;announced the shutdown&lt;/a&gt; of its Works with Nest developer program only 16 weeks in advance. The Works with Nest program allows third-party applications like Home Assistant and IFTTT to integrate with Nest products. Without this ability to integrate, Nest products are worthless to me.&lt;/p&gt;
+
+&lt;p&gt;After much outcry, Google decided to &lt;a href=&quot;https://blog.google/products/google-nest/updates-works-with-nest/&quot;&gt;back off&lt;/a&gt; on their aggressive shutdown target date. They also clarified that services like Alexa would be exempt from this change. Unfortunately, the death sentence has only been extended and without a doubt will still be shutdown in the near future.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-wrong-with-nest&quot;&gt;What’s Wrong with Nest&lt;/h2&gt;
+
+&lt;p&gt;I like Nest. Their support has always been top-notch. When I first purchased my Nest E thermostat, the customer service paid to have an electrician rewire our HVAC to be compatible. I’ve been recommending them for years because of that experience. It hit me like a train when they announced they were winding down their developer program. All I could think about was how I wasn’t going to be able to use their products the way &lt;em&gt;I&lt;/em&gt; wanted to, but the way &lt;em&gt;they&lt;/em&gt; wanted me to.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-can-i-fix&quot;&gt;What Can I Fix&lt;/h2&gt;
+
+&lt;p&gt;I know what you’re thinking. I made a terrible decision going with the company that had a cloud-based API. You’re mostly correct. However, when I purchased the Nest products, it made sense. I didn’t have any home automation platforms, and I didn’t have the time to build one during my moving situation.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Going forward, I will favor edge computing and APIs that can be accessed locally.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Knowing full well that I was in need of a new solution, I started looking at what problems I was  having and how I could improve with the next iteration.&lt;/p&gt;
+
+&lt;h3 id=&quot;problem-1-avoid-cloud-apis-like-the-plague&quot;&gt;Problem 1: Avoid Cloud APIs Like the Plague&lt;/h3&gt;
+
+&lt;p&gt;My thermostat needed to be replaced if I was to continue using it in the same way. A device that usually stays in your house for &lt;em&gt;decades&lt;/em&gt; hadn’t passed its second birthday. I &lt;em&gt;thrilled&lt;/em&gt; to be buying a new thermostat so soon.&lt;/p&gt;
+
+&lt;p&gt;This transformation led me down the path of seeking &lt;a href=&quot;https://en.wikipedia.org/wiki/Z-Wave&quot;&gt;Z-Wave&lt;/a&gt;, a wireless communications protocol commonly used in home automation. I was seeking full control of a device that I could communicate with even if the Internet went out. This meant avoiding Wi-Fi based thermostats because I felt that most of the options weren’t that great unless I was ready to spend large sums of money. I was still getting over the burn of my Nest E thermostat purchase.&lt;/p&gt;
+
+&lt;p&gt;After digging through a few reviews and recommendations, I settled upon the Radio Thermostat CT101. Honestly, it looks like it came out of the 1980s. It’s ugly– but it &lt;em&gt;is&lt;/em&gt; functional.. So.. ✅? I guess..&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2019/05/2019-05-21_20-05-12.jpg&quot; alt=&quot;My thermostat that fell out of 1982&quot; /&gt;&lt;em&gt;My thermostat that fell out of 1982&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A quick installation of the new thermostat and I was good to go. Within an hour I had it paired with my Z-Wave stick on my Home Assistant, and another two hours later I had completed flows in Node-RED for temperature scheduling and home/away temperatures.&lt;/p&gt;
+
+&lt;h3 id=&quot;problem-2-cameras-shouldnt-break-without-internet&quot;&gt;Problem 2: Cameras Shouldn’t Break Without Internet&lt;/h3&gt;
+
+&lt;p&gt;The Nest camera had a critical flaw. If the Internet went out, it stopped working!&lt;/p&gt;
+
+&lt;p&gt;It was essential that I replace the Nest camera with one that allowed for local streaming and recording to the device if something went down.&lt;/p&gt;
+
+&lt;p&gt;Instead of throwing more money at the problem, I decided to go the hobbyist route. After getting some strong recommendations for &lt;a href=&quot;https://www.amazon.com/dp/B076H3SRXG&quot;&gt;Wyze 2 cameras&lt;/a&gt; from my coworkers, I decided to pick one up.&lt;/p&gt;
+
+&lt;p&gt;I was excited to use the Wyze 2 camera because they recently announced their beta firmware was adding support for &lt;a href=&quot;https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol&quot;&gt;RTSP&lt;/a&gt;. This feature would allow me to stream the network video to any local device that I wanted, bypassing the Internet completely.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2019/05/2019-05-24_19-04-27.jpg&quot; alt=&quot;Wyze 2 Camera&quot; /&gt;&lt;em&gt;The Wyze 2 in its full glory&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;There isn’t too much to say about them. They are &lt;em&gt;super cheap&lt;/em&gt; and it shows. It doesn’t have a 130° wide-angle lens that my Nest camera had. The compression in the video is pretty extreme. It also seems unable to fully illuminate the room with its weak infrared lamps.&lt;/p&gt;
+
+&lt;p&gt;At the end of the day, it’s less than 1/8 the price of the cheapest Nest camera. It has no subscription cost, doesn’t require Internet, and can record locally on an SD card. If it really bothers me, I can pick up half a dozen more before it approaches the same price of my Nest camera.&lt;/p&gt;
+
+&lt;p&gt;So the cheap Wyze 2 camera wins for today.&lt;/p&gt;
+
+&lt;h3 id=&quot;problem-3-roomba-is-my-pet&quot;&gt;Problem 3: Roomba is My Pet&lt;/h3&gt;
+
+&lt;p&gt;On quite a few occasions, my Nest camera would send me &lt;code class=&quot;highlighter-rouge&quot;&gt;Person&lt;/code&gt; alerts when it saw my Roomba by chugging along. Nest wasn’t the only one who didn’t recognize the Roomba though. Support thought it was my pet! &lt;em&gt;Although they might be partially correct on that&lt;/em&gt;…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2019/05/2019-05-07-09-21-17.png&quot; alt=&quot;Chat conversation with Gary from customer support&quot; /&gt;&lt;em&gt;Is Roomba your pet?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;What can I do to fix this? A few months back, I remembered that Home Assistant had announced support for TensorFlow as an integration. Given that I had recently moved my entire set up onto an Intel NUC, I figured this would be an excellent usage of my extra CPU cycles.&lt;/p&gt;
+
+&lt;p&gt;My plan was to stream everything locally, run motion detection on the images, hand them off to TensorFlow, and check to see if any unexpected humans were in frame.&lt;/p&gt;
+
+&lt;p&gt;This was kind of like playing the &lt;a href=&quot;https://itunes.apple.com/us/app/not-hotdog/id1212457521&quot;&gt;Not HotDog&lt;/a&gt; game from Silicon Valley. The critically acclaimed app determines whether an object is a hot dog, or &lt;em&gt;not&lt;/em&gt; a hot dog.&lt;/p&gt;
+
+&lt;p&gt;I wasn’t trying to categorize every kind of object in every single frame. I just wanted to know if anything in frame was either human, or &lt;em&gt;not&lt;/em&gt; human. A &lt;em&gt;fairly simple&lt;/em&gt; model to deal with.&lt;/p&gt;
+
+&lt;h4 id=&quot;approaching-humannot-human&quot;&gt;Approaching Human/Not Human&lt;/h4&gt;
+
+&lt;p&gt;Here was the plan:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use Wyze 2 camera with RTSP enabled&lt;/li&gt;
+  &lt;li&gt;Capture the RTSP stream inside &lt;em&gt;something&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Detect motion so I’m not running TensorFlow 24x7&lt;/li&gt;
+  &lt;li&gt;Send me a notification if there is a person (who shouldn’t be there)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In under a few seconds I should be able to detect a person walking near a camera and be immediately notified of their presence. I still don’t know &lt;em&gt;who&lt;/em&gt; the person is, but I can’t imagine it’s too difficult to capture faces from TensorFlow and send them through a trained network of known faces.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I decided to use the &lt;a href=&quot;https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md&quot;&gt;faster_rcnn_inception_v2_coco&lt;/a&gt; model based on the &lt;a href=&quot;https://josiahvorst.com/image-processing-made-easy-home-assistant-tensorflow/&quot;&gt;recommendation from this post&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The best part about my plan is that all of it (except the Pushover notification) was supposed to be handled locally.&lt;/p&gt;
+
+&lt;h3 id=&quot;taking-my-camera-to-the-next-level&quot;&gt;Taking My Camera to the Next Level&lt;/h3&gt;
+
+&lt;p&gt;With my bundle of new cameras, it was time to make them smart. I set up a camera in the front of my house to keep an eye on my car and track people approaching the front door. My original plan was to use the outline mentioned above and notify me via Pushover when it detects a person. But it seemed to work a little too well…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2019/05/2019-05-23_17-35-27.jpg&quot; alt=&quot;Person on the other side of the road&quot; /&gt;&lt;em&gt;That person is pretty far away&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;While testing, I was noticing that it was picking up people all the way across the street.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ok&lt;/em&gt;. I guess I can handle this by restricting the area that tensor flow is looking at. So let me chop off the top 35% of the image area.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2019/05/2019-05-23_17-49-29.jpg&quot; alt=&quot;I duck to trigger a valid capture&quot; /&gt;&lt;em&gt;Ducking to trigger a valid event&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ok&lt;/em&gt;. Now it only works if the person happens to crawl up to my window. Because my camera isn’t high enough, it doesn’t know when a person’s head is in the foreground or the background and it can’t efficiently detect them.&lt;/p&gt;
+
+&lt;h4 id=&quot;solving-the-depth-perception&quot;&gt;Solving the Depth Perception&lt;/h4&gt;
+
+&lt;p&gt;Ironically, Google AI &lt;em&gt;JUST&lt;/em&gt; put out a &lt;a href=&quot;https://ai.googleblog.com/2019/05/moving-camera-moving-people-deep.html&quot;&gt;blog post about depth prediction&lt;/a&gt;. But I don’t think that would’ve worked very well in my cheap cameras.&lt;/p&gt;
+
+&lt;p&gt;What do you notice when a person gets closer to the camera? The bounding box TensorFlow provides becomes larger. Because TensorFlow is already giving me &lt;code class=&quot;highlighter-rouge&quot;&gt;xmin&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;xmax&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;ymin&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;ymax&lt;/code&gt;, I can calculate the &lt;code class=&quot;highlighter-rouge&quot;&gt;area&lt;/code&gt; of the bounding box to get a rough estimate if target is closer or farther away from the camera.&lt;/p&gt;
+
+&lt;p&gt;I set up a Node-RED prototype flow to log the &lt;code class=&quot;highlighter-rouge&quot;&gt;area&lt;/code&gt;, grabbed my iPad, and ran outside. I repeatedly triggered the capture so TensorFlow produce the &lt;code class=&quot;highlighter-rouge&quot;&gt;area&lt;/code&gt; result based on where I was standing.&lt;/p&gt;
+
+&lt;p&gt;I stood on one side of the sidewalk, hit the button, and took note of the &lt;code class=&quot;highlighter-rouge&quot;&gt;area&lt;/code&gt; result. Then I stood by my car and repeated the process. I kept doing this for a handful of different locations while striking beautiful poses to give the system a variety. After a few minutes, I had a good idea of what kind of &lt;code class=&quot;highlighter-rouge&quot;&gt;area&lt;/code&gt; numbers I needed for determiners on distance from the camera.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2019/05/2019-05-23_18-58-26.jpg&quot; alt=&quot;Example capture of two people&quot; /&gt;&lt;em&gt;What if there is more than one person?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ok&lt;/em&gt;. But what if there are two people in frame, and they are really far away from each other? While testing out my flow, I realized that if there was more than one person in frame, and the first person I detect is too far away, my entire flow would stop after the first failure. With a little bit of JavaScript-fu I needed to break apart all of the returned objects from TensorFlow. This allowed me to address each result individually to know if it met all criteria.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2019/05/2019-05-24_15-30-19.png&quot; alt=&quot;My Node-RED flow&quot; /&gt;&lt;em&gt;My Node-RED flow for the outdoor camera: (&lt;a href=&quot;/assets/files/2019/05/front-window-node-red-flow.js&quot;&gt;front-window-node-red-flow.js&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Success! It’s finally working.&lt;/p&gt;
+
+&lt;h4 id=&quot;camera-setup&quot;&gt;Camera Setup&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A Wyze 2 camera is recording and streaming a scene through RTSP.&lt;/li&gt;
+  &lt;li&gt;The stream is picked up by &lt;a href=&quot;https://github.com/ccrisan/motioneye&quot;&gt;motionEye&lt;/a&gt; which:
+    &lt;ol&gt;
+      &lt;li&gt;&lt;em&gt;Re-broadcasts&lt;/em&gt; the stream to Home Assistant as MJPEG (so I’m not picking the stream up twice from each camera increasing the load on them).&lt;/li&gt;
+      &lt;li&gt;Calls a webhook in Home Assistant for the start of each motion event.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The Home Assistant webhook sends a MQTT message for every new motion event.&lt;/li&gt;
+  &lt;li&gt;In Node-RED, I pick up the MQTT messages and treat them like a stream.
+    &lt;ul&gt;
+      &lt;li&gt;If the messages keep coming in, continue running TensorFlow on a camera stream.&lt;/li&gt;
+      &lt;li&gt;If the messages stop, my timer runs out and I stop running TensorFlow on the camera stream.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If TensorFlow detects a person:
+    &lt;ol&gt;
+      &lt;li&gt;Split up all person objects into separate results.&lt;/li&gt;
+      &lt;li&gt;Check the confidence level of each result. If it’s not high enough, ignore it. If it is high enough, continue.&lt;/li&gt;
+      &lt;li&gt;Check the total area of each results. If the total area exceeds something that I would deem close to the camera, continue.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If there is a captured result from TensorFlow that passes all of my validations, notify me with the image via Pushover. Or at the very least, log the image somewhere that I can review later.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;outdoor-camera-flow&quot;&gt;Outdoor Camera Flow&lt;/h4&gt;
+
+&lt;p&gt;Essentially, this is the outdoor camera flow simplified:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Everyone is gone
+    &lt;ul&gt;
+      &lt;li&gt;Movement is detected
+        &lt;ul&gt;
+          &lt;li&gt;Movement looks like a person?&lt;/li&gt;
+          &lt;li&gt;The confidence level of the person is fairly high?&lt;/li&gt;
+          &lt;li&gt;The area of the detected person is fairly large?&lt;/li&gt;
+          &lt;li&gt;Send me a low priority alert with the image&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;indoor-camera-flow&quot;&gt;Indoor Camera Flow&lt;/h4&gt;
+
+&lt;p&gt;The inside camera flow is laughably easier:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Everyone is gone
+    &lt;ul&gt;
+      &lt;li&gt;Movement is detected
+        &lt;ul&gt;
+          &lt;li&gt;Movement looks like a person?&lt;/li&gt;
+          &lt;li&gt;Take evasive actions!&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
+
+&lt;p&gt;I’m sad to leave Nest. They have beautiful products that work very well. Well… &lt;em&gt;technically&lt;/em&gt; since Google has re-branded the Home Hub as the Nest Hub, I haven’t &lt;em&gt;exactly&lt;/em&gt; left them. But that doesn’t make a very good title, does it?&lt;/p&gt;
+
+&lt;p&gt;I’m excited to use edge computing rather than cloud computing for analysis. I’m enjoying my approach of  decoupling my home automation from being Internet reliant. Unlike Nest cameras, my devices will &lt;em&gt;still have basic functionality&lt;/em&gt; if there is an internet outage. More problems have been solved that I hope do not crop up again.&lt;/p&gt;
+
+&lt;p&gt;This was a fun project to apply TensorFlow data models on low-budget cameras to gain (in my opinion)  superior image recognition. I continue my quest of home automation with more lessons learned. Too bad my Roomba will no longer be labeled as a person. I’m sure he’ll miss that. 🤖&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="large project" /><summary type="html">A few weeks ago, Google announced the shutdown of its Works with Nest developer program only 16 weeks in advance. The Works with Nest program allows third-party applications like Home Assistant and IFTTT to integrate with Nest products. Without this ability to integrate, Nest products are worthless to me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/assets/img/2019/05/2019-05-23_18-58-26.jpg" /></entry><entry><title type="html">Hacking Voice &amp;amp; WiFi Control into My Dumb Noise Machine</title><link href="https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine/" rel="alternate" type="text/html" title="Hacking Voice &amp; WiFi Control into My Dumb Noise Machine" /><published>2019-02-27T16:56:00-05:00</published><updated>2019-03-01T16:58:33-05:00</updated><id>https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2019/02/hacking-my-noise-machine/">&lt;p&gt;Picture this. It’s night time. You’re winding down and the end of a long work day getting for sleep. You climb into bed and pull the cozy covers up to your neck. Rolling over, you whisper a command to your digital assistant to turn off the lights. The room goes dark but something feels different.&lt;/p&gt;
 
 &lt;p&gt;A creaking noise of the house cuts through your silent slumber as the duct above expands with the furnace. Pestering you awake, it dawns on you that you’ve forgotten to turn on the noise machine.&lt;/p&gt;
 
@@ -1102,60 +1284,4 @@ xset +dpms
   &lt;li&gt;Use &lt;a href=&quot;http://zeldaspeedruns.wikia.com/wiki/Version_Differences&quot;&gt;this wiki&lt;/a&gt; to determine which Ocarina of Time cartridge version you have.&lt;/li&gt;
   &lt;li&gt;Navigate to &lt;a href=&quot;https://bkacjios.github.io/OOT-Save-Converter/&quot;&gt;https://bkacjios.github.io/OOT-Save-Converter/&lt;/a&gt;, import your RAM dump, select the correct cartridge version, and download your save file. Feel free to change any of the other options before downloading such as the file slot or other game settings.&lt;/li&gt;
   &lt;li&gt;Congratulations! You have successfully dumped your Ocarina of Time RAM and extracted your save file to be used with emulators and other tools.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="guide" /><summary type="html">It was brought to my attention that my original blog post outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/assets/img/2016/05/banner.jpg" /></entry><entry><title type="html">Testing Charma with Selenium</title><link href="https://www.kyleniewiada.org/blog/2016/04/testing-charma-with-selenium/" rel="alternate" type="text/html" title="Testing Charma with Selenium" /><published>2016-04-29T21:26:00-04:00</published><updated>2018-10-29T08:00:23-04:00</updated><id>https://www.kyleniewiada.org/blog/2016/04/testing-charma-with-selenium</id><content type="html" xml:base="https://www.kyleniewiada.org/blog/2016/04/testing-charma-with-selenium/">&lt;p&gt;If you’re wondering what I’m talking about when I mention the word Charma, I’m referring to an open source web API and web application that I built with two other teammates as a sponsored project by Microsoft for my Grand Valley State University senior capstone. You can read about our project along with a video overview &lt;a href=&quot;/blog/2016/04/charma-gamifying-volunteer-process/&quot;&gt;here&lt;/a&gt;. One of my largest contributions to that project was implementing web browser testing using Selenium.&lt;/p&gt;
-
-&lt;h2 id=&quot;my-largest-contribution-selenium&quot;&gt;My Largest Contribution (Selenium)&lt;/h2&gt;
-
-&lt;p&gt;For testing, our group decided to use Selenium WebDriver to test the interactions between our website and other browsers. The Selenium WebDriver allows for automated tasks to be written and run with different web browsers as a user would. It bypasses any cross-origin scripting policies by using a WebDriver to interact with each browser. Such examples for tests include selecting a field, inputting certain information into that field, submitting, and verifying results with what the website responds back with on the screen. Such a test is used on our registration page to verify that bad entries are not submitted and returned with proper error messages.&lt;/p&gt;
-
-&lt;p&gt;Before this project, I had never heard of Selenium. I would barely consider myself competent after seeing all the test coverage necessary for a website. Our tests are nowhere near complete. However, it did offer a necessary glimpse and small coverage for web browser automation testing.&lt;/p&gt;
-
-&lt;p&gt;In the beginning, when researching the Selenium WebDriver, a decision was made to implement our testing using the browser web drivers. It was not until late in our project that we discovered how slow each implementation of the browser web drivers were. In retrospect, we should have set up was a server to work with the HtmlUnit Driver. Our tests were not necessarily dependent on the ability to drive an actual browser. Using the HtmlUnit Driver would have been significantly faster and independent of the machine we were testing on. The limitations to testing with our webdriver is that we are platform dependent and dependent on the web driver staying up-to-date/compatible with current versions of their respective web browsers. But ahead is the result of my Selenium WebDriver implementation.&lt;/p&gt;
-
-&lt;p&gt;To make Selenium WebDriver testing work for our project, we had to make sure that each of us had installed the same web browsers to test with. All of our environments had Google Chrome and Firefox installed. We used the built-in web driver with Selenium for Firefox, and implemented Chromium’s web driver for Google Chrome. Additionally, all testing platforms needed to be on the same operating system because our Google Chrome web driver was OS dependent. Although, now looking back we could have made a check in the code to see which operating system the user was on and then branch to the appropriate web driver.&lt;/p&gt;
-
-&lt;h2 id=&quot;setting-it-up&quot;&gt;Setting It Up&lt;/h2&gt;
-
-&lt;p&gt;To add another web browser or web driver, it is as easy as initializing the web driver for that browser, adding that driver to a global list accessible by the testing suites, starting that web driver, and then stopping it when it is complete.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;#if DEBUG
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Before our Selenium WebDriver can begin testing our website, we have to initialize the Internet Information Services (IIS) to locally deploy your website after build. Before I figured out how to do this, I manually ran an instance of our web app in the background and then ran the tests. But now the startup of our selenium tests are independent of a manual website launch. Once the Internet Information Service has been initialized, we are ready to begin testing.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;#else
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;When testing in release mode, we will redirect all of our tests to our production webpage hosted on Azure services.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C#&quot;&gt;#endif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;running-our-selenium-tests&quot;&gt;Running Our Selenium Tests&lt;/h2&gt;
-
-&lt;!-- Method to implement AMP-Video. --&gt;
-
-&lt;iframe src=&quot;https://www.youtube.com/embed/Y_hAWFAp140&quot; height=&quot;420&quot; width=&quot;700&quot; allowfullscreen=&quot;&quot;&gt;
-&lt;/iframe&gt;
-
-&lt;p&gt;Each web driver for each web browser is initialized and the testing begins. The very first test we have is browsing to Python.org, searching for pycon, and verifying that results exist. We do this to simply verify whether or not our web drivers are working properly. If we fail, we immediately know that there is something wrong with the initialization or setup of our Selenium WebDrivers.&lt;/p&gt;
-
-&lt;p&gt;On the registration page we check for invalid emails, mismatching passwords, passwords that are too short, missing required fields, and ZIP Codes that are not numbers. The entire list of tests for the registration page take roughly 2 seconds for each browser. Next, we verify that all links in the header are what we expect. Such that there are no missing and no extra links in the header of our website. If there is, that would be an example of a routing problem that we may have missed and should inspect immediately. After this, we dynamically grab all links in the header of the website, and test the response code from each URL to verify every link is alive.&lt;/p&gt;
-
-&lt;p&gt;Each link is grabbed dynamically such that if we add a new webpage to our website, we do not need to change too many of our tests. We visit each of those links in the header, and upon each page that we visit, we verify that there are no dead images on each page. After a visit to each link has been made, we repeat the same process and check to verify that no dead links exist on any page that we can find. We separate these two cycles to split up our testing methods and to better understand what goes wrong when a test fails. These tests are verified by getting the HTTP response code from each link we find.&lt;/p&gt;
-
-&lt;p&gt;After all these tests have run, the web drivers exit, and the Internet Information Services are stopped. The results are then displayed.&lt;/p&gt;
-
-&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
-
-&lt;p&gt;We had to watch out for our Visual Studio Team Foundation Server failing our tests because it did not have the same operating system as the rest of our testing platform. So I set up a category for the Selenium WebDriver tests with the name “Selenium”. This category was then noted and filtered out of the build steps on the Team Foundation Server. This ensured that our tests would not fail online and then fail to deploy our website after pulling the source code from GitHub.&lt;/p&gt;
-
-&lt;p&gt;Our web driver tests are set up to allows us to create repeated tests and test these interactions across multiple web browsers dynamically. Our project is set up to maintain a list of all implemented web drivers on the system, and then in parallel will run each test for the list of web browsers.&lt;/p&gt;
-
-&lt;p&gt;An unusual note is that we found Firefox to be significantly slower than Google Chrome when it came to interactions with the Selenium WebDriver. I am not entirely sure the reason that this happens.&lt;/p&gt;
-
-&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
-
-&lt;p&gt;I had a great last semester a Grand Valley State University. I was given the opportunity to work with two other outstanding students and briefly with Eric, our mentor at Microsoft. I learned quite a bit about the enormous scope of our enterprise level MVC ASP.net web application and how much more test coverage we actually needed for our project. Tomorrow I graduate and I begin my software developer career. Here’s to the future.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/2016/04/cap.jpg&quot; alt=&quot;my graduation cap lined with LED strings&quot; /&gt;&lt;/p&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="medium project" /><summary type="html">If you’re wondering what I’m talking about when I mention the word Charma, I’m referring to an open source web API and web application that I built with two other teammates as a sponsored project by Microsoft for my Grand Valley State University senior capstone. You can read about our project along with a video overview here. One of my largest contributions to that project was implementing web browser testing using Selenium.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/assets/img/2016/04/banner2.jpg" /></entry></feed>
+&lt;/ol&gt;</content><author><name>{&quot;image&quot;=&gt;&quot;/assets/img/kyle.jpg&quot;, &quot;twitter&quot;=&gt;&quot;CrypticCitrus&quot;}</name></author><category term="guide" /><summary type="html">It was brought to my attention that my original blog post outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.kyleniewiada.org/assets/img/2016/05/banner.jpg" /></entry></feed>

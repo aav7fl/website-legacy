@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#3d256d">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#3d256d">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+      
+        <link rel="amphtml" href="https://www.kyleniewiada.org/amp/blog/2019/05/trading-nest-for-tensorflow/" data-proofer-ignore>
+      
+    
+
+    <!-- Messy way to capture custom page title to replace SEO Tags -->
+    
+    
+    <title>Trading in Nest for TensorFlow and Z-Wave</title>
+    <meta property="og:title" content="Trading in Nest for TensorFlow and Z-Wave" />
+
+    <!-- Come and get me RSS readers -->
+    <link type="application/atom+xml" rel="alternate" href="https://www.kyleniewiada.org/feed.xml" title="Kyle Niewiada's Website" />
+
+    <!-- Critical Stylesheet -->
+    <style type="text/css">
+      
+      @font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local("Open Sans Light"),local("OpenSans-Light"),url("/assets/fonts/open-sans-v13-latin-300.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-300.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local("Open Sans"),local("OpenSans"),url("/assets/fonts/open-sans-v13-latin-regular.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-regular.woff") format("woff")}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local("Open Sans Semibold"),local("OpenSans-Semibold"),url("/assets/fonts/open-sans-v13-latin-600.woff2") format("woff2"),url("/assets/fonts/open-sans-v13-latin-600.woff") format("woff")}.page-title{text-align:left;font-size:200%;line-height:1.2;font-weight:normal}@media (min-width: 600px){.page-title{font-size:250%}}@media (min-width: 1000px){.page-title{font-size:300%}}.meta{color:#696969;font-weight:300;font-size:120%}@media (min-width: 600px){.meta{font-size:130%}}@media (min-width: 1000px){.meta{font-size:140%}}a.meta{text-align:center;display:block}.title-meta{overflow:auto;color:#696969;font-size:100%}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 .5rem;font-weight:600}a{color:#3d256d}a:hover{color:#1d1234}code,pre{border-radius:.2em;background-color:#f5f5f5;border:0.1em solid #d3d3d3}code{padding:2px 4px;color:#9e023b}pre{padding:16px;overflow-y:hidden}pre code{color:inherit;background-color:transparent;padding:0;border:0}body{margin:0}body,p,li,ul,input,textarea{font-size:1em;line-height:1.58;color:#111;font-family:"Open Sans",Helvetica,Arial,sans-serif}img,video,audio,iframe,object{max-width:100%}main{display:block}.line-separator{height:2px;background:#d3d3d3;margin-top:16px;margin-bottom:16px}.clearfix:after{content:"";display:block;clear:both}.content{max-width:700px;margin-right:auto;margin-left:auto;padding:0 16px}.content img{display:block;margin-left:auto;margin-right:auto}.no-list{list-style:none;padding-left:0;margin-left:0}.left{float:left}.right{float:right}.post-list li{margin-bottom:4em;position:relative}.post-list li:before{content:"";position:absolute;bottom:-2em;left:0;background:#e6e6e6;height:2px;width:60px}.post-list li a{text-decoration:none}.post-list li a:hover{text-decoration:underline}.post-list li .date{color:#696969;font-size:.8em}.header{background-image:url("/assets/img/banner.svg");background-color:#3a3a3a;background-size:cover;background-position:center center;padding:0;height:auto;margin-bottom:16px}.header .navigation{background:#262626}.header .nav-container{max-width:1000px;margin:0 auto}@media (min-width: 600px){.header{min-height:10em;position:relative;margin-bottom:16px}}nav{height:70px;overflow:hidden}nav ul{margin:0;padding:0;list-style-type:none;max-height:140px;position:relative}nav ul .active{background:#3d256d}nav li{display:inline-block;padding:0}nav a{display:inline-block;padding:0 1em;color:#fff;text-decoration:none;white-space:nowrap;line-height:70px;height:70px}nav a:hover{color:#fff;background-color:#00b2d9}nav li:first-child{left:0;vertical-align:top;font-size:75%}nav li:first-child :hover{color:#fff;background-color:#262626}@media (min-width: 330px){nav li:first-child{font-size:100%}}@media (min-width: 400px){nav li:first-child{font-size:140%}}nav li:last-child{position:absolute;right:0;bottom:70px;background-image:linear-gradient(to right, rgba(38,38,38,0) 0, #262626 2em);padding-left:3em}nav li:nth-last-child(2){display:none}nav#menu:target{height:auto;padding:0}nav#menu:target ul{max-height:none}nav#menu:target li{display:block}nav#menu:target a{display:block;background-color:rgba(255,255,255,0.05)}nav#menu:target li:not(:first-child){margin-top:2px}nav#menu:target li:not(:first-child) a:hover{background-color:#00b2d9}nav#menu:target li:last-child{display:none}nav#menu:target li:nth-last-child(2){display:inline-block;position:absolute;top:0;right:0;margin:0;border-left:2px solid #262626;background:#3a3a3a}
+
+      
+    </style>
+
+    <!-- Contain all special checks needed on AMP pages. Attempt to consolidate checks. -->
+
+
+  
+  <!-- Extract extra <title> tag. -->
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+
+<meta name="generator" content="Jekyll v3.8.5" />
+
+<meta name="author" content="Kyle Niewiada" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I replaced my Nest products with cheaper cameras using TensorFlow and a locally controlled in Z-Wave thermostat." />
+<meta property="og:description" content="I replaced my Nest products with cheaper cameras using TensorFlow and a locally controlled in Z-Wave thermostat." />
+<link rel="canonical" href="https://www.kyleniewiada.org/blog/2019/05/trading-nest-for-tensorflow/" />
+<meta property="og:url" content="https://www.kyleniewiada.org/blog/2019/05/trading-nest-for-tensorflow/" />
+<meta property="og:site_name" content="Kyle Niewiada’s Website" />
+<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2019/05/2019-05-23_18-58-26.jpg" />
+<meta property="og:image:height" content="450" />
+<meta property="og:image:width" content="800" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-05-24T17:39:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.kyleniewiada.org/assets/img/2019/05/2019-05-23_18-58-26.jpg" />
+<meta property="twitter:title" content="Trading in Nest for TensorFlow and Z-Wave" />
+<meta name="twitter:site" content="@CrypticCitrus" />
+<meta name="twitter:creator" content="@CrypticCitrus" />
+<meta property="fb:app_id" content="137961485759" />
+<script type="application/ld+json">
+{"description":"I replaced my Nest products with cheaper cameras using TensorFlow and a locally controlled in Z-Wave thermostat.","@type":"BlogPosting","headline":"Trading in Nest for TensorFlow and Z-Wave","dateModified":"2019-05-24T19:45:08-04:00","datePublished":"2019-05-24T17:39:00-04:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"url":"https://www.kyleniewiada.org/blog/2019/05/trading-nest-for-tensorflow/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.kyleniewiada.org/blog/2019/05/trading-nest-for-tensorflow/"},"image":{"height":450,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2019/05/2019-05-23_18-58-26.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Kyle Niewiada"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+
+
+
+     <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ ga('create', 'UA-37567352-1', 'auto');
+ ga('send', 'pageview');
+</script>
+ 
+</head>
+
+
+  <body>
+  <!-- start header -->
+<header class="header">
+  <div class="navigation">
+    <div class="nav-container">
+      <nav id="menu">
+        <ul class="menu-closed">
+          
+            
+            <li class="normal"><a href="/">Kyle Niewiada</a></li>
+          
+            
+            <li class="normal"><a href="/">Home</a></li>
+          
+            
+            <li class="normal"><a href="/about/">About</a></li>
+          
+            
+            <li class="normal"><a href="/archive/">Archive</a></li>
+          
+            
+            <li class="normal"><a href="/contact/">Contact</a></li>
+          
+            
+            <li class="normal"><a href="/resume/">Résumé</a></li>
+          
+          <li><a href="#">&#215; Close menu</a></li>
+          <li><a href="#menu">&#9776; Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+    <main class="content">
+    <!-- lazy way to hide page title on blog posts -->
+    
+
+    <article>
+  <header>
+    <h1 class="page-title">Trading in Nest for TensorFlow and Z-Wave</h1>
+
+    <h2 class="meta">Kyle Niewiada on May 24, 2019</h2>
+
+    <h3 class="meta">17 Minute Read | Large project</h3>
+  </header>
+
+  
+    <img src="/assets/img/2019/05/2019-05-23_18-58-26.jpg" alt="Detecting two people at once in TensorFlow"/>
+  
+
+  <div class="line-separator"></div>
+
+  <p>A few weeks ago, Google <a href="https://blog.google/products/google-nest/helpful-home/">announced the shutdown</a> of its Works with Nest developer program only 16 weeks in advance. The Works with Nest program allows third-party applications like Home Assistant and IFTTT to integrate with Nest products. Without this ability to integrate, Nest products are worthless to me.</p>
+
+<p>After much outcry, Google decided to <a href="https://blog.google/products/google-nest/updates-works-with-nest/">back off</a> on their aggressive shutdown target date. They also clarified that services like Alexa would be exempt from this change. Unfortunately, the death sentence has only been extended and without a doubt will still be shutdown in the near future.</p>
+
+<h2 id="whats-wrong-with-nest">What’s Wrong with Nest</h2>
+
+<p>I like Nest. Their support has always been top-notch. When I first purchased my Nest E thermostat, the customer service paid to have an electrician rewire our HVAC to be compatible. I’ve been recommending them for years because of that experience. It hit me like a train when they announced they were winding down their developer program. All I could think about was how I wasn’t going to be able to use their products the way <em>I</em> wanted to, but the way <em>they</em> wanted me to.</p>
+
+<h2 id="what-can-i-fix">What Can I Fix</h2>
+
+<p>I know what you’re thinking. I made a terrible decision going with the company that had a cloud-based API. You’re mostly correct. However, when I purchased the Nest products, it made sense. I didn’t have any home automation platforms, and I didn’t have the time to build one during my moving situation.</p>
+
+<blockquote>
+  <p>Going forward, I will favor edge computing and APIs that can be accessed locally.</p>
+</blockquote>
+
+<p>Knowing full well that I was in need of a new solution, I started looking at what problems I was  having and how I could improve with the next iteration.</p>
+
+<h3 id="problem-1-avoid-cloud-apis-like-the-plague">Problem 1: Avoid Cloud APIs Like the Plague</h3>
+
+<p>My thermostat needed to be replaced if I was to continue using it in the same way. A device that usually stays in your house for <em>decades</em> hadn’t passed its second birthday. I <em>thrilled</em> to be buying a new thermostat so soon.</p>
+
+<p>This transformation led me down the path of seeking <a href="https://en.wikipedia.org/wiki/Z-Wave">Z-Wave</a>, a wireless communications protocol commonly used in home automation. I was seeking full control of a device that I could communicate with even if the Internet went out. This meant avoiding Wi-Fi based thermostats because I felt that most of the options weren’t that great unless I was ready to spend large sums of money. I was still getting over the burn of my Nest E thermostat purchase.</p>
+
+<p>After digging through a few reviews and recommendations, I settled upon the Radio Thermostat CT101. Honestly, it looks like it came out of the 1980s. It’s ugly– but it <em>is</em> functional.. So.. ✅? I guess..</p>
+
+<p><img src="/assets/img/2019/05/2019-05-21_20-05-12.jpg" alt="My thermostat that fell out of 1982" /><em>My thermostat that fell out of 1982</em></p>
+
+<p>A quick installation of the new thermostat and I was good to go. Within an hour I had it paired with my Z-Wave stick on my Home Assistant, and another two hours later I had completed flows in Node-RED for temperature scheduling and home/away temperatures.</p>
+
+<h3 id="problem-2-cameras-shouldnt-break-without-internet">Problem 2: Cameras Shouldn’t Break Without Internet</h3>
+
+<p>The Nest camera had a critical flaw. If the Internet went out, it stopped working!</p>
+
+<p>It was essential that I replace the Nest camera with one that allowed for local streaming and recording to the device if something went down.</p>
+
+<p>Instead of throwing more money at the problem, I decided to go the hobbyist route. After getting some strong recommendations for <a href="https://www.amazon.com/dp/B076H3SRXG">Wyze 2 cameras</a> from my coworkers, I decided to pick one up.</p>
+
+<p>I was excited to use the Wyze 2 camera because they recently announced their beta firmware was adding support for <a href="https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a>. This feature would allow me to stream the network video to any local device that I wanted, bypassing the Internet completely.</p>
+
+<p><img src="/assets/img/2019/05/2019-05-24_19-04-27.jpg" alt="Wyze 2 Camera" /><em>The Wyze 2 in its full glory</em></p>
+
+<p>There isn’t too much to say about them. They are <em>super cheap</em> and it shows. It doesn’t have a 130° wide-angle lens that my Nest camera had. The compression in the video is pretty extreme. It also seems unable to fully illuminate the room with its weak infrared lamps.</p>
+
+<p>At the end of the day, it’s less than 1/8 the price of the cheapest Nest camera. It has no subscription cost, doesn’t require Internet, and can record locally on an SD card. If it really bothers me, I can pick up half a dozen more before it approaches the same price of my Nest camera.</p>
+
+<p>So the cheap Wyze 2 camera wins for today.</p>
+
+<h3 id="problem-3-roomba-is-my-pet">Problem 3: Roomba is My Pet</h3>
+
+<p>On quite a few occasions, my Nest camera would send me <code class="highlighter-rouge">Person</code> alerts when it saw my Roomba by chugging along. Nest wasn’t the only one who didn’t recognize the Roomba though. Support thought it was my pet! <em>Although they might be partially correct on that</em>…</p>
+
+<p><img src="/assets/img/2019/05/2019-05-07-09-21-17.png" alt="Chat conversation with Gary from customer support" /><em>Is Roomba your pet?</em></p>
+
+<p>What can I do to fix this? A few months back, I remembered that Home Assistant had announced support for TensorFlow as an integration. Given that I had recently moved my entire set up onto an Intel NUC, I figured this would be an excellent usage of my extra CPU cycles.</p>
+
+<p>My plan was to stream everything locally, run motion detection on the images, hand them off to TensorFlow, and check to see if any unexpected humans were in frame.</p>
+
+<p>This was kind of like playing the <a href="https://itunes.apple.com/us/app/not-hotdog/id1212457521">Not HotDog</a> game from Silicon Valley. The critically acclaimed app determines whether an object is a hot dog, or <em>not</em> a hot dog.</p>
+
+<p>I wasn’t trying to categorize every kind of object in every single frame. I just wanted to know if anything in frame was either human, or <em>not</em> human. A <em>fairly simple</em> model to deal with.</p>
+
+<h4 id="approaching-humannot-human">Approaching Human/Not Human</h4>
+
+<p>Here was the plan:</p>
+
+<ul>
+  <li>Use Wyze 2 camera with RTSP enabled</li>
+  <li>Capture the RTSP stream inside <em>something</em></li>
+  <li>Detect motion so I’m not running TensorFlow 24x7</li>
+  <li>Send me a notification if there is a person (who shouldn’t be there)</li>
+</ul>
+
+<p>In under a few seconds I should be able to detect a person walking near a camera and be immediately notified of their presence. I still don’t know <em>who</em> the person is, but I can’t imagine it’s too difficult to capture faces from TensorFlow and send them through a trained network of known faces.</p>
+
+<blockquote>
+  <p>I decided to use the <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md">faster_rcnn_inception_v2_coco</a> model based on the <a href="https://josiahvorst.com/image-processing-made-easy-home-assistant-tensorflow/">recommendation from this post</a>.</p>
+</blockquote>
+
+<p>The best part about my plan is that all of it (except the Pushover notification) was supposed to be handled locally.</p>
+
+<h3 id="taking-my-camera-to-the-next-level">Taking My Camera to the Next Level</h3>
+
+<p>With my bundle of new cameras, it was time to make them smart. I set up a camera in the front of my house to keep an eye on my car and track people approaching the front door. My original plan was to use the outline mentioned above and notify me via Pushover when it detects a person. But it seemed to work a little too well…</p>
+
+<p><img src="/assets/img/2019/05/2019-05-23_17-35-27.jpg" alt="Person on the other side of the road" /><em>That person is pretty far away</em></p>
+
+<p>While testing, I was noticing that it was picking up people all the way across the street.</p>
+
+<p><em>Ok</em>. I guess I can handle this by restricting the area that tensor flow is looking at. So let me chop off the top 35% of the image area.</p>
+
+<p><img src="/assets/img/2019/05/2019-05-23_17-49-29.jpg" alt="I duck to trigger a valid capture" /><em>Ducking to trigger a valid event</em></p>
+
+<p><em>Ok</em>. Now it only works if the person happens to crawl up to my window. Because my camera isn’t high enough, it doesn’t know when a person’s head is in the foreground or the background and it can’t efficiently detect them.</p>
+
+<h4 id="solving-the-depth-perception">Solving the Depth Perception</h4>
+
+<p>Ironically, Google AI <em>JUST</em> put out a <a href="https://ai.googleblog.com/2019/05/moving-camera-moving-people-deep.html">blog post about depth prediction</a>. But I don’t think that would’ve worked very well in my cheap cameras.</p>
+
+<p>What do you notice when a person gets closer to the camera? The bounding box TensorFlow provides becomes larger. Because TensorFlow is already giving me <code class="highlighter-rouge">xmin</code>/<code class="highlighter-rouge">xmax</code>/<code class="highlighter-rouge">ymin</code>/<code class="highlighter-rouge">ymax</code>, I can calculate the <code class="highlighter-rouge">area</code> of the bounding box to get a rough estimate if target is closer or farther away from the camera.</p>
+
+<p>I set up a Node-RED prototype flow to log the <code class="highlighter-rouge">area</code>, grabbed my iPad, and ran outside. I repeatedly triggered the capture so TensorFlow produce the <code class="highlighter-rouge">area</code> result based on where I was standing.</p>
+
+<p>I stood on one side of the sidewalk, hit the button, and took note of the <code class="highlighter-rouge">area</code> result. Then I stood by my car and repeated the process. I kept doing this for a handful of different locations while striking beautiful poses to give the system a variety. After a few minutes, I had a good idea of what kind of <code class="highlighter-rouge">area</code> numbers I needed for determiners on distance from the camera.</p>
+
+<p><img src="/assets/img/2019/05/2019-05-23_18-58-26.jpg" alt="Example capture of two people" /><em>What if there is more than one person?</em></p>
+
+<p><em>Ok</em>. But what if there are two people in frame, and they are really far away from each other? While testing out my flow, I realized that if there was more than one person in frame, and the first person I detect is too far away, my entire flow would stop after the first failure. With a little bit of JavaScript-fu I needed to break apart all of the returned objects from TensorFlow. This allowed me to address each result individually to know if it met all criteria.</p>
+
+<p><img src="/assets/img/2019/05/2019-05-24_15-30-19.png" alt="My Node-RED flow" /><em>My Node-RED flow for the outdoor camera: (<a href="/assets/files/2019/05/front-window-node-red-flow.js">front-window-node-red-flow.js</a>)</em></p>
+
+<p>Success! It’s finally working.</p>
+
+<h4 id="camera-setup">Camera Setup</h4>
+
+<ol>
+  <li>A Wyze 2 camera is recording and streaming a scene through RTSP.</li>
+  <li>The stream is picked up by <a href="https://github.com/ccrisan/motioneye">motionEye</a> which:
+    <ol>
+      <li><em>Re-broadcasts</em> the stream to Home Assistant as MJPEG (so I’m not picking the stream up twice from each camera increasing the load on them).</li>
+      <li>Calls a webhook in Home Assistant for the start of each motion event.</li>
+    </ol>
+  </li>
+  <li>The Home Assistant webhook sends a MQTT message for every new motion event.</li>
+  <li>In Node-RED, I pick up the MQTT messages and treat them like a stream.
+    <ul>
+      <li>If the messages keep coming in, continue running TensorFlow on a camera stream.</li>
+      <li>If the messages stop, my timer runs out and I stop running TensorFlow on the camera stream.</li>
+    </ul>
+  </li>
+  <li>If TensorFlow detects a person:
+    <ol>
+      <li>Split up all person objects into separate results.</li>
+      <li>Check the confidence level of each result. If it’s not high enough, ignore it. If it is high enough, continue.</li>
+      <li>Check the total area of each results. If the total area exceeds something that I would deem close to the camera, continue.</li>
+    </ol>
+  </li>
+  <li>If there is a captured result from TensorFlow that passes all of my validations, notify me with the image via Pushover. Or at the very least, log the image somewhere that I can review later.</li>
+</ol>
+
+<h4 id="outdoor-camera-flow">Outdoor Camera Flow</h4>
+
+<p>Essentially, this is the outdoor camera flow simplified:</p>
+
+<ul>
+  <li>Everyone is gone
+    <ul>
+      <li>Movement is detected
+        <ul>
+          <li>Movement looks like a person?</li>
+          <li>The confidence level of the person is fairly high?</li>
+          <li>The area of the detected person is fairly large?</li>
+          <li>Send me a low priority alert with the image</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="indoor-camera-flow">Indoor Camera Flow</h4>
+
+<p>The inside camera flow is laughably easier:</p>
+
+<ul>
+  <li>Everyone is gone
+    <ul>
+      <li>Movement is detected
+        <ul>
+          <li>Movement looks like a person?</li>
+          <li>Take evasive actions!</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>I’m sad to leave Nest. They have beautiful products that work very well. Well… <em>technically</em> since Google has re-branded the Home Hub as the Nest Hub, I haven’t <em>exactly</em> left them. But that doesn’t make a very good title, does it?</p>
+
+<p>I’m excited to use edge computing rather than cloud computing for analysis. I’m enjoying my approach of  decoupling my home automation from being Internet reliant. Unlike Nest cameras, my devices will <em>still have basic functionality</em> if there is an internet outage. More problems have been solved that I hope do not crop up again.</p>
+
+<p>This was a fun project to apply TensorFlow data models on low-budget cameras to gain (in my opinion)  superior image recognition. I continue my quest of home automation with more lessons learned. Too bad my Roomba will no longer be labeled as a person. I’m sure he’ll miss that. 🤖</p>
+
+
+  <div class="line-separator"></div>
+
+  <!-- POST NAVIGATION -->
+<div class="post-nav">
+  
+    <a class="post-nav-link" href="/blog/2019/02/hacking-my-noise-machine/">
+    <div class="link-text previous">&laquo;&nbsp;Hacking Voice & WiFi Control into My Dumb Noise Machine</div>
+    
+      <img class="link-image" src="/assets/img/2019/02/banner_noise_machine.png" alt="Previous Article">
+    
+    </a>
+  
+  
+</div>
+
+</article>
+
+
+
+    
+<!-- Add Disqus comments. -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'kyleniewiada'; // required: replace example with your forum shortname
+  var disqus_identifier = "/blog/2019/05/trading-nest-for-tensorflow/";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </main>
+  <!-- start footer -->
+<footer class="content">
+  <div class="flex-list">
+  <ul>
+  
+    <li>
+      <a href="https://www.linkedin.com/in/kyleniewiada/" >LinkedIn</a>
+    </li>
+  
+    <li>
+      <a href="https://github.com/aav7fl" >GitHub</a>
+    </li>
+  
+    <li>
+      <a href="https://twitter.com/CrypticCitrus" >Twitter</a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/user/KyleNiewiada" >YouTube</a>
+    </li>
+  
+    <li>
+      <a href="https://kyleniewiada.bandcamp.com/" rel='nofollow'>BandCamp</a>
+    </li>
+  
+    <li>
+      <a href="/sitemap/" >Sitemap</a>
+    </li>
+  
+  </ul>
+</div>
+
+</footer>
+<!-- start noncritical style -->
+<link rel="preload" href="/assets/css/noncritical.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/assets/css/noncritical.css"></noscript>
+<script>
+  /*loadCss*/
+  !function(w){"use strict";var loadCSS=function(href,before,media){function ready(cb){return doc.body?cb():void setTimeout(function(){ready(cb)})}function loadCB(){ss.addEventListener&&ss.removeEventListener("load",loadCB),ss.media=media||"all"}var ref,doc=w.document,ss=doc.createElement("link");if(before)ref=before;else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet",ss.href=href,ss.media="only x",ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){for(var resolvedHref=ss.href,i=sheets.length;i--;)if(sheets[i].href===resolvedHref)return cb();setTimeout(function(){onloadcssdefined(cb)})};return ss.addEventListener&&ss.addEventListener("load",loadCB),ss.onloadcssdefined=onloadcssdefined,onloadcssdefined(loadCB),ss};"undefined"!=typeof exports?exports.loadCSS=loadCSS:w.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+
+  /*link[rel=preload] polyfill*/
+  !function(w){if(w.loadCSS){var rp=loadCSS.relpreload={};if(rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){return!1}},rp.poly=function(){for(var links=w.document.getElementsByTagName("link"),i=0;i<links.length;i++){var link=links[i];"preload"===link.rel&&"style"===link.getAttribute("as")&&(w.loadCSS(link.href,link),link.rel=null)}},!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);w.addEventListener&&w.addEventListener("load",function(){w.clearInterval(run)}),w.attachEvent&&w.attachEvent("onload",function(){w.clearInterval(run)})}}}(this);
+</script>
+<!-- end noncritical style -->
+<!-- end footer -->
+
+  </body>
+</html>
