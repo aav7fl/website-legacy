@@ -24,9 +24,10 @@ before_install:
   - if [ -f node_modules/.bin/which ]; then mv node_modules/.bin/which node_modules/.bin/which.backup; fi
   - rvm install 2.5.1 && rvm use 2.5.1
   - if [ -f node_modules/.bin/which.backup ]; then mv node_modules/.bin/which.backup node_modules/.bin/which; fi
+  - gem install bundler
+  - gem install bundler
 
 install:
-  - gem install bundler
   - bundle install --deployment
   - npm install
 
