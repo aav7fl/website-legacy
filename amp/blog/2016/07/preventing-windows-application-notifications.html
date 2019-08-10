@@ -4,7 +4,7 @@
 
 
   <meta charset="utf-8">
-  <title>N64 - The Legend of Zelda: Ocarina of Time Save Transfer Guide</title>
+  <title>Preventing Windows Apps from Broadcasting a Taskbar Notification</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
@@ -39,24 +39,24 @@
 
 <meta name="author" content="Kyle Niewiada">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="An updated guide on how to dump the ram from The Legend of Zelda: Ocarina of Time on the Nintendo 64 and create an emulator friendly (.sra) save file.">
-<meta property="og:description" content="An updated guide on how to dump the ram from The Legend of Zelda: Ocarina of Time on the Nintendo 64 and create an emulator friendly (.sra) save file.">
-<link rel="canonical" href="/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/">
-<meta property="og:url" content="/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/">
+<meta name="description" content="Using the Windows 10 registry editor to remove or mute application notifications in the system taskbar that will not stay hidden after a reboot.">
+<meta property="og:description" content="Using the Windows 10 registry editor to remove or mute application notifications in the system taskbar that will not stay hidden after a reboot.">
+<link rel="canonical" href="/blog/2016/07/preventing-windows-application-notifications/">
+<meta property="og:url" content="/blog/2016/07/preventing-windows-application-notifications/">
 <meta property="og:site_name" content="Kyle Niewiada’s Website">
-<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/05/banner.jpg">
-<meta property="og:image:height" content="470">
-<meta property="og:image:width" content="800">
+<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/07/banner.png">
+<meta property="og:image:height" content="480">
+<meta property="og:image:width" content="1011">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-05-01T14:10:00-04:00">
+<meta property="article:published_time" content="2016-07-02T12:33:00-04:00">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="https://www.kyleniewiada.org/assets/img/2016/05/banner.jpg">
-<meta property="twitter:title" content="N64 - The Legend of Zelda: Ocarina of Time Save Transfer Guide">
+<meta property="twitter:image" content="https://www.kyleniewiada.org/assets/img/2016/07/banner.png">
+<meta property="twitter:title" content="Preventing Windows Apps from Broadcasting a Taskbar Notification">
 <meta name="twitter:site" content="@CrypticCitrus">
 <meta name="twitter:creator" content="@CrypticCitrus">
 <meta property="fb:app_id" content="137961485759">
 <script type="application/ld+json">
-{"description":"An updated guide on how to dump the ram from The Legend of Zelda: Ocarina of Time on the Nintendo 64 and create an emulator friendly (.sra) save file.","@type":"BlogPosting","headline":"N64 - The Legend of Zelda: Ocarina of Time Save Transfer Guide","dateModified":"2018-12-17T16:41:06-05:00","datePublished":"2016-05-01T14:10:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/"},"url":"/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"image":{"height":470,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2016/05/banner.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Kyle Niewiada"},"@context":"https://schema.org"}</script>
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"headline":"Preventing Windows Apps from Broadcasting a Taskbar Notification","dateModified":"2019-01-14T06:16:05-05:00","datePublished":"2016-07-02T12:33:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2016/07/preventing-windows-application-notifications/"},"image":{"height":480,"width":1011,"url":"https://www.kyleniewiada.org/assets/img/2016/07/banner.png","@type":"imageObject"},"url":"/blog/2016/07/preventing-windows-application-notifications/","author":{"@type":"Person","name":"Kyle Niewiada"},"description":"Using the Windows 10 registry editor to remove or mute application notifications in the system taskbar that will not stay hidden after a reboot.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -116,15 +116,15 @@
 <main class="content">
   <article>
     <div class="post_info">
-      <h1 class="page-title">N64 - The Legend of Zelda: Ocarina of Time Save Transfer Guide</h1>
+      <h1 class="page-title">Preventing Windows Apps from Broadcasting a Taskbar Notification</h1>
 
       <h2 class="meta">Kyle Niewiada
 
-      <h3 class="meta">May 01, 2016 | 7 Minute Read</h3>
+      <h3 class="meta">July 02, 2016 | 7 Minute Read</h3>
 
       
       <div class="featuredImage">
-        <amp-img src="/assets/img/2016/05/banner.jpg" alt="The Legend of Zelda: Ocarina of Time save converter" width="800" height="470" layout="responsive"><noscript><img src="/assets/img/2016/05/banner.jpg" alt="The Legend of Zelda: Ocarina of Time save converter" width="800" height="470"></noscript></amp-img>
+        <amp-img src="/assets/img/2016/07/banner.png" alt="Windows registry notification entry" width="1011" height="480" layout="responsive"><noscript><img src="/assets/img/2016/07/banner.png" alt="Windows registry notification entry" width="1011" height="480"></noscript></amp-img>
       </div>
       
 
@@ -133,125 +133,60 @@
     </h2>
 </div>
 
-    <p>It was brought to my attention that my <a href="/blog/2015/04/transferring-n64-saves/">original blog post</a> outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.</p>
-
-<h2 id="required-tools">Required tools:</h2>
-
-<ul>
-  <li>Linux Mint (live CD will work too)
-    <ul>
-      <li>You can choose whatever Linux distro you would like, but the tutorial steps may not match with other Linux distros.</li>
-    </ul>
-  </li>
-  <li>A Working Nintendo 64 (and controller)
-    <ul>
-      <li>It would be best if you could connect this to a TV so you can see the screen. Although I guess if someone makes a TASBot, you wouldn’t need a TV for it.</li>
-    </ul>
-  </li>
-  <li>8 MB Expansion Pak</li>
-  <li>Nintendo 64 GameShark with a working parallel port
-    <ul>
-      <li>A working parallel port can usually be found on cartridge versions 3.2 and 3.3</li>
-    </ul>
-  </li>
-  <li>Computer with a working parallel port</li>
-  <li>Parallel cable
-    <ul>
-      <li>Other users were unable to get a USB to parallel cable to work. I would advise against using an adapter.</li>
-    </ul>
-  </li>
-  <li>The Legend of Zelda: Ocarina of Time</li>
-  <li>Super Mario 64
-    <ul>
-      <li>Or equivalent. This game is only needed to boot GameShark and change keycode for Ocarina of Time.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="part-one-preparing-the-transfer-computer">Part One: Preparing the Transfer Computer</h2>
-
-<ol>
-  <li>Have your machine (with the parallel port) turned on and booted into its Linux partition or a Live CD equivalent.</li>
-  <li>On that machine download the <a href="https://github.com/parasyte/n64rd/releases">latest release</a> of N64RD. This tutorial uses version 0.2.0.</li>
-  <li>Unzip its contents and navigate to the directory using a terminal.</li>
-  <li>
-    <p>To build N64RD, we need to install ‘scons’. From the command line, run:</p>
-
-    <div class="highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> sudo apt-get install -y scons
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>After scons has finished installing, in the directory of the unzipped code, to build N64RD run:</p>
-
-    <div class="highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> scons
-</code></pre></div>    </div>
-
-    <p><amp-img src="/assets/img/2016/05/term.jpg" alt="Terminal Output" width="800" height="701" layout="responsive"><noscript><img src="/assets/img/2016/05/term.jpg" alt="Terminal Output" width="800" height="701"></noscript></amp-img></p>
-  </li>
-  <li>Your directory should now contain the ‘n64rd’ commandline executable file.</li>
-  <li>Leave the terminal open and your machine on during the next few steps.</li>
-</ol>
-
-<h2 id="part-two-preparing-the-nintendo-64">Part Two: Preparing the Nintendo 64</h2>
+    <p>A few weeks ago a Windows application on my computer was broadcasting notifications that I did not care for. I have an application that communicates with my uninterruptible power supply to shut down my machine in the event of a power outage after a few minutes. If this program estimates less than five minutes of reserve power, the program will broadcast a notification in the system taskbar (with sound!) letting me know.</p>
 
 <blockquote>
-  <p>If your Nintendo 64 freezes at any point, you will need to power down your Nintendo 64 and begin again from Part Two: Step 3.</p>
+  <p>UPDATE: After the Windows 10 Anniversary Update, misbehaving applications no longer re-register an entry for notifications. This guide has now been made out of date as hiding Windows Notifications will now handle behavior correctly.</p>
 </blockquote>
 
-<ol>
-  <li>Make sure the 8 MB Expansion Pak is installed in your Nintendo 64.</li>
-  <li>Connect the Nintendo 64 to the television, and plug in the power cable.</li>
-  <li>Insert Super Mario 64 into the GameShark, and insert the GameShark into the Nintendo 64.</li>
-  <li>Turn on your TV and the Nintendo 64.</li>
-  <li>Once the GameShark main menu has appeared, select ‘key codes’, scroll down to the keycode named “Zelda”, and activate it.</li>
-  <li>Turn off your Nintendo 64.</li>
-  <li>Take out the Super Mario 64 cartridge and replace it with the Legend of Zelda: Ocarina of Time.</li>
-  <li>Connect your Nintendo 64 GameShark to your transfer computer with your parallel cable.</li>
-  <li>Turn on your Nintendo 64.</li>
-  <li>Go to the cheat menu and disable all cheats for Legend of Zelda: Ocarina of Time. This is to prevent any cheat conflicts from interfering with our RAM dump.</li>
-  <li>Next, press the start button to load the ‘Start Game Options’ menu.</li>
-  <li>Turn on the code generator.</li>
-  <li>Launch the game with codes.</li>
-  <li>Load the save file from the main menu that you wish to dump. Only one save may be dumped from RAM at a time.</li>
-  <li>After the game has loaded, press pause.</li>
-</ol>
+<p>If you are familiar with Windows, then you know that there is a feature that allows you to hide notifications and icons to programs in the system tray. However, this application does not seem to respect those rules. Every time the application launches, it appears to reassociate itself and reset all settings made to keep it quiet. If I did manage to mute it, the changes would not survive a system reboot.</p>
 
-<h2 id="part-three-the-transfer">Part Three: The Transfer</h2>
+<p>The notification is posted frequently, as my system’s max power draw while gaming will trigger the UPS power draw warning. I found this to happen quite frequently when I was playing in virtual reality and it was continually breaking my immersion by ringing out system notifications in the middle of <a href="http://store.steampowered.com/app/322770/">Vanishing Realms</a>.</p>
 
-<p><amp-img src="/assets/img/2016/05/setup.jpg" alt="N64 Transfer Setup" width="800" height="532" layout="responsive"><noscript><img src="/assets/img/2016/05/setup.jpg" alt="N64 Transfer Setup" width="800" height="532"></noscript></amp-img></p>
+<p>I understand that this is to help prevent the user from unknowingly leaving their system vulnerable during an outage when the user is not there. But if I lose power while in my VR headset, I am going to know very quickly that my machine should be shut off (not to mention my entire VR world will go black).</p>
 
-<ol>
-  <li>
-    <p>If everything is still running normally, on your transfer computer execute a RAM dump by running the following command with N64RD in the terminal.</p>
+<p>I wanted to keep the functionality of my uninterruptible power supply communications program, but I also wanted to remove the annoying notification. I did a bit of digging inside the Windows registry (Windows 10 64-bit) and found to be what looks like a set of the registry keys responsible for relaying an application notification.</p>
 
-    <div class="highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ ./n64rd -dmemory.z64 -a 0x80000000 -l 0x00800000
-</code></pre></div>    </div>
-  </li>
-  <li>This will take quite some time. I think I recall somewhere in the neighborhood of 10-20 minutes. After the execution begins, your game will probably freeze. This is fine.</li>
-  <li>When N64RD has finished executing, you should have an 8 MB RAM dump file in that folder named ‘memory.z64’. Congratulations! You have dumped the active memory of the Legend of Zelda: The Ocarina of Time. You may now power down your Nintendo 64.</li>
-</ol>
+<h2 id="removing-the-notification">Removing the Notification</h2>
 
-<h2 id="part-four-extracting-the-save">Part Four: Extracting the Save</h2>
+<p>This is a <em>very quick and dirty</em> registry hack to prevent applications from relaying notifications in the system taskbar. Windows notifications are sent by writing to a parent registry key associated with an application. Each application will attempt to add notifications as a sub-key to the registered parent key. By removing my user’s permission to write to the parent key, the application will be unable to add sub-keys, and silently fails when it attempts to send notifications. I have not noticed any problems yet, but your mileage may vary.</p>
 
-<p>On a previous blog <a href="/blog/2015/04/transferring-n64-saves/">outlining the process</a> I used to dump my Ocarina of Time save file, the user Bkacjios took some of that information to create a online RAM dump to save file converter. It will extract your save file from the RAM dump and generate a save file with a good checksum (making it a valid non-corrupt save).</p>
+<p>In case it helps, my machine is using Windows 10 Pro 64-bit.</p>
 
-<p><amp-img src="/assets/img/2016/05/banner.jpg" alt="Ocarina of Time save converter" width="800" height="470" layout="responsive"><noscript><img src="/assets/img/2016/05/banner.jpg" alt="Ocarina of Time save converter" width="800" height="470"></noscript></amp-img></p>
+<h3 id="finding-the-notification-key">Finding the Notification Key</h3>
 
-<ol>
-  <li>Use <a href="http://zeldaspeedruns.wikia.com/wiki/Version_Differences">this wiki</a> to determine which Ocarina of Time cartridge version you have.</li>
-  <li>Navigate to <a href="https://bkacjios.github.io/OOT-Save-Converter/">https://bkacjios.github.io/OOT-Save-Converter/</a>, import your RAM dump, select the correct cartridge version, and download your save file. Feel free to change any of the other options before downloading such as the file slot or other game settings.</li>
-  <li>Congratulations! You have successfully dumped your Ocarina of Time RAM and extracted your save file to be used with emulators and other tools.</li>
-</ol>
+<p>The first step is to find the key inside the registry associated with the application. Browse to:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Current\
+</code></pre></div></div>
+
+<p>One will find a list of keys for applications registered for the system notifications. If the application you’re looking for does not immediately jump out, it is probably one of the <code class="highlighter-rouge">Microsoft.Explorer.Notification.{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}</code> keys.</p>
+
+<p>The only information that I could find about this and how the key is decided is the claim that <a href="https://github.com/mumble-voip/mumble/issues/1777#issue-98981400">it is the application GUID</a>. However, my research has found that this registry key does not match the GUID for the installed application. My theory is that it is randomly generated upon install. But I have not yet verified this.</p>
+
+<p><amp-img src="/assets/img/2016/07/regedit0.png" alt="The notification for my battery adding a subkey in the registry" width="1011" height="796" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit0.png" alt="The notification for my battery adding a subkey in the registry" width="1011" height="796"></noscript></amp-img><em>The notification for my battery adding a subkey in the registry</em></p>
+
+<p>When the registered application has no notification to display, there will be no subkeys listed for that registry key. However, while a notification is displayed, one can refresh the registry editor (F5 key) and see that a subkey has been added. This will help identify which registry keys are associated with the application notifications.</p>
+
+<h3 id="removing-control-permissions">Removing Control Permissions</h3>
+
+<p>Next, control permissions need to be removed from that specific registry key. Right-click on the parent key and select <code class="highlighter-rouge">Permissions…</code>.
+<amp-img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions" width="1002" height="708" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit1.png" alt="Editing Windows registry permissions" width="1002" height="708"></noscript></amp-img></p>
+
+<p>Select the user currently logged into the machine and deny <code class="highlighter-rouge">Full control</code> and <code class="highlighter-rouge">Read</code> permissions. Apply these changes. Attempt to re-create the application notification in the taskbar. If unable to re-create, the correct changes were made. If not, undo the changes and try looking for the key again.</p>
+
+<p><amp-img src="/assets/img/2016/07/regedit2.png" alt="Denying full control permissions in Windows registry" width="1002" height="708" layout="responsive"><noscript><img src="/assets/img/2016/07/regedit2.png" alt="Denying full control permissions in Windows registry" width="1002" height="708"></noscript></amp-img></p>
+
+<p>These changes should allow for the removal of annoying applications that do not follow the proper guidelines or rules when it comes to Windows taskbar notifications. Sometimes programs have unintended consequences when the programmer makes assumptions about how and when a user will interact with their program. I was hit with a combination of a program that did not properly register notifications as well as provide no advanced options to disable such notifications (there <em>are</em> other advanced options under the program).</p>
+
+<p>If anyone out there has a better method or would like to point out any unforeseen consequences with this, please let me know. For everyone else, this should help tame such applications inside their Windows taskbar.</p>
 
 
   </article>
 </main>
 
 
-<a href="/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/" class="meta center">Comments are available on the full webpage.</a>
+<a href="/blog/2016/07/preventing-windows-application-notifications/" class="meta center">Comments are available on the full webpage.</a>
 
 
 <!-- start footer -->

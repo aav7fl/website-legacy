@@ -4,7 +4,7 @@
 
 
   <meta charset="utf-8">
-  <title>Fixing 'No Google Profile for Contact'</title>
+  <title>N64 - The Legend of Zelda: Ocarina of Time Save Transfer Guide</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
@@ -39,24 +39,24 @@
 
 <meta name="author" content="Kyle Niewiada">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="How I fixed the Google now ‘No Google profile for Contact’ message with my account. This occurred because of conflicting Google+ profiles.">
-<meta property="og:description" content="How I fixed the Google now ‘No Google profile for Contact’ message with my account. This occurred because of conflicting Google+ profiles.">
-<link rel="canonical" href="/blog/2016/07/fixing-no-google-profile-for-contact/">
-<meta property="og:url" content="/blog/2016/07/fixing-no-google-profile-for-contact/">
+<meta name="description" content="An updated guide on how to dump the ram from The Legend of Zelda: Ocarina of Time on the Nintendo 64 and create an emulator friendly (.sra) save file.">
+<meta property="og:description" content="An updated guide on how to dump the ram from The Legend of Zelda: Ocarina of Time on the Nintendo 64 and create an emulator friendly (.sra) save file.">
+<link rel="canonical" href="/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/">
+<meta property="og:url" content="/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/">
 <meta property="og:site_name" content="Kyle Niewiada’s Website">
-<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/07/banner2.jpg">
-<meta property="og:image:height" content="450">
+<meta property="og:image" content="https://www.kyleniewiada.org/assets/img/2016/05/banner.jpg">
+<meta property="og:image:height" content="470">
 <meta property="og:image:width" content="800">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-07-04T11:26:00-04:00">
+<meta property="article:published_time" content="2016-05-01T14:10:00-04:00">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="https://www.kyleniewiada.org/assets/img/2016/07/banner2.jpg">
-<meta property="twitter:title" content="Fixing ‘No Google Profile for Contact’">
+<meta property="twitter:image" content="https://www.kyleniewiada.org/assets/img/2016/05/banner.jpg">
+<meta property="twitter:title" content="N64 - The Legend of Zelda: Ocarina of Time Save Transfer Guide">
 <meta name="twitter:site" content="@CrypticCitrus">
 <meta name="twitter:creator" content="@CrypticCitrus">
 <meta property="fb:app_id" content="137961485759">
 <script type="application/ld+json">
-{"description":"How I fixed the Google now ‘No Google profile for Contact’ message with my account. This occurred because of conflicting Google+ profiles.","@type":"BlogPosting","headline":"Fixing ‘No Google Profile for Contact’","dateModified":"2018-12-17T16:41:06-05:00","datePublished":"2016-07-04T11:26:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2016/07/fixing-no-google-profile-for-contact/"},"url":"/blog/2016/07/fixing-no-google-profile-for-contact/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"image":{"height":450,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2016/07/banner2.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Kyle Niewiada"},"@context":"https://schema.org"}</script>
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"headline":"N64 - The Legend of Zelda: Ocarina of Time Save Transfer Guide","dateModified":"2019-01-14T06:16:05-05:00","datePublished":"2016-05-01T14:10:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/"},"image":{"height":470,"width":800,"url":"https://www.kyleniewiada.org/assets/img/2016/05/banner.jpg","@type":"imageObject"},"url":"/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/","author":{"@type":"Person","name":"Kyle Niewiada"},"description":"An updated guide on how to dump the ram from The Legend of Zelda: Ocarina of Time on the Nintendo 64 and create an emulator friendly (.sra) save file.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -116,15 +116,15 @@
 <main class="content">
   <article>
     <div class="post_info">
-      <h1 class="page-title">Fixing 'No Google Profile for Contact'</h1>
+      <h1 class="page-title">N64 - The Legend of Zelda: Ocarina of Time Save Transfer Guide</h1>
 
       <h2 class="meta">Kyle Niewiada
 
-      <h3 class="meta">July 04, 2016 | 4 Minute Read</h3>
+      <h3 class="meta">May 01, 2016 | 7 Minute Read</h3>
 
       
       <div class="featuredImage">
-        <amp-img src="/assets/img/2016/07/banner2.jpg" alt="No Account for Google Profile on Android Wear Watch" width="800" height="450" layout="responsive"><noscript><img src="/assets/img/2016/07/banner2.jpg" alt="No Account for Google Profile on Android Wear Watch" width="800" height="450"></noscript></amp-img>
+        <amp-img src="/assets/img/2016/05/banner.jpg" alt="The Legend of Zelda: Ocarina of Time save converter" width="800" height="470" layout="responsive"><noscript><img src="/assets/img/2016/05/banner.jpg" alt="The Legend of Zelda: Ocarina of Time save converter" width="800" height="470"></noscript></amp-img>
       </div>
       
 
@@ -133,38 +133,125 @@
     </h2>
 </div>
 
-    <p>If you’re around me enough, you learn that I love to use voice commands. I’ve been known to walk into a room and shout “okay Google” hoping to hear a device accepting my query. Since early 2015, people have been able to use Google Now to send Hangouts messages. I tried jumping on that bandwagon but every time I attempted to send a message, I was greeted with the response <code class="highlighter-rouge">No Google profile for &lt;Contact&gt;</code>.</p>
+    <p>It was brought to my attention that my <a href="/blog/2015/04/transferring-n64-saves/">original blog post</a> outlining the process I took to dump my Nintendo 64 save files was not very friendly when people wanted to use it as a guide. Originally, I was going to edit the blog post to incorporate new guide steps, but I soon realized that I was straying away from the scope of that blog post; to outline and describe the process I took to recover my save collection. Below are the steps to follow if you would like to backup your save file for the Nintendo 64 game, The Legend of Zelda: Ocarina of Time.</p>
 
-<p><amp-img src="/assets/img/2016/07/noaccountphone.png" alt="No Google profile for contact found" width="300" height="533" layout="responsive"><noscript><img src="/assets/img/2016/07/noaccountphone.png" alt="No Google profile for contact found" width="300" height="533"></noscript></amp-img><em>No Google profile found on my phone</em></p>
+<h2 id="required-tools">Required tools:</h2>
 
-<p>It worked fine if I was sending an SMS, but never with a Hangouts message. There are a <a href="https://productforums.google.com/forum/#!topic/hangouts/8Qm5O5ekTG4">few</a> <a href="https://productforums.google.com/forum/#!topic/hangouts/spcmG8qtgiA">examples</a> of others finding their own solution or having a server-side fix rolled out. But this was not the solution for me. I tried everything from factory resetting my phone, sideloading the Google contacts app, even loading an Android ROM on a backup phone and retrying the voice commands. But nothing worked.</p>
+<ul>
+  <li>Linux Mint (live CD will work too)
+    <ul>
+      <li>You can choose whatever Linux distro you would like, but the tutorial steps may not match with other Linux distros.</li>
+    </ul>
+  </li>
+  <li>A Working Nintendo 64 (and controller)
+    <ul>
+      <li>It would be best if you could connect this to a TV so you can see the screen. Although I guess if someone makes a TASBot, you wouldn’t need a TV for it.</li>
+    </ul>
+  </li>
+  <li>8 MB Expansion Pak</li>
+  <li>Nintendo 64 GameShark with a working parallel port
+    <ul>
+      <li>A working parallel port can usually be found on cartridge versions 3.2 and 3.3</li>
+    </ul>
+  </li>
+  <li>Computer with a working parallel port</li>
+  <li>Parallel cable
+    <ul>
+      <li>Other users were unable to get a USB to parallel cable to work. I would advise against using an adapter.</li>
+    </ul>
+  </li>
+  <li>The Legend of Zelda: Ocarina of Time</li>
+  <li>Super Mario 64
+    <ul>
+      <li>Or equivalent. This game is only needed to boot GameShark and change keycode for Ocarina of Time.</li>
+    </ul>
+  </li>
+</ul>
 
-<h2 id="first-there-were-three">First There Were Three</h2>
-
-<p>It wasn’t until a few months ago that I realized I had somehow acquired <em>three Google+ profiles</em> tied to my email. This was a little strange.</p>
+<h2 id="part-one-preparing-the-transfer-computer">Part One: Preparing the Transfer Computer</h2>
 
 <ol>
-  <li>My first Google+ account was set up and tied to my primary account.</li>
-  <li>My second Google+ account was created as a separate profile for my YouTube account <a href="https://support.google.com/youtube/answer/2663685">described here</a>.</li>
-  <li>When I was managing my accounts I noticed that I had a third one. It appeared that Google had made a Google+ <a href="https://business.google.com/create">business page</a> for my YouTube’s Google+ account. Or maybe I did this by mistake, but I don’t recall going through the creation process.</li>
+  <li>Have your machine (with the parallel port) turned on and booted into its Linux partition or a Live CD equivalent.</li>
+  <li>On that machine download the <a href="https://github.com/parasyte/n64rd/releases">latest release</a> of N64RD. This tutorial uses version 0.2.0.</li>
+  <li>Unzip its contents and navigate to the directory using a terminal.</li>
+  <li>
+    <p>To build N64RD, we need to install ‘scons’. From the command line, run:</p>
+
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> sudo apt-get install -y scons
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>After scons has finished installing, in the directory of the unzipped code, to build N64RD run:</p>
+
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> scons
+</code></pre></div>    </div>
+
+    <p><amp-img src="/assets/img/2016/05/term.jpg" alt="Terminal Output" width="800" height="701" layout="responsive"><noscript><img src="/assets/img/2016/05/term.jpg" alt="Terminal Output" width="800" height="701"></noscript></amp-img></p>
+  </li>
+  <li>Your directory should now contain the ‘n64rd’ commandline executable file.</li>
+  <li>Leave the terminal open and your machine on during the next few steps.</li>
 </ol>
 
-<p>Now I had three Google+ accounts tied to my primary email. When I tried to speak a Google Now Hangouts command, it would not find any contacts. Honestly, I can’t remember if it ever worked before then.</p>
+<h2 id="part-two-preparing-the-nintendo-64">Part Two: Preparing the Nintendo 64</h2>
 
-<p>I had a theory. I thought that there might be a conflict in which route my Google Now commands were following to gather my contacts. The first thing I did was <a href="https://support.google.com/plus/answer/1044503">delete my Google+ business page</a> because it wasn’t linked to anything. Next, I tried to delete my Google+ page linked to my YouTube channel. However, because it was linked, I could not delete it. <a href="https://www.youtube.com/account_transfer_channel">This setting</a> allowed me to switch my connected Google+ profile on my YouTube channel. After severing the link, I was then able to close my old YouTube’s Google+ account.</p>
+<blockquote>
+  <p>If your Nintendo 64 freezes at any point, you will need to power down your Nintendo 64 and begin again from Part Two: Step 3.</p>
+</blockquote>
 
-<h2 id="then-there-was-one">Then There Was One</h2>
+<ol>
+  <li>Make sure the 8 MB Expansion Pak is installed in your Nintendo 64.</li>
+  <li>Connect the Nintendo 64 to the television, and plug in the power cable.</li>
+  <li>Insert Super Mario 64 into the GameShark, and insert the GameShark into the Nintendo 64.</li>
+  <li>Turn on your TV and the Nintendo 64.</li>
+  <li>Once the GameShark main menu has appeared, select ‘key codes’, scroll down to the keycode named “Zelda”, and activate it.</li>
+  <li>Turn off your Nintendo 64.</li>
+  <li>Take out the Super Mario 64 cartridge and replace it with the Legend of Zelda: Ocarina of Time.</li>
+  <li>Connect your Nintendo 64 GameShark to your transfer computer with your parallel cable.</li>
+  <li>Turn on your Nintendo 64.</li>
+  <li>Go to the cheat menu and disable all cheats for Legend of Zelda: Ocarina of Time. This is to prevent any cheat conflicts from interfering with our RAM dump.</li>
+  <li>Next, press the start button to load the ‘Start Game Options’ menu.</li>
+  <li>Turn on the code generator.</li>
+  <li>Launch the game with codes.</li>
+  <li>Load the save file from the main menu that you wish to dump. Only one save may be dumped from RAM at a time.</li>
+  <li>After the game has loaded, press pause.</li>
+</ol>
 
-<p>Now I was down to a single Google+ profile. I tried ringing off my voice command “okay Google, send a hangouts message to &lt;Contact&gt;”… And it worked! Unlinking and removing the excess Google+ profiles fixed the path for Google Now finding my contacts. It appears as if there was a conflict between which Google+ account the commands were using.</p>
+<h2 id="part-three-the-transfer">Part Three: The Transfer</h2>
 
-<p>If you’re scouring the Internet ripping your hair out like I was trying to find a solution for the ‘No Google profile for &lt;Contact&gt;’ message, check to see if you have any excess Google+ profiles tied to your account. Remove/unlink them if you can, and maybe it will fix your problem like it did mine.</p>
+<p><amp-img src="/assets/img/2016/05/setup.jpg" alt="N64 Transfer Setup" width="800" height="532" layout="responsive"><noscript><img src="/assets/img/2016/05/setup.jpg" alt="N64 Transfer Setup" width="800" height="532"></noscript></amp-img></p>
+
+<ol>
+  <li>
+    <p>If everything is still running normally, on your transfer computer execute a RAM dump by running the following command with N64RD in the terminal.</p>
+
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ ./n64rd -dmemory.z64 -a 0x80000000 -l 0x00800000
+</code></pre></div>    </div>
+  </li>
+  <li>This will take quite some time. I think I recall somewhere in the neighborhood of 10-20 minutes. After the execution begins, your game will probably freeze. This is fine.</li>
+  <li>When N64RD has finished executing, you should have an 8 MB RAM dump file in that folder named ‘memory.z64’. Congratulations! You have dumped the active memory of the Legend of Zelda: The Ocarina of Time. You may now power down your Nintendo 64.</li>
+</ol>
+
+<h2 id="part-four-extracting-the-save">Part Four: Extracting the Save</h2>
+
+<p>On a previous blog <a href="/blog/2015/04/transferring-n64-saves/">outlining the process</a> I used to dump my Ocarina of Time save file, the user Bkacjios took some of that information to create a online RAM dump to save file converter. It will extract your save file from the RAM dump and generate a save file with a good checksum (making it a valid non-corrupt save).</p>
+
+<p><amp-img src="/assets/img/2016/05/banner.jpg" alt="Ocarina of Time save converter" width="800" height="470" layout="responsive"><noscript><img src="/assets/img/2016/05/banner.jpg" alt="Ocarina of Time save converter" width="800" height="470"></noscript></amp-img></p>
+
+<ol>
+  <li>Use <a href="http://zeldaspeedruns.wikia.com/wiki/Version_Differences">this wiki</a> to determine which Ocarina of Time cartridge version you have.</li>
+  <li>Navigate to <a href="https://bkacjios.github.io/OOT-Save-Converter/">https://bkacjios.github.io/OOT-Save-Converter/</a>, import your RAM dump, select the correct cartridge version, and download your save file. Feel free to change any of the other options before downloading such as the file slot or other game settings.</li>
+  <li>Congratulations! You have successfully dumped your Ocarina of Time RAM and extracted your save file to be used with emulators and other tools.</li>
+</ol>
 
 
   </article>
 </main>
 
 
-<a href="/blog/2016/07/fixing-no-google-profile-for-contact/" class="meta center">Comments are available on the full webpage.</a>
+<a href="/blog/2016/05/ocarina-of-time-n64-save-transfer-guide/" class="meta center">Comments are available on the full webpage.</a>
 
 
 <!-- start footer -->

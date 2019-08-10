@@ -56,7 +56,7 @@
 <meta name="twitter:creator" content="@CrypticCitrus">
 <meta property="fb:app_id" content="137961485759">
 <script type="application/ld+json">
-{"description":"How I use the new webhooks endpoints added to Home Assistant to trigger dimming the lights when my media starts on Plex.","@type":"BlogPosting","headline":"How I Dim My Hue Lights with a Plex Webhook","dateModified":"2018-12-17T16:41:06-05:00","datePublished":"2018-10-18T16:47:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2018/10/dimming-lights-with-plex-and-homeassistant/"},"url":"/blog/2018/10/dimming-lights-with-plex-and-homeassistant/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"image":{"height":398,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2018/10/banner.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Kyle Niewiada"},"@context":"https://schema.org"}</script>
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.kyleniewiada.org/assets/img/logo.png"},"name":"Kyle Niewiada"},"headline":"How I Dim My Hue Lights with a Plex Webhook","dateModified":"2019-01-14T06:16:05-05:00","datePublished":"2018-10-18T16:47:00-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2018/10/dimming-lights-with-plex-and-homeassistant/"},"image":{"height":398,"width":700,"url":"https://www.kyleniewiada.org/assets/img/2018/10/banner.jpg","@type":"imageObject"},"url":"/blog/2018/10/dimming-lights-with-plex-and-homeassistant/","author":{"@type":"Person","name":"Kyle Niewiada"},"description":"How I use the new webhooks endpoints added to Home Assistant to trigger dimming the lights when my media starts on Plex.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -184,7 +184,7 @@
      <span class="na">data_template</span><span class="pi">:</span>
        <span class="na">topic</span><span class="pi">:</span> <span class="s1">'</span><span class="s">plex/update'</span>
        <span class="na">payload_template</span><span class="pi">:</span> <span class="pi">&gt;</span>
-         <span class="no">{{ (trigger.data['payload'] | string)[12:][:-2] | replace ("\\\\", "\\") | replace ("\\\'", "'") | replace ("\\x","?") }}</span>
+         <span class="s">{{ (trigger.data['payload'] | string)[12:][:-2] | replace ("\\\\", "\\") | replace ("\\\'", "'") | replace ("\\x","?") }}</span>
 
 </code></pre></div></div>
 
@@ -234,11 +234,11 @@
     <span class="pi">-</span> <span class="na">condition</span><span class="pi">:</span> <span class="s">template</span>
   <span class="na">action</span><span class="pi">:</span>
     <span class="na">service_template</span><span class="pi">:</span> <span class="pi">&gt;</span>
-        <span class="no">{% if ((trigger.payload_json.event == 'media.play') or (trigger.payload_json.event == 'media.resume')) %}</span>
-          <span class="no">input_boolean.turn_on</span>
-        <span class="no">{% elif ((trigger.payload_json.event == 'media.pause') or (trigger.payload_json.event == 'media.stop')) %}</span>
-          <span class="no">input_boolean.turn_off</span>
-        <span class="no">{% endif %}</span>
+        <span class="s">{% if ((trigger.payload_json.event == 'media.play') or (trigger.payload_json.event == 'media.resume')) %}</span>
+          <span class="s">input_boolean.turn_on</span>
+        <span class="s">{% elif ((trigger.payload_json.event == 'media.pause') or (trigger.payload_json.event == 'media.stop')) %}</span>
+          <span class="s">input_boolean.turn_off</span>
+        <span class="s">{% endif %}</span>
     <span class="na">entity_id</span><span class="pi">:</span> <span class="s">input_boolean.plex</span>
 </code></pre></div></div>
 
