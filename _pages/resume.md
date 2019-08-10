@@ -27,14 +27,25 @@ permalink: /resume/
 
 ## Experience
 
+### Full Stack Developer at Gordon Food Service
+
+<div class="date">Jul 2019 - Present</div>
+
+- Expand Gordon Now Chat across many internal and external facing applications
+- Build multilingual functionality with Gordon Now Chat to serve customers across the US and Canada
+- Augment support by building a machine learning model to correctly detect chat sentiment and react accordingly
+
 ### Associate Software Engineer at Gordon Food Service
 
-<div class="date">Jun 2017 - Present</div>
+<div class="date">Jun 2017 - Jul 2019</div>
 
-- Build and architect a chatbot that switches seamlessly between AI and a human when necessary
-- Provide unique digital dialogue opportunities for customers to place orders with an AI agent using only their voice
-- Capture customers' interests with web-based recipe tools with Spring Boot and WebLogic
-- Create custom integration jobs between different company platforms 
+- Architected and built a chatbot that switches seamlessly between AI and a human when necessary
+- Provided unique digital dialogue opportunities for customers to place orders with an AI agent using only their voice
+  - [Product Overview](https://www.youtube.com/watch?v=qekVovXVy5M)
+  - [Testimonial #1](https://www.youtube.com/watch?v=C6nYBUw1KJE)
+  - [Testimonial #2](https://www.youtube.com/watch?v=svohGSAL0SI)
+- Captured customers' interests with a recipe tool enabling food organization and reducing food waste
+- Created custom integration jobs between different company platforms 
 
 ### Consultant at Hepfer & Associates, PLLC
 
