@@ -19,6 +19,6 @@ permalink: /sitemap/
 
 ## Other Pages
 
-{% for page in site.pages %}
+{% for page in site.pages_standalone %}
 - [{{ page.title }}]({{ page.url }})
 {% endfor %}

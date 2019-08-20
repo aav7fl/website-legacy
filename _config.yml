@@ -11,18 +11,8 @@ ampdir: /amp
 
 # Collection of single pages. Helps keep organized.
 collections:
-  pages:
+  pages_standalone:
     output: true
-
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax-highlighter: rouge
-  syntax_highlighter_opts:
-    # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: 'highlight'
-    table_class: 'rouge-table'
 
 paginate: 5
 url: "https://www.kyleniewiada.org"
@@ -34,12 +24,9 @@ sass:
 
 exclude:
   - CNAME
-  - config.rb
-  - Gemfile
-  - Gemfile.lock
+  - config.rb 
   - gulpfile.js
   - LICENSE.txt
-  - node_modules
   - package.json
   - Rakefile
   - script

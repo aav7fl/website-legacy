@@ -2,7 +2,6 @@
 
 source 'http://rubygems.org'
 
-gem 'amp-jekyll'
 gem 'fastimage'
 gem 'jekyll'
 gem 'jekyll-feed'
@@ -21,6 +20,12 @@ gem 'rubocop'
 #       git: 'https://github.com/jekyll/jekyll-seo-tag.git',
 #       branch: 'master'
 # end
+
+group :jekyll_plugins do
+  gem 'amp-jekyll',
+      git: 'https://github.com/aav7fl/amp-jekyll.git',
+      tag: '1.0.3'
+  end
 
 # Test the build
 group :test do
