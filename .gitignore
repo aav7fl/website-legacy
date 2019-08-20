@@ -4,6 +4,7 @@ node_modules/
 tmp/
 .sass-cache/
 .jekyll-metadata
+.jekyll-cache
 
 # For Travis.
 .bundle/
