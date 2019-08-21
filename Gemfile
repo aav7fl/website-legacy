@@ -25,7 +25,7 @@ group :jekyll_plugins do
   gem 'amp-jekyll',
       git: 'https://github.com/aav7fl/amp-jekyll.git',
       tag: '1.0.3'
-  end
+end
 
 # Test the build
 group :test do
