@@ -2,7 +2,7 @@ language: node_js
 sudo: false
 branches:
   except:
-  - master
+  - gh-pages
 node_js:
   - '10'
 cache:
@@ -14,9 +14,9 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_USERNAME: aav7fl
-  - GH_REPO: aav7fl.github.io
-  - GH_SOURCE_BRANCH: source
-  - GH_DEST_BRANCH: master
+  - GH_REPO: websites
+  - GH_SOURCE_BRANCH: master
+  - GH_DEST_BRANCH: gh-pages
   - secure: ol4s+iUpSC3U0+dhIcefHohs02ehUIpOHTnsd6MNGFIkFK65rP13ytQfhwcLsZtUBx6T+gA+ECRvJc/Ild4rRYPfyjr0Ao/7khQJX6sU9rXxxmoKVgIe+Fz6e9W89atZoLVLjeHmEQSZUkzyOAl6F+25h4Q26sB7aRvoTPcnRGAMG4lDwz/SC5gXS7ENN1f+7avm2bB08TRc5ic/PQu5q01/vlyA6El2/VOWF8z+Q51eAtDeQGlkm2kQ66poK8H8olZzg+bYn/Vrjq9umQ09Ic2R+/zbChRPaoVYcRw7tp0N3EyT4hJU1WGQ6CZbNfv2+c5TMCEBe16Fit0Ad6/g9bqZhKZuGBm7GpB3DXbi8Zuv2faq/2hgQ6TAPF9VNrKpufbS0c2OtlKcjXGlueeLf6aEHuCM9sDQkxs2akW0hM000h0Plw9rjnla0q4bnNv9GjC4fH4c5ICjCBXNMhtUYcR6ij2jop3F/3VztsP6oY3E9PzqKuAR7KgP8nYe4mbk3rwGGFYUiC+2UC/MDm6FCwkXlc3RhGLBKwjDZ6dkCpp2kAb0j6nhKPJhB61i1N45PysAyqYcMI9jL+YU1gMUE27nhZgTakdgNPLagcFcbUXyrPLq7G4TR2GP0ZojwXGYRQXZU8bB8ROBR/oaucT67dtsyyE51ZnSqxTT9RmxCVo=
 
 before_install:
@@ -24,7 +24,6 @@ before_install:
   - if [ -f node_modules/.bin/which ]; then mv node_modules/.bin/which node_modules/.bin/which.backup; fi
   - rvm install 2.5.1 && rvm use 2.5.1
   - if [ -f node_modules/.bin/which.backup ]; then mv node_modules/.bin/which.backup node_modules/.bin/which; fi
-  - gem install bundler
   - gem install bundler
 
 install:
@@ -39,7 +38,7 @@ deploy:
   script: "./_scripts/deploy.sh"
   skip_cleanup: true
   on:
-    branch: source
+    branch: gh-pages
 
 notifications:
   email:

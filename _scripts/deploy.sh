@@ -5,7 +5,7 @@
 set -e
 
 # Checkout `master` and remove everything.
-git clone https://${GH_TOKEN}@github.com/${GH_USERNAME}/${GH_REPO}.git ../${GH_REPO}.${GH_DEST_BRANCH}
+git clone https://${GH_DEPLOY_KEY}@github.com/${GH_USERNAME}/${GH_REPO}.git ../${GH_REPO}.${GH_DEST_BRANCH}
 cd ../${GH_REPO}.${GH_DEST_BRANCH}
 # Sick of `checkout` filling up my log
 git checkout --quiet ${GH_DEST_BRANCH}
@@ -26,4 +26,4 @@ git status
 git add -A .
 git status
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push --quiet origin master > /dev/null 2>&1
+git push --quiet origin ${GH_DEST_BRANCH} > /dev/null 2>&1
